@@ -1,0 +1,63 @@
+# AI ニュース収集・翻訳ボット - GitHub Actions ワークフロー
+#
+# 機能:
+#   - 毎日 JST 9:00 に自動実行
+#   - 手動実行も可能（Actions タブから）
+#
+# 必要なシークレット:
+#   - GOOGLE_API_KEY: Google Gemini API キー
+
+name: AI News Collector
+
+on:
+  schedule:
+    # 毎日 JST 9:00 に実行 (UTC 0:00)
+    - cron: '0 0 * * *'
+  
+  # 手動実行を許可
+  workflow_dispatch:
+
+jobs:
+  collect-news:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. リポジトリをチェックアウト
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      # 2. Python をセットアップ
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      # 3. 依存関係をインストール
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      # 4. ニュース収集スクリプトを実行
+      - name: Run AI News Collector
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: python ai_news_collector.py
+      
+      # 5. 出力ファイルをアーティファクトとして保存
+      - name: Upload news output
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-news-${{ github.run_number }}
+          path: output/*.md
+          retention-days: 30
+      
+      # 6. （オプション）結果をコミットしてリポジトリに保存
+      - name: Commit and push results
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add output/*.md || true
+          git diff --staged --quiet || git commit -m "📰 AI News Update: $(date +'%Y-%m-%d %H:%M')"
+          git push || true

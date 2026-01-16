@@ -1,0 +1,11 @@
+# AI ニュース収集・翻訳ボット 依存関係
+# pip install -r requirements.txt
+
+# RSSフィード解析
+feedparser>=6.0.0
+
+# Google Gemini API
+google-generativeai>=0.8.0
+
+# 日時解析
+python-dateutil>=2.8.0
