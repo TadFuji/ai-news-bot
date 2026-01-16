@@ -14,7 +14,6 @@ Gemini APIで日本語に翻訳・要約して出力します。
 import os
 import json
 from datetime import datetime, timedelta, timezone
-from typing import Optional
 import feedparser
 from dateutil import parser as date_parser
 import google.generativeai as genai
@@ -137,13 +136,12 @@ def collect_from_rss_feeds() -> list[dict]:
     return articles
 
 
-def filter_by_time(articles: list[dict], hours: int = 24) -> list[dict]:
+def filter_by_time(articles: list[dict]) -> list[dict]:
     """
     前日7時〜当日7時（JST）に公開された記事のみを抽出する
     
     Args:
         articles: 記事リスト
-        hours: 過去何時間以内の記事を抽出するか（デフォルト24時間）
     
     Returns:
         フィルタリングされた記事リスト
@@ -415,8 +413,8 @@ def main():
         print("❌ 記事が取得できませんでした")
         return
     
-    # 2. 24時間以内の記事をフィルタ
-    articles = filter_by_time(articles, hours=24)
+    # 2. JST 7時基準で24時間以内の記事をフィルタ
+    articles = filter_by_time(articles)
     
     # 3. AI関連キーワードでフィルタ
     articles = filter_by_ai_keywords(articles)

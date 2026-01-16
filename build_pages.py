@@ -10,6 +10,7 @@ GitHub Pages 用の JSON データを生成します。
 import os
 import re
 import json
+import shutil
 from datetime import datetime
 from pathlib import Path
 
@@ -107,9 +108,8 @@ def build_pages():
         latest_date = archives[0]["path"]
         latest_json_path = docs_dir / latest_date
         if latest_json_path.exists():
-            import shutil
             shutil.copy(latest_json_path, docs_dir / "latest.json")
-            print(f"✅ latest.json 更新")
+            print("✅ latest.json 更新")
     
     # アーカイブ一覧を保存
     archive_data = {"archives": archives}

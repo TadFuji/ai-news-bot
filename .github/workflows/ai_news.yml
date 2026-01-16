@@ -1,7 +1,7 @@
 # AI ニュース収集・翻訳ボット - GitHub Actions ワークフロー
 #
 # 機能:
-#   - 毎日 JST 9:00 に自動実行
+#   - 毎日 JST 7:00 に自動実行
 #   - 手動実行も可能（Actions タブから）
 #   - GitHub Pages にデプロイ
 #
