@@ -42,7 +42,7 @@ jobs:
       # 4. ニュース収集スクリプトを実行
       - name: Run AI News Collector
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: python ai_news_collector.py
       
       # 5. 出力ファイルをアーティファクトとして保存
