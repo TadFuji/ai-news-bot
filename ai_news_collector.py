@@ -4,10 +4,10 @@
 AI ニュース収集・翻訳ボット
 
 24時間以内のAI関連ニュースをRSSフィードから収集し、
-Gemini APIで日本語に翻訳・要約して出力します。
+OpenAI APIで日本語に翻訳・要約して出力します。
 
 使用方法:
-    export GOOGLE_API_KEY="your-api-key"
+    export OPENAI_API_KEY="your-api-key"
     python ai_news_collector.py
 """
 
@@ -17,7 +17,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Optional
 import feedparser
 from dateutil import parser as date_parser
-import google.generativeai as genai
+from openai import OpenAI
 
 # ===========================
 # 設定
@@ -209,12 +209,12 @@ def remove_duplicates(articles: list[dict]) -> list[dict]:
 
 
 # ===========================
-# Gemini API による処理
+# OpenAI API による処理
 # ===========================
 
-def process_with_gemini(articles: list[dict], max_articles: int = 10) -> list[dict]:
+def process_with_openai(articles: list[dict], max_articles: int = 10) -> list[dict]:
     """
-    Gemini APIを使用して記事を翻訳・要約し、重要度スコアを付与する
+    OpenAI APIを使用して記事を翻訳・要約し、重要度スコアを付与する
     
     Args:
         articles: 記事リスト
@@ -224,14 +224,13 @@ def process_with_gemini(articles: list[dict], max_articles: int = 10) -> list[di
         処理済み記事リスト（日本語タイトル、日本語要約、スコア付き）
     """
     # APIキーを取得
-    api_key = os.environ.get("GOOGLE_API_KEY")
+    api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
-        print("❌ GOOGLE_API_KEY 環境変数が設定されていません")
+        print("❌ OPENAI_API_KEY 環境変数が設定されていません")
         return articles[:max_articles]
     
-    # Geminiを設定
-    genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-2.5-flash")
+    # OpenAI クライアントを初期化
+    client = OpenAI(api_key=api_key)
     
     # 記事情報をまとめてプロンプトに含める
     articles_text = ""
@@ -274,18 +273,38 @@ URL: {article['url']}
 重要: 必ず10件選び、JSON配列のみを出力してください。マークダウンのコードブロックは不要です。
 """
     
-    print("🧠 Gemini API で処理中...")
+    print("🧠 OpenAI API で処理中...")
     
     try:
-        response = model.generate_content(prompt)
-        response_text = response.text.strip()
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": "あなたはAI・テクノロジー分野の専門家です。JSON形式で回答してください。"},
+                {"role": "user", "content": prompt}
+            ],
+            temperature=0.3,
+            response_format={"type": "json_object"}
+        )
         
-        # JSONをパース（コードブロックがある場合は除去）
-        if response_text.startswith("```"):
-            lines = response_text.split("\n")
-            response_text = "\n".join(lines[1:-1])
+        response_text = response.choices[0].message.content.strip()
         
-        results = json.loads(response_text)
+        # JSONをパース
+        parsed = json.loads(response_text)
+        # results が配列の場合と、オブジェクトの中に配列がある場合の両方に対応
+        if isinstance(parsed, list):
+            results = parsed
+        elif isinstance(parsed, dict) and "articles" in parsed:
+            results = parsed["articles"]
+        elif isinstance(parsed, dict) and "news" in parsed:
+            results = parsed["news"]
+        else:
+            # その他のキーを探す
+            for key in parsed:
+                if isinstance(parsed[key], list):
+                    results = parsed[key]
+                    break
+            else:
+                results = []
         
         # 結果を元の記事情報とマージ
         processed = []
@@ -302,11 +321,11 @@ URL: {article['url']}
         # スコアで降順ソート
         processed.sort(key=lambda x: x.get("importance_score", 0), reverse=True)
         
-        print(f"✅ Gemini 処理完了: {len(processed)} 件")
+        print(f"✅ OpenAI 処理完了: {len(processed)} 件")
         return processed[:max_articles]
         
     except Exception as e:
-        print(f"❌ Gemini API エラー: {e}")
+        print(f"❌ OpenAI API エラー: {e}")
         # フォールバック: 元の記事をそのまま返す
         return articles[:max_articles]
 
@@ -411,8 +430,8 @@ def main():
         print(md)
         return
     
-    # 5. Gemini APIで翻訳・要約・スコアリング
-    processed = process_with_gemini(articles, max_articles=10)
+    # 5. OpenAI APIで翻訳・要約・スコアリング
+    processed = process_with_openai(articles, max_articles=10)
     
     # 6. Markdown出力
     md = output_markdown(processed)
