@@ -139,24 +139,45 @@ def collect_from_rss_feeds() -> list[dict]:
 
 def filter_by_time(articles: list[dict], hours: int = 24) -> list[dict]:
     """
-    指定時間内に公開された記事のみを抽出する
+    前日7時〜当日7時（JST）に公開された記事のみを抽出する
     
     Args:
         articles: 記事リスト
-        hours: 過去何時間以内の記事を抽出するか
+        hours: 過去何時間以内の記事を抽出するか（デフォルト24時間）
     
     Returns:
         フィルタリングされた記事リスト
     """
-    now = datetime.now(timezone.utc)
-    cutoff = now - timedelta(hours=hours)
+    # JST (UTC+9) で 7:00 を基準にする
+    jst = timezone(timedelta(hours=9))
+    now_jst = datetime.now(jst)
+    
+    # 当日の7:00 JST
+    today_7am_jst = now_jst.replace(hour=7, minute=0, second=0, microsecond=0)
+    
+    # もし現在時刻が7時より前なら、基準は昨日の7時〜今日の7時
+    # もし現在時刻が7時以降なら、基準は今日の7時〜明日の7時
+    if now_jst.hour < 7:
+        end_time = today_7am_jst
+        start_time = end_time - timedelta(days=1)
+    else:
+        start_time = today_7am_jst
+        end_time = start_time + timedelta(days=1)
+    
+    # UTC に変換して比較
+    start_time_utc = start_time.astimezone(timezone.utc)
+    end_time_utc = end_time.astimezone(timezone.utc)
     
     filtered = []
     for article in articles:
-        if article["published"] and article["published"] >= cutoff:
-            filtered.append(article)
+        if article["published"]:
+            pub_time = article["published"]
+            if start_time_utc <= pub_time < end_time_utc:
+                filtered.append(article)
     
-    print(f"📅 過去{hours}時間以内の記事: {len(filtered)} 件")
+    start_str = start_time.strftime('%m/%d %H:%M')
+    end_str = end_time.strftime('%m/%d %H:%M')
+    print(f"📅 {start_str} 〜 {end_str} (JST) の記事: {len(filtered)} 件")
     return filtered
 
 

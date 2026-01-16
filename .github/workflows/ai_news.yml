@@ -12,8 +12,8 @@ name: AI News Collector
 
 on:
   schedule:
-    # 毎日 JST 9:00 に実行 (UTC 0:00)
-    - cron: '0 0 * * *'
+    # 毎日 JST 7:00 に実行 (UTC 22:00 = 前日22時)
+    - cron: '0 22 * * *'
   
   # 手動実行を許可
   workflow_dispatch:
