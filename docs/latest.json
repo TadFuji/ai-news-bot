@@ -1,65 +1,65 @@
 {
-  "updated": "2026年01月16日 14:53",
+  "updated": "2026年01月16日 16:01",
   "articles": [
     {
-      "title": "AI journalism startup Symbolic.ai signs deal with Rupert Murdoch’s News Corp",
-      "summary": "The startup claims its AI platform can help optimize editorial processes and research.",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/01/15/ai-journalism-startup-symbolic-ai-signs-deal-with-rupert-murdochs-news-corp/"
-    },
-    {
-      "title": "The AI lab revolving door spins ever faster",
-      "summary": "AI labs just can't get their employees to stay put. Yesterday’s big AI news was the abrupt and seemingly acrimonious departure of three top executives at Mira Murati’s Thinking Machines lab.",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/01/15/the-ai-lab-revolving-door-spins-ever-faster/"
-    },
-    {
-      "title": "Taiwan to invest $250B in US semiconductor manufacturing",
-      "summary": "The U.S. struck a trade deal with Taiwan as the country looks to help boost domestic semiconductor manufacturing.",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/01/15/taiwan-to-invest-250b-in-us-semiconductor-manufacturing/"
-    },
-    {
-      "title": "AI video startup, Higgsfield, founded by ex-Snap exec, lands $1.3B valuation",
-      "summary": "Higgsfield says it's on a $200 million annual revenue run rate. So it opened its previous Series A round back up and sold another $80 million in shares.",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/01/15/ai-video-startup-higgsfield-founded-by-ex-snap-exec-lands-1-3b-valuation/"
-    },
-    {
-      "title": "The US imposes 25% tariff on Nvidia’s H200 AI chips headed to China",
-      "summary": "The Trump administration formalized its 25% cut of H200 chip sales in China with a tariff that applies to certain semiconductors.",
+      "title": "米国、中国向けNvidia H200 AIチップに25%の関税",
+      "summary": "トランプ政権は、特定の半導体に対する関税として、中国へのH200チップ販売に25%の関税を課すことを正式決定しました。これは、米中間の技術覇権争いを激化させ、日本の半導体産業にも影響を与える可能性があります。",
       "source": "TechCrunch AI",
       "url": "https://techcrunch.com/2026/01/15/the-us-imposes-25-tariff-on-nvidias-h200-ai-chips-headed-to-china/"
     },
     {
-      "title": "OpenAI invests in Sam Altman’s brain computer interface startup Merge Labs",
-      "summary": "Merge Labs is a “research lab” dedicated to “bridging biological and artificial intelligence to maximize human ability.” OpenAI wrote the largest check in Merge Labs' $250 million seed round at an $850 million valuation.",
+      "title": "台湾、米国の半導体製造に2500億ドルを投資",
+      "summary": "台湾が米国内の半導体製造を支援するため、米国と貿易協定を結び、2500億ドルを投資します。地政学的なリスク分散と半導体サプライチェーンの強化につながり、日本企業の米国進出戦略にも影響を与えます。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/15/taiwan-to-invest-250b-in-us-semiconductor-manufacturing/"
+    },
+    {
+      "title": "OpenAI、サム・アルトマンの脳-コンピュータインターフェース・スタートアップMerge Labsに投資",
+      "summary": "OpenAIが、人間の能力を最大限に引き出すことを目的とした脳-コンピュータインターフェース（BCI）研究ラボMerge Labsに投資しました。AIと人間の融合というフロンティア領域への進出は、倫理的な議論も含めて注目されます。",
       "source": "TechCrunch AI",
       "url": "https://techcrunch.com/2026/01/15/openai-invests-in-sam-altmans-brain-computer-interface-startup-merge-labs/"
     },
     {
-      "title": "Wikimedia Foundation announces new AI partnerships with Amazon, Meta, Microsoft, Perplexity, and others",
-      "summary": "The AI partnerships allow companies to access the org's content, like Wikipedia, at scale.",
+      "title": "“信頼性高いAI開発へ協力” 日本 ASEAN閣僚級会合で共同声明",
+      "summary": "日本とASEANのデジタル担当閣僚級会合が、信頼性の高いAI開発に向けた人材育成などの協力で合意しました。日本のAI技術をASEAN地域へ展開する上で重要な枠組みとなり、ビジネスチャンスが生まれる可能性があります。",
+      "source": "NHK 科学・技術",
+      "url": "https://news.web.nhk/newsweb/na/na-k10015027521000"
+    },
+    {
+      "title": "Wikimedia Foundation、Amazon、Meta、Microsoft、Perplexityなどと新たなAIパートナーシップを発表",
+      "summary": "Wikimedia Foundationが、Wikipediaなどのコンテンツへのアクセスを提供するAIパートナーシップを大手テック企業と締結しました。AIモデルのトレーニングデータへのアクセスを巡る動きは、AI開発の競争環境に影響を与えます。",
       "source": "TechCrunch AI",
       "url": "https://techcrunch.com/2026/01/15/wikimedia-foundation-announces-new-ai-partnerships-with-amazon-meta-microsoft-perplexity-and-others/"
     },
     {
-      "title": "Parloa triples its valuation in 8 months to $3B with $350M raise",
-      "summary": "The massive round was led by existing investor General Catalyst, with participation from other returning backers.",
+      "title": "シリコンバレーの泥沼離婚劇、OpenAIとMicrosoft対イーロン・マスクの裁判へ",
+      "summary": "OpenAIとMicrosoftがイーロン・マスクとの訴訟回避を試みましたが、裁判所の訴え却下要求が拒否されました。AI開発を巡る企業間の対立は、業界全体の動向に影響を与える可能性があります。",
       "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/01/15/parloa-triples-its-valuation-in-8-months-to-3b-with-350m-raise/"
+      "url": "https://techcrunch.com/2026/01/15/silicon-valleys-messiest-breakout-is-definitely-headed-to-court/"
     },
     {
-      "title": "After Italy, WhatsApp excludes Brazil from rival chatbot ban",
-      "summary": "WhatsApp is allowing AI providers to continue offering their chatbots to users in Brazil, days after the country's competition agency ordered the company to suspend its new policy that bars third-party, general-purpose chatbots from the app.",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/01/15/after-italy-whatsapp-excludes-brazil-from-rival-chatbot-ban/"
-    },
-    {
-      "title": "Grok undressed the mother of one of Elon Musk’s kids — and now she’s suing",
-      "summary": "Ashley St. Clair, the mother of one of X owner Elon Musk's children, is suing his company for enabling its AI to virtually strip her down into a bikini without her consent. St. Clair is one of the many people over the past couple weeks who have found themselves undressed without permission by X's AI [&#8230;]",
+      "title": "アップルはAI競争に負けたのか？　これからが本当の挑戦",
+      "summary": "アップルはAI分野で後れを取ったものの、iPhoneの販売は好調を維持しており、今後GoogleのGeminiモデルを活用します。AI戦略の遅れを取り戻せるか、今後の動向が注目されます。",
       "source": "The Verge AI",
-      "url": "https://www.theverge.com/news/863097/ashley-st-clair-elon-musk-grok-undressing-lawsuit"
+      "url": "https://www.theverge.com/tech/861957/google-apple-ai-deal-iphone-gemini"
+    },
+    {
+      "title": "OpenAIのChatGPT翻訳、Google翻訳に挑戦",
+      "summary": "OpenAIが50以上の言語をサポートするスタンドアロンの翻訳ツールChatGPT Translateをリリースし、Google翻訳と競合します。AIによる翻訳サービスの進化は、グローバルビジネスにおけるコミュニケーションの障壁を低減する可能性があります。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/news/862448/openai-chatgpt-translate-tool-launch-website"
+    },
+    {
+      "title": "AI人材戦争の真実は配管工と電気技師の奪い合い",
+      "summary": "AIブームによりデータセンター建設が急増していますが、米国では熟練した技術者が不足しています。AI開発を支えるインフラ整備の人材不足は、日本のAI産業にも影響を与える可能性があります。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/why-there-arent-enough-electricians-and-plumbers-to-build-ai-data-centers/"
+    },
+    {
+      "title": "RAM価格の高騰：世界的なメモリ不足の最新情報",
+      "summary": "AI企業が大規模なデータセンターのサーバーを稼働させるために使用するRAMの価格が高騰しています。メモリ不足は、AI開発コストの上昇やスケジュール遅延につながる可能性があります。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/news/839353/pc-ram-shortage-pricing-spike-news"
     }
   ]
 }
