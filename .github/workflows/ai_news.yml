@@ -3,6 +3,7 @@
 # 機能:
 #   - 毎日 JST 9:00 に自動実行
 #   - 手動実行も可能（Actions タブから）
+#   - GitHub Pages にデプロイ
 #
 # 必要なシークレット:
 #   - GOOGLE_API_KEY: Google Gemini API キー
@@ -16,6 +17,12 @@ on:
   
   # 手動実行を許可
   workflow_dispatch:
+
+# GitHub Pages デプロイ用の権限
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   collect-news:
@@ -45,7 +52,11 @@ jobs:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: python ai_news_collector.py
       
-      # 5. 出力ファイルをアーティファクトとして保存
+      # 5. GitHub Pages 用にビルド
+      - name: Build Pages
+        run: python build_pages.py
+      
+      # 6. 出力ファイルをアーティファクトとして保存
       - name: Upload news output
         uses: actions/upload-artifact@v4
         with:
@@ -53,11 +64,37 @@ jobs:
           path: output/*.md
           retention-days: 30
       
-      # 6. （オプション）結果をコミットしてリポジトリに保存
+      # 7. 結果をコミットしてリポジトリに保存
       - name: Commit and push results
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add output/*.md || true
+          git add output/*.md docs/*.json || true
           git diff --staged --quiet || git commit -m "📰 AI News Update: $(date +'%Y-%m-%d %H:%M')"
           git push || true
+
+  # GitHub Pages へデプロイ
+  deploy-pages:
+    needs: collect-news
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main  # 最新のコミットを取得
+      
+      - name: Pull latest changes
+        run: git pull origin main
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+
