@@ -74,9 +74,10 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add output/*.md docs/*.json || true
+          git pull --rebase origin main
+          git add output/*.md docs/*.json
           git diff --staged --quiet || git commit -m "📰 AI News Update: $(date +'%Y-%m-%d %H:%M')"
-          git push || true
+          git push
 
   # GitHub Pages へデプロイ
   deploy-pages:
