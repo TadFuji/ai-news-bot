@@ -73,7 +73,9 @@ AI_KEYWORDS = [
 
 # 出力ファイルパス
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output")
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, f"ai_news_{datetime.now().strftime('%Y%m%d_%H%M')}.md")
+# JSTでファイル名を生成（GitHub ActionsのUTC環境対策）
+JST = timezone(timedelta(hours=9))
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, f"ai_news_{datetime.now(JST).strftime('%Y%m%d_%H%M')}.md")
 
 # ===========================
 # ニュース収集機能
