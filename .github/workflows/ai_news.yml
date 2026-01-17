@@ -37,6 +37,9 @@ jobs:
       # 1. リポジトリをチェックアウト
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
       
       # 2. Python をセットアップ
       - name: Set up Python
@@ -70,10 +73,10 @@ jobs:
           retention-days: 30
       
       # 7. 結果をコミットしてリポジトリに保存
+      - name: Commit and push results
+        run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git fetch origin main
-          git checkout main
           git pull --rebase origin main
           git add output/*.md docs/*.json
           git diff --staged --quiet || git commit -m "📰 AI News Update: $(date +'%Y-%m-%d %H:%M')"
