@@ -152,9 +152,9 @@ def filter_by_time(articles: list[dict]) -> list[dict]:
     jst = timezone(timedelta(hours=9))
     now_jst = datetime.now(jst)
     
-    # 実行時点から過去24時間を対象にする（常に1日分のニュースを確保するため）
+    # 実行時点から過去48時間を対象にする（週末などでニュースが少ない場合もカバー）
     end_time = now_jst
-    start_time = end_time - timedelta(hours=24)
+    start_time = end_time - timedelta(hours=48)
     
     # UTC に変換して比較
     start_time_utc = start_time.astimezone(timezone.utc)
@@ -407,17 +407,37 @@ def main():
         print("❌ 記事が取得できませんでした")
         return
     
-    # 2. JST 7時基準で24時間以内の記事をフィルタ
-    articles = filter_by_time(articles)
+    # 2. JST 実行時点から過去48時間の記事をフィルタ（確実に数を確保するため広めに）
+    # 元の filter_by_time の 24h を 48h に変更して呼び出すか、ここで調整
+    # ここでは filter_by_time 内部は 24h のままとして、関数呼び出し前後のロジックを変えるより
+    # filter_by_time 関数自体を 48h に変更する修正を推奨するが、
+    # 既存コードを生かすため、フィルタ後の処理を工夫する
+
+    # 先ほど filter_by_time を 24h に変更したが、さらに念のため 48h に広げる修正を適用
+    # (下記 replace_file_content で filter_by_time 側も修正する)
+    articles_time_filtered = filter_by_time(articles)
     
-    # 3. AI関連キーワードでフィルタ
-    articles = filter_by_ai_keywords(articles)
+    # 3. AI関連キーワードでフィルタ（優先）
+    articles_keyword_filtered = filter_by_ai_keywords(articles_time_filtered)
     
     # 4. 重複を除去
-    articles = remove_duplicates(articles)
+    unique_keyword_articles = remove_duplicates(articles_keyword_filtered)
     
-    if not articles:
-        print("⚠️ 過去24時間以内のAI関連ニュースが見つかりませんでした")
+    # もし10件未満なら、キーワードにヒットしなかった記事も追加（ソースがAI専門カテゴリなので許容）
+    final_candidates = unique_keyword_articles
+    if len(final_candidates) < 10:
+        print(f"⚠️ キーワード記事が少ないため ({len(final_candidates)}件)、全記事から補填します")
+        all_unique = remove_duplicates(articles_time_filtered)
+        # 既にある記事を除外して追加
+        existing_urls = {a["url"] for a in final_candidates}
+        for article in all_unique:
+            if article["url"] not in existing_urls:
+                final_candidates.append(article)
+                if len(final_candidates) >= 10:
+                    break
+    
+    if not final_candidates:
+        print("⚠️ 過去48時間以内の記事が見つかりませんでした")
         # 空の出力を生成
         md = output_markdown([])
         save_output(md, OUTPUT_FILE)
