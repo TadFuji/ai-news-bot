@@ -18,6 +18,11 @@ on:
   # 手動実行を許可
   workflow_dispatch:
 
+  # メインブランチへのプッシュで実行（修正の即時反映用）
+  push:
+    branches:
+      - main
+
 # GitHub Pages デプロイ用の権限
 permissions:
   contents: write
