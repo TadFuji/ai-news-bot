@@ -220,7 +220,11 @@
         // 最新のニュースファイルを読み込む
         async function loadNews() {
             try {
-                const response = await fetch('latest.json');
+                // URLパラメータからjsonファイル名を取得
+                const params = new URLSearchParams(window.location.search);
+                const jsonFile = params.get('json') || 'latest.json';
+
+                const response = await fetch(jsonFile);
                 const data = await response.json();
                 
                 document.getElementById('update-time').textContent = 

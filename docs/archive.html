@@ -183,7 +183,7 @@
                 }
 
                 container.innerHTML = data.archives.map(archive => `
-                    <a href="${archive.path}" class="archive-card">
+                    <a href="index.html?json=${archive.path}" class="archive-card">
                         <div class="archive-date">📅 ${archive.date}</div>
                         <div class="archive-count">${archive.count} 件のニュース</div>
                     </a>
