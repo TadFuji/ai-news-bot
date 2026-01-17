@@ -148,21 +148,13 @@ def filter_by_time(articles: list[dict]) -> list[dict]:
     Returns:
         フィルタリングされた記事リスト
     """
-    # JST (UTC+9) で 7:00 を基準にする
+    # JST (UTC+9) で現在時刻を取得
     jst = timezone(timedelta(hours=9))
     now_jst = datetime.now(jst)
     
-    # 当日の7:00 JST
-    today_7am_jst = now_jst.replace(hour=7, minute=0, second=0, microsecond=0)
-    
-    # もし現在時刻が7時より前なら、基準は昨日の7時〜今日の7時
-    # もし現在時刻が7時以降なら、基準は今日の7時〜明日の7時
-    if now_jst.hour < 7:
-        end_time = today_7am_jst
-        start_time = end_time - timedelta(days=1)
-    else:
-        start_time = today_7am_jst
-        end_time = start_time + timedelta(days=1)
+    # 実行時点から過去24時間を対象にする（常に1日分のニュースを確保するため）
+    end_time = now_jst
+    start_time = end_time - timedelta(hours=24)
     
     # UTC に変換して比較
     start_time_utc = start_time.astimezone(timezone.utc)
