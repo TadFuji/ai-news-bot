@@ -70,14 +70,14 @@ jobs:
           retention-days: 30
       
       # 7. 結果をコミットしてリポジトリに保存
-      - name: Commit and push results
-        run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git fetch origin main
+          git checkout main
           git pull --rebase origin main
           git add output/*.md docs/*.json
           git diff --staged --quiet || git commit -m "📰 AI News Update: $(date +'%Y-%m-%d %H:%M')"
-          git push
+          git push origin main
 
   # GitHub Pages へデプロイ
   deploy-pages:
