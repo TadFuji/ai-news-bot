@@ -116,8 +116,13 @@ AI_KEYWORDS = [
     "multimodal", "vision model", "language model", "foundation model",
     "fine-tuning", "RAG", "retrieval", "embedding", "prompt engineering",
     "AI agent", "autonomous agent", "reasoning", "chain of thought",
+    # --- 英語追加（厳選版） ---
+    "breakthrough", "inference", "funding", "deployment", "adoption",
+    "regulation update", "open source",
     # --- 日本語追加 ---
     "チャットボット", "自動生成", "AI規制", "AI法",
+    "推論", "学習手法", "マルチモーダル", "資金調達", "API",
+    "規制", "ガイドライン", "著作権", "雇用",
 ]
 
 # 出力ファイルパス
