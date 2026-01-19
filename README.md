@@ -4,10 +4,11 @@
 
 ## 機能
 
-- 📡 **ニュース収集**: TechCrunch、Wired、NHK 等の RSS フィードから AI 関連記事を取得
-- 🌐 **日本語翻訳**: Gemini API で英語記事を自然な日本語に翻訳
+- 📡 **ニュース収集**: TechCrunch, Wired, OpenAI Blog 等 18種類の RSS フィードから AI 関連記事を取得
+- 🌐 **日本語翻訳**: Gemini 2.0 Flash で英語記事を自然な日本語に翻訳
 - ⭐ **重要度評価**: AI が記事の重要性を判断し、TOP10 を選定
 - ⏰ **自動実行**: GitHub Actions で毎日 JST 7:00 に自動実行
+- 🌍 **GitHub Pages 公開**: 美しい UI で公開サイトを自動生成
 
 ## セットアップ
 
@@ -41,11 +42,14 @@ cd ai-news-bot
 # 依存関係をインストール
 pip install -r requirements.txt
 
-# 環境変数を設定
+# 環境変数を設定（.env ファイル or 直接設定）
 export GOOGLE_API_KEY="your-api-key"
 
-# 実行
-python ai_news_collector.py
+# ニュース収集を実行
+python main.py
+
+# GitHub Pages 用にビルド
+python build_pages.py
 ```
 
 ## 出力例
@@ -76,8 +80,19 @@ ai-news-bot/
 ├── .github/
 │   └── workflows/
 │       └── ai_news.yml      # GitHub Actions ワークフロー
-├── output/                   # 出力ファイル保存先
-├── ai_news_collector.py      # メインスクリプト
+├── docs/                     # GitHub Pages 公開ディレクトリ
+│   ├── index.html           # メインページ
+│   ├── archive.html         # アーカイブページ
+│   ├── latest.json          # 最新ニュースデータ
+│   └── archive.json         # 過去ニュース一覧
+├── output/                   # Markdown 出力保存先
+├── main.py                   # メイン実行スクリプト
+├── config.py                 # 設定（RSSフィード、キーワード）
+├── ai_client.py              # Gemini API 連携
+├── rss_client.py             # RSS フィード取得
+├── filters.py                # フィルタリング処理
+├── build_pages.py            # GitHub Pages ビルド
+├── output_manager.py         # 出力管理
 ├── requirements.txt          # Python 依存関係
 └── README.md                 # このファイル
 ```
@@ -85,3 +100,4 @@ ai-news-bot/
 ## ライセンス
 
 MIT License
+
