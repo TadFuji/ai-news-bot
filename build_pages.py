@@ -111,12 +111,19 @@ def build_pages():
             shutil.copy(latest_json_path, docs_dir / "latest.json")
             print("✅ latest.json 更新")
     
-    # アーカイブ一覧を保存
-    archive_data = {"archives": archives}
+    # アーカイブ一覧を日付で重複排除（同一日付は最新のもののみ保持）
+    seen_dates = set()
+    unique_archives = []
+    for archive in archives:
+        if archive["path"] not in seen_dates:
+            seen_dates.add(archive["path"])
+            unique_archives.append(archive)
+    
+    archive_data = {"archives": unique_archives}
     with open(docs_dir / "archive.json", "w", encoding="utf-8") as f:
         json.dump(archive_data, f, ensure_ascii=False, indent=2)
     
-    print(f"✅ archive.json 更新 ({len(archives)} 件)")
+    print(f"✅ archive.json 更新 ({len(unique_archives)} 件)")
     print("🎉 ビルド完了!")
 
 
