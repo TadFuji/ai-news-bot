@@ -77,8 +77,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add output/*.md docs/*.json
-          git diff --staged --quiet || git commit -m "📰 AI News Update: $(date +'%Y-%m-%d %H:%M')"
+          git add -f output/*.md docs/*.json
+          git commit -m "📰 AI News Update: $(date +'%Y-%m-%d %H:%M')" || echo "No changes to commit"
           git push origin HEAD:main
 
   # GitHub Pages へデプロイ
