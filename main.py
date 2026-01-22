@@ -18,6 +18,7 @@ from rss_client import collect_from_rss_feeds
 from filters import filter_by_time, filter_by_ai_keywords, remove_duplicates
 from ai_client import process_with_gemini
 from output_manager import output_markdown, save_output
+from line_notifier import send_news_to_line
 
 def main():
     """メイン処理"""
@@ -82,6 +83,9 @@ def main():
     print("=" * 50)
     print()
     print(md)
+    
+    # 9. LINE に送信
+    send_news_to_line(processed)
 
 
 if __name__ == "__main__":

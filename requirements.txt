@@ -12,3 +12,6 @@ python-dateutil>=2.8.0
 
 # 環境変数管理
 python-dotenv>=1.0.0
+
+# LINE Messaging API
+line-bot-sdk>=3.0.0
