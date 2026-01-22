@@ -32,11 +32,16 @@ def create_share_message() -> FlexMessage:
         FlexMessage: シェアボタン付きのメッセージ
     """
     # シェアするテキストの作成
+    # ユーザーが「シェア」ボタンを押したときに、友達に送信されるメッセージ内容
+    # ここでは「Webサイト」ではなく「LINE登録」を促す内容にする
+    line_add_friend_url = "https://lin.ee/gTGnitS"
+    
     share_text = (
-        "🤖 今日のAIニュースTOP10\n"
-        "最新のトレンドを3分でチェック！\n\n"
-        "👇 ニュースを読む\n"
-        "https://tadfuji.github.io/ai-news-bot/"
+        "🤖 毎朝、世界のAIニュースがLINEに届く！\n\n"
+        "自分も愛用している無料のニュースボットです。\n"
+        "忙しい朝でも3分でトレンド把握できます。\n\n"
+        "👇 こっから友達追加できるよ（無料）\n"
+        f"{line_add_friend_url}"
     )
     encoded_text = urllib.parse.quote(share_text)
     share_url = f"https://line.me/R/msg/text/?{encoded_text}"
