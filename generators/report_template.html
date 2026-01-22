@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Antigravity AI Weekly Report</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background: #fff;
+        }
+        
+        .header {
+            border-bottom: 2px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        
+        .brand {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+        .brand span { color: #0066cc; }
+        
+        .date {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            border-left: 5px solid #0066cc;
+            padding-left: 15px;
+            margin-bottom: 20px;
+            background: #f4f9ff;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        
+        .news-item {
+            margin-bottom: 30px;
+            break-inside: avoid;
+        }
+        
+        .news-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .source {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+        
+        .summary {
+            font-size: 14px;
+            color: #444;
+            text-align: justify;
+        }
+        
+        .insight-box {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            break-inside: avoid;
+        }
+        
+        .insight-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+        
+        .cta {
+            background: #000;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 50px;
+            margin: 30px auto;
+            width: 80%;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="brand">ANTIGRAVITY <span>AI RESEARCH</span></div>
+        <div class="date">{{ DATE }}</div>
+    </div>
+
+    <h1>AI TREND WEEKLY REPORT</h1>
+    <div class="subtitle">今週、世界で何が起きたのか。3分で掴むAIの最前線。</div>
+
+    <div class="section">
+        <div class="section-title">📊 Executive Summary</div>
+        <p>本日のAIニュースにおける最大のトピックは「<strong>{{ TOP_TOPIC }}</strong>」です。技術的なブレイクスルーに加え、実社会への実装が急速に進んでいます。特に以下の3点は、来週のビジネストレンドを左右する重要な動きとなります。</p>
+        <div class="insight-box">
+            <div class="insight-title">💡 Key Takeaways</div>
+            <ul>
+                <li>生成AIは「実験」から「社会インフラ」へ移行しつつある。</li>
+                <li>大手テック企業の競争は、モデル性能から「エコシステム」へ。</li>
+                <li>今週の注目キーワード: <strong>{{ KEYWORD }}</strong></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🌍 Global Top News (Selected)</div>
+        
+        <!-- News Content Loop -->
+        {{ NEWS_CONTENT }}
+        
+    </div>
+
+    <div class="section">
+        <div class="section-title">🧠 Antigravity Insight</div>
+        <p>情報の洪水に流されないでください。重要なのは「どのAIがすごいか」ではなく、「そのAIでビジネスモデルがどう変わるか」です。</p>
+        <p>当ラボでは、毎時ニュースを監視し、真に価値ある情報のみをフィルタリングしています。</p>
+    </div>
+
+    <a href="https://lin.ee/gTGnitS" class="cta">
+        👉 最新情報をLINEで受け取る (公式コミュニティ)
+    </a>
+
+    <div class="footer">
+        © 2026 Antigravity AI Research. All rights reserved.<br>
+        This report was generated by AI Marketing Engine v3.1.
+    </div>
+
+</body>
+</html>

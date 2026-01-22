@@ -75,6 +75,6 @@ def save_json(articles: list[dict], filepath: str) -> None:
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
     
     with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(articles, f, ensure_ascii=False, indent=2)
+        json.dump(articles, f, ensure_ascii=False, indent=2, default=str)
     
     print(f"💾 JSON保存完了: {filepath}")
