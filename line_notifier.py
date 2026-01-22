@@ -35,7 +35,7 @@ def format_news_for_line(articles: list[dict], max_articles: int = 5) -> str:
     # ヘッダー
     lines = [
         "🤖 AI ニュース TOP10",
-        "━━━━━━━━━━━━━━━━",
+        "─────────",
         ""
     ]
     
