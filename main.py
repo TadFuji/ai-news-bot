@@ -17,7 +17,7 @@ from config import JST, OUTPUT_DIR
 from rss_client import collect_from_rss_feeds
 from filters import filter_by_time, filter_by_ai_keywords, remove_duplicates
 from ai_client import process_with_gemini
-from output_manager import output_markdown, save_output
+from output_manager import output_markdown, save_output, save_json
 from line_notifier import send_news_to_line
 
 def main():
@@ -75,6 +75,10 @@ def main():
     
     # 7. ファイルに保存
     save_output(md, output_file)
+    
+    # 7.5 JSONファイルも保存 (Marketing Engine用)
+    json_file = output_file.replace(".md", ".json")
+    save_json(processed, json_file)
     
     # 8. 標準出力にも表示（GitHub Actions のログ用）
     print()

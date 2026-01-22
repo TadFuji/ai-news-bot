@@ -1,4 +1,5 @@
 import os
+import json
 from datetime import datetime, timedelta, timezone
 from config import JST
 
@@ -61,3 +62,19 @@ def save_output(content: str, filepath: str) -> None:
         f.write(content)
     
     print(f"💾 保存完了: {filepath}")
+
+
+def save_json(articles: list[dict], filepath: str) -> None:
+    """
+    記事リストをJSON形式で保存する
+    
+    Args:
+        articles: 処理済み記事リスト
+        filepath: 保存先ファイルパス
+    """
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+    
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump(articles, f, ensure_ascii=False, indent=2)
+    
+    print(f"💾 JSON保存完了: {filepath}")
