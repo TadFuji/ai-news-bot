@@ -1,65 +1,65 @@
 {
-  "updated": "2026年01月20日 17:42",
+  "updated": "2026年01月20日 17:18",
   "articles": [
     {
-      "title": "OpenAI、2026年の「焦点」は「実用的な導入」",
-      "summary": "OpenAIは2026年にAIの「実用的な導入」に注力すると発表。インフラへの巨額投資を回収するため、AIの能力と実際の利用のギャップを埋めることに取り組む。企業はAI導入の効果を最大化する方法を模索する必要がある。",
-      "source": "The Verge AI",
-      "url": "https://www.theverge.com/news/864229/openai-focus-practical-adoption-sarah-friar"
-    },
-    {
-      "title": "不正エージェントとシャドーAI：VCがAIセキュリティに巨額投資する理由",
-      "summary": "企業内で承認されていないAIツールの使用を検出し、攻撃を阻止し、コンプライアンスを確保するAIセキュリティスタートアップにVCが注目。企業はAI導入におけるセキュリティリスクとコンプライアンス対策の重要性を認識する必要がある。",
+      "title": "不正エージェントとシャドーAI：VCがAIセキュリティに巨額の投資をする理由",
+      "summary": "企業内で許可されていないAIツールの使用や、悪意のあるAIエージェントの脅威が増大しており、AIセキュリティへの投資が急増しています。スタートアップWitness AIは、この問題に対処するためのソリューションを提供し、注目を集めています。",
       "source": "TechCrunch AI",
       "url": "https://techcrunch.com/2026/01/19/rogue-agents-and-shadow-ai-why-vcs-are-betting-big-on-ai-security/"
     },
     {
-      "title": "構成可能で独立したAIによるパイロットを超えて",
-      "summary": "企業AI導入は転換点を迎え、生成AIへの巨額投資にもかかわらず、価値を実際に生み出せているのはごく一部。ボトルネックはモデル自体ではなく、モデルの統合にある。AI導入の成功には、パイロット段階から実用段階への移行が不可欠。",
-      "source": "MIT Technology Review",
-      "url": "https://www.technologyreview.com/2026/01/19/1131422/going-beyond-pilots-with-composable-and-sovereign-ai/"
-    },
-    {
-      "title": "大企業がこぞって使うM365 CopilotとChatGPT、業務への貢献度は？ 生成AI利用状況を徹底調査",
-      "summary": "企業の生成AI活用状況を調査し、規模や業種によって利用状況に差があることを解説。生成AIの業務への貢献度を客観的に評価することで、企業は自社のAI戦略を見直す必要がある。",
+      "title": "生成AIで50万点以上作成か 女性芸能人模したわいせつ画像公開疑い、31歳男逮捕",
+      "summary": "生成AIを用いて作成されたわいせつ画像が社会問題化しており、摘発事例も出てきています。生成AIの悪用は、企業のブランドイメージや社会的責任にも影響を与える可能性があり、対策が急務となっています。",
       "source": "ITmedia AI+",
-      "url": "https://kn.itmedia.co.jp/kn/articles/2601/20/news064.html"
+      "url": "https://www.itmedia.co.jp/news/articles/2601/20/news066.html"
     },
     {
-      "title": "DeepSeekのヨーロッパ版を構築する競争が始まる",
-      "summary": "ヨーロッパがAI分野での自立を目指し、アメリカのDeepSeekに匹敵するAIを開発する動きが活発化。地政学的な緊張とAI競争の激化を示しており、日本の技術戦略にも影響を与える可能性がある。",
-      "source": "Wired AI",
-      "url": "https://www.wired.com/story/europe-race-us-deepseek-sovereign-ai/"
-    },
-    {
-      "title": "自己エンパワーメントのためのAI",
-      "summary": "AIは、人々、企業、国々が生産性、成長、機会を真に解き放つことを支援し、人間の主体性を拡大する可能性を秘めている。AIが個人や組織の能力を拡張し、新たな機会を創出する方法について示唆を与える。",
-      "source": "OpenAI Blog",
-      "url": "https://openai.com/index/ai-for-self-empowerment"
-    },
-    {
-      "title": "Moxie Marlinspikeがプライバシーを重視したChatGPTの代替手段を発表",
-      "summary": "Signalの創業者であるMoxie Marlinspikeが、会話内容を学習や広告に使用しないプライバシー重視のChatGPT代替ツールConferを発表。プライバシー保護に対する意識の高まりを示しており、企業におけるAI利用のあり方に影響を与える可能性がある。",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/01/18/moxie-marlinspike-has-a-privacy-conscious-alternative-to-chatgpt/"
-    },
-    {
-      "title": "2025年に1億ドル以上を調達した55社の米国AIスタートアップ",
-      "summary": "2025年は米国およびそれ以外の地域でAI産業にとって記念碑的な年だった。多くの資金を調達した企業は、AIの成長と投資動向を示す重要な指標となり、日本の投資家や企業にとって有益な情報となる。",
+      "title": "2025年に1億ドル以上を調達した米国のAIスタートアップ55社",
+      "summary": "2025年はAI業界にとって大きな転換期であり、多くのAIスタートアップが巨額の資金調達に成功しました。この記事は、その中でも特に注目すべき55社を紹介し、今後のAI業界のトレンドを予測します。",
       "source": "TechCrunch AI",
       "url": "https://techcrunch.com/2026/01/19/here-are-the-49-us-ai-startups-that-have-raised-100m-or-more-in-2025/"
     },
     {
-      "title": "AIコーディングエージェントで燃え尽きて学んだ10のこと",
-      "summary": "AIエージェントはソフトウェアの強力なツールとなり得るが、使い方によっては人々をこれまで以上に忙しくさせてしまう可能性がある。AIツールを効果的に活用するためには、その限界と適切な利用方法を理解することが重要。",
+      "title": "ヨーロッパでDeepSeekのようなAIを構築する競争が始まる",
+      "summary": "ヨーロッパは、米国との関係が不確実になる中で、AI分野での自立を目指し、DeepSeekのような強力なAIモデルの開発を加速させています。ヨーロッパのAI戦略は、グローバルなAI競争の構図に影響を与える可能性があります。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/europe-race-us-deepseek-sovereign-ai/"
+    },
+    {
+      "title": "インテリジェンスの価値とともにスケールするビジネス",
+      "summary": "OpenAIのビジネスモデルは、ChatGPTの普及によってサブスクリプション、API、広告、コマース、コンピューティングなど、インテリジェンスの価値とともに拡大しています。AIの進化がビジネスモデルに与える影響を示す事例として注目されます。",
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/index/a-business-that-scales-with-the-value-of-intelligence"
+    },
+    {
+      "title": "Moxie Marlinspikeがプライバシーを重視したChatGPTの代替手段を発表",
+      "summary": "Signalの創業者であるMoxie Marlinspikeが、会話内容を学習や広告に利用しない、プライバシーに配慮したChatGPTの代替となる「Confer」を発表しました。プライバシー意識の高まりとともに、このようなAIサービスの需要が増加する可能性があります。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/18/moxie-marlinspike-has-a-privacy-conscious-alternative-to-chatgpt/"
+    },
+    {
+      "title": "構成可能で自律的なAIによるパイロット版を超えた展開",
+      "summary": "多くの企業がAIパイロットプロジェクトに投資しているにもかかわらず、ビジネス価値を生み出すことに苦戦しています。記事では、AIモデルそのものではなく、構成可能性と自律性を重視したAI導入アプローチの重要性を指摘します。",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/01/19/1131422/going-beyond-pilots-with-composable-and-sovereign-ai/"
+    },
+    {
+      "title": "OpenAIのGoogle翻訳キラーが登場：新しいChatGPT翻訳の使い方",
+      "summary": "OpenAIがChatGPTを活用した新しい翻訳ツールを発表し、Google翻訳との比較が行われています。ChatGPT翻訳は、特定の面でGoogle翻訳を上回る性能を示しており、翻訳サービスの新たな選択肢となる可能性があります。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/how-to-use-chatgpt-translate-vs-google-translate-alternative/"
+    },
+    {
+      "title": "AIコーディングエージェントで燃え尽きた私が学んだ10のこと",
+      "summary": "AIコーディングエージェントは、ソフトウェア開発の効率化に貢献する一方で、人間の負担を増大させる可能性も指摘されています。この記事は、AIツールを適切に活用するための注意点を示唆しています。",
       "source": "Ars Technica AI",
       "url": "https://arstechnica.com/information-technology/2026/01/10-things-i-learned-from-burning-myself-out-with-ai-coding-agents/"
     },
     {
-      "title": "死んだペットを“AI化”するサービス開始　「依存させない」設計うたう　月額2980円から",
-      "summary": "亡くなったペットをAIで再現するサービスが登場。感情的なつながりをAIで代替する是非や倫理的な問題提起につながり、AIと人間の関係性について議論を呼ぶ可能性がある。",
-      "source": "ITmedia AI+",
-      "url": "https://www.itmedia.co.jp/aiplus/articles/2601/20/news107.html"
+      "title": "AIはフリーランスタスクで97％失敗する、新しい「リモート労働インデックス」が示す",
+      "summary": "AIがゲーム開発、データ分析、ビデオアニメーションなどのリモートフリーランスタスクで高い失敗率を示したという調査結果が発表されました。AIの能力には限界があることを示唆しており、人間の専門知識の重要性を再認識させるものです。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/ai-failed-test-on-remote-freelance-jobs/"
     }
   ]
 }

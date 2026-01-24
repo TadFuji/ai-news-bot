@@ -1,0 +1,65 @@
+{
+  "updated": "2026年01月23日 07:44",
+  "articles": [
+    {
+      "title": "ヤン・ルカン氏、LLMに代わる次世代AI開発に向け「AMI Labs」を設立",
+      "summary": "MetaのチーフAIサイエンティストであるヤン・ルカン氏が、大規模言語モデル（LLM）の限界を突破するための新会社を設立しました。現在のAIが抱える推論能力や計画性の欠如を解決するため、動画から世界を理解する「世界モデル」に基づく新しいアーキテクチャの構築を目指します。",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/01/22/1131661/yann-lecuns-new-venture-ami-labs/"
+    },
+    {
+      "title": "AIの次なるフロンティアは「協調」、元OpenAI/Anthropicの精鋭がHumans&を設立",
+      "summary": "Anthropic、Meta、OpenAIなどの主要ラボ出身者が、チャットではなく「AI同士の協調」に特化した次世代基盤モデルの開発に乗り出しました。複数のAIが複雑なタスクを分担・連携して実行するシステムの構築を目指しており、AIエージェントの本格普及を支える技術として注目されます。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/22/humans-thinks-coordination-is-the-next-frontier-for-ai-and-theyre-building-a-model-to-prove-it/"
+    },
+    {
+      "title": "Anthropicの「Claude Code」がMicrosoft内部で急速に普及、開発フローを激変",
+      "summary": "Anthropicが提供するコーディングツール「Claude Code」が、Microsoftなどの大手テック企業内でGitHub Copilotを凌ぐ勢いで活用され始めています。既存のツールよりも自律的かつ正確にコードの修正やデバッグを行う能力が、開発現場の生産性を劇的に向上させています。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/865689/microsoft-claude-code-anthropic-partnership-notepad"
+    },
+    {
+      "title": "Adobe、エンタメ業界向けに「著作権セーフ」な生成AIモデルを開発",
+      "summary": "Adobeはハリウッドの映画制作スタジオなどの要望に応え、知的財産権（IP）を侵害しないことが保証された生成AIモデル「Firefly」の新展開を発表しました。権利関係が厳格なエンターテインメント業界において、法的リスクを最小限に抑えつつ生成AIを業務プロセスに組み込むための標準確立を狙います。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/865077/adobe-firefly-foundry-ip-sage-genai-models"
+    },
+    {
+      "title": "AIによる「偽情報の群れ」が民主主義を脅かす、Wiredが警告",
+      "summary": "AIの進化により、検知が困難で大規模な偽情報キャンペーンを、かつてないスピードと低コストで展開することが可能になっています。これらは民主的な意思決定を歪める「完璧な嵐」となると指摘されており、技術的な防御策と法規制の整備が急務となっています。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/ai-powered-disinformation-swarms-are-coming-for-democracy/"
+    },
+    {
+      "title": "AIエージェントの業務遂行能力に疑問符、新たなベンチマークで判明",
+      "summary": "コンサルティング、投資銀行、法律などの高度なホワイトカラー業務を模した最新の性能評価において、多くの主要AIモデルが期待された成果を出せなかったことが明らかになりました。AIエージェントのビジネス導入への期待が高まる一方、実務への適用にはまだ大きなギャップがあることが示唆されています。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/22/are-ai-agents-ready-for-the-workplace-a-new-benchmark-raises-doubts/"
+    },
+    {
+      "title": "Google、GmailやPhotosのデータを活用し個人に最適化された回答を提供開始",
+      "summary": "Google Searchの「AI Mode」が、ユーザーのGmailやGoogle Photos内の情報にアクセスし、個人の文脈に合わせた高度な回答を行えるようになりました。プライバシーへの配慮として、これらの個人データはモデルの学習には直接使用されない仕組みになっています。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/22/googles-ai-mode-can-now-tap-into-your-gmail-and-photos-to-provide-tailored-responses/"
+    },
+    {
+      "title": "光演算チップのNeurophosが1.1億ドルを調達、AI推論の電力不足を解消へ",
+      "summary": "光プロセッサを用いてAI推論を行うスタートアップNeurophosが、巨額の資金調達を実施しました。現在のGPUが抱える膨大な電力消費と熱問題を、電子ではなく「光」で計算を行う光学チップによって解決し、効率的なAIインフラの構築を目指します。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/22/from-invisibility-cloaks-to-ai-chips-neurophos-raises-110m-to-build-tiny-optical-processors-for-inferencing/"
+    },
+    {
+      "title": "Google、音声AIのHume AIから主要チームを引き抜き、音声インターフェース強化",
+      "summary": "Googleが、感情認識や自然な会話で知られる音声AIスタートアップHume AIのCEOとトップエンジニアを雇用しました。これは、AIの操作方法が現在のテキスト入力から、より自然な「音声」へとシフトしていくことを見据えた戦略的な人材獲得と見られています。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/22/google-reportedly-snags-up-team-behind-ai-voice-startup-hume-ai/"
+    },
+    {
+      "title": "推論効率化のInferactが1.5億ドル調達、デファクト技術「vLLM」の商用化へ",
+      "summary": "AI推論を高速化・効率化するオープンソースライブラリ「vLLM」の創設者が、商用化を目指すスタートアップを設立しました。モデルのサイズが巨大化し、運用コストが課題となる中で、推論効率の最適化は企業のAI導入コストを直接左右する極めて重要な技術領域です。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/22/inference-startup-inferact-lands-150m-to-commercialize-vllm/"
+    }
+  ]
+}
