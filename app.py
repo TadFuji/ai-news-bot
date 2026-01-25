@@ -2,13 +2,13 @@ import streamlit as st
 import json
 import glob
 import os
-import random
 import sys
+import time
 from datetime import datetime
+import subprocess
+from dotenv import load_dotenv
 
-# --- Configuration ---
-NEWS_BOT_OUTPUT_DIR = r"G:\マイドライブ\antigravity_on_google_drive\ai-news-bot\output"
-BOT_DIR = r"G:\マイドライブ\antigravity_on_google_drive\ai-news-bot"
+from config import PROJECT_ROOT as BOT_DIR, NEWS_BOT_OUTPUT_DIR
 
 # Add bot directory to path
 if BOT_DIR not in sys.path:
@@ -68,69 +68,173 @@ def load_latest_news():
 
 # Sidebar
 with st.sidebar:
-    st.header("⚙️ Settings")
-    if st.button("🔄 データを再読み込み"):
-        st.cache_data.clear()
-        st.rerun()
+    # --- Sidebar ---
+    debug_attach = False
+    with st.expander("🔧 Advanced Settings"):
+         debug_attach = st.checkbox("既存のChromeに接続 (Port 9222)", value=False, help="START_USER_CHROME.batで起動したChromeを操作する場合にチェックを入れてください。")
+         
+         if st.button("🔄 データを再読み込み (Cache Clear)"):
+             st.cache_data.clear()
+             st.rerun()
+         
+    # ... (existing manual update code) ...
+    
+    # ... (inside tabs) ...
+    
+
+        
+    st.markdown("---")
+    st.write("▼ ニュースを新しく取得")
+    with st.expander("⚙️ オプション設定", expanded=True):
+        sync_github = st.checkbox("GitHub Pagesにも反映する (Cloud Sync)", value=True, help="チェックを入れると、Webサイト(GitHub Pages)も最新ニュースに更新されます。")
+        line_notify = st.checkbox("LINE通知も送信する (Push Notification)", value=False, help="チェックを入れると、更新完了時にLINEに通知が飛びます。通常はオフでOKです。")
+
+    if st.button("⚡ 手動更新 (Web巡回を開始)"):
+        with st.spinner("🤖 世界中のニュースを巡回中... (3-5分かかります)"):
+            try:
+                # 1. News Collection (main.py)
+                cmd = [sys.executable, "main.py", "--mode", "daily"]
+                if not line_notify:
+                    cmd.append("--no-line")
+                
+                # Windows Console Encoding Fix
+                env = os.environ.copy()
+                env["PYTHONIOENCODING"] = "utf-8"
+                
+                result = subprocess.run(
+                    cmd,
+                    cwd=BOT_DIR,
+                    capture_output=True,
+                    text=True,
+                    encoding="utf-8",
+                    errors="replace",
+                    env=env
+                )
+                
+                if result.returncode != 0:
+                    st.error("❌ ニュース収集エラー")
+                    st.code(f"{result.stderr}\n{result.stdout}")
+                    st.stop()
+                
+                log_output = f"✅ ニュース収集完了\n"
+                
+                # 2. Site Generation & Git Sync
+                if sync_github:
+                    with st.spinner("🌍 GitHub Pagesを更新中..."):
+                        # Build Pages
+                        build_cmd = [sys.executable, "build_pages.py"]
+                        build_res = subprocess.run(
+                            build_cmd,
+                            cwd=BOT_DIR,
+                            capture_output=True,
+                            text=True,
+                            encoding="utf-8",
+                            errors="replace",
+                            env=env
+                        )
+                        
+                        if build_res.returncode != 0:
+                            st.warning("⚠️ サイト生成に失敗しました")
+                            st.code(build_res.stderr)
+                        else:
+                            log_output += "✅ サイトデータ生成完了\n"
+                            
+                            # Git Commands
+                            # using 'git' directly assumes it's in PATH (Git Bash or minimal git installed)
+                            # 1. Add changes (docs folder specifically for site)
+                            subprocess.run(["git", "add", "docs/"], cwd=BOT_DIR, capture_output=True)
+                            subprocess.run(["git", "add", "public_reports/"], cwd=BOT_DIR, capture_output=True) # Sync reports too
+                            
+                            # 2. Commit
+                            timestamp = datetime.now().strftime('%Y-%m-%d %H:%M')
+                            commit_msg = f"Manual Update: {timestamp} (via Cockpit)"
+                            subprocess.run(["git", "commit", "-m", commit_msg], cwd=BOT_DIR, capture_output=True)
+                            
+                            # 3. Push
+                            push_res = subprocess.run(["git", "push", "origin", "main"], cwd=BOT_DIR, capture_output=True)
+                            
+                            if push_res.returncode == 0:
+                                log_output += "✅ GitHub Sync完了 (Webサイト更新)\n"
+                            else:
+                                log_output += f"⚠️ GitHub Push失敗 (認証エラー等の可能性): {push_res.stderr}\n"
+
+                st.success(log_output)
+                st.cache_data.clear()
+                time.sleep(3)
+                st.rerun()
+
+            except Exception as e:
+                st.error(f"実行エラー: {e}")
+    
+    st.markdown("---")
+    st.markdown("---")
+    st.caption("トラブルシューティング")
+    
+    with st.expander("🔑 ログインできない場合 (最終手段)"):
+        st.info("""
+        **ブラウザのセキュリティが強すぎてログインできない場合**
+        
+        1. デスクトップに作成された `START_USER_CHROME.bat` を実行してください。
+        2. あなたの「いつものChrome」が起動します。
+        3. その状態で「🔴 AUTO-POST」ボタンを押してください。
+        
+        ※ ロボットがあなたのChromeに接続して操作を行います。
+        """)
+
+    if st.button("🛑 ブラウザを強制リセット"):
+         import subprocess
+         try:
+             # Force kill chromeMain and driver to unlock profile
+             subprocess.run("taskkill /F /IM chrome.exe /T", shell=True)
+             subprocess.run("taskkill /F /IM chromedriver.exe /T", shell=True)
+             st.success("✅ ブラウザを強制終了しました。もう一度AUTO-POSTを試してください。")
+         except Exception as e:
+             st.error(f"Error: {e}")
+
     st.markdown("---")
     st.caption(f"監視フォルダ:\n{NEWS_BOT_OUTPUT_DIR}")
 
 # --- Helper Functions ---
 
 def generate_x_posts(articles):
-    top_article = articles[0]
     date_str = datetime.now().strftime("%m/%d")
     
-    # URL for reply (Algorithm Strategy: No URLs in main post)
+    # List all 10 items with summaries
+    news_content = ""
+    for i, a in enumerate(articles[:10], 1):
+        # Format: Number. Title / Summary
+        news_content += f"{i}. {a['title_ja']}\n"
+        news_content += f"▶︎ {a['summary_ja']}\n\n" # Removed character limit to match web content
+
+    # URL for reply
     registration_url = "https://lin.ee/gTGnitS"
-    reply_text = f"【続きはこちら】\nAIを味方につけて、情報の波を乗りこなしましょう🏄‍♂️\n毎朝7時に3行要約ニュースが届きます。\n👇\n{registration_url}"
+    reply_text = f"""
+【完全無料で配信中】
+毎朝7時に、今日のような厳選ニュースがLINEに届きます。
+情報収集の時間を効率化し、AIを味方につけましょう。
 
-    post_a = f"""
-【AIニュース速報 {date_str}】
-今日のトップニュースは「{top_article['title_ja']}」。
-
-これ、かなり重要な動きです。
-{top_article['summary_ja'][:60]}...
-
-詳細と他のトップ10ニュースはLINEで配信中。
-忙しい朝のインプットに最適です。
-↓ (続きはリプライへ)
-
-#AI #Gemini #TechNews
+▼ 友達追加はこちら（1秒で完了）
+{registration_url}
     """.strip()
 
-    post_b = f"""
-マジか... 今日のAIニュース、激震走ってる。
+    post_content = f"""
+【AIニュース 10選 ({date_str})】
+今日読むべき重要情報を網羅しました。トレンドの最前線をこの1ポストで把握できます。
 
-1位の「{top_article['title_ja']}」の内容がヤバい。
-これを知らないと完全に置いていかれるレベル。
+{news_content.strip()}
 
-毎朝、勝手に重要ニュースだけ要約して届けてくれるこのBot、正直「チート」級に便利です。
-無料のうちに使っておくべき。
-↓ (詳細はリプライから)
+---
+「情報の波に溺れず、賢く波に乗る」
+こうした最新情報を、毎朝午前7時に「3行要約」でお届けしています。
+忙しいビジネスパーソンのインプットに最適です。
 
-#AI #駆け出しエンジニアと繋がりたい
+完全無料で配信中。詳細はリプライを見てください！👇
+
+#AI #TechNews #業務効率化
     """.strip()
-    
-    titles = "\\n".join([f"・{a['title_ja']}" for a in articles[:3]])
-    post_c = f"""
-おはようございます！今日のAIトレンドTOP3 🤖
 
-{titles}
-
-...他7本。
-全部読む時間はなくても、これだけ知っていれば会議でドヤれます。
-
-続きはここから（3行要約で届きます）
-↓ (リプライにURL貼ります)
-
-#今日の積み上げ #AI
-    """.strip()
-    
     return {
-        "Professional": post_a, 
-        "Viral": post_b, 
-        "Summary": post_c,
+        "Professional": post_content, 
         "ReplyURL": reply_text
     }
 
@@ -222,7 +326,7 @@ def generate_press_release(articles):
 # 📰 プレスリリース原稿 (PR Times / TechCrunch用)
 
 **タイトル:**
-個人開発AIボットが「ニュース収集」の常識を変える —— Gemini 2.0搭載「Antigravity News」がLINE登録者数急増中
+個人開発AIボットが「ニュース収集」の常識を変える —— Gemini 3.0搭載「Antigravity News」がLINE登録者数急増中
 
 **サブタイトル:**
 「情報収集にかける時間をゼロに」。24時間体制で世界中のテックニュースを監視・要約する完全自動化システムを無料公開。
@@ -233,7 +337,7 @@ def generate_press_release(articles):
 個人開発者の[あなたのお名前]は本日、世界中のAIニュースをリアルタイムで収集・要約し、LINEで配信するサービス「Antigravity AI News」の本格運用を開始しました。
 
 **■ 背景**
-AI技術の進化スピードは凄まじく、毎日数百本のニュースが生まれています。「情報のキャッチアップが追いたない」というエンジニア・ビジネスマンの課題を解決するため、Googleの最新AIモデル「Gemini 2.0 Flash」を活用した完全自動化システムを開発しました。
+AI技術の進化スピードは凄まじく、毎日数百本のニュースが生まれています。「情報のキャッチアップが追いたない」というエンジニア・ビジネスマンの課題を解決するため、Googleの最新AIモデル「Gemini 3.0 Flash (Preview)」を活用した完全自動化システムを開発しました。
 
 **■ サービスの特徴**
 1. **完全自動運転**: RSS収集から翻訳、要約、配信までをPythonプログラムが全自動で実行。
@@ -260,7 +364,7 @@ latest_file, articles = load_latest_news()
 if not articles:
     st.error(f"ニュースデータが見つかりません。")
     if st.button("今すぐデータを生成する (Run main.py)"):
-        os.system(f'python "{os.path.join(BOT_DIR, "main.py")}"')
+        os.system(f'python "{os.path.join(BOT_DIR, "main.py")}" --no-line')
         st.rerun()
 
 else:
@@ -283,39 +387,18 @@ else:
         posts = generate_x_posts(articles)
         reply_url = posts["ReplyURL"]
         
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.subheader("👔 Professional")
-            st.text_area("Copy this:", value=posts["Professional"], height=250)
-            if st.button("🔴 AUTO-POST (Thread)", key="auto_a"):
-                with st.spinner("🤖 Taking control of browser..."):
-                    try:
-                        post_to_x(posts["Professional"], reply_text=reply_url)
-                        st.success("✅ Posted thread successfully!")
-                    except Exception as e:
-                        st.error(f"Failed: {e}")
-
-        with col2:
-            st.subheader("🔥 Viral")
-            st.text_area("Copy this:", value=posts["Viral"], height=250)
-            if st.button("🔴 AUTO-POST (Thread)", key="auto_b"):
-                 with st.spinner("🤖 Taking control of browser..."):
-                    try:
-                        post_to_x(posts["Viral"], reply_text=reply_url)
-                        st.success("✅ Posted thread successfully!")
-                    except Exception as e:
-                        st.error(f"Failed: {e}")
-
-        with col3:
-            st.subheader("📰 Summary")
-            st.text_area("Copy this:", value=posts["Summary"], height=250)
-            if st.button("🔴 AUTO-POST (Thread)", key="auto_c"):
-                 with st.spinner("🤖 Taking control of browser..."):
-                    try:
-                        post_to_x(posts["Summary"], reply_text=reply_url)
-                        st.success("✅ Posted thread successfully!")
-                    except Exception as e:
-                        st.error(f"Failed: {e}")
+        st.subheader("👔 Professional List (10 News Items)")
+        st.text_area("X Post Content (Copy or Auto-Post):", value=posts["Professional"], height=400)
+        
+        if st.button("🔴 AUTO-POST (Thread)", key="auto_a"):
+            with st.spinner("🤖 Taking control of browser..."):
+                try:
+                    post_to_x(posts["Professional"], reply_text=reply_url, force_attach=debug_attach)
+                    st.success("✅ Posted thread successfully!")
+                except Exception as e:
+                    st.error(f"Failed: {e}")
+                    with st.expander("詳細エラーログ (Traceback)"):
+                        st.code(traceback.format_exc())
         
         st.markdown("---")
         st.subheader("🔗 Managed Reply (Algorithm Strategy)")
@@ -443,10 +526,12 @@ TOPIC:
                     try:
                         # Promotional strategy: Link to LINE in reply
                         promo_reply = f"【受取リンク】\nこちらのLINEで「レポート」と送ると、このPDFが自動で届きます！\n(友だち追加して待っててね)\n👇\nhttps://lin.ee/gTGnitS"
-                        post_to_x(promo_text, reply_text=promo_reply)
+                        post_to_x(promo_text, reply_text=promo_reply, force_attach=debug_attach)
                         st.success("✅ Posted promotion thread!")
                     except Exception as e:
                         st.error(f"Failed: {e}")
+                        with st.expander("詳細エラーログ (Traceback)"):
+                            st.code(traceback.format_exc())
 
 st.markdown("---")
 st.caption("Powered by Antigravity Marketing Engine v3.1 (Dominator Edition)")

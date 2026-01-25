@@ -9,26 +9,27 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from .browser_core import get_driver
 
-def post_to_x(text, image_path=None, reply_text=None, headless=False):
+def post_to_x(text, image_path=None, reply_text=None, headless=False, force_attach=False):
     """
     Posts content to X (Twitter).
-    If reply_text is provided, it posts as a reply to the main post (Thread).
     """
-    driver = get_driver(headless=headless)
+    driver = get_driver(headless=headless, force_attach=force_attach)
     wait = WebDriverWait(driver, 20)
     
     try:
-        print("🐦 Navigating to X...")
-        driver.get("https://twitter.com/compose/tweet")
-        
-        # --- 1. Main Post ---
-        # Check login status
+        # 1. Login / Navigation
         try:
-            input_box = wait.until(EC.presence_of_element_located(
+             # Just navigate to compose directly.
+             driver.get("https://twitter.com/compose/tweet")
+             input_box = wait.until(EC.presence_of_element_located(
                 (By.CSS_SELECTOR, '[data-testid="tweetTextarea_0"]')
-            ))
-            print("✅ Logged in successfully.")
+             ))
+             print("✅ Logged in successfully.")
+
         except TimeoutException:
+            if force_attach:
+                print("⚠️ Force Attach Mode: Browser not logged in?")
+            
             print("❌ Not logged in. Please log in manually.")
             driver.get("https://twitter.com/login")
             input("🛑 Please Log In to X in the browser, then press Enter to retry...")

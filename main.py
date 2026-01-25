@@ -15,14 +15,14 @@ import os
 import argparse
 import json
 from datetime import datetime
-from config import JST, OUTPUT_DIR
+from config import JST, NEWS_BOT_OUTPUT_DIR
 from rss_client import collect_from_rss_feeds
 from filters import filter_by_time, filter_by_ai_keywords, remove_duplicates
 from ai_client import process_with_gemini
 from output_manager import output_markdown, save_output, save_json
 from line_notifier import send_news_to_line
 
-HISTORY_FILE = os.path.join(OUTPUT_DIR, "check_history.json")
+HISTORY_FILE = os.path.join(NEWS_BOT_OUTPUT_DIR, "check_history.json")
 
 def load_history() -> set:
     """既知のURL履歴を読み込む"""
@@ -37,7 +37,7 @@ def load_history() -> set:
 
 def save_history(urls: set):
     """URL履歴を保存する"""
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    os.makedirs(NEWS_BOT_OUTPUT_DIR, exist_ok=True)
     with open(HISTORY_FILE, "w", encoding="utf-8") as f:
         json.dump({"urls": list(urls), "updated_at": datetime.now(JST).isoformat()}, f, indent=2)
 
@@ -45,6 +45,7 @@ def main():
     """メイン処理"""
     parser = argparse.ArgumentParser(description="AI News Bot")
     parser.add_argument("--mode", choices=["daily", "sentinel"], default="daily", help="実行モード")
+    parser.add_argument("--no-line", action="store_true", help="LINE通知をスキップする")
     args = parser.parse_args()
     
     print("=" * 50)
@@ -90,7 +91,7 @@ def main():
         final_candidates = new_candidates
         
         # 出力ファイル名 (分刻み)
-        output_file = os.path.join(OUTPUT_DIR, f"breaking_{datetime.now(JST).strftime('%Y%m%d_%H%M')}.md")
+        output_file = os.path.join(NEWS_BOT_OUTPUT_DIR, f"breaking_{datetime.now(JST).strftime('%Y%m%d_%H%M')}.md")
         
     else:
         # Dailyモード: 従来通り10件選定
@@ -107,7 +108,7 @@ def main():
                         break
         
         # 出力ファイル名 (日次)
-        output_file = os.path.join(OUTPUT_DIR, f"ai_news_{datetime.now(JST).strftime('%Y%m%d_%H%M')}.md")
+        output_file = os.path.join(NEWS_BOT_OUTPUT_DIR, f"ai_news_{datetime.now(JST).strftime('%Y%m%d_%H%M')}.md")
 
     if not final_candidates:
         print("⚠️ 処理対象となる記事がありませんでした")
@@ -143,7 +144,10 @@ def main():
     #    (DailyもSentinelも同じフォーマットで届くが、Sentinelは件数が少ないので区別つく)
     
     # 5. LINE 送信
-    send_news_to_line(processed)
+    if not args.no_line:
+        send_news_to_line(processed)
+    else:
+        print("⏭️ --no-line が指定されたため、LINE送信をスキップします。")
     
     # --- DOMINATOR UPGRADE: Full Automation Sequence ---
     # 完全に自動化するために、PDF生成とX投稿もここで行う。
@@ -157,11 +161,11 @@ def main():
         
         # Generate dated file
         pdf_filename = f"report_{datetime.now(JST).strftime('%Y%m%d')}.pdf"
-        pdf_path = create_pdf_report(processed, os.path.join(OUTPUT_DIR, pdf_filename))
+        pdf_path = create_pdf_report(processed, os.path.join(NEWS_BOT_OUTPUT_DIR, pdf_filename))
         
         if pdf_path:
             # Overwrite "Latest" for fixed link
-            public_dir = os.path.join(os.path.dirname(OUTPUT_DIR), "public_reports")
+            public_dir = os.path.join(os.path.dirname(NEWS_BOT_OUTPUT_DIR), "public_reports")
             if not os.path.exists(public_dir):
                 os.makedirs(public_dir)
             latest_path = os.path.join(public_dir, "Antigravity_Latest_Report.pdf")
@@ -206,7 +210,7 @@ TOPIC:
                 
                 # Generate Infographic from top article
                 from generators.infographic_maker import create_infographic
-                infographic_path = os.path.join(OUTPUT_DIR, f"infographic_{datetime.now(JST).strftime('%Y%m%d')}.png")
+                infographic_path = os.path.join(NEWS_BOT_OUTPUT_DIR, f"infographic_{datetime.now(JST).strftime('%Y%m%d')}.png")
                 
                 # Create visual summary card
                 create_infographic(

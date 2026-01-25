@@ -125,7 +125,11 @@ AI_KEYWORDS = [
     "規制", "ガイドライン", "著作権", "雇用",
 ]
 
+# ルートディレクトリ
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 # 出力ファイルパス
-OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output")
+NEWS_BOT_OUTPUT_DIR = os.path.join(PROJECT_ROOT, "output")
+
 # JSTタイムゾーン定義
 JST = timezone(timedelta(hours=9))

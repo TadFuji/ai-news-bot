@@ -20,3 +20,11 @@ line-bot-sdk>=3.0.0
 streamlit>=1.30.0
 selenium>=4.16.0
 webdriver-manager>=4.0.0
+
+# Reports & Media (Added during migration fix)
+edge-tts
+moviepy
+xhtml2pdf
+reportlab
+Pillow
+lxml

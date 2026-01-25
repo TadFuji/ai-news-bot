@@ -11,8 +11,8 @@ import os
 import re
 import json
 import shutil
-from datetime import datetime
 from pathlib import Path
+from config import NEWS_BOT_OUTPUT_DIR as output_dir_path
 
 
 def parse_markdown_news(content: str) -> dict:
@@ -57,7 +57,7 @@ def build_pages():
     GitHub Pages 用のファイルを生成する
     """
     script_dir = Path(__file__).parent
-    output_dir = script_dir / "output"
+    output_dir = Path(output_dir_path)
     docs_dir = script_dir / "docs"
     
     # docs ディレクトリを確保

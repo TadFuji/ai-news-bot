@@ -9,9 +9,9 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
 # Font configuration
-# Windows standard Japanese font
-FONT_PATH = r"C:\Windows\Fonts\msgothic.ttc"
-FONT_NAME = "MS Gothic"
+# Antigravity Standard: Noto Sans JP
+FONT_PATH = r"C:\Windows\Fonts\NotoSansJP-VF.ttf"
+FONT_NAME = "NotoSansJP"
 
 def create_pdf_report(articles, output_path="report.pdf"):
     """

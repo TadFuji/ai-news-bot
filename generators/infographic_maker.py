@@ -4,12 +4,9 @@ from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 
 # Windows Font Path (Standard Japanese Font)
-FONT_PATH = r"C:\Windows\Fonts\msgothic.ttc"
-BOLD_FONT = FONT_PATH # Gothic doesn't have bold file easy access, use same for now or look for bold. 
-# Ms Gothic is usually monospaced but readable. Let's stick to it or Meiryo if available. 
-# From user's file list: `meiryob.ttc` exists! (Meiryo Bold) - Much better for design.
-MEIRYO_BOLD = r"C:\Windows\Fonts\meiryob.ttc"
-MEIRYO_REG = r"C:\Windows\Fonts\meiryo.ttc"
+# Antigravity Standard: Noto Sans JP (Variable Font)
+NOTO_JP = r"C:\Windows\Fonts\NotoSansJP-VF.ttf"
+NOTO_SERIF = r"C:\Windows\Fonts\NotoSerifJP-VF.ttf"
 
 def create_infographic(title, summary, date_str=None, output_path="infographic.png"):
     """
@@ -29,10 +26,10 @@ def create_infographic(title, summary, date_str=None, output_path="infographic.p
 
     # Fonts
     try:
-        title_font = ImageFont.truetype(MEIRYO_BOLD, 60)
-        body_font = ImageFont.truetype(MEIRYO_REG, 32)
-        meta_font = ImageFont.truetype(MEIRYO_BOLD, 24)
-        logo_font = ImageFont.truetype(MEIRYO_BOLD, 28)
+        title_font = ImageFont.truetype(NOTO_JP, 60)
+        body_font = ImageFont.truetype(NOTO_JP, 32)
+        meta_font = ImageFont.truetype(NOTO_JP, 24)
+        logo_font = ImageFont.truetype(NOTO_JP, 28)
     except Exception:
         # Fallback
         title_font = ImageFont.load_default()
