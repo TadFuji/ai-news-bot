@@ -28,3 +28,4 @@ xhtml2pdf
 reportlab
 Pillow
 lxml
+tweepy

@@ -70,9 +70,10 @@ URL: {article['url']}
 """
     
     print("🧠 Gemini API (Flash Preview) で処理中...")
-    
+    try:
         response = client.models.generate_content(
-            model="gemini-3-flash-preview", # Verified model ID
+            model="gemini-2.0-flash", # Stable model for automation
+            contents=prompt
         )
         response_text = response.text.strip()
         

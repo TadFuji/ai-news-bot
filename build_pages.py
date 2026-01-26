@@ -124,7 +124,6 @@ def build_pages():
         json.dump(archive_data, f, ensure_ascii=False, indent=2)
     
     print(f"✅ archive.json 更新 ({len(unique_archives)} 件)")
-    print(f"✅ archive.json 更新 ({len(unique_archives)} 件)")
 
     # --- Column Processing ---
     column_dir = output_dir.parent / "output" / "columns" # Correct path based on structure

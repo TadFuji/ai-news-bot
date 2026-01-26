@@ -119,10 +119,10 @@ with st.sidebar:
                 
                 log_output = f"✅ ニュース収集完了 (Gemini Top 10)\n" + result.stdout[-500:] 
                 
-                # 2. Site Generation (build_site.py) & Git Sync
-                # Note: build_site.py currently expects MD files in 'reports/'
+                # 2. Site Generation (build_pages.py) & Git Sync
+                # Note: build_pages.py currently expects MD files in 'output/'
                 # But collect_rss_gemini.py outputs JSON/MD in 'output/'
-                # We might need to adjust build_site.py later or skip it for now if focus is X/LINE.
+                # We might need to adjust build_pages.py later or skip it for now if focus is X/LINE.
                 # For now, let's keep the hook but be aware it might not find new files if logic mismatch.
                 # User priority is X posting.
                 

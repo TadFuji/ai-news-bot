@@ -24,8 +24,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        # Ensure we have all requirements for RSS and Gemini
-        pip install requests google-genai feedparser python-dotenv
+        # All requirements for RSS collection, Gemini processing, and distribution
+        pip install requests google-genai feedparser python-dotenv python-dateutil line-bot-sdk tweepy
 
     - name: Run Daily Collection (RSS + Gemini 3)
       env:
@@ -49,7 +49,7 @@ jobs:
     - name: Build Website (Daily Update)
       run: |
         # Update static site with new daily content
-        python build_site.py
+        python build_pages.py
 
     - name: Commit and Push changes
       uses: stefanzweifel/git-auto-commit-action@v5
