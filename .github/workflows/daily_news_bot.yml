@@ -1,0 +1,50 @@
+name: Daily AI News Bot
+
+on:
+  push:
+    branches: [ "main" ]
+  schedule:
+    - cron: '0 22 * * *'  # UTC 22:00 = JST 07:00
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-daily-bot:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run Main Process
+      env:
+        GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+        LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+        X_CONSUMER_KEY: ${{ secrets.X_CONSUMER_KEY }}
+        X_CONSUMER_SECRET: ${{ secrets.X_CONSUMER_SECRET }}
+        X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+        X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+      run: |
+        python main.py
+
+    - name: Build Pages
+      run: |
+        python build_pages.py
+
+    - name: Commit and Push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Daily Bot Run Output [skip ci]"
+        branch: main
