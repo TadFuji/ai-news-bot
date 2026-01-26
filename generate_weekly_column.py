@@ -102,7 +102,7 @@ def generate_column(items):
     
     try:
         response = client.models.generate_content(
-            model="gemini-2.0-flash", # Use standard stable model if preview is risky, sticking to what user likely has access to or widely avail
+            model="gemini-3-flash-preview", # User requested specific preview model
             contents=prompt
         )
         return response.text
