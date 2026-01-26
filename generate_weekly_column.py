@@ -93,18 +93,20 @@ def generate_column(items):
         reverse=True
     )
     
-    # 上位30件をコンテキストとして使用
-    top_items = sorted_items[:30]
+    # 1週間分のニュースすべてをコンテキストとして使用
+    all_items = list(sorted_items)
     
     item_text = ""
-    for i, item in enumerate(top_items, 1):
+    for i, item in enumerate(all_items, 1):
         title = item.get('title', item.get('title_ja', 'No Title'))
         summary = item.get('summary', item.get('summary_ja', 'No Summary'))
         item_text += f"{i}. {title}: {summary}\n"
 
+    print(f"📊 {len(all_items)}件のニュースをコラム生成に使用します。")
+
     prompt = f"""
     あなたは、日本のビジネスパーソンに大人気のAIテック系コラムニスト「アント」編集長です。
-    この1週間のAIニュースTop30をベースに、日曜日の朝9時に配信する「AIウィークリーコラム」を執筆してください。
+    この1週間分のAIニュース（毎日のTop10、計{len(all_items)}件）をベースに、日曜日の朝9時に配信する「AIウィークリーコラム」を執筆してください。
 
     **ターゲット読者:**
     - AIの進化に興味はあるが、日々のニュースを追う時間がない40代〜50代のビジネスリーダー
@@ -194,7 +196,7 @@ def main():
 {column_text}
 
 ---
-*このコラムは、過去1週間のAIニュースTop30をベースに、Gemini編集長が執筆しました。*
+*このコラムは、1週間分のAIニュース（毎日のTop10）をベースに、Gemini編集長が執筆しました。*
 """
     with open(md_path, "w", encoding="utf-8") as f:
         f.write(md_content)
