@@ -1,0 +1,40 @@
+name: Weekly AI Column
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # UTC Sunday 00:00 = JST Sunday 09:00
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-weekly-column:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run Weekly Generator
+      env:
+        GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+        LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+      run: |
+        python generate_weekly_column.py
+
+    - name: Commit and Push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Weekly Column Output [skip ci]"
+        branch: main
