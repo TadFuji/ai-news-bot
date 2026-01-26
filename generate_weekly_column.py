@@ -135,14 +135,30 @@ def main():
     header = "☕ 日曜版：AIウィークリーコラム\n\n"
     full_msg = header + column_text
     
-    # Save to file for record
-    output_filename = f"weekly_column_{datetime.now(JST).strftime('%Y%m%d')}.txt"
+    # Save to file for record (txt)
+    timestamp = datetime.now(JST).strftime('%Y%m%d')
+    output_filename = f"weekly_column_{timestamp}.txt"
     output_path = os.path.join(NEWS_BOT_OUTPUT_DIR, "columns", output_filename)
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(full_msg)
     print(f"💾 Saved to {output_path}")
+
+    # Save to Markdown for Website
+    md_filename = f"weekly_column_{timestamp}.md"
+    md_path = os.path.join(NEWS_BOT_OUTPUT_DIR, "columns", md_filename)
+    
+    md_content = f"""# AIウィークリーコラム ({datetime.now(JST).strftime('%Y/%m/%d')})
+
+{column_text}
+
+---
+*このコラムは、過去1週間のAIニュースTop10をベースに、Gemini編集長が執筆しました。*
+"""
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write(md_content)
+    print(f"💾 Saved MD to {md_path}")
 
     # Send to LINE
     print("📨 Sending to LINE...")

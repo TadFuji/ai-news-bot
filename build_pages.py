@@ -124,6 +124,48 @@ def build_pages():
         json.dump(archive_data, f, ensure_ascii=False, indent=2)
     
     print(f"✅ archive.json 更新 ({len(unique_archives)} 件)")
+    print(f"✅ archive.json 更新 ({len(unique_archives)} 件)")
+
+    # --- Column Processing ---
+    column_dir = output_dir.parent / "output" / "columns" # Correct path based on structure
+    if not column_dir.exists():
+        column_dir = output_dir / "columns" # Fallback check
+
+    columns_files = sorted(column_dir.glob("weekly_column_*.md"), reverse=True)
+    columns_list = []
+
+    for cfile in columns_files:
+        # Patter: weekly_column_YYYYMMDD.md
+        match = re.search(r'weekly_column_(\d{4})(\d{2})(\d{2})', cfile.name)
+        if not match:
+            continue
+        
+        y, m, d = match.groups()
+        date_display = f"{y}年{m}月{d}日"
+        
+        content = cfile.read_text(encoding="utf-8")
+        
+        # Simple parse: Title is line 1, Body is rest
+        lines = content.split('\n')
+        title = lines[0].replace('# ', '').strip()
+        body = "\n".join(lines[1:]).strip()
+        
+        # Save individual JSON
+        c_json_path = docs_dir / f"column_{y}{m}{d}.json"
+        with open(c_json_path, "w", encoding="utf-8") as f:
+            json.dump({"title": title, "date": date_display, "body": body}, f, ensure_ascii=False, indent=2)
+            
+        columns_list.append({
+            "date": date_display,
+            "title": title,
+            "path": f"column_{y}{m}{d}.json"
+        })
+        print(f"✅ Column Processed: {cfile.name}")
+
+    with open(docs_dir / "columns.json", "w", encoding="utf-8") as f:
+        json.dump({"columns": columns_list}, f, ensure_ascii=False, indent=2)
+    print(f"✅ columns.json 更新 ({len(columns_list)} 件)")
+
     print("🎉 ビルド完了!")
 
 
