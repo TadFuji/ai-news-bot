@@ -1,65 +1,65 @@
 {
-  "updated": "2026年01月24日 12:02",
+  "updated": "2026年01月22日 07:16",
   "articles": [
     {
-      "title": "Googleが日本発のAIスタートアップ「Sakana AI」へ出資",
-      "summary": "Googleが東京を拠点とするSakana AIへの投資を公表しました。独自のモデル開発手法を持つ同社が世界のテック巨人から戦略的パートナーとして認められた格好であり、日本のAIエコシステムの存在感を高める象徴的な動きです。",
-      "source": "The Information",
-      "url": "https://www.theinformation.com/briefings/google-invests-japans-sakana-ai"
+      "title": "Apple、SiriをAIチャットボット化する計画",
+      "summary": "AppleがSiriをChatGPTのようなAIチャットボットとして再構築する計画を進めています。これにより、Siriはより自然な会話が可能になり、Apple製品全体のユーザーエクスペリエンスが向上する可能性があります。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/21/apple-plans-to-make-siri-an-ai-chatbot-report-says/"
     },
     {
-      "title": "米国で激化するAI規制を巡る対立と将来への影響",
-      "summary": "AI規制のあり方を巡り、米国内で政治・産業界を巻き込んだ激しい論争が沸騰しています。この規制の行方は、今後のAI開発の自由度や安全性、さらにはグローバルなガバナンスの枠組みに決定的な影響を及ぼす見通しです。",
-      "source": "MIT Technology Review",
-      "url": "https://www.technologyreview.com/2026/01/23/1131559/americas-coming-war-over-ai-regulation/"
+      "title": "OpenAI、初のデバイスとしてイヤホンを2026年に発売予定",
+      "summary": "OpenAIが2026年後半に初のハードウェアデバイスとしてAI搭載イヤホンを発表する計画です。これにより、AI技術がより身近な存在になり、音声インターフェースの新たな可能性が開けることが期待されます。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/21/openai-aims-to-ship-its-first-device-in-2026-and-it-could-be-earbuds/"
     },
     {
-      "title": "ダボス会議を席巻する主要AIラボの覇権争い",
-      "summary": "世界経済フォーラム（ダボス会議）において、OpenAI、Google、Anthropicなどのリーダーたちが激しい議論を展開しました。AIの信頼性や市場支配を巡るトップ同士の直接的な衝突は、業界の勢力図が極めて流動的であることを示しています。",
+      "title": "2025年、モバイルアプリの消費額がゲームを上回る、AIアプリの普及が牽引",
+      "summary": "2025年には、AIアプリの普及により、モバイルアプリの消費額がゲームを上回りました。これは、AIが消費者行動に与える影響が拡大していることを示しており、ビジネス戦略においてAIアプリの重要性が高まっています。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/21/consumers-spent-more-on-mobile-apps-than-games-in-2025-driven-by-ai-app-adoption/"
+    },
+    {
+      "title": "YouTube、クリエイターが自身のAI複製を作成してShortsに利用可能に",
+      "summary": "YouTubeがクリエイターに対して自身のAIによる複製を作成し、Shorts動画に利用できる機能を導入予定です。これにより、コンテンツ制作の効率化や新たな表現方法が可能になり、エンターテインメント業界に革新をもたらす可能性があります。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/21/youtube-will-soon-let-creators-make-shorts-with-their-own-ai-likeness/"
+    },
+    {
+      "title": "Adobe Acrobat、プロンプトを使ったファイル編集やポッドキャスト要約生成機能を追加",
+      "summary": "Adobe AcrobatにAIを活用した新機能が追加され、プロンプトを使ってファイルを編集したり、ポッドキャストの要約を生成したりすることが可能になりました。これにより、業務効率が向上し、コンテンツ制作の新たな可能性が広がります。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/21/adobe-acrobat-now-lets-you-edit-files-using-prompts-generate-podcast-summaries/"
+    },
+    {
+      "title": "皮肉なことに：著名なAI会議NeurIPSの論文で誤った引用が発見される",
+      "summary": "AI分野で最も権威のある会議の一つであるNeurIPSの論文で、AIによって生成された誤った引用が含まれていることが判明しました。これは、AIによる論文作成における信頼性の問題点を浮き彫りにしています。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/21/irony-alert-hallucinated-citations-found-in-papers-from-neurips-the-prestigious-ai-conference/"
+    },
+    {
+      "title": "若いユーザーを保護するため、ChatGPTは年齢を予測する機能を追加",
+      "summary": "OpenAIは、18歳未満のユーザーに対する不適切なコンテンツの配信を防ぐため、ChatGPTに年齢予測機能を導入しました。これは、AIプラットフォームにおける年齢制限の強化を示すものであり、デジタルコンテンツの安全性向上に貢献します。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/20/in-an-effort-to-protect-young-users-chatgpt-will-now-predict-how-old-you-are/"
+    },
+    {
+      "title": "Anthropic、xAI、Google出身者が設立した「人間中心」AIスタートアップHumans&が480億円のシードラウンドを調達",
+      "summary": "AIが人間を代替するのではなく、人間をエンパワーメントすべきだと考えるスタートアップHumans&が、480億円のシードラウンドを調達しました。この資金調達は、人間中心のAI開発への関心の高まりを示しています。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/20/humans-a-human-centric-ai-startup-founded-by-anthropic-xai-google-alums-raised-480m-seed-round/"
+    },
+    {
+      "title": "OpenAI、データセンターのエネルギーと水の使用量を制限すると発表",
+      "summary": "OpenAIは、データセンターのエネルギーインフラを自己負担し、水の消費量を最小限に抑えることを発表しました。これは、AIプロジェクトに対する環境負荷への懸念が高まる中、企業が持続可能性への取り組みを強化する姿勢を示しています。",
       "source": "The Verge AI",
-      "url": "https://www.theverge.com/column/866573/ai-labs-wage-a-reputational-knife-fight-at-davos"
+      "url": "https://www.theverge.com/news/864798/openai-data-center-opposition-energy-bills"
     },
     {
-      "title": "ヤン・ルカン氏の新スタートアップ「AMI Labs」が始動",
-      "summary": "MetaのチーフAIサイエンティストであるヤン・ルカン氏が、新たな「世界モデル」構築を目指すAMI Labsを設立しました。現在のLLMの限界を超え、より人間に近い推論能力を持つAIアーキテクチャへの挑戦として、業界の注目を集めています。",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/01/23/whos-behind-ami-labs-yann-lecuns-world-model-startup/"
-    },
-    {
-      "title": "OpenAIが法人向け事業を強化、Barret Zoph氏をリーダーに任命",
-      "summary": "OpenAIが重要人物のBarret Zoph氏を法人向け事業の統括に据え、企業収益の拡大を加速させています。2026年はB2B市場におけるAIサービスの普及と収益化が決定的なフェーズに入ることを示唆しています。",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/01/22/openai-is-coming-for-those-sweet-enterprise-dollars-in-2026/"
-    },
-    {
-      "title": "AIエージェントの限界を示唆する数学的検証",
-      "summary": "最新の研究で、AIエージェントが自律的に複雑なタスクを完遂する際の数学的な限界や、構造的な失敗の可能性が指摘されました。産業界が熱狂する「エージェント型AI」の現実的な到達点を再考させる内容となっています。",
-      "source": "Wired AI",
-      "url": "https://www.wired.com/story/ai-agents-math-doesnt-add-up/"
-    },
-    {
-      "title": "AI生成の低品質コード「AIスロップ」が開発コミュニティを圧迫",
-      "summary": "オープンソースプロジェクトのcURLが、AIによる低品質なバグ報告の急増を受け、報奨金制度を停止しました。AIが善意の開発インフラを毀損し、保守者の負担を増大させている実態が浮き彫りになっています。",
-      "source": "Ars Technica AI",
-      "url": "https://arstechnica.com/security/2026/01/overrun-with-ai-slop-curl-scraps-bug-bounties-to-ensure-intact-mental-health/"
-    },
-    {
-      "title": "音声AIインフラのLiveKitが評価額10億ドルでユニコーンに",
-      "summary": "ChatGPTの音声モードを支えるLiveKitが1億ドルを調達しました。AIとの体験がテキストからリアルタイムな音声対話へと進化する中で、そのバックエンドを担うインフラ技術の価値が急速に高まっています。",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/01/22/voice-ai-engine-and-openai-partner-livekit-hits-1b-valuation/"
-    },
-    {
-      "title": "Googleが3D画像生成スタートアップ「Common Sense Machines」を買収",
-      "summary": "Googleが2D画像から3D資産を生成する技術を持つスタートアップを買収しました。空間コンピューティングやデジタルツイン、ゲーム制作におけるAI活用をさらに加速させる狙いがあります。",
-      "source": "The Information",
-      "url": "https://www.theinformation.com/briefings/exclusive-google-acquires-3d-image-generator-startup"
-    },
-    {
-      "title": "Metaが10代ユーザーによるAIキャラクター利用を一時停止",
-      "summary": "Metaは、安全性と体験向上のため、10代ユーザーによるAIキャラクターへのアクセスを一時的に制限しました。未成年者のAI利用に関する倫理的要件と保護措置が、プラットフォーム企業に強く求められている現状を反映しています。",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/01/23/meta-pauses-teen-access-to-ai-characters-ahead-of-new-version/"
+      "title": "誰もがAIの主権を望んでいる。しかし、誰も真にそれを持つことはできない。",
+      "summary": "各国政府は、自国のAI能力をコントロールするために、2030年までにAIインフラに1.3兆ドルを投資する計画を立てています。しかし、AI技術のグローバルな性質を考えると、真のAI主権を確立することは非常に困難です。",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/01/21/1131513/everyone-wants-ai-sovereignty-no-one-can-truly-have-it/"
     }
   ]
 }
