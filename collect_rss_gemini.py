@@ -42,9 +42,12 @@ def main():
     
     if not os.path.exists(NEWS_BOT_OUTPUT_DIR):
         os.makedirs(NEWS_BOT_OUTPUT_DIR)
-        
+    
+    # Save as JSON (Legacy Format compatible with generators)
+    # Format: {"articles": [...]} for compatibility with distribute_daily.py
+    output_data = {"articles": processed}
     with open(filepath, 'w', encoding='utf-8') as f:
-        json.dump(processed, f, indent=2, ensure_ascii=False)
+        json.dump(output_data, f, indent=2, ensure_ascii=False)
         
     print(f"✅ Saved Top 10 to: {filepath}")
     
