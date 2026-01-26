@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI ウィークリーコラム</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #f59e0b; /* Amber for Column */
+            --primary-dark: #d97706;
+            --bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.8);
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #10b981; /* Emerald */
+            --border: rgba(148, 163, 184, 0.2);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+        
+        .bg-gradient {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(245, 158, 11, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        header { text-align: center; margin-bottom: 3rem; padding: 2rem 0; }
+        
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle { color: var(--text-muted); font-size: 0.95rem; }
+        
+        .nav {
+            display: flex; gap: 1rem; justify-content: center; margin-bottom: 3rem; flex-wrap: wrap;
+        }
+        
+        .nav a {
+            color: var(--text-muted); text-decoration: none; padding: 0.5rem 1rem;
+            border-radius: 0.5rem; transition: all 0.2s; border: 1px solid transparent;
+        }
+        
+        .nav a:hover, .nav a.active {
+            color: var(--primary); border-color: var(--primary);
+            background: rgba(245, 158, 11, 0.1);
+        }
+        
+        .column-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .column-date {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .column-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+        
+        .column-body {
+            color: var(--text);
+            font-size: 1rem;
+            white-space: pre-wrap; /* Preserve formatting */
+        }
+        
+        /* Markdown style simulation */
+        .column-body h1, .column-body h2, .column-body h3 {
+            color: var(--text); margin-top: 1.5rem; margin-bottom: 0.75rem;
+        }
+        .column-body strong { color: var(--accent); }
+        .column-body hr { border-color: var(--border); margin: 2rem 0; }
+
+        .archive-list {
+            list-style: none;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+        }
+        .archive-list li { margin-bottom: 0.5rem; }
+        .archive-list a { color: var(--text-muted); text-decoration: none; }
+        .archive-list a:hover { color: var(--primary); }
+
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="container">
+        <header>
+            <h1>☕ AI ウィークリーコラム</h1>
+            <p class="subtitle">毎週日曜更新・Gemini編集長による独自解説</p>
+        </header>
+        
+        <nav class="nav">
+            <a href="index.html">NEWS TOP10</a>
+            <a href="column.html" class="active">コラム</a>
+            <a href="archive.html">過去のニュース</a>
+        </nav>
+        
+        <main id="column-container">
+            <!-- Latest Column -->
+        </main>
+
+        <section id="column-archive">
+            <h3 style="margin-bottom:1rem;color:var(--text-muted);">バックナンバー</h3>
+            <ul class="archive-list" id="archive-list"></ul>
+        </section>
+    </div>
+    
+    <script>
+        async function loadColumns() {
+            try {
+                // Fetch index
+                const response = await fetch('columns.json');
+                const data = await response.json();
+                const columns = data.columns; 
+                
+                if (!columns || columns.length === 0) {
+                    document.getElementById('column-container').innerHTML = '<p>まだコラムがありません。</p>';
+                    return;
+                }
+
+                // Check for URL param ?date=YYYYMMDD
+                const params = new URLSearchParams(window.location.search);
+                const dateParam = params.get('date');
+                
+                let targetColumn = columns[0]; // Default to latest
+                if (dateParam) {
+                    const found = columns.find(c => c.path.includes(dateParam));
+                    if (found) targetColumn = found;
+                }
+
+                // Fetch full content
+                const contentRes = await fetch(targetColumn.path);
+                const contentData = await contentRes.json();
+                
+                // Render Main Column
+                document.getElementById('column-container').innerHTML = `
+                    <article class="column-card">
+                        <span class="column-date">${contentData.date}</span>
+                        <h2 class="column-title">${contentData.title}</h2>
+                        <div class="column-body">${contentData.body}</div>
+                    </article>
+                `;
+
+                // Render list
+                const list = document.getElementById('archive-list');
+                list.innerHTML = columns.map(c => `
+                    <li>
+                        <a href="column.html?date=${c.path.match(/\d{8}/)[0]}">
+                            ${c.date} - ${c.title}
+                        </a>
+                    </li>
+                `).join('');
+
+            } catch (e) {
+                console.error(e);
+                document.getElementById('column-container').innerHTML = '<p>読み込みエラーが発生しました。</p>';
+            }
+        }
+        
+        loadColumns();
+    </script>
+</body>
+</html>
