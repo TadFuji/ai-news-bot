@@ -19,11 +19,12 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.10'
+        python-version: '3.11'
 
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt
+        # Weekly Column に必要な最小限の依存関係のみインストール
+        pip install google-genai python-dotenv line-bot-sdk
 
     - name: Run Weekly Generator
       env:
