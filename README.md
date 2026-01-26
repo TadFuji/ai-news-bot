@@ -1,103 +1,76 @@
-# 🤖 AI ニュース収集・翻訳ボット
+# 🤖 AI News Bot (RSS & Gemini Pipeline)
 
-24時間以内のAI関連ニュースを自動収集し、日本語で要約・配信するボットです。
+主要なテックメディアや企業の公式ブログ（RSS）からAI関連ニュースを24時間ごとに自動収集し、**Gemini 2.0 Flash** で翻訳・要約して配信する完全自動化ボットです。
 
-## 機能
+🔗 **公開アーカイブ**: [AI News Archive](https://tadfuji.github.io/ai-news-bot/)
 
-- 📡 **ニュース収集**: TechCrunch, Wired, OpenAI Blog 等 18種類の RSS フィードから AI 関連記事を取得
-- 🌐 **日本語翻訳**: Gemini 2.0 Flash で英語記事を自然な日本語に翻訳
-- ⭐ **重要度評価**: AI が記事の重要性を判断し、TOP10 を選定
-- ⏰ **自動実行**: GitHub Actions で毎日 JST 7:00 に自動実行
-- 🌍 **GitHub Pages 公開**: 美しい UI で公開サイトを自動生成
+## 🌟 プロジェクトの概要
 
-## セットアップ
+このボットは、情報の洪水であるAIニュースを一箇所に集約し、**「日本語で」「短時間に」「重要なものだけ」** 把握できるように設計されています。
+GitHub Actions を活用し、サーバーレスで永続的に稼働します。
 
-### 1. リポジトリをフォーク/クローン
+### 主な機能
+- 📡 **広範囲なRSS収集**: TechCrunch, Wired, OpenAI Blog, Google AI Blog など、信頼できる18以上のソースを常時監視。
+- 🧠 **AIによる選別と翻訳**: Gemini 2.0 Flash が全記事を読み込み、日本のビジネスパーソンにとって重要度が高いTOP10を選定・翻訳します。
+- 🚀 **完全自動運転**: 毎朝 7:00 (JST) に GitHub Actions が起動し、ニュースの収集からサイト更新までを無人で完了します。
+- 📱 **マルチプラットフォーム配信**: 生成されたレポートは Webサイト (GitHub Pages) および LINE (Messaging API) に配信可能です。
 
+## 🛠️ 技術スタック
+
+- **Language**: Python 3.10+
+- **AI Model**: Google Gemini 2.0 Flash
+- **Infrastructure**: GitHub Actions (Cron Schedule)
+- **Hosting**: GitHub Pages
+- **Notification**: LINE Messaging API
+
+## 🚀 セットアップ手順
+
+### 1. クローン
 ```bash
-git clone https://github.com/YOUR_USERNAME/ai-news-bot.git
+git clone https://github.com/tadfuji/ai-news-bot.git
 cd ai-news-bot
 ```
 
-### 2. Gemini API キーを取得
+### 2. インストール
+```bash
+pip install -r requirements.txt
+```
 
-1. [Google AI Studio](https://aistudio.google.com/) にアクセス
-2. API キーを作成
-
-### 3. GitHub Secrets を設定
-
-リポジトリの Settings > Secrets and variables > Actions で以下を追加:
-
-| Secret 名        | 値              |
-| ---------------- | --------------- |
-| `GOOGLE_API_KEY` | Gemini API キー |
-
-### 4. Actions を有効化
-
-リポジトリの Actions タブから、ワークフローを有効化してください。
-
-## ローカル実行
+### 3. 環境設定 (.env)
+ルートディレクトリに `.env` を作成してください。
 
 ```bash
-# 依存関係をインストール
-pip install -r requirements.txt
+GOOGLE_API_KEY="your_gemini_api_key"
+LINE_CHANNEL_ACCESS_TOKEN="your_line_token" # LINE配信する場合のみ
+LINE_USER_ID="your_line_user_id"            # LINE配信する場合のみ
+```
 
-# 環境変数を設定（.env ファイル or 直接設定）
-export GOOGLE_API_KEY="your-api-key"
+## 💻 実行方法
 
-# ニュース収集を実行
+### 手動でのニュース収集
+```bash
+# RSSを収集し、Geminiで翻訳・要約を実行
 python main.py
+```
 
-# GitHub Pages 用にビルド
+### サイトのビルド
+```bash
+# 生成されたJSONデータを元にHTMLを更新
 python build_pages.py
 ```
 
-## 出力例
-
-```markdown
-# AI関連ニュース TOP10
-
-**更新日時**: 2026年01月16日 07:00 (JST)
-
-## 1. OpenAI、次世代モデル「GPT-5」の開発計画を発表
-
-OpenAI は次世代大規模言語モデル「GPT-5」の開発を進めていることを明らかにした。
-従来モデルと比較して推論能力が大幅に向上し、マルチモーダル処理も強化される見込み。
-
-- **出典**: TechCrunch AI
-- **URL**: https://techcrunch.com/...
-```
-
-## スケジュール
-
-- **自動実行**: 毎日 JST 7:00（UTC 22:00）
-- **手動実行**: Actions タブから `Run workflow` をクリック
-
-## ファイル構成
+## 📂 ディレクトリ構造
 
 ```
 ai-news-bot/
-├── .github/
-│   └── workflows/
-│       └── ai_news.yml      # GitHub Actions ワークフロー
-├── docs/                     # GitHub Pages 公開ディレクトリ
-│   ├── index.html           # メインページ
-│   ├── archive.html         # アーカイブページ
-│   ├── latest.json          # 最新ニュースデータ
-│   └── archive.json         # 過去ニュース一覧
-├── output/                   # Markdown 出力保存先
-├── main.py                   # メイン実行スクリプト
-├── config.py                 # 設定（RSSフィード、キーワード）
-├── ai_client.py              # Gemini API 連携
-├── rss_client.py             # RSS フィード取得
-├── filters.py                # フィルタリング処理
-├── build_pages.py            # GitHub Pages ビルド
-├── output_manager.py         # 出力管理
-├── requirements.txt          # Python 依存関係
-└── README.md                 # このファイル
+├── config.py                 # RSSフィードリストやプロンプト設定
+├── main.py                   # 実行エントリーポイント
+├── ai_client.py              # Gemini API クライアント
+├── rss_client.py             # RSS取得ロジック
+├── build_pages.py            # HTML生成 (Jinja2 Template)
+├── output/                   # 生成されたMarkdown/JSON
+└── docs/                     # 公開用ウェブサイト (GitHub Pages)
 ```
 
-## ライセンス
-
+## 🛡️ ライセンス
 MIT License
-
