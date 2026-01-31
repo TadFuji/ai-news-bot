@@ -74,6 +74,52 @@ RSS_FEEDS = [
         "url": "https://blogs.microsoft.com/ai/feed/",
         "region": "米国"
     },
+    {
+        "name": "NVIDIA Blog",
+        "url": "https://feeds.feedburner.com/nvidiablog",
+        "region": "米国"
+    },
+    {
+        "name": "Meta AI Blog",
+        "url": "https://ai.meta.com/blog/feed/",
+        "region": "米国"
+    },
+    {
+        "name": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/feed.xml",
+        "region": "米国"
+    },
+    {
+        "name": "AWS Machine Learning",
+        "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+        "region": "米国"
+    },
+    {
+        "name": "Stability AI Blog",
+        "url": "https://stability.ai/blog?format=rss",
+        "region": "米国"
+    },
+    # --- 専門メディア・研究 ---
+    {
+        "name": "Decrypt AI",
+        "url": "https://decrypt.co/ai/feed",
+        "region": "米国"
+    },
+    {
+        "name": "Forbes AI",
+        "url": "https://www.forbes.com/ai/feed/",
+        "region": "米国"
+    },
+    {
+        "name": "KDnuggets",
+        "url": "https://www.kdnuggets.com/feed",
+        "region": "米国"
+    },
+    {
+        "name": "MarkTechPost",
+        "url": "https://www.marktechpost.com/feed/",
+        "region": "米国"
+    },
     # --- 日本 ---
     {
         "name": "NHK 科学・技術",
@@ -85,7 +131,32 @@ RSS_FEEDS = [
         "url": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
         "region": "日本"
     },
-    # --- ヨーロッパ ---
+    {
+        "name": "Ledge.ai",
+        "url": "https://ledge.ai/feed/",
+        "region": "日本"
+    },
+    {
+        "name": "AI Shift Blog",
+        "url": "https://www.ai-shift.co.jp/techblog/feed",
+        "region": "日本"
+    },
+    {
+        "name": "Zenn LLM",
+        "url": "https://zenn.dev/topics/llm/feed",
+        "region": "日本"
+    },
+    {
+        "name": "Gizmodo Japan",
+        "url": "https://www.gizmodo.jp/index.xml",
+        "region": "日本"
+    },
+    {
+        "name": "PC Watch",
+        "url": "https://pc.watch.impress.co.jp/data/rss/1.0/pcw/feed.rdf",
+        "region": "日本"
+    },
+    # --- ヨーロッパ・その他 ---
     {
         "name": "BBC Technology",
         "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
@@ -95,6 +166,11 @@ RSS_FEEDS = [
         "name": "Reuters Technology",
         "url": "https://www.reutersagency.com/feed/?taxonomy=best-topics&post_type=best&best-topics=tech",
         "region": "英国"
+    },
+    {
+        "name": "The Next Web AI",
+        "url": "https://thenextweb.com/category/artificial-intelligence/feed",
+        "region": "欧州"
     },
 ]
 
