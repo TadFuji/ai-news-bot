@@ -1,75 +1,75 @@
 {
-  "updated": "2026年01月31日 13:28",
+  "updated": "2026年02月01日 07:13",
   "articles": [
     {
-      "title": "ChatGPTやClaudeがもっと賢くなる！カスタム指示の書き方と実例集",
-      "category": "業務効率化",
-      "summary": "ChatGPTの回答が長すぎる」「毎回同じことを説明するのが面倒」「もっと専門的に答えてほしい」といった悩みを解決するカスタム指示の設定方法を解説。業務効率化に繋がる具体的な設定例を紹介しており、すぐに活用できる。",
+      "title": "DataAirlock: 個人情報を仮名化してLLMに安全に渡すCLIツール",
+      "category": "リスク管理",
+      "summary": "個人情報を仮名化してLLMに安全に渡すCLIツールDataAirlockを紹介。40代のエンジニアや情報システム担当者にとって、個人情報保護法やGDPRに準拠しつつ、LLMを活用したデータ分析を行うための有効な手段となりえます。",
       "source": "Zenn LLM",
-      "url": "https://zenn.dev/yoshihiko555/articles/1fbb23ac1e5b88"
+      "url": "https://zenn.dev/akira0907/articles/dataairlock-hybrid-pii-detection"
     },
     {
-      "title": "本物の女性のオーダーメイドAIディープフェイクを強化するマーケットプレイスの内部",
+      "title": "The viral AI agent Moltbot is a security mess - 5 red flags you shouldn't ignore (before it's too late)",
       "category": "リスク管理",
-      "summary": "ベンチャーキャピタル会社のアンドリーセン・ホロウィッツが支援するAI生成コンテンツのオンラインマーケットプレイスであるCivitaiは、ユーザーが有名人のディープフェイクを生成するためのカスタム命令ファイルを購入および販売できるようにしています。これらのファイルの一部は、によって禁止されているポルノ画像を作成するように特別に設計されました",
-      "source": "MIT Technology Review",
-      "url": "https://www.technologyreview.com/2026/01/30/1131945/inside-the-marketplace-powering-bespoke-ai-deepfakes-of-real-women/"
-    },
-    {
-      "title": "AI画像を見抜く方法：偽物である6つの明白な兆候 - および私の頼りになる無料検出器",
-      "category": "リスク管理",
-      "summary": "AIが生成した画像の増加に伴い、本物と偽物を見分けることが難しくなっている。この記事では、AI画像を見抜くための6つの兆候を紹介し、無料の検出器も紹介。SNSでの情報発信やビジネスにおけるコンテンツ作成において、AI画像の真贋を見極める能力は重要となる。",
-      "source": "ZDNet AI",
-      "url": "https://www.zdnet.com/article/ai-image-fake-signs-free-detectors/"
-    },
-    {
-      "title": "話題のAIエージェントMoltbotはセキュリティ上の欠陥だらけ - 無視すべきでない5つの危険信号",
-      "category": "リスク管理",
-      "summary": "可愛いAIエージェントMoltbotにPC作業を任せるのは魅力的だが、セキュリティリスクを考慮すべき。情報漏洩や悪用など、ビジネスにおけるリスクを理解する必要がある。特に個人情報や業務データの扱いに注意し、情報セキュリティ部門と連携して利用の可否を判断すべき。",
+      "summary": "話題のAIエージェントMoltbotのセキュリティリスクに関する記事。40代のIT管理者やセキュリティ担当者にとって、安易なAIツールの導入がもたらす危険性への警鐘となり、セキュリティ対策の重要性を再認識するきっかけとなります。",
       "source": "ZDNet AI",
       "url": "https://www.zdnet.com/article/moltbot-clawdbot-5-reasons-viral-ai-agent-security-nightmare/"
     },
     {
-      "title": "AI同士で相談させて“最強の布陣”を組む新技術　日立製作所が開発",
-      "category": "日本市場",
-      "summary": "日立製作所が、AI同士の相性を特定し、最適なチームを自動編成する技術を開発。組織におけるAI活用を高度化し、より複雑な課題解決に貢献する可能性がある。人事担当者や経営層にとっては、AIを活用した組織運営のヒントになるかもしれない。",
-      "source": "ITmedia AI+",
-      "url": "https://www.itmedia.co.jp/enterprise/articles/2601/31/news014.html"
-    },
-    {
-      "title": "Anthropic、エージェント的なプラグインをCoworkに導入",
+      "title": "【LLM基礎#4】壊れないJSON出力で「運用コスト」を下げる（Structured Outputs / Function Callin",
       "category": "業務効率化",
-      "summary": "同社によると、プラグインを使用して「Claudeに、仕事のやり方、どのツールやデータを使用するか、重要なワークフローの処理方法、チームが一貫した結果を得るためにどのようなスラッシュコマンドを公開するかを指示できる」とのことです。",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/01/30/anthropic-brings-agentic-plugins-to-cowork/"
+      "summary": "LLMのJSON出力が壊れる問題を解決し、再実行や手直しを減らすことで運用コストを削減する方法。40代のエンジニアやAI導入担当者にとって、LLMを活用したシステム開発・運用における効率化、コスト削減に直結する実用的な情報です。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/enegori6160/articles/e8d674a3c389ca"
     },
     {
-      "title": "Googleはあなたの音声録音を保存していますか？確認、削除、オプトアウトする方法 - 高速",
+      "title": "Is your AI agent up to the task? 3 ways to determine when to delegate",
+      "category": "業務効率化",
+      "summary": "AIエージェントがタスクに適しているかを判断する方法を解説。40代の管理職や経営者にとって、AI導入における意思決定、業務への適切なAI適用範囲を見極める上で役立ち、投資対効果の最大化に繋がる情報です。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/3-ways-to-determine-when-delegate-ai-agent/"
+    },
+    {
+      "title": "なぜ、(申し訳ないけど)LLM AIはIQが低い人に使わせると危険なのか？",
       "category": "リスク管理",
-      "summary": "Googleが音声データを保存しているかどうかを確認する方法を解説。プライバシー保護の観点から、個人情報の設定を見直すことは重要。特に、子供がいる家庭では、子供の音声データが収集されていないか確認する必要がある。",
-      "source": "ZDNet AI",
-      "url": "https://www.zdnet.com/article/how-to-find-google-voice-recordings-check-delete-opt-out/"
+      "summary": "LLM AIをIQの低い人が使うと危険である可能性について、能力差という観点から冷静に整理した記事。40代のビジネスパーソンにとって、AIの利用における情報リテラシーの重要性、誤情報や悪用リスクへの注意喚起として役立ちます。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/pdfractal/articles/241a6e097b0408"
     },
     {
-      "title": "OpenClawのAIアシスタントが独自のソーシャルネットワークを構築中",
-      "category": "最新技術",
-      "summary": "以前はClawdbotとして知られていたAIアシスタントが、OpenClawとして再ブランド化され、AIエージェント向けのソーシャルネットワークを構築中。AIアシスタント同士が連携することで、より高度なタスクを実行できるようになる可能性がある。ビジネスにおけるAIアシスタントの活用方法を検討する上で参考になる。",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/01/30/openclaws-ai-assistants-are-now-building-their-own-social-network/"
+      "title": "GPUが無い環境でローカルLLMを動かす方法",
+      "category": "業務効率化",
+      "summary": "GPUなしでローカルLLMを動かすDockerを使った方法を紹介。ハッカソンや開発環境でGPUが利用できない場合でもLLMを利用できるため、40代のエンジニアやAIに関わるビジネスパーソンにとって、開発の選択肢を広げ、コストを抑える上で役立つ情報です。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/yuki_ayano/articles/memorandum-ollama-cpu-llm"
     },
     {
-      "title": "GoogleがAIによる世界生成ツールを発表後、ビデオゲーム会社の株価が下落",
-      "category": "最新技術",
-      "summary": "GoogleがAIでインタラクティブな体験を生成するProject Genieツールを発表した翌日、Take-Two Interactive、Roblox、Unityを含む主要なビデオゲーム会社の株価が下落。AIによるコンテンツ生成がゲーム業界に与える影響を示唆している。ゲーム業界に関わる40代にとっては、今後のビジネス戦略を考える上で重要な情報となる。",
+      "title": "ChatGPT isn’t the only chatbot pulling answers from Elon Musk’s Grokipedia",
+      "category": "リスク管理",
+      "summary": "ChatGPTだけでなく、他のAIチャットボットもイーロン・マスク氏のGrokipediaから回答を引用しているという記事。40代のビジネスパーソンにとって、AIが利用する情報源の偏りや正確性への懸念は、AIの利用判断や情報リテラシーを向上させる上で重要な示唆を与えます。",
       "source": "The Verge AI",
-      "url": "https://www.theverge.com/games/871348/google-project-genie-take-two-roblox-unity"
+      "url": "https://www.theverge.com/report/870910/ai-chatbots-citing-grokipedia"
     },
     {
-      "title": "OpenAIがGPT-4oを再び廃止：それはあなたにとって何を意味するのか、そして一部のユーザーが不満を抱いている理由",
-      "category": "最新技術",
-      "summary": "無料のChatGPTユーザーは大きな変化に気づかないはずですが、4oを熱心に使用していた一部のユーザーはすでに明らかに不満を抱いています。",
+      "title": "How to learn ChatGPT in an hour - for free",
+      "category": "業務効率化",
+      "summary": "ChatGPTを1時間で無料で学ぶ方法を紹介。40代のビジネスパーソンにとって、最新のAIツールを短時間で習得し、業務効率化や新たなビジネスチャンスに繋げられる可能性があります。",
       "source": "ZDNet AI",
-      "url": "https://www.zdnet.com/article/openai-retiring-gpt-4o/"
+      "url": "https://www.zdnet.com/article/how-to-learn-chatgpt-fast-free/"
+    },
+    {
+      "title": "Gen AI boosts productivity, but only for certain developers - here's why",
+      "category": "業務効率化",
+      "summary": "生成AIが生産性を向上させるが、特定の開発者のみに限られる理由を解説。40代のIT管理職や開発チームリーダーにとって、AI導入におけるチームメンバーのスキル格差への対処、AIの効果的な活用方法を検討する上で参考になる情報です。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/why-gen-ai-boosts-productivity-some-developers-not-others/"
+    },
+    {
+      "title": "RAGの精度が出ない原因は『LLM』ではなかった話",
+      "category": "業務効率化",
+      "summary": "RAG（Retrieval-Augmented Generation）の精度が出ない原因がLLMではなく検索にあるケースが多いという記事。40代のAIエンジニアやデータサイエンティストにとって、RAGシステムの改善において、LLMだけでなく検索システムの最適化も重要であることを示唆する。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kazusa_nakagawa/articles/article11_rag"
     }
   ]
 }
