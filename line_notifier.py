@@ -91,13 +91,13 @@ def create_share_message() -> FlexMessage:
     )
 
 
-def format_news_for_line(articles: list[dict], max_articles: int = 5) -> str:
+def format_news_for_line(articles: list[dict], max_articles: int = 3) -> str:
     """
     ニュース記事を LINE 用テキストに整形する
     
     Args:
         articles: 処理済み記事リスト
-        max_articles: LINE に送信する記事数（デフォルト: 5件）
+        max_articles: LINE に送信する記事数（デフォルト: 3件）
     
     Returns:
         LINE 送信用のテキスト
@@ -107,12 +107,12 @@ def format_news_for_line(articles: list[dict], max_articles: int = 5) -> str:
     
     # ヘッダー
     lines = [
-        "🤖 AI ニュース TOP10",
+        "🤖 AI ニュース TOP 3",
         "─────────",
         ""
     ]
     
-    # 各記事（LINE では読みやすさ優先で上位5件のみ）
+    # 各記事（LINE では文字数制限を考慮し上位3件のみ）
     for i, article in enumerate(articles[:max_articles], 1):
         title = article.get("title_ja", article.get("title", "タイトルなし"))
         summary = article.get("summary_ja", article.get("summary", ""))
@@ -124,12 +124,14 @@ def format_news_for_line(articles: list[dict], max_articles: int = 5) -> str:
         
         lines.append(f"【{i}】{title}")
         lines.append(f"{summary}")
+        # URLを短縮表示せずにそのまま載せるが、件数を減らすことで全体の文字数を抑える
         lines.append(f"🔗 {url}")
         lines.append("")
     
     # フッター
     if len(articles) > max_articles:
-        lines.append(f"📌 他 {len(articles) - max_articles} 件の記事は Web で確認")
+        lines.append(f"💡 残り {len(articles) - max_articles} 件の重要ニュースはウェブで！")
+        lines.append("👇 最新アーカイブはこちら")
         lines.append("https://tadfuji.github.io/ai-news-bot/")
     
     return "\n".join(lines)
