@@ -35,18 +35,19 @@ def parse_markdown_news(content: str) -> dict:
     if date_match:
         result["updated"] = date_match.group(1).strip()
     
-    # 記事を抽出（## 1. タイトル 形式）
+    # 記事を抽出（## 1. タイトル 形式 + **カテゴリ**: ...）
     article_pattern = re.compile(
-        r'##\s*\d+\.\s*(.+?)\n\n(.+?)\n\n-\s*\*\*出典\*\*:\s*(.+?)\n-\s*\*\*URL\*\*:\s*(.+?)(?:\n|$)',
+        r'##\s*\d+\.\s*(.+?)\n\n\*\*カテゴリ\*\*:\s*(.+?)\n\n(.+?)\n\n-\s*\*\*出典\*\*:\s*(.+?)\n-\s*\*\*URL\*\*:\s*(.+?)(?:\n|$)',
         re.DOTALL
     )
     
     for match in article_pattern.finditer(content):
         result["articles"].append({
             "title": match.group(1).strip(),
-            "summary": match.group(2).strip(),
-            "source": match.group(3).strip(),
-            "url": match.group(4).strip()
+            "category": match.group(2).strip(),
+            "summary": match.group(3).strip(),
+            "source": match.group(4).strip(),
+            "url": match.group(5).strip()
         })
     
     return result

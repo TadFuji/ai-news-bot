@@ -92,16 +92,16 @@ def main():
         for i, item in enumerate(processed, 1):
             title = item.get('title_ja', item.get('title', 'No Title'))
             summary = item.get('summary_ja', item.get('summary', ''))
+            category = item.get('category', '未分類')
             source = item.get('source', 'Unknown')
             url = item.get('url', '')
             # Format expected by build_pages.py:
             # ## N. Title
             # 
-            # Summary text
-            #
-            # - **出典**: Source
-            # - **URL**: https://...
+            # **カテゴリ**: Category
+            # ...
             f.write(f"## {i}. {title}\n\n")
+            f.write(f"**カテゴリ**: {category}\n\n")
             f.write(f"{summary}\n\n")
             f.write(f"- **出典**: {source}\n")
             f.write(f"- **URL**: {url}\n\n")

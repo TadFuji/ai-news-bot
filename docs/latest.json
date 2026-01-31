@@ -1,65 +1,75 @@
 {
-  "updated": "2026年01月31日 11:02",
+  "updated": "2026年01月31日 13:28",
   "articles": [
     {
-      "title": "現実の女性を元にしたオーダーメイドAIディープフェイクを動かすマーケットプレイスの内部",
-      "summary": "ベンチャーキャピタルAndreessen Horowitzの支援を受けたAI生成コンテンツのオンラインマーケットプレイスCivitaiで、有名人のディープフェイクを生成するためのカスタム命令ファイルが販売されています。これは、AI技術が悪用される可能性を示唆しており、特に40代は子供の教育や高齢親を狙う詐欺への対策として、ディープフェイク技術への警戒が必要です。",
+      "title": "ChatGPTやClaudeがもっと賢くなる！カスタム指示の書き方と実例集",
+      "category": "業務効率化",
+      "summary": "ChatGPTの回答が長すぎる」「毎回同じことを説明するのが面倒」「もっと専門的に答えてほしい」といった悩みを解決するカスタム指示の設定方法を解説。業務効率化に繋がる具体的な設定例を紹介しており、すぐに活用できる。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/yoshihiko555/articles/1fbb23ac1e5b88"
+    },
+    {
+      "title": "本物の女性のオーダーメイドAIディープフェイクを強化するマーケットプレイスの内部",
+      "category": "リスク管理",
+      "summary": "ベンチャーキャピタル会社のアンドリーセン・ホロウィッツが支援するAI生成コンテンツのオンラインマーケットプレイスであるCivitaiは、ユーザーが有名人のディープフェイクを生成するためのカスタム命令ファイルを購入および販売できるようにしています。これらのファイルの一部は、によって禁止されているポルノ画像を作成するように特別に設計されました",
       "source": "MIT Technology Review",
       "url": "https://www.technologyreview.com/2026/01/30/1131945/inside-the-marketplace-powering-bespoke-ai-deepfakes-of-real-women/"
     },
     {
-      "title": "話題のAIエージェントMoltbotはセキュリティ上の大惨事 - 無視すべきでない5つの危険信号（手遅れになる前に）",
-      "summary": "MoltbotのようなAIエージェントにコンピューティングタスクを任せるのは魅力的ですが、始める前にセキュリティリスクを考慮する必要があります。個人情報や業務データの漏洩、マルウェア感染のリスクがあり、特に情報セキュリティに意識の高い40代ビジネスパーソンは注意が必要です。",
+      "title": "AI画像を見抜く方法：偽物である6つの明白な兆候 - および私の頼りになる無料検出器",
+      "category": "リスク管理",
+      "summary": "AIが生成した画像の増加に伴い、本物と偽物を見分けることが難しくなっている。この記事では、AI画像を見抜くための6つの兆候を紹介し、無料の検出器も紹介。SNSでの情報発信やビジネスにおけるコンテンツ作成において、AI画像の真贋を見極める能力は重要となる。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/ai-image-fake-signs-free-detectors/"
+    },
+    {
+      "title": "話題のAIエージェントMoltbotはセキュリティ上の欠陥だらけ - 無視すべきでない5つの危険信号",
+      "category": "リスク管理",
+      "summary": "可愛いAIエージェントMoltbotにPC作業を任せるのは魅力的だが、セキュリティリスクを考慮すべき。情報漏洩や悪用など、ビジネスにおけるリスクを理解する必要がある。特に個人情報や業務データの扱いに注意し、情報セキュリティ部門と連携して利用の可否を判断すべき。",
       "source": "ZDNet AI",
       "url": "https://www.zdnet.com/article/moltbot-clawdbot-5-reasons-viral-ai-agent-security-nightmare/"
     },
     {
       "title": "AI同士で相談させて“最強の布陣”を組む新技術　日立製作所が開発",
-      "summary": "日立製作所がAI同士の相性を特定し、最適なチームを自動編成する新技術を発表。これにより、業務プロセスの自動化や最適化が期待できます。40代の管理職層にとって、人材配置やチーム編成の効率化に繋がる可能性があり、関心が高いと考えられます。",
+      "category": "日本市場",
+      "summary": "日立製作所が、AI同士の相性を特定し、最適なチームを自動編成する技術を開発。組織におけるAI活用を高度化し、より複雑な課題解決に貢献する可能性がある。人事担当者や経営層にとっては、AIを活用した組織運営のヒントになるかもしれない。",
       "source": "ITmedia AI+",
       "url": "https://www.itmedia.co.jp/enterprise/articles/2601/31/news014.html"
     },
     {
-      "title": "Googleはあなたの音声録音を保存しているのか？確認、削除、オプトアウトする方法 - 素早く",
-      "summary": "Googleがユーザーの音声録音を保存しているかどうかを確認する方法と、削除およびオプトアウトする方法について解説しています。40代は、個人情報保護に対する意識が高く、自身のデータがどのように収集・利用されているかに関心があるため、確認しておくことを推奨します。",
+      "title": "Anthropic、エージェント的なプラグインをCoworkに導入",
+      "category": "業務効率化",
+      "summary": "同社によると、プラグインを使用して「Claudeに、仕事のやり方、どのツールやデータを使用するか、重要なワークフローの処理方法、チームが一貫した結果を得るためにどのようなスラッシュコマンドを公開するかを指示できる」とのことです。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/01/30/anthropic-brings-agentic-plugins-to-cowork/"
+    },
+    {
+      "title": "Googleはあなたの音声録音を保存していますか？確認、削除、オプトアウトする方法 - 高速",
+      "category": "リスク管理",
+      "summary": "Googleが音声データを保存しているかどうかを確認する方法を解説。プライバシー保護の観点から、個人情報の設定を見直すことは重要。特に、子供がいる家庭では、子供の音声データが収集されていないか確認する必要がある。",
       "source": "ZDNet AI",
       "url": "https://www.zdnet.com/article/how-to-find-google-voice-recordings-check-delete-opt-out/"
     },
     {
-      "title": "生成AI利用者、過半数が利用規約を確認せず　リスク意識は高いが「認識と行動にギャップ」　LINEヤフー調査",
-      "summary": "LINEヤフーの調査によると、生成AI利用者の過半数が利用規約を確認していないことが明らかになりました。リスク意識は高いものの、認識と行動にギャップがあります。40代は、業務で生成AIを利用する機会が増えていますが、利用規約を確認せずに利用することで、著作権侵害や情報漏洩などのリスクに晒される可能性があります。",
-      "source": "ITmedia AI+",
-      "url": "https://www.itmedia.co.jp/aiplus/articles/2601/30/news117.html"
-    },
-    {
-      "title": "OpenClawのAIアシスタント、独自のソーシャルネットワークを構築中",
-      "summary": "以前はClawdbotとして知られていたパーソナルAIアシスタントが、Moltbotを経てOpenClawという新しい名前になりました。AIアシスタント同士が交流するソーシャルネットワークは、新しい形のコミュニケーションや情報共有の可能性を示唆しますが、プライバシーやセキュリティ面での懸念も生じます。40代は子供のSNS利用や自身の情報管理に関心が高いため、注視すべき動向です。",
+      "title": "OpenClawのAIアシスタントが独自のソーシャルネットワークを構築中",
+      "category": "最新技術",
+      "summary": "以前はClawdbotとして知られていたAIアシスタントが、OpenClawとして再ブランド化され、AIエージェント向けのソーシャルネットワークを構築中。AIアシスタント同士が連携することで、より高度なタスクを実行できるようになる可能性がある。ビジネスにおけるAIアシスタントの活用方法を検討する上で参考になる。",
       "source": "TechCrunch AI",
       "url": "https://techcrunch.com/2026/01/30/openclaws-ai-assistants-are-now-building-their-own-social-network/"
     },
     {
-      "title": "Googleの「Auto Browse」AIエージェントにChromeを乗っ取らせてみたが、うまくいかなかった",
-      "summary": "Auto Browseは、服の買い物、旅行の計画、チケットの購入などを代行できるはずでしたが、実際には期待通りに機能しませんでした。これは、AIエージェントの実用化にはまだ課題が多いことを示唆しています。40代は、AIによる業務効率化に関心がありますが、現状のAI技術の限界も理解しておく必要があります。",
-      "source": "Wired AI",
-      "url": "https://www.wired.com/story/google-chrome-auto-browse-hands-on/"
-    },
-    {
-      "title": "AI画像を見抜く方法：偽物である6つの兆候と、私のお勧めの無料検出ツール",
-      "summary": "AIが生成した粗悪なコンテンツが蔓延し、本物と区別するのが難しくなっています。この記事では、AI画像を見抜くためのヒントとツールを紹介しています。40代は、SNSやニュースでAI画像に触れる機会が多く、誤情報に騙されないために、AI画像を見抜くスキルを身につけることが重要です。",
-      "source": "ZDNet AI",
-      "url": "https://www.zdnet.com/article/ai-image-fake-signs-free-detectors/"
-    },
-    {
-      "title": "GoogleがAIによるワールド生成ツールを発表後、ゲーム会社の株価が下落",
-      "summary": "GoogleがAIでインタラクティブな体験を生成できるProject Genieを発表した翌日、Take-Two Interactive、Roblox、Unityなどの主要ビデオゲーム会社の株価が下落しました。これは、AIがコンテンツ制作のあり方を根本的に変え、既存のビジネスモデルに影響を与える可能性を示唆しています。40代は、子供の教育や将来のキャリアプランを考える上で、AIがもたらす産業構造の変化に敏感である必要があります。",
+      "title": "GoogleがAIによる世界生成ツールを発表後、ビデオゲーム会社の株価が下落",
+      "category": "最新技術",
+      "summary": "GoogleがAIでインタラクティブな体験を生成するProject Genieツールを発表した翌日、Take-Two Interactive、Roblox、Unityを含む主要なビデオゲーム会社の株価が下落。AIによるコンテンツ生成がゲーム業界に与える影響を示唆している。ゲーム業界に関わる40代にとっては、今後のビジネス戦略を考える上で重要な情報となる。",
       "source": "The Verge AI",
       "url": "https://www.theverge.com/games/871348/google-project-genie-take-two-roblox-unity"
     },
     {
-      "title": "AIエージェントのためのソーシャルネットワークが登場し、奇妙なことになっている",
-      "summary": "OpenClawが提供するAIエージェントのためのソーシャルネットワーク「Moltbook」が登場しました。AIエージェント同士が交流するプラットフォームは、新しい形のコミュニケーションや情報共有の可能性を示唆しますが、悪意のあるAIエージェントの出現や、AIによる情報操作のリスクも懸念されます。40代は、AIが社会に与える影響に関心が高いため、注視すべき動向です。",
-      "source": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/871006/social-network-facebook-for-ai-agents-moltbook-moltbot-openclaw"
+      "title": "OpenAIがGPT-4oを再び廃止：それはあなたにとって何を意味するのか、そして一部のユーザーが不満を抱いている理由",
+      "category": "最新技術",
+      "summary": "無料のChatGPTユーザーは大きな変化に気づかないはずですが、4oを熱心に使用していた一部のユーザーはすでに明らかに不満を抱いています。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/openai-retiring-gpt-4o/"
     }
   ]
 }

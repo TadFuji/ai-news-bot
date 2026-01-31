@@ -72,6 +72,7 @@ URL: {article['url']}
     "index": 元の記事番号,
     "title_ja": "日本語タイトル",
     "summary_ja": "2〜3文の日本語要約。40代のビジネスパーソンに具体的にどう影響するかを記述",
+    "category": "以下のいずれか（業務効率化, リスク管理, 日本市場, 最新技術, 法規制・倫理, ライフスタイル）",
     "importance_score": 1-10,
     "reason": "選定理由（なぜ40代日本人にとって重要なのか記述）"
   }},
@@ -114,6 +115,7 @@ URL: {article['url']}
                 article = articles_sorted[idx].copy()
                 article["title_ja"] = result.get("title_ja", article["title"])
                 article["summary_ja"] = result.get("summary_ja", "要約なし")
+                article["category"] = result.get("category", "未分類")
                 article["importance_score"] = result.get("importance_score", 5)
                 article["reason"] = result.get("reason", "")
                 

@@ -146,11 +146,26 @@
             display: inline;
         }
 
+        .news-category {
+            display: inline-block;
+            padding: 0.1rem 0.6rem;
+            border-radius: 0.25rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--accent);
+            border: 1px solid rgba(34, 211, 238, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
         .news-summary {
             color: var(--text-muted);
             font-size: 0.95rem;
             margin-bottom: 1rem;
             line-height: 1.8;
+            margin-top: 0.5rem;
         }
 
         .news-meta {
@@ -243,10 +258,17 @@
                     `更新: ${data.updated}`;
 
                 const container = document.getElementById('news-container');
-                container.innerHTML = data.articles.map((article, i) => `
+                container.innerHTML = data.articles.map((article, i) => {
+                    // カテゴリに応じたスタイルの調整（任意）
+                    const category = article.category || '未分類';
+
+                    return `
                     <article class="news-card">
-                        <div>
-                            <span class="news-rank">${i + 1}</span>
+                        <div style="display: flex; flex-direction: column;">
+                            <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                                <span class="news-rank">${i + 1}</span>
+                                <span class="news-category">${category}</span>
+                            </div>
                             <h2 class="news-title">${article.title}</h2>
                         </div>
                         <p class="news-summary">${article.summary}</p>
@@ -255,7 +277,7 @@
                             <span class="news-link"><a href="${article.url}" target="_blank">→ 元記事を読む</a></span>
                         </div>
                     </article>
-                `).join('');
+                `}).join('');
             } catch (e) {
                 document.getElementById('news-container').innerHTML =
                     '<p style="text-align:center;color:var(--text-muted);">ニュースを読み込み中...</p>';
