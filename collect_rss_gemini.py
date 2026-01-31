@@ -32,8 +32,32 @@ def main():
         print("No recent articles found.")
         return
 
-    print("3. Processing with Gemini (Top 10 Selection)...")
-    processed = process_with_gemini(articles)
+    print("3. Prioritizing AI-related articles...")
+    from config import AI_KEYWORDS
+    
+    scored_articles = []
+    for a in articles:
+        # Title and summary search (case-insensitive)
+        text = (a.get('title', '') + " " + a.get('summary', '')).lower()
+        score = 0
+        for kw in AI_KEYWORDS:
+            if kw.lower() in text:
+                score += 1
+        
+        # Keep score for sorting
+        a['_relevance'] = score
+        scored_articles.append(a)
+    
+    # Sort: First by having at least one keyword, then by published date
+    # This ensures "AI news" comes first, even if slightly older than a general "Breaking News"
+    scored_articles.sort(key=lambda x: (x['_relevance'] > 0, x.get('published', datetime.datetime.min) or datetime.datetime.min), reverse=True)
+    
+    # Take top 30 relevant/newest for Gemini
+    input_articles = scored_articles[:30]
+    print(f"-> Selected {len(input_articles)} articles for Gemini analysis (Priority: AI Relevance).")
+
+    print("4. Processing with Gemini (AI Trend Analyst Mode)...")
+    processed = process_with_gemini(input_articles)
     
     # Save as JSON (Legacy Format compatible with generators)
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M")

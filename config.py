@@ -107,9 +107,10 @@ AI_KEYWORDS = [
     # --- 主要モデル・サービス ---
     "LLM", "GPT", "GPT-4", "GPT-5", "ChatGPT", "Gemini", "Claude",
     "Copilot", "Midjourney", "Stable Diffusion", "DALL-E", "Sora",
-    "Llama", "Mistral", "Grok", "Perplexity", "Suno",
+    "Llama", "Mistral", "Grok", "Perplexity", "Suno", "Udio", "Runway", "Pika",
     # --- 主要企業・プラットフォーム ---
     "OpenAI", "Anthropic", "DeepMind", "xAI", "Cohere", "Hugging Face",
+    "NVIDIA", "Microsoft", "Google", "Meta", "Apple AI", "Apple Intelligence",
     "Nano Banana", "Antigravity", "Google AI Studio",
     # --- 技術用語 ---
     "AGI", "superintelligence", "AI regulation", "AI ethics", "AI safety",
