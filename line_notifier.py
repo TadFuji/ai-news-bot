@@ -9,7 +9,6 @@ v3.6: シェアボタン（Flex Message）の追加
 
 import os
 import urllib.parse
-from datetime import datetime
 from linebot.v3.messaging import (
     Configuration,
     ApiClient,

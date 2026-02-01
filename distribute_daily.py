@@ -81,7 +81,6 @@ def post_to_x_single(articles):
     except Exception as e:
         print(f"❌ Failed to post to X: {e}")
 
-from datetime import datetime
 
 def main():
     print("🚀 Starting Daily Distribution...")

@@ -2,7 +2,6 @@ import os
 import json
 import datetime
 from google import genai
-from config import NEWS_BOT_OUTPUT_DIR
 
 def process_with_gemini(articles: list[dict], max_articles: int = 10) -> list[dict]:
     """
