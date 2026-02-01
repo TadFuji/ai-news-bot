@@ -99,11 +99,11 @@ def main():
         print("⚠️ No articles in report.")
         return
 
-    # 1. LINE Distribution (Halted by Fujikawa-san's request on 2026-02-01)
-    # try:
-    #     send_news_to_line(articles)
-    # except Exception as e:
-    #     print(f"DATA Error sending to LINE: {e}")
+    # 1. LINE Distribution
+    try:
+        send_news_to_line(articles)
+    except Exception as e:
+        print(f"DATA Error sending to LINE: {e}")
 
     # 2. X Distribution
     try:

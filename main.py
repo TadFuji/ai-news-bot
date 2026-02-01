@@ -143,11 +143,11 @@ def main():
     # ※ line_notifier.py をいじらずに済ませるため、send_news_to_line はそのまま使う。
     #    (DailyもSentinelも同じフォーマットで届くが、Sentinelは件数が少ないので区別つく)
     
-    # 5. LINE 送信 (藤川さんの指示により2026-02-01に停止)
-    # if not args.no_line:
-    #     send_news_to_line(processed)
-    # else:
-    #     print("⏭️ --no-line が指定されたため、LINE送信をスキップします。")
+    # 5. LINE 送信
+    if not args.no_line:
+        send_news_to_line(processed)
+    else:
+        print("⏭️ --no-line が指定されたため、LINE送信をスキップします。")
     
     # --- DOMINATOR UPGRADE: Full Automation Sequence ---
     # 完全に自動化するために、PDF生成とX投稿もここで行う。
