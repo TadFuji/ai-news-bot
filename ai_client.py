@@ -35,7 +35,7 @@ def process_with_gemini(articles: list[dict], max_articles: int = 10) -> list[di
 記事{i+1}:
 タイトル: {article['title']}
 ソース: {article['source']} ({article['region']})
-概要: {article['summary'][:300]}
+概要: {article['summary'][:1500]}
 URL: {article['url']}
 """
     
@@ -71,7 +71,7 @@ URL: {article['url']}
   {{
     "index": 元の記事番号,
     "title_ja": "日本語タイトル",
-    "summary_ja": "2〜3文の日本語要約。40代のビジネスパーソンに具体的にどう影響するかを記述",
+    "summary_ja": "詳細な日本語要約。40代のビジネスパーソンに具体的にどう影響するかを含め、情報を網羅して記述",
     "category": "以下のいずれか（業務効率化, リスク管理, 日本市場, 最新技術, 法規制・倫理, ライフスタイル）",
     "importance_score": 1-10,
     "reason": "選定理由（なぜ40代日本人にとって重要なのか記述）"

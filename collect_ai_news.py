@@ -63,7 +63,7 @@ def get_ai_news(tool_name, accounts):
         "4. OUTPUT: If valid news is found, output in this format:\n"
         "- **Date**: YYYY-MM-DD HH:MM (Important: Include specific time from the post)\n"
         "- **URL**: (The specific tweet URL found via search)\n"
-        "- **Summary**: (Concise Japanese summary)\n"
+        "- **Summary**: (Detailed Japanese summary covering all key information)\n"
         "- **Why**: (Impact analysis)\n"
         "If NO significant news is found, output exactly: 'No significant news found'."
     )

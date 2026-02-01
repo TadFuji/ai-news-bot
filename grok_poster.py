@@ -28,7 +28,7 @@ def generate_grok_post(article_title, article_summary, article_url):
     - Language: Japanese (Natural, Native, Professional yet Exciting)
     - Tone: Urgent, Insightful, "Must Read" vibe.
     - Formatting: short sentences, bullet points if needed.
-    - Constraints: Under 280 characters (but keep it dense).
+    - Constraints: No strict character limit. Provide a full and insightful post (X now supports long-form content).
     - Hashtags: #AI #Tech
     - DO NOT include the URL in the text (it will be attached separately).
     - DO NOT use "Intro" or "Outro". Just the tweet body.

@@ -20,12 +20,9 @@ def get_latest_report():
 
 import time
 
-def post_to_x_thread(articles):
+def post_to_x_single(articles):
     """
-    Post a 10-tweet thread to X.
-    Rules:
-    - Post ALL Top 10 articles (as a thread).
-    - NO URLs in the text (Algorithm optimization).
+    Post Top 10 articles as a single long-form post on X.
     """
     consumer_key = os.environ.get("X_CONSUMER_KEY")
     consumer_secret = os.environ.get("X_CONSUMER_SECRET")
@@ -46,55 +43,43 @@ def post_to_x_thread(articles):
 
     # Process up to 10 articles
     target_articles = articles[:10]
-    last_tweet_id = None
     
-    print(f"🧵 Starting X Thread ({len(target_articles)} tweets)...")
+    print(f"📝 Preparing Single X Post ({len(target_articles)} articles)...")
 
+    # Aggregate all content
+    full_text = "【AI NEWS TOP 10 🚀 デイリーダイジェスト】\n\n"
+    links_text = "【各記事のソースURL 🔗】\n\n"
+    
     for i, article in enumerate(target_articles, 1):
         title = article.get('title_ja', 'No Title')
         summary = article.get('summary_ja', '')
+        url = article.get('url', '')
         
-        # Formatting: 140 full-width chars max (approx).
-        # We prioritize Title + Summary.
-        # Format:
-        # 【1/10】Title
-        # Summary
-        # #Hash
+        # Main Post Body
+        full_text += f"{i}. {title}\n\n"
+        full_text += f"{summary}\n\n"
         
-        header = f"【{i}/{len(target_articles)}】"
+        # Link Collections for Reply
+        links_text += f"{i}. {url}\n"
         
-        # Simple truncation strategy
-        # 280 chars limit. Japanese chars count as 2. 
-        # Roughly 120 Japanese chars to be safe.
-        if len(summary) > 80:
-            summary = summary[:79] + "..."
-            
-        tweet_text = f"{header}{title}\n\n{summary}\n\n#AI #Tech"
-        
-        try:
-            if last_tweet_id is None:
-                # First Tweet
-                resp = client.create_tweet(text=tweet_text)
-            else:
-                # Reply to previous
-                resp = client.create_tweet(text=tweet_text, in_reply_to_tweet_id=last_tweet_id)
-            
-            last_tweet_id = resp.data['id']
-            print(f"   ✅ Posted {i}/10")
-            
-            # Wait a bit to prevent rate limits or disorder
-            time.sleep(2)
-            
-        except Exception as e:
-            print(f"   ❌ Failed to post tweet {i}: {e}")
-            # If one fails, maybe continue? But thread breaks. 
-            # We try to continue attaching to the last *successful* one if possible, 
-            # but if last_tweet_id is None, we can't chain.
-            if last_tweet_id is None: 
-                print("   ⚠️ Main tweet failed, stopping thread.")
-                break
+    full_text += "（詳細はリプライ欄のソースURLをご参照ください 👇）\n\n"
+    full_text += "#AI #Tech #AINews"
 
-    print("✅ X Thread posting complete.")
+    try:
+        # 1. Post main long-form tweet
+        print("🚀 Sending main long-form tweet...")
+        resp = client.create_tweet(text=full_text)
+        main_tweet_id = resp.data['id']
+        print(f"✅ Main Post complete (ID: {main_tweet_id})")
+        
+        # 2. Post reply with URLs (To evade impression penalty)
+        print("🔗 Posting links in the reply...")
+        time.sleep(2) # Small buffer
+        client.create_tweet(text=links_text, in_reply_to_tweet_id=main_tweet_id)
+        print("✅ Links Reply complete.")
+            
+    except Exception as e:
+        print(f"❌ Failed to post to X: {e}")
 
 from datetime import datetime
 
@@ -123,7 +108,7 @@ def main():
 
     # 2. X Distribution
     try:
-        post_to_x_thread(articles)
+        post_to_x_single(articles)
     except Exception as e:
         print(f"DATA Error sending to X: {e}")
 
