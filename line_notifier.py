@@ -117,10 +117,6 @@ def format_news_for_line(articles: list[dict], max_articles: int = 3) -> str:
         summary = article.get("summary_ja", article.get("summary", ""))
         url = article.get("url", "")
         
-        # 要約を短く（LINE では100文字程度が読みやすい）
-        if len(summary) > 100:
-            summary = summary[:97] + "..."
-        
         lines.append(f"【{i}】{title}")
         lines.append(f"{summary}")
         # URLを短縮表示せずにそのまま載せるが、件数を減らすことで全体の文字数を抑える
