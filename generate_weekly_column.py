@@ -163,17 +163,8 @@ def generate_column(items):
         )
         return response.text
     except Exception as e:
-        print(f"Gemini 3 Flash エラー: {e}")
-        # フォールバック
-        try:
-            response = client.models.generate_content(
-                model="gemini-1.5-flash", 
-                contents=prompt
-            )
-            return response.text
-        except Exception as fallback_e:
-            print(f"フォールバックも失敗: {fallback_e}")
-            return None
+        print(f"Gemini 3 Flash Preview エラー: {e}")
+        return None
 
 
 def main():

@@ -3,7 +3,7 @@
 [![Daily RSS + Gemini Summary](https://github.com/TadFuji/ai-news-bot/actions/workflows/daily_rss_gemini.yml/badge.svg)](https://github.com/TadFuji/ai-news-bot/actions/workflows/daily_rss_gemini.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Gemini 2.0 Flash](https://img.shields.io/badge/AI-Gemini%202.0%20Flash-orange.svg)](https://deepmind.google/technologies/gemini/)
+[![Gemini 3 Flash Preview](https://img.shields.io/badge/AI-Gemini%203%20Flash%20Preview-orange.svg)](https://deepmind.google/technologies/gemini/)
 
 世界中の膨大なAIニュースから、**日本の40代ビジネスリーダー**にとって真に価値のある情報のみを抽出し、日本語で要約・配信する完全自動化パイプラインです。
 
@@ -36,7 +36,7 @@ graph TD
     subgraph "GitHub Actions (CI/CD Pipeline)"
         B[Discovery: RSS Client]
         C[Pre-Filtering: Keyword Scoring]
-        D[Editorial Analysis: Gemini 2.0 Flash]
+        D[Editorial Analysis: Gemini 3 Flash Preview]
         E[Generation: Markdown/JSON/HTML]
     end
 
@@ -63,7 +63,7 @@ graph TD
 
 -   **Modular Design**: 収集(RSS)、解析(AI)、通知(LINE/X)、ビルド(HTML)が完全に疎結合化されています。
 -   **Multi-Stage Filtering**: 入口でのキーワードベースの感度調整と、Geminiによる文脈理解に基づいた最終選別の二段構え。
--   **State of the Art AI**: 高速かつ高度な論理推論が可能な `Gemini 2.0 Flash` を採用。
+-   **State of the Art AI**: 高レベルな論理推論と爆速の処理速度を両立した `Gemini 3 Flash Preview` を採用。
 -   **Zero-Overhead Deployment**: 完全にGitHub Actions内で完結し、データベースやサーバーの維持費をかけずに永続的に稼働。
 -   **Terminology Bridging**: 専門用語を避けず、日本のビジネスパーソンに伝わる言葉で平易に解説するロジック。
 

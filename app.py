@@ -92,7 +92,7 @@ with st.sidebar:
         line_notify = st.checkbox("LINE通知も送信する (Push Notification)", value=False, help="チェックを入れると、更新完了時にLINEに通知が飛びます。通常はオフでOKです。")
 
     if st.button("⚡ 手動更新 (RSS収集 + Top10選出)"):
-        with st.spinner("🤖 RSSからニュースを収集し、Gemini 3 Flashで選定中..."):
+        with st.spinner("🤖 RSSからニュースを収集し、Gemini 3 Flash Previewで選定中..."):
             try:
                 # 1. News Collection (RSS + Gemini)
                 st.info("📡 RSSフィード巡回 & 🧠 Gemini選定中...")
@@ -299,7 +299,7 @@ def generate_press_release(articles):
 # 📰 プレスリリース原稿 (PR Times / TechCrunch用)
 
 **タイトル:**
-個人開発AIボットが「ニュース収集」の常識を変える —— Gemini 3.0搭載「Antigravity News」がLINE登録者数急増中
+個人開発AIボットが「ニュース収集」の常識を変える —— Gemini 3 Flash Preview搭載「Antigravity News」がLINE登録者数急増中
 
 **サブタイトル:**
 「情報収集にかける時間をゼロに」。24時間体制で世界中のテックニュースを監視・要約する完全自動化システムを無料公開。
@@ -310,7 +310,7 @@ def generate_press_release(articles):
 個人開発者の[あなたのお名前]は本日、世界中のAIニュースをリアルタイムで収集・要約し、LINEで配信するサービス「Antigravity AI News」の本格運用を開始しました。
 
 **■ 背景**
-AI技術の進化スピードは凄まじく、毎日数百本のニュースが生まれています。「情報のキャッチアップが追いたない」というエンジニア・ビジネスマンの課題を解決するため、Googleの最新AIモデル「Gemini 3.0 Flash (Preview)」を活用した完全自動化システムを開発しました。
+AI技術の進化スピードは凄まじく、毎日数百本のニュースが生まれています。「情報のキャッチアップが追いたない」というエンジニア・ビジネスマンの課題を解決するため、Googleの最新AIモデル「Gemini 3 Flash Preview」を活用した完全自動化システムを開発しました。
 
 **■ サービスの特徴**
 1. **完全自動運転**: RSS収集から翻訳、要約、配信までをPythonプログラムが全自動で実行。

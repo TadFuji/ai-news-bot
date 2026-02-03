@@ -86,10 +86,10 @@ URL: {article['url']}
 重要: JSON配列のみを出力してください。マークダウンのコードブロックなどは不要です。
 """
     
-    print("🧠 Gemini API (Flash Preview) で処理中...")
+    print("🧠 Gemini 3 Flash Preview で処理中...")
     try:
         response = client.models.generate_content(
-            model="gemini-2.0-flash", # Stable model for automation
+            model="gemini-3-flash-preview", # User requested specific model
             contents=prompt
         )
         response_text = response.text.strip()

@@ -138,7 +138,7 @@ def create_pdf_report(articles, output_path="report.pdf"):
             {news_items_html}
 
             <div class="footer">
-                Powered by Antigravity News Engine | Gemini 2.0 Flash <br/>
+                Powered by Antigravity News Engine | Gemini 3 Flash Preview <br/>
                 For more updates, follow us on LINE: @Antigravity
             </div>
         </body>

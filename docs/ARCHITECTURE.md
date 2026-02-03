@@ -13,7 +13,7 @@ The system is designed with a strict separation of concerns (SoC), allowing each
 
 ### 2. Intelligent Filtering Layer (`filters.py` & `collect_rss_gemini.py`)
 - **Phase A (Pre-Selection)**: Keyword-based scoring (`AI_KEYWORDS`). This stage filters 1000+ candidate articles down to a manageable "Top 30" context window for the LLM.
-- **Phase B (Contextual Selection)**: The LLM (Gemini 2.0 Flash) acts as a high-level gatekeeper, using a complex prompt to judge relevance against a specific target persona (40-year-old Japanese business-person).
+- **Phase B (Contextual Selection)**: The LLM (Gemini 3 Flash Preview) acts as a high-level gatekeeper, using a complex prompt to judge relevance against a specific target persona (40-year-old Japanese business-person).
 
 ### 3. Generation Engine (`ai_client.py`)
 - **Translation & Contextualization**: Not just translating, but explaining *why* a globally relevant technological breakthrough matters locally in Japan.

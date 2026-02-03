@@ -37,7 +37,7 @@ def fetch_gemini_models():
             if "gemini" in m.name.lower():
                 # Filter for Cost-Effective variants
                 if any(k in m.name.lower() for k in TARGET_KEYWORDS) or "exp" in m.name.lower():
-                    models.append(m.name) # e.g. models/gemini-1.5-flash
+                    models.append(m.name) # e.g. models/gemini-3-flash-preview
     except Exception as e:
         print(f"Gemini Fetch Error: {e}")
     return sorted(models)
