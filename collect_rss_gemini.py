@@ -50,7 +50,7 @@ def main():
     
     # Sort: First by having at least one keyword, then by published date
     # This ensures "AI news" comes first, even if slightly older than a general "Breaking News"
-    scored_articles.sort(key=lambda x: (x['_relevance'] > 0, x.get('published', datetime.datetime.min) or datetime.datetime.min), reverse=True)
+    scored_articles.sort(key=lambda x: (x['_relevance'] > 0, x.get('published', datetime.datetime.min.replace(tzinfo=datetime.timezone.utc)) or datetime.datetime.min.replace(tzinfo=datetime.timezone.utc)), reverse=True)
     
     # Take top 30 relevant/newest for Gemini
     input_articles = scored_articles[:30]

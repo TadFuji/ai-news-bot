@@ -64,25 +64,85 @@ def build_pages():
     # docs ディレクトリを確保
     docs_dir.mkdir(exist_ok=True)
     
-    # output 内の全 Markdown ファイルを取得
-    md_files = sorted(output_dir.glob("ai_news_*.md"), reverse=True)
+    # output 内の全 Markdown ファイルを取得（旧形式 + 新形式）
+    md_files_old = sorted(output_dir.glob("ai_news_*.md"), reverse=True)
+    md_files_new = sorted(output_dir.glob("morning_brief_*.md"), reverse=True)
+    json_files_new = sorted(output_dir.glob("morning_brief_*.json"), reverse=True)
+
+    # Morning Brief JSON 直接取り込み（最優先 — 構造化データがより豊富）
+    archives = []
+    processed_dates = set()
+
+    for json_file in json_files_new:
+        match = re.search(r'morning_brief_(\d{4})(\d{2})(\d{2})', json_file.name)
+        if not match:
+            continue
+
+        year, month, day = match.groups()
+        date_str = f"{year}年{month}月{day}日"
+        file_date = f"{year}-{month}-{day}"
+
+        if file_date in processed_dates:
+            continue
+
+        try:
+            data = json.loads(json_file.read_text(encoding="utf-8"))
+            articles = data.get("articles", [])
+            if not articles:
+                continue
+
+            # JSON → Pages JSON 変換
+            parsed = {
+                "updated": date_str,
+                "theme": data.get("theme", ""),
+                "morning_comment": data.get("morning_comment", ""),
+                "articles": [{
+                    "title": a.get("title_ja", a.get("title", "")),
+                    "category": a.get("category", "未分類"),
+                    "summary": a.get("summary_ja", a.get("summary", "")),
+                    "one_liner": a.get("one_liner", ""),
+                    "why_important": a.get("why_important", ""),
+                    "action_item": a.get("action_item", ""),
+                    "source": a.get("source", ""),
+                    "url": a.get("url", "")
+                } for a in articles]
+            }
+
+            date_json_path = docs_dir / f"{file_date}.json"
+            with open(date_json_path, "w", encoding="utf-8") as f:
+                json.dump(parsed, f, ensure_ascii=False, indent=2)
+
+            archives.append({
+                "date": date_str,
+                "path": f"{file_date}.json",
+                "count": len(articles)
+            })
+            processed_dates.add(file_date)
+            print(f"✅ {json_file.name} → {file_date}.json ({len(articles)} 件)")
+        except Exception as e:
+            print(f"⚠️ Skip {json_file.name}: {e}")
+
+    # 旧形式 Markdown ファイルも処理（後方互換）
+    all_md_files = md_files_new + md_files_old
     
-    if not md_files:
+    if not all_md_files and not archives:
         print("⚠️ ニュースファイルが見つかりません")
         return
     
-    archives = []
-    
-    for md_file in md_files:
-        # ファイル名から日付を抽出（ai_news_20260116_1453.md）
-        match = re.search(r'ai_news_(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})', md_file.name)
+    for md_file in all_md_files:
+        # 両方のファイル名パターンに対応
+        match = re.search(r'(?:ai_news|morning_brief)_(\d{4})(\d{2})(\d{2})', md_file.name)
         if not match:
             continue
         
-        year, month, day, hour, minute = match.groups()
+        year, month, day = match.groups()[:3]
         date_str = f"{year}年{month}月{day}日"
         file_date = f"{year}-{month}-{day}"
-        
+
+        # JSON で既に処理済みならスキップ
+        if file_date in processed_dates:
+            continue
+
         # Markdown を解析
         content = md_file.read_text(encoding="utf-8")
         parsed = parse_markdown_news(content)
@@ -101,6 +161,7 @@ def build_pages():
             "path": f"{file_date}.json",
             "count": len(parsed["articles"])
         })
+        processed_dates.add(file_date)
         
         print(f"✅ {md_file.name} → {file_date}.json ({len(parsed['articles'])} 件)")
     
@@ -127,9 +188,7 @@ def build_pages():
     print(f"✅ archive.json 更新 ({len(unique_archives)} 件)")
 
     # --- Column Processing ---
-    column_dir = output_dir.parent / "output" / "columns" # Correct path based on structure
-    if not column_dir.exists():
-        column_dir = output_dir / "columns" # Fallback check
+    column_dir = docs_dir / "columns"  # generate_weekly_column.py saves here
 
     columns_files = sorted(column_dir.glob("weekly_column_*.md"), reverse=True)
     columns_list = []
