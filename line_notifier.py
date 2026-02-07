@@ -115,11 +115,18 @@ def format_news_for_line(articles: list[dict], max_articles: int = 3) -> str:
     for i, article in enumerate(articles[:max_articles], 1):
         title = article.get("title_ja", article.get("title", "タイトルなし"))
         summary = article.get("summary_ja", article.get("summary", ""))
+        one_liner = article.get("one_liner", "")
+        why_important = article.get("why_important", "")
         url = article.get("url", "")
         
-        lines.append(f"【{i}】{title}")
+        if one_liner:
+            lines.append(f"【{i}】💡 {one_liner}")
+            lines.append(f"{title}")
+        else:
+            lines.append(f"【{i}】{title}")
         lines.append(f"{summary}")
-        # URLを短縮表示せずにそのまま載せるが、件数を減らすことで全体の文字数を抑える
+        if why_important:
+            lines.append(f"📌 {why_important}")
         lines.append(f"🔗 {url}")
         lines.append("")
     

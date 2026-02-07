@@ -128,38 +128,6 @@ with st.sidebar:
                 if sync_github:
                      pass # Skip for now as file structure changed, focus on X post logic first.
 
-                            capture_output=True,
-                            text=True,
-                            encoding="utf-8",
-                            errors="replace",
-                            env=env
-                        )
-                        
-                        if build_res.returncode != 0:
-                            st.warning("⚠️ サイト生成に失敗しました")
-                            st.code(build_res.stderr)
-                        else:
-                            log_output += "✅ サイトデータ生成完了\n"
-                            
-                            # Git Commands
-                            # using 'git' directly assumes it's in PATH (Git Bash or minimal git installed)
-                            # 1. Add changes (docs folder specifically for site)
-                            subprocess.run(["git", "add", "docs/"], cwd=BOT_DIR, capture_output=True)
-                            subprocess.run(["git", "add", "public_reports/"], cwd=BOT_DIR, capture_output=True) # Sync reports too
-                            
-                            # 2. Commit
-                            timestamp = datetime.now().strftime('%Y-%m-%d %H:%M')
-                            commit_msg = f"Manual Update: {timestamp} (via Cockpit)"
-                            subprocess.run(["git", "commit", "-m", commit_msg], cwd=BOT_DIR, capture_output=True)
-                            
-                            # 3. Push
-                            push_res = subprocess.run(["git", "push", "origin", "main"], cwd=BOT_DIR, capture_output=True)
-                            
-                            if push_res.returncode == 0:
-                                log_output += "✅ GitHub Sync完了 (Webサイト更新)\n"
-                            else:
-                                log_output += f"⚠️ GitHub Push失敗 (認証エラー等の可能性): {push_res.stderr}\n"
-
                 st.success(log_output)
                 st.cache_data.clear()
                 time.sleep(3)

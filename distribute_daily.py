@@ -53,11 +53,20 @@ def post_to_x_single(articles):
     for i, article in enumerate(target_articles, 1):
         title = article.get('title_ja', 'No Title')
         summary = article.get('summary_ja', '')
+        one_liner = article.get('one_liner', '')
+        action_item = article.get('action_item', '')
         url = article.get('url', '')
         
         # Main Post Body
-        full_text += f"{i}. {title}\n\n"
-        full_text += f"{summary}\n\n"
+        if one_liner:
+            full_text += f"{i}. 💡 {one_liner}\n"
+            full_text += f"{title}\n\n"
+        else:
+            full_text += f"{i}. {title}\n\n"
+        full_text += f"{summary}\n"
+        if action_item:
+            full_text += f"👉 {action_item}\n"
+        full_text += "\n"
         
         # Link Collections for Reply
         links_text += f"{i}. {url}\n"

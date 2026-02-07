@@ -30,29 +30,38 @@ GitHub Actions を中核とした、モダンなサーバーレス・アーキ�
 ```mermaid
 graph TD
     subgraph "External Sources"
-        A[RSS Feeds (Global Tech/AI Corp Blogs)]
+        A["RSS Feeds (36媒体: ArXiv, HN, TechCrunch etc.)"]
     end
 
-    subgraph "GitHub Actions (CI/CD Pipeline)"
+    subgraph "Stage 1: 03:00 JST (collect_candidates.yml)"
         B[Discovery: RSS Client]
         C[Pre-Filtering: Keyword Scoring]
-        D[Editorial Analysis: Gemini 3 Flash Preview]
-        E[Generation: Markdown/JSON/HTML]
+        D["1st Pass: Gemini 3 Flash Preview + So What分析"]
+    end
+
+    subgraph "Stage 2: 07:00 JST (daily_rss_gemini.yml)"
+        E[Fresh RSS Collection]
+        F[3-Day Deduplication]
+        G["2nd Pass: Gemini Editorial Curation"]
+        H[Generation: JSON/Markdown/HTML]
     end
 
     subgraph "Delivery"
-        F[Web: GitHub Pages]
-        G[SNS: X/Twitter Thread]
-        H[Nofication: LINE Messaging API]
+        I[Web: GitHub Pages]
+        J[SNS: X/Twitter Thread]
+        K[Notification: LINE Messaging API]
     end
 
     A --> B
     B --> C
     C -- "Selected Top 30" --> D
-    D -- "Curated Top 10" --> E
+    D -- "candidates_*.json" --> E
     E --> F
-    E --> G
-    E --> H
+    F -- "Deduplicated" --> G
+    G -- "Curated Top 5" --> H
+    H --> I
+    H --> J
+    H --> K
 ```
 
 ---
@@ -74,8 +83,9 @@ graph TD
 ```text
 ai-news-bot/
 ├── .github/workflows/       # CI/CD自動化定義（日次・週次・リント）
-├── config.py                # RSSソース（32件）・AIキーワード・設定
-├── collect_rss_gemini.py    # ニュース収集・解析のコアパイプライン
+├── config.py                # RSSソース（36件）・AIキーワード・設定
+├── collect_rss_gemini.py    # Stage 1: ニュース収集 + Gemini 1次分析
+├── curate_morning_brief.py  # Stage 2: 2次キュレーション + 重複排除
 ├── ai_client.py             # Gemini 3 Flash Preview プロンプト連携
 ├── rss_client.py            # 複数RSSフィードからの記事収集
 ├── distribute_daily.py      # LINE/X 配信の司令塔
