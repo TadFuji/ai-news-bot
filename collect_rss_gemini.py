@@ -61,7 +61,7 @@ def main():
     
     # Save as JSON (Legacy Format compatible with generators)
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M")
-    filename = f"ai_news_{timestamp}.json"
+    filename = f"candidates_{timestamp}.json"
     filepath = os.path.join(NEWS_BOT_OUTPUT_DIR, filename)
     
     if not os.path.exists(NEWS_BOT_OUTPUT_DIR):
@@ -77,7 +77,7 @@ def main():
     
     # Also save as Markdown for visibility
     # Format compatible with build_pages.py parse_markdown_news()
-    md_filename = f"ai_news_{timestamp}.md"
+    md_filename = f"candidates_{timestamp}.md"
     md_filepath = os.path.join(NEWS_BOT_OUTPUT_DIR, md_filename)
     
     # Get current JST time for the "updated" field

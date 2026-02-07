@@ -1,0 +1,39 @@
+name: "Stage 1: Collect Candidates"
+
+on:
+  schedule:
+    # 18:00 UTC = 03:00 JST
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install requests google-genai feedparser python-dotenv python-dateutil
+
+    - name: "Run Stage 1: RSS Collection + Gemini 1st Pass"
+      env:
+        GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      run: |
+        python collect_rss_gemini.py
+
+    - name: Commit candidates
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Stage 1: Candidates collected [skip ci]"
+        branch: main

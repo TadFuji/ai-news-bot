@@ -1,4 +1,4 @@
-name: Daily RSS + Gemini Summary
+name: "Stage 2: Morning Brief Delivery"
 
 on:
   schedule:
@@ -10,9 +10,9 @@ permissions:
   contents: write
 
 jobs:
-  daily-digest:
+  morning-brief:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -24,19 +24,12 @@ jobs:
 
     - name: Install dependencies
       run: |
-        # All requirements for RSS collection, Gemini processing, and distribution
         pip install requests google-genai feedparser python-dotenv python-dateutil line-bot-sdk tweepy
 
-    - name: Run Daily Collection (RSS + Gemini 3)
+    - name: "Run Stage 2: Curate + Distribute"
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-        # XAI Key might be needed if we add Grok post-generation later
-        XAI_API_KEY: ${{ secrets.XAI_API_KEY }} 
-      run: |
-        python collect_rss_gemini.py
-
-    - name: Distribute (LINE & X)
-      env:
+        XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
         LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
         X_CONSUMER_KEY: ${{ secrets.X_CONSUMER_KEY }}
@@ -44,15 +37,10 @@ jobs:
         X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
         X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
       run: |
-        python distribute_daily.py
-
-    - name: Build Website (Daily Update)
-      run: |
-        # Update static site with new daily content
-        python build_pages.py
+        python curate_morning_brief.py
 
     - name: Commit and Push changes
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: "Daily RSS Digest [skip ci]"
+        commit_message: "Morning Brief delivered [skip ci]"
         branch: main
