@@ -6,6 +6,7 @@ import sys
 import time
 from datetime import datetime
 import subprocess
+import traceback
 from dotenv import load_dotenv
 
 from config import PROJECT_ROOT as BOT_DIR, NEWS_BOT_OUTPUT_DIR
@@ -64,11 +65,13 @@ def load_latest_news():
     with open(latest_file, "r", encoding="utf-8") as f:
         data = json.load(f)
     
-    # Ensure data is a list of articles
-    if not isinstance(data, list):
+    # Handle both list format and dict format {"articles": [...]}
+    if isinstance(data, list):
+        return latest_file, data
+    elif isinstance(data, dict) and "articles" in data:
+        return latest_file, data["articles"]
+    else:
         return latest_file, []
-        
-    return latest_file, data
 
 # Sidebar
 with st.sidebar:
@@ -146,6 +149,28 @@ with st.sidebar:
     st.caption(f"監視フォルダ:\n{NEWS_BOT_OUTPUT_DIR}")
 
 # --- Helper Functions ---
+
+def post_update(text, reply_text=None):
+    """Post to X via tweepy (same pattern as distribute_daily.py)"""
+    import tweepy
+    consumer_key = os.environ.get("X_CONSUMER_KEY")
+    consumer_secret = os.environ.get("X_CONSUMER_SECRET")
+    access_token = os.environ.get("X_ACCESS_TOKEN")
+    access_token_secret = os.environ.get("X_ACCESS_TOKEN_SECRET")
+
+    if not all([consumer_key, consumer_secret, access_token, access_token_secret]):
+        return False, "X API credentials missing"
+
+    client = tweepy.Client(
+        consumer_key=consumer_key, consumer_secret=consumer_secret,
+        access_token=access_token, access_token_secret=access_token_secret
+    )
+    resp = client.create_tweet(text=text)
+    tweet_id = resp.data['id']
+    if reply_text:
+        time.sleep(2)
+        client.create_tweet(text=reply_text, in_reply_to_tweet_id=tweet_id)
+    return True, tweet_id
 
 @st.cache_data(show_spinner="🤖 Grokking the news... (Generating Post)")
 def generate_x_posts(articles):

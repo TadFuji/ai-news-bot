@@ -26,7 +26,7 @@ def process_with_gemini(articles: list[dict], max_articles: int = 10) -> list[di
     # 記事情報をまとめてプロンプトに含める
     articles_text = ""
     # Limit to top 30 newest items to avoid token limits
-    articles_sorted = sorted(articles, key=lambda x: x.get('published', datetime.datetime.min) or datetime.datetime.min, reverse=True)
+    articles_sorted = sorted(articles, key=lambda x: x.get('published', datetime.datetime.min.replace(tzinfo=datetime.timezone.utc)) or datetime.datetime.min.replace(tzinfo=datetime.timezone.utc), reverse=True)
     
     for i, article in enumerate(articles_sorted[:30]): 
         articles_text += f"""
