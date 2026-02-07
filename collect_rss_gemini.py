@@ -60,7 +60,7 @@ def main():
     processed = process_with_gemini(input_articles)
     
     # Save as JSON (Legacy Format compatible with generators)
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M")
+    timestamp = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).strftime("%Y%m%d_%H%M")
     filename = f"candidates_{timestamp}.json"
     filepath = os.path.join(NEWS_BOT_OUTPUT_DIR, filename)
     

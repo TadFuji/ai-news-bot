@@ -20,7 +20,8 @@ load_dotenv()
 
 def load_candidates():
     """本日の候補JSONをすべて読み込み、記事を統合・重複排除する"""
-    today_str = datetime.datetime.now().strftime("%Y%m%d")
+    JST = datetime.timezone(datetime.timedelta(hours=9))
+    today_str = datetime.datetime.now(JST).strftime("%Y%m%d")
 
     # candidates_YYYYMMDD_*.json と ai_news_YYYYMMDD_*.json の両方を読む
     patterns = [
@@ -62,7 +63,8 @@ def load_candidates():
 def get_delivered_urls(days=3):
     """過去N日間の morning_brief_*.json から配信済みURLを取得"""
     delivered = set()
-    today = datetime.datetime.now()
+    JST = datetime.timezone(datetime.timedelta(hours=9))
+    today = datetime.datetime.now(JST)
 
     for i in range(1, days + 1):
         past_date = (today - datetime.timedelta(days=i)).strftime("%Y%m%d")
@@ -282,8 +284,11 @@ def main():
     # 2. 新鮮なRSS収集（03:00〜07:00 JST のギャップを埋める）
     #    米西海岸の午後 = 日本の早朝 → AIニュースの最も活発な時間帯
     print("\n📡 最新RSS収集中（03:00以降の新着をキャッチ）...")
-    import collect_rss_gemini
-    collect_rss_gemini.main()
+    try:
+        import collect_rss_gemini
+        collect_rss_gemini.main()
+    except Exception as e:
+        print(f"  ⚠️ 追加RSS収集失敗（Stage 1 候補で続行）: {e}")
 
     # 3. Stage 1 + 新規を統合して再読み込み
     print("\n📡 全候補を統合中...")
@@ -322,15 +327,21 @@ def main():
     print("\n💾 Morning Brief を保存中...")
     json_path = save_morning_brief(brief)
 
-    # 6. 配信
+    # 6. 配信（失敗してもサイト更新は継続）
     print("\n📤 配信開始...")
-    import distribute_daily
-    distribute_daily.main()
+    try:
+        import distribute_daily
+        distribute_daily.main()
+    except Exception as e:
+        print(f"  ⚠️ 配信エラー（サイト更新は続行）: {e}")
 
-    # 7. サイト更新
+    # 7. サイト更新（配信の成否に関わらず実行）
     print("\n🌐 GitHub Pages 更新中...")
-    import build_pages
-    build_pages.build_pages()
+    try:
+        import build_pages
+        build_pages.build_pages()
+    except Exception as e:
+        print(f"  ⚠️ サイト更新エラー: {e}")
 
     print("\n" + "=" * 50)
     print("✅ Morning Brief 配信完了！")
