@@ -182,18 +182,9 @@ with st.sidebar:
 
 @st.cache_data(show_spinner="🤖 Grokking the news... (Generating Post)")
 def generate_x_posts(articles):
-    # Use Grok to generate the High-Context Post
-    from grok_poster import generate_grok_post
-    
-    # Generate content for the TOP 1 item
+    # Generate X post content using inline template (grok_poster removed in cleanup)
     top = articles[0]
-    grok_text = generate_grok_post(top['title_ja'], top['summary_ja'], top['url'])
-    
-    # Fallback to simple format if Grok fails
-    if "Error" in grok_text:
-        post_content = f"【AIニュース速報】\n{top['title_ja']}\n\n{top['summary_ja']}\n\n#AI #Tech"
-    else:
-        post_content = grok_text + f"\n\n#AI #TechNews"
+    post_content = f"【AIニュース速報】\n{top['title_ja']}\n\n{top['summary_ja']}\n\n#AI #TechNews"
 
     # URL for reply
     registration_url = "https://lin.ee/gTGnitS"

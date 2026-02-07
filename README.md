@@ -73,17 +73,19 @@ graph TD
 
 ```text
 ai-news-bot/
-├── .github/workflows/    # CI/CD自動化定義
-├── config.py             # 全体の設定・RSSソース・キーワード定義
-├── main.py               # 統合実行エントリーポイント
-├── collect_rss_gemini.py # ニュース収集/解析のコアロジック
-├── ai_client.py          # Gemini API との高度なプロンプト連携
-├── rss_client.py         # 複数のRSSソースを並列(?)取得
-├── build_pages.py        # Jinja2形式のテンプレートを用いた静的サイト生成
-├── line_notifier.py      # LINE Messaging API連携（Flex Message等）
-├── distribute_daily.py   # SNS/メッセージ配信の司令塔
-├── docs/                 # GitHub Pages 公開用ディレクトリ
-└── output/               # 中間生成物（JSON/Markdown履歴）
+├── .github/workflows/       # CI/CD自動化定義（日次・週次・リント）
+├── config.py                # RSSソース（32件）・AIキーワード・設定
+├── collect_rss_gemini.py    # ニュース収集・解析のコアパイプライン
+├── ai_client.py             # Gemini 3 Flash Preview プロンプト連携
+├── rss_client.py            # 複数RSSフィードからの記事収集
+├── distribute_daily.py      # LINE/X 配信の司令塔
+├── line_notifier.py         # LINE Messaging API（Flex Message対応）
+├── build_pages.py           # GitHub Pages 用 JSON/HTML 生成
+├── generate_weekly_column.py # 週刊AIコラム生成
+├── app.py                   # Streamlit ローカルダッシュボード
+├── generators/              # インフォグラフィック・PDF生成
+├── docs/                    # GitHub Pages 公開ディレクトリ
+└── output/                  # 中間生成物（JSON/Markdown履歴）
 ```
 
 ---
