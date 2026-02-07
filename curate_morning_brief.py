@@ -134,8 +134,11 @@ URL: {url}
 - ソースの多様性（同じメディアに偏らない）
 - 速報性（既に広く知られた情報は下位に）
 
-## Step 3: 各記事に「なぜ重要？」を追加
-各記事に対して、**40代のビジネスパーソンが明日の仕事で意識すべきこと** を1-2文で追記してください。
+## Step 3: 各記事の付加価値を追加
+各記事に対して以下を日本語で追記してください：
+- **one_liner**: ニュースの核心を20文字以内で表現（例: 'AI議事録が全社標準へ'）
+- **why_important**: 40代ビジネスパーソンが明日の仕事で意識すべきこと（1-2文）
+- **action_item**: 読者が今日すぐできる具体的な1つの行動（例: '社内の定型業務リストを作ってみてください'）
 
 ## Step 4: 今朝の一言
 読者が最初に読む「編集長コメント」を40文字以内で作成してください。
@@ -149,7 +152,9 @@ URL: {url}
     {{
       "title_ja": "日本語タイトル",
       "summary_ja": "日本語要約",
+      "one_liner": "ニュースの核心を20文字以内で（例: 'AI議事録が全社標準へ'）",
       "why_important": "なぜ重要か（40代ビジネスパーソン向け, 1-2文）",
+      "action_item": "読者が今日すぐできる1つの行動（例: '社内の定型業務リストを作ってみてください'）",
       "category": "カテゴリ",
       "importance_score": 1-10,
       "source": "ソース名",
@@ -240,16 +245,22 @@ def save_morning_brief(brief):
         for i, a in enumerate(articles, 1):
             title = a.get("title_ja", "No Title")
             summary = a.get("summary_ja", "")
+            one_liner = a.get("one_liner", "")
             why = a.get("why_important", "")
+            action = a.get("action_item", "")
             source = a.get("source", "Unknown")
             url = a.get("url", "")
             category = a.get("category", "未分類")
 
             f.write(f"## {i}. {title}\n\n")
             f.write(f"**カテゴリ**: {category}\n\n")
+            if one_liner:
+                f.write(f"💡 **一言**: {one_liner}\n\n")
             f.write(f"{summary}\n\n")
             if why:
-                f.write(f"💡 **なぜ重要？** {why}\n\n")
+                f.write(f"📌 **なぜ重要？** {why}\n\n")
+            if action:
+                f.write(f"👉 **アクション**: {action}\n\n")
             f.write(f"- **出典**: {source}\n")
             f.write(f"- **URL**: {url}\n\n")
 

@@ -10,8 +10,10 @@ from line_notifier import send_news_to_line
 load_dotenv()
 
 def get_latest_report():
-    # Find latest JSON in output/
-    files = glob.glob(os.path.join(NEWS_BOT_OUTPUT_DIR, "*.json"))
+    # Find latest report JSON in output/ (morning_brief preferred, ai_news as fallback)
+    files = glob.glob(os.path.join(NEWS_BOT_OUTPUT_DIR, "morning_brief_*.json"))
+    if not files:
+        files = glob.glob(os.path.join(NEWS_BOT_OUTPUT_DIR, "ai_news_*.json"))
     if not files:
         return None
     # Sort by mtime

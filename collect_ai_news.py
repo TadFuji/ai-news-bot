@@ -12,7 +12,7 @@ def load_api_key():
         with open(env_path, 'r', encoding='utf-8') as f:
             for line in f:
                 if line.startswith("XAI_API_KEY="):
-                    return line.strip().split("=")[1]
+                    return line.strip().split("=", 1)[1]
     return os.environ.get("XAI_API_KEY")
 
 API_KEY = load_api_key()
