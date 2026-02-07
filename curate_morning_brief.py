@@ -59,6 +59,31 @@ def load_candidates():
     return unique
 
 
+def get_delivered_urls(days=3):
+    """過去N日間の morning_brief_*.json から配信済みURLを取得"""
+    delivered = set()
+    today = datetime.datetime.now()
+
+    for i in range(1, days + 1):
+        past_date = (today - datetime.timedelta(days=i)).strftime("%Y%m%d")
+        filepath = os.path.join(NEWS_BOT_OUTPUT_DIR, f"morning_brief_{past_date}.json")
+
+        if os.path.exists(filepath):
+            try:
+                with open(filepath, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                for article in data.get("articles", []):
+                    url = article.get("url", "")
+                    if url:
+                        delivered.add(url)
+                print(f"  📋 既配信: {os.path.basename(filepath)} ({len(data.get('articles', []))} articles)")
+            except Exception as e:
+                print(f"  ⚠️ Skip {filepath}: {e}")
+
+    print(f"  🔒 過去{days}日間の配信済みURL: {len(delivered)} 件")
+    return delivered
+
+
 def curate_with_gemini(candidates):
     """Gemini 2次プロンプトで編集的キュレーションを実行"""
     api_key = os.environ.get("GOOGLE_API_KEY")
@@ -261,6 +286,18 @@ def main():
     print(f"   Stage 1 からの候補: {stage1_count} 件")
     print(f"   07:00 追加収集分: {max(0, new_count)} 件")
     print(f"   合計候補: {len(candidates)} 件")
+
+    # 3.5. 過去3日間の配信済みURLを除外（同じニュースの繰り返し防止）
+    print("\n🔒 過去3日間の重複チェック中...")
+    delivered_urls = get_delivered_urls(days=3)
+    if delivered_urls:
+        before = len(candidates)
+        candidates = [a for a in candidates if a.get("url", "") not in delivered_urls]
+        removed = before - len(candidates)
+        if removed > 0:
+            print(f"   ✂️ 過去に配信済みの {removed} 件を除外 → 残り {len(candidates)} 件")
+        else:
+            print(f"   ✅ 重複なし（全 {len(candidates)} 件が新規）")
 
     # 4. Gemini 2次キュレーション
     print("\n🧠 2次キュレーション実行中...")

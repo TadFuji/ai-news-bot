@@ -101,6 +101,26 @@ RSS_FEEDS = [
     },
     # --- 専門メディア・研究 ---
     {
+        "name": "ArXiv AI",
+        "url": "http://arxiv.org/rss/cs.AI",
+        "region": "米国"
+    },
+    {
+        "name": "ArXiv ML",
+        "url": "http://arxiv.org/rss/cs.LG",
+        "region": "米国"
+    },
+    {
+        "name": "Hacker News AI",
+        "url": "https://hnrss.org/newest?q=AI+OR+LLM+OR+GPT&points=50",
+        "region": "米国"
+    },
+    {
+        "name": "Product Hunt AI",
+        "url": "https://www.producthunt.com/feed?category=artificial-intelligence",
+        "region": "米国"
+    },
+    {
         "name": "Decrypt AI",
         "url": "https://decrypt.co/ai/feed",
         "region": "米国"

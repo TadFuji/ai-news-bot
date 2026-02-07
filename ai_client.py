@@ -61,7 +61,13 @@ URL: {article['url']}
     3. 身近な利便性: LINEやスマホなど、日常的に使うツールへのAI実装。
     4. 日本社会への影響: 日本企業（ソフトバンク、NTT等）の動向や、日本政府のAI規制。
 
-## Step 3: Output Format
+## Step 3: "So What?" 分析（読者を動かす付加価値）
+各記事に対して、以下の3つの視点を追加してください。これが読者の行動を変える核心です。
+- **one_liner**: ニュースの本質を20文字以内で表現（例:「AI議事録が全社標準へ」）
+- **why_important**: このニュースが読者の来週の仕事にどう影響するか、具体的に1文で（例:「月曜の会議から試せるレベルの精度です」）
+- **action_item**: 読者が今日すぐできる1つの行動（例:「まず社内の定型業務リストを作ってみてください」）
+
+## Step 4: Output Format
 重要度スコアに基づき、上位最大10件を以下のJSON配列で出力してください。
 該当するAIニュースが10件に満たない場合は、無理に埋めずある分だけ出力してください。
 
@@ -71,6 +77,9 @@ URL: {article['url']}
     "index": 元の記事番号,
     "title_ja": "日本語タイトル",
     "summary_ja": "詳細な日本語要約。40代のビジネスパーソンに具体的にどう影響するかを含め、情報を網羅して記述",
+    "one_liner": "20文字以内の核心（例: 'AI議事録が全社標準へ'）",
+    "why_important": "来週の仕事への具体的影響を1文で",
+    "action_item": "今日すぐできる1つの行動",
     "category": "以下のいずれか（業務効率化, リスク管理, 日本市場, 最新技術, 法規制・倫理, ライフスタイル）",
     "importance_score": 1-10,
     "reason": "選定理由（なぜ40代日本人にとって重要なのか記述）"
@@ -114,6 +123,9 @@ URL: {article['url']}
                 article = articles_sorted[idx].copy()
                 article["title_ja"] = result.get("title_ja", article["title"])
                 article["summary_ja"] = result.get("summary_ja", "要約なし")
+                article["one_liner"] = result.get("one_liner", "")
+                article["why_important"] = result.get("why_important", "")
+                article["action_item"] = result.get("action_item", "")
                 article["category"] = result.get("category", "未分類")
                 article["importance_score"] = result.get("importance_score", 5)
                 article["reason"] = result.get("reason", "")
