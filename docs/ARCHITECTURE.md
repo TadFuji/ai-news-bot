@@ -11,7 +11,7 @@ The system is designed with a strict separation of concerns (SoC), allowing each
 - **Handling**: Normalizes various RSS formats (XML, Atom, RSS 2.0) into a unified internal Python dictionary format.
 - **Concurrency**: (Planned) Using `asyncio` for faster concurrent fetching of many feeds.
 
-### 2. Intelligent Filtering Layer (`filters.py` & `collect_rss_gemini.py`)
+### 2. Intelligent Filtering Layer (`collect_rss_gemini.py`)
 - **Phase A (Pre-Selection)**: Keyword-based scoring (`AI_KEYWORDS`). This stage filters 1000+ candidate articles down to a manageable "Top 30" context window for the LLM.
 - **Phase B (Contextual Selection)**: The LLM (Gemini 3 Flash Preview) acts as a high-level gatekeeper, using a complex prompt to judge relevance against a specific target persona (40-year-old Japanese business-person).
 

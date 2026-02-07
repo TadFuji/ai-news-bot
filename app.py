@@ -17,7 +17,6 @@ if BOT_DIR not in sys.path:
 # Attempt Imports of Automation Modules
 IMPORT_ERROR_MSG = None
 try:
-    from post_to_x import post_update
     from generators.video_maker import create_video
     # generate_pdf is imported inside the function to avoid browser launch on startup
     MODULES_LOADED = True

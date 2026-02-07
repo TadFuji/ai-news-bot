@@ -16,10 +16,8 @@ python-dotenv>=1.0.0
 # LINE Messaging API
 line-bot-sdk>=3.0.0
 
-# Marketing Engine (UI & Automation)
+# Marketing Engine (UI)
 streamlit>=1.30.0
-selenium>=4.16.0
-webdriver-manager>=4.0.0
 
 # Reports & Media (Added during migration fix)
 edge-tts
