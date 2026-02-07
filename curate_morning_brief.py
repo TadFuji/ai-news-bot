@@ -238,24 +238,31 @@ def main():
     print("☀️ Morning Brief — Stage 2 キュレーション開始")
     print("=" * 50)
 
-    # 1. 候補読み込み
+    # 1. Stage 1 候補を読み込み
     print("\n📡 Stage 1 候補を読み込み中...")
+    candidates_stage1 = load_candidates()
+    stage1_count = len(candidates_stage1)
+
+    # 2. 新鮮なRSS収集（03:00〜07:00 JST のギャップを埋める）
+    #    米西海岸の午後 = 日本の早朝 → AIニュースの最も活発な時間帯
+    print("\n📡 最新RSS収集中（03:00以降の新着をキャッチ）...")
+    import collect_rss_gemini
+    collect_rss_gemini.main()
+
+    # 3. Stage 1 + 新規を統合して再読み込み
+    print("\n📡 全候補を統合中...")
     candidates = load_candidates()
 
     if not candidates:
-        print("⚠️ 候補が見つかりません。Stage 1 が未実行の可能性があります。")
-        print("   フォールバック: collect_rss_gemini.py を直接実行します...")
+        print("❌ 候補が見つかりません。終了します。")
+        return
 
-        # フォールバック: Stage 1 を即時実行
-        import collect_rss_gemini
-        collect_rss_gemini.main()
-        candidates = load_candidates()
+    new_count = len(candidates) - stage1_count
+    print(f"   Stage 1 からの候補: {stage1_count} 件")
+    print(f"   07:00 追加収集分: {max(0, new_count)} 件")
+    print(f"   合計候補: {len(candidates)} 件")
 
-        if not candidates:
-            print("❌ フォールバック後も候補が見つかりません。終了します。")
-            return
-
-    # 2. Gemini 2次キュレーション
+    # 4. Gemini 2次キュレーション
     print("\n🧠 2次キュレーション実行中...")
     brief = curate_with_gemini(candidates)
 
@@ -263,16 +270,16 @@ def main():
         print("❌ キュレーション失敗。終了します。")
         return
 
-    # 3. 保存
+    # 5. 保存
     print("\n💾 Morning Brief を保存中...")
     json_path = save_morning_brief(brief)
 
-    # 4. 配信
+    # 6. 配信
     print("\n📤 配信開始...")
     import distribute_daily
     distribute_daily.main()
 
-    # 5. サイト更新
+    # 7. サイト更新
     print("\n🌐 GitHub Pages 更新中...")
     import build_pages
     build_pages.build_pages()
