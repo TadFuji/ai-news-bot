@@ -20,7 +20,8 @@ def load_known_models():
     return {"gemini": [], "xai": [], "last_checked": None}
 
 def save_known_models(data):
-    data["last_checked"] = datetime.datetime.now().isoformat()
+    jst = datetime.timezone(datetime.timedelta(hours=9))
+    data["last_checked"] = datetime.datetime.now(jst).isoformat()
     with open(EXISTING_MODELS_FILE, 'w', encoding='utf-8') as f:
         # Use simple structure
         json.dump(data, f, indent=2)

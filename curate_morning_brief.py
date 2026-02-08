@@ -212,9 +212,9 @@ URL: {url}
 
 def save_morning_brief(brief):
     """Morning Brief を JSON と Markdown の両形式で保存"""
-    today_str = datetime.datetime.now().strftime("%Y%m%d")
     jst = datetime.timezone(datetime.timedelta(hours=9))
     now_jst = datetime.datetime.now(jst)
+    today_str = now_jst.strftime("%Y%m%d")
     updated_str = now_jst.strftime("%Y年%m月%d日 %H:%M")
 
     # JSON (distribute_daily.py 互換)

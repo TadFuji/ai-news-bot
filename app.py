@@ -175,6 +175,8 @@ def post_update(text, reply_text=None):
 
 @st.cache_data(show_spinner="🤖 Grokking the news... (Generating Post)")
 def generate_x_posts(articles):
+    if not articles:
+        return {"Professional": "ニュースがありません", "ReplyURL": ""}
     # Generate X post content using inline template (grok_poster removed in cleanup)
     top = articles[0]
     post_content = f"【AIニュース速報】\n{top['title_ja']}\n\n{top['summary_ja']}\n\n#AI #TechNews"
@@ -196,6 +198,8 @@ def generate_x_posts(articles):
     }
 
 def generate_note_draft(articles):
+    if not articles:
+        return "ニュースがありません"
     date_str = datetime.now().strftime("%Y年%m月%d日")
     md = f"""# 【{date_str}】今日のAIニュースまとめ：{articles[0]['title_ja']} 他
 
@@ -231,6 +235,8 @@ Antigravity AI News Botが選んだ、今日の「読むべき10本」をお届�
     return md
 
 def generate_video_script(articles):
+    if not articles:
+        return "ニュースがありません"
     top = articles[0]
     script = f"""
 # 📺 30秒解説動画台本 (TikTok / YouTube Shorts)
