@@ -129,8 +129,9 @@ URL: {url}
 候補記事を俯瞰し、今日のニュースに通底する「テーマ」を1つ特定してください。
 例: 「エージェント機能の民主化が加速している」「日本企業のAI投資が本格化」など。
 
-## Step 2: 記事選定（10件）
-以下の基準で **厳選10件** を選んでください（候補が10件未満の場合は、ある分だけで構いません）：
+## Step 2: 記事選定（必ず10件）
+以下の基準で **必ず10件** を選んでください。候補が10件以上ある場合は厳選し、10件未満の場合は候補の全件を採用してください。
+**重要: articlesの配列には必ず10件（候補が10件未満なら全件）を含めてください。5件や7件では不十分です。**
 - テーマとの関連性（ストーリーの一貫性）
 - 読者の「明日の行動」を変える力
 - ソースの多様性（同じメディアに偏らない）
@@ -191,10 +192,31 @@ URL: {url}
             response_text = "\n".join(lines)
 
         result = json.loads(response_text)
+        curated_articles = result.get("articles", [])
         print(f"✅ 2次キュレーション完了")
         print(f"   テーマ: {result.get('theme', '—')}")
         print(f"   一言: {result.get('morning_comment', '—')}")
-        print(f"   厳選: {len(result.get('articles', []))} 件")
+        print(f"   Gemini 選定: {len(curated_articles)} 件")
+
+        # Gemini が10件未満しか返さなかった場合、候補から補完する
+        if len(curated_articles) < 10 and len(candidates) > len(curated_articles):
+            curated_urls = {a.get("url", "") for a in curated_articles}
+            remaining = [
+                a for a in candidates if a.get("url", "") not in curated_urls
+            ]
+            # 1次スコアの高い順に補完
+            remaining.sort(
+                key=lambda x: x.get("importance_score", 0), reverse=True
+            )
+            needed = 10 - len(curated_articles)
+            supplement = remaining[:needed]
+            if supplement:
+                print(f"   📌 Gemini選定が{len(curated_articles)}件のため、"
+                      f"候補から{len(supplement)}件を補完")
+                curated_articles.extend(supplement)
+            result["articles"] = curated_articles
+
+        print(f"   最終選定: {len(result.get('articles', []))} 件")
         return result
 
     except Exception as e:
