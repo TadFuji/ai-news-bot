@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI ニュース TOP10 - グローバル速報</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.8);
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #22d3ee;
+            --border: rgba(148, 163, 184, 0.2);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+        .bg-gradient {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(34, 211, 238, 0.1) 0%, transparent 50%);
+            pointer-events: none; z-index: -1;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+        header { text-align: center; margin-bottom: 3rem; padding: 2rem 0; }
+        h1 {
+            font-size: 2.5rem; font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text; margin-bottom: 0.5rem;
+        }
+        .subtitle { color: var(--text-muted); font-size: 0.95rem; }
+        .theme-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(34,211,238,0.2));
+            border: 1px solid rgba(99,102,241,0.4);
+            padding: 0.5rem 1.2rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-top: 0.75rem;
+        }
+        .update-time {
+            display: inline-block;
+            background: var(--card-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-top: 0.5rem;
+            border: 1px solid var(--border);
+        }
+        .morning-comment {
+            background: rgba(99,102,241,0.1);
+            border-left: 3px solid var(--primary);
+            padding: 1rem 1.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin-bottom: 2rem;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+        .nav {
+            display: flex; gap: 1rem; justify-content: center;
+            margin-bottom: 2rem; flex-wrap: wrap;
+        }
+        .nav a {
+            color: var(--text-muted); text-decoration: none;
+            padding: 0.5rem 1rem; border-radius: 0.5rem;
+            transition: all 0.2s; border: 1px solid transparent;
+        }
+        .nav a:hover, .nav a.active {
+            color: var(--primary); border-color: var(--primary);
+            background: rgba(99, 102, 241, 0.1);
+        }
+        .news-card {
+            background: var(--card-bg); backdrop-filter: blur(10px);
+            border: 1px solid var(--border); border-radius: 1rem;
+            padding: 1.5rem; margin-bottom: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .news-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        .news-rank {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white; width: 2rem; height: 2rem; border-radius: 50%;
+            text-align: center; line-height: 2rem; font-weight: 700;
+            font-size: 0.9rem; margin-right: 0.75rem;
+        }
+        .news-title {
+            font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem;
+            color: var(--text); display: inline;
+        }
+        .news-category {
+            display: inline-block; padding: 0.2rem 0.6rem;
+            border-radius: 0.25rem; font-size: 0.75rem; font-weight: 500;
+            margin-right: 0.5rem; margin-bottom: 0.5rem;
+        }
+        .cat-policy { background: rgba(99,102,241,0.2); color: #a5b4fc; }
+        .cat-ethics { background: rgba(239,68,68,0.2); color: #fca5a5; }
+        .cat-market { background: rgba(34,197,94,0.2); color: #86efac; }
+        .cat-technology { background: rgba(234,179,8,0.2); color: #fde047; }
+        .cat-business { background: rgba(168,85,247,0.2); color: #d8b4fe; }
+        .region-badge {
+            display: inline-block; padding: 0.15rem 0.5rem;
+            border-radius: 0.25rem; font-size: 0.7rem;
+            background: rgba(148,163,184,0.15); color: var(--text-muted);
+            margin-right: 0.5rem; margin-bottom: 0.5rem;
+        }
+        .news-summary { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
+        .one-liner {
+            font-size: 0.85rem; color: var(--accent);
+            font-style: italic; margin-bottom: 0.75rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(34,211,238,0.05);
+            border-radius: 0.25rem;
+        }
+        .news-meta {
+            display: flex; justify-content: space-between;
+            align-items: center; flex-wrap: wrap; gap: 0.5rem;
+        }
+        .news-source { font-size: 0.8rem; color: var(--text-muted); }
+        .news-link a { color: var(--accent); text-decoration: none; font-size: 0.85rem; }
+        .news-link a:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 2rem 0; color: var(--text-muted); font-size: 0.85rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .news-card { padding: 1rem; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="container">
+        <header>
+            <h1>🌐 AI ニュース TOP10</h1>
+            <p class="subtitle">グローバル速報 — 過去24時間の世界AI動向を厳選</p>
+            <div id="theme-badge" class="theme-badge">読み込み中...</div><br>
+            <span class="update-time" id="update-time">読み込み中...</span>
+        </header>
+        <div id="morning-comment" class="morning-comment"></div>
+        <nav class="nav">
+            <a href="index.html">最新（国内）</a>
+            <a href="global.html" class="active">グローバル速報</a>
+            <a href="column.html">コラム</a>
+            <a href="archive.html">アーカイブ</a>
+        </nav>
+        <main id="news-container">
+            <!-- ニュースがここに挿入される -->
+        </main>
+        <footer>
+            <p>Powered by <a href="https://github.com/TadFuji/ai-news-bot">AI News Bot</a> |
+                データソース: Reuters, NYT, Fox News, EDPB, eWeek 他グローバルメディア</p>
+        </footer>
+    </div>
+    <script>
+        const CATEGORY_LABELS = {
+            'policy': '政策・規制',
+            'ethics': '倫理・安全',
+            'market': '市場・投資',
+            'technology': '技術・研究',
+            'business': 'ビジネス'
+        };
+        const REGION_LABELS = {
+            'usa': '🇺🇸 米国',
+            'eu': '🇪🇺 EU',
+            'china': '🇨🇳 中国',
+            'japan': '🇯🇵 日本/アジア',
+            'india': '🇮🇳 インド',
+            'global': '🌐 グローバル'
+        };
+
+        async function loadNews() {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                const jsonFile = params.get('json') || 'global_2026-02-23.json';
+                const response = await fetch(jsonFile);
+                const data = await response.json();
+
+                document.getElementById('update-time').textContent = `更新: ${data.updated}`;
+                document.getElementById('theme-badge').textContent = `📌 ${data.theme}`;
+                if (data.morning_comment) {
+                    document.getElementById('morning-comment').textContent = `💬 ${data.morning_comment}`;
+                }
+
+                const container = document.getElementById('news-container');
+                container.innerHTML = data.articles.map((article, i) => {
+                    const catKey = article.category || 'business';
+                    const catLabel = CATEGORY_LABELS[catKey] || catKey;
+                    const catClass = `cat-${catKey}`;
+                    const regionLabel = REGION_LABELS[article.region] || article.region || '';
+                    const oneLiner = article.one_liner ? `<div class="one-liner">💡 ${article.one_liner}</div>` : '';
+                    return `
+                    <article class="news-card">
+                        <div style="display: flex; flex-direction: column;">
+                            <div style="display: flex; align-items: center; margin-bottom: 8px; flex-wrap: wrap;">
+                                <span class="news-rank">${i + 1}</span>
+                                <span class="news-category ${catClass}">${catLabel}</span>
+                                <span class="region-badge">${regionLabel}</span>
+                            </div>
+                            <h2 class="news-title">${article.title}</h2>
+                        </div>
+                        <p class="news-summary" style="margin-top: 0.75rem;">${article.summary}</p>
+                        ${oneLiner}
+                        <div class="news-meta">
+                            <span class="news-source">📰 ${article.source}</span>
+                            <span class="news-link"><a href="${article.url}" target="_blank">→ 元記事を読む</a></span>
+                        </div>
+                    </article>
+                `}).join('');
+            } catch (e) {
+                document.getElementById('news-container').innerHTML =
+                    '<p style="text-align:center;color:var(--text-muted);">ニュースを読み込み中...</p>';
+                console.error(e);
+            }
+        }
+        loadNews();
+    </script>
+</body>
+</html>

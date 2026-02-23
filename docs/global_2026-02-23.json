@@ -1,0 +1,112 @@
+{
+  "updated": "2026年02月23日",
+  "theme": "グローバルAI競争の新局面：投資・規制・倫理が交差する転換点",
+  "morning_comment": "インドAIサミットでニューデリー宣言が採択され、米中欧が異なる戦略でAI覇権を競う中、倫理と安全性をめぐる緊張が世界規模で高まっています。",
+  "collection_run": {
+    "run_at": "2026-02-23T16:00:00Z",
+    "articles_collected": 10,
+    "status": "success"
+  },
+  "articles": [
+    {
+      "title": "インドAIサミット閉幕：88カ国がニューデリー宣言を採択、2000億ドル規模の投資表明",
+      "category": "policy",
+      "region": "india",
+      "summary": "ニューデリーで開催されたインドAIインパクトサミットが閉幕し、88カ国・国際機関が「ニューデリー宣言」に署名した。米国と中国も署名した同宣言は、包括的かつ人間中心のAI開発を原則とする非拘束的合意。ブレッチリー・パーク（英国）、ソウル、パリに続くグローバルAIサミットシリーズの第4回で、初めてグローバルサウスで開催された。2000億ドル規模の投資表明も行われたが、フロンティアAIの計算資源が米中の少数企業に集中している現実への対応は薄く、実効性を疑問視する声もある。",
+      "one_liner": "88カ国が署名したが拘束力なし——グローバルAIガバナンスの限界と可能性",
+      "source": "Fortune / Yahoo Finance",
+      "url": "https://au.finance.yahoo.com/news/india-ai-impact-summit-closes-154747742.html",
+      "publishedAt": "2026-02-23T15:47:00Z"
+    },
+    {
+      "title": "米国防総省、AnthropicにAIガードレール撤廃を要求——拒否なら「サプライチェーンリスク」指定も",
+      "category": "ethics",
+      "region": "usa",
+      "summary": "米国防総省（Pentagon）は、2億ドルの契約を持つAI企業Anthropicに対し、軍事利用における倫理的制限の撤廃を要求した。Anthropicは自律型兵器や大規模国内監視への適用に対するガードレールを維持しようとしているが、国防総省はこれを拒否した場合、同社を「サプライチェーンリスク」に指定すると警告。AI企業の安全原則と政府の軍事AI推進方針の衝突が鮮明になった事例として、AI倫理とガバナンスの観点から世界的に注目を集めている。",
+      "one_liner": "AIの倫理vs国家安全保障——AnthropicとPentagonの対立が示す構造的矛盾",
+      "source": "GWU Media Relations / NYT",
+      "url": "https://mediarelations.gwu.edu/media-tip-sheet-pentagon-threatens-supply-chain-risk-label-over-ai-guardrails",
+      "publishedAt": "2026-02-23T14:00:00Z"
+    },
+    {
+      "title": "ビッグテック4社、2026年のAI投資額は合計6500億ドル——Bridgewater試算",
+      "category": "market",
+      "region": "usa",
+      "summary": "Bridgewaterの試算によると、Alphabet、Amazon、Meta、Microsoftの米テクノロジー大手4社が2026年にAI関連インフラへ投資する総額は約6500億ドルに達する見込み。Amazonだけで2000億ドルを超える設備投資を計画しており、同社は本日ルイジアナ州に120億ドルのAIデータセンター建設を発表した。この規模はクラウド黎明期の投資を大幅に上回り、AIが「ツール」から「インフラ」へと転換したことを示している。一方、Wall Streetはこの過大投資に懸念を示し、株価は不安定な動きを続けている。",
+      "one_liner": "6500億ドルの賭け——AIインフラ投資競争は「クラウド黎明期」を超えた",
+      "source": "Reuters / CNBC",
+      "url": "https://www.cnbc.com/2026/02/23/amazon-louisiana-ai-data-centers.html",
+      "publishedAt": "2026-02-23T14:30:00Z"
+    },
+    {
+      "title": "中国AI「百モデル戦争」が世界制覇フェーズへ——ByteDance Seedance 2.0とUnitreeロボットが春節を席巻",
+      "category": "technology",
+      "region": "china",
+      "summary": "2026年の中国春節期間中、ByteDanceの動画生成AI「Seedance 2.0」がCCTV春節晩会で伝統的な水墨画を動画化し世界を驚かせた。同時にUnitreeのヒューマノイドロボットが春節イベントで同期演技を披露し、2万台の販売目標を掲げた。Alibabaは最大2時間の動画を処理できるマルチモーダルモデル「Qianwen 3.5」をリリース。米国の半導体輸出規制にもかかわらず、HuaweiのAscendチップを活用して独自エコシステムを構築しており、中国AIが「キャッチアップ」から「グローバルリーダーシップ」フェーズへ移行しつつある。",
+      "one_liner": "輸出規制をバネに——中国AIが「追いつく」から「追い越す」フェーズへ",
+      "source": "iChongqing / Inspire Preneur Magazine",
+      "url": "https://www.ichongqing.info/2026/02/23/the-dragons-digital-leap-how-china-is-redefining-the-frontiers-of-ai-and-robotics/amp/",
+      "publishedAt": "2026-02-23T07:00:00Z"
+    },
+    {
+      "title": "EU、AI生成画像のプライバシー侵害に対し61カ国が共同声明——EDPB主導で非同意コンテンツ規制を強化",
+      "category": "policy",
+      "region": "eu",
+      "summary": "欧州データ保護委員会（EDPB）議長Anu Talusが、世界61の個人情報保護当局を代表して「AI生成画像とプライバシー保護に関する共同声明」に署名した。SNSプラットフォームに統合されたAI画像・動画生成ツールによる非同意の親密な画像や名誉毀損コンテンツの生成が深刻な問題となっており、特に子どもや脆弱なグループへの被害を重視。組織に対しては、堅牢なセーフガードの実装、透明性の確保、個人保護メカニズムの提供を求めている。",
+      "one_liner": "61カ国が連帯——AI生成の非同意画像問題にグローバル規制の枠組みが動き出す",
+      "source": "EDPB (European Data Protection Board)",
+      "url": "https://www.edpb.europa.eu/news/news/2026/ai-generated-imagery-and-protection-privacy-edpb-supports-joint-global-privacy_en",
+      "publishedAt": "2026-02-23T09:00:00Z"
+    },
+    {
+      "title": "日本、2027年までにヒューマノイドロボット量産へ——日立がAI搭載モデルを工場展開、政府も国家戦略を承認",
+      "category": "technology",
+      "region": "japan",
+      "summary": "早稲田大学、tmsuk、村田製作所などが設立した「京都ヒューマノイド協会」が2027年の量産開始を目標に開発を進めている。2026年3月にプロトタイプを完成させ、災害対応ロボット（高さ250cm、50kg以上の荷物を運搬可能）と人間サイズの研究モデルの2種類を開発中。日立も2028年3月期までにAI搭載ヒューマノイドロボットを自社工場に導入する計画を発表。日本政府はAI開発・活用に関する初の包括的国家計画を承認し、日本AI安全研究所の拡充や早期AI教育の推進を盛り込んだ。",
+      "one_liner": "「日本最後のチャンス」——少子高齢化対策としてのヒューマノイドロボット国家戦略",
+      "source": "eWeek",
+      "url": "https://www.eweek.com/news/japan-mass-produce-humanoid-robots-2027/",
+      "publishedAt": "2026-02-23T16:18:00Z"
+    },
+    {
+      "title": "ホワイトハウス、「米国AIエクスポートプログラム」の詳細を公表——Tech Corps創設で途上国へのAI普及を推進",
+      "category": "policy",
+      "region": "usa",
+      "summary": "ホワイトハウス科学技術政策局長Michael Kratsiosが独占インタビューで米国のグローバルAI戦略を詳述。「米国AIエクスポートプログラム」は、途上国が中国製AIではなく米国製AIスタックを採用するよう促す外交・経済戦略。平和部隊を模した「Tech Corps」を創設し、技術者を海外に派遣してAI導入を支援する。DFC、輸出入銀行、世界銀行などを通じた資金調達支援も展開。インドをPax Silicaアライアンスに迎え、AIサプライチェーンの安全保障を強化する方針も示した。",
+      "one_liner": "AIを外交の武器に——トランプ政権の「American AI Stack」世界展開戦略の全貌",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/tech/trumps-science-tech-man-lays-out-white-houses-global-ai-strategy",
+      "publishedAt": "2026-02-23T12:34:00Z"
+    },
+    {
+      "title": "韓国放送3社（KBS・MBC・SBS）、OpenAIをニュース著作権侵害で提訴——アジア初のAI著作権訴訟",
+      "category": "ethics",
+      "region": "japan",
+      "summary": "韓国放送協会は、KBS、MBC、SBSの地上波テレビ局3社がOpenAIを相手取り、著作権侵害の差し止めと損害賠償を求める訴訟をソウル中央地裁に起こしたと発表した。韓国の地上波テレビ局が海外AI大手を提訴するのは初めて。同協会は「生成AIの学習に3社のニュースコンテンツが無断で利用されている」と主張し、今回の訴訟を韓国の「データ主権」に関わる問題と位置づけた。欧米に続きアジアでもAI学習データの著作権問題が法廷闘争に発展した。",
+      "one_liner": "データ主権を問う——韓国放送局のOpenAI提訴がアジアのAI著作権争いの火蓋を切る",
+      "source": "聯合ニュース / NTTドコモ",
+      "url": "https://topics.smt.docomo.ne.jp/article/yonhap/world/yonhap-20260223wow041",
+      "publishedAt": "2026-02-23T07:59:00Z"
+    },
+    {
+      "title": "AIガバナンスの実態調査：S&P500企業の72%がAIリスクを開示、しかし政策と実践の乖離が深刻",
+      "category": "business",
+      "region": "usa",
+      "summary": "Thomson Reutersの新データによると、S&P500企業の72%が2025年に重大なAIリスクを開示しており、2023年の12%から急増した。しかし、AIガバナンスの「政策と実践の乖離」が深刻な問題として浮上。多くの企業がAIガバナンス文書を整備しているものの、実際の運用では形骸化しているケースが多い。2026年のEU AI Actの本格施行を前に、企業は継続的な機械可読エビデンスの提出が求められる「技術的規律」としてのガバナンスへの転換を迫られている。",
+      "one_liner": "72%がリスク開示も実態は形骸化——AIガバナンスの「政策と実践の乖離」が企業の急務に",
+      "source": "Thomson Reuters",
+      "url": "https://www.thomsonreuters.com/en-us/posts/sustainability/ai-governance-gap-esg-risks/",
+      "publishedAt": "2026-02-23T13:00:00Z"
+    },
+    {
+      "title": "インドAI野望の現実：5Gとエリクソンが語る接続性の課題、2000億ドル投資の実現可能性を問う",
+      "category": "business",
+      "region": "india",
+      "summary": "インドAIインパクトサミットでは2000億ドルの投資が表明されたが、エリクソンCTOはインドのAI発展における最大の課題として「電力・水・資本」の不足を指摘。5GとAIの融合によるインフラ整備が急務であり、ローカルAIスタックの構築と国際標準への準拠のバランスが問われている。インドは優秀なエンジニアを多数輩出し、主要ハイパースケーラーのデータセンターと研究拠点を擁するが、フロンティアAIモデルの開発能力では米中に大きく後れを取っており、「大きな野望と厳しい現実」の間で戦略的選択を迫られている。",
+      "one_liner": "電力・水・資本が壁——インドAI2000億ドル投資の野望と現実の間",
+      "source": "Economic Times / The Hindu",
+      "url": "https://telecom.economictimes.indiatimes.com/news/telecom-equipment/indias-ai-ambitions-driving-innovation-in-global-tech-with-5g-and-beyond/128696323",
+      "publishedAt": "2026-02-23T18:00:00Z"
+    }
+  ]
+}
