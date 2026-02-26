@@ -128,17 +128,6 @@
     "run_at": "2026-02-27T06:09:00+09:00",
     "articles_collected": 10,
     "status": "success",
-    "sources": [
-      "Reuters",
-      "TipRanks",
-      "Nikkei",
-      "Fox Business",
-      "AI Business",
-      "Computer Weekly",
-      "Utah News Dispatch",
-      "Nature",
-      "People's Daily",
-      "Tech Policy Press"
-    ]
+    "sources": ["Reuters", "TipRanks", "Nikkei", "Fox Business", "AI Business", "Computer Weekly", "Utah News Dispatch", "Nature", "People's Daily", "Tech Policy Press"]
   }
 }
