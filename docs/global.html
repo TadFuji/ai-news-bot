@@ -189,7 +189,7 @@
         async function loadNews() {
             try {
                 const params = new URLSearchParams(window.location.search);
-                const jsonFile = params.get('json') || 'global_2026-02-23.json';
+                const jsonFile = params.get('json') || 'global_2026-02-27.json';
                 const response = await fetch(jsonFile);
                 const data = await response.json();
 
