@@ -1,0 +1,127 @@
+{
+  "updated": "2026年03月02日",
+  "theme": "AI倫理・安全保障・グローバル競争が交差する転換点",
+  "morning_comment": "本日のAIニュースは、AnthropicとPentagonの倫理対立、中国全人代でのAI技術ロードマップ発表、NvidiaのAIインフラへの巨額投資など、政策・倫理・市場の三軸が激しく交差する重要な一日となりました。日本・インドでもAI普及の課題と機会が浮き彫りになっています。",
+  "articles": [
+    {
+      "title": "Anthropic vs. Washington: AI Ethics Collide with National Security",
+      "category": "ethics",
+      "region": "usa",
+      "summary": "2026年2月末、国防長官ピート・ヘグセスがAnthropicのCEOダリオ・アモデイに対し、Claudeモデルの安全ガードを緩和しなければ連邦契約を失い国家安全保障上のリスクとして扱うと最後通牒を突きつけた。AnthropicはAIによる広範な国内監視と完全自律型兵器への利用を拒否し、トランプ大統領は全米政府機関にAnthropicの技術使用を停止するよう命令。AI倫理と国家安全保障の衝突を象徴する重大事案となった。",
+      "one_liner": "AnthropicがPentagon要求拒否、連邦禁止令へ発展",
+      "why_important": "AI企業が安全性原則を守るために政府と対立する前例となり、AI規制・軍事利用の議論に世界的影響を与える。",
+      "action_item": "自社のAI利用ポリシーに倫理的制限を明文化することを検討してください。",
+      "source": "JDSupra / HaystackID",
+      "url": "https://www.jdsupra.com/legalnews/anthropic-vs-washington-ai-ethics-7224675/",
+      "publishedAt": "2026-03-02T00:00:00Z"
+    },
+    {
+      "title": "China's Annual Parliament Meet to Unveil Roadmap for Tech Race with West",
+      "category": "policy",
+      "region": "china",
+      "summary": "中国の全国人民代表大会（NPC）が今週開幕し、AI・半導体・量子コンピューティングなど先端技術分野での西側との競争に向けた包括的なロードマップを発表する予定。DeepSeekなどの高プロファイルなAIブレークスルーを商業化し、技術自立を加速させる計画が示される見通し。",
+      "one_liner": "中国全人代、AI技術競争ロードマップを発表へ",
+      "why_important": "中国の国家戦略としてのAI開発が本格化し、グローバルな技術覇権競争が新局面に入る。",
+      "action_item": "中国のAI政策動向を定期的にモニタリングし、ビジネス戦略への影響を評価してください。",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/autos-transportation/chinas-annual-parliament-meet-unveil-roadmap-tech-race-with-west-2026-03-02/",
+      "publishedAt": "2026-03-02T05:00:00Z"
+    },
+    {
+      "title": "Nvidia to Invest $2 Billion Each in Lumentum and Coherent to Bolster AI Processors",
+      "category": "market",
+      "region": "usa",
+      "summary": "NvidiaがフォトニクスメーカーのLumentumとCoherentにそれぞれ20億ドルを投資すると発表。光通信技術をAIプロセッサに統合することで、データセンター間の超高速データ転送を実現し、次世代AIインフラの性能向上を目指す。AIハードウェア市場における光ネットワーキング技術の重要性が高まっている。",
+      "one_liner": "Nvidia、光通信2社に計40億ドル投資でAIインフラ強化",
+      "why_important": "AIハードウェアの次世代競争において光ネットワーキングが鍵となり、市場構造が変化する。",
+      "action_item": "AI関連サプライチェーン（光通信・半導体）への投資機会を検討してください。",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/technology/nvidia-invest-2-billion-photonic-product-maker-lumentum-2026-03-02/",
+      "publishedAt": "2026-03-02T13:11:00Z"
+    },
+    {
+      "title": "White House AI Policy Update: Utah AI Bill Opposition, Tech Corps Launch, and Data Center Announcements",
+      "category": "policy",
+      "region": "usa",
+      "summary": "ホワイトハウスが共和党議員提出のユタ州AI透明性・子供安全法案（HB 286）への反対を表明。一方で、AIを海外に輸出促進する「Tech Corps」イニシアティブを発表し、連邦政府によるAI政策の一元化を推進。州レベルのAI規制に対する連邦優先権を主張する姿勢が鮮明になった。",
+      "one_liner": "ホワイトハウス、州AI法に反対しTech Corpsを発表",
+      "why_important": "米国のAI規制が連邦一元化へ向かい、州法との衝突が今後の政策形成に影響を与える。",
+      "action_item": "米国のAI規制動向を注視し、コンプライアンス戦略を見直してください。",
+      "source": "JDSupra / Mintz",
+      "url": "https://www.jdsupra.com/legalnews/white-house-ai-policy-update-utah-ai-9563484/",
+      "publishedAt": "2026-03-02T00:00:00Z"
+    },
+    {
+      "title": "Japan is Betting Big on AI. Few Workers Have Used It.",
+      "category": "business",
+      "region": "japan",
+      "summary": "日本政府がAIを2040年までに予測される1,100万人の労働力不足を補う経済的解決策として位置づけているが、実際の職場でのAI活用は低迷している。野村総合研究所の調査では、日本人の生成AI利用率は依然低く、理解と実装が政策の熱意に追いついていない現状が明らかになった。",
+      "one_liner": "日本のAI普及、政策と現場の大きなギャップ",
+      "why_important": "日本企業のAI導入遅れが競争力低下につながるリスクがあり、経営層の意識変革が急務。",
+      "action_item": "自社のAI活用状況を評価し、従業員教育・導入計画を策定してください。",
+      "source": "The Japan Times",
+      "url": "https://www.japantimes.co.jp/news/2026/03/02/japan/society/ai-awareness-japan-jobs/",
+      "publishedAt": "2026-03-02T00:00:00Z"
+    },
+    {
+      "title": "China's AI Arsenal: The PLA's Tech Strategy Is Working",
+      "category": "policy",
+      "region": "china",
+      "summary": "中国人民解放軍（PLA）がAIを軍事的優位性獲得のために積極的に開発していることをGeorgetown大学の研究者が分析。2025年9月の勝利記念パレードで披露されたAI搭載無人機が注目を集め、PLAはAIをサイバー戦・情報戦・認知戦に活用する戦略を推進。弱い将校団の代替としてもAIを活用する方針が示されている。",
+      "one_liner": "中国PLA、AIを軍事優位の核心戦略に据える",
+      "why_important": "AI軍事化が米中対立の新たな戦場となり、国際安全保障環境に根本的な変化をもたらす。",
+      "action_item": "地政学的リスクを踏まえた自社のAI調達・利用ポリシーを見直してください。",
+      "source": "Foreign Affairs",
+      "url": "https://www.foreignaffairs.com/china/chinas-ai-arsenal",
+      "publishedAt": "2026-03-02T00:00:00Z"
+    },
+    {
+      "title": "India Must Scale AI Infrastructure, Talent, and Trust to Stay Competitive",
+      "category": "technology",
+      "region": "india",
+      "summary": "Rising Bharat 2026サミットで、インド電子情報技術省（MeitY）の次官補アビシェク・シンが、インドのAIコンピューティング能力の大幅拡張が急務と発言。現在3万8,000基のGPUを展開中だが、人口規模のAI普及には最低10万〜20万基が必要と指摘。主権AI、量子コンピューティング、サイバーセキュリティへの投資が議論された。",
+      "one_liner": "インド、主権AI実現に最低20万GPU必要と政府が表明",
+      "why_important": "インドのAIインフラ投資拡大が、グローバルなAI競争の新たな軸として台頭しつつある。",
+      "action_item": "インド市場のAI動向を注視し、新興市場でのビジネス機会を評価してください。",
+      "source": "Forbes India",
+      "url": "https://www.forbesindia.com/article/news/india-must-scale-ai-infra-talent-and-trust-to-stay-competitive-experts/2991848/1",
+      "publishedAt": "2026-03-02T11:19:00Z"
+    },
+    {
+      "title": "Trump's AI Drive Is Running Headlong into His Most Reliable Voters",
+      "category": "policy",
+      "region": "usa",
+      "summary": "トランプ政権のAIデータセンター建設推進が、農業地帯の共和党支持者との衝突を引き起こしている。農地をデータセンターに転換する計画に対し、共和党候補者たちがトランプに反旗を翻す事態が発生。AIインフラ拡大と地方コミュニティの利益が対立する政治的課題が浮上している。",
+      "one_liner": "AIデータセンター建設、共和党支持基盤と衝突",
+      "why_important": "AIインフラ拡大が政治的摩擦を生み出し、米国のAI政策実行に新たな障壁となる可能性がある。",
+      "action_item": "AIインフラ投資の社会的影響を考慮した持続可能な戦略を検討してください。",
+      "source": "Politico",
+      "url": "https://www.politico.com/news/2026/03/02/gop-trump-loyalties-rural-america-data-centers-00795708",
+      "publishedAt": "2026-03-02T00:00:00Z"
+    },
+    {
+      "title": "Trust Without Teeth: The EU AI Act, Healthcare, and the Limits of a Voluntary Bill of Rights",
+      "category": "ethics",
+      "region": "eu",
+      "summary": "スタンフォード大学ロースクールの分析によると、EU AI Actの医療分野への適用は「手続き的自己消費」のパターンに陥っており、拘束力のある患者保護を生み出せていない。任意の行動規範に依存する構造が、実質的なガバナンス成果ではなくプロセスのみを生成していると批判。EU AI Actの実効性に対する根本的な疑問が提起された。",
+      "one_liner": "EU AI Act、医療分野での実効性に根本的疑問",
+      "why_important": "EU AI Actの実施状況が世界のAI規制モデルに影響を与え、企業のコンプライアンス戦略に直結する。",
+      "action_item": "EU AI Act対応の自社コンプライアンス計画を見直し、実効性のある措置を確認してください。",
+      "source": "Stanford Law School CodeX",
+      "url": "https://law.stanford.edu/2026/03/01/trust-without-teeth-the-eu-ai-act-healthcare-and-the-limits-of-a-voluntary-bill-of-rights/",
+      "publishedAt": "2026-03-01T00:00:00Z"
+    },
+    {
+      "title": "Fed Races to Adapt to AI Promises and Pitfalls for Jobs and Inflation",
+      "category": "market",
+      "region": "usa",
+      "summary": "米連邦準備制度理事会（FRB）がAIによる雇用・インフレへの影響に対応するため、政策枠組みの見直しを急いでいる。FRB当局者はAI移行による失業率上昇が「通常のコスト」になる可能性を示唆。AIが引き起こす経済的混乱に対する中央銀行の対応が世界的な注目を集めている。",
+      "one_liner": "FRB、AI雇用破壊への対応で金融政策見直しを急ぐ",
+      "why_important": "中央銀行がAIの経済的影響を政策立案に組み込み始め、金融市場・雇用政策に広範な影響が及ぶ。",
+      "action_item": "AIによる雇用変化を見据えた人材戦略・リスキリング計画を策定してください。",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/fed-races-adapt-ai-promises-pitfalls-jobs-inflation-2026-03-02/",
+      "publishedAt": "2026-03-02T00:00:00Z"
+    }
+  ]
+}
