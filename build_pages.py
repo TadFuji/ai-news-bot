@@ -172,6 +172,12 @@ def build_pages():
         if latest_json_path.exists():
             shutil.copy(latest_json_path, docs_dir / "latest.json")
             print("✅ latest.json 更新")
+
+    # 最新のグローバルニュースを global_latest.json として保存
+    global_files = sorted(docs_dir.glob("global_20??-??-??.json"), reverse=True)
+    if global_files:
+        shutil.copy(global_files[0], docs_dir / "global_latest.json")
+        print(f"✅ global_latest.json 更新 ← {global_files[0].name}")
     
     # アーカイブ一覧を日付で重複排除（同一日付は最新のもののみ保持）
     seen_dates = set()

@@ -375,8 +375,9 @@ def main():
         print("❌ キュレーション失敗。終了します。")
         return
 
-    # 4.5. Gemini 完全失敗時の警告（GitHub Actions で失敗として記録）
-    if brief.get("_fallback"):
+    # 4.5. Gemini 完全失敗時の警告
+    is_degraded = brief.get("_fallback", False)
+    if is_degraded:
         print("\n🚨 WARNING: Gemini API 呼び出しが全て失敗しました。")
         print("   フォールバックデータで配信を続行しますが、品質が低下しています。")
         print("   → GitHub Secrets の GOOGLE_API_KEY を確認してください。")
@@ -400,6 +401,29 @@ def main():
         build_pages.build_pages()
     except Exception as e:
         print(f"  ⚠️ サイト更新エラー: {e}")
+
+    # 8. ヘルスチェック — フォールバック発動時にLINE障害通知 + exit(1)
+    if is_degraded:
+        print("\n🚨 ヘルスチェック: 品質低下を検知")
+        try:
+            from line_notifier import send_to_line
+            alert_msg = (
+                "🚨 AI News Bot 障害通知\n"
+                "─────────\n\n"
+                "Gemini API の呼び出しが全て失敗しました。\n"
+                "フォールバックデータ（品質低下）で配信しています。\n\n"
+                "📌 対処: GitHub Secrets の GOOGLE_API_KEY を確認してください。\n"
+                "🔗 https://github.com/TadFuji/ai-news-bot/settings/secrets/actions"
+            )
+            send_to_line(alert_msg)
+            print("  📱 LINE 障害通知を送信しました")
+        except Exception as e:
+            print(f"  ⚠️ LINE 障害通知の送信失敗: {e}")
+
+        print("\n" + "=" * 50)
+        print("⚠️ Morning Brief 配信完了（品質低下モード）")
+        print("=" * 50)
+        sys.exit(1)  # GitHub Actions を失敗ステータスにする
 
     print("\n" + "=" * 50)
     print("✅ Morning Brief 配信完了！")
