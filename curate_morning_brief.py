@@ -10,6 +10,8 @@ Gemini 2次プロンプトで「編集的キュレーション」を実行する
 import os
 import json
 import glob
+import sys
+import time
 import datetime
 from google import genai
 from dotenv import load_dotenv
@@ -97,7 +99,7 @@ def curate_with_gemini(candidates):
 
     # 候補記事をテキスト化
     articles_text = ""
-    for i, a in enumerate(candidates[:20], 1):
+    for i, a in enumerate(candidates[:30], 1):
         title = a.get("title_ja", a.get("title", "No Title"))
         summary = a.get("summary_ja", a.get("summary", ""))
         category = a.get("category", "未分類")
@@ -175,61 +177,89 @@ URL: {url}
 """
 
     print("🧠 Gemini 2次キュレーション実行中...")
-    try:
-        response = client.models.generate_content(
-            model="gemini-3-flash-preview",
-            contents=prompt,
-        )
-        response_text = response.text.strip()
+    max_retries = 2
+    last_error = None
 
-        # コードブロック除去
-        if response_text.startswith("```"):
-            lines = response_text.split("\n")
-            if lines[0].startswith("```"):
-                lines = lines[1:]
-            if lines[-1].startswith("```"):
-                lines = lines[:-1]
-            response_text = "\n".join(lines)
+    for attempt in range(max_retries + 1):
+        try:
+            if attempt > 0:
+                wait_sec = 2 ** attempt
+                print(f"   🔄 リトライ {attempt}/{max_retries}（{wait_sec}秒待機）...")
+                time.sleep(wait_sec)
 
-        result = json.loads(response_text)
-        curated_articles = result.get("articles", [])
-        print(f"✅ 2次キュレーション完了")
-        print(f"   テーマ: {result.get('theme', '—')}")
-        print(f"   一言: {result.get('morning_comment', '—')}")
-        print(f"   Gemini 選定: {len(curated_articles)} 件")
-
-        # Gemini が10件未満しか返さなかった場合、候補から補完する
-        if len(curated_articles) < 10 and len(candidates) > len(curated_articles):
-            curated_urls = {a.get("url", "") for a in curated_articles}
-            remaining = [
-                a for a in candidates if a.get("url", "") not in curated_urls
-            ]
-            # 1次スコアの高い順に補完
-            remaining.sort(
-                key=lambda x: x.get("importance_score", 0), reverse=True
+            response = client.models.generate_content(
+                model="gemini-3-flash-preview",
+                contents=prompt,
             )
-            needed = 10 - len(curated_articles)
-            supplement = remaining[:needed]
-            if supplement:
-                print(f"   📌 Gemini選定が{len(curated_articles)}件のため、"
-                      f"候補から{len(supplement)}件を補完")
-                curated_articles.extend(supplement)
-            result["articles"] = curated_articles
+            response_text = response.text.strip()
 
-        print(f"   最終選定: {len(result.get('articles', []))} 件")
-        return result
+            # コードブロック除去
+            if response_text.startswith("```"):
+                lines = response_text.split("\n")
+                if lines[0].startswith("```"):
+                    lines = lines[1:]
+                if lines[-1].startswith("```"):
+                    lines = lines[:-1]
+                response_text = "\n".join(lines)
 
-    except Exception as e:
-        print(f"❌ Gemini 2次キュレーション失敗: {e}")
-        # フォールバック: 1次スコア上位10件をそのまま使用
-        fallback_articles = sorted(
-            candidates, key=lambda x: x.get("importance_score", 0), reverse=True
-        )[:10]
-        return {
-            "theme": "本日のAI注目ニュース",
-            "morning_comment": "本日の重要ニュースをお届けします",
-            "articles": fallback_articles,
-        }
+            result = json.loads(response_text)
+            curated_articles = result.get("articles", [])
+            print(f"✅ 2次キュレーション完了")
+            print(f"   テーマ: {result.get('theme', '—')}")
+            print(f"   一言: {result.get('morning_comment', '—')}")
+            print(f"   Gemini 選定: {len(curated_articles)} 件")
+
+            # ガードレール: Gemini が10件未満しか返さなかった場合、候補全体から補完する
+            if len(curated_articles) < 10 and len(candidates) > len(curated_articles):
+                curated_urls = {a.get("url", "") for a in curated_articles}
+                remaining = [
+                    a for a in candidates if a.get("url", "") not in curated_urls
+                ]
+                remaining.sort(
+                    key=lambda x: x.get("importance_score", 0), reverse=True
+                )
+                needed = 10 - len(curated_articles)
+                supplement = remaining[:needed]
+                if supplement:
+                    print(f"   📌 Gemini選定が{len(curated_articles)}件 → "
+                          f"候補から{len(supplement)}件を補完して10件に調整")
+                    curated_articles.extend(supplement)
+                result["articles"] = curated_articles
+
+            final_count = len(result.get('articles', []))
+            if final_count < 10:
+                print(f"   ⚠️ 候補不足: 最終 {final_count} 件（候補全体が{len(candidates)}件のため）")
+            else:
+                print(f"   ✅ 最終選定: {final_count} 件（10件保証達成）")
+            return result
+
+        except Exception as e:
+            last_error = e
+            print(f"   ⚠️ Attempt {attempt + 1} failed: {e}")
+            # INVALID_ARGUMENT (API key issue) はリトライしても無駄
+            if "INVALID_ARGUMENT" in str(e) or "API Key" in str(e):
+                print(f"   🛑 APIキーエラーのためリトライ中止")
+                break
+
+    # 全リトライ失敗時のフォールバック
+    print(f"❌ Gemini 2次キュレーション失敗（全{max_retries + 1}回）: {last_error}")
+    # フォールバック: 1次スコア上位10件を使用（翻訳済みフィールドを優先）
+    fallback_articles = sorted(
+        candidates, key=lambda x: x.get("importance_score", 0), reverse=True
+    )[:10]
+    # title_ja / summary_ja が存在する場合は title / summary に転写して
+    # build_pages.py での出力が日本語になるようにする
+    for a in fallback_articles:
+        if a.get("title_ja"):
+            a["title"] = a["title_ja"]
+        if a.get("summary_ja"):
+            a["summary"] = a["summary_ja"]
+    return {
+        "theme": "本日のAI注目ニュース",
+        "morning_comment": "本日の重要ニュースをお届けします",
+        "articles": fallback_articles,
+        "_fallback": True,  # フォールバック発動フラグ
+    }
 
 
 def save_morning_brief(brief):
@@ -344,6 +374,12 @@ def main():
     if not brief:
         print("❌ キュレーション失敗。終了します。")
         return
+
+    # 4.5. Gemini 完全失敗時の警告（GitHub Actions で失敗として記録）
+    if brief.get("_fallback"):
+        print("\n🚨 WARNING: Gemini API 呼び出しが全て失敗しました。")
+        print("   フォールバックデータで配信を続行しますが、品質が低下しています。")
+        print("   → GitHub Secrets の GOOGLE_API_KEY を確認してください。")
 
     # 5. 保存
     print("\n💾 Morning Brief を保存中...")

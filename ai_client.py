@@ -68,8 +68,9 @@ URL: {article['url']}
 - **action_item**: 読者が今日すぐできる1つの行動（例:「まず社内の定型業務リストを作ってみてください」）
 
 ## Step 4: Output Format
-重要度スコアに基づき、上位最大10件を以下のJSON配列で出力してください。
-該当するAIニュースが10件に満たない場合は、無理に埋めずある分だけ出力してください。
+重要度スコアに基づき、**必ず10件** を以下のJSON配列で出力してください。
+候補が10件以上ある場合は厳選し、10件未満の場合は候補の全件を採用してください。
+**重要: 配列には必ず10件（候補が10件未満なら全件）を含めてください。5件や7件では不十分です。**
 
 出力形式（JSON配列のみ）:
 [
@@ -150,5 +151,10 @@ URL: {article['url']}
             ac = a.copy()
             if isinstance(ac.get('published'), datetime.datetime):
                 ac['published'] = ac['published'].isoformat()
+            # 翻訳済みフィールドが存在する場合はtitle/summaryに転写
+            if ac.get('title_ja'):
+                ac['title'] = ac['title_ja']
+            if ac.get('summary_ja'):
+                ac['summary'] = ac['summary_ja']
             fallback.append(ac)
         return fallback
