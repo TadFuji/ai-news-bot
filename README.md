@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">🤖 AI News Bot</h1>
   <p align="center">
-    <strong>Global AI Intelligence → Japanese Morning Brief, Fully Automated</strong>
+    <strong>世界のAIニュースを、朝7時に日本語で届ける完全自動パイプライン</strong>
   </p>
   <p align="center">
     <a href="https://github.com/TadFuji/ai-news-bot/actions/workflows/daily_rss_gemini.yml"><img src="https://github.com/TadFuji/ai-news-bot/actions/workflows/daily_rss_gemini.yml/badge.svg" alt="Daily Pipeline"></a>
@@ -11,65 +11,79 @@
     <a href="https://deepmind.google/technologies/gemini/"><img src="https://img.shields.io/badge/AI-Gemini%203%20Flash-4285F4.svg?logo=google&logoColor=white" alt="Gemini 3 Flash"></a>
   </p>
   <p align="center">
-    <a href="https://tadfuji.github.io/ai-news-bot/">📰 Live Portal</a> ·
-    <a href="#-quickstart">⚡ Quickstart</a> ·
-    <a href="#-architecture">🏗️ Architecture</a> ·
-    <a href="#-contributing">🤝 Contributing</a>
+    <a href="https://tadfuji.github.io/ai-news-bot/">📰 公開ポータル</a> ·
+    <a href="#-クイックスタート">⚡ クイックスタート</a> ·
+    <a href="#-アーキテクチャ">🏗️ アーキテクチャ</a> ·
+    <a href="README_EN.md">🇺🇸 English</a>
   </p>
 </p>
 
 ---
 
-## 📖 Overview
+## 📖 概要
 
-AI News Bot is a **serverless, multi-stage news curation pipeline** that transforms the daily flood of global AI news into a concise, Japanese-language morning brief for technology leaders and business professionals.
+世界中の膨大なAIニュースから、**日本の40代ビジネスリーダー**にとって真に価値のある情報だけを抽出し、日本語で要約・配信する**完全自動化パイプライン**です。
 
-**Key Value Proposition:** No servers to maintain, no databases to manage, no costs beyond API usage — the entire pipeline runs on GitHub Actions and deploys to GitHub Pages.
+> 「情報の海で溺れない、賢明な判断を下すための羅針盤」
 
-### What It Does
+**サーバー維持費ゼロ** — GitHub Actions 上で完結し、GitHub Pages・LINE・X (Twitter) の3チャネルへ毎朝自動配信します。
 
-| Stage | Time (JST) | Process | Output |
-|-------|-----------|---------|--------|
-| **Discovery** | 03:00 | Crawl 36 RSS feeds, keyword scoring | ~100 raw candidates |
-| **1st Pass** | 03:00 | Gemini analysis: translate, score, classify | Top 30 scored articles |
-| **2nd Pass** | 07:00 | Editorial curation: theme, commentary, dedup | Final Top 10 brief |
-| **Delivery** | 07:00 | Multi-channel distribution | Web, LINE, X (Twitter) |
-| **Weekly** | Sun 09:00 | AI-written essay-style column | Column + LINE push |
+### パイプライン概要
 
-### Delivery Channels
+| ステージ | 時刻 (JST) | 処理内容 | 出力 |
+|---------|-----------|---------|------|
+| **収集** | 03:00 | 36の RSSフィードをクロール、キーワードスコアリング | 約100件の候補記事 |
+| **1次分析** | 03:00 | Gemini で翻訳・分類・スコアリング・So What分析 | Top 30 スコアリング済み |
+| **2次キュレーション** | 07:00 | Gemini 編集キュレーション（テーマ・コメント・重複排除） | **朝刊 Top 10** |
+| **配信** | 07:00 | マルチチャネル同時配信 | Web / LINE / X |
+| **週刊コラム** | 日曜 09:00 | AIが執筆するエッセイ形式のコラム | コラム + LINE配信 |
 
-- 🌐 **[GitHub Pages Portal](https://tadfuji.github.io/ai-news-bot/)** — Daily & Global archive with dark-mode UI
-- 📱 **LINE** — Top 3 push notification with share button (Flex Message)
-- 🐦 **X (Twitter)** — Long-form thread with link-in-reply strategy
+### 配信チャネル
+
+- 🌐 **[GitHub Pages ポータル](https://tadfuji.github.io/ai-news-bot/)** — 国内版・グローバル版のダークモード対応アーカイブ
+- 📱 **LINE** — Flex Message で Top 3 をプッシュ通知
+- 🐦 **X (Twitter)** — 長文スレッド形式で配信
 
 ---
 
-## 🏗️ Architecture
+## 🎯 編集方針（Editorial Policy）
+
+AIを単なる翻訳機ではなく、**「AIトレンドアナリスト」**として定義し、以下の3つの基準で情報を厳選します：
+
+1. **生存戦略** — 「この技術は私たちの働き方をどう変えるか？」
+2. **リスク管理** — 「教育・著作権・セキュリティの観点で何に注意すべきか？」
+3. **身近な利便性** — 「LINEやExcelなど、日常ツールがどう進化したか？」
+
+---
+
+## 🏗️ アーキテクチャ
+
+GitHub Actions を中核とした、モダンなサーバーレス・アーキテクチャです。
 
 ```mermaid
 graph TD
-    subgraph "Data Sources"
-        RSS["36 RSS Feeds<br/>(ArXiv, HN, TechCrunch, NHK, etc.)"]
+    subgraph "データソース"
+        RSS["36 RSS Feeds<br/>(ArXiv, HN, TechCrunch, NHK 等)"]
     end
 
     subgraph "Stage 1 — 03:00 JST"
-        COLLECT["collect_rss_gemini.py<br/>RSS Collection + Time Filter"]
-        SCORE["Keyword Scoring<br/>(AI_KEYWORDS from config.py)"]
-        GEMINI1["ai_client.py<br/>Gemini 1st Pass: Translate + Classify"]
+        COLLECT["collect_rss_gemini.py<br/>RSS収集 + 時間フィルタ"]
+        SCORE["キーワードスコアリング<br/>(config.py の AI_KEYWORDS)"]
+        GEMINI1["ai_client.py<br/>Gemini 1次分析: 翻訳 + 分類"]
     end
 
     subgraph "Stage 2 — 07:00 JST"
-        FRESH["Fresh RSS Collection<br/>(catch late-breaking news)"]
-        DEDUP["3-Day Deduplication<br/>(URL-based)"]
-        GEMINI2["curate_morning_brief.py<br/>Gemini 2nd Pass: Editorial Curation"]
+        FRESH["追加RSS収集<br/>(速報キャッチ)"]
+        DEDUP["3日間の重複排除<br/>(URL ベース)"]
+        GEMINI2["curate_morning_brief.py<br/>Gemini 2次キュレーション"]
     end
 
-    subgraph "Output Generation"
-        BUILD["build_pages.py<br/>JSON + latest.json + global_latest.json"]
-        DIST["distribute_daily.py<br/>LINE + X Distribution"]
+    subgraph "出力生成"
+        BUILD["build_pages.py<br/>JSON + latest.json 生成"]
+        DIST["distribute_daily.py<br/>LINE + X 配信"]
     end
 
-    subgraph "Delivery Channels"
+    subgraph "配信チャネル"
         WEB["GitHub Pages"]
         LINE["LINE Messaging API"]
         X["X / Twitter"]
@@ -92,184 +106,188 @@ graph TD
     style X fill:#1d9bf0,color:#fff
 ```
 
-### Resilience Design
+### 耐障害設計
 
-- **Retry with Backoff** — Gemini API calls retry up to 2× with exponential backoff
-- **Graceful Fallback** — On API failure, pre-translated fields (`title_ja`, `summary_ja`) are used
-- **Health Monitoring** — Fallback triggers a LINE alert and `exit(1)` to turn GitHub Actions red
-- **Deduplication** — 3-day rolling window prevents repeated articles
+| 機能 | 説明 |
+|-----|------|
+| **リトライ** | Gemini API 呼び出しを最大2回、指数バックオフで再試行 |
+| **フォールバック** | API障害時は翻訳済みフィールド (`title_ja`, `summary_ja`) を使用 |
+| **ヘルスチェック** | フォールバック発動時に LINE 障害通知 + GitHub Actions を赤ステータスに |
+| **重複排除** | 3日間のローリングウィンドウで同じ記事の再配信を防止 |
 
 ---
 
-## 📂 Project Structure
+## 📂 プロジェクト構造
 
 ```
 ai-news-bot/
-├── .github/workflows/          # GitHub Actions (daily, weekly, lint)
-│   ├── daily_rss_gemini.yml    #   Main pipeline: Stage 1 + Stage 2
-│   ├── collect_candidates.yml  #   Stage 1 only (03:00 JST)
-│   ├── weekly_column.yml       #   Sunday column generation
-│   └── lint.yml                #   Code quality checks
+├── .github/workflows/          # GitHub Actions（日次・週次・リント）
+│   ├── daily_rss_gemini.yml    #   メインパイプライン: Stage 1 + 2
+│   ├── collect_candidates.yml  #   Stage 1 のみ (03:00 JST)
+│   ├── weekly_column.yml       #   日曜コラム生成
+│   └── lint.yml                #   コード品質チェック
 │
-├── config.py                   # RSS sources (36), AI keywords, settings
-├── rss_client.py               # RSS feed parser (feedparser wrapper)
+├── config.py                   # RSSソース (36件), AIキーワード, 設定
+├── rss_client.py               # RSS フィードパーサー
 │
-├── collect_rss_gemini.py       # Stage 1: Collect + Score + 1st Gemini pass
-├── ai_client.py                # Gemini API client (prompts, fallback logic)
-├── curate_morning_brief.py     # Stage 2: 2nd Gemini pass + orchestration
+├── collect_rss_gemini.py       # Stage 1: 収集 + スコアリング + 1次分析
+├── ai_client.py                # Gemini API クライアント（プロンプト設計）
+├── curate_morning_brief.py     # Stage 2: 2次キュレーション + オーケストレーション
 │
-├── build_pages.py              # Static site generator (JSON/HTML for Pages)
-├── distribute_daily.py         # Multi-channel distribution orchestrator
-├── line_notifier.py            # LINE Messaging API (Flex Message support)
+├── build_pages.py              # 静的サイト生成（GitHub Pages 用 JSON/HTML）
+├── distribute_daily.py         # マルチチャネル配信オーケストレーター
+├── line_notifier.py            # LINE Messaging API（Flex Message 対応）
 │
-├── generate_weekly_column.py   # AI-written weekly essay column
-├── db_utils.py                 # Shared database utilities
-├── save_to_db.py               # Daily news → SQLite/MySQL
-├── save_global_news.py         # Global news → SQLite/MySQL
-├── monitor_models.py           # Monthly AI model release tracker
+├── generate_weekly_column.py   # 週刊コラム（AIエッセイ）生成
+├── db_utils.py                 # データベース共通ユーティリティ
+├── save_to_db.py               # 国内ニュース → SQLite/MySQL
+├── save_global_news.py         # グローバルニュース → SQLite/MySQL
+├── monitor_models.py           # 月次AIモデルリリース監視
 │
-├── app.py                      # Streamlit dashboard (local admin UI)
-├── generators/                 # PDF report & video generators
-├── docs/                       # GitHub Pages (published directory)
-├── output/                     # Intermediate artifacts (gitignored)
+├── app.py                      # Streamlit ダッシュボード（管理用）
+├── generators/                 # PDFレポート・動画生成
+├── docs/                       # GitHub Pages（公開ディレクトリ）
+├── output/                     # 中間生成物（gitignored）
 │
-├── .env.example                # Environment variable template
-├── requirements.txt            # Python dependencies
-├── CONTRIBUTING.md             # Contribution guidelines
-├── HISTORY.md                  # Detailed changelog
-└── LICENSE                     # MIT License
+├── .env.example                # 環境変数テンプレート
+├── requirements.txt            # Python 依存関係
+├── CONTRIBUTING.md             # 貢献ガイドライン
+├── HISTORY.md                  # 変更履歴
+├── SECURITY.md                 # セキュリティポリシー
+└── LICENSE                     # MIT ライセンス
 ```
 
 ---
 
-## ⚡ Quickstart
+## ⚡ クイックスタート
 
-### Prerequisites
+### 前提条件
 
-- Python 3.10+
-- [Google AI Studio API Key](https://aistudio.google.com/apikey) (for Gemini)
+- Python 3.10 以上
+- [Google AI Studio API Key](https://aistudio.google.com/apikey)（Gemini 用）
 
-### Installation
+### インストール
 
 ```bash
-# Clone the repository
+# リポジトリのクローン
 git clone https://github.com/TadFuji/ai-news-bot.git
 cd ai-news-bot
 
-# Create virtual environment
+# 仮想環境の作成
 python -m venv .venv
 source .venv/bin/activate  # Linux/macOS
 # .venv\Scripts\activate   # Windows
 
-# Install dependencies
+# 依存関係のインストール
 pip install -r requirements.txt
 
-# Configure environment
+# 環境変数の設定
 cp .env.example .env
-# Edit .env with your API keys
+# .env を編集して API キーを設定
 ```
 
-### Environment Variables
+### 環境変数
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `GOOGLE_API_KEY` | ✅ | Google AI Studio API key for Gemini |
-| `LINE_CHANNEL_ACCESS_TOKEN` | Optional | LINE Messaging API token |
-| `LINE_USER_ID` | Optional | LINE target user/group ID |
-| `X_CONSUMER_KEY` | Optional | X (Twitter) API consumer key |
-| `X_CONSUMER_SECRET` | Optional | X (Twitter) API consumer secret |
-| `X_ACCESS_TOKEN` | Optional | X (Twitter) access token |
-| `X_ACCESS_TOKEN_SECRET` | Optional | X (Twitter) access token secret |
+| 変数名 | 必須 | 説明 |
+|--------|------|------|
+| `GOOGLE_API_KEY` | ✅ | Google AI Studio の API キー（Gemini 用） |
+| `LINE_CHANNEL_ACCESS_TOKEN` | 任意 | LINE Messaging API アクセストークン |
+| `LINE_USER_ID` | 任意 | LINE 配信先ユーザー/グループ ID |
+| `X_CONSUMER_KEY` | 任意 | X (Twitter) API コンシューマーキー |
+| `X_CONSUMER_SECRET` | 任意 | X (Twitter) API コンシューマーシークレット |
+| `X_ACCESS_TOKEN` | 任意 | X (Twitter) アクセストークン |
+| `X_ACCESS_TOKEN_SECRET` | 任意 | X (Twitter) アクセストークンシークレット |
 
-### Run Locally
+### ローカル実行
 
 ```bash
-# Stage 1: Collect and analyze news
+# Stage 1: ニュース収集・分析
 python collect_rss_gemini.py
 
-# Stage 2: Curate and distribute
+# Stage 2: キュレーション・配信
 python curate_morning_brief.py
 
-# Generate weekly column
+# 週刊コラム生成
 python generate_weekly_column.py
 
-# Launch admin dashboard
+# 管理ダッシュボード起動
 streamlit run app.py
 ```
 
-### Deploy via GitHub Actions
+### GitHub Actions でのデプロイ
 
-1. Fork this repository
-2. Set `GOOGLE_API_KEY` in **Settings → Secrets → Actions**
-3. (Optional) Add LINE / X credentials for multi-channel delivery
-4. The pipeline runs automatically at 03:00 and 07:00 JST daily
-
----
-
-## 🧠 How the AI Curation Works
-
-The system uses a carefully designed **dual-pass architecture** with Gemini 3 Flash Preview:
-
-### 1st Pass — Analyst Mode (`ai_client.py`)
-
-The AI acts as a **"Senior AI Trend Analyst"** targeting Japanese business leaders in their 40s. For each article, it:
-
-- Translates title and summary to natural Japanese
-- Assigns a category (最新技術 / 業務効率化 / 法規制・倫理 / etc.)
-- Generates a "So What?" analysis explaining business impact
-- Scores importance on a 1-10 scale
-
-### 2nd Pass — Editor Mode (`curate_morning_brief.py`)
-
-The AI becomes an **editorial director**, selecting the final Top 10 from scored candidates:
-
-- Generates a daily **theme** connecting the articles narratively
-- Writes a **morning comment** (editorial voice)
-- Creates **one-liner summaries** and **action items** for each article
-- Ensures category diversity (no more than 3 from same category)
+1. このリポジトリを Fork
+2. **Settings → Secrets → Actions** で `GOOGLE_API_KEY` を設定
+3. （任意）LINE / X のクレデンシャルを追加
+4. 毎日 03:00 と 07:00 JST に自動実行されます
 
 ---
 
-## 🔧 Configuration
+## 🧠 AI キュレーションの仕組み
 
-### Adding RSS Sources
+Gemini 3 Flash Preview を使った**2段階キュレーション**設計です。
 
-Edit `config.py` to add new feeds:
+### 1次分析 — アナリストモード (`ai_client.py`)
+
+AIに**「シニアAIトレンドアナリスト」**のペルソナを定義。各記事に対して：
+
+- タイトル・要約を自然な日本語に翻訳
+- カテゴリ分類（最新技術 / 業務効率化 / 法規制・倫理 等）
+- **So What?** 分析（ビジネスインパクトの解説）
+- 重要度を 1-10 でスコアリング
+
+### 2次キュレーション — 編集長モード (`curate_morning_brief.py`)
+
+AIが**編集長**として、スコアリング済み候補から最終 Top 10 を選定：
+
+- その日のニュースを一本の物語として繋ぐ**テーマ**を生成
+- 編集者目線の**朝刊コメント**を執筆
+- 各記事の**一言要約**と**アクションアイテム**を作成
+- カテゴリの多様性を担保（同一カテゴリ最大3件）
+
+---
+
+## 🔧 カスタマイズ
+
+### RSS ソースの追加
+
+`config.py` を編集してフィードを追加：
 
 ```python
 RSS_FEEDS = [
     "https://example.com/rss",
-    # ... 36 feeds currently configured
+    # 現在 36 フィードを設定済み
 ]
 ```
 
-### Tuning AI Keywords
+### AI キーワードの調整
 
 ```python
 AI_KEYWORDS = [
     "artificial intelligence", "machine learning", "LLM",
     "生成AI", "大規模言語モデル",
-    # ... extensive keyword list
+    # 網羅的なキーワードリスト
 ]
 ```
 
 ---
 
-## 🤝 Contributing
+## 🤝 コントリビューション
 
-Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+バグ報告、新規 RSS ソースの推薦、プロンプト改善提案を歓迎します！
+詳細は [CONTRIBUTING.md](CONTRIBUTING.md) をご覧ください。
 
-**Areas where help is appreciated:**
-- 🌐 New RSS feed sources (especially non-English/non-Japanese)
-- 🧪 Unit tests for parsing and curation logic
-- 🎨 GitHub Pages UI improvements
-- 📊 Analytics dashboard features
+**特に歓迎する貢献：**
+- 🌐 新しい RSS フィードソース（日英以外の言語も）
+- 🧪 パースやキュレーションロジックのユニットテスト
+- 🎨 GitHub Pages の UI 改善
+- 📊 分析ダッシュボード機能
 
 ---
 
-## 📄 License
+## 📄 ライセンス
 
-This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
+MIT License — 詳細は [LICENSE](LICENSE) を参照してください。
 
 ---
 
