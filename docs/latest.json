@@ -1,105 +1,105 @@
 {
   "updated": "2026年03月23日",
-  "theme": "AIは「道具」から「組織のOS」へ",
-  "morning_comment": "実務への浸透が加速。ツール選びから組織設計へ視点を移す時です。",
+  "theme": "実務特化型AIが切り拓く、新たな業務標準",
+  "morning_comment": "AIが実務のパートナーとして、具体的成果を出し始めています。",
   "articles": [
     {
-      "title": "Notion AI大型アップデート：画像生成やSalesforce連携など実務機能が大幅拡充",
-      "category": "業務効率化",
-      "summary": "NotionがAI機能を大幅に強化し、画像生成やSalesforceとのデータ連携、会議メモの自動カスタマイズ機能を追加しました。GPT-5.4等の最新モデルも搭載。40代の中間管理職にとって、部署間の情報共有や報告資料作成の工数を劇的に削減できる可能性があり、組織全体の生産性向上に直結する内容です。",
-      "one_liner": "NotionがAIハブへ進化",
-      "why_important": "外部ツール連携により情報共有が自動化され、管理職の報告業務が激減します。",
-      "action_item": "チームのNotionにAI機能が有効になっているか確認してください。",
-      "source": "Zenn LLM",
-      "url": "https://zenn.dev/picnic/articles/notion-releases"
-    },
-    {
-      "title": "Excel感覚でLLMを実行できるスプレッドシート「SUMIRE-n」がOSS公開",
-      "category": "業務効率化",
-      "summary": "関数（=LLM）を入力するだけで、セルの内容をAIが要約したり分類したりできる新しいスプレッドシートツールが登場しました。プログラミング不要で、ローカル環境のファイルも参照可能です。40代が日常的に行うExcelでの集計業務やテキスト処理を、AIエージェントのように自動化できます。",
-      "one_liner": "Excel作業をLLMで自動化",
-      "why_important": "関数の知識だけで高度なデータ分類が可能になり、集計業務の質が向上します。",
-      "action_item": "手作業で分類している面倒なデータリストを一つ選んでみてください。",
-      "source": "Zenn LLM",
-      "url": "https://zenn.dev/kikyujin/articles/6b10a29d9b216e"
-    },
-    {
-      "title": "AIエージェント活用により45分で仕様書付きアプリ開発が完結する時代へ",
-      "category": "最新技術",
-      "summary": "AIエージェントがソフトウェア開発のライフサイクルを自律的に実行する「Agentic SDLC」の実例として、わずか5行のメモから45分で地震地図アプリが完成。PwCの予測では2027年までに開発現場の主流になるとされています。非エンジニアの40代でも、自ら業務ツールを開発できる「超効率化」の兆しです。",
-      "one_liner": "5行のメモでアプリが完成",
-      "why_important": "現場が自律的にツールを作れるようになり、IT部門への依頼待ちが解消されます。",
-      "action_item": "業務で「これがあったら便利」と思うツールを一つメモしましょう。",
-      "source": "Zenn LLM",
-      "url": "https://zenn.dev/good_relax/articles/d47360b4f45b33"
-    },
-    {
-      "title": "Microsoftの超小型モデル「BitNet」がApple M4で高速動作。機密情報のローカル処理が可能に",
-      "category": "リスク管理",
-      "summary": "Microsoftが開発した1ビットLLM「BitNet b1.58」が、MacBook AirのCPUだけで動作。1.1GBという軽量さで、プライバシーを保護したままオフラインでAIを利用できます。社外秘データを扱う40代のビジネスパーソンにとって、セキュリティリスクなしでAIを活用できる強力な選択肢となります。",
-      "one_liner": "機密情報を守るローカルAI",
-      "why_important": "社外秘データを扱う際、セキュリティリスクを気にせずAIをフル活用できます。",
-      "action_item": "PC上だけで完結するAI処理にどんな業務が適しているか考えてみてください。",
-      "source": "Zenn LLM",
-      "url": "https://zenn.dev/kosukeozawa/articles/bitnet-1bit-llm-apple-m4-benchmark"
-    },
-    {
-      "title": "Claude 4.5とGemini APIの最新料金体系が判明. 従量課金で導入コストが明確に",
+      "title": "「楽天版GPT-4o」Rakuten AI 3.0が公開",
       "category": "日本市場",
-      "summary": "Anthropicの最新モデルClaude 4.5を含むAPI料金が更新されました。初期費用不要の完全従量課金制で、HaikuからSonnetまで用途に応じたコスト選択が可能です。40代の決裁者にとって、自社システムへのAI組み込みや予算計画を立てるための重要な判断材料となります。",
-      "one_liner": "AI導入のコストが明確化",
-      "why_important": "予算計画が立てやすくなり、プロジェクトのROI（投資対効果）を精査できます。",
-      "action_item": "自社のAI活用に月いくらまで予算を割けるか、概算してみてください。",
+      "summary": "楽天が日本語理解でGPT-4oを凌駕するとされる独自モデルを無償公開。Apache 2.0ライセンスで商用利用も可能であり、国内の業務自動化を加速させる可能性があります。",
+      "one_liner": "国産AIがGPT-4o超えを標榜",
+      "why_important": "日本語に特化した強力なAIが無料で利用可能になることで、国内企業のAI導入コストが劇的に下がります。",
+      "action_item": "自社の業務にRakuten AI 3.0が適用可能か試算してみる。",
       "source": "Zenn LLM",
-      "url": "https://zenn.dev/ash_moon_amber/articles/d53dfa7ec559ca"
+      "url": "https://zenn.dev/headwaters/articles/3ca4193f3ab1c4"
     },
     {
-      "title": "AIによる生産性向上は「人員削減」か「製品強化」か。揺れる開発現場のリアル",
-      "category": "法規制・倫理",
-      "summary": "Hacker Newsで、AI導入による爆発的な生産性向上が開発者の雇用に与える影響が議論されています。レガシーコードの修正やビルドツールの管理が劇的に楽になる一方、組織としてどう成果を配分するかが問われています。40代マネージャーは、AI時代のチーム設計と生存戦略の再考を迫られています。",
-      "one_liner": "AIによる余剰時間の活用術",
-      "why_important": "効率化で浮いた時間を「付加価値の創造」に充てるための組織設計が急務です。",
-      "action_item": "業務が半分で終わるとしたら何に時間を使うか、部下と話しましょう。",
-      "source": "Hacker News AI",
-      "url": "https://news.ycombinator.com/item?id=47475859"
-    },
-    {
-      "title": "イーロン・マスク氏、次世代半導体工場「Terafab」発表。AIインフラの宇宙展開も視野",
-      "category": "最新技術",
-      "summary": "マスク氏がテキサスに2nmプロセスを採用した統合型半導体工場を建設すると発表。AIチップ、人型ロボット、自動運転を垂直統合する構想です。将来的には宇宙空間に計算リソースを配置。世界的なAIインフラ競争の激化は、日本企業のサプライチェーンや投資環境にも長期的かつ甚大な影響を及ぼします。",
-      "one_liner": "AIインフラの垂直統合加速",
-      "why_important": "基盤インフラの変革は、長期的には全ての業界のコスト構造に影響します。",
-      "action_item": "AIインフラへの投資が自社のサプライチェーンにどう影響するか検討してください。",
-      "source": "ITmedia AI+",
-      "url": "https://www.itmedia.co.jp/news/articles/2603/23/news053.html"
-    },
-    {
-      "title": "新作ゲーム『Crimson Desert』、AI生成素材の使用で開発元が謝罪。企業倫理の境界線",
+      "title": "AIが10代の凶悪犯罪に加担、衝撃の調査結果",
       "category": "リスク管理",
-      "summary": "人気ゲームの開発においてAI生成アートが混入し、開発元が「本来は置き換える予定だった」と謝罪。著作権や倫理的な議論が再燃しています。40代の責任あるビジネスパーソンにとって、自社の制作物におけるAI利用の透明性と、ブランド毀損リスクをどう防ぐかの教訓となる事例です。",
-      "one_liner": "AI利用の透明性がブランドを守る",
-      "why_important": "透明性の欠如は信頼失墜を招くため、企業の倫理規定の整備が不可欠です。",
-      "action_item": "自社での生成AI利用に関する現行のルールを再確認してください。",
-      "source": "The Verge AI",
-      "url": "https://www.theverge.com/games/898771/crimson-desert-dev-apologizes-ai-art"
+      "summary": "カナダの銃乱射事件で容疑者がChatGPTを計画立案に利用。生成AIが悪用されるリスクが浮き彫りになり、倫理的制限の回避手法が社会問題化しています。",
+      "one_liner": "生成AI悪用による犯罪計画が発覚",
+      "why_important": "AIの負の側面が顕在化しており、企業利用においても倫理ガイドラインの再点検が急務です。",
+      "action_item": "社内のAI利用規定に不適切な利用の具体例を追記する。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/aiplus/articles/2603/23/news036.html"
     },
     {
-      "title": "「エディタ（Cursor）」と「モデル（Claude）」の混同に注意。AIツール選定の基礎知識",
-      "category": "ライフスタイル",
-      "summary": "エンジニアの間で必須ツールとなりつつある「Cursor」と「Claude」の違いを整理した記事。CursorはAI搭載の作業場（エディタ）であり、Claudeはその中で動く頭脳（モデル）です。ツール選定の際に、この構造を理解していないと誤った投資判断や指示出しをしてしまう可能性があります。",
-      "one_liner": "道具と頭脳を正しく区別",
-      "why_important": "仕組みを正しく理解することで、部下への指示やツール選定のミスを防げます。",
-      "action_item": "今使っているAIサービスが「モデル」か「インターフェース」か調べましょう。",
-      "source": "Zenn LLM",
-      "url": "https://zenn.dev/karamage/articles/f6d3ace485fdd0"
+      "title": "鳥貴族社長のAIアバターが秘伝のノウハウを伝授",
+      "category": "日本市場",
+      "summary": "鳥貴族が創業者の知識を学習したAIアバターを発表。店長教育や顧客提案に活用し、経営層の暗黙知を現場に展開するDX戦略のモデルケースとなります。",
+      "one_liner": "社長の暗黙知をAIアバター化",
+      "why_important": "ベテランのノウハウをAI化して現場に展開する手法は、属人化を防ぐ強力な武器になります。",
+      "action_item": "現場に伝えたい独自のコツを3つ書き出してみる。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/articles/2603/23/news060.html"
     },
     {
-      "title": "VS CodeチームがAIエージェント活用で「週次リリース」を実現。組織の高速化術",
+      "title": "経産省、2040年に売上40兆円を目指すAI戦略を策定",
+      "category": "日本市場",
+      "summary": "経済産業省がAI・半導体・ロボットの三位一体戦略を発表。2040年までに40兆円の売上目標を掲げ、政府主導の投資や支援策を強化します。",
+      "one_liner": "2040年にAI売上40兆円へ",
+      "why_important": "国策としての巨額投資が続くため、補助金や公募事業に注目することでビジネスチャンスが広がります。",
+      "action_item": "経産省の最新のIT関連補助金情報をチェックする。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2603/23/news024.html"
+    },
+    {
+      "title": "AI生成文から「AIくささ」を取り除く新技術",
       "category": "業務効率化",
-      "summary": "世界で最も使われている開発ツールVS Codeのチームが、AIエージェントを導入して開発サイクルを月次から週次に短縮。エージェントにテストやコードレビューの一部を任せることで、品質を落とさず速度を向上させました。これはシステム開発に限らず、あらゆる「ルーチン業務」を持つ組織に応用可能な手法です。",
-      "one_liner": "AIエージェントで組織が高速化",
-      "why_important": "承認やテストの自動化により、組織全体の意思決定スピードが劇的に向上します。",
-      "action_item": "自チームのワークフローで自動化できそうな「待ち時間」を探してください。",
+      "summary": "AI特有の不自然なパターンを特定し、人間らしい文章へ修正する技術が注目されています。ビジネスメールやレポートの質を向上させる実用的な手法です。",
+      "one_liner": "AI特有の不自然な文章を自動修正",
+      "why_important": "相手に違和感を与えないAI活用は、信頼を損なわないビジネスコミュニケーションの鍵です。",
+      "action_item": "AI生成後の文章で多用しがちな表現を洗い出す。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/zenny8/articles/2026032222-aiaiclaude-code"
+    },
+    {
+      "title": "独自知見をAIに組み込む「つながる知識」の構築",
+      "category": "業務効率化",
+      "summary": "汎用AIに自分だけのナレッジを注入し、実務で使えるパートナーにする手法が公開。過去の知見を横断的に検索・再利用し、ノウハウの喪失を防ぎます。",
+      "one_liner": "個人の知見をAIに注入し再利用",
+      "why_important": "自分の過去のアウトプットをAIに学習させることで、精度の高い思考の壁打ち相手を構築できます。",
+      "action_item": "自分の過去の企画書やメモを1つのフォルダに集約する。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/acntechjp/articles/e58f4a2a7bcebd"
+    },
+    {
+      "title": "32GB GPUで実現する「ローカルAI」の自由度",
+      "category": "リスク管理",
+      "summary": "クラウドAIの機密流出リスクを避け、PC内でAIを動かすローカル環境が提案されています。プライバシーを重視する専門職にとって高いコスト効率を誇ります。",
+      "one_liner": "機密を守るローカルAIの台頭",
+      "why_important": "外部にデータを投げられない機密性の高い業務には、ローカル環境でのAI実行が最適解となります。",
+      "action_item": "自身のPCスペックがAI実行に耐えうるか確認する。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/03/amd-radeon-ai-pro-r9700.html"
+    },
+    {
+      "title": "2D図面をAIエージェントが即座に3D化",
+      "category": "業務効率化",
+      "summary": "製造業向けWebアプリDrawing Agentが登場。AIが2D図面から寸法を読み取り3Dモデルを自動生成し、設計業務を劇的に効率化します。",
+      "one_liner": "2D図面をAIが瞬時に3D化",
+      "why_important": "専門スキルが必要だった工程をAIが代替し、製造現場のリードタイムを大幅に短縮します。",
+      "action_item": "設計フローの中で単純な変換作業がないか棚卸しする。",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2603/23/news021.html"
+    },
+    {
+      "title": "「AIは人間の能力を拡張せず、代替する」という分析",
+      "category": "最新技術",
+      "summary": "AIが道具として能力を広げるのではなく、特定の能力そのものを代替しているという構造を分析。人間が担うべき役割の再定義を迫る内容です。",
+      "one_liner": "AIは拡張ではなく代替である",
+      "why_important": "AIに任せる領域と、人間が担うべき創造的領域を明確に分ける意識が必要です。",
+      "action_item": "AIには絶対にできない自分の付加価値を定義する。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/cognitiveosmdl/articles/b3674728fe4da6"
+    },
+    {
+      "title": "VS CodeチームがAIエージェントで実現した週次開発",
+      "category": "業務効率化",
+      "summary": "MicrosoftのVS Code開発チームが、AIエージェントを活用してリリースサイクルを高速化。テストやタスク管理にエージェントを組み込み生産性を向上させました。",
+      "one_liner": "AIエージェントで開発速度を向上",
+      "why_important": "開発だけでなく、あらゆるプロジェクト管理においてAIエージェントによる自動化が応用可能です。",
+      "action_item": "チーム内の定型タスクをAIに任せる計画を練る。",
       "source": "ITmedia AI+",
       "url": "https://atmarkit.itmedia.co.jp/ait/articles/2603/23/news022.html"
     }
