@@ -1,6 +1,5 @@
 
 import os
-import sys
 from datetime import datetime
 from xhtml2pdf import pisa
 

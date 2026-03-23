@@ -2,7 +2,6 @@ import os
 import asyncio
 import edge_tts
 from moviepy import ColorClip, TextClip, CompositeVideoClip, AudioFileClip
-from datetime import datetime
 
 # Font settings (try to use a standard Windows font to avoid ImageMagick issues if possible, 
 # though TextClip usually requires ImageMagick. If it fails, we fallback or user needs to install it.)

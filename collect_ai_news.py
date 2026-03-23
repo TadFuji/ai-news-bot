@@ -1,7 +1,9 @@
+import concurrent.futures
 import os
 import json
 import time
 import datetime
+import threading
 import requests
 import re
 
@@ -116,8 +118,7 @@ def get_ai_news(tool_name, accounts):
         return f"Exception: {str(e)}"
 
 
-import concurrent.futures
-import threading
+
 
 # Circuit Breaker Globals
 FAILURE_COUNTER = 0

@@ -7,7 +7,6 @@ import time
 from datetime import datetime
 import subprocess
 import traceback
-from dotenv import load_dotenv
 
 from config import PROJECT_ROOT as BOT_DIR, NEWS_BOT_OUTPUT_DIR
 
@@ -113,7 +112,7 @@ with st.sidebar:
                     st.code(f"{result.stderr}\n{result.stdout}")
                     st.stop()
                 
-                log_output = f"✅ ニュース収集完了 (Gemini Top 10)\n" + result.stdout[-500:] 
+                log_output = "✅ ニュース収集完了 (Gemini Top 10)\n" + result.stdout[-500:] 
                 
                 # 2. Site Generation (build_pages.py) & Git Sync
                 # Note: build_pages.py currently expects MD files in 'output/'
@@ -317,13 +316,13 @@ https://lin.ee/gTGnitS (LINE公式アカウント)
 latest_file, articles = load_latest_news()
 
 if not articles:
-    st.error(f"ニュースデータが見つかりません。")
+    st.error("ニュースデータが見つかりません。")
     if st.button("今すぐデータを生成する (Run Agent)"):
         os.system(f'python "{os.path.join(BOT_DIR, "collect_rss_gemini.py")}"')
         st.rerun()
 
 else:
-    st.success(f"✅ 最新データを読み込みました")
+    st.success("✅ 最新データを読み込みました")
     
     # 7 Tabs
     tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
@@ -449,7 +448,7 @@ else:
                              
                              st.success(f"✅ Generated & Deployed: {pdf_filename}")
                              st.info(f"📂 Saved to Public Drive: {public_path}")
-                             st.success(f"🔗 Fixed Link Updated: Antigravity_Latest_Report.pdf")
+                             st.success("🔗 Fixed Link Updated: Antigravity_Latest_Report.pdf")
                              st.caption("💡 User Strategy: Share the link to 'Antigravity_Latest_Report.pdf'. It always updates to the newest content!")
                          else:
                              st.error("Failed to generate PDF.")
@@ -483,7 +482,7 @@ TOPIC:
                  with st.spinner("🤖 Posting via X API..."):
                     try:
                         # Promotional strategy: Link to LINE in reply
-                        promo_reply = f"【受取リンク】\nこちらのLINEで「レポート」と送ると、このPDFが自動で届きます！\n(友だち追加して待っててね)\n👇\nhttps://lin.ee/gTGnitS"
+                        promo_reply = "【受取リンク】\nこちらのLINEで「レポート」と送ると、このPDFが自動で届きます！\n(友だち追加して待っててね)\n👇\nhttps://lin.ee/gTGnitS"
                         success, result = post_update(promo_text, reply_text=promo_reply)
                         if success:
                             st.success(f"✅ Posted promotion thread! Tweet ID: {result}")

@@ -74,7 +74,7 @@ def main():
     print("\n💾 記事をデータベースに保存中...")
     saved, skipped = save_articles(conn, db_type, articles)
 
-    print(f"\n📊 保存結果:")
+    print("\n📊 保存結果:")
     print(f"   保存成功: {saved} 件")
     print(f"   スキップ（重複）: {skipped} 件")
 

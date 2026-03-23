@@ -1,5 +1,4 @@
 
-import os
 from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 
@@ -49,7 +48,6 @@ def create_infographic(title, summary, date_str=None, output_path="infographic.p
     # Simple wrap logic
     def draw_text_wrapped(text, font, max_width):
         lines = []
-        words = text
         # Japanese doesn't separate by space naturally, so char by char check or simple splitting
         # For simplicity in JP, we just slice.
         current_line = ""

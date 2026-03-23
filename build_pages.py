@@ -7,7 +7,6 @@ output/ 内の Markdown ファイルを解析し、
 GitHub Pages 用の JSON データを生成します。
 """
 
-import os
 import re
 import json
 import shutil
