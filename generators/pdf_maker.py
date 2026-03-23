@@ -53,7 +53,7 @@ def create_pdf_report(articles, output_path="report.pdf"):
                     margin: 2cm;
                 }}
                 body {{
-                    font_family: "{font_family}";
+                    font-family: "{font_family}";
                     font-size: 10pt;
                     line-height: 1.6;
                     color: #333;

@@ -86,6 +86,19 @@ def build_pages():
             continue
 
         try:
+            # 差分ビルド: 出力が既に存在し、ソースより新しければスキップ
+            date_json_out = docs_dir / f"{year}-{month}-{day}.json"
+            if date_json_out.exists() and date_json_out.stat().st_mtime >= json_file.stat().st_mtime:
+                # アーカイブ一覧には追加（スキップしても一覧に出す必要がある）
+                archives.append({
+                    "date": date_str,
+                    "path": f"{year}-{month}-{day}.json",
+                    "count": -1,  # カウント不明（再読み込みしない）
+                })
+                processed_dates.add(file_date)
+                print(f"⏭️  {json_file.name} → 変更なし（スキップ）")
+                continue
+
             data = json.loads(json_file.read_text(encoding="utf-8"))
             articles = data.get("articles", [])
             if not articles:

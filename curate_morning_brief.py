@@ -14,15 +14,15 @@ import sys
 import time
 import datetime
 from google import genai
+from google.genai import types
 from dotenv import load_dotenv
-from config import NEWS_BOT_OUTPUT_DIR
+from config import NEWS_BOT_OUTPUT_DIR, JST, GEMINI_MODEL
 
 load_dotenv()
 
 
 def load_candidates():
     """本日の候補JSONをすべて読み込み、記事を統合・重複排除する"""
-    JST = datetime.timezone(datetime.timedelta(hours=9))
     today_str = datetime.datetime.now(JST).strftime("%Y%m%d")
 
     # candidates_YYYYMMDD_*.json と ai_news_YYYYMMDD_*.json の両方を読む
@@ -65,7 +65,6 @@ def load_candidates():
 def get_delivered_urls(days=3):
     """過去N日間の morning_brief_*.json から配信済みURLを取得"""
     delivered = set()
-    JST = datetime.timezone(datetime.timedelta(hours=9))
     today = datetime.datetime.now(JST)
 
     for i in range(1, days + 1):
@@ -142,31 +141,16 @@ URL: {url}
 ## Step 3: 各記事の付加価値を追加
 各記事に対して以下を日本語で追記してください：
 - **one_liner**: ニュースの核心を20文字以内で表現（例: 'AI議事録が全社標準へ'）
-- **why_important**: 40代ビジネスパーソンが明日の仕事で意識すべきこと（1-2文）
+- **why_important**: ビジネスパーソンが明日の仕事で意識すべきこと（1-2文）
 - **action_item**: 読者が今日すぐできる具体的な1つの行動（例: '社内の定型業務リストを作ってみてください'）
 
 ## Step 4: 今朝の一言
 読者が最初に読む「編集長コメント」を40文字以内で作成してください。
 トーンは、信頼感のある落ち着いた口調で。例:「エージェント技術、ついに"使える段階"へ」
 
-# Output Format (JSON only)
-{{
-  "theme": "今日のテーマ（20文字以内）",
-  "morning_comment": "今朝の一言（40文字以内）",
-  "articles": [
-    {{
-      "title_ja": "日本語タイトル",
-      "summary_ja": "日本語要約",
-      "one_liner": "ニュースの核心を20文字以内で（例: 'AI議事録が全社標準へ'）",
-      "why_important": "なぜ重要か（40代ビジネスパーソン向け, 1-2文）",
-      "action_item": "読者が今日すぐできる1つの行動（例: '社内の定型業務リストを作ってみてください'）",
-      "category": "カテゴリ",
-      "importance_score": 1-10,
-      "source": "ソース名",
-      "url": "URL"
-    }}
-  ]
-}}
+## 出力ルール（厳守）
+- 出力テキストに**特定の年齢層（「40代」「30代」等）を絶対に記載しないでください**。読者層を限定する表現は不要です。
+- 「ビジネスパーソン」「エンジニア」「管理職」など役割ベースの表現は許可します。
 
 ---
 候補記事リスト:
@@ -176,7 +160,53 @@ URL: {url}
 重要: JSON のみを出力してください。マークダウンのコードブロックなどは不要です。
 """
 
+    # Gemini 構造化出力用のスキーマ定義
+    curated_article_schema = types.Schema(
+        type=types.Type.OBJECT,
+        properties={
+            "title_ja": types.Schema(type=types.Type.STRING, description="日本語タイトル"),
+            "summary_ja": types.Schema(type=types.Type.STRING, description="日本語要約"),
+            "one_liner": types.Schema(
+                type=types.Type.STRING,
+                description="ニュースの核心を20文字以内で（例: 'AI議事録が全社標準へ'）",
+            ),
+            "why_important": types.Schema(
+                type=types.Type.STRING,
+                description="なぜ重要か（ビジネスパーソン向け, 1-2文）",
+            ),
+            "action_item": types.Schema(
+                type=types.Type.STRING,
+                description="読者が今日すぐできる1つの行動",
+            ),
+            "category": types.Schema(type=types.Type.STRING, description="カテゴリ"),
+            "importance_score": types.Schema(type=types.Type.INTEGER, description="重要度 1-10"),
+            "source": types.Schema(type=types.Type.STRING, description="ソース名"),
+            "url": types.Schema(type=types.Type.STRING, description="URL"),
+        },
+        required=[
+            "title_ja", "summary_ja", "one_liner", "why_important",
+            "action_item", "category", "importance_score", "source", "url",
+        ],
+    )
+
+    response_schema = types.Schema(
+        type=types.Type.OBJECT,
+        properties={
+            "theme": types.Schema(type=types.Type.STRING, description="今日のテーマ（20文字以内）"),
+            "morning_comment": types.Schema(
+                type=types.Type.STRING,
+                description="今朝の一言（40文字以内）",
+            ),
+            "articles": types.Schema(
+                type=types.Type.ARRAY,
+                items=curated_article_schema,
+            ),
+        },
+        required=["theme", "morning_comment", "articles"],
+    )
+
     print("🧠 Gemini 2次キュレーション実行中...")
+    start = time.time()
     max_retries = 2
     last_error = None
 
@@ -188,23 +218,19 @@ URL: {url}
                 time.sleep(wait_sec)
 
             response = client.models.generate_content(
-                model="gemini-3-flash-preview",
+                model=GEMINI_MODEL,
                 contents=prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    response_schema=response_schema,
+                ),
             )
             response_text = response.text.strip()
-
-            # コードブロック除去
-            if response_text.startswith("```"):
-                lines = response_text.split("\n")
-                if lines[0].startswith("```"):
-                    lines = lines[1:]
-                if lines[-1].startswith("```"):
-                    lines = lines[:-1]
-                response_text = "\n".join(lines)
-
             result = json.loads(response_text)
+
             curated_articles = result.get("articles", [])
-            print(f"✅ 2次キュレーション完了")
+            elapsed = time.time() - start
+            print(f"✅ 2次キュレーション完了（{elapsed:.1f}秒）")
             print(f"   テーマ: {result.get('theme', '—')}")
             print(f"   一言: {result.get('morning_comment', '—')}")
             print(f"   Gemini 選定: {len(curated_articles)} 件")
@@ -238,17 +264,16 @@ URL: {url}
             print(f"   ⚠️ Attempt {attempt + 1} failed: {e}")
             # INVALID_ARGUMENT (API key issue) はリトライしても無駄
             if "INVALID_ARGUMENT" in str(e) or "API Key" in str(e):
-                print(f"   🛑 APIキーエラーのためリトライ中止")
+                print("   🛑 APIキーエラーのためリトライ中止")
                 break
 
     # 全リトライ失敗時のフォールバック
-    print(f"❌ Gemini 2次キュレーション失敗（全{max_retries + 1}回）: {last_error}")
+    elapsed = time.time() - start
+    print(f"❌ Gemini 2次キュレーション失敗（全{max_retries + 1}回, {elapsed:.1f}秒）: {last_error}")
     # フォールバック: 1次スコア上位10件を使用（翻訳済みフィールドを優先）
     fallback_articles = sorted(
         candidates, key=lambda x: x.get("importance_score", 0), reverse=True
     )[:10]
-    # title_ja / summary_ja が存在する場合は title / summary に転写して
-    # build_pages.py での出力が日本語になるようにする
     for a in fallback_articles:
         if a.get("title_ja"):
             a["title"] = a["title_ja"]
@@ -258,14 +283,13 @@ URL: {url}
         "theme": "本日のAI注目ニュース",
         "morning_comment": "本日の重要ニュースをお届けします",
         "articles": fallback_articles,
-        "_fallback": True,  # フォールバック発動フラグ
+        "_fallback": True,
     }
 
 
 def save_morning_brief(brief):
     """Morning Brief を JSON と Markdown の両形式で保存"""
-    jst = datetime.timezone(datetime.timedelta(hours=9))
-    now_jst = datetime.datetime.now(jst)
+    now_jst = datetime.datetime.now(JST)
     today_str = now_jst.strftime("%Y%m%d")
     updated_str = now_jst.strftime("%Y年%m月%d日 %H:%M")
 
@@ -273,7 +297,6 @@ def save_morning_brief(brief):
     json_filename = f"morning_brief_{today_str}.json"
     json_filepath = os.path.join(NEWS_BOT_OUTPUT_DIR, json_filename)
 
-    # distribute_daily.py の get_latest_report() が { "articles": [...] } を期待
     output_data = {
         "theme": brief.get("theme", ""),
         "morning_comment": brief.get("morning_comment", ""),
@@ -290,7 +313,7 @@ def save_morning_brief(brief):
 
     articles = brief.get("articles", [])
     with open(md_filepath, "w", encoding="utf-8") as f:
-        f.write(f"# ☀️ Antigravity Morning Brief\n\n")
+        f.write("# ☀️ Antigravity Morning Brief\n\n")
         f.write(f"**{updated_str} (JST)**\n\n")
         f.write(f"## 🎯 今日のテーマ: {brief.get('theme', '')}\n\n")
         f.write(f"> {brief.get('morning_comment', '')}\n\n")
@@ -324,6 +347,7 @@ def save_morning_brief(brief):
 
 
 def main():
+    pipeline_start = time.time()
     print("=" * 50)
     print("☀️ Morning Brief — Stage 2 キュレーション開始")
     print("=" * 50)
@@ -334,7 +358,6 @@ def main():
     stage1_count = len(candidates_stage1)
 
     # 2. 新鮮なRSS収集（03:00〜07:00 JST のギャップを埋める）
-    #    米西海岸の午後 = 日本の早朝 → AIニュースの最も活発な時間帯
     print("\n📡 最新RSS収集中（03:00以降の新着をキャッチ）...")
     try:
         import collect_rss_gemini
@@ -355,7 +378,7 @@ def main():
     print(f"   07:00 追加収集分: {max(0, new_count)} 件")
     print(f"   合計候補: {len(candidates)} 件")
 
-    # 3.5. 過去3日間の配信済みURLを除外（同じニュースの繰り返し防止）
+    # 3.5. 過去3日間の配信済みURLを除外
     print("\n🔒 過去3日間の重複チェック中...")
     delivered_urls = get_delivered_urls(days=3)
     if delivered_urls:
@@ -384,7 +407,7 @@ def main():
 
     # 5. 保存
     print("\n💾 Morning Brief を保存中...")
-    json_path = save_morning_brief(brief)
+    save_morning_brief(brief)
 
     # 6. 配信（失敗してもサイト更新は継続）
     print("\n📤 配信開始...")
@@ -420,13 +443,15 @@ def main():
         except Exception as e:
             print(f"  ⚠️ LINE 障害通知の送信失敗: {e}")
 
-        print("\n" + "=" * 50)
-        print("⚠️ Morning Brief 配信完了（品質低下モード）")
+        pipeline_elapsed = time.time() - pipeline_start
+        print(f"\n{'=' * 50}")
+        print(f"⚠️ Morning Brief 配信完了（品質低下モード）— 合計 {pipeline_elapsed:.1f}秒")
         print("=" * 50)
-        sys.exit(1)  # GitHub Actions を失敗ステータスにする
+        sys.exit(1)
 
-    print("\n" + "=" * 50)
-    print("✅ Morning Brief 配信完了！")
+    pipeline_elapsed = time.time() - pipeline_start
+    print(f"\n{'=' * 50}")
+    print(f"✅ Morning Brief 配信完了！ — 合計 {pipeline_elapsed:.1f}秒")
     print("=" * 50)
 
 

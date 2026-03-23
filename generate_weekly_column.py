@@ -10,15 +10,13 @@ Weekly AI Column Generator
 import os
 import json
 import glob
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 from google import genai
 from dotenv import load_dotenv
 from line_notifier import send_to_line
+from config import JST
 
 load_dotenv()
-
-# JSTタイムゾーン定義
-JST = timezone(timedelta(hours=9))
 
 # docsディレクトリ（GitHub Pages用、Git管理対象）
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -55,7 +53,7 @@ def get_weekly_highlights():
                         weekly_items.extend(data["articles"])
                     elif isinstance(data, list):
                         weekly_items.extend(data)
-        except Exception as e:
+        except Exception:
             # パターンに合わないファイルはスキップ
             continue
             

@@ -76,18 +76,11 @@ def load_latest_news():
 
 # Sidebar
 with st.sidebar:
-    # --- Sidebar ---
     with st.expander("🔧 Advanced Settings"):
          if st.button("🔄 データを再読み込み (Cache Clear)"):
              st.cache_data.clear()
              st.rerun()
-         
-    # ... (existing manual update code) ...
-    
-    # ... (inside tabs) ...
-    
 
-        
     st.markdown("---")
     st.write("▼ ニュースを新しく取得")
     with st.expander("⚙️ オプション設定", expanded=True):
@@ -140,7 +133,6 @@ with st.sidebar:
             except Exception as e:
                 st.error(f"実行エラー: {e}")
     
-    st.markdown("---")
     st.markdown("---")
     st.caption("トラブルシューティング")
     

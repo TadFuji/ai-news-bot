@@ -1,5 +1,12 @@
+import logging
 import os
 from datetime import timedelta, timezone
+
+# JST タイムゾーン（プロジェクト全体で共有）
+JST = timezone(timedelta(hours=9))
+
+# Gemini モデル名（全ファイルで共有 — モデル切替時はここを変更）
+GEMINI_MODEL = "gemini-3-flash-preview"
 
 # ===========================
 # 設定
@@ -228,5 +235,58 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # 出力ファイルパス
 NEWS_BOT_OUTPUT_DIR = os.path.join(PROJECT_ROOT, "output")
 
-# JSTタイムゾーン定義
-JST = timezone(timedelta(hours=9))
+
+# ===========================
+# RSS フィード外部ファイル読み込み（L8: 動的管理）
+# ===========================
+# feeds.json が存在する場合、RSS_FEEDS をオーバーライドする
+# feeds.json がなければ上記のハードコード済みリストを使用
+
+def _load_external_feeds():
+    """feeds.json が存在すればロードし RSS_FEEDS を差し替える"""
+    feeds_path = os.path.join(PROJECT_ROOT, "feeds.json")
+    if os.path.exists(feeds_path):
+        try:
+            import json
+            with open(feeds_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            feeds = data if isinstance(data, list) else data.get("feeds", [])
+            if feeds:
+                return feeds
+        except Exception:
+            pass  # 読み込み失敗時はデフォルトを使用
+    return None
+
+
+_external = _load_external_feeds()
+if _external is not None:
+    RSS_FEEDS = _external
+
+
+# ===========================
+# Logging ヘルパー（L6: ログレベル導入）
+# ===========================
+
+def get_logger(name: str) -> logging.Logger:
+    """プロジェクト共通のロガーを取得する
+
+    Usage:
+        from config import get_logger
+        logger = get_logger(__name__)
+        logger.info("Processing started")
+        logger.warning("Feed returned 0 articles")
+    """
+    logger = logging.getLogger(name)
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter(
+            "%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+            datefmt="%H:%M:%S",
+        )
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        # デフォルトは INFO、環境変数で変更可能
+        level = os.environ.get("LOG_LEVEL", "INFO").upper()
+        logger.setLevel(getattr(logging, level, logging.INFO))
+    return logger
+
