@@ -1,0 +1,24 @@
+# CI パイプライン用 依存関係（軽量版）
+# Stage 1 / Stage 2 で必要な最小限のパッケージのみ
+# xhtml2pdf, moviepy, streamlit など重いパッケージは除外
+
+# RSSフィード解析
+feedparser>=6.0.0
+
+# Google Gemini API
+google-genai>=0.3.0
+
+# 日時解析
+python-dateutil>=2.8.0
+
+# 環境変数管理
+python-dotenv>=1.0.0
+
+# LINE Messaging API
+line-bot-sdk>=3.0.0
+
+# X (Twitter) API
+tweepy
+
+# HTTP リクエスト
+requests>=2.31.0
