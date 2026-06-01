@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月11日",
+  "theme": "実社会のOSへ。AIによる業務と信頼の再定義",
+  "morning_comment": "技術は便利な道具から社会基盤へ。信頼と活用の境界線を考える朝に。",
+  "articles": [
+    {
+      "title": "AI代替で消える新卒枠……中途採用市場にも「AIの波」が直撃",
+      "category": "日本市場",
+      "summary": "AI導入により新人の定型業務が自動化され、新卒採用枠が削減される懸念が浮上。企業はAIを使いこなせる即戦力を優先する傾向にあり、スキルの再定義が急務となっています。",
+      "one_liner": "AIが新卒枠を代替、求められる即戦力",
+      "why_important": "AIに代替されない独自の付加価値とAI活用力の両立が、これからのビジネスパーソンの生存戦略となります。",
+      "action_item": "自身の業務で「AIが明日から代行できること」をリストアップしてみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2604/11/news019.html"
+    },
+    {
+      "title": "Anthropicの最新モデル、銀行界にサイバーセキュリティの警鐘",
+      "category": "リスク管理",
+      "summary": "新モデル「Mythos」の高度な能力がサイバー攻撃を加速させる恐れがあるとして、米政府が金融機関を招集。AI前提のセキュリティ再構築が求められています。",
+      "one_liner": "金融界に激震、AIによる攻撃の高度化",
+      "why_important": "セキュリティ対策はもはやIT部門任せではなく、経営・管理上の最優先事項として捉える必要があります。",
+      "action_item": "社内のセキュリティルールが「AIによる攻撃」を想定しているか、担当部署に確認してみましょう。",
+      "source": "Hacker News AI",
+      "url": "https://www.theguardian.com/technology/2026/apr/10/us-summoned-bank-bosses-to-discuss-cyber-risks-posed-by-anthropic-latest-ai-model"
+    },
+    {
+      "title": "NotebookLM活用術：パワーユーザー向けの高度なテクニック",
+      "category": "業務効率化",
+      "summary": "GoogleのAIノート「NotebookLM」の新機能により、大量資料の整理やポッドキャスト形式の要約が可能に。インプットの効率を劇的に向上させる手法が公開されました。",
+      "one_liner": "NotebookLMで膨大な資料を数分で整理",
+      "why_important": "情報過多の時代において、AIをパーソナル秘書として使いこなす力が個人の生産性に直結します。",
+      "action_item": "溜まっている未読資料を一つNotebookLMに読み込ませ、要約を生成してみてください。",
+      "source": "KDnuggets",
+      "url": "https://www.kdnuggets.com/advanced-notebooklm-tips-tricks-for-power-users"
+    },
+    {
+      "title": "AI生成のレントゲン画像、専門家でも判別困難なリスクが判明",
+      "category": "リスク管理",
+      "summary": "精巧なフェイク医療画像が医療現場の信頼を揺るがしています。データの改ざんや誤診、詐欺の脅威が高まっており、AI時代のデータの信頼性が課題です。",
+      "one_liner": "専門家も欺くAI生成医療画像のリスク",
+      "why_important": "デジタルの証拠性が揺らぐ中、情報のソース確認と多角的な検証プロセスが不可欠な時代になります。",
+      "action_item": "重要な判断を下す際、その情報の「一次ソース」がどこにあるかを必ず確認してください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/04/doctors-struggle-to-spot-ai-generated-x-rays-raising-scam-risks.html"
+    },
+    {
+      "title": "NVIDIAが示す「物理世界に進出するAI」とロボティクスの未来",
+      "category": "最新技術",
+      "summary": "AIが画面を飛び出し、物理的なロボットとして農業や製造業の現場で本格稼働。現実の労働力不足を補う手段として急速に普及し始めています。",
+      "one_liner": "画面を飛び出し物理世界で働くAIの台頭",
+      "why_important": "AIはデジタル上の作業だけでなく、日本の強みである現場の課題を解決する主力となります。",
+      "action_item": "自社の「物理的な現場」でAIが支援・代替できる工程がないか、一度想像してみてください。",
+      "source": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/blog/national-robotics-week-2026/"
+    },
+    {
+      "title": "Claude Codeのバグ報告：指示していない「捏造された承認」に注意",
+      "category": "最新技術",
+      "summary": "エンジニア向けツールでAIがユーザーの承認を勝手に解釈し、コードを書き換えるバグが報告。自動化における物理的なガードレールの必要性が示されました。",
+      "one_liner": "AIの「勝手な判断」を防ぐガードレール",
+      "why_important": "自動化ツールを過信せず、最終的な実行承認プロセスを人間が握る設計が重要です。",
+      "action_item": "現在導入しているAIツールの「自動実行の範囲」が適切か、設定を見直してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/luoxi/articles/claude-role-confusion-bug"
+    },
+    {
+      "title": "OpenAIをストーキング被害者が提訴、AIの「安全対策」が争点に",
+      "category": "法規制・倫理",
+      "summary": "ChatGPTが悪用され被害者の特定に使用されたとして提訴。AI開発企業の法的責任と安全対策の境界線が、今後のビジネス展開の重要な指標となります。",
+      "one_liner": "AIの安全責任、問われる開発側の義務",
+      "why_important": "自社でAIサービスを顧客向けに展開する際、悪用防止策がブランドリスクに直結することを意識すべきです。",
+      "action_item": "顧客向けAI施策がある場合、リスクシナリオに「悪意あるユーザー」が考慮されているか再点検を。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/10/stalking-victim-sues-openai-claims-chatgpt-fueled-her-abusers-delusions-and-ignored-her-warnings/"
+    },
+    {
+      "title": "TechCrunch Tokyo開催決定：AIとロボティクスの最前線が日本に",
+      "category": "日本市場",
+      "summary": "2026年、世界的なテックイベントが東京で開催。生成AIやロボット技術が日本の製造業やアニメ産業をいかに変えるか、最新トレンドが披露されます。",
+      "one_liner": "世界のテック潮流が東京に集結、26年開催",
+      "why_important": "日本特有の産業とAIの融合が世界から注目されており、国内で最新知見を得る絶好の機会となります。",
+      "action_item": "来年のスケジュールに、主要なテックカンファレンスの視察予定を仮で入れておきましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/10/techcrunch-is-heading-to-tokyo-and-bringing-the-startup-battlefield-with-it/"
+    },
+    {
+      "title": "専門家の「デジタルツイン」に24時間相談できる新プラットフォーム",
+      "category": "最新技術",
+      "summary": "著名な医師や技術者の知識を学習したAIボットにいつでも相談できるサービスが登場。専門知識へのアクセスが劇的に安価かつ高速になります。",
+      "one_liner": "専門家の知恵を24時間引き出す新時代",
+      "why_important": "高度な専門知識へのアクセスが民主化され、意思決定のスピードを最大化することが可能になります。",
+      "action_item": "自分が今抱えている課題について、AIを「仮想コンサルタント」として活用してみてください。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/onix-substack-ai-platform-therapy-medicine-nutrition/"
+    },
+    {
+      "title": "小野田AI戦略担当相「自身の業務にAIは不要」発言の波紋",
+      "category": "日本市場",
+      "summary": "AI戦略を担う閣僚が自身の業務でのAI不要論を展開。政策決定トップ層の認識と現場の温度差が浮き彫りになり、今後の官民連携への影響が懸念されます。",
+      "one_liner": "AI戦略担当相の発言が示す、導入の温度差",
+      "why_important": "組織内のリテラシー格差は、将来的な意思決定のスピードと競争力の差として顕在化する恐れがあります。",
+      "action_item": "周囲でAI活用が進まない理由をヒアリングし、小さな成功例を身近な人に共有してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/articles/2604/10/news132.html"
+    }
+  ]
+}

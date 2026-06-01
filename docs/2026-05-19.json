@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月19日",
+  "theme": "AIエージェントの自律と実装が加速",
+  "morning_comment": "AIエージェント、ついに実戦投入の段階へ。",
+  "articles": [
+    {
+      "title": "福岡銀行、AI導入で年間7000時間の業務削減へ",
+      "category": "日本市場",
+      "summary": "福岡銀行がLayerXのAI基盤を導入し、複雑なストラクチャードファイナンス業務の効率化に着手。契約書の検索や管理表作成を自動化し、年間約7000時間の削減を見込みます。",
+      "one_liner": "地銀がAIで年間7千時間削減",
+      "why_important": "専門性の高い金融事務もAIで自動化できる段階に到達しました。自社の高負荷な専門業務に置き換えて検討すべき好例です。",
+      "action_item": "自社の業務の中で、過去の文書検索に時間を取られている定型作業がないかリストアップしてください。",
+      "source": "ITmedia AI Plus",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2605/19/news024.html"
+    },
+    {
+      "title": "AIエージェントがPC操作の常識を塗り替える",
+      "category": "業務効率化",
+      "summary": "AIエージェントの台頭により、ユーザーが操作手順を覚える必要がなくなり、「曖昧な指示」だけで複雑なタスクが完結するフェーズに突入。PCスキルの定義が根本から変化します。",
+      "one_liner": "PC操作は「手順」から「意図」へ",
+      "why_important": "特定のアプリ操作に習熟する価値が低下し、AIに「何をさせたいか」を正確に言語化する能力がより重要になります。",
+      "action_item": "普段行っているマルチステップのPC作業を、AIへの指示文（プロンプト）として書き出してみてください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/column/ubiq/2109433.html"
+    },
+    {
+      "title": "デル、オンプレミス型AIエージェント基盤を発表",
+      "category": "リスク管理",
+      "summary": "Dell TechnologiesがNVIDIAと提携し、社内サーバーでAIエージェントを運用できる基盤を発表。機密情報をクラウドに上げられない企業にとって、セキュアな活用が可能になります。",
+      "one_liner": "機密情報を守るオンプレAI基盤",
+      "why_important": "セキュリティ懸念で生成AI導入を躊躇していた企業にとって、自社専用のAI環境を構築できる強力な選択肢が登場しました。",
+      "action_item": "「セキュリティが理由でAI活用を諦めていた業務」を特定し、オンプレミス環境での実現可能性を議論してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2109635.html"
+    },
+    {
+      "title": "超小型AIが大型モデルに匹敵する性能を実現",
+      "category": "最新技術",
+      "summary": "わずか26Mパラメータという極小サイズで、Googleの大型モデルに匹敵する性能を持つAIの実験が成功。スマートフォン等のエッジデバイスで高度なAIエージェントを動かす道が開かれました。",
+      "one_liner": "スマホで動く超小型・高性能AI",
+      "why_important": "高価なサーバーや常時通信を必要とせず、手元のデバイスでプライバシーを守りながら高度な処理が可能になります。",
+      "action_item": "オフラインや手元の端末内でAIが完結することで、解決できる顧客課題がないか構想してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/lingmu/articles/2026-05-16-needle-distillation-agent-revolution"
+    },
+    {
+      "title": "AIによるクラウド攻撃の高速化、Googleが警告",
+      "category": "リスク管理",
+      "summary": "AIを悪用したサイバー攻撃が巧妙化し、防御側が対策を講じる猶予が数日間に短縮。特にサードパーティツールの脆弱性が標的になりやすく、従来の対策では不十分な可能性が指摘されています。",
+      "one_liner": "AI悪用でサイバー攻撃が高速化",
+      "why_important": "攻撃側もAIによる効率化を進めているため、企業のセキュリティ運用にはこれまで以上の即応性と自動化が求められます。",
+      "action_item": "現在利用しているサードパーティツールの権限設定と、パッチ適用フローを直ちに再確認してください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/google-cloud-threat-report-third-party-software-ai-attacks/"
+    },
+    {
+      "title": "Claudeの「Dreaming」機能に潜む未知の脆弱性",
+      "category": "リスク管理",
+      "summary": "AIが過去ログを自己整理する過程で、自分自身の出力を誤った命令として再解釈するリスクが判明。外部攻撃なしにシステムが誤作動する、自律型AI特有の安全性課題が浮き彫りになりました。",
+      "one_liner": "AIの自己記憶に潜む新リスク",
+      "why_important": "AIに長期的な記憶や自律性を持たせる際、意図しない挙動を防ぐための監査プロセスの設計が不可欠になります。",
+      "action_item": "自律型AIエージェントを導入・開発する場合、その実行ログを監視・検証する仕組みを検討に含めてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/emilia_lab/articles/dreaming-memory-poisoning-hypothesis"
+    },
+    {
+      "title": "イーロン・マスク氏、OpenAIに対する訴訟で敗訴",
+      "category": "法規制・倫理",
+      "summary": "OpenAIが利益追求に転じたとするマスク氏の訴えが退けられました。これによりOpenAIの経営体制が法的に一定の安定を得たことになり、次世代モデルの開発競争がさらに加速すると見られます。",
+      "one_liner": "OpenAI、法廷勝利で開発加速",
+      "why_important": "業界リーダーの法的リスクが軽減されたことで、提携企業やユーザーはより安心して同社のプラットフォームを選択できるようになります。",
+      "action_item": "OpenAIのAPIを活用している、または検討しているプロジェクトのロードマップを改めて推進してください。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/musk-v-altman-jury-verdict/"
+    },
+    {
+      "title": "Google I/O開幕、次世代AIモデルの動向に注目",
+      "category": "最新技術",
+      "summary": "Googleの年次会議が開幕。Geminiの進化やAndroid OS、WorkspaceへのAI統合が焦点です。既存の業務ツールがAI化されることで、ビジネス環境が大きくアップデートされます。",
+      "one_liner": "Googleが描くAI統合OSの未来",
+      "why_important": "検索やドキュメントといった基本ツールにAIが深く組み込まれるため、ツールの選定基準が機能からAIの連携力へとシフトします。",
+      "action_item": "発表されるGoogleの新機能の中で、自社の現在のワークフローを代替・短縮できるものがないか注視してください。",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/05/18/1137439/what-to-expect-from-google-this-week/"
+    },
+    {
+      "title": "RAG（検索拡張生成）の精度改善に向けた実践的手法",
+      "category": "業務効率化",
+      "summary": "社内文書をAIに検索させるRAGにおいて、回答の質を実用レベルに引き上げるための高度なノウハウが蓄積されています。ハイブリッド検索や再ランキング等の手法が重要です。",
+      "one_liner": "社内AIを「使える」品質に上げる",
+      "why_important": "AI導入の初期段階を終え、いかに「業務で本当に使える回答」を出せるかという質の改善が競争力の源泉になります。",
+      "action_item": "社内AIの回答精度に不満がある場合、開発チームと「再ランキング（rerank）」の導入について話し合ってください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/wqy/articles/4fe29ac264ea63"
+    },
+    {
+      "title": "言葉や画像から3Dモデルを自動生成、日本で提供開始",
+      "category": "業務効率化",
+      "summary": "専門スキルなしでテキストや2D画像から3Dモデルを作成できる「Meshy.ai」の国内提供が開始。製品試作や広告制作のスピードが飛躍的に向上します。",
+      "one_liner": "専門スキル不要の3Dモデル生成",
+      "why_important": "これまで外注や専門家に頼っていた3D制作が個人で可能になり、クリエイティブ業務のコスト構造が劇的に変わります。",
+      "action_item": "プレゼン資料や商品イメージの作成に、AI生成の3D素材を一度試用してみてください。",
+      "source": "ITmedia AI Plus",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2605/19/news029.html"
+    }
+  ]
+}

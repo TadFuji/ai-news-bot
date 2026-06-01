@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月19日",
+  "theme": "AIが実務を完遂するエージェント時代へ",
+  "morning_comment": "AIは「相談相手」から「実務の完遂者」へ。自律的な活用を考える時です。",
+  "articles": [
+    {
+      "title": "AnthropicがClaude Opus 4.7をリリース：コーディングと視覚能力が大幅向上",
+      "category": "最新技術",
+      "summary": "Anthropicが最新フラッグシップモデル「Claude Opus 4.7」を発表。自律的なソフトウェア開発（エージェンティック・コーディング）、高解像度の画像認識、そして長時間にわたる複雑なタスクの自動実行能力が強化されました。",
+      "one_liner": "AIが自律的に開発を完遂する時代へ",
+      "why_important": "AIが指示待ちを超え、複雑なタスクを自ら進める「エージェント」の段階に到達したことを意味します。",
+      "action_item": "「この業務を丸投げできたら」と思うタスクを、具体的な手順書として書き出してみてください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/04/18/anthropic-releases-claude-opus-4-7-a-major-upgrade-for-agentic-coding-high-resolution-vision-and-long-horizon-autonomous-tasks/"
+    },
+    {
+      "title": "「文系でもAIでアプリが作れる」を10ヶ月検証、非エンジニアの可能性",
+      "category": "業務効率化",
+      "summary": "プログラミング未経験者がAIツールを駆使して10ヶ月間アプリ開発に挑み、実用的なツールを自力で構築可能であることを証明しました。AIを「部下」として使う開発手法が確立されつつあります。",
+      "one_liner": "非エンジニアでも実用アプリを自作可能",
+      "why_important": "専門スキルがなくても、AIを道具として使いこなせば自社の課題を自分で解決できる時代が到来しています。",
+      "action_item": "身近な業務の小さな不便を解決するツールを、AIとの対話で形にできないか試してください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/04/ai_coding_10_month.html"
+    },
+    {
+      "title": "研究者がClaudeとNotionで構築した「忘れない外部脳」活用術",
+      "category": "業務効率化",
+      "summary": "Claude CodeとNotionを連携させ、大量の論文や公文書を蓄積・検索できるシステムを構築した事例。AIの「忘却問題」を外部データベースで解決し、いつでも必要な情報を取り出せる環境を実現しました。",
+      "one_liner": "AIとNotionで「忘れない外部脳」",
+      "why_important": "単発のチャットではなく、自社の知識を蓄積・検索できる「資産としてのAI」構築が今後の鍵となります。",
+      "action_item": "散らばっている過去の議事録や資料を、一箇所に集めてAIが読み込みやすい状態に整えてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kajungbang/articles/5c00f3bf7d7416"
+    },
+    {
+      "title": "米政府とAnthropicが会談、AIの軍事利用や規制を巡り対話",
+      "category": "法規制・倫理",
+      "summary": "米政府高官とAnthropicのCEOがAIの開発リスクや軍事利用について会談。規制の行方は、日本企業が利用するAIサービスの規約や安全性にも大きな影響を与えるため、動向の注視が必要です。",
+      "one_liner": "AI開発と国家安全保障の対話が加速",
+      "why_important": "AIの安全規制はサービスの継続性や利用条件に直結するため、法規制の動向はリスク管理に必須の知識です。",
+      "action_item": "利用中のAIサービスの最新の規約やセキュリティ方針を、改めて確認する機会を設けてください。",
+      "source": "NHK 科学・技術",
+      "url": "https://news.web.nhk/newsweb/na/na-k10015102301000"
+    },
+    {
+      "title": "その文字は本物？AIを騙す「ホモグリフ攻撃」の脅威と対策",
+      "category": "リスク管理",
+      "summary": "見た目が同じでも文字コードが異なる「ホモグリフ文字」を用い、AIの安全フィルターを突破する攻撃が指摘されています。社内アプリ開発時のセキュリティ対策として文字の正規化が不可欠です。",
+      "one_liner": "似た文字でAIを欺く攻撃の脅威",
+      "why_important": "AIへの依存度が高まる中、巧妙な入力によるセキュリティ突破を防ぐための高度な運用知識が求められています。",
+      "action_item": "外部入力をAIに処理させる際、文字コードの正規化が考慮されているか開発担当者に確認してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/nexus_api_lab/articles/20260418-homoglyph-attack"
+    },
+    {
+      "title": "LLM観測ツールの比較、AIアプリの「中身」を可視化する重要性",
+      "category": "リスク管理",
+      "summary": "AIアプリ運用の「なぜその回答をしたか」「コストはいくらか」を監視する可観測性ツールが注目。Langfuse等のツールは、AIをブラックボックス化させず品質とコストを管理するために必須です。",
+      "one_liner": "AIの中身を可視化し品質を徹底管理",
+      "why_important": "「なんとなく動く」から「責任を持って管理する」運用へ。コストと品質の継続的な監視がビジネスには不可欠です。",
+      "action_item": "導入中のAIツールで、どの業務にどれだけのコストがかかっているかを一度数値化してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/agdexai/articles/llm-observability-tools-2026"
+    },
+    {
+      "title": "深刻なメモリ(RAM)不足が2030年まで続く予測、AI開発が拍車",
+      "category": "リスク管理",
+      "summary": "AIの普及でDRAM（メモリ）の需要が供給を大幅に上回り、不足が2030年まで続くとの予測。これはPC価格の高騰やAIサービスの利用料金値上げにつながるリスクがあり、IT予算への影響が懸念されます。",
+      "one_liner": "メモリ不足でAI利用料高騰の懸念",
+      "why_important": "ハードウェアの供給難はAI利用コストに直結するため、中長期的なIT投資計画を見直す必要があります。",
+      "action_item": "クラウドサービスなどのAI利用料に関する将来のコスト変動リスクを、次期予算計画の検討材料に入れてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/914672/the-ram-shortage-could-last-years"
+    },
+    {
+      "title": "GitHub Copilotはゲーム開発でどこまで使えるか？現役高校生の実践例",
+      "category": "業務効率化",
+      "summary": "高校生開発者がAIを活用しSteamでゲームを公開。AIに丸投げするのではなく、人間側のディレクション（仕様書の作成やロジック管理）の重要性が、実務導入における成否を分けることを示しています。",
+      "one_liner": "AI時代は人間の「指示力」が鍵となる",
+      "why_important": "AIに全てを任せるのではなく、適切な「仕様」や「意図」を伝えるディレクション能力こそが人間の価値になります。",
+      "action_item": "AIに指示を出す前に、自分が何を達成したいのかを3つの箇条書きで明確にする習慣をつけてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/problemedge/articles/f81c4fff5ac2b0"
+    },
+    {
+      "title": "App Storeが再び活性化、AIツールの普及がアプリ開発を後押し",
+      "category": "日本市場",
+      "summary": "2026年の調査でApp Storeへの新規アプリ公開数が急増。AIが開発やデザインを支援することで、小規模チームでも高品質なアプリを短期間でリリースできるようになったことが市場を再活性化させています。",
+      "one_liner": "AIが促すアプリ開発の「民主化」",
+      "why_important": "開発のハードルが下がったことで、競合他社が次々と新たなAI連携ツールを投入してくる競争環境にあります。",
+      "action_item": "同業他社や海外でどのようなAI活用アプリがリリースされているか、App Storeで最新動向を検索してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/18/the-app-store-is-booming-again-and-ai-may-be-why/"
+    },
+    {
+      "title": "Googleがテスト失敗をAIで自動診断する「Auto-Diagnose」を開発",
+      "category": "業務効率化",
+      "summary": "Googleの研究チームが、膨大なテストログからバグ原因をAIで自動特定するシステムを導入。従来エンジニアが費やしていたデバッグ時間を短縮し、開発サイクルを大幅に加速させます。",
+      "one_liner": "AIがバグを自動診断し開発効率を向上",
+      "why_important": "エラー調査のような「苦行」をAIに任せることで、人間はより創造的な設計や意思決定に集中できるようになります。",
+      "action_item": "調査に時間がかかっているエラーログや不具合報告をAIに読み込ませ、原因の仮説を立てさせてみてください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/04/17/google-ai-releases-auto-diagnose-an-large-language-model-llm-based-system-to-diagnose-integration-test-failures-at-scale/"
+    }
+  ]
+}

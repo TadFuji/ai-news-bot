@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月14日",
+  "theme": "AIが「道具」から「自走する相棒」へ",
+  "morning_comment": "AIが指示を待つ段階を超え、自走する相棒へ。今日からその進化を体感しましょう。",
+  "articles": [
+    {
+      "title": "NotionがAIエージェントのハブへ進化",
+      "category": "業務効率化",
+      "summary": "Notionがプラットフォームを刷新し、AIエージェントが外部ツールを操作してタスクを完結できる機能を統合しました。アプリを行き来することなく、Notion内で業務プロセスを完結させることが可能になります。",
+      "one_liner": "NotionがAI自動操作の拠点に",
+      "why_important": "Notion内で外部ツール操作まで完結し、アプリ間の移動という「無駄な時間」が消滅します。",
+      "action_item": "Notionで自動化したい繰り返しの外部連携タスクを1つ書き出してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/13/notion-just-turned-its-workspace-into-a-hub-for-ai-agents/"
+    },
+    {
+      "title": "Edge Copilotが全タブ情報を参照可能に",
+      "category": "業務効率化",
+      "summary": "Microsoft EdgeのCopilotが、開いている全タブから情報を収集・分析する新機能を追加。複数サイトの製品比較や情報の統合が、タブを切り替えることなくチャット一つで完結します。",
+      "one_liner": "ブラウザ全タブをAIが一括横断分析",
+      "why_important": "複数サイトの比較や要約が瞬時に終わるため、調査業務の生産性が飛躍的に向上します。",
+      "action_item": "ブラウザで複数タブを開いた際、Copilotに「全タブを要約して」と指示してみましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/930188/microsoft-edge-copilot-ai-tabs"
+    },
+    {
+      "title": "AIチャットボットが個人の電話番号を流出",
+      "category": "リスク管理",
+      "summary": "GoogleのAI等が、学習データに含まれる個人の電話番号を回答として出力する事例が報告されました。一度学習されたデータは取り除くのが難しく、プライバシー保護の課題が顕在化しています。",
+      "one_liner": "AI学習データから個人情報流出の罠",
+      "why_important": "一度学習された情報は消去困難なため、入力内容の選別が個人の防衛ラインとなります。",
+      "action_item": "AIに機密情報や個人情報を直接入力していないか、現在の設定を再確認してください。",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/05/13/1137203/ai-chatbots-are-giving-out-peoples-real-phone-numbers/"
+    },
+    {
+      "title": "Metaが履歴を残さない秘密のAIチャットを発表",
+      "category": "リスク管理",
+      "summary": "Metaは、会話ログをサーバーに保存しない「インコグニートチャット」機能を導入。情報の機密性を担保したいビジネスパーソンにとって、漏洩リスクを軽減する新たな選択肢となります。",
+      "one_liner": "Meta AIに「秘密の会話」モード",
+      "why_important": "ログを残さない選択肢が増えることで、機密性の高いビジネス検討にもAIが使いやすくなります。",
+      "action_item": "機密性の高いアイデア出しを行う際、ログ保存オフ機能の有無を確認する癖をつけましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/929791/meta-ai-incognito-chats"
+    },
+    {
+      "title": "AIへの「思考の明け渡し」がデバッグ力を奪う",
+      "category": "ライフスタイル",
+      "summary": "AIの出力を精査せず受け入れる「認知の明け渡し」により、自身の判断力や修正能力が低下するリスクが指摘されています。AIの結果を自分の実力と錯覚する危険性に警鐘を鳴らしています。",
+      "one_liner": "AI依存による「思考の放棄」に警鐘",
+      "why_important": "結果を鵜呑みにし続けると、自らの判断力が衰え、AIのミスに気づけなくなります。",
+      "action_item": "AIが出した答えに対し、必ず「なぜそうなるのか」を1分だけ自分の頭で考えてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/fruitriin/articles/2acdb78b882cdc"
+    },
+    {
+      "title": "AIへの「気をつける」指示が無意味な理由",
+      "category": "業務効率化",
+      "summary": "プロンプトに「注意する」などの曖昧な言葉を書いてもAIの精度は向上しません。精神論ではなく、物理的に指示を無視できない論理的な仕組みを組むことが、業務品質の安定に不可欠です。",
+      "one_liner": "「精神論」ではなく「物理的制約」を",
+      "why_important": "曖昧な表現を排除し、論理的な強制ルールをプロンプトに組み込むことで品質が安定します。",
+      "action_item": "指示書の「注意して」を「〜の場合はXX形式で出力して」という具体的な条件に書き換えてみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/naoya643/articles/article-02-soft-language-guard"
+    },
+    {
+      "title": "AmazonがAlexa搭載のAI買い物助手を導入",
+      "category": "ライフスタイル",
+      "summary": "Amazonが自然な対話を通じて商品推薦や比較、購入の自動化をサポートするAIショッピングアシスタントを導入。消費者の購買行動が検索からAIへの相談へとシフトする可能性があります。",
+      "one_liner": "買い物は「検索」から「AI相談」へ",
+      "why_important": "消費者の購買プロセスが変化し、AIが推薦する基準を理解することが重要になります。",
+      "action_item": "Amazon等のAIチャット機能を使い、従来の検索結果との「提案の質」の違いを試してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/13/amazon-launches-an-ai-shopping-assistant-for-the-search-bar-powered-by-alexa/"
+    },
+    {
+      "title": "企業の6割以上にAIガバナンス方針が欠如",
+      "category": "リスク管理",
+      "summary": "多くの組織で明確なAIポリシーがないまま、従業員が勝手にAIを使う「シャドーAI」が蔓延。データ漏洩リスクを抑えるため、現場の実態に即した早急なルール整備が求められています。",
+      "one_liner": "現場のAI利用に追いつかない企業ルール",
+      "why_important": "シャドーAIによるリスクを避けるため、組織としての利用ガイドラインの把握が急務です。",
+      "action_item": "自社のAI利用ルールが最新のツール状況に対応しているか、改めて確認しましょう。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/05/13/enterprise-ai-governance-in-2026-why-the-tools-employees-use-are-ahead-of-the-policies-that-cover-them/"
+    },
+    {
+      "title": "Anthropic、AIがニーズを先回り予測する未来を提言",
+      "category": "最新技術",
+      "summary": "Anthropicは、将来のAIがユーザーの指示を待つのではなく、自ら必要な資料を準備したりタスクを提案したりする「プロアクティブな進化」を遂げると予測しています。",
+      "one_liner": "AIは「指示待ち」から「先回り」へ",
+      "why_important": "私たちが指示を出す側から、AIが提案する内容を承認・監督する役割へと変わっていきます。",
+      "action_item": "AIに「次に行うべき準備は何ですか？」と問いかけ、AIの提案能力をテストしてみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/"
+    },
+    {
+      "title": "Anthropicが中小企業向け市場を本格攻略",
+      "category": "業務効率化",
+      "summary": "Claudeを開発するAnthropicが、中小企業（SMB）向けのサービスを強化。導入しやすい価格帯と機能を提供することで、小規模チームでも高度なAI環境の構築が可能になります。",
+      "one_liner": "高機能AIが中小企業の標準装備に",
+      "why_important": "規模を問わず高度なAIを導入可能になり、組織の競争力がAI活用力で決まる時代へ突入します。",
+      "action_item": "自チームの規模に合ったAIプランがあるか、主要ツールの最新料金体系をチェックしましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/13/anthropic-courts-a-new-kind-of-customer-small-business-owners/"
+    }
+  ]
+}

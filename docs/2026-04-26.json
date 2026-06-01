@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月26日",
+  "theme": "AIエージェントの実装と責任の深化",
+  "morning_comment": "AIは「道具」から「自律するパートナー」へと、その立ち位置を深めています。",
+  "articles": [
+    {
+      "title": "AI時代における「人間の判断基準」の継承と若手育成のフレームワーク",
+      "category": "ライフスタイル",
+      "summary": "AIが実務を代替する中、シニア層の「暗黙知」を言語化し、若手がAIを使いこなしつつ最終判断を下せる組織構造を提案。AIに任せる領域と人間が担う「判断削減レイヤー」の整理を説く。",
+      "one_liner": "AI時代こそ問われる、シニアの暗黙知",
+      "why_important": "AIの普及で若手の経験機会が減る中、言語化しにくい「判断基準」の継承が組織の競争力を左右します。",
+      "action_item": "自身が判断を下す際、何を根拠にしたか1つだけ言語化しメモしてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/aimar/articles/29c6df2e4899d8"
+    },
+    {
+      "title": "2026年、東京が世界のAI・テック拠点へ：SusHi Tech Tokyo 2026の展望",
+      "category": "日本市場",
+      "summary": "2026年の東京で、AIを含む重点分野のテックリーダーが集う大型イベントが開催予定。グローバルな資金調達や実証実験の場として、日本がAI先進モデルとなる可能性を示唆している。",
+      "one_liner": "2026年、東京が世界のテック中心地に",
+      "why_important": "日本政府主導の巨大プロジェクトは、ビジネスパーソンにとってグローバルな連携を築く絶好の機会です。",
+      "action_item": "自身の業務でAIがどう「社会実装」され得るか、未来のシナリオを想像してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/25/why-tokyo-is-the-most-important-tech-destination-of-2026/"
+    },
+    {
+      "title": "MemoRAG：検索から「記憶」へ進化するRAGの新技術",
+      "category": "業務効率化",
+      "summary": "長文脈を記憶として保持することで、ドキュメント全体を俯瞰した回答を可能にする「MemoRAG」が登場。従来のRAGが苦手とした広範囲な情報統合を、低コストかつ高精度で実現する。",
+      "one_liner": "RAGは「検索」から「記憶」の時代へ",
+      "why_important": "文脈を俯瞰できる技術の登場で、社内ナレッジの活用精度が劇的に向上し、情報探索の時間が削減されます。",
+      "action_item": "自社のAIが「全体像」を捉えられているか、複雑な要約質問を投げて試してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/lluminai_tech/articles/21e34d3f7bc495"
+    },
+    {
+      "title": "144言語対応のAI翻訳イヤホン「Wooask M3」が登場",
+      "category": "ライフスタイル",
+      "summary": "最大144言語に対応するリアルタイム通訳イヤホンが発表。オフライン対応やフリートークモードを備え、多国籍チームにおける円滑なコミュニケーションを物理デバイスで強力にサポートする。",
+      "one_liner": "144言語対応、耳に差す通訳者が登場",
+      "why_important": "言語の壁が消滅することで、海外拠点や多国籍チームとの連携がこれまで以上に標準化・加速されます。",
+      "action_item": "外国語での会議がボトルネックになっている業務を1つリストアップしてください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/04/costorypo-wooask-end-1978539678.html"
+    },
+    {
+      "title": "Anthropicの秘匿モデルへの不正アクセス発覚、AIセキュリティのリスク露呈",
+      "category": "リスク管理",
+      "summary": "Anthropicの未公開モデルに対する不正アクセスが発覚。AIの安全性や機密保持の脆弱性が示され、企業が外部AIツールを採用する際のセキュリティ基準を厳格化させる契機となっている。",
+      "one_liner": "秘匿モデルへの不正アクセスが露呈",
+      "why_important": "AIベンダー側のリスクが表面化したことで、導入時や運用時のセキュリティ監査の重要性が再認識されます。",
+      "action_item": "自社で利用しているAIサービスのセキュリティ規約を改めて確認してください。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/security-news-this-week-discord-sleuths-gained-unauthorized-access-to-anthropics-mythos/"
+    },
+    {
+      "title": "GitHub Copilotで「役割分担エージェント」を設計する新ワークフロー",
+      "category": "最新技術",
+      "summary": "AIに特定の役割を割り当てて複雑なタスクを分業させる「マルチエージェント型」開発がCopilotで実現。要件定義からレビューまでを複数のAIで自動化する効率的な手法を紹介。",
+      "one_liner": "AIに「役割」を割り振る新ワークフロー",
+      "why_important": "単一の作業代行ではなく、AI同士を連携させる組織的な活用が今後の業務設計の標準になります。",
+      "action_item": "現在の定型業務を「企画・実行・検証」の3つの役割に分解してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/tsukitsukiss/articles/copilot-role-agents"
+    },
+    {
+      "title": "Anthropic、AIエージェント同士が取引する自律型市場を実験",
+      "category": "最新技術",
+      "summary": "AIエージェントが買い手と売り手になり、リアルマネーで価格交渉や取引を行うマーケットプレイスの実験。人間を介さない「自律型経済」の基盤としての可能性を示した。",
+      "one_liner": "AI同士が商取引する「自律型経済」の幕開け",
+      "why_important": "購買やリサーチ業務がAI間で完結する未来は、企業のビジネスモデルを根本から変える可能性があります。",
+      "action_item": "購買やリサーチなど「AIに任せられる外部交渉」がないか探してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/"
+    },
+    {
+      "title": "Google、画像生成・解析を極めた新モデル「Vision Banana」を発表",
+      "category": "最新技術",
+      "summary": "画像セグメンテーションや奥行き推定で最高精度を記録した新モデルを発表。視覚情報の正確な「理解」に特化しており、製造現場や医療、自動運転などの産業応用が期待される。",
+      "one_liner": "Google、視覚解析で最高精度を更新",
+      "why_important": "画像の「理解」が深まることで、製造や物流など物理世界におけるAI活用が劇的に進化します。",
+      "action_item": "写真や図面の解析で効率化できる現場業務があるか棚卸ししてください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/04/25/google-deepmind-introduces-vision-banana-an-instruction-tuned-image-generator-that-beats-sam-3-on-segmentation-and-depth-anything-v3-on-metric-depth-estimation/"
+    },
+    {
+      "title": "OpenAI、GPT-5.5に向けたバイオハザード対策バグバウンティを開始",
+      "category": "法規制・倫理",
+      "summary": "次期モデル「GPT-5.5」の安全性を確保するため、生物学的リスクを特定する報奨金プログラムを開始。モデルのリリースが近づいている兆候であり、安全性確保が最優先課題であることを示す。",
+      "one_liner": "GPT-5.5、安全性強化でリリース秒読み",
+      "why_important": "高度なリスク対策は、AIがより複雑で専門的な領域へ踏み込む準備が整ったことを意味します。",
+      "action_item": "次期モデルの登場に備え、より高度な推論が必要な業務課題を整理しておいてください。",
+      "source": "Hacker News AI",
+      "url": "https://openai.com/index/gpt-5-5-bio-bug-bounty/"
+    },
+    {
+      "title": "Claude Codeのトークン節約術：AI活用のコストと速度を最適化",
+      "category": "業務効率化",
+      "summary": "Claude Code利用時のトークン量を削減し、精度と速度を最大化するTipsを公開。不必要な情報を削ることでAIの「迷い」を減らし、正確なアウトプットを引き出す技術を解説。",
+      "one_liner": "賢いトークン削減でAIの精度を最大化",
+      "why_important": "コスト削減だけでなく、情報を絞り込む技術はAIから高品質な回答を得るための必須スキルです。",
+      "action_item": "次にAIへ指示を出す際、不要な前提条件を1つ削ってシンプルにしてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/seekseep/articles/claude-code-token-reduction-tips"
+    }
+  ]
+}

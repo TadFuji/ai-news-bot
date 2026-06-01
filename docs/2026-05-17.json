@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月17日",
+  "theme": "AIは「道具」から「自律する相棒」へ",
+  "morning_comment": "単なる効率化を超え、AIが自律的に動く時代の「人間側の責任」が問われています。",
+  "articles": [
+    {
+      "title": "米国のAI露出職種で大幅な雇用削減が開始",
+      "category": "リスク管理",
+      "summary": "ブルームバーグの報道によると、米国ではAIの影響を受けやすい職種で深刻な人員削減が始まっています。これまでAIは「補助ツール」とされてきましたが、企業側がコスト削減を目的に「AIによる代替」を本格化させている実態が浮き彫りになりました。",
+      "one_liner": "AIによる本格的な人員削減が開始",
+      "why_important": "コスト削減を目的としたAI代替は対岸の火事ではなく、自身の提供価値の再定義が求められています。",
+      "action_item": "現在の業務のうち、AIに置き換え可能なタスクをリストアップし、自分にしかできない領域を特定する。",
+      "source": "Hacker News AI",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-15/us-is-starting-to-see-heavy-job-losses-in-roles-exposed-to-ai"
+    },
+    {
+      "title": "国産LLMがデジタル庁「ガバメントAI」に採用決定",
+      "category": "日本市場",
+      "summary": "デジタル庁が発表した国産LLMの選定は、日本の「ソブリンAI」確立に向けた一歩です。日本語のニュアンスや国内法への適応が期待され、公的機関や保守的な国内企業でのAI導入に弾みがつきます。",
+      "one_liner": "デジタル庁が国産LLMを本格採用",
+      "why_important": "セキュリティや文化に即した国産AIが社会基盤となり、日本企業でも導入のハードルが下がります。",
+      "action_item": "自社のセキュリティ基準に照らし、国産AIが導入候補になるか情シス担当と情報交換を行う。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kotakotahiro/articles/45af55a51f14a7"
+    },
+    {
+      "title": "LLMは個人のスキルを底上げしない？実証研究が示す警告",
+      "category": "リスク管理",
+      "summary": "AI活用で生産性は平均15〜26%向上する一方で、それは成果物の水準であり、人間自身の内部スキルは向上しないという研究結果が示されました。AIに頼りすぎることで思考プロセスをスキップするリスクがあります。",
+      "one_liner": "AI依存で「中の人の能力」が停滞か",
+      "why_important": "成果物の質は上がっても、思考を外注し続けると判断力や専門性が失われるリスクがあります。",
+      "action_item": "AIに頼る前に、まずは自分の頭で構成案や論理を組み立てる時間を5分間設ける。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/pdfractal/articles/88c44f9b514f20"
+    },
+    {
+      "title": "社内独自LLMで「Claude Code」級の自律開発を実現する手法",
+      "category": "業務効率化",
+      "summary": "セキュリティ上の理由で外部サービスが利用できない企業でも、社内の独自LLMプロキシを活用して高度なAIエージェント環境を構築する手法が共有されました。機密情報を守りつつ自律的な開発体験を享受できます。",
+      "one_liner": "社内環境で高度な自律開発を実現",
+      "why_important": "セキュリティの制約を言い訳にせず、クローズドな環境で最新のAIエージェント機能を活用する知見が重要です。",
+      "action_item": "開発チームで「Continue」や「AGENTS.md」の試用を検討し、内製化のスピードを検証する。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/dx_pm_product/articles/continue-agents-md-internal-llm"
+    },
+    {
+      "title": "Claudeの「メモリー機能」を正しく理解し活用する方法",
+      "category": "業務効率化",
+      "summary": "Anthropicが提供するClaudeのメモリー機能を管理することで、過去の対話やユーザーの好みをAIに記憶させ、指示を繰り返す手間を省けます。生産性を劇的に変えるキー機能でありながら理解が不十分な層も多い機能です。",
+      "one_liner": "Claudeがユーザー設定を記憶",
+      "why_important": "パーソナライズが進むことで、プロンプトの冗長さを排除し、より深い対話と効率化が可能になります。",
+      "action_item": "Claudeのメモリー設定を見直し、自身のプロジェクト概要や文章スタイルを登録してみる。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/yamato_snow/articles/45edb2b07b2cee"
+    },
+    {
+      "title": "ChatGPTの画像生成で「背景を透明に」する新機能が話題",
+      "category": "業務効率化",
+      "summary": "ChatGPTのDALL-E 3で、背景を透過させた画像を生成できるプロンプトが注目されています。面倒な切り抜き作業なしでアイコンや素材を作成可能になり、資料作成の現場で即座に役立つTipsとなっています。",
+      "one_liner": "画像背景の透明化が数秒で完結",
+      "why_important": "専門的な編集スキルがなくても、プロ仕様の素材作成が可能になり、資料の表現力が底上げされます。",
+      "action_item": "次のプレゼン資料に使う図解アイコンを、背景透過プロンプトで自作してみる。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/05/chatgpt_image_2_transparent.html"
+    },
+    {
+      "title": "ArXivがAI丸投げ論文を禁止、違反者は1年間の投稿停止",
+      "category": "法規制・倫理",
+      "summary": "科学論文リポジトリのArXivが、AIを過度に使用した論文への対策を強化しました。AI生成コンテンツの透明性と責任が、学術界だけでなくビジネス文書の世界でも厳格に求められ始めていることを示唆しています。",
+      "one_liner": "AI丸投げ論文に投稿禁止の罰則",
+      "why_important": "コンテンツの生成主体が曖昧な時代だからこそ、人間としての責任と誠実さがブランド価値に直結します。",
+      "action_item": "AIで作成した外部向け文書には、どの範囲でAIを使用したかを明記するルールを検討する。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/"
+    },
+    {
+      "title": "OpenAI共同創業者のグレッグ・ブロックマンが製品戦略の責任者に",
+      "category": "最新技術",
+      "summary": "OpenAIの共同創業者グレッグ・ブロックマンが製品戦略のトップに就任しました。今後、ChatGPTとCodexの統合が進むと見られ、単なる対話型AIから「実作業を完遂するツール」へと進化が加速します。",
+      "one_liner": "OpenAI、実行力重視の戦略へ転換",
+      "why_important": "検索や回答だけでなく、実際のコーディングやタスク完遂を担うツールへと進化が加速します。",
+      "action_item": "ChatGPTを単なる「相談相手」ではなく、ステップバイステップの「実務代行者」として使う指示を出す。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/16/openai-co-founder-greg-brockman-reportedly-takes-charge-of-product-strategy/"
+    },
+    {
+      "title": "AI社員だけで運営される「AI NOWA」の衝撃的な実態",
+      "category": "最新技術",
+      "summary": "9人のAIエージェントがDiscord上で自律的に会議を行い、タスクを消化する実験プロジェクトが稼働しています。AI同士が指示を出し合いコンテンツを生成する流れは、人間のマネジメント業務を根本から変える可能性があります。",
+      "one_liner": "9人のAI社員による自律運営が始動",
+      "why_important": "マネジメント層は、部下として人間を管理するだけでなく「AIチーム」を指揮する役割を意識する時です。",
+      "action_item": "もし自分の部署にAI社員が1人入るとしたら、どの業務を任せるかロール（役割）を定義してみる。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/ai_nowa/articles/ai-nowa-design-record-v01"
+    },
+    {
+      "title": "ソニーがAIカメラアシスタントの「補助」的役割を強調",
+      "category": "日本市場",
+      "summary": "ソニーはXperiaのAIカメラ機能について、勝手に編集するのではなく「提案」を行うものだと説明しました。AIを人間の表現を助けるサポーターとして定義する姿勢は、日本企業の実装のあり方を示しています。",
+      "one_liner": "AIは主役ではなく「表現の黒子」",
+      "why_important": "AIに全てを任せるのではなく、人間の意図を尊重する実装は、多くのプロダクト設計のヒントになります。",
+      "action_item": "ツールを使う際、AIの自動生成に任せすぎず「自分の意図」が反映されているかを最後に確認する。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/932133/sony-xperia-1-xiii-ai-camera-assistant"
+    }
+  ]
+}

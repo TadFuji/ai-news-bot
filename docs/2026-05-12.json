@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月12日",
+  "theme": "AIは「道具」から「自走するパートナー」へ",
+  "morning_comment": "実用化の波は、ツールから組織的な自律稼働へと次の次元に進化しています。",
+  "articles": [
+    {
+      "title": "OpenAI、企業向けAI導入支援を本格展開。ソフトバンクも出資",
+      "category": "日本市場",
+      "summary": "OpenAIが新会社を設立し、企業のAI導入を直接支援。ソフトバンク等から資金を確保し、専門エンジニアの派遣を通じて業務フローのAI化を推進します。",
+      "one_liner": "OpenAIが企業導入を直接支援へ",
+      "why_important": "AI導入が単なるツール提供から、業務フローの直接的な変革へとシフトすることを意味します。",
+      "action_item": "自社のどの業務がAIで根本から自動化可能か、優先順位をつけて棚卸ししてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/articles/2605/12/news053.html"
+    },
+    {
+      "title": "北陸銀行、音声AIで窓口自動化へ。法人向けFAQ対応を試行",
+      "category": "業務効率化",
+      "summary": "北陸銀行が法人向けネットバンキングの対応に音声AIエージェントを導入。電話対応の「あふれ呼」を解消し、待ち時間の削減と業務効率化を狙います。",
+      "one_liner": "銀行窓口を音声AIが自動対応",
+      "why_important": "レガシーな電話対応業務がAIで代替される実例が増えており、他業種への波及も確実です。",
+      "action_item": "顧客対応や社内問い合わせの中で、AIに任せられる定型的な対応を特定してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2605/12/news027.html"
+    },
+    {
+      "title": "日本企業でAIコーディングエージェント「Kiro」が成果。AWS事例掲載",
+      "category": "日本市場",
+      "summary": "日本国内でAIコーディングエージェントが注目を集めています。AIが自律的に開発プロセスを完遂させる段階に進化しており、生産性が劇的に向上しています。",
+      "one_liner": "開発を完遂する自律型AIが国内普及",
+      "why_important": "AIが単なる補助ではなく、自律的にタスクを完了させるエージェントとしての活用が現実的になっています。",
+      "action_item": "開発現場において「AIが完遂できる小規模なタスク」を定義し、試験導入を検討してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/ttsuchiya/articles/ipd-harness-not-needed"
+    },
+    {
+      "title": "GoogleがAI製の未知のサイバー攻撃を阻止。高度化するリスクに対応",
+      "category": "リスク管理",
+      "summary": "GoogleがAIにより生成された「ゼロデイ脆弱性」を突く攻撃を検知・阻止。攻撃手法の巧妙化に対し、防御側も高度なAI対応を迫られています。",
+      "one_liner": "AI生成の高度なサイバー攻撃を阻止",
+      "why_important": "攻撃側もAIを利用するフェーズに入っており、防御側もAIを前提としたセキュリティ再構築が急務です。",
+      "action_item": "多要素認証の徹底など、AIによるなりすましを防ぐための基本設定を再点検してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/928007/google-ai-zero-day-exploit-stopped"
+    },
+    {
+      "title": "GPT-5.5がもたらす「自走するAI」。エンジニアが期待する真の価値",
+      "category": "最新技術",
+      "summary": "次世代モデルGPT-5.5への期待が集中。複雑なタスクを指示一つで最後まで自力で完遂する「自走力」が、チャット形式からエージェント形式への転換を決定づけます。",
+      "one_liner": "次世代AIは指示一つでタスクを自走",
+      "why_important": "「AIと会話する」段階から「AIに仕事を丸投げする」段階へ、使い方のパラダイムシフトが起こります。",
+      "action_item": "将来的にAIへ「丸投げ」したい複雑な業務を、今のうちに工程分解して整理しておきましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2605/12/news009.html"
+    },
+    {
+      "title": "AIをチームとして運用する新手法。役割分担による効率化の検証",
+      "category": "業務効率化",
+      "summary": "調査、実装、レビュー等の役割ごとに複数のAIエージェントを「チーム」として構成する手法が議論されており、複雑な業務の品質向上が可能になります。",
+      "one_liner": "AIを役割別にチームとして運用する",
+      "why_important": "単一のAIに頼るのではなく、専門性を持たせた複数のAIを協調させる組織的活用が重要になります。",
+      "action_item": "今の業務を「調査」「作成」「校閲」の3つの役割に分け、それぞれに指示書を作ってみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/jeeee/articles/2026-05-11-ai-agent-team-threshold"
+    },
+    {
+      "title": "元OpenAI幹部の新会社、人間のように共同作業できるAIモデルを開発",
+      "category": "最新技術",
+      "summary": "Mira Murati氏の新会社が、音声やビデオをリアルタイム処理し、人間と自然に共同作業ができるインタラクションモデルを発表。リアルタイム支援が現実味を帯びています。",
+      "one_liner": "人間とリアルタイムで共同作業するAI",
+      "why_important": "画面越しに状況を共有しながら、対等なパートナーとしてAIと共創する働き方が始まろうとしています。",
+      "action_item": "もしAIが横で自分の操作を見ながら助言してくれるなら、どの作業が助かるか想像してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/928309/mira-murati-thinking-machines-ai-interaction-model"
+    },
+    {
+      "title": "AWS上でClaude Platformが直接利用可能に。企業導入のハードル低下",
+      "category": "業務効率化",
+      "summary": "AWSがAnthropicのClaude Platformをネイティブ提供。既存アカウントで高度なAIモデルを社内システムに組み込めるようになり、導入がさらに加速します。",
+      "one_liner": "AWSでClaudeがシームレスに利用可能",
+      "why_important": "企業の既存インフラ上で高性能AIを利用するコストと手間が大幅に削減される重要なアップデートです。",
+      "action_item": "社内のAWS環境を利用して、Claudeモデルを試験的に導入できないか技術担当と相談しましょう。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-platform-on-aws-anthropics-native-platform-through-your-aws-account/"
+    },
+    {
+      "title": "2026年、ChatGPTの利用層が全世代に拡大。ビジネス活用の一般化",
+      "category": "最新技術",
+      "summary": "ChatGPTの利用があらゆるビジネス層で急増し、主流化。一部の層のツールから、あらゆるビジネスシーンで標準的に使われるインフラへと変化しています。",
+      "one_liner": "AI利用がビジネスの標準インフラへ",
+      "why_important": "AIを使いこなすことは、もはや特殊技能ではなく、全ビジネスパーソンに求められる基本素養です。",
+      "action_item": "身近な同僚がAIをどのように日常業務に組み込んでいるか、成功事例を1つ共有し合いましょう。",
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/signals/research/2026q1-update"
+    },
+    {
+      "title": "ノーベル経済学者が警告。AIによる格差と社会への影響",
+      "category": "法規制・倫理",
+      "summary": "ダロン・アセモグル氏が、AIが期待通りの価値を生まず、社会的格差を広げる可能性を指摘。技術導入に際し、労働者への影響や倫理的視点を持つべきだと提言しています。",
+      "one_liner": "ノーベル経済学者がAIの倫理リスクに警鐘",
+      "why_important": "効率化のみを追求するのではなく、組織や社会への長期的な影響を考慮することがリーダーの責務です。",
+      "action_item": "AI導入によって業務が変わるメンバーに対し、どのようなサポートや再学習が必要か検討しましょう。",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/05/11/1137090/three-things-in-ai-to-watch-according-to-a-nobel-winning-economist/"
+    }
+  ]
+}

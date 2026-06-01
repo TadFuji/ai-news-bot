@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月15日",
+  "theme": "AIが「特別な技術」から「日常の道具」へ",
+  "morning_comment": "AIは実戦段階へ。個人の効率化から組織の価値創出まで、具体的な活用が始まっています。",
+  "articles": [
+    {
+      "title": "Google ChromeにAIプロンプト保存・実行機能「Skills」が登場",
+      "category": "業務効率化",
+      "summary": "Googleは、Chromeブラウザ上で頻繁に使用するプロンプトを「Skills」として保存し、1クリックで実行できる新機能を発表。Web要約やリサーチが瞬時に完了します。",
+      "one_liner": "ブラウザ操作をAIでスキル化し再利用",
+      "why_important": "毎日のルーチン業務をAIに「教え込む」ことで、個人の生産性が劇的に向上します。",
+      "action_item": "よく使うプロンプトを3つ書き出し、定型化を検討してください。",
+      "source": "Hacker News AI",
+      "url": "https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/"
+    },
+    {
+      "title": "「LLM Wiki」：メモをAIで整理し生きた知識に変える新概念",
+      "category": "業務効率化",
+      "summary": "アンドレイ・カルパシー氏が提案する、個人のメモをAIが主体的に構造化する仕組み。従来の検索型RAGを超え、ユーザーの思考を補助する次世代のナレッジ管理です。",
+      "one_liner": "個人のメモをAIが整理し知識へ昇華",
+      "why_important": "検索する手間を省き、AIが思考のパートナーとして情報を自動で整理してくれる時代が来ます。",
+      "action_item": "散らばっているアイデアメモを一箇所に集約してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2604/15/news011.html"
+    },
+    {
+      "title": "Webを自在に操作するAIエージェント基盤「TinyFish」が登場",
+      "category": "最新技術",
+      "summary": "AIエージェントがライブWebサイトの検索やデータ抽出を自動化する統合プラットフォーム。これまで手動で行っていたWeb操作をAPI一つで代替可能にします。",
+      "one_liner": "Web操作を自動化するAIエージェント",
+      "why_important": "リサーチやデータ収集などのWebベースの単純作業が、人間の手を離れるインフラが整っています。",
+      "action_item": "Webで行っている定期的なチェック業務をリストアップしてください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/04/14/tinyfish-ai-releases-full-web-infrastructure-platform-for-ai-agents/"
+    },
+    {
+      "title": "製造業向けRAG運用の極意：権限管理と監査ログの実装手法",
+      "category": "日本市場",
+      "summary": "製造業でのAI活用に不可欠なアクセス制御（ACL）と監査ログの実装を解説。機密情報を守りつつ実運用するための技術的な落とし所を提示しています。",
+      "one_liner": "機密を守るRAG運用、現場の最適解",
+      "why_important": "セキュリティと利便性の両立は、企業がAIを本格導入するための必須条件です。",
+      "action_item": "自社の情報の重要度（機密レベル）を改めて確認してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kukyotolab/articles/46e651877241a4"
+    },
+    {
+      "title": "AWSが提唱する生成AI導入の価値創出フレームワーク「P2V」",
+      "category": "業務効率化",
+      "summary": "PoCで終わらせず本番運用で成果を出すための構造的アプローチ「Path-to-Value」。投資対効果の測定やガバナンス構築の指針を明確にしています。",
+      "one_liner": "AI導入を成功へ導く投資対効果の指標",
+      "why_important": "AIをPoCで終わらせず、ビジネス価値を定量的に証明するための共通言語が示されました。",
+      "action_item": "進行中のAI施策が、どのビジネス指標に貢献するか再定義しましょう。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/navigating-the-generative-ai-journey-the-path-to-value-framework-from-aws/"
+    },
+    {
+      "title": "AIエンジニア向け開発フレームワーク「Clade」の有用性比較",
+      "category": "業務効率化",
+      "summary": "Claude Code上で動作する新基盤Cladeの動向。既存ツールとの違いを比較し、開発サイクルの高速化とAIとの協調作業を最適化する手法を論じています。",
+      "one_liner": "AIエンジニアの開発を加速する新基盤",
+      "why_important": "AIと人間が協調してコードを書くスタイルが標準化し、開発速度が別次元へ突入しています。",
+      "action_item": "開発チームが使っているAIツールの連携状況をヒアリングしてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/satoh_y_0323/articles/378c80cba956c2"
+    },
+    {
+      "title": "モバイルノートをAI最強マシンに変える「GPUボックス」の活用",
+      "category": "最新技術",
+      "summary": "Thunderbolt 5対応の外付けGPUの登場で、軽量PCでもローカルLLMや画像生成が可能に。場所を選ばず高度なAI開発ができる環境が実現します。",
+      "one_liner": "ノートPCを外付けGPUでAI最強機に",
+      "why_important": "高価な機材を揃えずとも、手元の環境を拡張して最新AIを動かせる選択肢が広がりました。",
+      "action_item": "自宅やオフィスの作業環境でAI処理速度に不満がないか確認しましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/special/2100851.html"
+    },
+    {
+      "title": "AIが暴いた「批判的思考」教育の不備とこれからの学習",
+      "category": "最新技術",
+      "summary": "AIの普及で人間の批判的思考の重要性が再浮上。AIの回答を鵜呑みにせず、自ら検証し判断する能力がAI時代の生存戦略となることを示唆しています。",
+      "one_liner": "AI時代にこそ求められる「疑う力」",
+      "why_important": "AIの回答を精査し、多角的に判断する能力こそがビジネスパーソンの差別化要因になります。",
+      "action_item": "AIの回答に対し、あえて反論を1つ考えてみてください。",
+      "source": "Hacker News AI",
+      "url": "https://smarterarticles.co.uk/ai-exposed-the-lie-schools-never-taught-critical-thinking"
+    },
+    {
+      "title": "AI企業の法的責任を巡る対立：Anthropicが厳格な法案に反対",
+      "category": "法規制・倫理",
+      "summary": "AIによる事故の責任を巡りAnthropicが反対を表明。将来のAI開発におけるリスク管理と賠償責任の在り方を決定づける重要な議論です。",
+      "one_liner": "AI企業の責任を巡る法規制の最前線",
+      "why_important": "AI利用に伴うリスクと法的責任の所在は、将来の事業継続性に直結する重要課題です。",
+      "action_item": "AI利用規約やガイドラインに更新の必要がないかチェックしてください。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/anthropic-opposes-the-extreme-ai-liability-bill-that-openai-backed/"
+    },
+    {
+      "title": "OpenAI CEOサム・アルトマン氏への攻撃とAI社会の不安",
+      "category": "リスク管理",
+      "summary": "AIの急激な進化を恐れる人物によるCEO宅襲撃事件。技術革新に対する社会的な心理障壁やAI倫理、社会的責任の重要性が浮き彫りになっています。",
+      "one_liner": "AIへの社会的不安と企業倫理の重み",
+      "why_important": "技術革新だけでなく、社会との対話や心理的な安全性への配慮が不可欠な段階にあります。",
+      "action_item": "周囲が抱くAIへの懸念や不安に耳を傾ける時間を持ってください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/911778/ai-violence-sam-altman-home"
+    }
+  ]
+}

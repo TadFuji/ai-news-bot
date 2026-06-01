@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月25日",
+  "theme": "AI実装、実効性と信頼の再定義",
+  "morning_comment": "安価で高度なAIをどう安全に使いこなすか、問われる時代です。",
+  "articles": [
+    {
+      "title": "DeepSeek、主力AIモデルのAPI価格を75%永久値下げ",
+      "category": "最新技術",
+      "summary": "中国のDeepSeekが主力モデルのAPI料金を75%削減。米国の主要モデルを圧倒するコストパフォーマンスを提示し、企業のAI導入コストを劇的に下げる可能性があります。",
+      "one_liner": "AI利用コストが75%の大幅減",
+      "why_important": "AI導入の最大の壁だったコストが崩壊し、あらゆる業務へのAI適用が経済的に正当化されるフェーズに入りました。",
+      "action_item": "既存のAIツール利用料を見直し、より広範囲な業務への導入シミュレーションを行ってください。",
+      "source": "Hacker News AI",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-23/deepseek-to-make-permanent-75-discount-on-flagship-ai-model"
+    },
+    {
+      "title": "AIチャットボットの「性格」を突く新手のハッキング手法",
+      "category": "リスク管理",
+      "summary": "AIのパーソナリティ設定を悪用し、機密情報を引き出す対話型攻撃が報告。従来の防御をすり抜ける高度な手法に対し、セキュリティ対策の再定義が求められています。",
+      "one_liner": "性格を突く対話型攻撃に警戒を",
+      "why_important": "技術的な対策だけでなく、AIに与える「役割設定」自体の脆弱性を認識し、防御策を講じる必要があります。",
+      "action_item": "自社運用のチャットボットに対し、役割の矛盾を突くようなテスト入力を行ってみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/column/935545/hackers-ai-chatbots"
+    },
+    {
+      "title": "Claude Codeを使い倒すための設定術とメモリ管理",
+      "category": "業務効率化",
+      "summary": "AIエージェント「Claude Code」の能力を最大化する設定方法。CLAUDE.mdを用いたプロジェクト情報の記憶により、指示の手間を省き作業を劇的に効率化します。",
+      "one_liner": "AIエージェントの設定で効率を最大化",
+      "why_important": "コンテキスト管理を自動化することで、AIとの対話の質とスピードが飛躍的に向上し、実務での実用性が高まります。",
+      "action_item": "CLAUDE.mdのように、プロジェクトの背景情報をAIに常時参照させる仕組みを導入しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/tamai_hideyuki/articles/claude-code-config-best-practices"
+    },
+    {
+      "title": "「AIウォッシング」の蔓延、実体のないAIブランド化に警戒",
+      "category": "法規制・倫理",
+      "summary": "実体のないAI機能を謳う「AIウォッシング」が急増。誇大広告によるブランド毀損や法的リスクを避けるため、企業選定における確かな目利きが重要視されています。",
+      "one_liner": "中身のない「AI搭載」に要注意",
+      "why_important": "流行に流されず、本当に価値を生むAI技術を見極める力が、投資やツール選定の成否を分けるようになります。",
+      "action_item": "新規ツールの導入検討時、そのAI機能の具体的な仕組みと実績を厳しく確認してください。",
+      "source": "Hacker News AI",
+      "url": "https://www.theguardian.com/technology/2026/may/24/ai-washing-pr-firms-scrambling-rebrand"
+    },
+    {
+      "title": "Googleですら苦戦するAIセキュリティの現状",
+      "category": "リスク管理",
+      "summary": "最高峰の技術を持つGoogleでもAIセキュリティの確保は試行錯誤の段階。AIの挙動を完全に制御するのは難しく、継続的な監視とアップデートの重要性が強調されています。",
+      "one_liner": "完璧なAIセキュリティは存在しない",
+      "why_important": "大手ですら模索中であることを前提に、AI利用には常にリスクが伴うというマインドセットでの運用設計が必要です。",
+      "action_item": "AI利用ガイドラインを「定期的に更新する」プロセスが社内にあるか確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/"
+    },
+    {
+      "title": "MS研究部門が発表したWeb操作エージェント「Webwright」",
+      "category": "最新技術",
+      "summary": "ブラウザ操作を高い成功率で自動化するフレームワークを公開。人間の代わりに予約や調査、データ入力をこなす未来により、事務作業の在り方が根本から変わります。",
+      "one_liner": "Web操作代行エージェントの衝撃",
+      "why_important": "ブラウザ上で行うあらゆる定型業務が自動化の対象となり、リサーチや入力作業の工数が劇的に削減されます。",
+      "action_item": "ブラウザ上で行っている毎日のルーチンワークをリストアップし、自動化の余地を探してください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/05/24/microsoft-research-releases-webwright-a-terminal-native-web-agent-framework-that-scores-60-1-on-odysseys-up-from-base-gpt-5-4s-33-5/"
+    },
+    {
+      "title": "LLM運用の転換点：要約から「ナレッジの横断統合」へ",
+      "category": "業務効率化",
+      "summary": "単なるテキスト要約から、情報を構造化して統合する「ナレッジグラフ」運用へシフト。組織内の情報の断片化を解消し、高度な意思決定支援を可能にします。",
+      "one_liner": "点の情報を構造化し組織の知へ",
+      "why_important": "情報の繋がりをAIに理解させることで、過去の文脈を完璧に踏まえた一貫性のあるビジネス判断が可能になります。",
+      "action_item": "部署内に散らばったマニュアルや議事録を、一つのナレッジベースに統合し始めてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/znet/articles/2026-llm-knowledge-graph-part1"
+    },
+    {
+      "title": "AIの回答ミスを人間が検出し修正する「協調型」システム",
+      "category": "業務効率化",
+      "summary": "AIと人間が協力して間違いを見つける仕組みが提案。AIの推論過程を可視化することで、ビジネスユーザーが正誤を判断しやすくし、信頼性の高い運用を実現します。",
+      "one_liner": "人間とAIの協調でミスを防ぐ",
+      "why_important": "AIのブラックボックスを解消し、人間が最終判断を下すフローを確立することが、業務品質の担保に直結します。",
+      "action_item": "AIの回答をそのまま信じず、必ず人間が「根拠」をチェックするフローを徹底してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/dataheroes/articles/2026-05-24-cortex-agent-analyst-llm"
+    },
+    {
+      "title": "Webサイト回遊の終焉？「ゼロクリック時代」の到来",
+      "category": "日本市場",
+      "summary": "AIが情報を直接ユーザーに届けることでサイト訪問が不要に。従来のSEOではなく、AIに正しく情報を引用させるための「テキストエンジニアリング」が新たな主戦場となります。",
+      "one_liner": "検索サイトからの流入消失に備えよ",
+      "why_important": "ユーザーがサイトに来ない前提で、AIチャット内で自社情報がどう扱われるかを制御する戦略への転換が急務です。",
+      "action_item": "自社の主要コンテンツがAIチャットでどのように回答されるか、主要LLMで検索してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/eitoatsuta/articles/1cdd6792d87b8f"
+    },
+    {
+      "title": "AmazonのAIウェアラブル「Bee」：便利さとプライバシーの葛藤",
+      "category": "ライフスタイル",
+      "summary": "会話の要約やタスク管理を常時サポートするAIウェアラブルデバイス。利便性の一方で、常に音声を拾われることへのプライバシー懸念が浮き彫りになっています。",
+      "one_liner": "AIウェアラブル、利便性と代償",
+      "why_important": "AIが物理的に身近になる中、職場や家庭での利用ルール作りと、セキュリティ意識の向上が不可欠です。",
+      "action_item": "ウェアラブルデバイスのオフィス持ち込みや録音に関するルールを、改めて整理してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/24/i-tried-amazons-bee-wearable-and-am-both-intrigued-and-slightly-creeped-out/"
+    }
+  ]
+}

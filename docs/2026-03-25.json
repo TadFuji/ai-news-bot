@@ -1,0 +1,107 @@
+{
+  "updated": "2026年03月25日",
+  "theme": "AIは「生成」から「実行」のフェーズへ",
+  "morning_comment": "AIが自律的に動く時代、私たちの役割は「指示」から「管理」へと変わります。",
+  "articles": [
+    {
+      "title": "Claude新機能「Computer Use」がスマホに対応：AIがPC操作を代行",
+      "category": "業務効率化",
+      "summary": "AnthropicのAI「Claude」に、スマホからPC画面を認識・操作できる機能が実装。外出先から自宅やオフィスのPC作業をエージェントとして代行可能になりました。",
+      "one_liner": "スマホからPC操作、AIが代行",
+      "why_important": "AIがデジタル作業を直接代行するエージェント化は、生産性を劇的に変える可能性を秘めています。",
+      "action_item": "移動中にPCでの定型作業をAIに任せられないか検討してみる",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/03/claude_computer_use_feature.html"
+    },
+    {
+      "title": "OpenAIが動画生成AI「Sora」を終了、リソースを別プロジェクトへ",
+      "category": "最新技術",
+      "summary": "OpenAIは期待されていた動画生成AI「Sora」の提供終了を発表。Disneyとの契約も解消し、スーパーアプリ構想など別の優先プロジェクトへ注力します。",
+      "one_liner": "動画生成Sora終了、戦略を転換",
+      "why_important": "有力な技術でもリソース集中により撤退があり得るため、単一技術に依存しない柔軟な戦略が求められます。",
+      "action_item": "自社の生成AI活用計画に代替案があるか確認する",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/articles/2603/25/news065.html"
+    },
+    {
+      "title": "GPT-5.4 mini登場：高性能化の一方で価格は3倍に上昇",
+      "category": "最新技術",
+      "summary": "OpenAIがマルチエージェント開発に最適化した軽量モデルをリリース。推論能力は向上しましたが、API利用料金が前モデル比で3倍に値上がりしています。",
+      "one_liner": "高精度化の一方、利用料は3倍に",
+      "why_important": "AIモデルの高性能化に伴いコストも上昇するため、ビジネスモデルの採算性を常に監視する必要があります。",
+      "action_item": "APIの利用コストを算出し、予算計画に修正が必要か確認する",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2603/25/news017.html"
+    },
+    {
+      "title": "Talat：クラウド不要、ローカル環境で完結するAI議事録アプリ",
+      "category": "リスク管理",
+      "summary": "音声データや処理を外部に送信せず、ユーザーのPC内のみで完結するAI議事録ツールが登場。サブスクなしで購入可能なセキュリティ重視の設計です。",
+      "one_liner": "ローカル完結のAI議事録が登場",
+      "why_important": "セキュリティ規制が厳しい環境でもAIを活用できる選択肢が増えることは、全社的なAI導入を後押しします。",
+      "action_item": "機密情報を扱う会議でローカルAIツールの導入を検討してみる",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/03/24/talats-ai-meeting-notes-stay-on-your-machine-not-in-the-cloud/"
+    },
+    {
+      "title": "日立、現場で自ら学ぶフィジカルAI「IWIM」を公開",
+      "category": "日本市場",
+      "summary": "物流や製造現場でリアルタイムに学習し、最適な動作を自ら見出すAI技術を日立が公開。プログラミング不要で効率的な作業手順を構築します。",
+      "one_liner": "現場で自ら学ぶ、日立の物理AI",
+      "why_important": "物理的な現場作業へのAI実装は、日本の労働力不足という深刻な課題を解決する鍵となります。",
+      "action_item": "自社の物理的な作業プロセスで自動化できる部分を特定する",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2603/25/news043.html"
+    },
+    {
+      "title": "Claude Codeに自律モード追加：開発作業の承認フローを効率化",
+      "category": "業務効率化",
+      "summary": "Anthropicがコーディング支援ツールに自動実行モードを導入。AIが人間の承認を待たず連続してタスクを実行し、開発速度を劇的に向上させます。",
+      "one_liner": "開発AIに自律モードが追加",
+      "why_important": "AIが自律的にタスクを完遂するようになると、人間の役割は作業から品質の承認へとシフトします。",
+      "action_item": "開発チームの承認フローがAI時代に適応しているか話し合う",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/03/24/anthropic-hands-claude-code-more-control-but-keeps-it-on-a-leash/"
+    },
+    {
+      "title": "AIによる高速サイバー攻撃に対抗する5つのネットワーク防御策",
+      "category": "リスク管理",
+      "summary": "AIを駆使した瞬時の脆弱性攻撃が加速。防御側もAIによる自動検知とレスポンスを構築する戦略が必要であり、人間だけの監視には限界がきています。",
+      "one_liner": "加速するAI攻撃にAIで対抗",
+      "why_important": "攻撃側の速度が人間を凌駕する今、防御側もAIによる自動化されたセキュリティ体制が不可欠です。",
+      "action_item": "最新のサイバー攻撃事例をチームで共有し、防衛策を確認する",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/cyberattackers-getting-faster-and-smarter-how-to-fight-back/"
+    },
+    {
+      "title": "OpenAI、開発者向けに若年層の安全を守るAIポリシーを公開",
+      "category": "法規制・倫理",
+      "summary": "10代のユーザーが安全にAIを利用するためのツールと指針を公開。有害コンテンツやプライバシー侵害から若者を保護する機能の実装を支援します。",
+      "one_liner": "若年層を守るAI新ポリシー",
+      "why_important": "AIの安全基準が整備されることで、教育や家庭などより幅広い分野でのAI利用が現実的になります。",
+      "action_item": "組織内のAI利用ガイドラインに安全性の観点が含まれているか確認する",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/03/24/openai-adds-open-source-tools-to-help-developers-build-for-teen-safety/"
+    },
+    {
+      "title": "Google TVにGemini搭載：スポーツ情報や作品深掘りが可能に",
+      "category": "ライフスタイル",
+      "summary": "Google TVにAI「Gemini」が統合され、視聴中の番組情報の深掘りやスポーツの要約が可能に。テレビ視聴体験が能動的な情報収集へと変化します。",
+      "one_liner": "TVがGeminiで知的な体験に",
+      "why_important": "日常生活へのAI統合が進むことで、受動的だった娯楽が情報収集や学習の場へと進化します。",
+      "action_item": "自宅やオフィスのスマート機器でAI連携機能の設定を見直す",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/03/24/google-tv-new-gemini-features-keep-fans-updated-on-sports-teams-deep-dives-visual-answers/"
+    },
+    {
+      "title": "Spotify、本物のアーティストをAI模倣作品から守る新ツールをテスト",
+      "category": "法規制・倫理",
+      "summary": "AIによる模倣コンテンツが無断でアーティスト名を使用することを防ぐツールをテスト中。知的財産権の保護とプラットフォームの質を維持します。",
+      "one_liner": "AI模倣から作家を守る新ツール",
+      "why_important": "知的財産を保護する枠組みの構築は、AIとクリエイターが共生する持続可能な社会に不可欠です。",
+      "action_item": "生成AI利用における著作権侵害のリスク管理について再確認する",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/03/24/spotify-tests-new-tool-to-stop-ai-slop-from-being-attributed-to-real-artists/"
+    }
+  ]
+}

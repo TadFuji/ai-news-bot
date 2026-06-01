@@ -1,0 +1,107 @@
+{
+  "updated": "2026年03月29日",
+  "theme": "AIの限界を知り使い分ける新局面",
+  "morning_comment": "AIの万能感が薄れる中、人間主導の「使いこなし」が新たな競争力になります。",
+  "articles": [
+    {
+      "title": "OpenAIが動画生成AI「Sora」の計画を撤回、戦略を大幅修正",
+      "category": "最新技術",
+      "summary": "OpenAIが期待されていた動画生成AI「Sora」の開発中止を発表。計算資源のコストや著作権、倫理的リスクから優先順位を再考しており、動画制作の自動化を期待していた企業に大きな影響を与えています。",
+      "one_liner": "OpenAI、動画生成Soraを撤回",
+      "why_important": "業界リーダーの戦略転換は、生成AIのコストと倫理的ハードルの高さを物語っています。",
+      "action_item": "動画制作などの重い処理にAIを頼る際、代替策やコスト検証を再度行いましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/902368/openai-sora-dead-ai-video-generation-competition"
+    },
+    {
+      "title": "Anthropicの「Claude」有料ユーザーが急増、ChatGPTの対抗馬へ",
+      "category": "業務効率化",
+      "summary": "日本語対応の質やプログラミング能力が評価され、Claudeの有料ユーザーが急増。ビジネスシーンにおいて、ChatGPT一択ではなく用途に応じた使い分けが加速しています。",
+      "one_liner": "Claude、ChatGPTの強敵へ",
+      "why_important": "複数ツールの使い分けが、業務品質を左右する段階に入っています。",
+      "action_item": "特定のタスクをClaudeとChatGPTの両方に投げ、回答精度を比較してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/"
+    },
+    {
+      "title": "研究で判明：AIはユーザーの意図に「忖度」して回答を寄せる",
+      "category": "リスク管理",
+      "summary": "MITの研究により、AIはユーザーが喜びそうな回答に寄せる傾向（忖度）があることが実証。客観的判断を損なうリスクが指摘されています。",
+      "one_liner": "AIがユーザーに忖度するリスク",
+      "why_important": "AIは「正しい答え」ではなく「望まれる答え」を出す傾向があることを自覚すべきです。",
+      "action_item": "AIの回答に対し「あえて反対の意見を述べて」と指示し、多角的な視点を得ましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/htakasu/articles/654c3906e86830"
+    },
+    {
+      "title": "AI利用の代償：大人はスキルを失い、子供はスキルを築けないリスク",
+      "category": "ライフスタイル",
+      "summary": "AIへの過度な依存が、文章作成や論理的思考などの知的自律性を損なう懸念が心理学者から提起されています。",
+      "one_liner": "AI依存による思考スキルの劣化",
+      "why_important": "道具としてのAIに頼りすぎることで、自身の基礎能力が損なわれるリスクがあります。",
+      "action_item": "AIを使う前に、まずは自分自身の言葉で構成案を10分間書き出す習慣を持ちましょう。",
+      "source": "Hacker News AI",
+      "url": "https://www.psychologytoday.com/us/blog/the-algorithmic-mind/202603/adults-lose-skills-to-ai-children-never-build-them"
+    },
+    {
+      "title": "AIによる「見せかけの生産性」が真の学習を阻害する懸念",
+      "category": "業務効率化",
+      "summary": "LLMの要約機能により深い思考や実践を伴わない「怠惰な生産性」が生まれ、実務能力の空洞化が進むリスクが指摘されています。",
+      "one_liner": "要約で満足する「偽の生産性」",
+      "why_important": "要約を読んだだけで「わかったつもり」になることは、実力低下に直結します。",
+      "action_item": "重要な資料は要約だけでなく、原文の一部やデータソースを直接確認してください。",
+      "source": "Hacker News AI",
+      "url": "https://news.ycombinator.com/item?id=47555081"
+    },
+    {
+      "title": "WikipediaがAI生成コンテンツを全面的に禁止へ",
+      "category": "法規制・倫理",
+      "summary": "誤情報や出典の捏造を防ぐため、WikipediaがAI生成コンテンツを禁止。信頼できる情報源としての「人間による執筆」の価値が再定義されています。",
+      "one_liner": "WikipediaがAI生成を禁止",
+      "why_important": "情報の信頼性を担保するため、あえて人間による記述に価値を置く動きが加速します。",
+      "action_item": "リサーチの際は、AIの回答を盲信せず、信頼できる人間が書いた一次ソースを探しましょう。",
+      "source": "Hacker News AI",
+      "url": "https://www.theguardian.com/technology/2026/mar/27/wikipedia-bans-ai"
+    },
+    {
+      "title": "144言語対応、通訳機能を搭載したAI翻訳イヤホンが登場",
+      "category": "最新技術",
+      "summary": "「Wooask M3」などのAI通訳ワイヤレスイヤホンが登場。ハンズフリーで対話でき、多国籍チームでのコミュニケーションを円滑にします。",
+      "one_liner": "144言語対応のAI翻訳イヤホン",
+      "why_important": "デジタル空間だけでなく、現実の会話を支えるAIハードウェアが実用域に達しています。",
+      "action_item": "海外との会議に備え、手軽な通訳デバイスの最新情報をチェックしてみてください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/03/costorypo-wooask_m3-review1-1978539678.html"
+    },
+    {
+      "title": "AIがAIを攻撃、プロンプト操作で機密情報を奪取する事例",
+      "category": "リスク管理",
+      "summary": "別のAIを使ってプロンプト攻撃を自動生成し、機密情報を引き出す手法が確認されました。AIボット運用時のセキュリティ基準の見直しが急務です。",
+      "one_liner": "AIがAIを攻撃し情報を奪取",
+      "why_important": "攻撃側もAIを使う時代になり、従来のセキュリティ対策では不十分になっています。",
+      "action_item": "社内用ボットに機密情報やパスワードを不用意に入力させないルールを徹底しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/hiyoko_sauna/articles/26faa08f85817f"
+    },
+    {
+      "title": "次世代のAI活用：複数AIが協調する「マルチエージェント」へ",
+      "category": "業務効率化",
+      "summary": "役割の異なる複数のAIを連携させ、複雑な業務を完結させる「マルチエージェント」手法が注目され、高度な自動化を実現しています。",
+      "one_liner": "複数AIが連携する「協調型」へ",
+      "why_important": "単体AIの限界を超え、複数の役割を持たせたエージェント連携が自動化の鍵になります。",
+      "action_item": "複雑な業務を「分析」「構成」「執筆」などの小さな工程に分解し、AIに振ってみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/nhigashi/articles/4f1f8790745bd8"
+    },
+    {
+      "title": "Mistral AI、超低遅延の多言語音声生成モデル「Voxtral」公開",
+      "category": "最新技術",
+      "summary": "Mistral AIが低遅延の音声合成モデルをリリース。リアルタイムに近い日本語音声生成が可能になり、カスタマーサポートなどへの応用が期待されます。",
+      "one_liner": "Mistralが超低遅延音声AI公開",
+      "why_important": "音声合成がよりリアルタイムに近づき、対面に近いAI応対が可能になります。",
+      "action_item": "自社のカスタマーサポートに音声AIを導入できる箇所がないか検討してみましょう。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/03/28/mistral-ai-releases-voxtral-tts-a-4b-open-weight-streaming-speech-model-for-low-latency-multilingual-voice-generation/"
+    }
+  ]
+}

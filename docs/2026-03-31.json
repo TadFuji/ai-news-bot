@@ -1,0 +1,107 @@
+{
+  "updated": "2026年03月31日",
+  "theme": "自律化するAIと変わる人間の役割",
+  "morning_comment": "AIが実務から管理まで浸透し、人の「介在価値」が問われる局面です。",
+  "articles": [
+    {
+      "title": "プロンプトに「専門家です」は精度を下げる可能性：最新研究",
+      "category": "業務効率化",
+      "summary": "南カリフォルニア大学の研究により、「あなたは専門家です」というペルソナ指定が、論理的思考を要するタスクでAIの精度を低下させることが判明しました。AIが「らしい」振る舞いを優先し、事実や正確性を軽視するバイアスが生じるためです。",
+      "one_liner": "専門家プロンプトが精度を下げる恐れ",
+      "why_important": "「AIらしさ」に惑わされず、正確性が求められる業務では指示を簡潔に保つ技術が重要になります。",
+      "action_item": "今日作成するプロンプトから過度な役割設定を外し、出力の正確性を比較してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/syoshida07/articles/f17cf7198035a1"
+    },
+    {
+      "title": "「B2A（対エージェントビジネス）」時代の到来：広告の対象はAIへ",
+      "category": "最新技術",
+      "summary": "ユーザーが検索せずAIエージェントに推奨を頼む未来を見据え、マーケティング対象が人間からAIへとシフトする「B2A」の概念が登場しました。AIの推薦アルゴリズムに最適化する新しい宣伝戦略が企業の命運を分ける可能性があります。",
+      "one_liner": "顧客はAIへ。B2A時代の幕開け",
+      "why_important": "検索行動の変化により、従来のSEOだけでなく「AIに選ばれるための情報発信」が不可欠になります。",
+      "action_item": "自社サービスが主要なAIでどう要約・推薦されるか、実際に検索して確認してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/tkou15/articles/b2a-platform-concept"
+    },
+    {
+      "title": "Okta CEOが提唱する「AIエージェントのアイデンティティ管理」",
+      "category": "リスク管理",
+      "summary": "認証管理大手のOktaが、AIエージェント自身のIDとセキュリティを管理する重要性を強調しています。AIが自律的に社内データへアクセスする時代において、権限管理は企業の新たなセキュリティ課題となります。",
+      "one_liner": "AIにも「社員証」が必要な時代へ",
+      "why_important": "AIによる自律的な業務代行が進む中、誰の責任でAIが動いているかを明確化するガバナンスが求められます。",
+      "action_item": "部署内で導入しているAIツールがどのデータにアクセスしているか、権限設定を再確認してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/podcast/902264/oktas-ceo-is-betting-big-on-ai-agent-identity"
+    },
+    {
+      "title": "AIが「キャリアの階段」を奪う？中堅エンジニア・管理職への影響",
+      "category": "最新技術",
+      "summary": "AIが初歩的なタスクを代行することで、若手が経験を積む機会が失われ、中堅層へ成長するパスが途切れる懸念が議論されています。これは組織全体の育成モデルを根本から問い直す問題です。",
+      "one_liner": "AIが若手の成長機会を奪う懸念",
+      "why_important": "定型業務をAIに任せる一方で、意図的に部下に経験を積ませる「新しい育成設計」がリーダーの責務となります。",
+      "action_item": "AIに任せている業務のうち、一つをあえて部下と一緒に進め、思考プロセスを共有してください。",
+      "source": "Hacker News AI",
+      "url": "https://negroniventurestudios.com/2026/03/19/the-ladder-is-missing-rungs/"
+    },
+    {
+      "title": "米国人の15%が「AIの上司」の下で働くことを許容",
+      "category": "最新技術",
+      "summary": "米国の調査で、一定数がAIによる管理を受け入れる意向を示しました。人間関係の複雑さを避け、客観的なデータに基づいた公平な評価を求めるニーズが背景にあります。",
+      "one_liner": "15%が「AIの上司」を許容する米国",
+      "why_important": "マネジメントの一部がAI化される中で、人間にしかできない感情的サポートやビジョン提示の価値が高まります。",
+      "action_item": "チームのタスク割り振りを、一度客観的なデータに基づいたAI提案と比較してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/03/30/ai-boss-supervisor-us-quinnipiac-poll/"
+    },
+    {
+      "title": "Anthropic情報の自動収集をAIに任せる「スケジュール済みタスク」の実力",
+      "category": "日本市場",
+      "summary": "AIツールの「Cowork」を活用し、特定のニュースを定期的にチェック・要約させる自動化機能が注目されています。ルーチン化した情報収集をAIにスケジューリングすることで、生産性が劇的に向上します。",
+      "one_liner": "情報収集はAIに「予約」する段階へ",
+      "why_important": "「情報を探す」時間をゼロにし、得られた情報をどう判断し活用するかにリソースを集中すべき時です。",
+      "action_item": "毎日チェックしている定点観測ニュースをAIで自動要約する設定を一つ試してください。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2603/31/news027.html"
+    },
+    {
+      "title": "AIボイスレコーダー「HiDock P1」が大幅割引、議事録の自動化を促進",
+      "category": "業務効率化",
+      "summary": "物理デバイスとAIが統合されたボイスレコーダーが登場。録音から文字起こし、要約までをシームレスに行うことで、会議記録の作成コストを大幅に削減します。",
+      "one_liner": "AI議事録が「専用端末」で加速",
+      "why_important": "ソフトウェア単体ではなく、ハードウェアとの統合により業務フローそのものが自動化される実例です。",
+      "action_item": "会議の録音・要約フローを全件自動化し、人間は確認のみにする運用を検討してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/special/2095760.html"
+    },
+    {
+      "title": "Microsoftが多言語対応の最新AIモデル「Harrier-OSS-v1」をリリース",
+      "category": "最新技術",
+      "summary": "日本語を含む多言語のテキスト埋め込み精度が大幅に向上した新モデルが発表されました。社内文書検索やチャットボットが、より自然な日本語で正確に機能するようになります。",
+      "one_liner": "日本語検索の精度がMS新モデルで向上",
+      "why_important": "基盤モデルの進化により、社内ナレッジの活用精度が向上し、必要な情報へ即座にアクセス可能になります。",
+      "action_item": "社内のAI検索システムの回答精度に課題がないか、現場のフィードバックを収集してください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/03/30/microsoft-ai-releases-harrier-oss-v1-a-new-family-of-multilingual-embedding-models-hitting-sota-on-multilingual-mteb-v2/"
+    },
+    {
+      "title": "MicrosoftとAmazonがAI健康ツールを拡充：医療記録との連携へ",
+      "category": "ライフスタイル",
+      "summary": "個人の医療記録と連携し、パーソナライズされた健康アドバイスを行うAIツールが拡充されています。利便性とプライバシーのバランスが今後の普及の焦点となります。",
+      "one_liner": "健康管理はAIが医療記録と連携し伴走",
+      "why_important": "ビジネスパーソンの資本である健康管理が、AIによる高度なパーソナライズ化でサポートされる時代です。",
+      "action_item": "自身のヘルスケアデータをAIに読み込ませ、体調改善に向けた具体的な提案を受けてみてください。",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/03/30/1134795/there-are-more-ai-health-tools-than-ever-but-how-well-do-they-work/"
+    },
+    {
+      "title": "Intelが32GB VRAM搭載の新型GPUを発表：ローカルAI推論に最適",
+      "category": "最新技術",
+      "summary": "Intelが32GBの大容量ビデオメモリを搭載したGPUを発表。機密情報の観点からクラウドが使えない環境でも、社内PC上で高性能なLLMを動かす「ローカルAI」環境が構築しやすくなります。",
+      "one_liner": "32GB VRAMでローカルAIが身近に",
+      "why_important": "セキュリティ要件が厳しい業務でも、安価に高性能なAI環境を自社内に構築できる選択肢が増えました。",
+      "action_item": "社外秘データを扱う業務で、ローカルLLMの導入が適した箇所をリストアップしてください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/03/intel-arc-pro-b65-and-b70.html"
+    }
+  ]
+}

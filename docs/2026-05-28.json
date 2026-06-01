@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月28日",
+  "theme": "暗黙知のAI化と実務実装",
+  "morning_comment": "AIが個人の経験を組織の力に変え、実務での成果が具体化し始めました。",
+  "articles": [
+    {
+      "title": "自治体DXの鍵、AI共有マニュアルによる属人化解消の重要性",
+      "category": "日本市場",
+      "summary": "深刻な職員不足に直面する自治体で、AIを活用して暗黙知を形式知化し、業務マニュアルを自動作成する取り組みが加速。",
+      "one_liner": "AIマニュアルで自治体の属人化を解消",
+      "why_important": "属人化した業務をAIが扱える形に整理することは、組織の持続可能性を確保する上で不可欠なステップです。",
+      "action_item": "自分のルーチン業務のうち、マニュアル化されていないものを一つ書き出してみましょう。",
+      "source": "ITmedia AI Plus",
+      "url": "https://www.itmedia.co.jp/business/articles/2605/28/news023.html"
+    },
+    {
+      "title": "製造現場の暗黙知をAIで形式知化する新プラットフォーム",
+      "category": "最新技術",
+      "summary": "ギリア社が3Dモデルや失敗の文脈を統合するLLM基盤を開始。ベテランの設計ノウハウを組織資産として一元化する。",
+      "one_liner": "ベテランの設計技術をAIで形式知化",
+      "why_important": "「なぜ失敗したか」という文脈までAIが学習することで、技術継承のスピードが劇的に向上します。",
+      "action_item": "過去のプロジェクトの「失敗理由」をチーム内で共有する仕組みを検討してください。",
+      "source": "ITmedia AI Plus",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2605/27/news134.html"
+    },
+    {
+      "title": "RobinhoodがAIエージェントによる自動株式取引を開始",
+      "category": "ライフスタイル",
+      "summary": "証券アプリのRobinhoodが、AIエージェントによる自律的な株式売買機能を発表。個人投資家もアルゴリズム取引が可能に。",
+      "one_liner": "AIが資産運用を自律的に実行へ",
+      "why_important": "金融のAI化が個人レベルまで浸透し、資産運用の常識が塗り替えられようとしています。",
+      "action_item": "AIによる自動投資サービスのメリットとリスクを改めて整理してみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/938095/robinhood-ai-agent-stock-trading"
+    },
+    {
+      "title": "YouTube、AI生成動画への自動ラベル表示を開始",
+      "category": "リスク管理",
+      "summary": "AIで生成・改変された動画を自動検出しラベルを表示する機能を導入。ディープフェイク対策と情報の透明性を強化。",
+      "one_liner": "動画の真偽をAIが自動判別・表示",
+      "why_important": "情報の透明性が確保される一方、発信側にはAI利用の適切な開示責任が伴うようになります。",
+      "action_item": "生成AIで作られた情報の出典や信憑性を確認する習慣を今日からつけましょう。",
+      "source": "Hacker News AI",
+      "url": "https://blog.youtube/news-and-events/improving-ai-labels-viewers-creators/"
+    },
+    {
+      "title": "AI検索の台頭により既存のSEO戦略が根本から変化",
+      "category": "業務効率化",
+      "summary": "Google検索へのAI統合により、ユーザーがサイトを訪問しない「ゼロクリック」が一般化。従来のSEOは通用しなくなっている。",
+      "one_liner": "AIに選ばれるための新SEO戦略が必要",
+      "why_important": "AIにどう引用されるかを考慮した、新しい形でのブランド露出戦略への転換が急務です。",
+      "action_item": "自社のサービス名がChatGPTなどのAIでどう紹介されるか、実際に検索して確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/podcast/your-seo-strategy-is-optimized-for-a-search-engine-that-no-longer-exists/"
+    },
+    {
+      "title": "AI活用により従業員1人あたりの売上が50%増加",
+      "category": "業務効率化",
+      "summary": "給与計算のRemote社が、人員を増やさずAI導入で生産性を向上させ、年間収益3億ドルを達成した実例。",
+      "one_liner": "AIで個人の生産性が劇的に向上",
+      "why_important": "AIは人を減らすためではなく、個人のパフォーマンスを最大化し企業の利益率を高めるツールであると証明されました。",
+      "action_item": "AIで時短できる定型タスクを特定し、空いた時間をクリエイティブな仕事に充ててみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/27/payroll-startup-remote-says-it-grew-revenue-50-per-employee-without-adding-headcount/"
+    },
+    {
+      "title": "AWSのAIエージェント導入で運用コストが最大97%削減",
+      "category": "業務効率化",
+      "summary": "Amazon Bedrockを活用したビジネス支援AIエージェントにより、従来比で劇的なコスト削減と効率化を実現。",
+      "one_liner": "AIエージェントで運用コストを極小化",
+      "why_important": "エージェント技術により、複雑なバックオフィス業務も極めて低コストで自動化可能な段階に到達しています。",
+      "action_item": "社内の高コストな事務タスクにAIエージェントが適用できるか、候補を1つ挙げてみましょう。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/building-ai-agents-for-business-support-using-amazon-bedrock-agentcore/"
+    },
+    {
+      "title": "AIの未来はオンプレミスへ、Dellが提唱するハイブリッド戦略",
+      "category": "リスク管理",
+      "summary": "コスト、データ主権、セキュリティの観点から、AIワークロードをオンプレミスに戻す動きが加速している。",
+      "one_liner": "セキュリティ重視のオンプレ回帰が加速",
+      "why_important": "機密情報を扱う企業にとって、クラウド一辺倒ではないインフラ戦略の再考が必要な時期に来ています。",
+      "action_item": "自社データの機密レベルに応じて、AIの最適な活用環境（クラウドか社内か）を整理しましょう。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/dell-tech-world-2026-why-the-future-of-ai-is-moving-on-premises/"
+    },
+    {
+      "title": "金融ドキュメントのAI自動解析がAmazon Bedrockで加速",
+      "category": "業務効率化",
+      "summary": "銀行取引明細書や契約書などの複雑な書類から、高精度に情報を抽出・自動化する新技術が展開。",
+      "one_liner": "複雑な金融書類の解析をAIで自動化",
+      "why_important": "非構造化データの処理能力向上が、これまで手動だった事務部門の生産性を底上げします。",
+      "action_item": "紙やPDFで管理している定型書類のデジタル化プロセスをチームで見直してみてください。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/process-financial-documents-using-amazon-bedrock-data-automation/"
+    },
+    {
+      "title": "MetaがSNSサブスクにAI機能を統合、有料プランを拡充",
+      "category": "ライフスタイル",
+      "summary": "FacebookやInstagramの有料会員向けに高度なAI機能を搭載する計画。AI活用における格差が顕在化。",
+      "one_liner": "SNSにも有料AI機能の波が到来",
+      "why_important": "最先端のAI機能が有料化される中で、どのツールに投資すべきか見極める視点が重要になります。",
+      "action_item": "現在利用しているツールの有料プランに含まれるAI機能を一度確認してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans/"
+    }
+  ]
+}

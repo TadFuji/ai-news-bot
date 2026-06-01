@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月08日",
+  "theme": "ウェアラブルと組織を変えるAIの浸透",
+  "morning_comment": "デバイスから組織まで、AIは生活の細部に溶け込み始めています。",
+  "articles": [
+    {
+      "title": "Googleが「Fitbit Air」を発表、Geminiが専任AIコーチに",
+      "category": "日本市場",
+      "summary": "Googleは画面のない超小型ウェアラブル端末Fitbit Airを発表。Geminiが専任コーチとしてパーソナライズされた健康アドバイスを日本市場向けに提供する。",
+      "one_liner": "Geminiが専任の健康コーチに",
+      "why_important": "健康管理がAIで高度に自動化され、個人の体調に最適化された働き方が可能になります。",
+      "action_item": "AIによる健康管理が自分の生産性にどう寄与するか考えてみてください。",
+      "source": "ITmedia AI Plus",
+      "url": "https://www.itmedia.co.jp/news/articles/2605/08/news050.html"
+    },
+    {
+      "title": "米Coinbase、AIによる業務変化を理由に14％の人員削減",
+      "category": "リスク管理",
+      "summary": "暗号資産取引所のCoinbaseがAI導入による効率化と組織再編を理由に従業員の14％削減を発表。AIが実業務を代替し組織の在り方を変える具体例となった。",
+      "one_liner": "AIによる効率化で人員14%削減",
+      "why_important": "AIは業務の一部を担うだけでなく、組織構造そのものを変容させる力を持っています。",
+      "action_item": "自分の役割がAI環境下でどのように変化するか想定してみましょう。",
+      "source": "ITmedia AI Plus",
+      "url": "https://www.itmedia.co.jp/aiplus/articles/2605/08/news044.html"
+    },
+    {
+      "title": "MicrosoftのAI機能にセキュリティの弱点、データ流出の懸念",
+      "category": "リスク管理",
+      "summary": "セキュリティ研究者がMicrosoftのAI機能における脆弱性を指摘。暗号化されていても特定の条件下でデータが露出する可能性があるとし、慎重な運用を求めている。",
+      "one_liner": "AI機能にデータ流出の脆弱性",
+      "why_important": "利便性の高いAIツールの導入には、常にセキュリティリスクの監視が不可欠です。",
+      "action_item": "業務で利用中のAIツールに対する権限設定を再確認してください。",
+      "source": "ITmedia AI Plus",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2605/08/news029.html"
+    },
+    {
+      "title": "PerplexityのMac用AIエージェントが全ユーザーに開放",
+      "category": "業務効率化",
+      "summary": "AI検索エンジンのPerplexityがMac用デスクトップアプリを公開。ブラウザを介さず直接デスクトップからAIエージェントとして操作サポートが可能になった。",
+      "one_liner": "AIエージェントがMacで一般公開",
+      "why_important": "デスクトップ直結のAIがリサーチ速度を劇的に高め、情報収集の在り方を変えます。",
+      "action_item": "Macユーザーならアプリを導入し、ショートカットでの検索を試しましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/07/perplexitys-personal-computer-is-now-available-everyone-on-mac/"
+    },
+    {
+      "title": "CursorエージェントがMCP経由でコード構造の高速クエリに対応",
+      "category": "最新技術",
+      "summary": "AIエディタCursorがMCPを介してRubyDex等と連携。大規模なコードベースでもAIが構造を正確かつ高速に把握できる新機能を搭載した。",
+      "one_liner": "コード構造をAIが超高速に把握",
+      "why_important": "開発エージェントの進化により、大規模プロジェクトの保守や開発が容易になります。",
+      "action_item": "Cursor等の次世代エディタをチームで試用し、開発効率を測定しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kota_koyama/articles/a0cd2f1d59ef72"
+    },
+    {
+      "title": "EU AI法、無許可のAI性的画像生成を禁止する修正で合意",
+      "category": "法規制・倫理",
+      "summary": "EUはAI法において、本人の許可なき性的画像のAI生成を厳格に禁止することで暫定合意。ディープフェイク規制の世界的な基準となる見通し。",
+      "one_liner": "無許可の性的画像生成を厳格禁止",
+      "why_important": "AIの倫理的利用は法的義務となり、企業には適切なガバナンスが求められます。",
+      "action_item": "社内のAI利用ガイドラインに最新の倫理基準が反映されているか確認しましょう。",
+      "source": "ITmedia AI Plus",
+      "url": "https://www.itmedia.co.jp/aiplus/articles/2605/08/news053.html"
+    },
+    {
+      "title": "OpenAI、APIに音声知能の新機能を導入",
+      "category": "業務効率化",
+      "summary": "OpenAIが音声認識と生成を統合したAPI機能を発表。低遅延で自然な音声対話AIを顧客サービスや教育アプリに組み込むことが容易になる。",
+      "one_liner": "音声対話AIの構築がより容易に",
+      "why_important": "遅延の少ない音声UIにより、カスタマーサポートや教育サービスの質が向上します。",
+      "action_item": "自社の顧客接点で音声AIが活用できる箇所がないか検討しましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/"
+    },
+    {
+      "title": "Apple、AIカメラ搭載AirPodsの量産試作を間近に控える",
+      "category": "最新技術",
+      "summary": "Appleが環境認識用のカメラを搭載したAirPodsを開発中。AIが周囲の視覚情報を理解し、リアルタイムで音声支援を行うウェアラブルAIの実現を目指す。",
+      "one_liner": "カメラ搭載で視覚を得るAIイヤホン",
+      "why_important": "AIがユーザーと同じ景色を見ることで、真のコンテキスト理解に基づいた支援が可能になります。",
+      "action_item": "画面を見ない状態でのAIアシスタントの活用法を想像してみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/926376/apple-airpods-cameras-ai-production"
+    },
+    {
+      "title": "ChatGPT、自傷行為などを検知し家族へ通知する「緊急連絡先」導入",
+      "category": "ライフスタイル",
+      "summary": "OpenAIはChatGPTとの会話からメンタルヘルス上の懸念を検知し、指定された信頼できる連絡先へ通知する安全機能を追加した。",
+      "one_liner": "メンタル危機を察し緊急連絡先へ",
+      "why_important": "AIは実務のみならず、ユーザーの心身の安全を守るセーフティネットへと進化しています。",
+      "action_item": "ツールが持つ安全機能の設定項目を確認し、その意義を理解しましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification"
+    },
+    {
+      "title": "Chromeに統合されたGeminiモデルを無効化する方法が話題に",
+      "category": "リスク管理",
+      "summary": "Google Chromeに統合された巨大なAIモデルによる負荷やプライバシーへの懸念から、Gemini機能を無効化・削除する手順がユーザー間で注目を集めている。",
+      "one_liner": "ブラウザ統合AIの無効化が話題",
+      "why_important": "AI機能を盲信するのではなく、必要に応じて制御するリテラシーが重要です。",
+      "action_item": "業務マシンの負荷やプライバシー設定を考慮し、AIの有効化範囲を決めましょう。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/you-can-disable-gemini-in-chrome-if-its-freaking-you-out/"
+    }
+  ]
+}

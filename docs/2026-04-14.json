@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月14日",
+  "theme": "AIは「使う道具」から「自律する相棒」へ",
+  "morning_comment": "自律型エージェントが実用化。AIに任せる領域を再考する時期が来ました。",
+  "articles": [
+    {
+      "title": "Microsoft Copilotが24時間自律実行エージェントへ進化",
+      "category": "業務効率化",
+      "summary": "Microsoftが365 Copilotに自律型AIエージェント機能を統合するテストを開始。人間が指示を出さずともメール返信や調整を24時間体制で行います。",
+      "one_liner": "Copilotが自律型エージェントに",
+      "why_important": "24時間稼働するAIが、あなたの代わりにルーチンワークを完結させる時代が目前です。",
+      "action_item": "毎日発生する「定型的なメール返信や調整作業」をリストアップしてみましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/911080/microsoft-ai-openclaw-365-businesses"
+    },
+    {
+      "title": "ビズリーチ社長が語る、AI時代のSaaS生存戦略",
+      "category": "日本市場",
+      "summary": "生成AIが既存ツールを代替する懸念に対し、データを武器にAIをプラットフォームへ組み込み進化させる独自の戦略が語られました。",
+      "one_liner": "SaaSはAI融合で進化する",
+      "why_important": "既存ツールがAIに代替されるか、AIを味方にするか、選別の目が問われます。",
+      "action_item": "現在利用中のSaaSに、AIによる自動化機能が追加されていないか確認しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2604/14/news038.html"
+    },
+    {
+      "title": "ザッカーバーグCEOが「AIクローン」を開発し会議に出席へ",
+      "category": "ライフスタイル",
+      "summary": "MetaのCEOが、自身の思考や外見を学習させたAIアバターを会議に参加させ、フィードバックや回答を代行させる試みを進めています。",
+      "one_liner": "経営者がAIクローンで会議出席",
+      "why_important": "物理的制約を超えるリーダーシップの形として、自身の分身を育てる発想が必要になります。",
+      "action_item": "自分の専門知識や判断基準をAIに学習させるとしたら、何を教えるか考えてみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/910990/meta-ceo-mark-zuckerberg-ai-clone"
+    },
+    {
+      "title": "OpenAIの機密メモ流出：企業向け市場での「独占」狙う",
+      "category": "最新技術",
+      "summary": "内部メモから、競合に対し技術提供以上のエコシステムを構築し、企業ユーザーを深く囲い込む強硬な戦略が明らかになりました。",
+      "one_liner": "OpenAI、企業市場の独占狙う",
+      "why_important": "ChatGPTが企業インフラになる中で、特定プラットフォームへの依存リスクも考慮すべきです。",
+      "action_item": "自社がどのAIプラットフォームを主力にするか、方針をチームで共有しましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/911118/openai-memo-cro-ai-competition-anthropic"
+    },
+    {
+      "title": "顔認識AIスマートグラスへの警告：プライバシー保護の岐路",
+      "category": "リスク管理",
+      "summary": "Metaのスマートグラスへの顔認識搭載に対し、瞬時の個人特定リスクを懸念する多くの団体が警告を発し、議論が加速しています。",
+      "one_liner": "顔認識グラスにプライバシーの警告",
+      "why_important": "AIの利便性が高まる一方、個人情報保護に関する倫理的判断が企業の信頼を左右します。",
+      "action_item": "デバイス活用時のプライバシーリスクについて、同僚と意見を交わしてみてください。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/meta-ray-ban-oakley-smart-glasses-no-face-recognition-civil-society/"
+    },
+    {
+      "title": "自律型AIエージェントに潜むセキュリティの死角",
+      "category": "リスク管理",
+      "summary": "権限を与えられたAIが外部の不正指示に従いデータを送信する等の脆弱性が指摘され、利便性と安全性の両立が課題となっています。",
+      "one_liner": "AIエージェントに潜む決済リスク",
+      "why_important": "権限を持つAIが不正操作されるリスクを防ぐため、実行プロセスの監視体制が必須となります。",
+      "action_item": "AIに付与する権限（アクセス範囲や決済権限）の境界線を再点検してください。",
+      "source": "KDnuggets",
+      "url": "https://www.kdnuggets.com/are-ai-agents-your-next-security-nightmare"
+    },
+    {
+      "title": "「誰も知らない」国産LLMの現状とビジネス活用の可能性",
+      "category": "日本市場",
+      "summary": "ソフトバンクやNTT等の国産LLMを整理。高い日本語性能や国内サーバー運用の強みが、日本企業の本格導入において再注目されています。",
+      "one_liner": "国産LLMが持つ独自の強み",
+      "why_important": "高い日本語性能と国内サーバー運用の安心感は、機密情報を扱う業務で強力な選択肢になります。",
+      "action_item": "特定の商習慣が必要な業務において、国産AIの導入可能性を検討してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/yumeno/articles/5daff12fd4eeb0"
+    },
+    {
+      "title": "2026年版スタンフォードAI Index：最新のトレンドと不安",
+      "category": "最新技術",
+      "summary": "最新の年次報告書が公開。AIの技術的飛躍の一方で、雇用喪失やプライバシーに対する一般市民の不安が高まっていることが浮き彫りに。",
+      "one_liner": "AIへの期待と不安が拡大中",
+      "why_important": "技術革新と社会の受容性のギャップを理解することが、円滑なAI導入の鍵となります。",
+      "action_item": "AI導入に対するチームメンバーの率直な「不安」をヒアリングしてみましょう。",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/04/13/1135675/want-to-understand-the-current-state-of-ai-check-out-these-charts/"
+    },
+    {
+      "title": "AIが社内知識を自動で洗練させる「自己進化型wiki」の試み",
+      "category": "業務効率化",
+      "summary": "社内wikiやコードをAIが自動で整理・更新する手法が登場。情報の属人化と風化を、AIという「自律的作業者」で解決します。",
+      "one_liner": "AIが社内知識を自動で最新化",
+      "why_important": "情報が風化しがちな社内wikiをAIに管理させることで、組織の知的生産性が劇的に向上します。",
+      "action_item": "放置されている社内ドキュメントを一つ選び、AIに要約させてみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/analysis/articles/thought-analyzer-self-evolution"
+    },
+    {
+      "title": "中国最強AI「GLM-5.1」公開、8時間の自律実行が可能に",
+      "category": "最新技術",
+      "summary": "中国のZhipu AIが、一度の指示で最大8時間連続して試行錯誤しながら高度なタスクを完遂できる次世代モデルを公開しました。",
+      "one_liner": "8時間連続で自律実行する中国AI",
+      "why_important": "一度の指示で長時間思考し続けるAIの登場により、複雑なプロジェクト管理も自動化の対象になります。",
+      "action_item": "完了まで数時間かかる「調査や分析タスク」をAIに丸投げする準備を始めましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/lumichy/articles/glm-5-1-review-1500000-tokens-reasoning"
+    }
+  ]
+}

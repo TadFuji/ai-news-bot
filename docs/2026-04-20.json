@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月20日",
+  "theme": "AIを自分専用に使いこなす技術",
+  "morning_comment": "AIは道具から個人パートナーへ。そのための設定と管理を学びましょう。",
+  "articles": [
+    {
+      "title": "AIを壁打ち相手にしたら、要件定義の視野が広がった",
+      "category": "業務効率化",
+      "summary": "ClaudeなどのLLMをプロジェクトマネジメントの壁打ち相手として活用した実践例。製品要求仕様書（PRD）をAIに読み込ませ、対話を通じて仕様の矛盾や視点の抜け漏れを洗い出します。",
+      "one_liner": "AI壁打ちで要件定義を効率化",
+      "why_important": "1人で考える限界を超え、多角的な視点を短時間で獲得できるようになります。",
+      "action_item": "次の資料作成時、AIに「反対意見を出して」と依頼してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/scogr_tech/articles/92b03014838e9d"
+    },
+    {
+      "title": "AIに「自分」を記憶させる仕組み：LLM Wikiの活用",
+      "category": "業務効率化",
+      "summary": "AIに自分のビジネス環境や思考スタイル、好みの表現などを記録した専用Wikiを持たせる手法です。毎回ゼロから背景を説明する手間を省き、回答を高度にパーソナライズします。",
+      "one_liner": "自分の分身をAIに記憶させる",
+      "why_important": "指示の手間を省き、AIとの意思疎通の解像度を劇的に高めることができます。",
+      "action_item": "自分の仕事のスタイルを箇条書きにし、AIのカスタム設定に入れてみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/biscuit/articles/llm-wiki-claude-code-personal-knowledge-base"
+    },
+    {
+      "title": "Gemini Personal Intelligenceの設定で精度向上",
+      "category": "業務効率化",
+      "summary": "GoogleのAI「Gemini」に、カレンダーやメールなどのGoogleアプリと連携する機能を設定したレビュー。日常の文脈をAIが自動で把握し、最適な提案や検索を可能にします。",
+      "one_liner": "Google連携でAIが秘書に",
+      "why_important": "日常業務の文脈をAIが把握することで、明示的な指示の手間が最小限になります。",
+      "action_item": "Geminiの設定画面でカレンダーやメールとの連携をONにしてください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/gemini-personal-intelligence-hands-on/"
+    },
+    {
+      "title": "Context Rot：長い会話ほどAIが劣化する構造的問題",
+      "category": "リスク管理",
+      "summary": "AIとの対話が長くなるほど精度が低下する現象を解説。古い情報がノイズとなり、重要な指示を忘れてしまう原因になります。AIを賢く使い続けるためのセッション管理の重要性を説いています。",
+      "one_liner": "長い会話はAIの精度を低下させる",
+      "why_important": "AIの構造的限界を知ることで、ミスを防ぎ効率的な対話を維持できます。",
+      "action_item": "話題が変わるタイミングで新しいチャットセッションを立ち上げてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/analysis/articles/thought-analyzer-context-rot"
+    },
+    {
+      "title": "NVIDIA BroadcastでWeb会議の音声を改善",
+      "category": "業務効率化",
+      "summary": "RTX搭載PCで利用できるAIツール。AIが周囲の騒音や部屋のエコー、相手側のノイズまでもリアルタイムで除去し、オンライン会議の質を劇的に向上させます。",
+      "one_liner": "AIノイズ除去で会議の質を向上",
+      "why_important": "音声品質は信頼感に直結します。騒がしい環境でもプロフェッショナルな印象を与えられます。",
+      "action_item": "Web会議ツールの設定でノイズ抑制設定が有効になっているか確認しましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/special/2101436.html"
+    },
+    {
+      "title": "ChatGPTが自信満々に嘘をつく構造的な理由",
+      "category": "リスク管理",
+      "summary": "AIが情報の正しさよりも「単語の出現確率」を重視する仕組みを解説。なぜ確信を持ってハルシネーション（嘘）をつくのかを理解し、適切な距離感で活用するリテラシーを提供します。",
+      "one_liner": "AIの自信満々な嘘を防ぐ",
+      "why_important": "生成AIの仕組みを正しく理解することで、事実確認を怠らない習慣が身につき、リスクを減らせます。",
+      "action_item": "AIが出力した数値や固有名詞は、必ず一次ソースで確認してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/koji_ai_lab/articles/5e0182282a8546"
+    },
+    {
+      "title": "システムプロンプトとユーザープロンプトの使い分け",
+      "category": "最新技術",
+      "summary": "LLMにおける役割（role）の違いを整理。AIのキャラクターを定義するSystemと個別依頼を行うUserを分けることで、より意図に沿った正確な回答を引き出す基礎知識を解説します。",
+      "one_liner": "役割定義でAIの回答精度を高める",
+      "why_important": "AIの「振る舞い」と「タスク」を明確に分けることで、出力のブレを最小限に抑えられます。",
+      "action_item": "指示の冒頭に「あなたは〇〇の専門家です」と役割を明記してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/lumichy/articles/system-vs-user-prompt-llm-guide"
+    },
+    {
+      "title": "AIによるプロンプトの自動チューニング手法",
+      "category": "業務効率化",
+      "summary": "作成したプロンプトの不備を別のAIに検証させ、再現性を高めるテクニック。自分一人では気づきにくい前提条件を指摘させ、高品質なプロンプトを段階的にブラッシュアップします。",
+      "one_liner": "AIにプロンプトを添削させる",
+      "why_important": "属人的な指示をAIで標準化することで、チーム全体の生産性が向上します。",
+      "action_item": "自分がよく使うプロンプトをAIに渡し「改善案を出して」と聞いてみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/mizchi/articles/empirical-prompt-tuning"
+    },
+    {
+      "title": "GitHub Copilot CLIの初心者向け学習ガイド",
+      "category": "業務効率化",
+      "summary": "PCのコマンド操作をAIが支援するツールの活用法。覚えにくいコマンドを自然言語でAIに依頼して実行でき、非エンジニアの事務作業やシステム管理も強力にナビゲートします。",
+      "one_liner": "コマンド操作もAIにお任せ",
+      "why_important": "専門知識がなくても、AIを介してPCの高度な機能を自在に操れるようになります。",
+      "action_item": "覚えられないPCの操作コマンドがあれば、まずはAIチャットで聞いてみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/asagezenn/articles/7a847e99f4d7c2"
+    },
+    {
+      "title": "OpenAIの買収戦略と存続を巡る課題",
+      "category": "最新技術",
+      "summary": "OpenAIが進める企業買収が技術的・構造的な課題にどう対応しているかを分析。業界リーダーの戦略を知ることで、将来的なAI市場の流れをビジネスの視点から把握できます。",
+      "one_liner": "OpenAIの買収から市場を読み解く",
+      "why_important": "業界の大きな動向を知ることで、将来的に依存すべきプラットフォームの選定に役立ちます。",
+      "action_item": "自分が日常的に使っているAIツールの開発元を再確認してみましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/19/openais-existential-questions/"
+    }
+  ]
+}

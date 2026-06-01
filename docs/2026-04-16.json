@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月16日",
+  "theme": "AIの社会実装、OSから現場まで",
+  "morning_comment": "AIは道具から、OSや現場の相棒へと進化を遂げています。",
+  "articles": [
+    {
+      "title": "GoogleがGeminiのデスクトップ専用アプリをWindows/Macで提供開始",
+      "category": "業務効率化",
+      "summary": "GeminiがOS上で直接動作するアプリとして公開されました。ショートカットキーで即座にAIを呼び出し、画面上の内容やローカルファイルを共有して分析を依頼できます。",
+      "one_liner": "AIがOS直結、作業が劇的に加速",
+      "why_important": "ブラウザを介さずOS上でAIを呼び出せるようになり、PC作業のあらゆる場面でAIの支援がシームレスになります。",
+      "action_item": "Geminiデスクトップアプリを導入し、ショートカットキーによる起動を試してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac/"
+    },
+    {
+      "title": "日立「フィジカルAI」で熟練工の暗黙知をデータ化、現場改革へ",
+      "category": "日本市場",
+      "summary": "日立製作所は、熟練工の「勘」や「経験」といった言語化困難な暗黙知をAIでデータ化する手法を発表しました。製造現場などの物理空間でのAI活用を加速させます。",
+      "one_liner": "熟練工の「勘」をAIで可視化",
+      "why_important": "日本の製造強みを支える暗黙知をデータ化することで、技術継承と人手不足の解消が期待されます。",
+      "action_item": "自社の業務で「まだ言語化できていない職人芸」がないか現場を観察してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2604/16/news016.html"
+    },
+    {
+      "title": "OpenAIが企業向け「AIエージェント構築SDK」をアップデート",
+      "category": "最新技術",
+      "summary": "OpenAIは、企業が安全で高性能なAIエージェントを構築するためのSDKを強化しました。業務プロセスを自律完結させる「エージェント型AI」の導入が加速する見込みです。",
+      "one_liner": "自律型エージェント構築が身近に",
+      "why_important": "チャットを超える「実行力」を持つAIエージェントを、安全に自社システムへ統合できるようになります。",
+      "action_item": "「AIに任せて自動で完結させたい定型業務」を1つ書き出してみましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/"
+    },
+    {
+      "title": "Claude APIの利用料を40%以上節約する「最安運用ガイド」が登場",
+      "category": "業務効率化",
+      "summary": "キャッシュ機能の活用やモデルの使い分けにより、Claude APIを安価に利用する手法が整理されました。コスト面でAI導入を躊躇していた部門にとって強力な後押しとなります。",
+      "one_liner": "Claude API利用料を4割削減",
+      "why_important": "高性能AIの運用コストを劇的に下げる手法を知ることで、予算の制約を超えたプロジェクト推進が可能になります。",
+      "action_item": "現在利用中のAPI設定で、キャッシュ機能が有効に活用されているか確認しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/xujfcn/articles/claude-api-cheap-guide-2026"
+    },
+    {
+      "title": "あらゆる専門分野で使える「AI活用の6つの共通パターン」",
+      "category": "最新技術",
+      "summary": "科学研究や専門業務における共通のAI活用法が整理されました。仮説生成からデータ解析まで、専門職の業務効率を飛躍的に高める科学的アプローチを適用可能です。",
+      "one_liner": "専門業務に共通するAI活用6法則",
+      "why_important": "研究開発だけでなく、あらゆる企画・分析業務に応用可能な汎用的なAI活用フレームワークが示されました。",
+      "action_item": "自身の複雑な業務を「仮説生成・検証・解析」のステップに分解して整理してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/aws_japan/articles/ai4s-08-field-2026"
+    },
+    {
+      "title": "LinkedIn調査：採用減少の主因はAIではなく金利、AIによる失業は限定的",
+      "category": "リスク管理",
+      "summary": "LinkedInのデータによると、採用率低下の主な原因は経済環境であり、AIによる代替ではないことが示されました。現時点ではAIはスキルを補完する段階にあります。",
+      "one_liner": "採用減の主因はAIではなく経済環境",
+      "why_important": "AIによる即時の失業リスクは限定的であり、今は不安を抱くよりスキルの習得に集中すべき時期です。",
+      "action_item": "AIに代替される不安を捨て、週1時間のAI学習時間をカレンダーに確保しましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/15/linkedin-data-shows-ai-isnt-to-blame-for-hiring-decline-yet/"
+    },
+    {
+      "title": "Claude Codeの最適設定術：チームでのAI開発事故を防ぐ",
+      "category": "業務効率化",
+      "summary": "AIコーディングツールにおいて、プロンプトやルールをどう使い分けるべきかの指針が公開されました。メンテナンス性を維持するためのエージェント管理術を学べます。",
+      "one_liner": "AI開発の事故を防ぐ管理の鉄則",
+      "why_important": "AIコーディングにおける共通ルール設定は、チーム全体の生産性とコード品質の維持に直結します。",
+      "action_item": "開発チーム内で、AI活用のためのプロンプトやコーディングルールを共有・統一しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/seiwan/articles/claude-code-utilize-1"
+    },
+    {
+      "title": "Googleが「Gemini 3.1 Flash TTS」発表、表現力豊かなAI音声へ",
+      "category": "最新技術",
+      "summary": "Googleが、より繊細な感情表現が可能な次世代音声合成モデルを発表しました。カスタマーサポートやプレゼン資料のナレーションにおいて、より自然な対応が可能になります。",
+      "one_liner": "人間と遜色ない表現力のAI音声",
+      "why_important": "感情豊かな合成音声により、接客や教育、動画制作におけるAI活用の幅が大きく広がります。",
+      "action_item": "最新のAI合成音声を試聴し、自社の動画制作や案内業務への活用可能性を検討しましょう。",
+      "source": "DeepMind Blog",
+      "url": "https://deepmind.google/blog/gemini-3-1-flash-tts-the-next-generation-of-expressive-ai-speech/"
+    },
+    {
+      "title": "AI学習アプリ「Gizmo」が1300万ユーザー突破、教育分野のAI活用加速",
+      "category": "ライフスタイル",
+      "summary": "個人の理解度に合わせたパーソナライズ学習プラットフォームGizmoが急成長しています。AIが伴走する教育の個別最適化が、リスキリングのあり方を変えつつあります。",
+      "one_liner": "AIが個人の理解度に合わせ伴走",
+      "why_important": "学習の個別最適化が進むことで、リスキリングの効率が向上し、ビジネスパーソンのスキル流動性が高まります。",
+      "action_item": "自身の学習目的に合ったAI教育ツールやアプリを1つダウンロードして体験してみましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/15/ai-learning-app-gizmo-levels-up-with-13m-users-and-a-22m-investment/"
+    },
+    {
+      "title": "AIがジャーナリズムを評価？新サービスがメディアに与える波紋",
+      "category": "法規制・倫理",
+      "summary": "記事の信頼性や中立性をAIが判断するサービス「Objection」が登場しました。メディアの透明性を高める一方、情報の真偽をAIに委ねることへの是非が問われています。",
+      "one_liner": "AIがニュースの信頼性を自動判定",
+      "why_important": "情報判断をAIが支援する時代の到来は、情報の受け手としてより高度なリテラシーを我々に要求します。",
+      "action_item": "AIによる情報の真偽判定結果も一つの視点として、複数のニュースソースを確認する癖をつけましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/15/can-ai-judge-journalism-a-thiel-backed-startup-says-yes-even-if-it-risks-chilling-whistleblowers/"
+    }
+  ]
+}

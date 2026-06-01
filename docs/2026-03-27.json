@@ -1,0 +1,107 @@
+{
+  "updated": "2026年03月27日",
+  "theme": "AIが「道具」から「自律的な相棒」へ",
+  "morning_comment": "端末やOSの壁を越え、AIが生活に溶け込み始めました。",
+  "articles": [
+    {
+      "title": "Apple、SiriにGoogle GeminiやClaude等の外部AIを統合可能へ",
+      "category": "業務効率化",
+      "summary": "次期iOSでSiriからGoogleのGeminiやAnthropicのClaudeなど、好みのAIボットを呼び出せるようになります。ユーザーは業務特性に合わせて最適なAIをiPhoneから直接使い分けられます。",
+      "one_liner": "Siriで好きなAIを選択可能に",
+      "why_important": "OS標準の枠を超え、用途に合わせて最適なAIエンジンを選択・活用する柔軟性がビジネスに不可欠になります。",
+      "action_item": "iPhoneの設定から将来的なSiriの連携オプションと対応アプリを確認しておきましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/902048/apple-siri-ai-chatbot-update-ios-27"
+    },
+    {
+      "title": "Claudeの新機能「Computer use」が変える、PC操作の自動化",
+      "category": "最新技術",
+      "summary": "AnthropicのAIが画面を認識し、マウス操作や入力を人間に代わって行います。ブラウザ検索からフォーム入力まで、複数のステップを要する定型業務の代行が可能になります。",
+      "one_liner": "AIがPC操作を代行する時代へ",
+      "why_important": "画面を見て操作する「人間らしい」自動化により、レガシーなシステムを含む業務の自動化コストが激減します。",
+      "action_item": "ブラウザで行っている単純な「コピー＆ペースト」の繰り返し作業をリストアップしてください。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2603/27/news018.html"
+    },
+    {
+      "title": "Google翻訳、iOSイヤホンでの「リアルタイム通訳」を日本展開",
+      "category": "業務効率化",
+      "summary": "イヤホンを通じて対話相手の言語を耳元でリアルタイムに翻訳・再生する「ライブ通訳」が日本でも利用可能に。専用機不要で、スマホとイヤホンが高度な通訳機になります。",
+      "one_liner": "イヤホンがリアルタイム通訳機に",
+      "why_important": "言語の壁がハードウェアを通じて消失し、海外との対面コミュニケーションや現場での指示出しが劇的に円滑化します。",
+      "action_item": "お手持ちのイヤホンがGoogle翻訳のライブ機能に対応しているか、設定画面でチェックしてみましょう。",
+      "source": "Google AI Blog",
+      "url": "https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/"
+    },
+    {
+      "title": "Google Gemini、他社AIからの「記憶と履歴」移行機能を発表",
+      "category": "業務効率化",
+      "summary": "他社のAIチャットボットから履歴や学習済みの設定をGeminiへインポートできる機能が登場。これまで蓄積した自分専用のデータを失わずに、AIの乗り換えが可能になります。",
+      "one_liner": "AIの「記憶」を他社へ引継ぎ可能",
+      "why_important": "AIの「乗り換えコスト」が下がることで、常に最新かつ最適なサービスを自由に選べる環境が整います。",
+      "action_item": "現在メインで使っているAIの履歴をエクスポートし、バックアップとして保管を検討しましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/902085/google-gemini-import-memory-chat-history"
+    },
+    {
+      "title": "外部接続不要の「ローカルAI」PCが実用段階へ",
+      "category": "リスク管理",
+      "summary": "クラウドを経由せず、PC端末内で完結して動作する「ローカルLLM」の実用性が向上。機密情報を外部に出せない企業でも、セキュアにAI業務支援を受けられる環境が整います。",
+      "one_liner": "ネット不要、PC内でAIが完結",
+      "why_important": "プライバシーとセキュリティを担保したまま、高度なAI活用を自社専用の環境で実現できるようになります。",
+      "action_item": "自社のセキュリティポリシーが、端末完結型の「ローカルAI」なら許容されるかシステム担当に確認しましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/special/2095845.html"
+    },
+    {
+      "title": "CapCutにAI動画生成「Dreamina 2.0」が搭載、誰でも高品質動画へ",
+      "category": "業務効率化",
+      "summary": "ByteDanceの動画編集アプリに最新AIが統合。テキスト指示だけで高品質な動画を生成でき、SNS広告やプレゼン資料用の映像コンテンツを短時間で作成可能になります。",
+      "one_liner": "誰でもプロ級の動画をAIで生成",
+      "why_important": "専門スキルがなくても映像での情報発信が容易になり、社内外でのコミュニケーション速度が加速します。",
+      "action_item": "次のプレゼン資料の一部を、10秒程度のAI生成動画に置き換えて視覚効果を試してみましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/03/26/bytedances-new-ai-video-generation-model-dreamina-seedance-2-0-comes-to-capcut/"
+    },
+    {
+      "title": "HPがAIエージェント「HP IQ」発表、PCが自律的な相棒に",
+      "category": "最新技術",
+      "summary": "オンデバイスで動作する次世代AIエージェントを発表。PCがユーザーの意図を汲み取って自律的にタスクを処理し、クラウドの遅延やプライバシー懸念を払拭した体験を提供します。",
+      "one_liner": "PCがユーザーの意図を汲む相棒に",
+      "why_important": "PCそのものが学習し、指示を待たずに先回りして作業をサポートする「攻め」のデバイスへと進化します。",
+      "action_item": "日常のPC作業中に「これが自動化されたら助かる」と思う瞬間を3つメモしておきましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2096650.html"
+    },
+    {
+      "title": "AWS、AIの不適切応答を防ぐ「ガードレール」機能を強化",
+      "category": "リスク管理",
+      "summary": "Amazon Bedrockにおいて、不適切な回答やコンプライアンス違反を自動検知・遮断する機能を強化。顧客向けチャットボットを安全に運用するための管理が容易になります。",
+      "one_liner": "AIの不適切発言を自動で遮断",
+      "why_important": "企業がAIを外部公開する際の最大のリスクである「誤回答」を技術で制御し、ブランド価値を保護します。",
+      "action_item": "自社サービスにAIを導入する場合、どのような応答制限が必要かチームで議論を始めてください。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/building-age-responsive-context-aware-ai-with-amazon-bedrock-guardrails/"
+    },
+    {
+      "title": "Googleの「ライブ」AI検索アシスタント、多言語対応を拡大",
+      "category": "ライフスタイル",
+      "summary": "カメラで写した看板や音声での対話からリアルタイムに情報を検索できる機能が、200以上の国・地域に拡大。視覚情報と音声を組み合わせた新しい検索体験が日常になります。",
+      "one_liner": "カメラと声で直感的に検索",
+      "why_important": "キーボード入力を介さない検索が普及し、現場作業中や移動中での情報収集効率が飛躍的に向上します。",
+      "action_item": "外出時にGoogleアプリのレンズ機能（カメラ検索）を使い、目に入った看板の内容を調べてみましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/901816/google-search-live-ai-assistant-expansion"
+    },
+    {
+      "title": "Googleの新型音声モデル「Gemini 3.1 Flash Live」が登場",
+      "category": "最新技術",
+      "summary": "より自然で遅延の少ない音声対話を実現。人間が話している最中に割り込んでも正確に応答を修正できる高い性能を持ち、カスタマー対応AIや個人秘書への応用が期待されます。",
+      "one_liner": "人間のように自然な音声対話",
+      "why_important": "AIとの音声対話がストレスフリーになることで、電話応対や会議記録などのインターフェースが劇的に改善されます。",
+      "action_item": "AIアプリの音声入力モードを使い、あえて話の途中で質問を差し挟んで反応の速さを体感してみましょう。",
+      "source": "DeepMind Blog",
+      "url": "https://deepmind.google/blog/gemini-3-1-flash-live-making-audio-ai-more-natural-and-reliable/"
+    }
+  ]
+}

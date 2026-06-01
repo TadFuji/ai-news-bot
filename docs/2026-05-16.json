@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月16日",
+  "theme": "AIは実務代行のフェーズへ",
+  "morning_comment": "実務を代行するエージェント時代。人間が担うべき役割を再定義する時です。",
+  "articles": [
+    {
+      "title": "OpenAIが銀行口座連携機能を開始。ChatGPTで個人財務管理が可能に",
+      "category": "ライフスタイル",
+      "summary": "OpenAIは、ChatGPTに銀行口座や証券口座を直接連携できる新機能を発表しました。Plaid社を介して安全に接続され、支出管理、サブスクリプションの把握、ポートフォリオのパフォーマンス確認がチャットを通じて行えます。",
+      "one_liner": "ChatGPTで銀行口座を直接管理へ",
+      "why_important": "AIが単なる相談役から、資産運用の実務をサポートするパートナーへと進化することを意味します。",
+      "action_item": "家計や経費の自動集計の可能性を検討してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/"
+    },
+    {
+      "title": "Claudeが「契約書レビュー」機能を展開。弁護士不要のコスト削減へ",
+      "category": "業務効率化",
+      "summary": "AnthropicのClaudeが中小企業向けに31の新スキルを導入。複雑な契約文言を分析し、不利益な条項やリスクを瞬時に特定する契約書レビューツールが注目を集めています。",
+      "one_liner": "Claudeが契約書のリスクを即座に検知",
+      "why_important": "法務コストを抑えつつ、契約トラブルを未然に防ぐ実戦的な武器になります。",
+      "action_item": "定型的な契約書の初期チェックにAIを活用してみてください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/claude-small-business-contract-review-ai-no-lawyer/"
+    },
+    {
+      "title": "OpenAIが組織再編を断行。自律型AIエージェント開発へ全力を投入",
+      "category": "最新技術",
+      "summary": "OpenAIは製品戦略を刷新し、プレジデントのグレッグ・ブロックマン氏を製品責任者に据えました。今年の最優先事項は、ユーザーに代わって複雑なタスクを遂行する「AIエージェント」です。",
+      "one_liner": "OpenAI、自律型エージェント開発に全力",
+      "why_important": "単なる文章作成から、AIが具体的な指示を自律的に完遂する時代への大きな転換点です。",
+      "action_item": "自分がAIに丸投げしたい「一連の作業」を書き出してみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/931544/openai-keeps-shuffling-its-executives-in-bid-to-win-ai-agent-battle"
+    },
+    {
+      "title": "国産AI半導体スタートアップ「LENZO」がNVIDIAに挑む新構造を発表",
+      "category": "日本市場",
+      "summary": "NAIST発のスタートアップLENZOが、独自のアーキテクチャ「CGLA」を搭載した国産AIチップを開発。特定の処理における電力効率や演算性能で優位性を主張しています。",
+      "one_liner": "国産AIチップ、低電力でNVIDIAに挑む",
+      "why_important": "特定用途での国産チップ採用は、開発コスト削減と供給の安定化に寄与する可能性があります。",
+      "action_item": "エッジAIや省電力性能が鍵となる自社課題がないか確認してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/readitnow/2109120.html"
+    },
+    {
+      "title": "YouTubeがディープフェイク検出機能を全成人ユーザーに開放",
+      "category": "リスク管理",
+      "summary": "AIによる「なりすまし」を検出するツールを全ての成人ユーザーに提供開始。自身の顔を登録することで、無断使用された動画がアップロードされた際にアラートを受け取れます。",
+      "one_liner": "自分の顔を守る偽造動画アラート機能",
+      "why_important": "ブランド保護やなりすまし詐欺被害を未然に防ぐ、ビジネスパーソン必須の防御策です。",
+      "action_item": "自身の公式動画や写真の管理状況を一度見直してみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/news/931884/youtube-likeness-detection-ai-deepfake-expansion-all-adults"
+    },
+    {
+      "title": "Google、AI検索結果の不正な操作を規制。SEO戦略に新たな転換点",
+      "category": "業務効率化",
+      "summary": "検索結果のAI機能を不正に操作しようとする行為をスパムと見なすようポリシーを更新。AIに有利な情報を意図的に学習させる手法への監視が強化されます。",
+      "one_liner": "AI検索操作をスパム認定、SEOに転換点",
+      "why_important": "小手先のハックではなく、人間にとって価値ある信頼性の高い情報発信がより重要になります。",
+      "action_item": "自社サイトが「人間向けの良質な情報」であるか再確認してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/931416/google-ai-search-spam-policy"
+    },
+    {
+      "title": "AIエージェント間に「作業引き継ぎ規格」が必要に。開発が進行中",
+      "category": "業務効率化",
+      "summary": "異なるモデルやチャット間での作業状況の共有を目的とした規格「A2CR」などの開発が進んでいます。これにより、あるAIの判断を別のAIがシームレスに継続できます。",
+      "one_liner": "AI同士の作業引き継ぎに共通規格が登場",
+      "why_important": "複数のAIを連携させた高度な業務自動化が、よりスムーズに実現する基盤となります。",
+      "action_item": "複数のAIツールを繋げて完了させるワークフローを構想してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/a2cr/articles/155c8f6c8d9695"
+    },
+    {
+      "title": "「AIの出す正解」への依存に警鐘。問いを立てる力の重要性",
+      "category": "法規制・倫理",
+      "summary": "AIの回答に頼りすぎることで、人間が「問いの本質」を考えなくなるリスクを指摘。主体的な意思決定が競争力の源泉となるという視点です。",
+      "one_liner": "AI依存で失われる「問いを立てる力」",
+      "why_important": "AIの回答を鵜呑みにせず、その論理を理解し疑う力が、今後の差別化要因になります。",
+      "action_item": "AIの回答に対し「なぜそうなったか」を一度自分で考えてみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/faketurn/articles/199bd704fc8eec"
+    },
+    {
+      "title": "動画生成AIのRunway、Googleとの競争を宣言。ワールドモデルの構築へ",
+      "category": "最新技術",
+      "summary": "動画生成を「現実世界の物理法則の理解」への道と位置づけ。物理的な整合性を持つ空間をAIが理解することで、産業用途への応用を目指しています。",
+      "one_liner": "動画生成のRunway、物理法則の理解へ",
+      "why_important": "シミュレーション精度が向上し、製造や建築など現実世界に即した分野での活用が進みます。",
+      "action_item": "物理的な検証が必要な業務にAIがどう関与できるか想像してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/"
+    },
+    {
+      "title": "AIラジオ局の実験で判明した、AI単独運営における「信頼」の課題",
+      "category": "業務効率化",
+      "summary": "AIモデルが人間を介さずに運営するラジオ局の実験により、放送継続は可能でも、聴取者との信頼構築や文脈の自然さに課題があることが浮き彫りになりました。",
+      "one_liner": "AI単独の放送、信頼構築に課題あり",
+      "why_important": "完全自動化には限界があり、人間による感情的・倫理的な「舵取り」の重要性が再確認されました。",
+      "action_item": "自動化する部分と人間が担うべき部分を明確に切り分けてみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies"
+    }
+  ]
+}

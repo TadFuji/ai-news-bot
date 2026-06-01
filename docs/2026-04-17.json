@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月17日",
+  "theme": "AIが道具から「自律的な相棒」へ",
+  "morning_comment": "画面の中も外も、AIが自律的に動き、考える時代が始まりました。",
+  "articles": [
+    {
+      "title": "OpenAIのCodexが進化、デスクトップ操作と自律的ブラウジングが可能に",
+      "category": "業務効率化",
+      "summary": "OpenAIが自律型エージェント「Codex Desktop」を刷新。AIがMac等のデスクトップを直接制御し、ファイル操作やウェブ調査を代行。複数のアプリを跨ぐ定型作業を指示一つで完結させることが可能になります。",
+      "one_liner": "AIがPCを直接操作し業務完結",
+      "why_important": "ツール間のデータ転記などの「単純作業」が消滅し、人間はより高度な意思決定に集中できるようになります。",
+      "action_item": "今日行うPCでの定型業務を一つ選び、AIに任せる際の手順を具体的に書き出してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/16/openai-takes-aim-at-anthropic-with-beefed-up-codex-that-gives-it-more-power-over-your-desktop/"
+    },
+    {
+      "title": "Google Chromeに「AIモード」搭載、検索結果とウェブ閲覧を並列表示",
+      "category": "業務効率化",
+      "summary": "デスクトップ版Chromeに、検索チャットとリンク先ページをサイドバイサイドで表示する新機能が導入。タブの切り替えなしに、AIと対話しながら複数ソースの比較検討や深掘りが可能になります。",
+      "one_liner": "検索とAIが融合しブラウザが進化",
+      "why_important": "情報収集と分析を同時に行える環境が、デスクワークの生産性を劇的に向上させます。",
+      "action_item": "複雑な調べ物をする際、ChromeのAI機能を使い、AIの要約と原文を照らし合わせる習慣をつけてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/16/google-now-lets-you-explore-the-web-side-by-side-with-ai-mode/"
+    },
+    {
+      "title": "AIの「性格」がデータを通じて無意識に伝染する現象が発見される",
+      "category": "リスク管理",
+      "summary": "LLMの学習プロセスにおいて、教師モデルの行動特性や思想が、無関係なデータを通じて生徒モデルへ伝播する「潜在学習」が判明。意図しないバイアスが混入するリスクを浮き彫りにしました。",
+      "one_liner": "AIの潜在的バイアスに新たなリスク",
+      "why_important": "企業独自のAI構築において、直接的な指示以外からも思想が漏れ出すリスクを考慮したガバナンスが求められます。",
+      "action_item": "自社で活用するAIの出力結果が、特定の価値観に偏っていないか定期的にチェックを行ってください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/boku_yaji/articles/c0b933283b21c1"
+    },
+    {
+      "title": "Google ColabにGeminiの「学習モード」統合、プログラミング学習が容易に",
+      "category": "業務効率化",
+      "summary": "Google ColabにGeminiを活用した学習支援機能が搭載。単なるコード生成だけでなく、教育的な解説やレベルに合わせたヒントを提供。実務を行いながらスキルを習得できる環境が整いました。",
+      "one_liner": "AIが家庭教師になり開発を支援",
+      "why_important": "非エンジニアでも「自学自習」で業務自動化スキルを習得でき、組織全体のデジタル化を加速させます。",
+      "action_item": "業務を自動化したい分野があれば、Colabを開きAIと一緒にコードを書く練習を始めてみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2604/17/news018.html"
+    },
+    {
+      "title": "Mac専用Geminiアプリが登場、画面上の情報を直接解析可能に",
+      "category": "最新技術",
+      "summary": "GoogleがMac向けGeminiアプリをリリース。デスクトップ上のウィンドウコンテンツを直接読み取れるため、複数のPDF要約や数値分析がコピー＆ペーストなしでシームレスに行えます。",
+      "one_liner": "画面上の資料をAIが即座に分析",
+      "why_important": "画面上の情報をリアルタイムでAIに共有できることで、分析作業のリードタイムが大幅に短縮されます。",
+      "action_item": "大量の参照資料があるタスクで、Geminiアプリを使った一括読み込みと要約を試してください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/google-gemini-app-mac/"
+    },
+    {
+      "title": "AI時代のPC選びに必須、GPUとNPUの違いと重要性",
+      "category": "最新技術",
+      "summary": "AI処理に特化した「NPU」への注目が高まっています。電力効率を重視しつつ、背景のぼかしやローカルLLMの実行を快適にするため、次世代PCの選定基準として不可欠になりつつあります。",
+      "one_liner": "AI PC選びはNPUの性能が鍵",
+      "why_important": "今後のハードウェア更新において、バッテリー寿命とAI性能のバランスを左右する重要な知識となります。",
+      "action_item": "自社の次期PC選定基準に、AI処理能力（NPU搭載）の項目が含まれているか確認してみましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/column/tidbit/2101870.html"
+    },
+    {
+      "title": "AWSが「自動推論」によるAI出力の検証機能を導入、法規制対応を支援",
+      "category": "リスク管理",
+      "summary": "Amazon Bedrockで形式検証を用いた自動推論チェック機能を発表。AIの回答が法規制や社内ルールに適合しているかを数学的に証明でき、ハルシネーションのリスクを最小限に抑えます。",
+      "one_liner": "AIの回答を数学的に検証し信頼確保",
+      "why_important": "厳格なコンプライアンスが求められる金融や医療分野でのAI活用を後押しする重要な技術です。",
+      "action_item": "AI活用の障壁が「正確性への懸念」であれば、このような検証ツールの導入を技術部門と相談してください。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-automated-reasoning-checks-in-amazon-bedrock-transform-generative-ai-compliance/"
+    },
+    {
+      "title": "AI経由の小売サイト流入が393%急増、売上向上に寄与",
+      "category": "最新技術",
+      "summary": "AIチャットボットやAI検索経由の小売サイト流入が前年比約4倍に増加。AI経由の訪問者は成約率が高く、消費者が「自力で探す」から「AIに選ばせる」購買行動へシフトしていることが示されました。",
+      "one_liner": "消費者の入り口が検索からAIへ",
+      "why_important": "顧客接点がAIに移ることで、マーケティングやSEOの戦略を根本的に見直す必要があります。",
+      "action_item": "自社の商品がChatGPTやPerplexityでどのように推奨されるか、顧客の立場で試してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/16/ai-traffic-to-us-retailers-rose-393-in-q1-and-its-boosting-their-revenue-too/"
+    },
+    {
+      "title": "OpenAIの理念を巡るマスク氏対アルトマン氏の法廷闘争の背景",
+      "category": "法規制・倫理",
+      "summary": "OpenAIの非営利理念とマイクロソフトとの関係を巡る裁判。結果次第でAI技術のオープンソース化か、特定企業による独占かが決まり、将来的な利用コストに影響を及ぼす可能性があります。",
+      "one_liner": "AIの理念を巡る巨頭の対立が激化",
+      "why_important": "AIのガバナンスや開発の透明性が、自社の採用するAIツールの将来性にどう影響するかを注視すべきです。",
+      "action_item": "特定のプラットフォームに依存しすぎない、マルチAI戦略の必要性を社内で議論してください。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/musk-v-altman-trial-openai-xai/"
+    },
+    {
+      "title": "未学習のタスクもこなす汎用ロボット脳「π0.7」が登場",
+      "category": "最新技術",
+      "summary": "教えられていない新しいタスクを自ら推論して実行できる汎用ロボットモデル「π0.7」が発表。言語と視覚を組み合わせることで、物理世界での柔軟な対応を可能にします。",
+      "one_liner": "未知のタスクも推論する汎用ロボ脳",
+      "why_important": "人手不足が深刻な製造・物流現場で、専門的なプログラミングなしにAIロボットを導入できる可能性を示しています。",
+      "action_item": "「現場の非効率な手作業」をAIロボットが代替できる未来を想定し、DX計画に組み込めるか検討してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/16/physical-intelligence-a-hot-robotics-startup-says-its-new-robot-brain-can-figure-out-tasks-it-was-never-taught/"
+    }
+  ]
+}

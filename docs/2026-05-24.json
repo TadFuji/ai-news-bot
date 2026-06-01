@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月24日",
+  "theme": "AI導入は効率から持続可能性の追求へ",
+  "morning_comment": "AI活用は、単純な速さからROIと信頼性を重視する段階へ移行しています。",
+  "articles": [
+    {
+      "title": "OpenAI、業務用最高性能モデル「GPT-5.5 Instant」を発表",
+      "category": "最新技術",
+      "summary": "OpenAIがGPT-5.5 Instantをリリースし、ChatGPTのデフォルトモデルを刷新。推論速度が劇的に向上し、メール作成やデータ分析の待ち時間が大幅に短縮されます。ビジネスパーソンの手戻りを減らす、実戦的なアップデートです。",
+      "one_liner": "GPT-5.5爆速モデル登場",
+      "why_important": "待ち時間の短縮は思考の断絶を防ぎ、クリエイティブな作業時間を最大化させます。",
+      "action_item": "定型的な返信作成を新モデルで試して、レスポンスの速さを体感してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/quotidia/articles/quotidia-aq-009"
+    },
+    {
+      "title": "ソースネクストのAI議事録、Microsoft 365 Copilot連携で検索、要約を効率化",
+      "category": "業務効率化",
+      "summary": "AI議事録「AutoMemo」がMicrosoft 365 Copilotと連携。過去の会議データをCopilotから直接検索し、要約や情報抽出が可能になります。社内ドキュメントと会議発言がシームレスに繋がり、振り返りの手間を削減します。",
+      "one_liner": "議事録がCopilotと連携",
+      "why_important": "過去の議論を即座に参照できることで、会議の「やりっぱなし」を防ぎ、意思決定を加速させます。",
+      "action_item": "過去1ヶ月の会議録をCopilotで要約し、未完了のタスクがないか確認しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2605/23/news017.html"
+    },
+    {
+      "title": "Microsoftが報告「AIは人間の従業員を雇うよりコストが高くなる」",
+      "category": "リスク管理",
+      "summary": "高度なAIエージェントの利用料増大が、人間を雇用するコストを上回る可能性が指摘されました。企業は闇雲な導入ではなく、どの業務をAIに任せるべきか、費用対効果に基づいたシビアな再評価が求められるフェーズに入っています。",
+      "one_liner": "AI利用料が人件費を上回る懸念",
+      "why_important": "高度なAI導入には、コストに見合うだけの付加価値を人間側が設計する視点が不可欠です。",
+      "action_item": "現在AIに任せている業務の月額コストと、削減できた時間の価値を概算してみましょう。",
+      "source": "Hacker News AI",
+      "url": "https://fortune.com/2026/05/22/microsoft-ai-cost-problem-tokens-agents/"
+    },
+    {
+      "title": "検索エンジンvsAI論争：検索を使わない層が増える時代の情報検証力",
+      "category": "日本市場",
+      "summary": "従来の検索ではなくAIによる回答を優先するユーザーが増加。しかし、AIの回答にはハルシネーションのリスクが依然として残ります。ツールに依存せず、提示された情報の根拠を自ら検証する力がこれまで以上に重要になります。",
+      "one_liner": "脱検索時代の情報の裏取り力",
+      "why_important": "AIの回答を鵜呑みにせず、一次情報に当たるスキルこそが、ビジネスにおける信頼の源泉になります。",
+      "action_item": "AIが生成した回答に含まれる固有名詞や数値を、1つだけでも検索して確認しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/masuda_masuo/articles/2026-05-23-search-vs-ai"
+    },
+    {
+      "title": "MCP（Model Context Protocol）活用時のセキュリティリスクと対策",
+      "category": "リスク管理",
+      "summary": "AIエージェントがローカルツールと連携するMCPの利用が拡大。承認フローの形骸化により機密情報がAI側に筒抜けになるリスクがあるため、どのツールがどのデータにアクセスしているかを監視・制限する設計の理解が不可欠です。",
+      "one_liner": "AIツールの権限設定に潜む罠",
+      "why_important": "利便性と引き換えに、企業の機密データを無自覚に外部へ流出させないガバナンスが求められます。",
+      "action_item": "現在AIツールに許可している連携アプリの権限設定を一度見直してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/masuda_masuo/articles/2026-05-23-mcp-security"
+    },
+    {
+      "title": "コンテキストエンジニアリング：プロンプトを安定させる7つの要素",
+      "category": "業務効率化",
+      "summary": "AIへの指示を背景やルールなど7つの構成要素で整理する手法が注目されています。出力が安定し、何度も指示をやり直す手間を省けます。テクニックに頼るのではなく、システム設計としてAIとの対話を構築する時代です。",
+      "one_liner": "7要素で固める最強の指示書",
+      "why_important": "プロンプトを「お願い」ではなく「構造化された設計図」として捉えることで、業務品質を平準化できます。",
+      "action_item": "今日のAIへの指示に、必ず「背景」と「アウトプットの形式」を明記してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kenimo49/articles/context-engineering-7-elements-design"
+    },
+    {
+      "title": "土木現場の知識・判断を継承するRAGシステム構築の提案",
+      "category": "業務効率化",
+      "summary": "ベテラン技術者の「暗黙知」をRAGでデジタル化し、次世代へ継承する取り組みです。法令や過去事例を統合したAIにより、高度な専門判断を支援。マニュアル化が難しいノウハウを抱える企業にとってのモデルケースとなります。",
+      "one_liner": "AIでベテランの暗黙知を継承",
+      "why_important": "属人化したノウハウをAIの資産に変えることは、組織の長期的な生存戦略に直結します。",
+      "action_item": "自分の業務手順のうち、まだ言語化されていない「コツ」を1つだけメモに残しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/dx_junkyard/articles/civil-rag-system-guide"
+    },
+    {
+      "title": "AI製品のデザイン思想「No disclaimer by design」",
+      "category": "業務効率化",
+      "summary": "「AIは間違う可能性がある」という免責事項を出さず、プロフェッショナルなツールとしての信頼性を高める設計思想が登場。補助ではなく「責任ある回答」を前提としたUIにより、ユーザーの信頼のあり方が変化しています。",
+      "one_liner": "免責事項を消す新設計思想",
+      "why_important": "AIを「不完全な補助役」から「信頼できるパートナー」へ昇格させるには、UXの工夫が不可欠です。",
+      "action_item": "AIツールの回答のどの部分に自分が「不安」を感じるか、具体的に言語化してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/mofuteq/articles/12cfb91a86b347"
+    },
+    {
+      "title": "セルフホスト可能なLLMの調査：API料金高騰と廃止リスクへの備え",
+      "category": "リスク管理",
+      "summary": "大手AIベンダーの料金改定やモデル廃止に対応するため、自社サーバーでLLMを運用する検討が進んでいます。初期投資は必要ですが、コストの安定と機密データを外部に送信しないセキュリティ向上が期待できます。",
+      "one_liner": "API依存を脱する自前LLM",
+      "why_important": "外部サービス依存のリスクを抑え、自社で制御可能なインフラを持つことは、戦略的なリスクヘッジです。",
+      "action_item": "自社でセルフホストする場合に、最低限守るべきセキュリティ要件を書き出してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/tasshi441/articles/fb04868f1a3d8e"
+    },
+    {
+      "title": "Googleの新AIモデル「Gemini Omni」によるマルチモーダル生成の衝撃",
+      "category": "最新技術",
+      "summary": "テキスト、画像、動画を相互に高度に変換・生成できる新モデル。静止画を自然な動画に変えるなどのクリエイティブ業務を加速させますが、ディープフェイクのリスクも高まります。技術の進化と倫理の両面での理解が必要です。",
+      "one_liner": "動画生成も自由自在な新Gemini",
+      "why_important": "生成技術の高度化により、情報の真偽を判断するメディアリテラシーの重要性が増しています。",
+      "action_item": "最新のAI生成動画を視聴し、不自然な点がないか探すトレーニングをしてみましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/936507/gemini-omni-hands-on-deepfake-ai-video"
+    }
+  ]
+}

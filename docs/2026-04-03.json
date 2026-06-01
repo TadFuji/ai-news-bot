@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月03日",
+  "theme": "AI自律化の波と、信頼を守る設定の重要性",
+  "morning_comment": "AIの進化は自律化へ。利便性とデータ保護の両立が、今朝の重要な鍵となります。",
+  "articles": [
+    {
+      "title": "AIノートアプリ「Granola」の共有設定に注意、デフォルトでリンク公開のリスク",
+      "category": "リスク管理",
+      "summary": "人気のAI議事録・ノートアプリ「Granola」において、デフォルト設定でリンクを知っている全員が閲覧可能であり、かつ明示的に拒否しない限り入力内容がAI学習に利用される仕様が判明しました。",
+      "one_liner": "AIノートの共有設定と学習設定に注意",
+      "why_important": "利便性の高いツールほど、デフォルトの設定がプライバシー保護に適しているかを確認するリテラシーが求められます。",
+      "action_item": "利用中のAIツールの設定画面で、データ共有と学習設定を再確認する",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/906253/granola-note-links-ai-training-psa"
+    },
+    {
+      "title": "Googleが次世代オープンモデル「Gemma 4」を公開、スマホでの動作も可能に",
+      "category": "最新技術",
+      "summary": "推論とエージェント機能に特化した最新オープンモデル。スマホやローカルPC上でオフライン動作が可能で、企業は機密データをクラウドに送らずに高度なAIアシスタントを構築できます。",
+      "one_liner": "スマホで動くGoogleの最新モデル公開",
+      "why_important": "クラウドを介さないローカルAIの普及は、セキュリティとプライバシーを重視する企業にとって導入の大きな転換点となります。",
+      "action_item": "ローカル環境でAIを動かすメリットを、自社業務に照らして検討する",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/google-gemma-4-fully-open-source-powerful-local-ai/"
+    },
+    {
+      "title": "AIが生成したコードに潜む「見抜けないバグ」の脅威と対策",
+      "category": "リスク管理",
+      "summary": "AIコーディング支援により開発は速まる一方、一見正常に見えて本番環境でのみ障害を起こすバグが増加。文脈を理解せず模倣するAIの特性を理解したレビュー体制が求められています。",
+      "one_liner": "AI生成コードの「見えないバグ」に警鐘",
+      "why_important": "AI任せの開発は致命的なシステム停止を招く恐れがあります。人間による最終チェックの重要性を再定義する必要があります。",
+      "action_item": "AIが作成したコードに対し、例外処理やエッジケースのテストを強化する",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2604/03/news008.html"
+    },
+    {
+      "title": "「思考のコスト」がゼロになる？マクニカが説くAI革命の最前線",
+      "category": "日本市場",
+      "summary": "AIが「思考の蛇口」となり知的生産コストが激減する時代を予測。自律型AIと現実を認識するフィジカルAIが、日本の労働力不足を解消する鍵になると論じています。",
+      "one_liner": "AIで「思考のコスト」がゼロになる時代へ",
+      "why_important": "AIが判断まで行う自律型の普及により、ビジネスパーソンの役割は「考えること」から「AIの判断を導くこと」へ移行します。",
+      "action_item": "自身の業務の中で、AIに判断を任せられるタスクをリストアップする",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2604/03/news043.html"
+    },
+    {
+      "title": "GeminiとClaudeが「記憶」の移行に対応、AIの乗り換えが容易に",
+      "category": "業務効率化",
+      "summary": "GoogleとAnthropicが、他社チャットボットからの履歴やパーソナライズ設定のインポート機能を強化。特定のプラットフォームへのロックインを避け、移行が容易になります。",
+      "one_liner": "AI間の履歴移行が可能になり乗り換え容易に",
+      "why_important": "AIを特定の一つに絞る必要はなく、用途や進化の速度に合わせて柔軟にツールを使い分ける戦略が有効になります。",
+      "action_item": "現在のメインAI以外のモデルに、過去の対話例を入力して回答を比較する",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2604/03/news011.html"
+    },
+    {
+      "title": "MIT報告：2029年までにAIがテキスト業務の大半を完結可能に",
+      "category": "業務効率化",
+      "summary": "AIは数年以内に文章作成などのタスクで実用的なレベルに達すると予測。急激な変革ではなく緩やかな浸透であるため、人間には適応するための時間があると分析しています。",
+      "one_liner": "2029年、AIがテキスト業務の主役に",
+      "why_important": "AIとの協業は必須スキルから前提条件に変わります。今からAIとの「共同作業」に慣れておくことが未来の生存戦略です。",
+      "action_item": "定型的なメール作成や報告書作成を、AIに一次下書きさせる習慣を作る",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/new-mit-jobs-work-report-ai-impacts-2026/"
+    },
+    {
+      "title": "マイクロソフト、超知能（ASI）実現に向けた法人向け新戦略",
+      "category": "最新技術",
+      "summary": "MSのAI部門CEOが、企業の日常業務を支援するAIを人間を凌駕する「超知能」レベルへ引き上げる戦略を発表。既存ツールが自律的エージェントへと進化を遂げます。",
+      "one_liner": "マイクロソフト、超知能による業務変革へ",
+      "why_important": "Officeツールが単なる道具から、自ら提案・実行する自律型パートナーへ変わるパラダイムシフトが目前に迫っています。",
+      "action_item": "Microsoft 365などの最新AI連携機能のアップデートを定期的に確認する",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/report/905791/mustafa-suleyman-microsoft-ai-transcription-model"
+    },
+    {
+      "title": "AI開発ツールCursor、コードを自律生成する新エージェントを発表",
+      "category": "業務効率化",
+      "summary": "プログラミング用エディタのCursorが、複数ファイルの修正やデバッグを自律的に行う機能を発表。人間はコードを書くよりも、全体の設計に集中できるようになります。",
+      "one_liner": "Cursorがコードを自律修正する新機能",
+      "why_important": "「作る」作業がAIに代替される中、ビジネスをどう設計するかという上流工程のスキルの価値が相対的に高まります。",
+      "action_item": "自律型エージェント機能を使って、簡単なコード修正を自動で行わせる",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/cusor-launches-coding-agent-openai-anthropic/"
+    },
+    {
+      "title": "Google Vids、プロンプト入力だけでAIアバターを自在に操作可能に",
+      "category": "業務効率化",
+      "summary": "テキスト指示だけで特定のキャラクターにセリフや動きをさせることが可能に。動画編集スキルがなくても、研修やプレゼン用の高品質な視覚コンテンツを即座に作成できます。",
+      "one_liner": "プロンプトでAIアバターを自在に演出",
+      "why_important": "社内コミュニケーションの質を上げるために、誰でも動画というリッチな媒体を使えるようになり、表現の幅が広がります。",
+      "action_item": "次回の社内共有やマニュアル作成に、AI生成動画が使えるかテストする",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/02/google-now-lets-you-direct-avatars-through-prompts-in-its-vids-app/"
+    },
+    {
+      "title": "「音声とマウス」だけでアプリ構築、キーボード不要の時代が到来か",
+      "category": "ライフスタイル",
+      "summary": "音声指示とマウスクリックだけで本格的なアプリを構築した事例が話題。伝統的なIDEを使わずとも、論理的な思考さえあれば誰でも開発者になれる時代の象徴です。",
+      "one_liner": "キーボード不要、音声だけでアプリが完成",
+      "why_important": "技術的障壁が消滅した今、重要なのは「何を作るか」という課題発見能力と論理的に指示を出す力です。",
+      "action_item": "身近な業務上の課題を一つ選び、それを解決するアプリの要件を書き出す",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/building-apps-with-ai-and-no-ide/"
+    }
+  ]
+}

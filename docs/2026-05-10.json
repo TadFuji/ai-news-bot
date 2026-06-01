@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月10日",
+  "theme": "AIの「導入」から「実戦・自律稼働」へ",
+  "morning_comment": "AIが自ら動き出す時代へ。実務への深い組み込みと安全な制御が問われています。",
+  "articles": [
+    {
+      "title": "LLMアプリを本番業務に導入するための設計パターン集",
+      "category": "業務効率化",
+      "summary": "AIエージェントをチャットの枠を超え、実際の業務フローへ組み込むための実践的ガイド。AIの出力がどの入力に基づき、誰が承認し、どのように修復可能かという「ワークフロー設計」に焦点を当てています。",
+      "one_liner": "AIを業務システムへ組み込む設計指針",
+      "why_important": "単なるチャット利用を超え、責任の所在や修正可能性を定義したシステム構築が信頼の鍵となります。",
+      "action_item": "自社のAI利用における「承認プロセス」の有無を確認してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kanaria007/articles/c74aae44ba99fb"
+    },
+    {
+      "title": "Claude Code、Codex CLI、Copilot CLIのQCD比較",
+      "category": "業務効率化",
+      "summary": "最新のコーディング支援AI 3種を品質・コスト・速度で90回テスト。品質面では拮抗する一方、コードレビュー精度や特定モデルの挙動に差があることが判明し、開発マネージャーに選定基準を提供します。",
+      "one_liner": "コーディング支援AIのQCD徹底比較",
+      "why_important": "ツールごとに得意不得意があるため、コストと品質のバランスを定量的に評価し選択する必要があります。",
+      "action_item": "現在使用中のAI開発ツールのレビュー精度を1件分だけ再検証してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/nnakapa/articles/lab-16-rpi4-qcd"
+    },
+    {
+      "title": "LINE連携AIアプリのフルスタック開発事例",
+      "category": "日本市場",
+      "summary": "日本で圧倒的なシェアを持つLINEをインターフェースにし、LLMと連携した実用サービスを構築する手法。バックエンド未経験でもAIの助けを借りて迅速に開発できることが示されています。",
+      "one_liner": "LINE×AIで日常に溶け込むアプリ開発",
+      "why_important": "馴染みのあるインターフェースを選ぶことで、ユーザーや社員のAI利用ハードルを劇的に下げられます。",
+      "action_item": "LINEなどのチャットツールを業務AIの入り口にできないか検討してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/satoshi_tech/articles/20260510-line-ai-app-with-template"
+    },
+    {
+      "title": "AI活用が組織のQCD（品質・コスト・納期）に与える影響",
+      "category": "業務効率化",
+      "summary": "個人活用から組織導入へ移行する際、メリットが「時短」から「品質向上」へシフトする現象を解説。テンプレート化を通じて組織全体の出力レベルを底上げすることがAI活用の真髄であると説いています。",
+      "one_liner": "個人から組織へ、AIは「質」の向上へ",
+      "why_important": "AI活用は時短だけでなく、プロンプトの共有による組織全体の成果物の底上げに真価があります。",
+      "action_item": "チーム内で最も効果的だったプロンプトを1つ共有し合ってください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/commander/articles/c6d4d605d561fd"
+    },
+    {
+      "title": "マルチエージェント設計の7原則：16日間の自律稼働事例",
+      "category": "業務効率化",
+      "summary": "複数のAIエージェントを連携させ、16日間自律的にタスクを遂行させる設計原則。AI同士が協力・検証し合う構造により、週末や夜間も含めた継続的な業務自動化の可能性を示しています。",
+      "one_liner": "16日間自律稼働、複数AIの連携事例",
+      "why_important": "人間の監視が不要な自律型システムの構築により、24時間365日の業務自動化が現実味を帯びています。",
+      "action_item": "週末もAIに任せられそうな「定型的な監視業務」をリストアップしてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/aerign/articles/916513f6e96e7e"
+    },
+    {
+      "title": "100万トークン時代のAIへの「問い」の致命的な間違い",
+      "category": "最新技術",
+      "summary": "情報量が飛躍的に増えた現代、短い指示ではAIの能力を引き出せません。AIを「主権」を持つパートナーとして扱い、全体図を提示する「寄り添い工学」の重要性を説いています。",
+      "one_liner": "大規模データ時代の「寄り添う」AI対話",
+      "why_important": "膨大な情報を扱える今のAIには、断片的な指示ではなく全体像を共有する対話スキルが求められます。",
+      "action_item": "10枚以上の資料を一度にAIに読み込ませ、全体俯瞰の要約を依頼してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/eitoatsuta/articles/94d5051c4b07c0"
+    },
+    {
+      "title": "AIエージェントの停止権限（Stop Authority）設計",
+      "category": "リスク管理",
+      "summary": "AIが自律行動する際、誰がどのように行動を止めるかという「停止権限」の設計を解説。暴走を防ぐガードレールや人間による監視など、リスク管理に不可欠な要素を網羅しています。",
+      "one_liner": "自律AIを安全に止める「停止権限」設計",
+      "why_important": "事故を防ぐためのガードレール設計は、AIを重要なビジネス判断に導入するための最低条件です。",
+      "action_item": "AIが誤作動した際の「緊急停止フロー」が想定されているか確認してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/dantarg/articles/stop-authority-design"
+    },
+    {
+      "title": "マスク氏vsオープンAI、裁判2週目の新展開",
+      "category": "法規制・倫理",
+      "summary": "イーロン・マスク氏によるOpenAI提訴の続報。AIのオープンソース化の是非や営利・非営利の境界線など、今後の業界標準や勢力図を左右する重要な論点を孕んでいます。",
+      "one_liner": "マスク氏vsOpenAI、深まる対立",
+      "why_important": "業界のルールメイキングに関わる法争は、将来のAI利用のコストや透明性に直結します。",
+      "action_item": "AIの「オープンソース派」と「営利派」の動向をニュースでチェックしてください。",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/05/08/1137008/musk-v-altman-week-2-openai-fires-back-and-shivon-zilis-reveals-that-musk-tried-to-poach-sam-altman/"
+    },
+    {
+      "title": "サムスン製ウォッチが失神を予測、健康管理AIの進化",
+      "category": "ライフスタイル",
+      "summary": "スマートウォッチに失神を事前予測するAI機能を搭載する研究。バイタルデータをリアルタイム解析し健康リスクを予測する「パーソナル・ヘルスAI」の具体例です。",
+      "one_liner": "ウェアラブルAIが失神を事前予測",
+      "why_important": "個人のバイタルデータとAIが直結することで、予防医療のフェーズが大きく変わろうとしています。",
+      "action_item": "お手持ちのウェアラブル端末のデータ共有設定を見直してみてください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/samsung-galaxy-watch-faintng-detection-study-caveats/"
+    },
+    {
+      "title": "AI重要用語グロッサリー：曖昧な理解を解消",
+      "category": "最新技術",
+      "summary": "ハルシネーションやプロンプトエンジニアリングなど、AIに関する主要用語を解説。共通言語を正しく理解し、ビジネスの現場で適切にAIの現状を把握・伝達するための基礎知識を提供します。",
+      "one_liner": "今さら聞けないAI重要用語を再定義",
+      "why_important": "専門用語の正確な理解は、チーム内での誤解を防ぎ、迅速な意思決定を行うための土台となります。",
+      "action_item": "「ハルシネーション」の定義をメンバーと再確認し、リスク意識を共有してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/09/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/"
+    }
+  ]
+}

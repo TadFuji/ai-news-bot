@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月23日",
+  "theme": "AIは「道具」から「自律的な相棒」へ",
+  "morning_comment": "エージェントが自ら動く時代。AIを「使う」から「任せる」への転換が始まります。",
+  "articles": [
+    {
+      "title": "OpenAI、自律的に業務を遂行する「ワークスペース・エージェント」をリリース",
+      "category": "業務効率化",
+      "summary": "OpenAIがChatGPTのビジネス向けに、バックグラウンドで自律動作するエージェント機能を導入。指示なしで情報収集から共有まで完結します。",
+      "one_liner": "AIが自律的に動くデジタル部下へ",
+      "why_important": "AIが受動的なツールから、自ら判断し行動する「エージェント」へと進化した象徴的なニュースです。",
+      "action_item": "「AIに任せきりにできるルーチン作業」を一つ特定してみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/917065/openai-chatgpt-workspace-agents-custom-teams-bots"
+    },
+    {
+      "title": "Claude Opus 4.7：最強モデルの登場と、その「恐ろしさ」への懸念",
+      "category": "最新技術",
+      "summary": "Anthropicの最新モデルが既存のAIを凌駕。圧倒的な推論能力がもたらす既存スキルの陳腐化への懸念も浮上しています。",
+      "one_liner": "知性の頂点、Claude最新版が登場",
+      "why_important": "推論能力の飛躍により、複雑な戦略立案や高度なコーディングもAIの守備範囲になります。",
+      "action_item": "解決が難しいと感じていた課題を、最新モデルに相談してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2604/23/news011.html"
+    },
+    {
+      "title": "Google Chrome EnterpriseにAI自動ブラウジングとGemini要約が追加",
+      "category": "業務効率化",
+      "summary": "企業向けChromeにGeminiが統合され、リサーチやデータ入力の自動化が可能に。セキュリティ管理機能も強化されました。",
+      "one_liner": "ブラウザ作業をAIが自動で代行",
+      "why_important": "毎日使うブラウザ自体が知能を持つことで、検索や入力の手間が最小化されます。",
+      "action_item": "Chromeの新機能設定を確認し、自動化できる作業がないか試してください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/google-chrome-enterprise-update-auto-browse-skills-gemini-summary/"
+    },
+    {
+      "title": "GmailにAI Overviewsが到来：大量のメールを瞬時に要約",
+      "category": "業務効率化",
+      "summary": "職場用Gmailに「AI Overviews」が導入。複数のメールスレッドから重要事項を抽出し、意思決定を迅速化させます。",
+      "one_liner": "大量のメールを瞬時に要約",
+      "why_important": "情報過多の時代、中身を読み解く時間そのものがAIによって削減可能になります。",
+      "action_item": "複数のやり取りが続く長いメールスレッドの要約をAIに依頼してみましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/22/ai-overviews-are-coming-to-your-gmail-at-work/"
+    },
+    {
+      "title": "ミツカンのAIプロジェクト：失敗から211人が集まるコミュニティへ",
+      "category": "業務効率化",
+      "summary": "ミツカンは「緩いコミュニティ」運営で社員の自発的なAI活用を促進。組織文化の変革がAI活用の鍵であることを示しました。",
+      "one_liner": "失敗から生まれたAI共創文化",
+      "why_important": "導入がゴールではなく、社員が自発的に楽しんで使う「遊び」の要素が活用を加速させます。",
+      "action_item": "社内のAI推進者や興味がある同僚と、活用事例を軽く共有してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2604/23/news021.html"
+    },
+    {
+      "title": "調査で判明、議事録AIで「仕事が回る会社」と「ムダが増える会社」の境界線",
+      "category": "業務効率化",
+      "summary": "180社への調査で、議事録AIの効果はプロセスの再設計にあることが判明。単なる自動化は逆効果になるリスクも指摘されています。",
+      "one_liner": "議事録AI、成果の差は設計にあり",
+      "why_important": "自動化そのものより、その後の情報共有プロセスをどう変えるかが成否を分けます。",
+      "action_item": "AI議事録を「誰が」「いつまでに」確認するか、フローを明確にしてください。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2604/23/news046.html"
+    },
+    {
+      "title": "小型AI「Claude Haiku」で最強モデル超えを実現する設計手法",
+      "category": "業務効率化",
+      "summary": "安価で高速なClaude Haiku 4.5に特定のスキルを組み込み、最高峰モデル以上の成果を出す手法が注目されています。",
+      "one_liner": "小さなAIを「設計」で最強にする",
+      "why_important": "高価な大型モデルを使わずとも、適切な指示や仕組みで高い成果は出せます。",
+      "action_item": "コストパフォーマンスを意識し、用途に合わせたAIの使い分けを検討しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/ai_arai_ally/articles/20260422-0401-claude-haiku-4-5-skill-opus-4-7"
+    },
+    {
+      "title": "Audio AIは「聴く」時代へ：大規模音声言語モデル（LALM）の台頭",
+      "category": "最新技術",
+      "summary": "音声をテキスト化せず直接理解するLALMが注目。声のトーンや感情を捉えた高度な音声インターフェースが実現します。",
+      "one_liner": "音声を「聴いて」理解する新AI",
+      "why_important": "音声を文字に介さず理解することで、感情やニュアンスを汲み取った対話が可能になります。",
+      "action_item": "音声対話機能を使い、テキストでは伝わりにくいニュアンスをAIに伝えてみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kasahart/articles/kasahart-20260419-audio-llm-arena"
+    },
+    {
+      "title": "AIによる巧妙なフィッシング攻撃：5つのモデルが詐欺のデモを実演",
+      "category": "リスク管理",
+      "summary": "AIがターゲットの文体を模倣し、極めて不自然さのない詐欺メッセージを生成。従来の「怪しい日本語」で見破る時代が終焉しました。",
+      "one_liner": "AI詐欺は「不自然」を完全に克服",
+      "why_important": "完璧な文体による攻撃が増えるため、直感に頼らないセキュリティ意識が不可欠です。",
+      "action_item": "知人からの急な依頼も、まずは別の手段で本人確認する習慣を徹底しましょう。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/ai-model-phishing-attack-cybersecurity/"
+    },
+    {
+      "title": "ソニーの卓球ロボット「Ace」がトップ選手を撃破：AIと身体性の融合",
+      "category": "日本市場",
+      "summary": "ソニーのAI卓球ロボットがトップ選手に勝利。高度な予測と物理制御により、デジタルを超えた現実世界での優位性を示しました。",
+      "one_liner": "AIが卓球のトップ選手を撃破",
+      "why_important": "AIの進化は画面の中を飛び出し、現実世界の物理的な動作も人間のプロを超え始めました。",
+      "action_item": "デジタルだけでなく「現場」の物理作業にAIがどう関わるか想像してみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/916800/sony-ai-ace-ping-pong-table-tennis-robot-cameras"
+    }
+  ]
+}

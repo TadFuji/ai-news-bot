@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月21日",
+  "theme": "AIがツールから自律的パートナーへ",
+  "morning_comment": "AIは単なる道具を超え、思考と実行を共にするパートナーへと進化を遂げました。",
+  "articles": [
+    {
+      "title": "Google I/O 2026：AI中心の100件の革新を発表",
+      "category": "業務効率化",
+      "summary": "GoogleはGeminiを中核とした100件の新機能を発表。OSレベルでのAI統合により、検索から資料作成、スケーリングまでが劇的に自動化されます。",
+      "one_liner": "AIがOSと融合、全自動化へ",
+      "why_important": "OSレベルのAI統合により、アプリ間の移動さえ不要になる作業革命が始まります。",
+      "action_item": "今使っている定型ツールのAI連携機能を確認してください。",
+      "source": "Google AI Blog",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/"
+    },
+    {
+      "title": "PC操作を自動学習し代行する「AI執事」IrisGoが登場",
+      "category": "業務効率化",
+      "summary": "ユーザーのデスクトップ画面を監視し、日常的なタスクを学習・代行するAIエージェント。手順を教える必要がなく、見るだけで仕事を覚えます。",
+      "one_liner": "操作を「見て」覚えるAI執事誕生",
+      "why_important": "手順説明なしで業務を代行するAIの登場は、PC作業の定義を根本から変えます。",
+      "action_item": "毎日繰り返している単純なPC操作をリストアップしましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/20/irisgo-a-startup-backed-by-andrew-ng-looks-to-become-the-ai-desktop-buddy-you-never-knew-you-needed/"
+    },
+    {
+      "title": "「Vibe Coding」時代の到来、スマホでアプリが即作成可能に",
+      "category": "業務効率化",
+      "summary": "プログラミング知識不要で、言葉で「雰囲気」を伝えるだけでアプリを作成できる環境が発表。ビジネスパーソンが自作ツールを持てる時代へ。",
+      "one_liner": "言葉の「雰囲気」だけでアプリ作成",
+      "why_important": "非エンジニアでも即座に業務ツールを自作できるため、現場の課題解決スピードが向上します。",
+      "action_item": "「こんなツールがあれば便利だ」というアイデアを言語化してみましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/934628/google-io-2026-android-ai-studio-widgets-shortcuts"
+    },
+    {
+      "title": "OpenAI、80年来の数学的難題をAIで証明",
+      "category": "最新技術",
+      "summary": "OpenAIの推論モデルが、1946年から未解決だった幾何学の予想を証明。AIが高度な論理的思考や科学的発見を代行できる可能性を示しました。",
+      "one_liner": "AIが80年来の数学的難題を解決",
+      "why_important": "論理的思考の頂点である数学の進展は、ビジネスの意思決定支援の信頼性を保証します。",
+      "action_item": "AIに複雑な条件分岐のある課題を相談し、論理性を確かめてみましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/"
+    },
+    {
+      "title": "IBMに激震、Anthropicの新AI「Claude Mythos」が既存システムを脅かす",
+      "category": "リスク管理",
+      "summary": "新モデルがレガシーシステムの脆弱性を容易に特定。多くの日本企業が依存する古いシステムのセキュリティリスクと近代化が急務となっています。",
+      "one_liner": "新AIが旧式システムの弱点を露呈",
+      "why_important": "AIが攻撃手段にもなる今、古いシステムの放置は致命的な経営リスクそのものです。",
+      "action_item": "自社の重要システムがいつ導入されたものか、保守状況を把握しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2605/21/news026.html"
+    },
+    {
+      "title": "Visaが警告、AIを駆使した巧妙な詐欺が急増中",
+      "category": "リスク管理",
+      "summary": "ディープフェイク等による偽の支払い請求が急増。ビジネスシーンでも取引先を装った偽の送金依頼リスクが高まっており、従来の確認では不十分です。",
+      "one_liner": "AIによる完璧な偽請求に注意",
+      "why_important": "「見破れない詐欺」に対し、テキスト以外の手段を含む二重確認の徹底が不可欠です。",
+      "action_item": "送金依頼の際には、電話等で本人確認を行う社内ルールを設けましょう。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/visa-fraud-ai-report-2026/"
+    },
+    {
+      "title": "Nvidia決算、AI需要で利益3.1倍の驚異的成長",
+      "category": "最新技術",
+      "summary": "売上高前年比85%増、最終利益3.1倍を達成。生成AIブームが一時的なものではなく、本格的な社会実装フェーズにあることを示唆しています。",
+      "one_liner": "AI需要爆発、Nvidia利益3倍",
+      "why_important": "ハードへの投資継続は、AIが長期的な産業構造の変化であることを意味します。",
+      "action_item": "AI導入を「一時的な試行」ではなく「長期インフラ投資」として捉え直しましょう。",
+      "source": "NHK 科学・技術",
+      "url": "https://news.web.nhk/newsweb/na/na-k10015127411000"
+    },
+    {
+      "title": "OpenAI、9月上場へ向け最終調整か",
+      "category": "最新技術",
+      "summary": "OpenAIが2026年9月にIPOを行う可能性。世界で最も注目されるAI企業の公開は、市場の資金流入を加速させ、サービス競争を一段と激化させます。",
+      "one_liner": "OpenAI、9月に史上最大のIPOか",
+      "why_important": "巨大資本の流入により、AIサービスのコモディティ化と機能競争がさらに加速します。",
+      "action_item": "主要AIベンダーの提携関係を整理し、自社の採用プラットフォームを検討しましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/20/openai-barrels-toward-ipo-that-may-happen-in-september/"
+    },
+    {
+      "title": "AI検索スタートアップが台頭、Google一強時代の終焉か",
+      "category": "最新技術",
+      "summary": "Perplexity等の普及により、検索体験が「リンクをクリック」から「直接回答」へ移行。企業のSEOや広告戦略の根本的な見直しが必要です。",
+      "one_liner": "検索から即回答へ、Googleの転機",
+      "why_important": "情報の届き方が変わるため、企業の情報発信のあり方を再設計する必要があります。",
+      "action_item": "従来の検索ではなく、対話型AI検索で日常の調べ物を試してみましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/20/ai-search-startups-are-blowing-up/"
+    },
+    {
+      "title": "YouTube ShortsにGemini搭載、AIで動画をリミックス可能に",
+      "category": "ライフスタイル",
+      "summary": "Gemini Omniを活用して既存の動画をAIで再構成可能に。短尺動画の制作コストが激減し、誰もが高度なクリエイティブを発信できる環境が整います。",
+      "one_liner": "AIリミックスで誰でもプロ動画",
+      "why_important": "クリエイティブ制作の壁が崩壊し、質の高いコンテンツを量産できる時代になります。",
+      "action_item": "生成AIを使った短い動画制作を試して、表現の可能性を体感しましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/934704/google-gemini-omni-youtub-shorts-remix-ai"
+    }
+  ]
+}

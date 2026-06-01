@@ -1,0 +1,107 @@
+{
+  "updated": "2026年03月28日",
+  "theme": "AI実用化の加速と信頼性の再定義",
+  "morning_comment": "実用化が進む中、モデルの透明性と持続可能性が新たなビジネスの焦点となります。",
+  "articles": [
+    {
+      "title": "楽天の最新AI「RakutenAI 3.0」にベースモデル隠蔽疑惑で炎上",
+      "category": "日本市場",
+      "summary": "楽天がGPT-4o超えを謳い発表した「RakutenAI 3.0」が、中国のDeepSeek V3をベースにしていることが解析により判明し、透明性の欠如について批判が集まっています。",
+      "one_liner": "国産AIの透明性と倫理が問われる",
+      "why_important": "企業がAIツールを採用する際、その「出自」を確認することはリスク管理において不可欠な工程となりました。",
+      "action_item": "自社で利用・検討しているAIサービスのベースモデルを再確認してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/jun1013/articles/e2e331dea0c616"
+    },
+    {
+      "title": "ソフトバンクが約6兆円の巨額融資獲得、OpenAI上場を見据えた投資か",
+      "category": "日本市場",
+      "summary": "ソフトバンクグループが400億ドルの融資枠を確保しました。これは2026年にも噂されるOpenAIのIPOを見据え、世界のAI覇権を握るための布石と見られています。",
+      "one_liner": "孫正義氏、AI覇権へ6兆円の勝負",
+      "why_important": "巨額の資金流入は、AI市場がさらなる拡大期にあることを示しており、日本国内の投資環境にも大きな影響を与えます。",
+      "action_item": "AI関連銘柄の動向とともに、ソフトバンクの投資先リストをチェックしてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/03/27/why-softbanks-new-40b-loan-points-to-a-2026-openai-ipo/"
+    },
+    {
+      "title": "新ツール「Claude Code」が話題、業務効率化の新たな標準へ",
+      "category": "業務効率化",
+      "summary": "Anthropicが発表したターミナル上で動作するエージェント型ツール。プログラムの作成からテストまでを自動化し、エンジニアの生産性を劇的に向上させます。",
+      "one_liner": "ターミナルで動く自律型開発支援",
+      "why_important": "AIがチャット画面を飛び出し、直接環境を操作するエージェント時代への移行を象徴するツールです。",
+      "action_item": "エンジニアチームに対し、Claude Codeの導入検証を提案してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/beeeegle/articles/a50b1cdbe4973c"
+    },
+    {
+      "title": "創業230年の老舗企業STADLERがChatGPTで知識労働を革新",
+      "category": "業務効率化",
+      "summary": "老舗企業が全従業員にChatGPTを導入し、情報検索時間の短縮を実現。伝統的な企業文化でもAI導入による組織変革が可能であることを証明しました。",
+      "one_liner": "老舗企業もAIで知識管理を刷新",
+      "why_important": "「うちは古いから」という言い訳は通用しなくなり、既存資産をどうAIで活用するかが勝負となります。",
+      "action_item": "社内に眠るマニュアルや過去資料のAI化プロジェクトを検討してください。",
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/index/stadler"
+    },
+    {
+      "title": "IBMがPDFをAI解析可能な形式に変換する「Docling」を公開",
+      "category": "業務効率化",
+      "summary": "複雑なレイアウトの資料を構造を維持したままMarkdown形式に変換。AI（RAG）の精度を左右する「データの汚れ」を解決するインフラ技術です。",
+      "one_liner": "汚いPDFをAIが読める形式に",
+      "why_important": "AIの回答精度を高めるためには、モデルの選定以上に「データの整形」が重要であることを再認識すべきです。",
+      "action_item": "RAGの精度に悩んでいる場合、Doclingでデータの再構築を試してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/fukurou_labo/articles/f523b8c34fcf43"
+    },
+    {
+      "title": "AIのトレンドは「推論」から「自律型エージェント」へ",
+      "category": "最新技術",
+      "summary": "Qwenの元技術リードらが、AIは人間の指示を待つ「推論」の段階から、自らツールを使いタスクを完遂する「エージェント」へ進化していると指摘しました。",
+      "one_liner": "AIは「推論」から「代行」の時代へ",
+      "why_important": "指示を出すスキル（プロンプト）以上に、AIにどの権限を委譲するかという設計能力が求められるようになります。",
+      "action_item": "「AIに任せられる一連の業務工程」をワークフロー図に書き出してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/luoxi/articles/from-reasoning-to-agents-industry-voices"
+    },
+    {
+      "title": "AIコーディングエージェントの不都合な真実、過度な期待に警鐘",
+      "category": "リスク管理",
+      "summary": "AIが生成するコードの保守性やセキュリティ欠陥のリスクを議論。AIに丸投げせず、人間が品質を担保する重要性が浮き彫りになっています。",
+      "one_liner": "AIコードの品質管理に警鐘",
+      "why_important": "短期的なスピード向上と引き換えに、長期的な技術的負債を抱え込まないよう注意が必要です。",
+      "action_item": "AIが生成したコードに対する人間によるレビュー基準を策定してください。",
+      "source": "Hacker News AI",
+      "url": "https://standupforme.app/blog/some-uncomfortable-truths-about-ai-coding-agents/"
+    },
+    {
+      "title": "イランの爆破事件、AIの誤情報が混乱を招いた背景",
+      "category": "リスク管理",
+      "summary": "AI関与の誤報が広がった事例を通じ、AIに対する過度な恐怖や「AIスケープゴート」現象が、真実の追求を妨げるリスクを浮き彫りにしました。",
+      "one_liner": "AI誤情報が招く社会の疑心暗鬼",
+      "why_important": "情報の信憑性を判断する際、AIの存在を前提とした高度なメディアリテラシーが全ビジネスパーソンに求められます。",
+      "action_item": "真偽不明のニュースに接した際は、複数の一次情報源を確認する癖をつけてください。",
+      "source": "Hacker News AI",
+      "url": "https://www.theguardian.com/news/2026/mar/26/ai-got-the-blame-for-the-iran-school-bombing-the-truth-is-far-more-worrying"
+    },
+    {
+      "title": "標準的なPCでも最新AIを動かす「仮想HPCクラスタ」の手法",
+      "category": "業務効率化",
+      "summary": "標準的なビジネスPCでも大規模言語モデルを動作させる技術。高価なGPUサーバーなしでAIの試作を可能にする、コスト効率の高いアプローチです。",
+      "one_liner": "並のPCで大規模モデルを動かす",
+      "why_important": "ハードウェアコストの壁が低くなることで、現場主導のAI実験や小規模導入が容易になります。",
+      "action_item": "クラウド費用を抑えるため、手元の環境でのLLM実行の可能性を調査してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/952490802574164/articles/d41848cdf75109"
+    },
+    {
+      "title": "AIデータセンターの急増が電力網と環境に与える深刻な影響",
+      "category": "リスク管理",
+      "summary": "AIインフラ建設に伴う電力不足と環境負荷が世界的な課題に。企業のESG評価やAI利用コストの上昇に直結する懸念が高まっています。",
+      "one_liner": "AI普及を阻む「電力供給」の壁",
+      "why_important": "AIの恩恵を享受する一方で、その持続可能性や社会的責任も問われるフェーズに入っています。",
+      "action_item": "自社のIT投資が環境に与える影響を、ESGレポートの観点から確認してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy"
+    }
+  ]
+}

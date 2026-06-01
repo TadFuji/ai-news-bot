@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月22日",
+  "theme": "自律型AIエージェントの社会実装が加速",
+  "morning_comment": "AIは「指示待ち」から「自律」へ。道具から相棒へと進化する転換点を迎えています。",
+  "articles": [
+    {
+      "title": "Google、AIを悪用した未知の脆弱性（ゼロデイ）攻撃を検知",
+      "category": "リスク管理",
+      "summary": "Googleは、攻撃者がAIを用いてソフトウェアの未知の脆弱性（ゼロデイ）を発見し、攻撃に悪用している証拠を見つけたと報告しました。AIによる攻撃の自動化により、従来の防御手段では追いつけない速度でサイバー脅威が発生するリスクが高まっています。",
+      "one_liner": "AIが悪用され未知の脆弱性攻撃が深刻化",
+      "why_important": "AIによる攻撃の自動化は、従来のセキュリティ対策の限界を超えつつあります。防御側もAIを活用したリアルタイムな対応が必須となります。",
+      "action_item": "自社のセキュリティ設定とパッチ適用状況を即座に確認してください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/google-says-it-found-evidence-of-hackers-using-ai-to-discover-a-zero-day-vulnerability/"
+    },
+    {
+      "title": "iPhone vs Android、最新AI機能の「決定的な差」とは",
+      "category": "ライフスタイル",
+      "summary": "スマートフォンの進化軸がハードウェアからAI機能へと移行しています。Android勢が先行する画像処理や翻訳機能に対し、Appleがどのように統合とプライバシーで対抗しているかを比較。ビジネスユースにおける操作効率の差が浮き彫りになっています。",
+      "one_liner": "スマホ選びの基準はハードからAI機能へ",
+      "why_important": "翻訳や要約などのAI機能のOS統合レベルが、日々の業務効率に直結する時代です。デバイス選定が生産性そのものを左右します。",
+      "action_item": "現在のスマホで最も頻繁に使うAI機能を1つ特定してみましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/feature/2110765.html"
+    },
+    {
+      "title": "アリババが「Qwen3.7-Max」発表、100万トークンの文脈処理を実現",
+      "category": "業務効率化",
+      "summary": "Alibaba Cloudが最新のAIモデル「Qwen3.7-Max」を発表しました。100万トークンという膨大なコンテキストウィンドウを誇り、長文コーディングや多段階のワークフロー自動化に特化。AIエージェントとして高い自律性を備えています。",
+      "one_liner": "100万トークン対応の自律型エージェント",
+      "why_important": "複雑なビジネスプロセスを一つのAIが完結できる能力は、企業の労働環境を劇的に変える可能性を秘めています。",
+      "action_item": "複数のステップがある定型業務を一つ書き出してみてください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/05/21/qwen-introduces-qwen3-7-max-a-reasoning-agent-model-with-a-1m-token-context-window/"
+    },
+    {
+      "title": "ローカルLLM（手元AI）の選び方、2026年春版ガイド",
+      "category": "業務効率化",
+      "summary": "クラウドを通さず自分のPC上でAIを動かす「ローカルLLM」が現実的になっています。Gemma 4などの軽量モデルにより、機密情報が漏れない環境での翻訳や要約が可能。ハードウェアの選び方や実用的な判断基準が提示されています。",
+      "one_liner": "機密情報を守る「自分専用AI」の構築",
+      "why_important": "プライバシーやセキュリティの観点から、クラウドを介さないAI利用は高度な情報を扱うプロフェッショナルの標準になります。",
+      "action_item": "PCのスペックを確認し、ローカルAIの導入可否を調べてください。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2605/22/news012.html"
+    },
+    {
+      "title": "ITプロの96%がAI利用、注目は「自律型エージェント」へ",
+      "category": "業務効率化",
+      "summary": "IT専門家のほぼ全員が業務にAIを導入しており、現在は「指示を受けて回答するAI」から「目標を与えれば自律的にタスクをこなすAI（エージェント）」へと関心が移っています。導入の壁は出力結果を検証するスキルの不足にあります。",
+      "one_liner": "AIは「指示待ち」から「自律実行」へ",
+      "why_important": "単なる回答生成ではなく、目標達成まで自走するエージェントの活用が、これからのビジネスの競争力の源泉となります。",
+      "action_item": "AIに任せたい「最終目標」を明確な言葉で定義してみてください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/96-of-it-pros-use-ai-now-their-top-7-agentic-applications-and-biggest-implementation-roadblocks/"
+    },
+    {
+      "title": "AIがコードを書く時代、プログラミング言語習得の意義が議論に",
+      "category": "最新技術",
+      "summary": "生成AIがコードを自動生成する中で、特定の言語を学ぶ価値が問われています。言語の構文そのものよりも、AIに何を指示し、生成物をどう検証するかという設計力や論理的思考力にスキルの重点が移りつつあります。",
+      "one_liner": "言語習得より「AIへの指示力」が重要に",
+      "why_important": "「書ける」ことの価値が下がり、「何を作るべきか」を構造的に考え、AIを正しく導く能力がビジネスパーソンにも求められます。",
+      "action_item": "AIが生成した結果を「自分の言葉」で説明できるか試してください。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2605/22/news040.html"
+    },
+    {
+      "title": "フジクラ、AIインフラ需要で3000億円投資を断行",
+      "category": "日本市場",
+      "summary": "光ファイバー大手のフジクラが、データセンター向け需要の急増を受け、生産能力拡大に3000億円の投資を決定。AIの普及に伴うデータ通信量の爆発的増加を見越し、今後10年は市場が堅調に推移すると予測しています。",
+      "one_liner": "日本企業が支えるAIインフラの爆発的需要",
+      "why_important": "AIの普及は物理的なインフラ需要を伴い、製造業などの非IT分野にも巨大なビジネスチャンスを生み出しています。",
+      "action_item": "自社ビジネスとAIインフラの接点を一つ考えてみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2605/22/news026.html"
+    },
+    {
+      "title": "SpotifyがAIカバーを解禁、アーティストに収益分配",
+      "category": "法規制・倫理",
+      "summary": "Spotifyとユニバーサル・ミュージックが提携し、ファンがAIを使ってアーティストの声を模したカバー曲を作成することを認める契約を締結。著作権を保護しつつ、AIコンテンツによる収益還元を行う新モデルを目指します。",
+      "one_liner": "AI活用と著作権保護の両立モデルが誕生",
+      "why_important": "AIによる生成物を禁止するのではなく、共生と適切な収益化を両立させる動きは、あらゆるクリエイティブ領域の先行事例となります。",
+      "action_item": "AI生成物に関する社内ルールが現状に適しているか確認しましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/21/spotify-and-universal-music-strike-deal-allowing-fan-made-ai-covers-and-remixes/"
+    },
+    {
+      "title": "イーロン・マスク氏とOpenAIの法廷闘争、AIの未来を左右か",
+      "category": "法規制・倫理",
+      "summary": "イーロン・マスク氏とOpenAIのサム・アルトマンCEOが、設立理念からの逸脱を巡り裁判で対立。この行方次第で、ChatGPTなどの主要製品の提供体制や、将来のAI開発の透明性に大きな影響が出る可能性があります。",
+      "one_liner": "AI開発の「理念」を巡る法廷闘争が激化",
+      "why_important": "開発体制の透明性や非営利性は、AI企業の信頼性と直結します。ユーザーとしてもベンダーの動向を注視すべき局面です。",
+      "action_item": "利用しているAIサービスの運営方針を一度確認してみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit"
+    },
+    {
+      "title": "トランプ氏、AIセキュリティ規制の大統領令署名を延期",
+      "category": "法規制・倫理",
+      "summary": "トランプ米大統領は、AIモデルのリリース前に政府が審査を行うことを義務付ける大統領令の署名を延期。「規制が開発の妨げになる可能性がある」と懸念を示しており、安全よりも開発の加速を優先する姿勢を見せています。",
+      "one_liner": "米国はAIの「規制」より「開発加速」を優先",
+      "why_important": "国家レベルで開発スピードが優先される中、グローバルな市場競争はさらに激化し、技術進化が加速する可能性があります。",
+      "action_item": "競合他社が海外の最新AI技術をどう取り入れているか調査してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/21/trump-delays-ai-security-executive-order-i-dont-want-to-get-in-the-way-of-that-leading/"
+    }
+  ]
+}

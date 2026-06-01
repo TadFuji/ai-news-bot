@@ -1,0 +1,107 @@
+{
+  "updated": "2026年03月30日",
+  "theme": "AIは「使う道具」から「運用する組織基盤」へ",
+  "morning_comment": "AIの導入期は終わり、品質とコスト、環境を管理する「運用期」が始まっています。",
+  "articles": [
+    {
+      "title": "LLMコスト爆発を防ぐ：2026年の企業向け品質・コスト管理戦略",
+      "category": "リスク管理",
+      "summary": "LLMのAPI利用拡大に伴うコスト増に対し、2026年は品質と効率を監視する「品質ガバナンス」が重要になります。最新ツールを活用し、コスト・精度・レイテンシを可視化することで、ビジネスの持続可能性を確保する戦略が求められています。",
+      "one_liner": "AIコスト爆発を防ぐ品質ガバナンス",
+      "why_important": "API利用の拡大に伴い、コストと精度の可視化が企業の持続可能性を左右する重要な経営課題となります。",
+      "action_item": "自社のAI利用コストと得られている成果（精度）を一度棚卸ししてみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kei_concierge/articles/llm-cost-management-quality-first-2026"
+    },
+    {
+      "title": "AIは「5人の異なる同僚」：チームで使い分けるための実戦ガイド",
+      "category": "業務効率化",
+      "summary": "ChatGPT、Claude、Geminiなどの主要LLMを、それぞれ異なる強みを持つ「同僚」として捉える活用法が提案されています。タスクごとに最適なツールを組み合わせることで、業務全体の成果を最大化するチーム運用の考え方を解説しています。",
+      "one_liner": "AIを「同僚」として得意分野で使い分ける",
+      "why_important": "単一のAIに頼るのではなく、モデルごとの特性を理解してチームで運用する視点が成果を最大化します。",
+      "action_item": "今日のタスクを「論理」「創造」「検索」に分け、それぞれ別のAIで試用してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/mezzopiano/articles/3512d2c560386b"
+    },
+    {
+      "title": "SEOからAIOへ：AIエージェントに「解釈」されるためのサイト最適化",
+      "category": "日本市場",
+      "summary": "従来の検索対策（SEO）から、AIが内容を解釈して回答を生成するAIエージェント検索（AIO）への移行が起きています。AIが情報を抽出しやすい構造にウェブサイトを最適化することが、今後のマーケティング戦略の鍵となります。",
+      "one_liner": "SEOからAIOへ。AIに理解されるサイト作り",
+      "why_important": "AIエージェントが情報を収集する時代、機械が解釈しやすい情報構造の設計が企業の認知度を左右します。",
+      "action_item": "自社サイトの主要ページをChatGPTに読み込ませ、意図通りに要約されるか確認しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/yuta_yokoi/articles/7e18e6ee1577aa"
+    },
+    {
+      "title": "OllamaによるローカルLLM導入：機密情報を守りつつAIを活用する",
+      "category": "リスク管理",
+      "summary": "機密情報の漏洩リスクやAPIコストを抑えるため、PCローカル環境でLLMを実行できる「Ollama」が注目されています。外部との通信を遮断した状態でAIを利用できるため、プライバシー重視の開発において標準的な選択肢となりつつあります。",
+      "one_liner": "Ollamaで機密を守るローカルLLM導入",
+      "why_important": "セキュリティ要件が厳しい業務でも、ローカル環境なら安心してAIの恩恵を最大限に享受できます。",
+      "action_item": "機密性の高いデータを扱う業務について、ローカルLLMの活用を検討リストに加えてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/caron14/articles/ollama-introduction-2026-guide"
+    },
+    {
+      "title": "Claudeへの移行を容易に：ChatGPTの「記憶」をコピーできる新機能",
+      "category": "業務効率化",
+      "summary": "Claudeに、他社AIで蓄積されたユーザーの記憶や設定をコピーできる新機能が追加されました。パーソナライズ情報を失うことなく別のAIツールへ乗り換えることが容易になり、ユーザーの選択肢が広がっています。",
+      "one_liner": "記憶の移行でAIの乗り換えがより自由に",
+      "why_important": "AIツール間の壁が低くなり、状況に応じて最適なプラットフォームを柔軟に選べる時代が到来しています。",
+      "action_item": "特定のツールに固執せず、自分の好みの設定を別のAIでも試して出力の差を確認してください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/switch-to-claude-ai-import-memories-preferences/"
+    },
+    {
+      "title": "AI顔認証による誤認逮捕：テクノロジーの限界と社会的リスク",
+      "category": "法規制・倫理",
+      "summary": "米国の警察がAI顔認証の結果を鵜呑みにし、無実の女性を誤認逮捕した事件が報じられました。AIの判定にはバイアスやエラーが存在しており、人間による最終判断が欠如した場合に深刻な人権侵害を招くリスクが浮き彫りになっています。",
+      "one_liner": "AI顔認証の誤認逮捕が示す運用の社会的責任",
+      "why_important": "テクノロジーの限界を理解し、人間による最終判断を組み込む設計が信頼構築には必須です。",
+      "action_item": "業務でAIの判定を利用する際、最終的な「人間による確認フロー」が形骸化していないか点検を。",
+      "source": "Hacker News AI",
+      "url": "https://www.cnn.com/2026/03/29/us/angela-lipps-ai-facial-recognition"
+    },
+    {
+      "title": "「プロンプトの呪文」からの脱却：役割指定よりも重要な条件指定のコツ",
+      "category": "業務効率化",
+      "summary": "「あなたはプロです」という役割指定よりも、読み手の定義、説明の粒度、優先事項、除外条件などを具体的に狭める指定が有効です。大衆化した「呪文」から、論理的な「条件設計」へのステップアップが求められています。",
+      "one_liner": "呪文を卒業し「論理的な条件設計」へ",
+      "why_important": "形式的なプロンプトに頼るのではなく、制約条件を明確に言語化する力がAI活用の鍵となります。",
+      "action_item": "次回の指示出しで「やってはいけないこと（除外条件）」を1つ明記してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/pdfractal/articles/9681d7521841ce"
+    },
+    {
+      "title": "AIの品質をAIが守る：3つのAI人格による合議制チェックシステム",
+      "category": "業務効率化",
+      "summary": "AIが生成した記事の質を担保するため、異なる性格を持たせた3つのAIが校閲し、多数決で公開を決める「合議制品質ゲート」の運用事例が注目されています。人間が介入する手間を減らしつつ、高い品質を維持する自動化の新たな形です。",
+      "one_liner": "3つのAIによる合議制で品質を自動担保",
+      "why_important": "AIの出力をAIが検証する重層的な仕組みは、大規模なコンテンツ生成の信頼性確保に不可欠です。",
+      "action_item": "自分の作成した文章を、別のAIに「厳しい編集者」の視点で批判させてみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/maymay56/articles/ai-magi-5-rejects-quality-gate"
+    },
+    {
+      "title": "Harness Engineering：AIエージェントの動作を安定させる環境設計",
+      "category": "業務効率化",
+      "summary": "プロンプトの工夫だけでは解決できないAIの不安定さに対処する「Harness Engineering」という概念が登場。メモリ管理やエラー時の再試行など、AIが働きやすい「現場のルール（土台）」を整備する重要性が説かれています。",
+      "one_liner": "AIが働く「現場のルール」を整える新技術",
+      "why_important": "プロンプト単体ではなく、AIの動作環境全体を設計することが業務の安定稼働に直結します。",
+      "action_item": "AIがミスをした際、指示の言葉以外に「参照させる情報の渡し方」に改善の余地がないか考えてみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/japan/articles/a7c6d33c0a24c0"
+    },
+    {
+      "title": "AIで生成したアートを壁に飾る：デジタルアートフレーム「Kokonna」",
+      "category": "ライフスタイル",
+      "summary": "音声認識AIでオリジナル絵画を生成し、電子インク技術を用いたデジタルフレームへ送信できる製品が登場しました。バックライト不使用で紙のような質感を実現し、季節や気分に合わせて手軽にアートを着せ替える生活を提案しています。",
+      "one_liner": "音声AIで描く、暮らしを彩るデジタルアート",
+      "why_important": "AIは業務効率化だけでなく、感性やインテリアといった個人のライフスタイル領域にも浸透し始めています。",
+      "action_item": "今日の仕事の合間に、今の自分の気分をAIで画像生成して視覚化してみてください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/03/machi-ya-maxeviskokonna-end-917080.html"
+    }
+  ]
+}

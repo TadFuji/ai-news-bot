@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月31日",
+  "theme": "AI導入、量から質と持続可能性の追求へ",
+  "morning_comment": "AIは全社導入の拡大と、厳格なコスト・倫理管理の並行運用フェーズへ。",
+  "articles": [
+    {
+      "title": "MUFGが全行員3.5万人規模でChatGPT Enterprise導入へ",
+      "category": "日本市場",
+      "summary": "三菱UFJフィナンシャル・グループがOpenAIおよびSakana AIと提携し、2026年から全行員3.5万人にAIを展開。金融特化型AIの開発も進め、組織全体をAI前提のモデルへ転換します。",
+      "one_liner": "金融大手が挑むAIネイティブ化",
+      "why_important": "国内最大級の導入事例であり、他業界でもAIを前提とした組織再設計が加速する契機となります。",
+      "action_item": "自社の業務がAI前提になった場合、どの工程が不要になるか書き出してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/aienthusiast/articles/article-20260530-100000"
+    },
+    {
+      "title": "GitHub Copilotが従量課金へ移行か、開発現場に波紋",
+      "category": "業務効率化",
+      "summary": "Microsoft傘下のGitHub Copilotが従来の定額制からトークンベースの従量課金制への移行を検討中。利用効率を考えた開発とコスト管理のガバナンスが求められるようになります。",
+      "one_liner": "開発AI、使い放題から効率重視へ",
+      "why_important": "AIツールのコスト管理が経営課題となり、プロンプトの質が直接利益に響く時代が到来します。",
+      "action_item": "開発チームでAI利用コストの可視化と無駄な生成を減らすルールを検討してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/"
+    },
+    {
+      "title": "プロンプトの書き方が激変、推論型モデルへの対応",
+      "category": "業務効率化",
+      "summary": "推論型モデルの登場により、従来の「一歩ずつ考えて」という指示が不要になる可能性。AIが自律的に多段推論を行うため、人間はより抽象的で核心を突いた「意図」を伝えるスキルへのシフトが必要です。",
+      "one_liner": "『一歩ずつ考えて』はもう古い？",
+      "why_important": "過去のプロンプト技術に固執せず、最新モデルの特性に合わせて指示出しスキルを更新し続ける必要があります。",
+      "action_item": "最新モデルに対し、あえて手順を省き「意図」だけを伝える抽象的な指示を試してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/yasunami_daichi/articles/llm-reasoning-architectures"
+    },
+    {
+      "title": "米企業でAI利用の「配給制」が開始、コスト急増が背景",
+      "category": "リスク管理",
+      "summary": "米国主要企業がAIコスト高騰を受け、全社員への無制限開放を中止し、役割に応じた「配給制」を導入。AI導入が厳格な費用対効果を問われるフェーズに突入しました。",
+      "one_liner": "AI利用も『費用対効果』で選別",
+      "why_important": "「とりあえず導入」の時期は終わり、どの業務で利益を生むかという戦略的選別が不可欠になります。",
+      "action_item": "今使っているAIツールの具体的な時間削減効果や成果を数値化してみてください。",
+      "source": "Hacker News AI",
+      "url": "https://www.wsj.com/tech/ai/corporate-america-is-starting-to-ration-ai-as-cost-skyrockets-1eb99d7a"
+    },
+    {
+      "title": "Googleが24時間稼働のAIアシスタント「Gemini Spark」を公開",
+      "category": "業務効率化",
+      "summary": "Google Workspaceと統合された24時間対応AIが発表。要約、スケジューリング、プランニングをバックグラウンドで自動実行し、ユーザーのルーチンワークを大幅に削減します。",
+      "one_liner": "24時間働くAI秘書が標準に",
+      "why_important": "秘書的業務をAIに任せることで、ビジネスパーソンはより高度な意思決定に専念できる環境が整います。",
+      "action_item": "Google Workspaceの自動化設定を確認し、AIに任せられるルーチンを一つ特定しましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/30/i-put-googles-24-7-ai-assistant-gemini-spark-to-work-and-its-actually-pretty-useful/"
+    },
+    {
+      "title": "ソフトバンク、仏データセンターに最大750億ユーロを投資",
+      "category": "日本市場",
+      "summary": "ソフトバンクがフランスでAI向けデータセンター群を構築する大規模計画を発表。5ギガワットという圧倒的容量を確保し、欧州のAIインフラにおける覇権を狙います。",
+      "one_liner": "AIの勝敗を決めるのは『計算資源』",
+      "why_important": "AI競争の本質がモデル開発から計算リソースの確保へ移行しており、インフラの重要性が再認識されています。",
+      "action_item": "主要なクラウド事業者のインフラ投資動向を定期的にチェックする習慣をつけましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/30/softbank-says-it-will-invest-up-to-e75-billion-to-build-french-data-centers/"
+    },
+    {
+      "title": "Anthropicの評価額がOpenAIを抜き、世界一のAI企業へ",
+      "category": "最新技術",
+      "summary": "Claudeを開発するAnthropicの市場評価額がOpenAIを上回りました。安全性、倫理性、エンタープライズ向けの堅牢な姿勢が、投資家や大企業から高く評価された結果です。",
+      "one_liner": "信頼性と安全性がAIの価値を決める",
+      "why_important": "多機能性よりも、ビジネスでの実用性と信頼性を重視する市場のトレンドを反映しています。",
+      "action_item": "社内のAI選定基準に「安全性」や「倫理性」の項目が含まれているか確認してください。",
+      "source": "Hacker News AI",
+      "url": "https://qazinform.com/news/anthropic-surpasses-openai-to-become-worlds-most-valuable-ai-startup"
+    },
+    {
+      "title": "AIエージェント防衛用の最新ファイアウォール評価レポート",
+      "category": "リスク管理",
+      "summary": "自律型AIエージェントの運用に伴う乗っ取りリスクに対し、強固な防御性能を持つ専用ファイアウォールの評価が公開。AIに権限を与える際のリスク管理手法が具体化しています。",
+      "one_liner": "AIエージェントに専用の『盾』を",
+      "why_important": "AIの自律性が高まるほど、セキュリティ対策はビジネス継続のための必須条件となります。",
+      "action_item": "AI導入を検討する際、セキュリティ部門とリスクシナリオを共有する場を設けましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/emilia_lab/articles/ait-firewall-chaos-battle"
+    },
+    {
+      "title": "有料AI文字起こしツールは本当に必要か？比較検証",
+      "category": "業務効率化",
+      "summary": "最新のAI文字起こしツールの進化により、無料サービスとの差が縮小。利用頻度やコスト、言語カバー範囲に基づいた最適なツール選定基準が示されています。",
+      "one_liner": "文字起こしツール、コスト最適化の好機",
+      "why_important": "技術のコモディティ化に伴い、既存のサブスクリプションコストを削減できる可能性があります。",
+      "action_item": "現在利用中の文字起こしツールの利用頻度と月額コストを照らし合わせてみてください。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/do-you-actually-need-to-pay-for-transcription-software/"
+    },
+    {
+      "title": "AI生成のフェイク人物による不正販売がSNSで横行",
+      "category": "法規制・倫理",
+      "summary": "AIで生成された架空の人物が人種的な感情に訴えて商品を販売する不適切な広告が問題化。企業にはAI活用の厳格なガバナンスと透明性の確保が求められています。",
+      "one_liner": "AI生成広告の倫理的境界線",
+      "why_important": "ブランドイメージを毀損しないよう、AI利用における倫理基準と透明性を明確にする必要があります。",
+      "action_item": "自社のマーケティング部門におけるAI利用のガイドラインが策定されているか確認しましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/938844/ai-tiktok-shop-blackface-shein-dropshipping"
+    }
+  ]
+}

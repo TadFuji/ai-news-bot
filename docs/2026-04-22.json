@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月22日",
+  "theme": "AIがツールから同僚へ進化中",
+  "morning_comment": "単なる検索から自律的な実行へ。AIとの向き合い方が変わる朝です。",
+  "articles": [
+    {
+      "title": "OpenAI、推論機能付き「ChatGPT Images 2.0」を発表",
+      "category": "業務効率化",
+      "summary": "OpenAIが画像生成の新基準となる「ChatGPT Images 2.0」をリリース。Web検索と推論を組み合わせた「思考モード」により、地図や図解といった正確性が求められる表現が可能になった。日本語対応も強化され、プレゼン資料制作の工数を大幅に削減できる。",
+      "one_liner": "AI画像生成が思考と推論を実装",
+      "why_important": "文脈を理解し、正確な図解まで生成可能に。資料作成のあり方が根本から変わります。",
+      "action_item": "複雑な図解作成を一度AIに丸投げして精度を試す",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/aiplus/articles/2604/22/news057.html"
+    },
+    {
+      "title": "AIエージェント「Claude Cowork」が日常業務を自動化",
+      "category": "業務効率化",
+      "summary": "Anthropicが、PC操作やファイル編集を代行するAIエージェント「Claude Cowork」の展開を強化。ブラウザ操作からExcel入力、レポート作成までを自動化できる。Amazon Bedrockでも利用可能になり、企業がセキュアに導入できる環境が整った。",
+      "one_liner": "PC操作を代行するAIエージェント",
+      "why_important": "定型業務を「指示」するだけで完了できる時代が到来。業務設計力が問われます。",
+      "action_item": "毎日繰り返すブラウザ操作をリストアップしてみる",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/feature/2103480.html"
+    },
+    {
+      "title": "自動車業界向け、機密を守る「ローカル生成AI」を開発",
+      "category": "日本市場",
+      "summary": "トリプルアイズとBEXが、外部ネットワークから遮断された状態で動作する「ローカル生成AIシステム」を開発。設計書などの機密データを情報漏洩リスクなくAIで解析・活用できる仕組みで、製造業や金融、公共機関における導入モデルとなる。",
+      "one_liner": "ネット遮断環境で動く製造業向けAI",
+      "why_important": "機密保持とAI活用を両立。日本企業のDX加速に不可欠な選択肢となります。",
+      "action_item": "社外に出せないデータの種類を社内で再確認する",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2604/22/news030.html"
+    },
+    {
+      "title": "シュミテクト、AI駆動のデータ経営で市場独走を継続",
+      "category": "日本市場",
+      "summary": "オーラルケア市場で首位の「シュミテクト」が、独自のAIを活用して開発プロセスを短縮し、市場ニーズを掘り起こす「データ経営」を実践。社会構造の変化から消費者の悩みを先読みし、製品開発にフィードバックすることで新たな価値を創造している。",
+      "one_liner": "AI予測で市場をリードするデータ経営",
+      "why_important": "伝統的企業でもAIで消費者ニーズを先読み可能。データ活用の勝ち筋を示しています。",
+      "action_item": "自社の保有データが顧客理解に活かせるか考える",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2604/22/news023.html"
+    },
+    {
+      "title": "Mozilla、AIツール「Mythos」で271件のバグを修正",
+      "category": "リスク管理",
+      "summary": "Mozillaが、Anthropicのセキュリティ特化型AI「Mythos」を用いてFirefoxの脆弱性を特定し修正した。開発者による修正よりも高速かつ網羅的であり、AIがサイバーセキュリティの第一線で実用レベルにあることを証明した。",
+      "one_liner": "AIが271件のバグを自動修正",
+      "why_important": "セキュリティ対策の自動化が実用域に。防御側もAIを武器にする段階です。",
+      "action_item": "自社のコードや文書のチェックにAIを活用してみる",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/mozilla-used-anthropics-mythos-to-find-271-bugs-in-firefox/"
+    },
+    {
+      "title": "漫画で学ぶ「会社で使っていいAI、ダメなAI」",
+      "category": "リスク管理",
+      "summary": "機密情報の入力やハルシネーションの放置など、ビジネス現場での「地雷」を漫画で解説するコンテンツが注目されている。専門用語を使わず、実務レベルで何が良くて何がダメなのかを全社的に教育するための教材として優れている。",
+      "one_liner": "漫画で学ぶ現場のAI活用NG集",
+      "why_important": "専門知識がない層でもリスクを直感的に理解可能。全社教育のヒントになります。",
+      "action_item": "AI利用の社内ガイドラインを改めて読み直す",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/articles/2604/05/news003.html"
+    },
+    {
+      "title": "YouTube、著名人のディープフェイク削除申請機能を拡充",
+      "category": "法規制・倫理",
+      "summary": "YouTubeは、AIで生成された偽動画から本人を守るための「肖像権保護機能」を導入。本人と酷似した顔や声を検知し、削除をリクエストできる。経営層のなりすまし等のブランド毀損を防ぐ重要な防御策となり得る。",
+      "one_liner": "肖像権を守るAI偽動画の削除申請",
+      "why_important": "経営層のなりすましリスクへの対策が急務。公式情報の保護手段を知るべきです。",
+      "action_item": "自社の公式情報発信ルートを整理・周知する",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/915872/celebrities-will-be-able-to-find-and-request-removal-of-ai-deepfakes-on-youtube"
+    },
+    {
+      "title": "マッキンゼーが示す「AIエージェント」導入の4ステップ",
+      "category": "最新技術",
+      "summary": "マッキンゼーがAIエージェントを大規模に導入するための戦略を公開。戦略、テクノロジー、人材の3軸を連携させ、データの質確保やガバナンス構築、従業員のスキル再定義を含むロードマップを提示している。",
+      "one_liner": "エージェント型AI導入の戦略マップ",
+      "why_important": "組織全体でAIを機能させるための青写真。技術より体制が成否を分けます。",
+      "action_item": "AIをツールではなく人員として捉え直してみる",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/scaling-agentic-ai-requires-strong-data-foundation/"
+    },
+    {
+      "title": "ChatGPTの回答が招いた事件、OpenAIに捜査の手",
+      "category": "法規制・倫理",
+      "summary": "米国で発生した事件にChatGPTの出力が関与したとして捜査が開始。AI提供者が生成内容に対してどこまで法的責任を負うべきかという議論が再燃。企業が顧客対応にAIを導入する際のリスクヘッジの重要性を突きつけている。",
+      "one_liner": "AIの回答責任を問う法的捜査が始動",
+      "why_important": "出力結果への法的責任範囲が明確化される過渡期。リスク管理の徹底が求められます。",
+      "action_item": "AI回答を外部公開する際の確認工程を見直す",
+      "source": "BBC Technology",
+      "url": "https://www.bbc.com/news/articles/c62j4ldp2jqo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "顔認識AI学習用の写真300万枚を削除、米FTCの和解勧告",
+      "category": "リスク管理",
+      "summary": "AI開発企業Clarifaiが、ユーザーの明確な同意なしにデータをAI学習に転用したとして、米FTCの勧告を受け300万枚以上の写真を削除。倫理的に許容されないデータの扱いは企業の存続リスクになることが示された。",
+      "one_liner": "不適切学習データの強制削除勧告",
+      "why_important": "利用可能と倫理的は別。データの透明性が企業価値を左右する時代です。",
+      "action_item": "自社で利用中のAIツールのデータ出所を確認する",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/21/clarifai-okcupid-facial-recognition-ai-ftc-settlement/"
+    }
+  ]
+}

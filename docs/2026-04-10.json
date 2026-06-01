@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月10日",
+  "theme": "AIの「現場実装」と「持続性」が焦点に",
+  "morning_comment": "実践的な活用法と持続可能性への議論が進む今朝、将来を見据えた一歩を。",
+  "articles": [
+    {
+      "title": "「答えは現場にある」東京都と明治安田が示す、2026年にAIを使いこなす条件",
+      "category": "日本市場",
+      "summary": "東京都と明治安田生命がAI導入の知見を共有。現場の課題を起点にAIを統合する能力が、2026年時点での必須スキルになると強調された。",
+      "one_liner": "2026年のAI活用は現場知見が鍵",
+      "why_important": "AIを単なるツールで終わらせず、自社特有のコンテキストを組み込む力がビジネスの成否を分けます。",
+      "action_item": "自業務の課題をAIにどう伝えるか、具体的な状況を書き出してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2604/10/news047.html"
+    },
+    {
+      "title": "秘匿環境でのAI議事録構成案：Sovereign AIへの道",
+      "category": "リスク管理",
+      "summary": "金融や医療向けにクラウドを介さないローカル環境でのAI議事録生成システムを検証。データの主権をユーザーが持つ重要性を提示している。",
+      "one_liner": "秘匿環境でのAI議事録構成案が公開",
+      "why_important": "機密情報を扱う業界でも、ローカル環境の構築により安全な効率化が可能になる道筋が示されました。",
+      "action_item": "自社のセキュリティ規定でクラウドAIが禁止されていないか、改めて確認しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/tokimoa/articles/cb5d3b96c9b64b"
+    },
+    {
+      "title": "ChatGPTが月額100ドルの「Pro」プランをついに提供開始",
+      "category": "業務効率化",
+      "summary": "OpenAIがヘビーユーザー向けの「Pro」プランを発表。高い利用上限と高速なレスポンスを提供し、個人と企業のギャップを埋める選択肢となる。",
+      "one_liner": "月100ドルのProプランが登場",
+      "why_important": "高度な分析やコーディングを行うプロフェッショナルにとって、投資対効果を見極める新たな基準となります。",
+      "action_item": "現在のAI使用頻度を振り返り、より高性能な環境が必要かコスト面から検討してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/"
+    },
+    {
+      "title": "AI時代の新概念「〇〇エンジニアリング」を馬の調教で理解する",
+      "category": "業務効率化",
+      "summary": "プロンプト、コンテキスト、ハーネスという概念を比喩で解説。指示の出し方以上に「環境設計」の重要性が増していることを説く。",
+      "one_liner": "コンテキスト設計でAIを自在に操る",
+      "why_important": "単なる命令文だけでなく、背景情報をどう整えるかがAIから引き出す成果の質を左右します。",
+      "action_item": "AIへの指示に「前提条件や背景（コンテキスト）」を一段階詳しく追加してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/vinhphatfsg/articles/83db9f9640c8d6"
+    },
+    {
+      "title": "Google Geminiが3Dモデル生成とシミュレーションに対応",
+      "category": "最新技術",
+      "summary": "Geminiがインタラクティブな3Dモデル生成に対応。ユーザーはリアルタイムでモデルを操作でき、製造や教育現場での活用が期待される。",
+      "one_liner": "Geminiが3Dモデル生成に対応",
+      "why_important": "視覚的かつ立体的なシミュレーションが可能になり、企画やプレゼンの伝え方が劇的に変わります。",
+      "action_item": "複雑な概念を説明する際、3Dや図解の生成をAIに試作させてみましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/909391/google-gemini-ai-3d-models-simulations"
+    },
+    {
+      "title": "AI業界に迫る収益化の崖、AnthropicやOpenAIの持続可能性",
+      "category": "リスク管理",
+      "summary": "莫大な計算コストに対する収益構造が焦点。AIブームから実利を伴うビジネスモデルへの脱皮ができるかが業界全体の課題となっている。",
+      "one_liner": "AI企業の収益性と持続可能性が議論に",
+      "why_important": "利用中のサービスが将来も存続するか、あるいは値上げの可能性があるかを見極める視点が不可欠です。",
+      "action_item": "依存度の高いAIサービスの運営企業の経営状況やニュースを、定期的に確認する習慣を。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/podcast/909042/ai-monetization-cliff-anthropic-openai-profitable-ai-existential-moment"
+    },
+    {
+      "title": "GoogleとKaggleが無料の5日間「生成AI集中講座」を開設",
+      "category": "業務効率化",
+      "summary": "AIエージェントやMLOpsを網羅した5日間の無料コースが公開。ハンズオンを含む最高峰の学習リソースが一般向けに提供された。",
+      "one_liner": "Googleが5日間のAI集中講座を公開",
+      "why_important": "最新の技術体系を体系的に学ぶことで、実務におけるAIの管理・活用能力が飛躍的に向上します。",
+      "action_item": "Kaggleの講座シラバスを確認し、自分が最も強化したい分野を1つ特定してください。",
+      "source": "KDnuggets",
+      "url": "https://www.kdnuggets.com/kaggle-googles-free-5-day-gen-ai-course"
+    },
+    {
+      "title": "Snapdragon搭載PCでローカルAIの実用運用に成功（Web検索連携）",
+      "category": "最新技術",
+      "summary": "一般的なPC上で、クラウドを使わずプライバシーを保ったままWeb検索を組み合わせたAI運用が可能であることを実証した事例。",
+      "one_liner": "PC単体でWeb連携AIの運用に成功",
+      "why_important": "外部に情報を出せない状況でも、PC単体で最新情報に基づいたAI活用ができる可能性が広がりました。",
+      "action_item": "次にPCを買い替える際、NPU（AI処理用プロセッサ）の性能を比較項目に入れてみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/tos_kamiya/articles/3c164da01a89b5"
+    },
+    {
+      "title": "Anthropicが最新モデル「Mythos」の公開を制限、セキュリティリスクを懸念",
+      "category": "リスク管理",
+      "summary": "脆弱性発見能力が高すぎるためリリースの制限を決定。高性能AIがサイバー攻撃に悪用される懸念に対し、開発元が警戒を強めている。",
+      "one_liner": "セキュリティ懸念で最新モデルを制限",
+      "why_important": "AIの能力向上がもたらす新たなサイバーリスクを理解し、企業の防御体制を再考する必要があります。",
+      "action_item": "自社のセキュリティ担当者がAI関連のリスクをどう捉えているか、一度対話してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/09/is-anthropic-limiting-the-release-of-mythos-to-protect-the-internet-or-anthropic/"
+    },
+    {
+      "title": "ChatGPTが無料動画配信「Tubi」と連携、最適なコンテンツ提案が可能に",
+      "category": "ライフスタイル",
+      "summary": "無料ストリーミングサービスとChatGPTが統合。30万本以上の番組からユーザーの好みに合わせた精度の高い提案をAIが行う。",
+      "one_liner": "ChatGPTが動画配信と連携",
+      "why_important": "AIが仕事の道具だけでなく、個人のライフスタイルを最適化する身近なコンシェルジュへと浸透しています。",
+      "action_item": "趣味や休日の過ごし方の提案をAIに依頼し、レコメンドの精度を体感してみてください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/chatgpts-tubi-app-movies-tv-shows/"
+    }
+  ]
+}

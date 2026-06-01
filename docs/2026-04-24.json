@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月24日",
+  "theme": "AIは「対話相手」から「自律的な実行役」へ",
+  "morning_comment": "AIは単なる道具から、自律して動く「部下」や「伴走者」へと進化しています。",
+  "articles": [
+    {
+      "title": "OpenAIが「GPT-5.5」を発表、自律型エージェント機能が劇的進化",
+      "category": "最新技術",
+      "summary": "OpenAIが新たなフラッグシップモデル「GPT-5.5」をリリースしました。指示なしでコーディングやデータ分析を自律的に完結させる能力を備え、AIが「仕事を任せる部下」へと進化しています。",
+      "one_liner": "AIが自律的に動く部下になる",
+      "why_important": "指示待ちではなく、目的を伝えればAIが自ら思考し完結させる時代が到来しました。",
+      "action_item": "今日は「指示」ではなく「目的」をAIに伝えてみてください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/04/23/openai-releases-gpt-5-5-a-fully-retrained-agentic-model-that-scores-82-7-on-terminal-bench-2-0-and-84-9-on-gdpval/"
+    },
+    {
+      "title": "楽天やマネフォが証明、「Claude Code」導入で開発時間が70％削減",
+      "category": "日本市場",
+      "summary": "Anthropicのエンジニア向けツール「Claude Code」が日本企業で劇的な成果を上げています。楽天等の事例では、リリース期間の大幅短縮や開発工数70％削減が報告されました。",
+      "one_liner": "開発工数を70%削減する破壊力",
+      "why_important": "日本の大手企業が実際に成果を出し始めており、開発スピードの基準が塗り替えられています。",
+      "action_item": "開発チームに対して、最新のコーディング支援ツールの導入状況を確認してください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2604/24/news018.html"
+    },
+    {
+      "title": "ClaudeがUberやSpotifyと直接連携、私生活のAI自動化が加速",
+      "category": "業務効率化",
+      "summary": "Anthropicは、AI「Claude」がUberやSpotify等の個人向けアプリと連携する機能を発表。移動手段の確保や納税準備といった私生活のタスクまでAIが操作可能になります。",
+      "one_liner": "私生活の雑務をAIが代行",
+      "why_important": "仕事だけでなく私生活の管理もAIに委ねることで、真に集中すべきことに時間を使えます。",
+      "action_item": "面倒だと感じている日常のルーチン作業をリストアップしてみましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/917871/anthropic-claude-personal-app-connectors"
+    },
+    {
+      "title": "富士通が「フィジカルAI」戦略を発表、2030年のドラえもん実現へ",
+      "category": "日本市場",
+      "summary": "富士通は、現実世界で活動するAIの研究戦略を公開。自律的に動くロボットや製造現場でのAI活用を加速させ、日本の強みである現場力の強化を目指します。",
+      "one_liner": "2030年、現場にAIのドラえもん",
+      "why_important": "AIが画面を飛び出し、現実の製造や物流現場で自律的に動く「フィジカルAI」が本格化します。",
+      "action_item": "自社の「現場」でAIが物理的に動いたら解決する課題を想像してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2604/24/news057.html"
+    },
+    {
+      "title": "Anthropicの最強モデル「Claude Mythos」が流出、AIセキュリティに衝撃",
+      "category": "リスク管理",
+      "summary": "「危険すぎて非公開」とされていた高度なAIモデル「Claude Mythos」が流出。サイバー攻撃やディープフェイクへの悪用が懸念されており、企業の防御体制が問われます。",
+      "one_liner": "最強モデル流出、AI詐欺に警戒を",
+      "why_important": "悪意あるAI利用が加速するため、これまでの常識を疑うセキュリティ意識が求められます。",
+      "action_item": "本人確認や社内の情報共有ルールが最新のリスクに対応しているか確認しましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/917644/anthropic-claude-mythos-breach-humiliation"
+    },
+    {
+      "title": "AIを「会話」から「知識コンパイラ」へ、新ワークフローの提案",
+      "category": "業務効率化",
+      "summary": "AIをチャットではなく、大量の情報から構造化された知識ベースを作る「ワークフロー型」で使う概念が注目。個人の思考を整理し、アウトプットを最大化します。",
+      "one_liner": "AIが情報の山を知識に変える",
+      "why_important": "情報の収集だけでなく「構造化して整理する」工程をAIに任せることで、知的能力が拡張されます。",
+      "action_item": "散らばっているメモやドキュメントをAIに読み込ませ、要約させてみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/biscuit/articles/workflow-ai-knowledge-compiler"
+    },
+    {
+      "title": "AIコストを1/8に削減、開発を劇的に効率化するキャッシュ技術",
+      "category": "業務効率化",
+      "summary": "プロンプトキャッシュ機能を活用し、APIの利用コストを1/8、応答速度を数秒から0.6秒へと改善した事例が報告。AIの実運用コストが大幅に低下します。",
+      "one_liner": "AI運用コストを8分の1へ",
+      "why_important": "コストと速度の壁が崩れることで、より高度なAI機能を実務に組み込みやすくなります。",
+      "action_item": "AIシステムのAPI利用状況をエンジニアにヒアリングし、コスト改善の余地を探ってください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/ai_arai_ally/articles/20260422-1601-claude-code-prompt-caching-api"
+    },
+    {
+      "title": "漫画で学ぶ生成AIの“地雷”、新入社員の失敗例からリスクを再確認",
+      "category": "リスク管理",
+      "summary": "ITmediaの連載漫画が、ハルシネーションや機密情報の入力など、企業内でのAI活用の落とし穴を解説。現場で起きがちなミスを防ぐための教育に有用です。",
+      "one_liner": "漫画で学ぶ、AI利用の「地雷」",
+      "why_important": "誰もがAIを使う時代だからこそ、チーム全員で共通の危機意識を持つことが不可欠です。",
+      "action_item": "チーム内でAI使用時の失敗事例や「やってはいけないこと」を共有しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/articles/2604/07/news020.html"
+    },
+    {
+      "title": "スマホ依存を防ぐAI「Noscroll」が登場、ネット巡回を代行",
+      "category": "ライフスタイル",
+      "summary": "AIがユーザーの代わりにネットを巡回し、必要な情報だけを抽出するサービス。無駄なスクロールを防ぎ、メンタルヘルスを守りながら効率的な情報収集を可能にします。",
+      "one_liner": "情報の海をAIに泳がせる",
+      "why_important": "全てを自分でチェックするのではなく、AIに「取捨選択」を任せて集中力を守る逆転の発想です。",
+      "action_item": "今日はSNSのチェック時間を決め、それ以外はAIに要約を任せる準備をしましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/23/meet-noscroll-an-ai-bot-that-does-your-doomscrolling-for-you/"
+    },
+    {
+      "title": "AIガジェット専用プラットフォームを開発するEraが資金調達",
+      "category": "最新技術",
+      "summary": "スマートグラスやリングなど、スマホ以外のAIハードウェアを統合するプラットフォーム「Era」が約17億円を調達。アンビエント・コンピューティングの加速を予見させます。",
+      "one_liner": "脱スマホ、AIと過ごす新デバイス",
+      "why_important": "画面を見る必要がない「アンビエントなAI」が、私たちの働き方や生活動線を変えようとしています。",
+      "action_item": "スマホ以外のAIデバイスが普及した際、自社サービスがどう適応できるか考えてみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/23/era-computer-raises-11m-to-build-a-software-platform-for-ai-gadgets/"
+    }
+  ]
+}

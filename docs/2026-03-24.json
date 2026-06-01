@@ -1,0 +1,107 @@
+{
+  "updated": "2026年03月24日",
+  "theme": "AIの実務実装とエージェント化の加速",
+  "morning_comment": "エージェント技術が成熟し、AIは受動的なツールから能動的な相棒へと進化しています。",
+  "articles": [
+    {
+      "title": "341職種をAI×データで分析。あなたの仕事は「伸びる」か「危機」か",
+      "category": "業務効率化",
+      "summary": "国内の341職種を対象に、AIが仕事を代替するリスクと生産性を高める可能性を分析。自身の職種が「危機」「中間」「伸びる」のどこに位置するかを知り、キャリア形成のヒントを得られます。",
+      "one_liner": "AIによる職種別リスクと成長の可視化",
+      "why_important": "AIとの共存がキャリアの鍵となります。自分の立ち位置を把握し、強みを伸ばす戦略を立てる指標になります。",
+      "action_item": "公開された分析結果を見て、自分の職種がどの分類にあるか確認しましょう。",
+      "source": "ITmedia AIPlus",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2603/24/news018.html"
+    },
+    {
+      "title": "AI文字起こしデバイス最新機「Plaud NotePin S」が日本で発売",
+      "category": "業務効率化",
+      "summary": "ウェアラブル型のAIボイスレコーダーが本日発売。会議やインタビューの音声を録音するだけで、AIが構造化された議事録を自動生成し、事務作業負担を大幅に軽減します。",
+      "one_liner": "装着するだけで会議録作成が自動化",
+      "why_important": "議事録作成という付加価値の低い作業から解放されます。音声データの資産化が容易になります。",
+      "action_item": "今日の会議の一つで、スマホの録音・要約機能を試してみてください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/03/plaudnotepins-release.html"
+    },
+    {
+      "title": "Appleが6月のWWDC開催を発表。SiriのAI強化とChatGPT連携に注目",
+      "category": "最新技術",
+      "summary": "6月8日から開催されるWWDC26の目玉はiOSのAI刷新。Siriの知能向上やChatGPT連携が期待されており、iPhoneの操作性が劇的に変わる可能性があります。",
+      "one_liner": "iPhone操作がAIで劇的に変わる予兆",
+      "why_important": "最も身近なデバイスに高度なAIが統合されます。OSレベルでのAI活用が標準化する転換点です。",
+      "action_item": "現在のSiriで不便に感じている操作をメモし、6月の発表と比較しましょう。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/03/apple_announced_wwdc_26.html"
+    },
+    {
+      "title": "AIエージェント実務投入の教訓：向く作業・向かない作業の境界線",
+      "category": "業務効率化",
+      "summary": "実務での運用結果、エージェントは定型的なワークフローの加速に適していることが判明。判断基準が曖昧な仕事では確認コストが増大するリスクが指摘されています。",
+      "one_liner": "エージェント活用は定型フローの加速に",
+      "why_important": "AIエージェントは万能ではありません。適した業務と適さない業務の切り分けが導入成功の鍵です。",
+      "action_item": "毎日繰り返している「手順が決まった作業」を1つ書き出してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/seyz/articles/20260323-openclaw-practical-fit"
+    },
+    {
+      "title": "AIによる「なりすまし」被害の実態。CEOへの直接取材で判明したリスク",
+      "category": "リスク管理",
+      "summary": "AIで他人の声や姿を模倣する「なりすまし」がビジネスの脅威に。個人のデータがいかに容易に悪用され得るか、法規制と防御策の現状を報告しています。",
+      "one_liner": "声や顔の悪用リスクがビジネスの脅威に",
+      "why_important": "経営層を装う詐欺が現実味を帯びています。技術的な防御だけでなく、運用ルールの整備が急務です。",
+      "action_item": "社内での重要な承認フローに、対面や電話での確認ステップがあるか見直しましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/podcast/898715/superhuman-grammarly-expert-review-shishir-mehrotra-interview-ai-impersonation"
+    },
+    {
+      "title": "NVIDIAのジェンスン・ファンCEO「AGIは既に達成された」と言及",
+      "category": "最新技術",
+      "summary": "NVIDIAのCEOが、AIが広範な問題を解決できる段階に到達したとの認識を示しました。これは今後の投資や技術開発がさらに加速することを予唆しています。",
+      "one_liner": "AIの歴史的マイルストーン到達の示唆",
+      "why_important": "業界トップの認識は投資速度に直結します。AIが汎用的な知能を持つ前提での事業構想が必要です。",
+      "action_item": "「もしAIが何でもできるとしたら」を前提に、長期的なキャリアを想像してみましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/899086/jensen-huang-nvidia-agi"
+    },
+    {
+      "title": "NVIDIA OpenShell：自律型AIエージェントの安全性を確保する新技術",
+      "category": "リスク管理",
+      "summary": "自律型エージェントの普及に向けたセキュリティ基盤「OpenShell」を発表。権限管理や挙動監視のレイヤーを提供し、企業が高度な自動化を導入できる環境を整えます。",
+      "one_liner": "AIエージェントの企業導入を支える盾",
+      "why_important": "セキュリティが障壁だった自律型AIの導入が加速します。高度な自動化を安全に運用する基盤が重要です。",
+      "action_item": "自社のAI利用規約に「自律的な動作」に関する項目があるかチェックしてください。",
+      "source": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/blog/secure-autonomous-ai-agents-openshell/"
+    },
+    {
+      "title": "PC画面をリアルタイムに理解しタスクを自動化するAI「Littlebird」",
+      "category": "最新技術",
+      "summary": "PC画面をリアルタイムで読み取り、文脈を理解して質問回答やタスク自動化を行うツールを開発。ブラウザをまたぐ複雑な作業の自動化が期待されます。",
+      "one_liner": "PC画面の文脈を読み取る次世代の自動化",
+      "why_important": "アプリを跨ぐ複雑な操作もAIが理解可能になります。人間は「指示」と「確認」に専念する時代です。",
+      "action_item": "ブラウザとExcelを行き来するような、面倒な「コピペ作業」を特定してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/03/23/littlebird-raises-11m-to-capture-context-from-your-computer-so-you-can-query-your-data/"
+    },
+    {
+      "title": "規制業界向けAI：ハルシネーションを克服する「決定論的モデル」の活用",
+      "category": "リスク管理",
+      "summary": "金融や医療向けに、出力を確実にするAIモデル構築事例を公開。Amazon Nova等を組み合わせ、誤りが許されないビジネスプロセスへの生成AI導入を可能にします。",
+      "one_liner": "誤りが許されない業務へのAI導入が現実へ",
+      "why_important": "嘘をつかないAIの構築が可能になれば、基幹業務への適用が一気に広がります。",
+      "action_item": "信頼性がネックでAI化を諦めていた業務をリストアップし直してみましょう。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/overcoming-llm-hallucinations-in-regulated-industries-artificial-geniuss-deterministic-models-on-amazon-nova/"
+    },
+    {
+      "title": "AIの最新トレンドを追うためにフォローすべき10のXアカウント",
+      "category": "業務効率化",
+      "summary": "情報の流れが速いAI分野で、信頼できる最新情報を得るための厳選アカウントを紹介。専門家の知見を直接得ることで情報の非対称性を解消します。",
+      "one_liner": "AI情報の質を高めるフォロー推奨リスト",
+      "why_important": "情報の鮮度が武器になる時代、ノイズを排した情報源の確保は必須のスキルです。",
+      "action_item": "紹介されているアカウントを1つフォローし、今日流れてくる情報を見てください。",
+      "source": "KDnuggets",
+      "url": "https://www.kdnuggets.com/10-best-x-twitter-accounts-to-follow-for-llm-updates"
+    }
+  ]
+}

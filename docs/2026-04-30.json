@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月30日",
+  "theme": "AIは回答から直接実行のフェーズへ",
+  "morning_comment": "生成AIが実務を直接動かす。実行力の差が成果を分ける朝です。",
+  "articles": [
+    {
+      "title": "Google、「Gemini」チャットから直接PDFやExcelファイルを生成可能に",
+      "category": "業務効率化",
+      "summary": "GoogleはGeminiとの対話から直接PDFやExcel形式のファイルを生成・保存できる新機能を発表。プロンプト一つで構造化データをドライブへ保存可能になります。",
+      "one_liner": "Geminiから直接ファイル出力が可能に",
+      "why_important": "コピペ不要で成果物を直接作れるため、資料作成のワークフローが根本から変わります。",
+      "action_item": "報告書の下書きをGeminiに頼み、PDF出力まで試してみる。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/articles/2604/30/news063.html"
+    },
+    {
+      "title": "プレゼン資料も指示を出すだけ？ OpenAI、最新画像生成モデル「Images 2.0」発表",
+      "category": "業務効率化",
+      "summary": "OpenAIの最新モデル「Images 2.0」はThinkingモードを搭載。抽象的な指示からでもプレゼンに最適な図解や画像を容易に生成し、ビジュアル作成を高速化します。",
+      "one_liner": "思考する画像生成で図解もプロ並みに",
+      "why_important": "デザイナーの手を借りずとも、意図に沿った高品質なビジュアル資料を短時間で自作可能になります。",
+      "action_item": "次回の会議資料に、AIで生成した説明図を1枚差し込んでみる。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2604/30/news051.html"
+    },
+    {
+      "title": "Microsoft Cloud収益が加速、Office 365 Copilot利用者が33%増",
+      "category": "業務効率化",
+      "summary": "マイクロソフトの決算で、AI需要によりAzureとOffice 365が大きく成長。特にCopilotの売上が33%増加し、企業の標準基盤として定着している実態が判明しました。",
+      "one_liner": "Copilot利用33%増、標準インフラ化",
+      "why_important": "AI活用はもはやオプションではなく、企業の競争力を左右する標準装備となっています。",
+      "action_item": "自社のCopilot活用ルールを再確認し、未使用機能を1つ試す。",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/briefings/microsoft-cloud-revenue-accelerates-office-365-copilot-sales-rise-33"
+    },
+    {
+      "title": "RampのSheets AI機能で財務データが流出する脆弱性が判明",
+      "category": "リスク管理",
+      "summary": "金融サービスRampのGoogle Sheets用AIツールにおいて、機密データが外部へ漏洩する恐れのある脆弱性が指摘されました。外部連携時のリスクが浮き彫りになっています。",
+      "one_liner": "連携ツールの脆弱性で財務データ流出",
+      "why_important": "便利さと引き換えにセキュリティを妥協せず、サードパーティ製AIツールの権限設定に注意を払うべきです。",
+      "action_item": "AIツールに共有しているスプレッドシートの権限設定を見直す。",
+      "source": "Hacker News AI",
+      "url": "https://www.promptarmor.com/resources/ramps-sheets-ai-exfiltrates-financials"
+    },
+    {
+      "title": "漫画で学ぶ、新入社員が陥る「AI活用の地雷」",
+      "category": "リスク管理",
+      "summary": "ITmediaがAI活用の失敗例を漫画で解説。機密情報の入力やAIの回答を鵜呑みにしたミスなど、現場での初歩的かつ致命的な事例を紹介しています。",
+      "one_liner": "漫画で学ぶ「AI活用の地雷」と対策",
+      "why_important": "技術的な理解よりも、情報漏洩や誤情報のリスクに対するリテラシーが現場の命運を分けます。",
+      "action_item": "チーム内で「やってはいけないAI利用例」を5分だけ共有する。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/articles/2604/11/news002.html"
+    },
+    {
+      "title": "テイラー・スウィフト氏も懸念、著名人を悪用したAIディープフェイク詐欺",
+      "category": "リスク管理",
+      "summary": "著名人の動画をAIで加工し、本人を装って個人情報を抜き取る広告が急増。巧妙な技術により従来の詐欺よりも判別が難しくなっていると警告されています。",
+      "one_liner": "巧妙化するディープフェイク詐欺に警戒",
+      "why_important": "音声や映像のリアリティが向上し、従来の本人確認手法が通用しなくなるリスクを意識すべきです。",
+      "action_item": "外部からの不自然な依頼に対し、二要素認証や直接確認を徹底する。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/taylor-swift-rihanna-tiktok-deepfake-ads/"
+    },
+    {
+      "title": "OpenAI、月額8ドルの広告付き「安価なChatGPT」プランを計画",
+      "category": "業務効率化",
+      "summary": "OpenAIは通常の有料プランより安価な「ChatGPT Go」の拡大を計画。コスト面で導入を躊躇していた層にも高度なAI機能が普及する見込みです。",
+      "one_liner": "月額8ドルの広告付きChatGPTが登場",
+      "why_important": "低コスト化により、組織全体でのAI導入ハードルが下がり、普及の速度がさらに加速します。",
+      "action_item": "個人の無料版ユーザーに、有料機能のメリットを伝えてみる。",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/briefings/openai-plots-big-expansion-cheaper-chatgpt"
+    },
+    {
+      "title": "PwCとAWS、AIによる契約書分析の効率化を推進",
+      "category": "業務効率化",
+      "summary": "PwCはAWSのAIを活用し、契約書から重要条項を自動抽出する仕組みを構築。法務部門の手作業を削減し、戦略的判断に注力できる環境を実現しています。",
+      "one_liner": "契約書分析をAIで自動化、法務効率化",
+      "why_important": "専門性の高い業務をAIが支援することで、人間はより戦略的な交渉に集中できるようになります。",
+      "action_item": "自分の業務で「AIによるチェック」に代替できる定型作業を探す。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/extracting-contract-insights-with-pwcs-ai-driven-annotation-on-aws/"
+    },
+    {
+      "title": "生成AIの普及により「アイデアを形にする」までの速度が向上",
+      "category": "最新技術",
+      "summary": "LLMの活用により、個人やビジネスパーソンが即座にプロトタイプ化できる環境が実現。雛形作成の時間が短縮され、試行錯誤の回数を増やせます。",
+      "one_liner": "LLMで「即プロトタイプ」が可能に",
+      "why_important": "アイデアを形にするコストが劇的に下がった今、試行回数の多さがビジネスの勝敗を決めます。",
+      "action_item": "構想中のアイデアをAIに壁打ちし、一気に構成案まで作る。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/p_jzd/articles/a95f4eec02a79f"
+    },
+    {
+      "title": "元Twitter CEOのAIエージェント企業が評価額20億ドルに",
+      "category": "最新技術",
+      "summary": "Web上の操作を代行するAIエージェント開発のパラレル・ウェブ・システムズが大規模資金調達。回答生成から「実行代行」への役割進化を象徴しています。",
+      "one_liner": "Web操作代行AIが20億ドルの高評価",
+      "why_important": "AIが考えるだけでなく、ブラウザ上の手続きを自律的に行う未来が目前に迫っています。",
+      "action_item": "「このWeb作業をAIが代行したら？」という視点でルーチンを洗う。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise/"
+    }
+  ]
+}

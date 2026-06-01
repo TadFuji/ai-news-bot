@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月01日",
+  "theme": "自律型AIが社会インフラ化する転換点",
+  "morning_comment": "エージェント技術が、ついに「日常を支えるインフラ」へと昇華し始めています。",
+  "articles": [
+    {
+      "title": "OpenAIが18兆円超を調達、ソフトバンクも参画",
+      "category": "日本市場",
+      "summary": "OpenAIがNVIDIAやソフトバンク等から約18兆円の巨額調達を実施。時価総額は8,520億ドルに達し、日本国内でのAIインフラ拡大と連携強化が期待されます。",
+      "one_liner": "OpenAI、18兆円の巨額調達",
+      "why_important": "AIインフラ投資が国家規模に達し、日本市場におけるAI普及と企業連携が決定的な流れとなります。",
+      "action_item": "AI活用を単なるツール導入ではなく、経営戦略の根幹として再考してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/"
+    },
+    {
+      "title": "AWS、自律型「フロンティアエージェント」を一般公開",
+      "category": "業務効率化",
+      "summary": "AWSがセキュリティテストやDevOpsを自律的に実行する「Frontier Agents」をリリース。人間が監視しなくても目標を達成し続けるAIシステムです。",
+      "one_liner": "AWSが自律型エージェント公開",
+      "why_important": "AIが長時間自律してタスクを完遂する時代になり、人間の役割は「実行」から「指示と監視」へ移行します。",
+      "action_item": "自分やチームが行っている定型的な「監視・確認作業」をリスト化してみましょう。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/aws-launches-frontier-agents-for-security-testing-and-cloud-operations/"
+    },
+    {
+      "title": "Apple CarPlayでChatGPTが利用可能に",
+      "category": "業務効率化",
+      "summary": "iOS 26.4により車載システムCarPlayでChatGPTの音声対話が可能に。運転中にメール要約や会議調整をハンズフリーで行えるようになります。",
+      "one_liner": "車内での対話型AI利用が一般化",
+      "why_important": "運転中という「デッドタイム」が、高度な知的作業や事務処理を行える生産的な時間へと変わります。",
+      "action_item": "移動中にAIに話しかけて、今日のタスク整理やアイデア出しを行う習慣を試してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/904676/apple-carplay-openai-chatgpt"
+    },
+    {
+      "title": "AWS、エージェント時代向けのAIリスク管理機能を発表",
+      "category": "リスク管理",
+      "summary": "自律型エージェント特有の予期せぬ挙動を管理する「AI Risk Intelligence (AIRI)」を導入。AIの動的な挙動をリアルタイムでガバナンス下に置きます。",
+      "one_liner": "自律型AI専用のリスク管理導入",
+      "why_important": "AIの暴走を防ぐインフラが整うことで、企業はより高度で大胆なAI実装が可能になります。",
+      "action_item": "自社のAI利用ルールに「エージェントの自律的な挙動」への考慮があるか確認しましょう。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/can-your-governance-keep-pace-with-your-ai-ambitions-ai-risk-intelligence-in-the-agentic-era/"
+    },
+    {
+      "title": "AIエージェントがソフトテストを自動化、AWSの新技術",
+      "category": "業務効率化",
+      "summary": "「QA Studio」により、ソフトウェアのテスト工程が自然言語で定義可能に。UI変更にもAIが自律適応し、手動修正の手間を劇的に削減します。",
+      "one_liner": "ソフトテストもAIが自律実行",
+      "why_important": "開発のボトルネックが解消され、新サービスのリリースサイクルがこれまで以上に加速します。",
+      "action_item": "開発現場の担当者と、AIによるテスト自動化の導入ハードルについて意見交換をしましょう。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/accelerating-software-delivery-with-agentic-qa-automation-using-amazon-nova-act/"
+    },
+    {
+      "title": "Alexa+でUber Eats等が対話型注文に対応",
+      "category": "ライフスタイル",
+      "summary": "次世代AlexaがUber Eatsと連携し、店員と話す感覚でカスタマイズ注文が可能に。文脈理解によりストレスのない体験を提供します。",
+      "one_liner": "声だけで食事の複雑な注文が可能に",
+      "why_important": "UIが「画面操作」から「自然な会話」へシフトし、既存のEコマースの形が根本から変わります。",
+      "action_item": "自社のサービスを「会話だけ」で完結させるとしたら、どんな体験になるか想像してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/03/31/alexa-plus-new-food-ordering-experiences-with-uber-eats-and-grubhub/"
+    },
+    {
+      "title": "NVIDIA、AI工場を電力網の調整に活用する新構想",
+      "category": "日本市場",
+      "summary": "AIデータセンターの消費電力を動的に管理し、電力網の需給バランスを調整する実証実験を開始。脱炭素とAIインフラの両立を目指します。",
+      "one_liner": "AIデータセンターが電力網を救う",
+      "why_important": "AIの消費電力問題を逆手に取り、社会インフラとしての持続可能性を高める画期的な取り組みです。",
+      "action_item": "環境負荷軽減（GX）とAI導入をセットで考える視点を持ってください。",
+      "source": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/blog/energy-efficiency-ai-factories-grid/"
+    },
+    {
+      "title": "Galaxy S26搭載、写真を「AIで作り替える」新機能",
+      "category": "最新技術",
+      "summary": "Samsungの最新スマホが高度なAI写真編集機能を搭載。自然言語の指示で写真内容を劇的に変更でき、クリエイティブの常識を塗り替えます。",
+      "one_liner": "スマホでのAI合成写真が身近に",
+      "why_important": "高度な編集が民主化される一方で、視覚情報の真偽を判断するメディアリテラシーがより重要になります。",
+      "action_item": "AI生成コンテンツと実写真の区別について、改めてチーム内で認識を共有しましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/904176/samsung-galaxy-s26-ai-photo-assist-slop"
+    },
+    {
+      "title": "RingがAIアプリストア開設、高齢者ケアにも進出",
+      "category": "ライフスタイル",
+      "summary": "Amazon傘下のRingがAIアプリストアを公開。防犯だけでなく高齢者見守りなど、映像解析を活用した多様なサービスを後付け可能にします。",
+      "one_liner": "監視カメラがAIアプリで多機能化",
+      "why_important": "ハードウェアが販売後もAIで進化し続ける、新しいビジネスモデルの広がりを示しています。",
+      "action_item": "物理的な自社製品や資産に、後付けでAI機能を載せる余地がないか検討しましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/03/31/ring-app-store-bets-on-ai-to-go-beyond-home-security/"
+    },
+    {
+      "title": "AIの影響で岐路に立つアート・デザイン教育",
+      "category": "法規制・倫理",
+      "summary": "生成AIの発展により、美大がカリキュラム刷新を迫られています。AIに代替されない「人間独自の創造性」をどう養うかが課題です。",
+      "one_liner": "AI時代の創造性教育が本格始動",
+      "why_important": "全職種において、スキルの習得以上に「AIを使いこなして何を創るか」という構想力が問われます。",
+      "action_item": "「自分にしかできない価値提供」とは何か、今日一度言語化してみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/903954/art-schools-generative-ai-education-creative-jobs"
+    }
+  ]
+}

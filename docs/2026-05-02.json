@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月02日",
+  "theme": "AI実装の加速が、新たな秩序を求めている",
+  "morning_comment": "巨額投資と実用化が進む中、規律と信頼が次の焦点になっています。",
+  "articles": [
+    {
+      "title": "Meta、AI投資に最大22兆円投入へ。部品高騰でもフルコミット継続",
+      "category": "最新技術",
+      "summary": "Metaは2026年の設備投資予算を最大約22.7兆円に設定。AIハードウェアやデータセンター構築に充て、AIファーストの姿勢を鮮明にしました。",
+      "one_liner": "Metaが22兆円のAI投資を断行",
+      "why_important": "巨大IT企業によるインフラ独占が加速し、あらゆるAIサービスの基盤コストに影響を与えます。",
+      "action_item": "AI関連銘柄の動向をチェックし、インフラ側の供給力を把握しましょう。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/05/316727.html"
+    },
+    {
+      "title": "AI時代のサイバー不安：既存のセキュリティ手法が限界に",
+      "category": "リスク管理",
+      "summary": "AIによる攻撃の高度化に対し、従来の境界防御では対応できない「サイバー不安定期」に突入。システムの核心にAIを据えた再設計が必要です。",
+      "one_liner": "AI時代の境界防御、限界に達する",
+      "why_important": "従来の「後付け」対策では防げない脅威に対し、システム設計の根本を見直す時期に来ています。",
+      "action_item": "自社のAI利用におけるデータ保護の優先順位を整理してみてください。",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/05/01/1136779/cyber-insecurity-in-the-ai-era/"
+    },
+    {
+      "title": "AIがAIを育てる時代の新課題：モデルの「出力癖」が監査対象に？",
+      "category": "リスク管理",
+      "summary": "AI生成データを学習に使う手法が主流になる中、モデル特有の統計的パターンや「癖」が将来的な監査リスクになる可能性が指摘されています。",
+      "one_liner": "AIモデルの「統計的癖」が監査対象へ",
+      "why_important": "AI生成データでの学習が進む中、アウトプットの真実性だけでなくバイアス管理が必須になります。",
+      "action_item": "AIの回答に特定の傾向がないか、複数のツールで比較する習慣を持ちましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/aimar/articles/7f5713d304c3d1"
+    },
+    {
+      "title": "Uber、コーディングAI「Claude Code」に4カ月で年間予算を使い果たす",
+      "category": "業務効率化",
+      "summary": "Uberが導入したAIエージェントの利用が想定を大幅に超え、年間のAPI予算をわずか4カ月で消費。高い生産性の一方でコスト管理が課題です。",
+      "one_liner": "UberがAI予算を4カ月で使い果たす",
+      "why_important": "AIエージェントの爆発的な生産性と引き換えに、トークン課金という新たな財務リスクが浮き彫りになりました。",
+      "action_item": "部門単位でのAI利用コストと、それに見合うROIの算出ルールを検討してください。",
+      "source": "Hacker News AI",
+      "url": "https://www.briefs.co/news/uber-torches-entire-2026-ai-budget-on-claude-code-in-four-months/"
+    },
+    {
+      "title": "文科省、AI活用による科学研究支援「SPReAD」事業を開始",
+      "category": "日本市場",
+      "summary": "あらゆる分野の研究者がAIを利活用して研究を高度化させるための支援事業を開始。計算資源や最大500万円の経費を交付しイノベーションを加速します。",
+      "one_liner": "文科省が科学研究のAI化を強力支援",
+      "why_important": "日本の公的支援がAI研究へ本格シフトしており、産学連携の機会が今後さらに増大します。",
+      "action_item": "公的な補助金や支援プログラムに、自社の開発が活用できないか調べてみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/aws_japan/articles/35e76df16e02b4"
+    },
+    {
+      "title": "GoogleマップにGemini統合。AIナビゲーションの利便性が向上",
+      "category": "業務効率化",
+      "summary": "GoogleマップにGeminiが統合され、曖昧な検索に対してもAIが最適な提案を行うように。リアルタイム情報とAIの知識が融合した新体験を提供します。",
+      "one_liner": "GoogleマップがAIコンシェルジュに",
+      "why_important": "検索が「単語」から「意図」の理解へ移行し、移動やリサーチの効率が劇的に向上します。",
+      "action_item": "出張や外出時のリサーチに、生成AIでの自然言語検索を試してみてください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/google-maps-vs-waze/"
+    },
+    {
+      "title": "マスク氏対アルトマン氏の法廷論争が激化。OpenAIの変質を追及",
+      "category": "リスク管理",
+      "summary": "イーロン・マスク氏がOpenAIを提訴した裁判で内部文書が公開。非営利理念の是非が問われており、開発企業のガバナンスに大きな影響を与えます。",
+      "one_liner": "マスク氏対OpenAI、法廷で激突",
+      "why_important": "AI開発の非営利性と営利性の矛盾が争点となり、今後の業界標準となるガバナンス体制に影響します。",
+      "action_item": "利用しているAIサービスの運営方針や透明性について、一度確認しておきましょう。",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/05/01/1136800/musk-v-altman-week-1-musk-says-he-was-duped-warns-ai-could-kill-us-all-and-admits-that-xai-distills-openais-models/"
+    },
+    {
+      "title": "米国防総省、OpenAIやGoogle等と機密ネットワーク用AI契約を締結",
+      "category": "最新技術",
+      "summary": "ペンタゴンは機密情報を扱うネットワークでのAI利用契約を締結。国家レベルの機密環境でどのAIが信頼されたかが示され、企業選定の指標となります。",
+      "one_liner": "米国防総省、AI各社と機密契約を締結",
+      "why_important": "国家安全保障レベルでの採用実績は、企業のAI選定における信頼性の最上位基準となります。",
+      "action_item": "セキュリティ要件が厳しい業務には、どのAIモデルが適しているか情報を整理しましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia"
+    },
+    {
+      "title": "スタンフォード大の講義に学ぶ、AIの根本原理を網羅した解説書が登場",
+      "category": "業務効率化",
+      "summary": "世界最高峰の講義を非専門家向けに体系化した資料が話題。最新LLMまでを一貫した「地図」として学べる、スキルの底上げに最適なリソースです。",
+      "one_liner": "スタンフォード流、AIの本質を学ぶ",
+      "why_important": "最新ツールに振り回されないためには、AIの根本原理を体系的に理解することが最大の近道です。",
+      "action_item": "断片的な情報ではなく、一度体系的な教材でAIの全体像を俯瞰する時間を持ちましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/ryu_takatsukasa/books/ae6557e79c6aaf"
+    },
+    {
+      "title": "Spotify、AIと人間を区別する「認証バッジ」を導入へ",
+      "category": "法規制・倫理",
+      "summary": "生成AI楽曲と人間の作品を区別するため、人間に「Verified」バッジを付与する仕組みを検討中。クリエイティブ分野での防御策となります。",
+      "one_liner": "Spotify、人間に「認証バッジ」を付与",
+      "why_important": "AIコンテンツの氾濫に伴い、逆に「人間が作成したこと」が希少価値を持つ時代が到来しています。",
+      "action_item": "生成AIを使いつつも、自分ならではの「編集」や「独自の視点」をどこに残すか意識しましょう。",
+      "source": "Hacker News AI",
+      "url": "https://www.bbc.com/news/articles/c5yerr4m1yno"
+    }
+  ]
+}

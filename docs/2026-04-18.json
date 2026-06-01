@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月18日",
+  "theme": "実務特化型AIへの転換と信頼性の確保",
+  "morning_comment": "実務ツールへの進化と、新たなリスク管理が問われる局面です。",
+  "articles": [
+    {
+      "title": "Anthropic、非デザイナー向けAIデザインツール「Claude Design」公開",
+      "category": "業務効率化",
+      "summary": "Anthropicが最新モデルを搭載したデザインツールを発表。テキスト指示や既存コードからUIプロトタイプを即座に生成し、デザインから実装までをAIが完結させます。専門知識がなくても直感的な微調整が可能です。",
+      "one_liner": "AIがUIデザインを即座に生成",
+      "why_important": "非デザイナーでも高品質なプロトタイプ作成が可能になり、企画から実装までのリードタイムが劇的に短縮されます。",
+      "action_item": "改善したい自社サイトのイメージを、Claudeで視覚化してみることから始めてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/aiplus/articles/2604/18/news022.html"
+    },
+    {
+      "title": "日本発AI開発基盤「Jitera」、設計からテストまで全自動化を強化",
+      "category": "日本市場",
+      "summary": "設計書の自動生成からQAテスト、複数LLMの使い分けまでを統合したプラットフォーム。日本語での柔軟な指示に対応し、個人のAI利用から組織的なシステム開発・運用への移行を強力に支援します。",
+      "one_liner": "日本発AIがシステム開発を全自動化",
+      "why_important": "日本語環境に最適化された自動化基盤により、国内企業のDX開発がより低コストで迅速に進むようになります。",
+      "action_item": "自社の開発プロジェクトにおいて、設計書の自動化が可能な工程がないか現場に確認しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kyokozuka/articles/jitera-features"
+    },
+    {
+      "title": "OpenAI、動画生成「Sora」チーム解散と法人向けAIへの戦略転換",
+      "category": "最新技術",
+      "summary": "動画生成AI「Sora」の責任者が退社しチームが事実上の解散へ。OpenAIは一般向けの実験的プロジェクトを縮小し、収益性の高い法人向けAIや開発支援技術にリソースを集中させる方針です。",
+      "one_liner": "OpenAI、法人向け事業に全力投入",
+      "why_important": "業界のリーダーが娯楽からビジネス実務へ舵を切ったことで、企業向けAIソリューションの進化が加速します。",
+      "action_item": "自部門で最新の法人向けAPIを活用できる業務を改めてリストアップしてみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/17/kevin-weil-and-bill-peebles-exit-openai-as-company-continues-to-shed-side-quests/"
+    },
+    {
+      "title": "AIエディタ「Cursor」が500億ドルの評価額で資金調達、全社標準へ",
+      "category": "業務効率化",
+      "summary": "AIネイティブなコードエディタとして急成長中のCursorが大規模な資金調達を実施。開発者の効率化に留まらず、非エンジニアのアプリ開発も可能にする企業DXのインフラとして期待されています。",
+      "one_liner": "AIエディタ「Cursor」が世界標準へ",
+      "why_important": "プログラミングの参入障壁が下がり、ビジネス部門主導でのツール開発がより現実的になります。",
+      "action_item": "Cursorをインストールし、簡単なデータ処理コードの作成をAIに依頼してみましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/"
+    },
+    {
+      "title": "AIがAIに感染する「プロンプトワーム」の脅威、国内で注意喚起",
+      "category": "リスク管理",
+      "summary": "複数のAIエージェントが連携する環境下で、悪意ある指示が次々と伝播する新手法が確認されました。AIの自動化機能が悪用されると組織全体に被害が及ぶため、新たな防護設計が求められています。",
+      "one_liner": "AIエージェントを狙うワームに注意",
+      "why_important": "AIの自律性が高まるほど、一つのセキュリティホールが全自動で被害を拡大させるリスクに直面します。",
+      "action_item": "AIに外部ツールを連携させる際、不審な入力を自動処理しない設定になっているか確認してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/76hata/articles/prompt-worm-attack-agent-quarantine-design"
+    },
+    {
+      "title": "Claude Codeの「Workflow機能」で定型業務の完全自動化が加速",
+      "category": "業務効率化",
+      "summary": "Claude Codeで作業手順を「Workflow」として定義し、AIエージェントに忠実に実行させる手法が注目されています。Markdown形式の定義により、AIの指示無視や手順漏れを解消します。",
+      "one_liner": "業務手順をAIに完全自動実行させる",
+      "why_important": "定型業務を正確に自動化することで、属人化を排除しつつヒューマンエラーをゼロにすることが可能です。",
+      "action_item": "毎日行っているルーティン業務の手順を、AIが理解しやすいよう箇条書きで書き出してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/sika7/articles/778304406e60e0"
+    },
+    {
+      "title": "TinderとZoom、AIによるなりすましを防ぐ「虹彩スキャン」を導入",
+      "category": "リスク管理",
+      "summary": "AIによるディープフェイク対策として、虹彩スキャンによる本人確認機能を導入。画面の向こうの相手が「AIではなく人間であること」を保証する技術が、信頼性が求められるサービスへ普及しています。",
+      "one_liner": "虹彩認証で「人間」であることを証明",
+      "why_important": "AI模倣が高度化する中、オンライン上の信頼性を確保するための生体認証がビジネスの必須条件となります。",
+      "action_item": "重要会議や契約時において、現状の本人確認手段で十分かどうかセキュリティ体制を再考してください。",
+      "source": "BBC Technology",
+      "url": "https://www.bbc.com/news/articles/cp9vppem4evo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "AWS、マーケティング業務を「時間単位から分単位」へ短縮するAIを発表",
+      "category": "業務効率化",
+      "summary": "「Amazon Bedrock」を活用した自律型AIが、コンテンツ作成から配信設定までの一連のワークフローを代行。数時間かかっていた準備を数分に短縮し、マーケターを創造的な戦略立案に専念させます。",
+      "one_liner": "マーケティングを時間から分単位へ",
+      "why_important": "単純作業をAIエージェントに任せることで、人間のリソースをより高付加価値な顧客体験設計に集中できます。",
+      "action_item": "現在の業務で、単なる形式調整や配信作業に費やしている時間を一度計測してみましょう。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/from-hours-to-minutes-how-agentic-ai-gave-marketers-time-back-for-what-matters/"
+    },
+    {
+      "title": "Anthropicが最強のハッキングAI「Claude Mythos」を発表、金融界に激震",
+      "category": "リスク管理",
+      "summary": "サイバーセキュリティ分野で人間を凌駕する新モデルを発表。脆弱性特定に驚異的な性能を発揮する一方、悪用による高度なサイバー攻撃の懸念から、金融機関や政府が警戒を強めています。",
+      "one_liner": "最強ハッキングAIが突きつける倫理",
+      "why_important": "攻撃側にもAIが使われる時代になり、企業はより高度なセキュリティ対策と倫理的なAI運用の両立が求められます。",
+      "action_item": "最新のAI攻撃手法の事例を共有し、自社の脆弱性診断の頻度を見直す検討を行ってください。",
+      "source": "BBC Technology",
+      "url": "https://www.bbc.com/news/articles/crk1py1jgzko?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "AIへの過度な依存による品質低下と健康被害に注意喚起",
+      "category": "ライフスタイル",
+      "summary": "AIの無批判な長時間使用による「認知の鈍化」や、ハルシネーションの見落としに伴う判断ミスのリスクが指摘されています。専門家は適切な休憩とクリティカルシンキングの保持を推奨しています。",
+      "one_liner": "AI依存による思考停止と低下に警告",
+      "why_important": "AIを道具として使いこなすには、その回答を疑い、最終責任を持つ人間の主体性が不可欠です。",
+      "action_item": "AI使用時は定期的に画面から目を離し、回答の根拠を自力で再確認する時間を設けてください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/why-prolonged-ai-use-risks-your-health-4-ways-to-stay-safe/"
+    }
+  ]
+}

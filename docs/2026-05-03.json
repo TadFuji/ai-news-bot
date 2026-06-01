@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月03日",
+  "theme": "AIの実装から『運用と信頼性』の追求へ",
+  "morning_comment": "AIを実務のパートナーとして信頼し、運用するための設計論が成熟しつつあります。",
+  "articles": [
+    {
+      "title": "2025年最新：AI音声入力アプリの徹底比較とランキング",
+      "category": "業務効率化",
+      "summary": "最新のAI音声入力アプリが、ビジネスメールの返信、会議の議事録作成、さらにはプログラミングまでを可能にしています。文脈理解や修正機能の向上が、デスクワークの生産性を劇的に変える可能性を示唆しています。",
+      "one_liner": "AI音声入力でデスクワークを自動化",
+      "why_important": "音声入力は単なるテキスト化を超え、文脈を汲み取る思考のパートナーへと進化しています。",
+      "action_item": "今日のメモやメールの下書きを、一度声に出して作成してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/02/the-best-ai-powered-dictation-apps-of-2025/"
+    },
+    {
+      "title": "AIエージェントへの「指示書」5原則：失敗を防ぐ設計術",
+      "category": "業務効率化",
+      "summary": "Claude CodeやGitHub CopilotなどのAIエージェントを使いこなすための具体的かつ効率的な指示の書き方が公開。情報を詰め込みすぎない「引き算」の設計により、モデルの注意力を維持し精度を高める手法を提示しています。",
+      "one_liner": "精度を高めるAIエージェント指示の5原則",
+      "why_important": "AIエージェントの「的外れ」な挙動を防ぎ、実務で戦力化させるための必須スキルです。",
+      "action_item": "AIへの指示が複雑になっていないか、箇条書きで簡潔に整理し直してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/aiandao/articles/good-spec-for-ai-agents-20260502"
+    },
+    {
+      "title": "GEO最適化：AI検索時代に生き残る新しいWeb集客戦略",
+      "category": "最新技術",
+      "summary": "ChatGPTやPerplexityなどのAI検索エンジンに対応する「生成エンジン最適化（GEO）」が急務。AIに引用されやすい文章構造や数値密度の高め方など、次世代のデジタルマーケティング手法が解説されています。",
+      "one_liner": "AI検索時代に勝つためのGEO戦略",
+      "why_important": "従来のSEOだけでなく、AIの回答に自社情報が引用される仕組み作りが企業の認知度を左右します。",
+      "action_item": "自社の強みがAIの回答に正しく反映されるか、Perplexity等で検索してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kei_concierge/articles/geo-optimization-ai-seo-2026"
+    },
+    {
+      "title": "AI自動化の盲点：失敗しても「戻せる」ワークフロー設計",
+      "category": "リスク管理",
+      "summary": "AIエージェント導入の鍵は「賢さ」ではなく「ロールバック（巻き戻し）設計」にあります。リスクに応じた自動化の境界線を設計し、本番環境で安全にAIを運用するためのチェックリストを提示しています。",
+      "one_liner": "失敗を「戻せる」安全なAI自動化設計",
+      "why_important": "自動化のリスクを管理し、ミスが発生した際に即座に復旧できる仕組みが組織の信頼を守ります。",
+      "action_item": "現在の自動化フローに、ワンクリックで取り消せる手順があるか確認してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kanaria007/articles/82151af4c2641e"
+    },
+    {
+      "title": "セキュリティも安心：ローカル動作のAI図解生成ツールが登場",
+      "category": "業務効率化",
+      "summary": "機密情報を外部に送らずローカル環境で図解を自動生成できるアプリが登場。Mermaid記法を活用し、安全にシステム構成図やフローチャートを爆速で作成できるため、セキュリティの厳しい環境でも利用可能です。",
+      "one_liner": "セキュリティ万全なローカル図解生成",
+      "why_important": "機密情報を守りつつAIの恩恵を受けるには、ローカル完結型のツール活用が強力な選択肢となります。",
+      "action_item": "社外秘情報の図解作成に、Mermaid記法とローカルLLMの活用を検討してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/nuldev0/articles/717010cc00f7da"
+    },
+    {
+      "title": "AI時代の「証跡ログ」：事故後の責任所在を明確にする設計",
+      "category": "リスク管理",
+      "summary": "AIエージェントが自律行動する中、事故発生時に「誰が、なぜ、その判断をしたのか」を再構成するための設計が注目。AIの提案と人間の承認、参照情報の因果関係を保存し、コンプライアンスを強化します。",
+      "one_liner": "AIの判断理由を記録する「証拠ログ」",
+      "why_important": "AIによる意思決定の透明性を確保することは、責任あるビジネス運用の大前提です。",
+      "action_item": "AIを用いた業務において、判断の根拠や承認プロセスが記録されているか点検してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/dantarg/articles/evidence-log-design"
+    },
+    {
+      "title": "Claude Codeの記憶管理術：AIの「学習」を制御して精度を高める",
+      "category": "業務効率化",
+      "summary": "AIのメモリ機能を「文脈設計」として使いこなす手法。フィードバックやプロジェクト固有のルールを整理して記憶させることで、AIを自分専用に最適化し、同じ修正指示を繰り返す手間をなくします。",
+      "one_liner": "AIを自分専用に育てるメモリ管理術",
+      "why_important": "AIに「自分好みの型」を覚えさせることで、使い込むほどに生産性が向上する資産となります。",
+      "action_item": "プロジェクト固有のルールをAIの「カスタム指示」やメモリに登録してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/ojt/articles/claude-code-memory-context-design"
+    },
+    {
+      "title": "金融・法務でのAI導入：間違いが許されない領域のアーキテクチャ",
+      "category": "リスク管理",
+      "summary": "厳密な業務領域にAIを適用するための設計指針。数値の厳守や専門家判断の介入、監査体制など、AIの不確実性をシステム構造で補完し、信頼性の高い社会実装を進める手法を詳述しています。",
+      "one_liner": "金融・法務でも使える厳格なAI設計",
+      "why_important": "AIの「それらしい嘘」を防ぐには、出力結果を検証・補完する二重の安全策が不可欠です。",
+      "action_item": "AIに100%頼らず、重要数値にバリデーションをかける工程を設計に組み込んでください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/cancan007/articles/72d0f37d56162a"
+    },
+    {
+      "title": "採用AIの偏り：アルゴリズムが「AI生成の応募者」を優遇するリスク",
+      "category": "法規制・倫理",
+      "summary": "採用AIがAIによって書かれた応募書類を優遇する傾向があるという調査結果。公平性を期して導入されたはずのAIが、意図せず特定の層に有利に働く実態があり、ツールの透明性が新たな課題となっています。",
+      "one_liner": "AIが「AI生成の応募者」を優遇する罠",
+      "why_important": "アルゴリズムの偏りが、組織の多様性や公平な評価を阻害する可能性があることを理解すべきです。",
+      "action_item": "採用支援ツールの選定基準に「AIバイアスの検証」が含まれているか確認してください。",
+      "source": "Hacker News AI",
+      "url": "https://arxiv.org/abs/2509.00462"
+    },
+    {
+      "title": "日本発：3大AI（Claude/OpenAI/Gemini）に漫画ネームを競作させる試み",
+      "category": "日本市場",
+      "summary": "主要AIモデルに同じシナリオから異なる漫画のネームを出させる試み。モデルごとの個性を活かして複数の案を比較検討することで、クリエイティブな意思決定を支援する新しい共創の形を示しています。",
+      "one_liner": "3大AIの個性を引き出す競作システム",
+      "why_important": "複数のAIを比較することで多角的な視点が得られ、最良のアイデアを選別する能力が向上します。",
+      "action_item": "企画のブレストで、ChatGPTとClaudeの両方に同じお題を出して比較してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/yatmita/articles/nemu-kaigi-llm-content-voting"
+    }
+  ]
+}

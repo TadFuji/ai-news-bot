@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月04日",
+  "theme": "AIの生活・インフラ浸透とリスクの顕在化",
+  "morning_comment": "AIが生活の「基盤」へと移行し、利便性とリスク管理の共存が問われています。",
+  "articles": [
+    {
+      "title": "CarPlayにChatGPTが統合、車内での音声対話が可能に",
+      "category": "ライフスタイル",
+      "summary": "iOSのアップデートにより、車内でChatGPTとの高度な音声対話が可能になりました。複雑な質問への回答や長文メールの要約、会議のアイデア出しを運転中に安全に行えます。",
+      "one_liner": "車内が対話型AIで知的生産の場へ",
+      "why_important": "移動時間が「受動」から「能動」の業務時間へ変わります。音声UIの習熟がビジネスパーソンの必須スキルになります。",
+      "action_item": "次の運転時、CarPlay等での音声操作を一つ試してみてください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/chatgpt-iphone-ios-apple-carplay/"
+    },
+    {
+      "title": "画像生成とコード生成でAI利用状況が逆転する理由",
+      "category": "業務効率化",
+      "summary": "熟練者ほどAIを使いこなすプログラミングと、素人ほど活用しやすい画像生成の差を分析。成果物の「核」を理解することで、戦略的なAIツール選択が可能になります。",
+      "one_liner": "AIの「補助」と「生成」の使い分け",
+      "why_important": "職種によりAIとの最適な距離感が異なります。自分の業務のどの部分をAIに任せるべきか、戦略的視点が求められます。",
+      "action_item": "自分の主要タスクにおいて、AIを「補助」として使うか「主役」にするか分類してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/pdfractal/articles/5fef39bef3a0b9"
+    },
+    {
+      "title": "動画生成AI「Sora」のアプリ版が突如サービス終了",
+      "category": "リスク管理",
+      "summary": "OpenAIの期待作「Sora」アプリ版がわずか半年で終了。特定ベンダーに過度に依存するリスクと、代替手段を確保する「AIレジリエンス」の重要性が浮き彫りになりました。",
+      "one_liner": "特定AIツール依存からの脱却を",
+      "why_important": "AIサービスは突然終了する可能性があります。業務フローの構築において、常にバックアップ手段を持つ意識が必要です。",
+      "action_item": "業務で必須のAIツールが明日停止した場合の、代替手段を1つ検討しておきましょう。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/04/sora-service-termination.html"
+    },
+    {
+      "title": "米ユタ州でAIチャットボットによる精神科薬の処方が解禁",
+      "category": "法規制・倫理",
+      "summary": "医師を介さずAIが精神科薬を処方することが許可されました。効率化が期待される一方、専門家からは安全性への懸念が出ており、AIの責任境界を問う事例となります。",
+      "one_liner": "AIによる処方箋発行、米国で解禁",
+      "why_important": "専門職の判断がAIに置き換わる歴史的転換点です。日本でも今後議論されるであろう「AIの判断責任」を注視すべきです。",
+      "action_item": "AIに判断を委ねる領域と、人間が責任を持つべき領域の境界線を自分なりに考えてみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/906525/ai-chatbot-prescribe-refill-psychiatric-drugs"
+    },
+    {
+      "title": "Google MeetがCarPlayに対応、安全な車上会議が可能に",
+      "category": "業務効率化",
+      "summary": "Google MeetがCarPlayに対応し、運転中でもWeb会議に参加できるようになりました。オーディオ最適化により、移動中の生産性向上が期待されます。",
+      "one_liner": "移動中のWeb会議が安全に標準化",
+      "why_important": "外回り中の隙間時間を有効活用できる一方、運転への集中力と会議参加のバランスをとる自己管理能力が問われます。",
+      "action_item": "外出時のオンライン会議参加ルール（音声のみ参加など）をチームで共有しましょう。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/how-to-use-google-meet-in-carplay-safely/"
+    },
+    {
+      "title": "AIデータ漏洩でMetaがデータ企業との提携を一時停止",
+      "category": "リスク管理",
+      "summary": "訓練データを扱うベンダーでセキュリティ事故が発生。AI開発のサプライチェーンにおけるデータ管理の脆弱性が露呈し、Metaは提携を一時停止しました。",
+      "one_liner": "AIサプライチェーンに潜むデータ漏洩",
+      "why_important": "外部のAIサービスを利用する際、その裏側にいるデータベンダーの安全性まで評価対象に含める必要があります。",
+      "action_item": "自社で使用しているAI関連サービスのセキュリティ規約やデータ利用方針を再確認してください。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/meta-pauses-work-with-mercor-after-data-breach-puts-ai-industry-secrets-at-risk/"
+    },
+    {
+      "title": "AIエージェント開発を即座に開始できる5つのDockerコンテナ",
+      "category": "最新技術",
+      "summary": "複雑な設定なしに自律型AIを構築できるDocker環境が公開されました。プロトタイプ作成のスピードを劇的に向上させ、非開発者の技術検証も容易にします。",
+      "one_liner": "AIエージェント開発がDockerで即可能",
+      "why_important": "環境構築の壁が消滅し、自律型AIの導入検討を低コストで試せる時代になりました。企画職も技術の限界を把握しやすくなります。",
+      "action_item": "AIエージェントに任せたい「単純な繰り返し作業」を1つだけリストアップしてみてください。",
+      "source": "KDnuggets",
+      "url": "https://www.kdnuggets.com/5-useful-docker-containers-for-agentic-developers"
+    },
+    {
+      "title": "AIに「感情」を持たせてセキュリティ脆弱性を発見する手法",
+      "category": "リスク管理",
+      "summary": "攻撃者の心理状態をAIに模倣させ、従来の監査で見落とされていた脆弱性を探る新手法「NeuroState」が登場。多角的な自動リスク評価を可能にします。",
+      "one_liner": "「感情」を持つAIが未知の隙を見つける",
+      "why_important": "攻撃者の視点をAIでシミュレーションすることで、防御側はより強固な対策を自動的に構築できるようになります。",
+      "action_item": "自社のセキュリティ対策に「AIによる攻撃シミュレーション」を取り入れる余地があるか確認しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/emilia_lab/articles/neurostate-redteam"
+    },
+    {
+      "title": "AIエージェントツール「OpenClaw」に深刻な脆弱性",
+      "category": "リスク管理",
+      "summary": "AIエージェント構築ツールにおいて管理者権限を奪取される恐れがある脆弱性が発見。自律的な操作を行うAIの特性上、悪用時の被害は甚大になります。",
+      "one_liner": "AIエージェントツールの脆弱性に警鐘",
+      "why_important": "便利なAIツールほど、特権アクセスが必要になる傾向があります。最新ツール導入時のパッチ管理はこれまで以上に重要です。",
+      "action_item": "OSS（オープンソース）のAIツールを使用している場合、開発元から修正版が出ていないか確認してください。",
+      "source": "Ars Technica AI",
+      "url": "https://arstechnica.com/security/2026/04/heres-why-its-prudent-for-openclaw-users-to-assume-compromise/"
+    },
+    {
+      "title": "大手テック企業、AI用電力確保のため天然ガス発電所を建設",
+      "category": "最新技術",
+      "summary": "MetaやGoogleが、AIデータセンターの膨大な電力を賄うために発電所の建設を検討中。AIの進化がエネルギーインフラに与える影響が具体化しています。",
+      "one_liner": "AIの進化がエネルギー供給を再編する",
+      "why_important": "AI利用コストは将来、電力供給の制約を受ける可能性があります。企業の環境責任（ESG）への取り組みもより厳しく問われるでしょう。",
+      "action_item": "自社のAI利用が環境に与えるインパクトについて、長期的な視点で情報を集めてみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/03/ai-energy-microsoft-meta-google-natural-gas-mining-fomo/"
+    }
+  ]
+}

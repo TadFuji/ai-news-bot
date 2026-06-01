@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月12日",
+  "theme": "思考するAIが業務の深層へ浸透中",
+  "morning_comment": "推論するAIが実用期へ。業務への深い統合とセキュリティの両立が、今日の鍵です。",
+  "articles": [
+    {
+      "title": "GPT-5.4 Thinking発表、推論性能が人間ベースラインを突破",
+      "category": "最新技術",
+      "summary": "OpenAIが発表した最新モデルGPT-5.4 Thinkingは、最大100万トークンのコンテキストと高度な段階的推論機能を備え、デスクトップ自動化ベンチマークで人間を超える75.0%の精度を達成しました。これにより、PC上の複雑なソフトウェア操作や長大な資料を跨ぐ自律的なタスク実行が実用レベルに到達します。",
+      "one_liner": "AIがPC操作を代行する時代へ",
+      "why_important": "推論性能の向上により、複雑な手順が必要なPC作業も指示一つで完結可能になります。",
+      "action_item": "毎日行っているPC上の定型作業を3つ書き出してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kai_kou/articles/189-gpt-54-thinking-reasoning-api-guide"
+    },
+    {
+      "title": "Microsoft WordにClaudeがネイティブ統合",
+      "category": "業務効率化",
+      "summary": "AnthropicのAI「Claude」をMicrosoft Word内で直接利用できる機能が登場しました。ドキュメント作成中にブラウザへ切り替えることなく、文章の推敲、要約、構成案の作成が可能です。日常的にWordを使用するビジネスパーソンにとって、執筆スピードと質の劇的な向上に直結します。",
+      "one_liner": "Word内でClaudeが直接執筆",
+      "why_important": "ツールを切り替える思考の断絶を防ぎ、ドキュメント作成の密度を極限まで高められます。",
+      "action_item": "次回報告書を作成する際、AIに構成案のたたき台を作らせてみてください。",
+      "source": "Product Hunt AI",
+      "url": "https://www.producthunt.com/products/claude"
+    },
+    {
+      "title": "会議を自動資産化：Google Meet×Slack×RAGの統合活用",
+      "category": "業務効率化",
+      "summary": "Google Meetの録画・文字起こしデータをSlackへ自動共有し、さらにRAG（検索拡張生成）を用いて過去の会議内容を自然言語で検索できる仕組みが紹介されました。これにより、「あの会議で誰が何を言ったか」を探す時間がゼロになります。",
+      "one_liner": "全会議を検索可能な資産に変える",
+      "why_important": "議事録に頼らず、自然言語で過去の全会議の文脈を掘り起こせる組織体制が構築できます。",
+      "action_item": "会議の録画・文字起こし設定が自動で有効になっているか確認してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/aircloset/articles/573c63268bad30"
+    },
+    {
+      "title": "アンソロピック新モデルの金融リスクを米政府が警戒",
+      "category": "リスク管理",
+      "summary": "Anthropicの最新AIモデルがサイバー攻撃に悪用された場合、金融システムを麻痺させるリスクがあるとして、米財務長官が金融トップらと緊急会合を開きました。AIの進化が高度なサイバー攻撃を容易にする側面が浮き彫りになっています。",
+      "one_liner": "AI悪用による金融リスクに警戒",
+      "why_important": "高度なAIはサイバー攻撃の武器にもなり得ます。組織内の防御体制を見直す契機です。",
+      "action_item": "社内のセキュリティガイドラインに最新のAI関連リスクが含まれているか確認してください。",
+      "source": "NHK 科学・技術",
+      "url": "https://news.web.nhk/newsweb/na/na-k10015097101000"
+    },
+    {
+      "title": "ローカルAI「Ollama」の脆弱性を狙ったスキャンが国内で増加",
+      "category": "リスク管理",
+      "summary": "独自のAI環境を構築できる「Ollama」などを利用する際、ポート11434を開放したままにしていると、外部から攻撃対象としてスキャンされる危険性が指摘されています。日本国内のクラウド環境での被害も懸念されており、セキュリティ設定が不十分なAIサーバーが狙われています。",
+      "one_liner": "ローカルAIの不用意な公開に注意",
+      "why_important": "利便性の裏で、設定ミスによるサーバー乗っ取りなどのリスクが現実化しています。",
+      "action_item": "独自に導入しているAIツールのネットワーク設定を再点検してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/runlocal/articles/f67da103030a8e"
+    },
+    {
+      "title": "「賢いAIほど巧妙な嘘をつく」ハルシネーションの逆説",
+      "category": "リスク管理",
+      "summary": "最新の高性能LLMほど、実在しない架空のサービスについても、あたかも真実であるかのように詳細かつ論理的な回答を生成する傾向があることが示されました。モデルが賢くなるほど、嘘を見破ることが難しくなります。",
+      "one_liner": "賢いAIほど巧妙な嘘をつく",
+      "why_important": "高性能モデルほど回答が説得力を持つため、盲信せず検証する姿勢がより重要になります。",
+      "action_item": "AIの回答に、あえて「その根拠は？」と問いかけてソースを確認してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kenimo49/articles/llm-larger-models-lie-better"
+    },
+    {
+      "title": "Apple出身者が開発、押すだけでAIが起動する「Button」",
+      "category": "ライフスタイル",
+      "summary": "元Apple社員らが開発した新ガジェット「Button」は、シャツやバッグに装着し、物理ボタンを押すだけでAIを呼び出せるデバイスです。スマホを取り出す手間を省き、音声や周辺状況を即座にAIが理解してサポートします。",
+      "one_liner": "物理ボタン一押しでAIが即起動",
+      "why_important": "スマホ操作すら不要なUIの登場は、AIが生活のあらゆる瞬間に溶け込む未来を示唆します。",
+      "action_item": "自分が最もAIを使いたい「不便な瞬間」がいつか意識してみてください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/04/ai-button_news.html"
+    },
+    {
+      "title": "AI電子ノート「iFLYTEK AINOTE2」に専用キーボード登場",
+      "category": "業務効率化",
+      "summary": "手書きに特化したAI搭載電子ペーパー端末「AINOTE2」に専用キーボードケースが追加されました。AIによる録音・文字起こし機能と、手書き・タイピングの融合により、会議メモやアイデア出しの効率を極限まで高めます。",
+      "one_liner": "AI電子ノートが入力機に進化",
+      "why_important": "手書きとタイピングの融合により、場所を選ばない高度な思考の言語化が可能になります。",
+      "action_item": "普段のメモツールをデジタル化することで、AI活用の余地がないか試してください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/04/iflytek-ainote-2-keyboard-case-lth.html"
+    },
+    {
+      "title": "AIエージェントの業界標準「Agent Skills」が急拡大",
+      "category": "最新技術",
+      "summary": "AIエージェントが必要なスキルを動的に取得・実行するための標準規格「Agent Skills (SKILL.md)」が急速に普及しています。これにより、異なるAI同士が共通の「技術」を共有し、ブラウザ操作やツール使用をスムーズに行えるようになります。",
+      "one_liner": "AIエージェントの能力が共通化",
+      "why_important": "規格の統一により、特定のAIに依存せず、多様なツールをAIが自動操縦できる環境が整います。",
+      "action_item": "AIが操作可能になった外部ツールを一つ試してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kinamocchi_tech/articles/kinamocchi-v013"
+    },
+    {
+      "title": "NotebookLMで自分専用の「最強AIトレーナー」を構築",
+      "category": "業務効率化",
+      "summary": "GoogleのNotebookLMを活用し、自身の食事記録や専門知識を読み込ませることで、ハルシネーションを抑えた高精度なパーソナルトレーナーを構築した事例が話題です。自分の過去データに基づいた精度の高いアドバイスを受けることが可能です。",
+      "one_liner": "自分専用の最強AIコーチを自作",
+      "why_important": "自社データや個人ログを活用した「嘘をつかない」実用的なAI活用法が民主化されています。",
+      "action_item": "NotebookLMに直近1ヶ月の業務ログや資料を読み込ませてみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/goiyu/articles/b5ff846c847bfd"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月23日",
+  "theme": "AIを使いこなす個の専門性が鍵に",
+  "morning_comment": "AIが道具として定着。今こそ自身の専門性とAIの掛け合わせを考える時です。",
+  "articles": [
+    {
+      "title": "自分のPCでAIを動かす「LM Studio」入門",
+      "category": "業務効率化",
+      "summary": "ChatGPTなどのクラウドサービスに頼らず、個人のPC内でAIを完結させる「ローカルLLM」の活用法が注目されています。LM Studioを使えば、情報漏洩のリスクを極限まで抑えながら、機密情報を扱う資料作成やプログラミングの壁打ちが可能です。インターネット環境がなくても動作するため、場所を選ばない業務遂行を支援します。",
+      "one_liner": "機密を守りPC内でAIを完結",
+      "why_important": "クラウドへの情報流出を防ぎつつ、社外秘データを用いた高度な分析や検討が可能になります。",
+      "action_item": "LM Studioを導入し、オフライン環境でのAIの挙動を試してください",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/readitnow/2111070.html"
+    },
+    {
+      "title": "動画編集アプリCapCutがGoogle AI「Gemini」と連携",
+      "category": "業務効率化",
+      "summary": "人気の動画編集アプリCapCutがGoogleのGeminiと連携し、プロンプト入力だけで動画編集が可能になります。SNSマーケティングや社内プレゼン資料としての動画制作コストを劇的に下げ、専門知識がなくても短時間で高品質な動画コンテンツを作成できる環境が整いました。",
+      "one_liner": "言葉だけで動画制作が完結",
+      "why_important": "クリエイティブ制作の敷居が下がり、誰もが視覚的なコミュニケーションを主導できるようになります。",
+      "action_item": "ショート動画の台本案をAIに作り、編集アプリとの連携を確認しましょう",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/capcut-gemini-relation/"
+    },
+    {
+      "title": "AIによる個人情報の回答リスクと対策",
+      "category": "リスク管理",
+      "summary": "主要なAIチャットボットに個人の電話番号や住所を尋ねると、正確な回答が返ってくる事例が報告されています。これはAIの学習データに含まれる公開情報の蓄積によるもので、個人のプライバシー保護や企業情報の流出に対する警戒が、全ビジネスパーソンに改めて求められています。",
+      "one_liner": "AIからの個人情報流出に警戒を",
+      "why_important": "学習データに潜む公開情報が思わぬ形で露出するため、改めて情報の取り扱い規程を見直す必要があります。",
+      "action_item": "自分の名前や連絡先をAIに入力し、どのような回答が出るかテストしてください",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/chatgpt-gave-out-my-address-and-phone-number/"
+    },
+    {
+      "title": "AIが変える開発の未来とClaudeの衝撃",
+      "category": "最新技術",
+      "summary": "AnthropicのCode with Claudeが示すように、AIによるコード生成は「補助」から「主導」へとシフトしています。非エンジニアでもシステム構築が可能になる一方、プロのエンジニアにはAIを使いこなす高度なディレクション能力が求められるようになり、職能の定義が根本から変わりつつあります。",
+      "one_liner": "開発は「補助」から「主導」へ",
+      "why_important": "非エンジニアでもシステム構築が可能になる一方、専門家にはAIの出力を導くディレクション力が問われます。",
+      "action_item": "簡単なスクリプト作成をClaudeに依頼し、コードの構造を把握してください",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/05/22/1137845/the-download-coding-future-steroid-olympics-ai-science/"
+    },
+    {
+      "title": "音声やスケッチをAIで整理する新ツール「Nota」",
+      "category": "業務効率化",
+      "summary": "会議の録音、手書きのスケッチ、断片的なメモをAIが一瞬で整理されたノートに変換する「Nota」が登場しました。マルチモーダル対応により情報の入力形式を選ばず、議事録作成やアイデア整理の時間を大幅に削減。多忙なリーダー層の知的生産性を最大化します。",
+      "one_liner": "断片的なメモをAIが即ノート化",
+      "why_important": "マルチモーダル対応により、形式を問わずあらゆる情報入力を瞬時に価値ある記録へ変換できます。",
+      "action_item": "手書きメモや音声をAIで整理し、資料構成案を自動作成させてみましょう",
+      "source": "Product Hunt AI",
+      "url": "https://www.producthunt.com/products/nota-ai-notes-voice"
+    },
+    {
+      "title": "Google AI検索が変える情報収集の必然性",
+      "category": "最新技術",
+      "summary": "Google検索にAIによる回答（AI Overviews）が標準実装されることで、検索行動は「リンクを踏む」から「回答を直接読む」へと激変します。これにより、情報の即時取得が可能になりリサーチ業務は効率化しますが、一方でAIが提示する情報の根拠を確認する「情報の裏取り」スキルの重要性が増しています。",
+      "one_liner": "検索は「探す」から「答え」へ",
+      "why_important": "情報収集の速度が上がる半面、提示された回答の正確性を見極める「裏取り能力」の重要性が増します。",
+      "action_item": "AIによる回答結果を読み、必ず一次ソースのURLを確認する習慣をつけてください",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/even-if-you-hate-ai-you-will-use-google-ai-search/"
+    },
+    {
+      "title": "AIデータセンター増設が招く電力料金高騰のリスク",
+      "category": "日本市場",
+      "summary": "米国東部ではAI専用データセンターの建設ラッシュにより、電力需要が逼迫し電気料金が76%も高騰する事態となっています。日本でも政府主導でデータセンター誘致が進む中、インフラコストの増加が企業のクラウド利用料金や事業運営コストに転嫁されるリスクを注視する必要があります。",
+      "one_liner": "AI需要による電力コスト増を注視",
+      "why_important": "インフラ負荷の増大は、巡り巡って企業のクラウド利用料や運営コストの上昇を招くリスクがあります。",
+      "action_item": "自社のクラウド利用コストの推移を確認し、中長期的な予算計画を検討してください",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/soaring_electricity_prices/"
+    },
+    {
+      "title": "Googleが開発中のXRスマートグラスとGeminiの融合",
+      "category": "最新技術",
+      "summary": "Googleが試作中のスマートグラスは、Gemini AIを搭載し、視界に翻訳やナビゲーションを表示します。これにより、ハンズフリーでの現場作業支援や、リアルタイムの多言語翻訳が可能になります。製造、物流、接客など、PCを使えない現場での働き方を一変させる可能性を秘めています。",
+      "one_liner": "視界にAIが入り現場作業を支援",
+      "why_important": "オフィス外の現場業務においても、ハンズフリーでAIの支援を受ける新たな働き方が現実味を帯びています。",
+      "action_item": "現場業務でAIが活用できそうな「ハンズフリーが必要なシーン」を列挙してください",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/"
+    },
+    {
+      "title": "AIは既存の専門スキルを「増幅」させるレバレッジ",
+      "category": "業務効率化",
+      "summary": "AIは単なる人間の代替ではなく、既存の専門スキルを持つ人の生産性を数倍に高める「レバレッジ（てこ）」として機能します。基礎知識がある人ほどAIを正確に制御できるため、安易なAI依存ではなく、自身の核となる専門性を磨き続けることの重要性が再認識されています。",
+      "one_liner": "AIは専門スキルを数倍に高める",
+      "why_important": "基礎力がある人ほどAIを正確に制御できるため、安易な依存ではなく自身のコアスキル磨きが不可欠です。",
+      "action_item": "自分の得意分野において、AIで作業を大幅に効率化できる工程を特定してください",
+      "source": "Hacker News AI",
+      "url": "https://www.joshwcomeau.com/email/wham-launch-005-elephant-2-p/"
+    },
+    {
+      "title": "AI導入の鍵は「規模」より「業務への特化」",
+      "category": "リスク管理",
+      "summary": "汎用的な大規模モデル（LLM）よりも、特定の業界や業務に特化した小規模・中規模モデルの方が、コスト対効果や精度で勝る事例が増えています。企業のAI導入において、何でもできるAIを求めるのではなく、特定課題の解決に特化した選定が投資成功の鍵となります。",
+      "one_liner": "汎用型より「特化型AI」が勝る",
+      "why_important": "全能のAIを求めるのではなく、特定の課題解決に最適な軽量・特化型モデルを選ぶのが導入成功の秘訣です。",
+      "action_item": "現在抱えている課題を一つ選び、それに特化したAIツールがないかリサーチしてください",
+      "source": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/Dharma-AI/specialization-beats-scale"
+    }
+  ]
+}

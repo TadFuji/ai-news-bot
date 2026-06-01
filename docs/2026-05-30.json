@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月30日",
+  "theme": "自律するAIエージェント、実用と共生の壁",
+  "morning_comment": "エージェントが自律し始める今、人間の役割を再定義する時期です。",
+  "articles": [
+    {
+      "title": "AnthropicがClaude Opus 4.8を公開、驚異の短期間アップデート",
+      "category": "最新技術",
+      "summary": "Anthropicは前モデルからわずか41日で最新モデル「Claude Opus 4.8」をリリース。コーディング性能と信頼性が大幅に向上し、価格は据え置きです。",
+      "one_liner": "Claude最新版が異例の速さで登場",
+      "why_important": "開発サイクルの加速により、昨日までの「最新」がすぐに塗り替えられる状況を意識すべきです。",
+      "action_item": "開発チームで新モデルのベンチマークを確認し、現行ツールとの入れ替えを検討してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/goki602/articles/2026-05-30-claude-opus-4-8-what-changed"
+    },
+    {
+      "title": "企業の「AI中毒」が招く人員削減と職種への影響",
+      "category": "リスク管理",
+      "summary": "業務実態を無視してAIへの置き換えを理由に大規模な人員削減を行う「AIサイコシス」が指摘されています。人間とAIの境界線が再定義されています。",
+      "one_liner": "AI置き換えによる安易な人員削減に警鐘",
+      "why_important": "業務の表面的な自動化だけでなく、人間にしかできない価値を再定義し、組織に示す必要があります。",
+      "action_item": "AIには代替できない自身のコアスキルを言語化し、上司やチームと共有してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/video/what-happens-when-companies-become-too-ai-pilled/"
+    },
+    {
+      "title": "RobinhoodがAIエージェントによる株式取引の自動化を許可",
+      "category": "ライフスタイル",
+      "summary": "米Robinhoodが、ユーザーに代わってAIエージェントが株式を売買する仕組みを導入。個人投資の24時間自動化が新たなフェーズに入りました。",
+      "one_liner": "AIエージェントが24時間株取引を代行",
+      "why_important": "個人の意思決定をAIに委ねる「自律化」の波が、金融というクリティカルな分野にも到達しています。",
+      "action_item": "自律型エージェントに任せられる定型的な判断タスクを、業務の中で1つ探してみてください。",
+      "source": "Hacker News AI",
+      "url": "https://techcrunch.com/2026/05/27/robinhood-now-lets-your-ai-agents-trade-stocks/"
+    },
+    {
+      "title": "AIなしでは働けない開発者の増加と、その潜在的リスク",
+      "category": "リスク管理",
+      "summary": "AIによるコーディング加速の裏で、品質低下やスキル低下の懸念が浮上。AI生成物の最終責任は人間にあることを再認識する必要があります。",
+      "one_liner": "AI依存によるコード品質低下のリスク",
+      "why_important": "効率化の代償としてブラックボックス化が進むため、人間による厳格なレビュー体制の構築が急務です。",
+      "action_item": "AIが生成した成果物に対して、意図的に「なぜこの回答になったか」を疑い、検証してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/29/coders-are-refusing-to-work-without-ai-and-that-could-come-back-to-bite-them/"
+    },
+    {
+      "title": "Android AutoへのGemini搭載でドライブ体験が劇的に変化",
+      "category": "ライフスタイル",
+      "summary": "GoogleのAIアシスタント「Gemini」が車内システムに統合。音声操作によるメール要約やスケジュール確認がよりスムーズになります。",
+      "one_liner": "車内AIが移動を生産的な時間へ変える",
+      "why_important": "インターフェースの進化により、PCの前以外でも業務が進む「場所を選ばない生産性」が加速します。",
+      "action_item": "移動中の音声入力によるメモ作成やタスク整理を、今日の外出時に試してみてください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/how-gemini-in-android-auto-is-changing-my-daily-drive/"
+    },
+    {
+      "title": "AIツールを使いこなす鍵、「コンテキスト管理」の重要性",
+      "category": "業務効率化",
+      "summary": "AIツールの精度を最大化するには、情報の「コンテキスト」を適切に制御する技術が必要です。不要な情報の削除やスレッドの切り替えが鍵となります。",
+      "one_liner": "AIの精度を左右する情報の鮮度管理",
+      "why_important": "ツール自体の性能以上に、人間がいかに「情報を整理してAIに渡すか」が業務効率を分ける時代です。",
+      "action_item": "長引いて複雑になったチャットスレッドを一度リセットし、新しい文脈で会話を始めてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/stafes_blog/articles/nano72mkn-context-intro"
+    },
+    {
+      "title": "推論モデル特有のハルシネーション（もっともらしい嘘）の課題",
+      "category": "リスク管理",
+      "summary": "高度な思考が可能な最新モデルほど、複雑な論理展開の中で巧妙な嘘をつく傾向があるという逆説的な課題が明らかになりました。",
+      "one_liner": "賢いAIほど陥る巧妙な「嘘」の罠",
+      "why_important": "推論モデルの間違いは直感的に気づきにくいため、重要な事実に対する「裏取り」の重要性が増しています。",
+      "action_item": "AIが提示した重要な数値や固有名詞については、必ず検索エンジンで一次情報を確認してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/snow_rabbit/articles/9ef21e60ae3e95"
+    },
+    {
+      "title": "常駐型AIエージェントのためのプロンプト設計の新原則",
+      "category": "業務効率化",
+      "summary": "常駐型エージェントの運用には、単発の指示とは異なる設計原則が必要です。行動規範の定義や文脈の固執を防ぐ工夫が求められます。",
+      "one_liner": "AI秘書を飼い慣らす新・プロンプト術",
+      "why_important": "常に自分の業務を背後で支える「AI秘書」を安定稼働させる能力は、今後の大きな差別化要因になります。",
+      "action_item": "自分が日常的に行っている標準的な業務手順を、AIへの「指示書」として箇条書きでまとめてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/jun_eng/articles/b98377b2096b77"
+    },
+    {
+      "title": "Google Gemini Sparkの実体験、エージェント機能の現状と限界",
+      "category": "業務効率化",
+      "summary": "Gemini Sparkは事務作業を横断的にこなす一方で、人間関係のニュアンス理解に限界を見せました。AIと人間の適切な役割分担が示唆されています。",
+      "one_liner": "AIエージェント、文脈理解にはまだ壁",
+      "why_important": "AIが得意な「事務的処理」と、人間が得意な「文脈・感情の理解」の境界線を見極める力が不可欠です。",
+      "action_item": "今日予定している業務を「機械的な作業」と「対人的な配慮が必要な仕事」に分類してみてください。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/google-gemini-spark-ai-agent-hands-on/"
+    },
+    {
+      "title": "OpenAIが「GPT-Rosalind」を発表、生命科学の防衛利用へ",
+      "category": "法規制・倫理",
+      "summary": "生命科学に特化した「GPT-Rosalind」を発表。生物学的脅威の検知を目的として政府機関へ提供されます。専門特化型AIの新たな局面です。",
+      "one_liner": "科学の盾、OpenAIの専門特化型モデル",
+      "why_important": "汎用AIから、倫理や規制が絡む高度な専門分野特化型AIへのシフトが本格化しています。",
+      "action_item": "自身の専門業界において、どのような特化型AIが登場しつつあるかニュースを検索してください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/articles/2605/30/news031.html"
+    }
+  ]
+}

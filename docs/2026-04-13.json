@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月13日",
+  "theme": "AIエージェントによる実務代行の幕開け",
+  "morning_comment": "チャットから実行へ。AIが実務を担う『エージェント時代』の胎動を体感してください。",
+  "articles": [
+    {
+      "title": "PC作業をAIが代行する「Claude Cowork」活用法",
+      "category": "業務効率化",
+      "summary": "ブラウザを越え、PC内のファイル操作やアプリ実行をAIが直接行う技術が登場。ファイル整理やデータ入力の完全自動化が視野に入っています。",
+      "one_liner": "PC操作をAIが代行する時代へ",
+      "why_important": "AIが画面上の操作を直接行うことで、ルーチンワークの概念が根本から変わります。",
+      "action_item": "毎日15分以上かかる単純なPC操作をリストアップしてみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2604/13/news014.html"
+    },
+    {
+      "title": "コード不要、対話だけで8体のAI組織を構築した実録",
+      "category": "業務効率化",
+      "summary": "エンジニア経験を活かしつつ、1行もコードを書かずに日本語の対話のみでAIエージェント組織を構築。重要なのは技術より組織設計力であると説いています。",
+      "one_liner": "対話だけで8体のAI組織を構築",
+      "why_important": "技術力より「設計力」が問われる時代。管理職こそAIを部下として扱うスキルが求められます。",
+      "action_item": "AIを「ツール」ではなく「部下」と見立てて、指示の出し方を工夫してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/tottoko_hamu/articles/claude-code-org-building-dialogue"
+    },
+    {
+      "title": "Metaスマートグラスの映像流出リスクとプライバシー問題",
+      "category": "リスク管理",
+      "summary": "スマートグラスによる意図しない映像流出の懸念。オフィスや公共の場での利用、家庭内でのプライバシー保護に関する基準作りが急務となっています。",
+      "one_liner": "スマートグラスの流出リスクに警鐘",
+      "why_important": "ウェアラブル端末の普及により、意図しない情報漏洩リスクがオフィスの新たな課題となります。",
+      "action_item": "自社の機密エリアでのカメラ付きデバイスの使用ルールを再確認してください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/2026/04/dear-meta-smart-glasses-wearers-youre-being-watched-too-ni2.html"
+    },
+    {
+      "title": "Claude Codeのコスト（トークン）を最大90%削減する技術",
+      "category": "業務効率化",
+      "summary": "AIツールの運用コストを大幅に抑えるテクニック。不要な敬語の削除や設定の最適化により、個人や小規模チームでも長時間のAI活用が可能になります。",
+      "one_liner": "AI運用コストを最大90%削減",
+      "why_important": "コスト効率化はAI導入の持続性を左右します。賢いプロンプトが利益に直結するフェーズです。",
+      "action_item": "生成AIへの指示文から、意味のない丁寧語や重複表現を削ってみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/amu_lab/articles/claude-code-token-reduction-guide-2026"
+    },
+    {
+      "title": "ブラウザのみでローカルLLMを動かす「WebGPU」活用術",
+      "category": "最新技術",
+      "summary": "専用ソフト不要、ブラウザだけで最新AIモデルを手元のPCで動かす手法。サーバーにデータを送らずに処理できるため、秘匿性の高い業務にも適しています。",
+      "one_liner": "ブラウザのみでAIを動かす新常識",
+      "why_important": "クラウドを介さないAI利用は、セキュリティ制約の厳しい企業にとって大きな転機となります。",
+      "action_item": "ブラウザで動作するローカルLLMを一度試し、動作速度を体感してみましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/column/nishikawa/2100827.html"
+    },
+    {
+      "title": "非エンジニアのための「Claude Code」基礎ガイド",
+      "category": "業務効率化",
+      "summary": "最新のプログラミング支援ツールの使い方を専門用語を噛み砕いて解説。AIをビジネスの武器として使いこなしたいリーダー向けの入門書です。",
+      "one_liner": "非エンジニアのためのAI指示ガイド",
+      "why_important": "AIに「何を作らせるか」を言語化する力は、全ビジネスパーソン必須の共通言語になります。",
+      "action_item": "専門用語を使わずに、自動化したい業務フローをAIに説明してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/gingakuwagata/books/claude-code-basics"
+    },
+    {
+      "title": "MCPサーバー活用でAIと外部ツールをシームレスに連携",
+      "category": "業務効率化",
+      "summary": "AIがGitHubやNotion、Googleブラウザを直接操作するための標準規格「MCP」の活用術。AIの『手足』を増やし、業務の自動化範囲を拡大させます。",
+      "one_liner": "AIに「手足」を与える標準規格",
+      "why_important": "AIが各種アプリと連携することで、情報収集から更新までの全工程が自動化されます。",
+      "action_item": "複数のツールをまたいで行っている作業が連携可能か調べてみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/yunisuta/articles/claude-code-mcp-server-tips-968850"
+    },
+    {
+      "title": "日本語教育に最適化、ひらがなだけで答えるLLMの構築",
+      "category": "日本市場",
+      "summary": "特定の制約を持つLLMを微調整で実現した事例。子供向け教育や学習者向けサービスなど、日本特有のニーズに合わせたAIカスタマイズの可能性を示しています。",
+      "one_liner": "日本語特化のAIカスタマイズ事例",
+      "why_important": "汎用モデルを特定の制約に最適化する技術は、独自サービス開発の大きな武器になります。",
+      "action_item": "特定のターゲット層に合わせたAIの「話し方」をプロンプトで定義してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/quixotiks/articles/98f34bc582ffc9"
+    },
+    {
+      "title": "生成AIのVRAM消費を6割削減、家庭用PCでのAI利用が身近に",
+      "category": "最新技術",
+      "summary": "画像生成AIのメモリ消費を大幅に削減しつつ高速化する技術。高価な専門機材がなくても、一般的なPCで高度なクリエイティブ制作が可能になります。",
+      "one_liner": "家庭用PCで高度な画像生成が可能に",
+      "why_important": "ハードウェアの壁が下がることで、社内でのクリエイティブ制作の民主化が一気に進みます。",
+      "action_item": "デザイン業務の一部をAIでプロトタイプ化できないか検討してみてください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/special/2098901.html"
+    },
+    {
+      "title": "Microsoft開発、あらゆるファイルをAI用に変換するMarkItDown",
+      "category": "業務効率化",
+      "summary": "PDFやExcelなどをAIが理解しやすいMarkdown形式に最適化して一括変換。社内データのAI活用（RAG）の精度を向上させる強力なツールです。",
+      "one_liner": "あらゆるファイルをAIが読みやすく",
+      "why_important": "データの形式変換はAI活用の成否を分けます。整理されたデータこそが最大の資産です。",
+      "action_item": "社内に散らばったPDFやExcelを整理し、AI活用の準備を始めてみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/suwash/articles/markitdown_20260410"
+    }
+  ]
+}

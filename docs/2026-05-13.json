@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月13日",
+  "theme": "AIのOS統合と実用化に伴う課題の顕在化",
+  "morning_comment": "OSレベルのAI統合が進む中、利便性とコスト、リスクを冷静に見極める朝に。",
+  "articles": [
+    {
+      "title": "AIがスマホ操作を代行「Gemini Intelligence」発表",
+      "category": "業務効率化",
+      "summary": "Googleは指示に基づきアプリを横断して買い物や予約を自動完結させる新機能を発表。2026年には車載システムへの拡大も予定されており、移動中の業務効率向上が期待されます。",
+      "one_liner": "AIがスマホ操作を全代行",
+      "why_important": "指示一つでアプリを横断。秘書業務の自動化が個人レベルで可能になる大きな転換点です。",
+      "action_item": "毎日繰り返しているスマホでのルーチン予約業務を一つ書き出してみてください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2107980.html"
+    },
+    {
+      "title": "日本語でのAI利用は英語より1.5倍高コストの可能性",
+      "category": "日本市場",
+      "summary": "日本語は英語と比較してトークン消費が激しく、AI利用コストが約1.5倍に膨らむ可能性があるとの調査結果。大規模導入時のモデル選定において、コスト効率の評価が重要になります。",
+      "one_liner": "日本語AIは英語より高コスト",
+      "why_important": "言語構造による課金差は、大量の文書を処理する企業にとって予算上の大きなリスクとなります。",
+      "action_item": "社内でのAI利用料金とトークン消費量の相関を管理部門に確認してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2605/13/news011.html"
+    },
+    {
+      "title": "Gemini統合PC「Googlebook」が登場",
+      "category": "最新技術",
+      "summary": "GoogleがGeminiをネイティブ統合した新ノートPCを発表。画面上のあらゆる情報に対して即座にAI支援を受けられる「Magic Pointer」機能を備え、法人PCの新たな選択肢となります。",
+      "one_liner": "Gemini標準搭載PCが登場",
+      "why_important": "PC全体がAI化され、画面上の全情報が支援対象に。業務環境のインフラがAI前提へと変わります。",
+      "action_item": "次回の社用PC更新時期と、AI対応機能の要件を情シス担当者にチェックしてみてください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2107987.html"
+    },
+    {
+      "title": "ChatGPTの誤回答で死亡事故、OpenAIが提訴される",
+      "category": "法規制・倫理",
+      "summary": "AIが推奨した不適切な薬物の組み合わせにより学生が死亡したとして遺族が提訴。AIの回答の信憑性が生命に直結するリスクと、企業の法的責任が厳しく問われる事例となりました。",
+      "one_liner": "生成AIの誤回答で法的リスク",
+      "why_important": "専門的な回答の鵜呑みは禁物。企業内でもAI生成物の検証体制を整えることが急務です。",
+      "action_item": "AI生成物を外部に提供する際、専門家チェックを義務付けるフローがあるか確認してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/928691/openai-chatgpt-wrongful-death-overdose"
+    },
+    {
+      "title": "専門知識なしでkintoneをAI改修できる新サービス",
+      "category": "業務効率化",
+      "summary": "ジョイゾーがAIへの指示だけでkintoneのシステム改修を可能にするサービスを開始。エンジニア不足に悩む企業でも、現場主導でDXを推進できる環境を提供します。",
+      "one_liner": "AIに話すだけでシステム改修",
+      "why_important": "IT人材不足を補完する強力な手段。現場の人間が直接システムを最適化できる時代に入りました。",
+      "action_item": "現在のkintoneアプリで「不便」と感じている改修希望点をリストアップしてみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2605/13/news057.html"
+    },
+    {
+      "title": "Anthropicが法務AIサービスへ本格参入",
+      "category": "業務効率化",
+      "summary": "Anthropicが法律事務所向けの契約書レビューや判例調査の自動化ツールを発表。法務部門だけでなく、契約に関わる全ビジネスパーソンの業務スピードを向上させる可能性があります。",
+      "one_liner": "契約書レビューもAIにお任せ",
+      "why_important": "高度な専門業務の自動化が加速。法務確認の待ち時間が大幅に短縮され、ビジネスが加速します。",
+      "action_item": "自社の契約書確認プロセスにかかっている平均的なリードタイムを把握してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/12/the-ai-legal-services-industry-is-heating-up-anthropic-is-getting-in-on-the-action/"
+    },
+    {
+      "title": "GboardにAI音声入力。書き起こしアプリが不要に？",
+      "category": "業務効率化",
+      "summary": "GoogleがGemini搭載の音声入力を導入し、驚異的な精度でリアルタイム書き起こしを実現。スマホ一つで会議メモからメール返信まで完結し、既存の議事録アプリを脅かす存在に。",
+      "one_liner": "スマホの音声入力が劇的進化",
+      "why_important": "移動中のテキスト作成が標準的な仕事術へ。サードパーティ製ツールの見直しが必要になります。",
+      "action_item": "今日届くメールへの簡単な返信を、一度スマホの音声入力で試してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/12/google-adds-gemini-powered-dictation-to-gboard-which-could-be-bad-news-for-dictation-startups/"
+    },
+    {
+      "title": "Amazonが金融規制対応をAIで効率化",
+      "category": "リスク管理",
+      "summary": "Amazonが生成AIを用いて金融規制当局からの問い合わせ対応を自動化。複雑な規制文書の確認時間を大幅に短縮し、厳格なコンプライアンス業務の実用的なAI活用事例を示しました。",
+      "one_liner": "複雑な金融規制もAIが即答",
+      "why_important": "コンプライアンス業務の効率化を示す好例。独自ナレッジベース活用の理想的な形です。",
+      "action_item": "社内の膨大な規程集をAIに学習させる準備が可能か、IT部門に相談してみましょう。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-amazon-finance-streamlines-regulatory-inquiries-by-using-generative-ai-on-aws/"
+    },
+    {
+      "title": "サム・アルトマン、マスク氏による内部破壊を証言",
+      "category": "最新技術",
+      "summary": "OpenAIのCEOが、イーロン・マスク氏の支配欲が社内に「甚大な被害」を与えたと裁判で証言。AI業界リーダーの内紛は、今後の提携戦略や技術開発の安定性に影響を及ぼす可能性があります。",
+      "one_liner": "OpenAIの内紛が法廷闘争へ",
+      "why_important": "ベンダーの経営安定性はツール選定の重要指標。業界リーダーの動向は注視が必要です。",
+      "action_item": "現在依存しているAIサービスが提供停止になった場合の代替候補を一つ決めておきましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/928861/openai-sam-altman-elon-musk-damage"
+    },
+    {
+      "title": "ThreadsがAIアカウントのブロックを制限",
+      "category": "ライフスタイル",
+      "summary": "MetaがSNS「Threads」でAIによる情報要約機能をテスト。ユーザーがAI機能を完全にブロックできない仕組みを試行しており、SNS利用においてAIフィルタの存在が不可避になります。",
+      "one_liner": "SNSの情報要約が回避不可に",
+      "why_important": "情報収集の受動化。AIが生成した「文脈」を通した情報摂取が強制的に一般化していきます。",
+      "action_item": "SNSで流れてくる「AIによるまとめ」が元の投稿と乖離していないか、意識して確認してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/929091/meta-ai-threads-account-block"
+    }
+  ]
+}

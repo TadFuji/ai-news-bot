@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月29日",
+  "theme": "汎用ツールから自律型エージェントへの進化",
+  "morning_comment": "AIが「指示待ち」から「並走者」へ変わる朝。信頼のパートナーを使いこなしましょう。",
+  "articles": [
+    {
+      "title": "Claude Opus 4.8発表、1,000のサブエージェントを制御",
+      "category": "最新技術",
+      "summary": "Anthropicが最新モデル「Claude Opus 4.8」をリリース。モデルの「正直さ」が強化され、誤情報のリスクを低減。さらに、最大1,000のサブエージェントを動的に制御するワークフロー機能を搭載し、複雑な業務の自動完結を目指します。",
+      "one_liner": "AIが1000の部下を持つ指揮官に",
+      "why_important": "AI自身がタスクを分解・実行する段階に入り、管理職の役割が「AI指揮」へとシフトする可能性があります。",
+      "action_item": "複雑な業務手順を「ステップ」ごとに分解し、AIに任せられる単位を特定してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kakuremi/articles/claude-opus-4-8-vs-gpt-5-5"
+    },
+    {
+      "title": "Microsoft 365 Copilotが大幅刷新、処理速度が2倍に向上",
+      "category": "業務効率化",
+      "summary": "マイクロソフトはCopilotのデザイン刷新とパフォーマンス向上を発表。読み込み速度が従来の2倍になり、回答の構造化も強化されました。モバイルとデスクトップの両方でより直感的なスキャンが可能になります。",
+      "one_liner": "Copilotが倍速化、操作性も向上",
+      "why_important": "標準ツールが高速化することで、日々のドキュメント作成やメール処理の生産性が全社規模で即座に向上します。",
+      "action_item": "アップデート後のUIを確認し、構造化された回答をそのまま資料に活用する流れを試してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/939273/microsoft-365-copilot-redesign"
+    },
+    {
+      "title": "IFSが日本市場への投資を拡大、製造業のAI実装を加速",
+      "category": "日本市場",
+      "summary": "グローバルERPベンダーのIFSが、日本IBM等のパートナーと協力し、国内製造業向けにAI統合DX支援を強化。現場に即した産業用AIの実装を加速させ、基幹産業の競争力底上げを図ります。",
+      "one_liner": "製造業の現場にAIが深く浸透",
+      "why_important": "基幹システムへのAI統合により、現場のノウハウをデジタル資産として守り活用する動きが本格化します。",
+      "action_item": "自社の基幹業務で「データ化できていない現場の判断」がないか棚卸しをしてみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2605/29/news054.html"
+    },
+    {
+      "title": "主要CEOが相次ぎ修正、AIによる「仕事消滅」の予測",
+      "category": "ライフスタイル",
+      "summary": "OpenAIやAnthropicのCEOが、かつての「AIが仕事を奪う」という極端な予測を軌道修正。現在は、AIが仕事を代替するのではなく、特定のタスクを補助し人間の能力を拡張するツールであることを強調しています。",
+      "one_liner": "AIは全代替ではなく強力な相棒",
+      "why_important": "過度な不安を捨て、AIをいかに使いこなして自身の付加価値を最大化するかに注力すべき局面です。",
+      "action_item": "「AIが自分に代わってやってくれたら助かるタスク」を今日3つ書き出してください。",
+      "source": "Hacker News AI",
+      "url": "https://fortune.com/2026/05/26/sam-altman-dario-amodei-walking-back-ai-jobs-apocalypse-prophecies-ipo/"
+    },
+    {
+      "title": "AIエージェントを狙う「データ削除コード」混入のリスク",
+      "category": "リスク管理",
+      "summary": "AIエージェントを悪用し、特定の条件下でデータを削除させるプロンプトインジェクションをコードに忍ばせる事例が報告。AI生成コードを利用する際のセキュリティ検証の重要性が浮き彫りになりました。",
+      "one_liner": "AIコード生成に潜む削除リスク",
+      "why_important": "開発効率化の裏にあるリスクを認識し、AI生成物の検証プロセスを組織内で確立する必要があります。",
+      "action_item": "AIに生成させたコードをそのまま実行せず、必ず人間か別のツールでレビューを行ってください。",
+      "source": "Ars Technica AI",
+      "url": "https://arstechnica.com/security/2026/05/fed-up-with-vibe-coders-dev-sneaks-data-nuking-prompt-injection-into-their-code/"
+    },
+    {
+      "title": "生成AI時代の「社内知識ベース」構築、国内での実践事例",
+      "category": "日本市場",
+      "summary": "Googleの技術を活用し、社内Wikiを構造化して生成AIで活用する国内事例が公開。AIにコードを書かせる時代における「学び方」と「知識資産の守り方」について、具体的な解を示しています。",
+      "one_liner": "AIで社内の暗黙知を資産化",
+      "why_important": "個人の知識を組織の共有財産に変える仕組みが、AI時代における企業の継続的な競争力に直結します。",
+      "action_item": "社内の古いマニュアルを、AIが参照しやすいマークダウン形式などに整理し直す検討をしましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2605/29/news012.html"
+    },
+    {
+      "title": "Anthropicが650億ドルを調達、評価額1兆ドルに迫る",
+      "category": "最新技術",
+      "summary": "AnthropicがIPO前最後と見られる資金調達で巨額を確保。OpenAIの最大のライバルとして、大規模モデル開発と計算資源の確保を加速させます。AI市場が少数の巨大プレイヤーに集約される現状を象徴しています。",
+      "one_liner": "AI開発競争は巨大資本の決戦場へ",
+      "why_important": "巨大モデルの独占が進む中、利用者はプラットフォーム選定と依存リスクを常に意識する必要があります。",
+      "action_item": "利用中のAIサービスと競合他社の最新モデルの性能差を、月に一度は比較する習慣を持ちましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/"
+    },
+    {
+      "title": "AsanaがStackAIを買収、ノーコードでのAI活用を加速",
+      "category": "業務効率化",
+      "summary": "ワークマネジメントツールのAsanaが、ノーコードでAIエージェントを構築できるStackAIを買収。専門知識がなくても、自社のワークフローに最適化したAIエージェントを簡単に作成可能になります。",
+      "one_liner": "誰でもノーコードでAI部下を構築",
+      "why_important": "非技術者でも業務フローを自律化できるため、現場主導のDXが現実的な解決策となります。",
+      "action_item": "毎日繰り返している単純な作業リストを作成し、自動化ツールで代行できないか検討してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stack-ai/"
+    },
+    {
+      "title": "経験ゼロで演奏可能、生成AI搭載の「未来のギター」が登場",
+      "category": "ライフスタイル",
+      "summary": "知識や経験がなくても、AIのサポートで本格的なセッションが楽しめる新楽器が開発。身体的体験を伴うエンタメ領域にもAIが浸透し、個人の創造性を新たな形で拡張します。",
+      "one_liner": "スキル不要、AIが創造性を拡張",
+      "why_important": "AIが身体スキルの壁を取り払うことで、新たなクリエイティブ市場や趣味のあり方が生まれます。",
+      "action_item": "「自分には無理」と思っていた分野のAIツールを、一つだけ試してみる時間を作ってください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/tempolor-melo-d/"
+    },
+    {
+      "title": "制作費わずか2,000ドルのAI生成映画、映画祭で初公開へ",
+      "category": "最新技術",
+      "summary": "全編AI生成の長編映画『Dreams of Violets』がトライベッカ映画祭で上映。従来のコストを劇的に抑えた制作が可能になり、映像表現の民主化と倫理的議論の両面を加速させています。",
+      "one_liner": "超低予算での映画制作が民主化",
+      "why_important": "制作コストが激減することで、コンテンツの「質」以上に「アイデア」の価値が問われる時代になります。",
+      "action_item": "最新の映像生成ツールを使い、自社の紹介動画などを数分程度作成できるか試行してみましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/entertainment/939067/ai-film-dreams-of-violets-tribeca"
+    }
+  ]
+}

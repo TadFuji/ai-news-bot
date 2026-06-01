@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月26日",
+  "theme": "AI導入は「ツール」から「社会インフラ」へ",
+  "morning_comment": "AIが単なる道具を超え、組織や社会の骨組みとなり始めています。",
+  "articles": [
+    {
+      "title": "青森県庁、生成AIチャットbot導入で運用コストを7割削減",
+      "category": "業務効率化",
+      "summary": "青森県庁が公式Webサイトに生成AIベースの「AIデジタルスタッフ」を導入し、従来のシナリオ型で課題だった運用負荷を大幅に改善。Q&Aの二重管理を解消し、運用コストを70%以上削減しました。",
+      "one_liner": "行政コストをAIで7割削減",
+      "why_important": "自治体の成功事例は、コスト意識の高い企業にとっても強力なベンチマークとなります。",
+      "action_item": "自社のFAQ対応がAIで自動化できないか、費用対効果を試算してください。",
+      "source": "ITmedia AI+ ",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2605/26/news022.html"
+    },
+    {
+      "title": "米ClickUp、数百名の従業員をAIエージェントに置き換え",
+      "category": "リスク管理",
+      "summary": "生産性向上ツールを展開するClickUpが、数百人の従業員を削減し、数千のAIエージェントに置き換える方針を発表。AIが労働力の代替へとシフトしている現実を象徴しています。",
+      "one_liner": "AIエージェントが労働を代替",
+      "why_important": "AIが補助ツールから「代替労働力」へと役割を変えつつある現実を直視すべきです。",
+      "action_item": "AIに任せられる業務と、人間にしかできない業務を棚卸ししてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/25/what-clickups-mass-layoff-tells-us-about-the-future-of-work/"
+    },
+    {
+      "title": "Claudeに隠し機能「Workflow」発見、AI作業の自動化が加速か",
+      "category": "最新技術",
+      "summary": "Claude Codeにおいてドキュメント未記載の「Workflow」機能が発見されました。これはAIに複雑な作業手順を実行させる強力な仕組みになると見られています。",
+      "one_liner": "Claudeの隠し機能で自動化加速",
+      "why_important": "AIが手順を自律的に実行する「自動化の民主化」が進む予兆と言えます。",
+      "action_item": "繰り返し発生するPC上の作業手順を、プロンプトにできるよう言語化してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/lumichy/articles/claude-code-workflow-ultrawork-2026"
+    },
+    {
+      "title": "日本大学、教職員1万人に「Google AI Pro」を全面導入",
+      "category": "日本市場",
+      "summary": "日本大学が教職員1万人を対象に、Googleの教育機関向けAIサブスクリプションを全面導入。事務作業の効率化やAIリテラシーの向上を全学規模で目指します。",
+      "one_liner": "日大、教職員1万人にAIを導入",
+      "why_important": "大規模組織によるAIの標準インフラ化は、社会全体の働き方を底上げする動きです。",
+      "action_item": "組織全体で共通のAIプラットフォームを使うメリットを再考してみてください。",
+      "source": "ITmedia AI+ ",
+      "url": "https://www.itmedia.co.jp/news/articles/2605/25/news129.html"
+    },
+    {
+      "title": "中小企業のAI導入、最大の壁は「何から始めるべきか」",
+      "category": "日本市場",
+      "summary": "国内中小企業のAI導入率が12%にとどまり、多くの経営者が「着手点の不明さ」に悩んでいる実態が判明。定型業務への具体的な適用が課題となっています。",
+      "one_liner": "中小企業のAI導入、壁は着手点",
+      "why_important": "技術以前に「何に使うか」の定義が、導入の成否を分ける鍵となります。",
+      "action_item": "日々の業務での「小さな不便」を書き出し、AIで解決可能か検索してみましょう。",
+      "source": "ITmedia AI+ ",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2605/26/news021.html"
+    },
+    {
+      "title": "Anthropicが報告、AIセキュリティで1万件超の脆弱性を発見",
+      "category": "リスク管理",
+      "summary": "Anthropicのセキュリティプロジェクトにより、1ヶ月で1万件以上の重大な脆弱性が発見されました。AIを活用した脆弱性診断の威力が証明されています。",
+      "one_liner": "AI診断で1万件超の脆弱性発見",
+      "why_important": "AIは攻撃だけでなく、サイバー防衛の強力な武器にもなり得ることを理解すべきです。",
+      "action_item": "自社のセキュリティ体制にAIをどう組み込めるか、担当者と議論を始めてください。",
+      "source": "ITmedia AI+ ",
+      "url": "https://www.itmedia.co.jp/news/articles/2605/25/news130.html"
+    },
+    {
+      "title": "ローマ教皇がAIに関する回勅を発表、人間中心の技術を強調",
+      "category": "法規制・倫理",
+      "summary": "ローマ教皇がAIをテーマにした初の回勅を発表。人間の尊厳を損なうリスクに警鐘を鳴らし、技術を「真に人間的」に保つための倫理的枠組みを説いています。",
+      "one_liner": "教皇、AIの倫理と尊厳を強調",
+      "why_important": "技術革新が進む中で「人間中心」の視点を保つことが、今後の国際標準になります。",
+      "action_item": "自社のAI利用が倫理的に問題ないか、ガイドラインを一度見直してみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/news/936945/pope-leo-letter-encyclical-ai-anthropic-labor-warfare"
+    },
+    {
+      "title": "国産LLM「LLM-jp-4」が文書要約や情報抽出のAPIを提供",
+      "category": "日本市場",
+      "summary": "東京大学などが開発する国産モデル「LLM-jp-4」が、要約や抽出のAPI利用を可能に。日本語特有の文脈理解に強みを持つ国産AIの進化が注目されます。",
+      "one_liner": "国産LLMがAPI提供開始",
+      "why_important": "データ保護の観点から、国内で完結する高性能な国産AIは重要な選択肢となります。",
+      "action_item": "国産モデルが自社の日本語タスクでどれほど有効か、試用を検討してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/suzumura_lab/articles/535473662dd6d4"
+    },
+    {
+      "title": "Google PixelのAI機能を検証、ビジネスに使える機能が判明",
+      "category": "ライフスタイル",
+      "summary": "最新のPixel端末に搭載された録音文字起こしや要約、翻訳機能の実機検証。日常業務の生産性を手元のデバイスだけで底上げできる段階にあります。",
+      "one_liner": "PixelのAIが業務を効率化",
+      "why_important": "特別なクラウド契約なしに、モバイル端末でAIの恩恵を即座に享受できる時代です。",
+      "action_item": "スマートフォンの文字起こし機能を、今日の会議やメモで試してみてください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/ai-phone-pixel/"
+    },
+    {
+      "title": "ローカルLLM対応の「AI NAS」が登場、プライバシー保護に寄与",
+      "category": "業務効率化",
+      "summary": "Ryzen AIを搭載し、外部クラウドにデータを送らずローカルでLLMを動かせるNASが登場。機密情報を扱う層にセキュアな選択肢を提供します。",
+      "one_liner": "プライバシー守る「AI NAS」",
+      "why_important": "クラウドに頼らず、機密情報を守りながらAIを運用する「個人化」が加速しています。",
+      "action_item": "社外に出せない機密データの処理方法として、ローカルAIの活用を検討してみましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2111508.html"
+    }
+  ]
+}

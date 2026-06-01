@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月11日",
+  "theme": "実務浸透とデータ安全性の新次元",
+  "morning_comment": "利便性と安全性の両立が、AI導入の新たな基準に。",
+  "articles": [
+    {
+      "title": "NECとAnthropicが協業、日本市場向け「日の丸AI」戦略を発表",
+      "category": "日本市場",
+      "summary": "NECとAnthropicが電撃的な協業を発表しました。Anthropicの高度なLLM「Claude」と、NECが培ってきた日本国内の企業向けシステム構築の実績を融合させます。日本の商習慣や法規制、高いセキュリティ要件に適合したAIソリューションを提供し、海外製AIの導入に慎重な日本企業に対しても、安心して業務活用できる環境の構築を目指します。",
+      "one_liner": "日本市場特化のAI協業が加速",
+      "why_important": "日本の商習慣や法規制に最適化されたAIの登場で、大企業の導入が加速します。",
+      "action_item": "自社のセキュリティ要件が最新の国産AIサービスで満たせるか確認しましょう。",
+      "source": "ITmedia AI@",
+      "url": "https://www.itmedia.co.jp/business/articles/2605/11/news014.html"
+    },
+    {
+      "title": "情報漏洩を防ぐ「ソースコードを外部に送らない」AI開発環境",
+      "category": "リスク管理",
+      "summary": "企業秘匿性の高いソースコードをAIで処理する際、コードをそのまま外部のクラウドAIに送らず、独自の形式（JCross IR）に変換して隠蔽する「Gatekeeperアーキテクチャ」が注目されています。これにより、情報漏洩リスクを最小限に抑えながら、最新のLLMによるコーディング支援やリファクタリングの恩恵を受けることが可能になります。",
+      "one_liner": "コード秘匿性を守る新開発環境",
+      "why_important": "外部にデータを送らずにAIの恩恵を受ける技術は、製造業や金融業で必須となります。",
+      "action_item": "開発チームに「Gatekeeperアーキテクチャ」の可能性を共有しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/verantyx/articles/fdfd6143c6ab44"
+    },
+    {
+      "title": "ChromeのAI機能がPCストレージを4GB占有する可能性",
+      "category": "業務効率化",
+      "summary": "Google Chromeに搭載されたデバイス内AI「Gemini Nano」が、最大4GBのストレージ容量を占有していることが判明しました。ブラウザ上で動作するAI要約や執筆支援機能を提供するためのモデルデータですが、空き容量の少ないビジネスPCでは予期せぬパフォーマンス低下や動作不良を招くリスクがあります。",
+      "one_liner": "ブラウザAIがPC容量を占有",
+      "why_important": "ツール導入がハードウェア負荷に直結するため、IT資産管理の新たな視点が必要です。",
+      "action_item": "PCのストレージ残量を確認し、不要なブラウザ拡張機能を整理してください。",
+      "source": "Hacker News AI",
+      "url": "https://www.theverge.com/tech/924933/google-chrome-4gb-gemini-nano-ai-features"
+    },
+    {
+      "title": "LLMエージェント時代の上場企業データインフラ4原則",
+      "category": "リスク管理",
+      "summary": "AIが自動で企業データを分析・活用する「エージェント時代」を見据え、EDINETなどの公開情報をAIが読み取りやすくするための4つの原則が提示されました。データの品質（信頼性）、構造化（機械可読性）、更新頻度、およびアクセス性の担保が重要視されており、今後のIR活動や企業情報のデジタル化に大きな影響を与えます。",
+      "one_liner": "AIに読ませるデータ基盤の4原則",
+      "why_important": "情報を公開するだけでなく「AIが理解できる形」に整えることが企業価値を左右します。",
+      "action_item": "自社のプレスリリースやIR資料が機械可読な形式になっているか点検しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/edinetdb/articles/edinetdb-llm-agent-data-infrastructure"
+    },
+    {
+      "title": "ローカルAI利用の標準化：プライバシーと効率の両立",
+      "category": "最新技術",
+      "summary": "AIをクラウドではなく自分のPC（ローカル環境）で動かすことが、今後のビジネス標準になるとの議論が活発化しています。インターネット接続が不要なため、オフラインでの作業が可能なだけでなく、機密情報の流出を完全に防ぎ、サブスクリプション費用を削減できるというメリットがあります。",
+      "one_liner": "ローカルAIがビジネス標準へ",
+      "why_important": "通信コストの削減と究極のプライバシー保護が、業務PCの選定基準を変えます。",
+      "action_item": "クラウドAIではなく、ローカル環境で何ができるか一度調査してみてください。",
+      "source": "Hacker News AI",
+      "url": "https://unix.foo/posts/local-ai-needs-to-be-norm/"
+    },
+    {
+      "title": "Gemma 4が推論速度を最大3倍にする新技術「MTP」を搭載",
+      "category": "最新技術",
+      "summary": "Googleの最新軽量AIモデル「Gemma 4」が、推論速度を劇的に向上させる新技術を導入しました。AIが次に続く複数の単語を先読みして予測することで、ユーザーへの回答表示速度を最大3倍に高めます。これにより、チャットの待ち時間が短縮され、より自然な対話やリアルタイムの業務支援が実現します。",
+      "one_liner": "AIの推論速度が最大3倍に向上",
+      "why_important": "待機時間の解消により、AIとの対話がより自然な思考の延長になります。",
+      "action_item": "業務の中で「AIの待ち時間」がボトルネックになっている作業を特定しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/senna/articles/5737586098b4c2"
+    },
+    {
+      "title": "OCRとLLMを組み合わせたアナログ資料の超高精度デジタル化",
+      "category": "業務効率化",
+      "summary": "従来のOCR（光学文字認識）だけでは難しかった縦書き資料や複雑な構造を持つ文書を、LLMと組み合わせることで飛躍的に精度を高める手法が実証されました。文字認識ミスをAIが文脈で補正し、さらにMarkdown形式での構造化まで自動で行うことで、紙資料を即座に「検索可能なナレッジ」へと変換します。",
+      "one_liner": "アナログ資料をAIで高精度電子化",
+      "why_important": "埋もれていた紙資料を検索可能な資産に変えることで、組織の知見を掘り起こせます。",
+      "action_item": "書庫に眠っている重要資料のデジタル化を検討する会議をセットしましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/phpmyadmin/articles/0dba6fef411e21"
+    },
+    {
+      "title": "AIに対する若手層の不満と職場での不安が拡大",
+      "category": "ライフスタイル",
+      "summary": "AIの導入が進む一方で、若手社員を中心にAIへの反発や将来の雇用不安、さらには「AIに使われる」ことへの拒否感が高まっているという調査結果が出ました。単なるツールの導入だけでなく、AIと共生するための心理的なケアや、人間ならではの役割の再定義がマネジメント層に求められています。",
+      "one_liner": "若手のAI不安に伴う離職を防ぐ",
+      "why_important": "ツール導入以上に、人間ならではの価値を定義するリーダーシップが問われています。",
+      "action_item": "チームメンバーと「AI時代に我々が担うべき役割」を対話する場を設けましょう。",
+      "source": "Hacker News AI",
+      "url": "https://www.waltonfamilyfoundation.org/about-us/newsroom/gen-z-resentment-toward-ai-grows-as-adoption-stagnates-and-workplace-fears-mount"
+    },
+    {
+      "title": "コスト意識の高いLLMルーティングによるAI利用料の最適化",
+      "category": "業務効率化",
+      "summary": "全ての質問を高性能で高価なモデル（GPT-4等）に投げるのではなく、質問の難易度をAIが自動判別し、簡単な回答は安価な小型モデルへ、複雑な課題は大型モデルへ自動で振り分ける「コスト意識型ルーティング」の手法が提案されました。これにより、回答精度を落とさずに運用コストを大幅に削減可能です。",
+      "one_liner": "AIモデルの使い分けでコスト最適化",
+      "why_important": "性能とコストのバランスを自動化することで、AIのROIを最大化できます。",
+      "action_item": "現在のAI利用において、高価なモデルを過剰に使っていないか確認しましょう。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/05/10/how-to-build-a-cost-aware-llm-routing-system-with-nadirclaw-using-local-prompt-classification-and-gemini-model-switching/"
+    },
+    {
+      "title": "MacBookで始めるローカルLLMハンズオンガイド",
+      "category": "業務効率化",
+      "summary": "Apple Silicon（M1/M2/M3/M4）を搭載したMacBook Proを活用し、外部にデータを送らずにAIを動かす具体的な手順が整理されました。VS Codeでのコーディング支援や自作チャットアプリの構築など、ビジネスパーソンが手元のPC一台でAIの専門スキルを習得するための実践的な内容となっています。",
+      "one_liner": "手元のMacでAI開発を始める",
+      "why_important": "高価なサーバー不要でプロトタイプを作れるスキルは、全ビジネスパーソンの強みです。",
+      "action_item": "手持ちのMacで動かせる軽量なオープンソースAIを一つ試してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/ppgm/books/mac-local-llm-hands-on"
+    }
+  ]
+}

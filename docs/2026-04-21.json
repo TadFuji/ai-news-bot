@@ -1,0 +1,107 @@
+{
+  "updated": "2026年04月21日",
+  "theme": "生活と業務に溶け込むAIエージェント",
+  "morning_comment": "AIは単なる道具から、日常に寄り添う「伴走者」へと進化を遂げています。",
+  "articles": [
+    {
+      "title": "LINEヤフー、新AIエージェント「Agent i」発表　国内市場に特化",
+      "category": "日本市場",
+      "summary": "LINEヤフーが国内シェアを活かした独自のAIエージェント「Agent i」を提供開始。日本の商習慣やコミュニケーションに最適化され、日常からビジネスまで幅広い活用が期待されます。",
+      "one_liner": "日本特化のAI相棒が登場",
+      "why_important": "国内の習慣に最適化されたAIは、日本のビジネス現場での導入ハードルを大きく下げます。",
+      "action_item": "LINEでのAI活用方法を一度確認し、業務にどう組み込めるか想像してみる。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2604/21/news048.html"
+    },
+    {
+      "title": "生成AIの「選び方」ガイド：機能ではなく“導入条件”で整理する",
+      "category": "業務効率化",
+      "summary": "過剰な選択肢の中で、セキュリティ、コスト、既存ツールとの親和性といった「条件」から逆引きで最適なAIツールを選定する方法論が提示されました。管理職向けの実用的な指針です。",
+      "one_liner": "条件で選ぶAI導入の新基準",
+      "why_important": "機能比較の迷路から抜け出し、自社にとっての「正解」を論理的に導き出すリテラシーが求められます。",
+      "action_item": "自社のAI導入において譲れない条件を3つ書き出してみる。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2604/21/news026.html"
+    },
+    {
+      "title": "Google、日本を含む7カ国のChromeブラウザにGeminiを統合",
+      "category": "業務効率化",
+      "summary": "GoogleがChromeブラウザにGeminiを直接搭載。検索バーからAIへの質問や文章要約が可能になり、ブラウザが単なる閲覧ツールから作業支援ツールへと進化します。",
+      "one_liner": "ブラウザが知的な作業空間に",
+      "why_important": "検索とAIが一体化することで、日常的なリサーチ作業の速度が飛躍的に向上します。",
+      "action_item": "ChromeのサイドパネルでGemini機能を一度試用してみる。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/20/google-rolls-out-gemini-in-chrome-in-seven-new-countries/"
+    },
+    {
+      "title": "AdobeがAIエージェント展開：マーケティング業務を自動化",
+      "category": "最新技術",
+      "summary": "AdobeがNVIDIAらと提携し、クリエイティブ制作から顧客体験最適化までを自律的に担うAIエージェントを提供。マーケティング部門の定型業務が大幅削減される見込みです。",
+      "one_liner": "販促業務をAIが自律代行",
+      "why_important": "AIが自律的に施策を実行する段階に入り、人間の役割は「指示と管理」へとシフトしていきます。",
+      "action_item": "自分の業務の中でAIに丸投げできそうな定型作業をリスト化する。",
+      "source": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/blog/adobe-ai-agents-nvidia-wpp/"
+    },
+    {
+      "title": "ObsidianとClaude Codeで「消えないAI知識ベース」を構築",
+      "category": "業務効率化",
+      "summary": "メモアプリObsidianとAIエージェントを連携させ、過去の対話や考察を資産化する手法。個人のナレッジをAIに記憶させ続けることで、高度な文脈理解に基づいた作業が可能になります。",
+      "one_liner": "AIとの対話を資産に変える",
+      "why_important": "AIとのやり取りをフロー（消費）からストック（蓄積）へ変えることで、知的生産性が劇的に高まります。",
+      "action_item": "重要なAIとの対話をコピーして、後で見返せる場所に保存し始める。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/sochi/articles/1e851637841acc"
+    },
+    {
+      "title": "AIエージェントのトレンドに変化：MCPからCLIへの回帰理由",
+      "category": "最新技術",
+      "summary": "開発者の間で、複雑なUIよりもシンプルで汎用的なCLI操作をAIに行わせる手法が再評価されています。AIの能力を最大限に引き出すための「指示の明確さ」が重視される動向です。",
+      "one_liner": "本質的なAI操作はCLIへ",
+      "why_important": "ツールが複雑化する中で、AIの本質的な操作原理（命令の質）に目を向ける時期が来ています。",
+      "action_item": "AIへの指示が曖昧になっていないか、直近のプロンプトを見直す。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/lumichy/articles/mcp-vs-cli-agent-trends-2026"
+    },
+    {
+      "title": "Claude Codeでトークン消費を97%削減する実戦テクニック",
+      "category": "業務効率化",
+      "summary": "不要な情報をあえて廃棄する設計により、AI利用のコストと速度を劇的に改善する手法が公開されました。特殊なインフラ不要で誰でも試せる実践的な内容です。",
+      "one_liner": "情報の「捨て方」でコスト減",
+      "why_important": "AIを実運用する上で、コスト効率と処理速度の最適化はプロフェッショナルの必須スキルです。",
+      "action_item": "AIに渡す資料から、本質的でない情報を削って入力してみる。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/ai_arai_ally/articles/20260420-1601-claude-code-80k2k-e"
+    },
+    {
+      "title": "「キャラ指定」でAIのトークン消費を節約する意外な手法",
+      "category": "業務効率化",
+      "summary": "「短く答えろ」という指示より、特定の寡黙なキャラクター設定を与える方がAIの判断コストが下がり、消費トークンを削減できるというユニークな検証結果です。",
+      "one_liner": "キャラ設定でAIの無駄を省く",
+      "why_important": "遊び心のあるプロンプトが実利に結びつく、AI活用の奥深さを示す事例です。",
+      "action_item": "AIに対して「簡潔に答える専門家」のようなキャラクターを具体的に設定して対話する。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/shoots/articles/9c01c08327e9b1"
+    },
+    {
+      "title": "Google Pixelに新機能：AIが電話に出られない時に代わりに代対",
+      "category": "ライフスタイル",
+      "summary": "Pixelに搭載された「Take A Message」機能が、出られない電話の用件をAIに尋ねさせ記録します。会議中や移動中のストレス軽減、重要要件の即時把握に役立ちます。",
+      "one_liner": "電話対応をAIに任せる日常",
+      "why_important": "スマートフォンのAI機能が、ビジネスパーソンの最も貴重な資源である「集中力」を守るようになります。",
+      "action_item": "自分のスマホにある自動応答や迷惑電話防止機能の設定を確認する。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/google-pixel-take-a-message-feature-how-to-use/"
+    },
+    {
+      "title": "「AIが書いた文章」を見分ける特徴的なフレーズとは？",
+      "category": "リスク管理",
+      "summary": "AI生成テキストに頻出する構文パターンが特定されました。これを知ることで情報リテラシーを向上させ、自分の文章から「不自然なAI臭さ」を消すヒントが得られます。",
+      "one_liner": "AI特有の文体を見抜く力",
+      "why_important": "AI生成物が増える中、内容の真偽や質を見分ける「審美眼」を持つことが重要です。",
+      "action_item": "自分がAIで作成した文章に、二面性を強調するような決まり文句がないか探してみる。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/04/20/ai-writing-its-not-just-this-its-that-barrons/"
+    }
+  ]
+}

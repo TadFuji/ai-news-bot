@@ -1,0 +1,107 @@
+{
+  "updated": "2026年05月20日",
+  "theme": "Googleが描くAIエージェントの未来図",
+  "morning_comment": "Google I/OでAIの日常化が加速。今日、新しい検索を試しましょう。",
+  "articles": [
+    {
+      "title": "Google検索がAI中心に大幅刷新。検索の新しい常識が到来",
+      "category": "業務効率化",
+      "summary": "Googleは検索エンジンをAI補完型へと大規模に刷新しました。これまでの「キーワード入力」から、長文で「AIに尋ねる」スタイルへの転換を促します。ビジネスパーソンにとっては、資料作成時の情報収集や競合調査のスピードが劇的に向上し、必要な回答に直接たどり着けるようになります。",
+      "one_liner": "Google検索がAI中心に進化",
+      "why_important": "検索行動が「探す」から「答えを得る」に変わり、調査業務が圧倒的に効率化されます。",
+      "action_item": "抽象的な問いをAI検索に投げ、回答精度を試してみましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2110015.html"
+    },
+    {
+      "title": "Gmailの受信トレイと会話が可能に。Geminiによる音声検索",
+      "category": "業務効率化",
+      "summary": "GoogleはGmailに会話型のAI音声検索機能を導入しました。Geminiが受信トレイ内の膨大なメールから、特定の日時や詳細情報を対話形式で探し出します。移動中や多忙な際でも、スマホに話しかけるだけで埋もれた重要情報を即座に抽出できるようになります。",
+      "one_liner": "膨大なメールからAIが即回答",
+      "why_important": "過去のやり取りを探す時間がゼロになり、より付加価値の高い意思決定に集中できます。",
+      "action_item": "外出時に音声で特定のメールの詳細をAIに尋ねてみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/19/you-can-now-talk-to-your-gmail-inbox-as-seen-at-google-io-2026/"
+    },
+    {
+      "title": "AIがAppleの最先端セキュリティを5日間で突破",
+      "category": "リスク管理",
+      "summary": "米セキュリティ企業が、Appleが5年かけて開発した防御策を、AIモデル「Claude Opus」ベースのツールを用いてわずか5日で突破しました。AIが悪意あるコード生成を劇的に加速させる現実を突きつけており、企業は従来のセキュリティ常識を再考する必要があります。",
+      "one_liner": "AIがAppleの壁を5日で突破",
+      "why_important": "サイバー攻撃の高度化により、パスワード管理などの基本対策がより重要になります。",
+      "action_item": "多要素認証の再確認とセキュリティパッチの即時適用を徹底しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/articles/2605/19/news100.html"
+    },
+    {
+      "title": "Googleが超高速モデル「Gemini 3.5 Flash」を発表",
+      "category": "最新技術",
+      "summary": "競合他社の最新モデルを凌駕する処理速度を誇る「Gemini 3.5 Flash」がリリースされました。膨大な文書の要約やコード解析を低遅延・低コストで行うことが可能です。既存のGeminiアプリやAPIに順次適用され、日常的なAI利用がさらにストレスフリーになります。",
+      "one_liner": "超高速・低コストな新AIモデル",
+      "why_important": "待ち時間がなくなることで、AIを思考の補助ツールとしてリアルタイムで使えます。",
+      "action_item": "長文ドキュメントを要約させ、処理速度の向上を体感してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2110007.html"
+    },
+    {
+      "title": "動画生成・編集AI「Gemini Omni」が会話での指示に対応",
+      "category": "業務効率化",
+      "summary": "Googleが動画の生成と編集に特化したAIモデル「Gemini Omni」を発表しました。自然言語による指示だけで動画をゼロから作成したり、既存の映像を編集したりすることが可能です。専門的な動画編集スキルがなくても、高品質なプロモーション資料や教育コンテンツの内製化が可能になります。",
+      "one_liner": "会話だけでプロ級の動画制作",
+      "why_important": "動画作成の敷居が下がり、社内広報やマニュアルの動画化が容易になります。",
+      "action_item": "次回のプレゼン資料の一部をAIで動画化できないか検討しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/articles/2605/20/news063.html"
+    },
+    {
+      "title": "Googleが自律型AIエージェントを提供。情報の監視・通知を自動化",
+      "category": "業務効率化",
+      "summary": "特定のトピックをバックグラウンドで監視し、更新があれば先回りで通知する「インフォメーション・エージェント」が提供されます。ビジネスパーソンが自分から検索しに行かなくても、AIが市場動向や競合情報を常にアップデートし、重要な変化だけを報告してくれるようになります。",
+      "one_liner": "AIが市場動向を自律監視",
+      "why_important": "必要な情報が向こうからやってくる「攻め」の調査環境が整います。",
+      "action_item": "定点観測したい競合他社のキーワードをリストアップしましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/05/19/how-to-use-googles-new-ai-agents-to-go-beyond-your-standard-searches/"
+    },
+    {
+      "title": "NHNテコラス、国内企業向けにAIエージェント導入支援を開始",
+      "category": "日本市場",
+      "summary": "日本のNHNテコラスが、Amazon Bedrockを活用したAIエージェントの導入・運用支援サービスを開始しました。海外製ツールの導入にハードルを感じている日本企業にとって、実務へのAI定着を後押しする強力な支援策となります。業務に合わせたカスタマイズが容易になる点が特徴です。",
+      "one_liner": "国内向けAI導入支援が開始",
+      "why_important": "専門知識がなくても、自社特有の業務にAIを組み込みやすくなります。",
+      "action_item": "自社のどの定型業務をAIに任せたいか書き出してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2605/20/news029.html"
+    },
+    {
+      "title": "Googleが新型AIスマートグラスを発表. 視覚情報をAIが解析",
+      "category": "最新技術",
+      "summary": "Googleは、AIと対話可能な新型スマートグラスを今秋発売すると発表しました。装着者の視界にあるものをAIが認識し、指示に応じた情報提供を行います。製造現場での指示確認、小売業での在庫照会、あるいは移動中の翻訳や道案内など、ハンズフリーでの業務効率が飛躍的に向上します。",
+      "one_liner": "見ているものをAIが即解析",
+      "why_important": "現場作業の指示や翻訳がシームレスになり、PC不要の作業が広がります。",
+      "action_item": "「視覚情報の共有」が役立つ業務シーンがないか想像してみましょう。",
+      "source": "BBC Technology",
+      "url": "https://www.bbc.com/news/articles/cvgz1ynq1nqo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "OpenAIとGoogle、AI生成画像に電子透かし「SynthID」を導入",
+      "category": "法規制・倫理",
+      "summary": "OpenAIはGoogleが開発した電子透かし技術「SynthID」を採用し、AIで生成された画像に識別情報を付与します。ビジネスでAI画像を扱う際、その出所を明確にすることで、著作権リスクや偽情報の拡散防止に寄与します。法的リスクを抑えた形でのAI活用を後押しする動きです。",
+      "one_liner": "AI生成画像に電子透かし導入",
+      "why_important": "生成AIの商用利用における法的・倫理的リスクが低減され、活用が広がります。",
+      "action_item": "外部公開するAI生成物には出所明示が必要であることを周知しましょう。",
+      "source": "Hacker News AI",
+      "url": "https://openai.com/index/advancing-content-provenance/"
+    },
+    {
+      "title": "G7、新たなAIモデルの情報共有と国際協力の強化で合意",
+      "category": "法規制・倫理",
+      "summary": "G7財務相・中銀総裁会議にて、急速に進化するAIモデルのリスク管理に向けた国際協力の強化が盛り込まれた共同声明が発表されました。日本政府もこの方針に沿った規制やガイドラインを整備する可能性が高く、国内企業のAI利用ルールに影響を与えることが予想されます。",
+      "one_liner": "G7がAI管理で国際協力",
+      "why_important": "国際的なルール整備が進み、企業のAI利用指針がより明確になります。",
+      "action_item": "自社のAI利用ガイドラインが最新の国際基準に沿っているか確認しましょう。",
+      "source": "NHK 科学・技術",
+      "url": "https://news.web.nhk/newsweb/na/na-k10015126141000"
+    }
+  ]
+}
