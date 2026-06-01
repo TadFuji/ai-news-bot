@@ -238,3 +238,179 @@ class TestKeywordPattern:
         text_upper = "CHATGPT IS GREAT"
         matches_upper = _KEYWORD_PATTERN.findall(text_upper)
         assert len(matches_lower) == len(matches_upper)
+
+
+# ============================================================
+# dedup.py — 意味的ダブり排除
+# ============================================================
+
+class TestDedup:
+    """見出し類似によるダブり排除のテスト（閾値は実測で確定済み）"""
+
+    def _a(self, title, score=5, url=None):
+        return {
+            "title_ja": title,
+            "importance_score": score,
+            "url": url or f"https://example.com/{abs(hash(title)) % 10000}",
+        }
+
+    def test_merges_similar_titles_keeps_highest_score(self):
+        """同じ出来事（語順違い）は束ね、スコア最高の1本を残す"""
+        from dedup import dedup_articles
+        articles = [
+            self._a("Google、Gemini 3 Flashを公開", score=6, url="https://e.com/1"),
+            self._a("GoogleがGemini 3 Flashをリリース", score=9, url="https://e.com/2"),
+        ]
+        result = dedup_articles(articles)
+        assert len(result) == 1
+        assert result[0]["importance_score"] == 9  # 高スコア側が代表
+
+    def test_keeps_same_company_different_news(self):
+        """同じ企業でも別ニュースは束ねない（誤マージ防止 — 最重要）"""
+        from dedup import dedup_articles
+        articles = [
+            self._a("OpenAIが大型資金調達を実施", score=7, url="https://e.com/1"),
+            self._a("OpenAIが新モデルGPT-5を発表", score=8, url="https://e.com/2"),
+        ]
+        result = dedup_articles(articles)
+        assert len(result) == 2
+
+    def test_keeps_unrelated(self):
+        """無関係なニュースは両方残す"""
+        from dedup import dedup_articles
+        articles = [
+            self._a("AppleがVision Proを値下げ", url="https://e.com/1"),
+            self._a("生成AIで議事録自動化が進む", url="https://e.com/2"),
+        ]
+        assert len(dedup_articles(articles)) == 2
+
+    def test_empty_input(self):
+        from dedup import dedup_articles
+        assert dedup_articles([]) == []
+
+    def test_single_input(self):
+        from dedup import dedup_articles
+        articles = [self._a("唯一のAIニュース記事です")]
+        assert len(dedup_articles(articles)) == 1
+
+    def test_short_titles_passthrough(self):
+        """短すぎる見出しは束ねず素通り（誤クラスタ化を防ぐ）"""
+        from dedup import dedup_articles
+        articles = [self._a("AI"), self._a("ML")]
+        assert len(dedup_articles(articles)) == 2
+
+    def test_preserves_order(self):
+        """束ねなかった記事は元の出現順を維持する"""
+        from dedup import dedup_articles
+        articles = [
+            self._a("Appleが新しい折りたたみiPhoneを開発中と報道"),
+            self._a("Microsoftが量子コンピュータの新成果を公表"),
+            self._a("Teslaが完全自動運転の最新版を一般公開"),
+        ]
+        result = dedup_articles(articles)
+        assert len(result) == 3
+        assert result[0]["title_ja"].startswith("Apple")
+        assert result[2]["title_ja"].startswith("Tesla")
+
+    def test_keeps_different_model_versions(self):
+        """モデル番号だけ違う別発表は束ねない（GPT-5 と GPT-4 / 誤マージ防止）"""
+        from dedup import dedup_articles
+        articles = [
+            self._a("OpenAIがGPT-5を正式公開", score=8, url="https://e.com/1"),
+            self._a("OpenAIがGPT-4を正式公開", score=7, url="https://e.com/2"),
+        ]
+        result = dedup_articles(articles)
+        assert len(result) == 2
+
+    def test_complete_linkage_no_false_merge(self):
+        """A≈B・B≈C だが A≠C のとき、非類似の A と C を1本に潰さない（入力順に依らず）。
+
+        単連結だと橋渡しの B 経由で非類似の A・C が同一クラスタに吸収され、
+        入力順次第で別ニュースが消える。complete-linkage はこれを防ぐ。
+        （B は A・C いずれかと束ねられて消えることがあるが、それは正しい束ね）
+        """
+        import itertools
+        from dedup import dedup_articles
+        a = self._a("OpenAI 新モデル GPT を発表", url="https://e.com/a")
+        b = self._a("OpenAI 新モデル GPT 提携を発表 Microsoft", url="https://e.com/b")
+        c = self._a("Microsoft 提携を発表 新クラウド基盤", url="https://e.com/c")
+        # 非類似の A と C は直接は束ねられない
+        assert len(dedup_articles([a, c])) == 2
+        # 3件でも 1件には潰れない（非類似の A・C が別クラスタに分かれる）
+        for order in itertools.permutations([a, b, c]):
+            assert len(dedup_articles(list(order))) >= 2
+
+
+# ============================================================
+# article_extractor.py — 本文取得（trafilatura, モック）
+# ============================================================
+
+_SAMPLE_HTML = (
+    "<html><head><title>AIニュースのテスト記事のタイトル行です</title></head><body>"
+    "<article><h1>人工知能の大きな進展に関する記事の見出し</h1>"
+    "<p>"
+    + ("人工知能の研究が大きく進展し、企業の業務効率化に直結する新しいモデルが発表されました。" * 8)
+    + "</p><p>"
+    + ("この技術は議事録の自動化や資料作成の支援に活用でき、多くの働き方を変えると期待されています。" * 8)
+    + "</p></article></body></html>"
+)
+
+
+class TestArticleExtractor:
+    """本文取得のモックテスト（ネットワークは使わない）"""
+
+    def test_fetch_success(self):
+        from article_extractor import fetch_article_text
+        with patch("article_extractor.trafilatura.fetch_url", return_value=_SAMPLE_HTML):
+            text = fetch_article_text("https://example.com/article")
+        assert text is not None
+        assert len(text) >= 200
+
+    def test_fetch_download_failure_returns_none(self):
+        """取得失敗（fetch_url が None）なら None を返す"""
+        from article_extractor import fetch_article_text
+        with patch("article_extractor.trafilatura.fetch_url", return_value=None):
+            assert fetch_article_text("https://example.com/article") is None
+
+    def test_fetch_empty_url(self):
+        from article_extractor import fetch_article_text
+        assert fetch_article_text("") is None
+
+    def test_no_signal_error_in_threads(self):
+        """並列スレッド内で extract を呼んでも ValueError が出ない（SIGALRM 回避の検証）"""
+        from article_extractor import enrich_with_full_text
+        articles = [
+            {"url": f"https://example.com/{i}", "summary": "x", "source": "Test"}
+            for i in range(8)
+        ]
+        with patch("article_extractor.trafilatura.fetch_url", return_value=_SAMPLE_HTML):
+            result = enrich_with_full_text(articles, top_n=8)
+        # 全件、例外なく本文が付与されること
+        assert all(a.get("full_text") for a in result)
+
+    def test_idempotent_skips_existing(self):
+        """既に full_text を持つ記事は再取得しない"""
+        from article_extractor import enrich_with_full_text
+        articles = [{"url": "https://example.com/a", "full_text": "既存の本文テキスト"}]
+        with patch("article_extractor.trafilatura.fetch_url") as mock_fetch:
+            enrich_with_full_text(articles, top_n=15)
+            mock_fetch.assert_not_called()
+        assert articles[0]["full_text"] == "既存の本文テキスト"
+
+    def test_top_n_limit(self):
+        """上位 N 件のみが本文取得の対象になる"""
+        from article_extractor import enrich_with_full_text
+        articles = [
+            {"url": f"https://example.com/{i}", "summary": "x"} for i in range(20)
+        ]
+        with patch("article_extractor.trafilatura.fetch_url", return_value=_SAMPLE_HTML):
+            enrich_with_full_text(articles, top_n=5)
+        assert sum(1 for a in articles if a.get("full_text")) == 5
+
+    def test_failed_extraction_no_full_text(self):
+        """本文が短すぎる/取れない場合は full_text を付けない（要約フォールバック）"""
+        from article_extractor import enrich_with_full_text
+        articles = [{"url": "https://example.com/a", "summary": "短い要約"}]
+        with patch("article_extractor.trafilatura.fetch_url", return_value="<html><body><p>短い</p></body></html>"):
+            enrich_with_full_text(articles, top_n=15)
+        assert "full_text" not in articles[0]

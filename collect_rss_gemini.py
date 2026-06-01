@@ -5,6 +5,7 @@ import time
 import datetime
 from rss_client import collect_from_rss_feeds
 from ai_client import process_with_gemini
+from article_extractor import enrich_with_full_text
 from config import NEWS_BOT_OUTPUT_DIR, AI_KEYWORDS, JST
 from dotenv import load_dotenv
 
@@ -67,6 +68,10 @@ def main():
     # Take top 30 relevant/newest for Gemini
     input_articles = scored_articles[:30]
     print(f"-> Selected {len(input_articles)} articles for Gemini analysis (Priority: AI Relevance).")
+
+    # 3.5. 上位記事の本文を取得して判断材料を厚くする（失敗時は RSS 要約で代替）
+    print("3.5. Fetching full article text for top items...")
+    enrich_with_full_text(input_articles, top_n=15)
 
     print("4. Processing with Gemini (AI Trend Analyst Mode)...")
     processed = process_with_gemini(input_articles)

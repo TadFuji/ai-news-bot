@@ -17,6 +17,7 @@ from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 from config import NEWS_BOT_OUTPUT_DIR, JST, GEMINI_MODEL
+from dedup import dedup_articles
 
 load_dotenv()
 
@@ -389,6 +390,10 @@ def main():
             print(f"   ✂️ 過去に配信済みの {removed} 件を除外 → 残り {len(candidates)} 件")
         else:
             print(f"   ✅ 重複なし（全 {len(candidates)} 件が新規）")
+
+    # 3.7. 意味的ダブり排除（同じ出来事を別メディアが報じた記事を束ねる）
+    print("\n🔗 意味的ダブり排除中...")
+    candidates = dedup_articles(candidates)
 
     # 4. Gemini 2次キュレーション
     print("\n🧠 2次キュレーション実行中...")

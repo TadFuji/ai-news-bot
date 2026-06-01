@@ -38,12 +38,14 @@ def process_with_gemini(articles: list[dict], max_articles: int = 10) -> list[di
     )
 
     for i, article in enumerate(articles_sorted[:30]):
+        # 本文があればそれを、なければ RSS 要約を使う（本文は取得時に上限済み）
+        body = article.get("full_text") or article.get("summary", "")
         articles_text += f"""
 ---
 記事{i+1}:
 タイトル: {article['title']}
 ソース: {article['source']} ({article['region']})
-概要: {article['summary'][:1500]}
+本文/概要: {body[:6000]}
 URL: {article['url']}
 """
 
@@ -170,6 +172,7 @@ URL: {article['url']}
                 idx = result.get("index", 1) - 1
                 if 0 <= idx < len(articles_sorted):
                     article = articles_sorted[idx].copy()
+                    article.pop("full_text", None)  # 本文は保存しない（出力JSON肥大化防止）
                     article["title_ja"] = result.get("title_ja", article["title"])
                     article["summary_ja"] = result.get("summary_ja", "要約なし")
                     article["one_liner"] = result.get("one_liner", "")
@@ -208,6 +211,7 @@ URL: {article['url']}
     fallback = []
     for a in articles_sorted[:max_articles]:
         ac = a.copy()
+        ac.pop("full_text", None)  # 本文は保存しない（出力JSON肥大化防止）
         if isinstance(ac.get('published'), datetime.datetime):
             ac['published'] = ac['published'].isoformat()
         # 翻訳済みフィールドが存在する場合はtitle/summaryに転写

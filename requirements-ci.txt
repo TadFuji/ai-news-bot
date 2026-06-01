@@ -22,3 +22,6 @@ tweepy
 
 # HTTP リクエスト
 requests>=2.31.0
+
+# 記事本文抽出（RSS要約より厚い判断材料を取得）
+trafilatura>=2.0.0,<3.0.0
