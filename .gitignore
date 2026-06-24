@@ -37,6 +37,9 @@ output/
 *.bak
 *.orig
 
+# Manual backups (directory rule R1 — never commit; may contain secrets)
+.backups/
+
 # Logs
 *.log
 
