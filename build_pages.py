@@ -191,18 +191,33 @@ def build_pages():
         shutil.copy(global_files[0], docs_dir / "global_latest.json")
         print(f"✅ global_latest.json 更新 ← {global_files[0].name}")
     
-    # アーカイブ一覧を日付で重複排除（同一日付は最新のもののみ保持）
-    seen_dates = set()
+    # アーカイブ一覧は docs/ に蓄積された日次 JSON を正典として再構築する。
+    # output/ は一時フォルダで履歴が残らない（CI の毎回チェックアウトで当日分しか
+    # 存在しない）ため、output/ 由来の archives を索引にすると当日 1 件で上書き
+    # されてしまう。docs/YYYY-MM-DD.json（global_/latest/archive/column を除く）を
+    # 走査して全期間の索引を作る。
+    date_file_re = re.compile(r'^(\d{4})-(\d{2})-(\d{2})\.json$')
     unique_archives = []
-    for archive in archives:
-        if archive["path"] not in seen_dates:
-            seen_dates.add(archive["path"])
-            unique_archives.append(archive)
-    
+    for day_file in sorted(docs_dir.glob("20??-??-??.json"), reverse=True):
+        m = date_file_re.match(day_file.name)
+        if not m:
+            continue
+        y, mo, d = m.groups()
+        try:
+            day_data = json.loads(day_file.read_text(encoding="utf-8"))
+        except Exception as e:
+            print(f"⚠️ Skip {day_file.name}: {e}")
+            continue
+        unique_archives.append({
+            "date": f"{y}年{mo}月{d}日",
+            "path": day_file.name,
+            "count": len(day_data.get("articles", [])),
+        })
+
     archive_data = {"archives": unique_archives}
     with open(docs_dir / "archive.json", "w", encoding="utf-8") as f:
         json.dump(archive_data, f, ensure_ascii=False, indent=2)
-    
+
     print(f"✅ archive.json 更新 ({len(unique_archives)} 件)")
 
     # --- Column Processing ---
