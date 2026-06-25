@@ -50,7 +50,7 @@ jobs:
         python curate_morning_brief.py
 
     - name: Commit and Push changes
-      uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
+      uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
       with:
         commit_message: "Morning Brief delivered [skip ci]"
         branch: main
