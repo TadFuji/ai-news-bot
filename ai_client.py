@@ -4,7 +4,7 @@ import time
 import datetime
 from google import genai
 from google.genai import types
-from config import GEMINI_MODEL
+from config import GEMINI_MODEL, STAGE1_MAX_ARTICLES
 
 
 def process_with_gemini(articles: list[dict], max_articles: int = 10) -> list[dict]:
@@ -29,7 +29,7 @@ def process_with_gemini(articles: list[dict], max_articles: int = 10) -> list[di
 
     # 記事情報をまとめてプロンプトに含める
     articles_text = ""
-    # Limit to top 30 newest items to avoid token limits
+    # Limit to top N newest items to avoid token limits (config 集約: ソース増対応)
     articles_sorted = sorted(
         articles,
         key=lambda x: x.get('published', datetime.datetime.min.replace(tzinfo=datetime.timezone.utc))
@@ -37,7 +37,7 @@ def process_with_gemini(articles: list[dict], max_articles: int = 10) -> list[di
         reverse=True,
     )
 
-    for i, article in enumerate(articles_sorted[:30]):
+    for i, article in enumerate(articles_sorted[:STAGE1_MAX_ARTICLES]):
         # 本文があればそれを、なければ RSS 要約を使う（本文は取得時に上限済み）
         body = article.get("full_text") or article.get("summary", "")
         articles_text += f"""
@@ -45,7 +45,7 @@ def process_with_gemini(articles: list[dict], max_articles: int = 10) -> list[di
 記事{i+1}:
 タイトル: {article['title']}
 ソース: {article['source']} ({article['region']})
-本文/概要: {body[:6000]}
+本文/概要: {body[:3000]}
 URL: {article['url']}
 """
 
@@ -119,7 +119,7 @@ URL: {article['url']}
             ),
             "category": types.Schema(
                 type=types.Type.STRING,
-                description="カテゴリ: 業務効率化, リスク管理, 日本市場, 最新技術, 法規制・倫理, ライフスタイル のいずれか",
+                description="カテゴリ: 対話型AI, 画像・動画AI, 中国AI, ビジネス活用, リスク・規制, 日本市場, 研究・技術 のいずれか1つを厳密に選ぶ",
             ),
             "importance_score": types.Schema(
                 type=types.Type.INTEGER,

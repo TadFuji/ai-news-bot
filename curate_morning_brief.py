@@ -16,7 +16,7 @@ import datetime
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
-from config import NEWS_BOT_OUTPUT_DIR, JST, GEMINI_MODEL
+from config import NEWS_BOT_OUTPUT_DIR, JST, GEMINI_MODEL, STAGE1_MAX_ARTICLES
 from dedup import dedup_articles
 
 load_dotenv()
@@ -88,6 +88,48 @@ def get_delivered_urls(days=3):
     return delivered
 
 
+def rebalance_by_source(selected, pool, max_per_source=3, target=10):
+    """同一ソース偏重を是正する。
+
+    Gemini 出力後・保存前に実行する純Python処理。同一 source が
+    max_per_source を超えたら、その超過分を次点（importance_score 降順）の
+    別ソース記事と差し替える。プロンプト依存を減らし多様性を確実化する。
+    """
+    by_source = {}
+    kept, overflow = [], []
+    for a in selected:
+        s = a.get("source", "")
+        by_source[s] = by_source.get(s, 0) + 1
+        (kept if by_source[s] <= max_per_source else overflow).append(a)
+
+    if not overflow:
+        return selected
+
+    removed = len(overflow)
+    kept_urls = {a.get("url", "") for a in kept}
+    replacements = sorted(
+        [a for a in pool if a.get("url", "") not in kept_urls],
+        key=lambda x: x.get("importance_score", 0),
+        reverse=True,
+    )
+    for a in replacements:
+        if len(kept) >= target:
+            break
+        s = a.get("source", "")
+        if by_source.get(s, 0) < max_per_source:
+            by_source[s] = by_source.get(s, 0) + 1
+            kept.append(a)
+
+    # 補充で目標件数に届かない場合は、件数維持を優先して overflow を戻す
+    for a in overflow:
+        if len(kept) >= target:
+            break
+        kept.append(a)
+
+    print(f"   ⚖️ ソース偏重是正: {removed} 件を多様性のため差し替え（最大{max_per_source}件/ソース）")
+    return kept
+
+
 def curate_with_gemini(candidates):
     """Gemini 2次プロンプトで編集的キュレーションを実行"""
     api_key = os.environ.get("GOOGLE_API_KEY")
@@ -99,7 +141,7 @@ def curate_with_gemini(candidates):
 
     # 候補記事をテキスト化
     articles_text = ""
-    for i, a in enumerate(candidates[:30], 1):
+    for i, a in enumerate(candidates[:STAGE1_MAX_ARTICLES], 1):
         title = a.get("title_ja", a.get("title", "No Title"))
         summary = a.get("summary_ja", a.get("summary", ""))
         category = a.get("category", "未分類")
@@ -136,8 +178,9 @@ URL: {url}
 **重要: articlesの配列には必ず10件（候補が10件未満なら全件）を含めてください。5件や7件では不十分です。**
 - テーマとの関連性（ストーリーの一貫性）
 - 読者の「明日の行動」を変える力
-- ソースの多様性（同じメディアに偏らない）
+- ソースの多様性（同じメディアに偏らない。同一ソースは最大3件まで）
 - 速報性（既に広く知られた情報は下位に）
+- 中国AI（DeepSeek / Qwen / Baidu / ByteDance / Moonshot 等）の動向を、候補にあれば1件以上含める
 
 ## Step 3: 各記事の付加価値を追加
 各記事に対して以下を日本語で追記してください：
@@ -179,7 +222,10 @@ URL: {url}
                 type=types.Type.STRING,
                 description="読者が今日すぐできる1つの行動",
             ),
-            "category": types.Schema(type=types.Type.STRING, description="カテゴリ"),
+            "category": types.Schema(
+                type=types.Type.STRING,
+                description="カテゴリ: 対話型AI, 画像・動画AI, 中国AI, ビジネス活用, リスク・規制, 日本市場, 研究・技術 のいずれか1つ",
+            ),
             "importance_score": types.Schema(type=types.Type.INTEGER, description="重要度 1-10"),
             "source": types.Schema(type=types.Type.STRING, description="ソース名"),
             "url": types.Schema(type=types.Type.STRING, description="URL"),
@@ -252,6 +298,11 @@ URL: {url}
                           f"候補から{len(supplement)}件を補完して10件に調整")
                     curated_articles.extend(supplement)
                 result["articles"] = curated_articles
+
+            # ガードレール2: 同一ソース偏重を是正（プロンプト依存を減らし多様性を担保）
+            result["articles"] = rebalance_by_source(
+                result.get("articles", []), candidates
+            )
 
             final_count = len(result.get('articles', []))
             if final_count < 10:

@@ -9,9 +9,14 @@ GitHub Pages 用の JSON データを生成します。
 
 import re
 import json
+import html
 import shutil
 from pathlib import Path
+from xml.sax.saxutils import escape as xml_escape
 from config import NEWS_BOT_OUTPUT_DIR as output_dir_path
+
+# 公開ポータルのベースURL
+WEB_BASE = "https://tadfuji.github.io/ai-news-bot/"
 
 
 def parse_markdown_news(content: str) -> dict:
@@ -50,6 +55,195 @@ def parse_markdown_news(content: str) -> dict:
         })
     
     return result
+
+
+def _read_latest(docs_dir: Path):
+    """docs/latest.json を読み込む（無ければ None）。"""
+    p = docs_dir / "latest.json"
+    if not p.exists():
+        return None
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
+def _between_markers(text: str, start: str, end: str, replacement: str) -> str:
+    """start..end マーカー間を replacement で冪等に差し替える（マーカー自体は保持）。"""
+    pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), re.DOTALL)
+    new_block = start + replacement + end
+    if pattern.search(text):
+        return pattern.sub(lambda _: new_block, text)
+    return text  # マーカーが無ければ何もしない（安全）
+
+
+def generate_ogp_image(docs_dir: Path):
+    """latest.json の theme/morning_comment から OGP 画像(1200x630)を生成する。"""
+    data = _read_latest(docs_dir)
+    if not data:
+        return
+    from generators.infographic_maker import create_infographic
+    arts = data.get("articles", [])
+    title = data.get("theme") or "AI ニュース TOP10"
+    summary = data.get("morning_comment") or (arts[0].get("one_liner", "") if arts else "")
+    create_infographic(title, summary, output_path=str(docs_dir / "ogp_latest.png"))
+    print("✅ ogp_latest.png 生成")
+
+
+def inject_ogp_and_prerender(docs_dir: Path):
+    """index.html の OGP メタと記事の静的プリレンダリングを冪等に差し替える。
+
+    - OGP/Twitterカード/meta description/JSON-LD を <head> のマーカー間に注入
+    - 記事カードを #news-container 内のマーカー間に静的出力（クローラー可視化）
+      JS が動く環境では fetch により上書きされるため二重表示にはならない。
+    """
+    data = _read_latest(docs_dir)
+    if not data:
+        return
+    index_path = docs_dir / "index.html"
+    if not index_path.exists():
+        return
+    page = index_path.read_text(encoding="utf-8")
+
+    theme = data.get("theme", "")
+    comment = data.get("morning_comment", "")
+    arts = data.get("articles", [])
+    top_oneliner = arts[0].get("one_liner", "") if arts else ""
+
+    def attr(s):  # 属性用エスケープ（"含む）
+        return html.escape(str(s or ""), quote=True)
+
+    def txt(s):  # 要素テキスト用エスケープ
+        return html.escape(str(s or ""))
+
+    # --- OGP / Twitterカード / meta description / JSON-LD ---
+    jsonld = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": f"AI ニュース TOP10 — {theme}",
+        "itemListElement": [
+            {"@type": "ListItem", "position": i + 1,
+             "name": x.get("title", ""), "url": x.get("url", "")}
+            for i, x in enumerate(arts)
+        ],
+    }
+    ogp = (
+        "\n"
+        '<meta property="og:type" content="website">\n'
+        '<meta property="og:site_name" content="AI ニュース TOP10">\n'
+        f'<meta property="og:title" content="{attr(theme)} | AI ニュース TOP10">\n'
+        f'<meta property="og:description" content="{attr(comment)} 本日のトップ: {attr(top_oneliner)}">\n'
+        f'<meta property="og:image" content="{WEB_BASE}ogp_latest.png">\n'
+        f'<meta property="og:url" content="{WEB_BASE}">\n'
+        '<meta name="twitter:card" content="summary_large_image">\n'
+        f'<meta name="twitter:title" content="{attr(theme)} | AI ニュース TOP10">\n'
+        f'<meta name="twitter:description" content="{attr(comment)}">\n'
+        f'<meta name="twitter:image" content="{WEB_BASE}ogp_latest.png">\n'
+        f'<meta name="description" content="{attr(comment)} 世界のAIニュースを毎朝日本語で厳選してお届け。">\n'
+        f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>\n'
+    )
+    page = _between_markers(page, "<!-- OGP_START -->", "<!-- OGP_END -->", ogp)
+
+    # --- 記事カードの静的プリレンダリング ---
+    cards = []
+    for i, x in enumerate(arts, 1):
+        cat = x.get("category", "未分類")
+        ol = x.get("one_liner", "")
+        why = x.get("why_important", "")
+        act = x.get("action_item", "")
+        card = (
+            f'<article class="news-card" data-category="{attr(cat)}">'
+            f'<div style="display:flex;align-items:center;margin-bottom:5px;">'
+            f'<span class="news-rank">{i}</span>'
+            f'<span class="news-category" data-category="{attr(cat)}">{txt(cat)}</span></div>'
+            + (f'<div class="news-oneliner">💡 {txt(ol)}</div>' if ol else "")
+            + f'<h2 class="news-title">{txt(x.get("title", ""))}</h2>'
+            f'<p class="news-summary">{txt(x.get("summary", ""))}</p>'
+            + (f'<div class="news-why">📌 なぜ重要？ {txt(why)}</div>' if why else "")
+            + (f'<div class="news-action">👉 今日の行動：{txt(act)}</div>' if act else "")
+            + '<div class="news-meta">'
+            f'<span class="news-source">📰 {txt(x.get("source", ""))}</span>'
+            f'<span class="news-link"><a href="{attr(x.get("url", ""))}" target="_blank" rel="noopener">→ 元記事を読む</a></span>'
+            "</div></article>"
+        )
+        cards.append(card)
+    prerender = "\n" + "\n".join(cards) + "\n"
+    page = _between_markers(page, "<!-- PRERENDER_START -->", "<!-- PRERENDER_END -->", prerender)
+
+    index_path.write_text(page, encoding="utf-8")
+    print("✅ index.html OGP/プリレンダリング更新")
+
+
+def generate_sitemap(docs_dir: Path):
+    """docs/ の日次データから sitemap.xml を生成する。"""
+    urls = [
+        (WEB_BASE, "1.0"),
+        (WEB_BASE + "archive.html", "0.7"),
+        (WEB_BASE + "column.html", "0.6"),
+        (WEB_BASE + "global.html", "0.6"),
+    ]
+    for day_file in sorted(docs_dir.glob("20??-??-??.json"), reverse=True):
+        if re.match(r"^\d{4}-\d{2}-\d{2}\.json$", day_file.name):
+            urls.append((WEB_BASE + "?json=" + day_file.name, "0.5"))
+
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ]
+    for loc, pri in urls:
+        lines.append(f"  <url><loc>{xml_escape(loc)}</loc><priority>{pri}</priority></url>")
+    lines.append("</urlset>")
+    (docs_dir / "sitemap.xml").write_text("\n".join(lines), encoding="utf-8")
+    print(f"✅ sitemap.xml 更新 ({len(urls)} URL)")
+
+
+def generate_feed(docs_dir: Path):
+    """直近7日分の記事から RSS 2.0 フィード(feed.xml)を生成する（URL重複排除・最大50件）。"""
+    seen, items = set(), []
+    for day_file in sorted(docs_dir.glob("20??-??-??.json"), reverse=True)[:7]:
+        if not re.match(r"^\d{4}-\d{2}-\d{2}\.json$", day_file.name):
+            continue
+        try:
+            d = json.loads(day_file.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        for x in d.get("articles", []):
+            url = x.get("url", "")
+            if not url or url in seen:
+                continue
+            seen.add(url)
+            items.append({
+                "title": x.get("title", ""),
+                "desc": x.get("one_liner", "") or x.get("summary", ""),
+                "link": url,
+                "category": x.get("category", ""),
+            })
+            if len(items) >= 50:
+                break
+        if len(items) >= 50:
+            break
+
+    parts = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<rss version="2.0"><channel>',
+        "<title>AI ニュース TOP10</title>",
+        f"<link>{WEB_BASE}</link>",
+        "<description>世界のAIニュースを毎朝日本語で厳選してお届け</description>",
+        "<language>ja</language>",
+    ]
+    for it in items:
+        parts.append(
+            "<item>"
+            f"<title>{xml_escape(it['title'])}</title>"
+            f"<link>{xml_escape(it['link'])}</link>"
+            f"<description>{xml_escape(it['desc'])}</description>"
+            f"<category>{xml_escape(it['category'])}</category>"
+            f'<guid isPermaLink="true">{xml_escape(it["link"])}</guid>'
+            "</item>"
+        )
+    parts.append("</channel></rss>")
+    (docs_dir / "feed.xml").write_text("\n".join(parts), encoding="utf-8")
+    print(f"✅ feed.xml 更新 ({len(items)} 記事)")
 
 
 def build_pages():
@@ -257,6 +451,18 @@ def build_pages():
     with open(docs_dir / "columns.json", "w", encoding="utf-8") as f:
         json.dump({"columns": columns_list}, f, ensure_ascii=False, indent=2)
     print(f"✅ columns.json 更新 ({len(columns_list)} 件)")
+
+    # --- 拡散性・発見性の拡張（Phase 2。各処理は独立し、失敗してもビルドを止めない） ---
+    for label, fn in [
+        ("OGP画像", generate_ogp_image),
+        ("OGP/プリレンダリング", inject_ogp_and_prerender),
+        ("sitemap.xml", generate_sitemap),
+        ("feed.xml", generate_feed),
+    ]:
+        try:
+            fn(docs_dir)
+        except Exception as e:
+            print(f"⚠️ {label} 生成スキップ: {e}")
 
     print("🎉 ビルド完了!")
 

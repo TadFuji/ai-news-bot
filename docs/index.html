@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="AI ニュース TOP10" href="feed.xml">
+    <!-- OGP_START --><!-- OGP_END -->
     <style>
         :root {
             --primary: #6366f1;
@@ -188,6 +190,133 @@
             text-decoration: underline;
         }
 
+        /* --- 編集長の一言（テーマバナー） --- */
+        .today-theme {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.18), rgba(34, 211, 238, 0.1));
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            border-radius: 1rem;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .today-theme .theme-label {
+            font-size: 0.75rem;
+            color: var(--accent);
+            letter-spacing: 0.08em;
+            margin-bottom: 0.35rem;
+        }
+
+        .today-theme .theme-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .today-theme .theme-comment {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* --- カテゴリフィルター --- */
+        .filter-bar {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .filter-btn {
+            background: var(--card-bg);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            border-radius: 2rem;
+            padding: 0.35rem 0.9rem;
+            font-size: 0.8rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            color: var(--text);
+        }
+
+        .filter-btn.active {
+            color: white;
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* --- 記事カード内の付加情報（So What） --- */
+        .news-oneliner {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 0.25rem 0 0.5rem;
+        }
+
+        .news-why {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            background: rgba(99, 102, 241, 0.08);
+            border-radius: 0.5rem;
+            padding: 0.6rem 0.8rem;
+            margin: 0.75rem 0;
+        }
+
+        .news-action {
+            font-size: 0.9rem;
+            color: var(--text);
+            border-left: 3px solid var(--accent);
+            padding: 0.4rem 0 0.4rem 0.8rem;
+            margin: 0.75rem 0;
+        }
+
+        /* --- カテゴリ色分け（7トラック） --- */
+        .news-category[data-category="対話型AI"] {
+            background: rgba(167, 139, 250, 0.18);
+            color: #c4b5fd;
+            border-color: rgba(167, 139, 250, 0.4);
+        }
+
+        .news-category[data-category="画像・動画AI"] {
+            background: rgba(244, 114, 182, 0.18);
+            color: #f9a8d4;
+            border-color: rgba(244, 114, 182, 0.4);
+        }
+
+        .news-category[data-category="中国AI"] {
+            background: rgba(251, 113, 133, 0.18);
+            color: #fda4af;
+            border-color: rgba(251, 113, 133, 0.4);
+        }
+
+        .news-category[data-category="ビジネス活用"] {
+            background: rgba(52, 211, 153, 0.18);
+            color: #6ee7b7;
+            border-color: rgba(52, 211, 153, 0.4);
+        }
+
+        .news-category[data-category="リスク・規制"] {
+            background: rgba(251, 191, 36, 0.18);
+            color: #fcd34d;
+            border-color: rgba(251, 191, 36, 0.4);
+        }
+
+        .news-category[data-category="日本市場"] {
+            background: rgba(96, 165, 250, 0.18);
+            color: #93c5fd;
+            border-color: rgba(96, 165, 250, 0.4);
+        }
+
+        .news-category[data-category="研究・技術"] {
+            background: rgba(34, 211, 238, 0.18);
+            color: #67e8f9;
+            border-color: rgba(34, 211, 238, 0.4);
+        }
+
         footer {
             text-align: center;
             padding: 2rem 0;
@@ -234,8 +363,21 @@
             <a href="archive.html">アーカイブ</a>
         </nav>
 
+        <div class="filter-bar" id="filter-bar">
+            <button class="filter-btn active" data-filter="all">すべて</button>
+            <button class="filter-btn" data-filter="対話型AI">対話型AI</button>
+            <button class="filter-btn" data-filter="画像・動画AI">画像・動画AI</button>
+            <button class="filter-btn" data-filter="中国AI">中国AI</button>
+            <button class="filter-btn" data-filter="ビジネス活用">ビジネス活用</button>
+            <button class="filter-btn" data-filter="リスク・規制">リスク・規制</button>
+            <button class="filter-btn" data-filter="日本市場">日本市場</button>
+            <button class="filter-btn" data-filter="研究・技術">研究・技術</button>
+        </div>
+
+        <section id="today-theme"></section>
+
         <main id="news-container">
-            <!-- ニュースがここに挿入される -->
+            <!-- PRERENDER_START --><!-- PRERENDER_END -->
         </main>
 
         <footer>
@@ -245,6 +387,15 @@
     </div>
 
     <script>
+        // HTMLエスケープ（テキストフィールドを安全に挿入する）
+        function esc(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
         // 最新のニュースファイルを読み込む
         async function loadNews() {
             try {
@@ -256,33 +407,67 @@
                 const data = await response.json();
 
                 document.getElementById('update-time').textContent =
-                    `更新: ${data.updated}`;
+                    `更新: ${data.updated || ''}`;
+
+                // 編集長の一言（テーマ + コメント）をリスト上部に表示
+                const themeEl = document.getElementById('today-theme');
+                if (data.theme || data.morning_comment) {
+                    themeEl.className = 'today-theme';
+                    themeEl.innerHTML = `
+                        <div class="theme-label">☀️ 今日のテーマ</div>
+                        ${data.theme ? `<div class="theme-title">${esc(data.theme)}</div>` : ''}
+                        ${data.morning_comment ? `<div class="theme-comment">${esc(data.morning_comment)}</div>` : ''}
+                    `;
+                } else {
+                    themeEl.className = '';
+                    themeEl.innerHTML = '';
+                }
 
                 const container = document.getElementById('news-container');
                 container.innerHTML = data.articles.map((article, i) => {
-                    // カテゴリに応じたスタイルの調整（任意）
                     const category = article.category || '未分類';
 
                     return `
-                    <article class="news-card">
+                    <article class="news-card" data-category="${esc(category)}">
                         <div style="display: flex; flex-direction: column;">
                             <div style="display: flex; align-items: center; margin-bottom: 5px;">
                                 <span class="news-rank">${i + 1}</span>
-                                <span class="news-category">${category}</span>
+                                <span class="news-category" data-category="${esc(category)}">${esc(category)}</span>
                             </div>
-                            <h2 class="news-title">${article.title}</h2>
+                            ${article.one_liner ? `<div class="news-oneliner">💡 ${esc(article.one_liner)}</div>` : ''}
+                            <h2 class="news-title">${esc(article.title)}</h2>
                         </div>
-                        <p class="news-summary">${article.summary}</p>
+                        <p class="news-summary">${esc(article.summary)}</p>
+                        ${article.why_important ? `<div class="news-why">📌 なぜ重要？ ${esc(article.why_important)}</div>` : ''}
+                        ${article.action_item ? `<div class="news-action">👉 今日の行動：${esc(article.action_item)}</div>` : ''}
                         <div class="news-meta">
-                            <span class="news-source">📰 ${article.source}</span>
-                            <span class="news-link"><a href="${article.url}" target="_blank">→ 元記事を読む</a></span>
+                            <span class="news-source">📰 ${esc(article.source)}</span>
+                            <span class="news-link"><a href="${esc(article.url)}" target="_blank" rel="noopener">→ 元記事を読む</a></span>
                         </div>
                     </article>
                 `}).join('');
+
+                setupFilters();
             } catch (e) {
                 document.getElementById('news-container').innerHTML =
                     '<p style="text-align:center;color:var(--text-muted);">ニュースを読み込み中...</p>';
             }
+        }
+
+        // カテゴリ絞り込み（純JS・data-category で表示切替）
+        function setupFilters() {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const f = btn.getAttribute('data-filter');
+                    document.querySelectorAll('.news-card').forEach(card => {
+                        const match = (f === 'all') || (card.getAttribute('data-category') === f);
+                        card.style.display = match ? '' : 'none';
+                    });
+                });
+            });
         }
 
         loadNews();

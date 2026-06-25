@@ -8,6 +8,9 @@ JST = timezone(timedelta(hours=9))
 # Gemini モデル名（全ファイルで共有 — モデル切替時はここを変更）
 GEMINI_MODEL = "gemini-3-flash-preview"
 
+# 1次分析・2次キュレーションに渡す上位記事数（ソース増加に対応・config 集約）
+STAGE1_MAX_ARTICLES = 50
+
 # ===========================
 # 設定
 # ===========================
@@ -199,6 +202,45 @@ RSS_FEEDS = [
         "url": "https://thenextweb.com/category/artificial-intelligence/feed",
         "region": "欧州"
     },
+    # ============================================================
+    # 2026-06 追加: 厳選30ソース（稼働確認済み）
+    # ============================================================
+    # --- 米国 AIニュースレター・高信号ソース（対話型AI動向） ---
+    {"name": "The Rundown AI", "url": "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml", "region": "米国"},
+    {"name": "TLDR AI", "url": "https://tldr.tech/api/rss/ai", "region": "米国"},
+    {"name": "The Neuron", "url": "https://rss.beehiiv.com/feeds/N4eCstxvgX.xml", "region": "米国"},
+    {"name": "Import AI", "url": "https://importai.substack.com/feed", "region": "米国"},
+    {"name": "One Useful Thing", "url": "https://www.oneusefulthing.org/feed", "region": "米国"},
+    {"name": "Latent Space", "url": "https://www.latent.space/feed", "region": "米国"},
+    {"name": "Simon Willison's Weblog", "url": "https://simonwillison.net/atom/everything/", "region": "米国"},
+    {"name": "The Decoder", "url": "https://the-decoder.com/feed/", "region": "米国"},
+    {"name": "Platformer", "url": "https://www.platformer.news/rss", "region": "米国"},
+    {"name": "Semafor Technology", "url": "https://semafor.com/rss.xml", "region": "米国"},
+    {"name": "Interconnects AI", "url": "https://www.interconnects.ai/feed", "region": "米国"},
+    # --- AIラボ公式（既存に無いもの） ---
+    {"name": "Mistral AI News", "url": "https://mistral.ai/rss.xml", "region": "欧州"},
+    {"name": "Together AI Blog", "url": "https://www.together.ai/blog/rss.xml", "region": "米国"},
+    # --- 中国 AIメディア・ラボ公式 ---
+    {"name": "KrASIA (36Kr English)", "url": "https://console.kr-asia.com/feed", "region": "中国"},
+    {"name": "TechNode", "url": "https://technode.com/feed/", "region": "中国"},
+    {"name": "Pandaily", "url": "https://pandaily.com/feed/", "region": "中国"},
+    {"name": "SCMP Technology", "url": "https://www.scmp.com/rss/36/feed/", "region": "中国"},
+    {"name": "Synced Review", "url": "https://syncedreview.com/feed/", "region": "中国"},
+    {"name": "量子位 QbitAI", "url": "https://www.qbitai.com/feed", "region": "中国"},
+    {"name": "Qwen Blog (Alibaba)", "url": "https://qwenlm.github.io/blog/index.xml", "region": "中国"},
+    {"name": "ERNIE Blog (Baidu)", "url": "https://ernie.baidu.com/blog/index.xml", "region": "中国"},
+    # --- 画像・動画生成 ---
+    {"name": "Midjourney Updates", "url": "https://updates.midjourney.com/rss/", "region": "米国"},
+    # --- Google Workspace / 生産性AI ---
+    {"name": "Google Workspace Updates", "url": "http://feeds.feedburner.com/GoogleAppsUpdates", "region": "米国"},
+    {"name": "Google Workspace Blog", "url": "https://blog.google/products/workspace/rss/", "region": "米国"},
+    {"name": "Microsoft 365 Copilot Blog", "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=Microsoft365CopilotBlog", "region": "米国"},
+    {"name": "Microsoft 365 Blog", "url": "https://www.microsoft.com/en-us/microsoft-365/blog/feed/", "region": "米国"},
+    {"name": "Figma Blog", "url": "https://www.figma.com/blog/feed/atom.xml", "region": "米国"},
+    # --- 日本 ビジネス/AIメディア ---
+    {"name": "ITmedia ビジネスオンライン", "url": "https://rss.itmedia.co.jp/rss/2.0/business.xml", "region": "日本"},
+    {"name": "TechnoEdge", "url": "https://www.techno-edge.net/rss20/index.rdf", "region": "日本"},
+    {"name": "Nikkei Asia", "url": "https://asia.nikkei.com/rss/feed/nar", "region": "日本"},
 ]
 
 # AI関連キーワード（フィルタリング用）- 拡充版
@@ -227,6 +269,11 @@ AI_KEYWORDS = [
     "チャットボット", "自動生成", "AI規制", "AI法",
     "推論", "学習手法", "マルチモーダル", "資金調達", "API",
     "規制", "ガイドライン", "著作権", "雇用",
+    # --- 中国AI（固有名詞・中国語。これが無いと中国ソースがスコア0で弾かれる） ---
+    "DeepSeek", "Qwen", "通义千问", "文心", "ERNIE", "豆包", "Doubao",
+    "Kimi", "Moonshot", "MiniMax", "智谱", "GLM", "ByteDance", "字节跳动",
+    "百度", "阿里", "腾讯", "BaiChuan", "Hunyuan", "混元", "Manus",
+    "大语言模型", "生成式AI", "人工智能", "AI大模型",
 ]
 
 # ルートディレクトリ

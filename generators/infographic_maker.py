@@ -1,11 +1,28 @@
 
+import os
 from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 
-# Windows Font Path (Standard Japanese Font)
-# Antigravity Standard: Noto Sans JP (Variable Font)
-NOTO_JP = r"C:\Windows\Fonts\NotoSansJP-VF.ttf"
-NOTO_SERIF = r"C:\Windows\Fonts\NotoSerifJP-VF.ttf"
+# 日本語フォント探索（環境変数 → Windows → Linux Noto CJK の順）。
+# CI(ubuntu)では NOTO_JP_FONT 環境変数 もしくは apt の fonts-noto-cjk を使う。
+_FONT_CANDIDATES = [
+    os.environ.get("NOTO_JP_FONT", ""),
+    r"C:\Windows\Fonts\NotoSansJP-VF.ttf",
+    "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+    "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
+    "/usr/share/fonts/opentype/noto/NotoSansCJKjp-Regular.otf",
+]
+
+
+def _load_font(size):
+    """利用可能な日本語フォントを探して読み込む。無ければデフォルト（豆腐回避は不可）。"""
+    for path in _FONT_CANDIDATES:
+        if path and os.path.exists(path):
+            try:
+                return ImageFont.truetype(path, size)
+            except Exception:
+                continue
+    return ImageFont.load_default()
 
 def create_infographic(title, summary, date_str=None, output_path="infographic.png"):
     """
@@ -23,18 +40,11 @@ def create_infographic(title, summary, date_str=None, output_path="infographic.p
     img = Image.new('RGB', (width, height), color=bg_color)
     draw = ImageDraw.Draw(img)
 
-    # Fonts
-    try:
-        title_font = ImageFont.truetype(NOTO_JP, 60)
-        body_font = ImageFont.truetype(NOTO_JP, 32)
-        meta_font = ImageFont.truetype(NOTO_JP, 24)
-        logo_font = ImageFont.truetype(NOTO_JP, 28)
-    except Exception:
-        # Fallback
-        title_font = ImageFont.load_default()
-        body_font = ImageFont.load_default()
-        meta_font = ImageFont.load_default()
-        logo_font = ImageFont.load_default()
+    # Fonts（環境ごとにフォントを探索: CI(Ubuntu)では NOTO_JP_FONT / Noto CJK）
+    title_font = _load_font(60)
+    body_font = _load_font(32)
+    meta_font = _load_font(24)
+    logo_font = _load_font(28)
 
     # --- Design Elements ---
 
@@ -92,7 +102,7 @@ def create_infographic(title, summary, date_str=None, output_path="infographic.p
     btn_x = 900
     btn_y = 560
     draw.rounded_rectangle([(btn_x, btn_y), (btn_x + 240, btn_y + 50)], radius=25, fill=(255, 255, 255))
-    draw.text((btn_x + 40, btn_y + 12), "Read Full Report ➜", font=meta_font, fill=(0, 0, 0))
+    draw.text((btn_x + 40, btn_y + 12), "Read Full Report →", font=meta_font, fill=(0, 0, 0))
 
     # Save
     img.save(output_path)
