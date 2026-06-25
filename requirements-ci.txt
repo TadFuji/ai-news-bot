@@ -18,7 +18,7 @@ python-dotenv>=1.0.0
 line-bot-sdk>=3.0.0
 
 # X (Twitter) API
-tweepy>=4.14.0,<5.0.0
+tweepy>=4.16.0,<5.0.0
 
 # HTTP リクエスト
 requests>=2.31.0
