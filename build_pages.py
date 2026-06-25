@@ -77,6 +77,30 @@ def _between_markers(text: str, start: str, end: str, replacement: str) -> str:
     return text  # マーカーが無ければ何もしない（安全）
 
 
+def _safe_http_url(u: str) -> str:
+    """http(s) スキームのみ許可。javascript: 等のスキームは空文字に落とす（XSS対策）。
+
+    ソースURLは外部RSS/LLM由来で信頼できないため、href に出す前に必ず通す。
+    """
+    u = (u or "").strip()
+    return u if u.lower().startswith(("http://", "https://")) else ""
+
+
+def _json_for_script(obj) -> str:
+    """Embed JSON safely inside a <script> block (prevents </script> breakout).
+
+    json.dumps does not escape < or >, so an untrusted string that closes a
+    script tag could break out of the JSON-LD block. Replace < > & with their
+    unicode escapes (valid inside JSON strings; JSON-LD semantics preserved).
+    """
+    bs = chr(92)
+    out = json.dumps(obj, ensure_ascii=False)
+    out = out.replace("<", bs + "u003c")
+    out = out.replace(">", bs + "u003e")
+    out = out.replace("&", bs + "u0026")
+    return out
+
+
 def generate_ogp_image(docs_dir: Path):
     """latest.json の theme/morning_comment から OGP 画像(1200x630)を生成する。"""
     data = _read_latest(docs_dir)
@@ -123,7 +147,7 @@ def inject_ogp_and_prerender(docs_dir: Path):
         "name": f"AI ニュース TOP10 — {theme}",
         "itemListElement": [
             {"@type": "ListItem", "position": i + 1,
-             "name": x.get("title", ""), "url": x.get("url", "")}
+             "name": x.get("title", ""), "url": _safe_http_url(x.get("url", ""))}
             for i, x in enumerate(arts)
         ],
     }
@@ -140,7 +164,7 @@ def inject_ogp_and_prerender(docs_dir: Path):
         f'<meta name="twitter:description" content="{attr(comment)}">\n'
         f'<meta name="twitter:image" content="{WEB_BASE}ogp_latest.png">\n'
         f'<meta name="description" content="{attr(comment)} 世界のAIニュースを毎朝日本語で厳選してお届け。">\n'
-        f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>\n'
+        f'<script type="application/ld+json">{_json_for_script(jsonld)}</script>\n'
     )
     page = _between_markers(page, "<!-- OGP_START -->", "<!-- OGP_END -->", ogp)
 
@@ -163,7 +187,7 @@ def inject_ogp_and_prerender(docs_dir: Path):
             + (f'<div class="news-action">👉 今日の行動：{txt(act)}</div>' if act else "")
             + '<div class="news-meta">'
             f'<span class="news-source">📰 {txt(x.get("source", ""))}</span>'
-            f'<span class="news-link"><a href="{attr(x.get("url", ""))}" target="_blank" rel="noopener">→ 元記事を読む</a></span>'
+            f'<span class="news-link"><a href="{attr(_safe_http_url(x.get("url", "")))}" target="_blank" rel="noopener">→ 元記事を読む</a></span>'
             "</div></article>"
         )
         cards.append(card)

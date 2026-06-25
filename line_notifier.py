@@ -116,7 +116,9 @@ def create_news_carousel(articles: list[dict], max_cards: int = 3) -> FlexMessag
         one_liner = a.get("one_liner", "")
         action_item = a.get("action_item", "")
         category = a.get("category", "")
-        url = a.get("url", "") or "https://tadfuji.github.io/ai-news-bot/"
+        url = a.get("url", "").strip()
+        if not url.lower().startswith(("http://", "https://")):
+            url = "https://tadfuji.github.io/ai-news-bot/"
 
         body_contents = [
             FlexText(text=f"{i}. {category}".strip(" ."), size="xs",

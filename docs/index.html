@@ -396,6 +396,12 @@
                 .replace(/"/g, '&quot;');
         }
 
+        // URLスキームの検証（javascript: 等を弾く。href に出す前に必ず通す）
+        function safeUrl(u) {
+            u = String(u == null ? '' : u).trim();
+            return /^https?:\/\//i.test(u) ? u : '#';
+        }
+
         // 最新のニュースファイルを読み込む
         async function loadNews() {
             try {
@@ -442,7 +448,7 @@
                         ${article.action_item ? `<div class="news-action">👉 今日の行動：${esc(article.action_item)}</div>` : ''}
                         <div class="news-meta">
                             <span class="news-source">📰 ${esc(article.source)}</span>
-                            <span class="news-link"><a href="${esc(article.url)}" target="_blank" rel="noopener">→ 元記事を読む</a></span>
+                            <span class="news-link"><a href="${esc(safeUrl(article.url))}" target="_blank" rel="noopener">→ 元記事を読む</a></span>
                         </div>
                     </article>
                 `}).join('');
