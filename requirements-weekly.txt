@@ -2,7 +2,7 @@
 # Gemini でコラムを生成し LINE へ配信するのみ。RSS/X/画像系は不要。
 
 # Google Gemini API
-google-genai>=0.3.0
+google-genai>=2.10.0
 
 # 環境変数管理
 python-dotenv>=1.0.0
