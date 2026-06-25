@@ -1,0 +1,11 @@
+# 週刊コラム生成（weekly_column.yml）に必要な最小限の依存
+# Gemini でコラムを生成し LINE へ配信するのみ。RSS/X/画像系は不要。
+
+# Google Gemini API
+google-genai>=0.3.0
+
+# 環境変数管理
+python-dotenv>=1.0.0
+
+# LINE Messaging API
+line-bot-sdk>=3.0.0

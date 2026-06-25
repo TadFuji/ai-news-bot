@@ -21,13 +21,18 @@ python -m venv .venv
 source .venv/bin/activate  # Linux/macOS
 # .venv\Scripts\activate   # Windows
 
-# Install dependencies
+# Install dependencies (local dev uses the full requirements.txt)
 pip install -r requirements.txt
+
+# Alternative: with uv (https://docs.astral.sh/uv/)
+# uv venv .venv && uv pip install -r requirements.txt
 
 # Configure environment
 cp .env.example .env
 # Edit .env with your GOOGLE_API_KEY
 ```
+
+> **Note**: CI uses the lighter `requirements-ci.txt` (no `moviepy` / `streamlit` / PDF deps), and the weekly column workflow uses `requirements-weekly.txt`. Use the full `requirements.txt` only for local development with the Streamlit dashboard and media generators.
 
 ### Running Locally
 

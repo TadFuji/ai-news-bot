@@ -23,4 +23,8 @@ This project follows these security practices:
 - API keys are stored exclusively in environment variables and GitHub Secrets
 - `.env` is gitignored and never committed
 - No secrets in Git history (verified via audit)
-- Dependencies are reviewed for known vulnerabilities
+- Dependencies are scanned weekly via [Dependabot](.github/dependabot.yml) (pip + GitHub Actions)
+- GitHub Actions are pinned to commit SHAs to mitigate supply-chain risks
+- Workflows declare least-privilege `permissions`
+- CI runs `ruff` (lint) and `pytest` on every push and pull request
+- Public-page output is escaped to prevent XSS from untrusted feed/LLM content

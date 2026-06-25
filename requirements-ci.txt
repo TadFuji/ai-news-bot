@@ -18,7 +18,7 @@ python-dotenv>=1.0.0
 line-bot-sdk>=3.0.0
 
 # X (Twitter) API
-tweepy
+tweepy>=4.14.0,<5.0.0
 
 # HTTP リクエスト
 requests>=2.31.0
@@ -28,3 +28,6 @@ trafilatura>=2.0.0,<3.0.0
 
 # OGP/SNS 画像カード生成（infographic_maker.py）
 Pillow
+
+# テスト（tests.yml で実行）
+pytest>=7.0.0

@@ -28,21 +28,26 @@ AI News Bot is a **serverless, multi-stage news curation pipeline** that transfo
 
 **Key Value Proposition:** No servers to maintain, no databases to manage, no costs beyond API usage — the entire pipeline runs on GitHub Actions and deploys to GitHub Pages.
 
+<p align="center">
+  <img src="https://tadfuji.github.io/ai-news-bot/ogp_latest.png" alt="Auto-generated daily brief card" width="640">
+  <br><sub>▲ The daily brief card, auto-generated every morning (real data, OGP image)</sub>
+</p>
+
 ### What It Does
 
 | Stage | Time (JST) | Process | Output |
 |-------|-----------|---------|--------|
-| **Discovery** | 03:00 | Crawl 36 RSS feeds, keyword scoring | ~100 raw candidates |
-| **1st Pass** | 03:00 | Gemini analysis: translate, score, classify | Top 30 scored articles |
+| **Discovery** | 03:00 | Crawl 66 RSS feeds, keyword scoring | ~100 raw candidates |
+| **1st Pass** | 03:00 | Gemini analysis: translate, score, classify | Top 50 scored articles |
 | **2nd Pass** | 07:00 | Editorial curation: theme, commentary, dedup | Final Top 10 brief |
 | **Delivery** | 07:00 | Multi-channel distribution | Web, LINE, X (Twitter) |
 | **Weekly** | Sun 09:00 | AI-written essay-style column | Column + LINE push |
 
 ### Delivery Channels
 
-- 🌐 **[GitHub Pages Portal](https://tadfuji.github.io/ai-news-bot/)** — Daily & Global archive with dark-mode UI
-- 📱 **LINE** — Top 3 push notification with share button (Flex Message)
-- 🐦 **X (Twitter)** — Long-form thread with link-in-reply strategy
+- 🌐 **[GitHub Pages Portal](https://tadfuji.github.io/ai-news-bot/)** — Dark-mode archive with OGP images, sitemap.xml, RSS feed, JSON-LD structured data, and static prerendering
+- 📱 **LINE** — Top 3 Flex Carousel cards (per-article buttons, action items, share)
+- 🐦 **X (Twitter)** — Thread format + OGP image card (toggle via `X_THREAD_MODE`)
 
 ---
 
@@ -51,7 +56,7 @@ AI News Bot is a **serverless, multi-stage news curation pipeline** that transfo
 ```mermaid
 graph TD
     subgraph "Data Sources"
-        RSS["36 RSS Feeds<br/>(ArXiv, HN, TechCrunch, NHK, etc.)"]
+        RSS["66 RSS Feeds<br/>(ArXiv, HN, TechCrunch, NHK, China media, Workspace, etc.)"]
     end
 
     subgraph "Stage 1 — 03:00 JST"
@@ -108,17 +113,21 @@ graph TD
 ```
 ai-news-bot/
 ├── .github/workflows/          # GitHub Actions (daily, weekly, lint)
-│   ├── daily_rss_gemini.yml    #   Main pipeline: Stage 1 + Stage 2
-│   ├── collect_candidates.yml  #   Stage 1 only (03:00 JST)
+│   ├── collect_candidates.yml  #   Stage 1 (03:00 JST): RSS collection + 1st pass
+│   ├── daily_rss_gemini.yml    #   Stage 2 (07:00 JST): Morning brief + delivery
 │   ├── weekly_column.yml       #   Sunday column generation
-│   └── lint.yml                #   Code quality checks
+│   ├── tests.yml               #   pytest on push/PR
+│   └── lint.yml                #   ruff code quality checks
 │
-├── config.py                   # RSS sources (36), AI keywords, settings
+├── config.py                   # RSS sources (66), AI keywords, settings
 ├── rss_client.py               # RSS feed parser (feedparser wrapper)
+├── article_extractor.py        # Article body extraction (trafilatura)
+├── dedup.py                    # Semantic deduplication (Jaccard similarity)
 │
 ├── collect_rss_gemini.py       # Stage 1: Collect + Score + 1st Gemini pass
 ├── ai_client.py                # Gemini API client (prompts, fallback logic)
 ├── curate_morning_brief.py     # Stage 2: 2nd Gemini pass + orchestration
+├── collect_ai_news.py          # xAI Grok-based X research collection (experimental)
 │
 ├── build_pages.py              # Static site generator (JSON/HTML for Pages)
 ├── distribute_daily.py         # Multi-channel distribution orchestrator
@@ -131,7 +140,9 @@ ai-news-bot/
 ├── monitor_models.py           # Monthly AI model release tracker
 │
 ├── app.py                      # Streamlit dashboard (local admin UI)
-├── generators/                 # PDF report & video generators
+├── generators/                 # OGP image, PDF report & video generators
+├── tests/                      # pytest test suite
+├── ai_news.db                  # SQLite database (accumulated articles)
 ├── docs/                       # GitHub Pages (published directory)
 ├── output/                     # Intermediate artifacts (gitignored)
 │
@@ -182,6 +193,9 @@ cp .env.example .env
 | `X_CONSUMER_SECRET` | Optional | X (Twitter) API consumer secret |
 | `X_ACCESS_TOKEN` | Optional | X (Twitter) access token |
 | `X_ACCESS_TOKEN_SECRET` | Optional | X (Twitter) access token secret |
+| `XAI_API_KEY` | Optional | xAI (Grok) API key (for X research collection) |
+
+> **Note**: `X_THREAD_MODE` is a repository **variable** (Settings → Secrets and variables → Variables), not a secret. Set it to `1` to switch X posts to thread format (default is single post).
 
 ### Run Locally
 
@@ -217,7 +231,7 @@ The system uses a carefully designed **dual-pass architecture** with Gemini 3 Fl
 The AI acts as a **"Senior AI Trend Analyst"** targeting Japanese business leaders in their 40s. For each article, it:
 
 - Translates title and summary to natural Japanese
-- Assigns a category (最新技術 / 業務効率化 / 法規制・倫理 / etc.)
+- Assigns one of 7 categories (対話型AI / 画像・動画AI / 中国AI / ビジネス活用 / リスク・規制 / 日本市場 / 研究・技術)
 - Generates a "So What?" analysis explaining business impact
 - Scores importance on a 1-10 scale
 
@@ -240,8 +254,8 @@ Edit `config.py` to add new feeds:
 
 ```python
 RSS_FEEDS = [
-    "https://example.com/rss",
-    # ... 36 feeds currently configured
+    {"name": "Example", "url": "https://example.com/rss", "region": "US"},
+    # ... 66 feeds currently configured (US/EU/China/Japan)
 ]
 ```
 

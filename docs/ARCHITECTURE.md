@@ -1,52 +1,78 @@
 # System Architecture: AI News Bot
 
-This document outlines the technical design principles and data flow of the AI News Bot project.
+This document describes the technical design and data flow of the AI News Bot — a serverless pipeline that turns the daily flood of global AI news into a curated Japanese morning brief, running entirely on GitHub Actions.
 
-## 🏗 Modular Components
+## 🏗 Design Principles
 
-The system is designed with a strict separation of concerns (SoC), allowing each module to be independently tested or replaced.
+- **Separation of Concerns** — each stage (discovery, extraction, scoring, generation, distribution) is an independently testable module.
+- **Two-stage curation** — a cheap keyword pre-filter narrows hundreds of articles to a manageable set before the LLM acts as editor, keeping token cost bounded.
+- **Fail loud, degrade gracefully** — API failures fall back to pre-translated fields and raise a LINE alert + non-zero exit so failures are visible, not silent.
 
-### 1. Discovery Layer (`rss_client.py`)
-- **Responsibility**: Fetching raw data from heterogeneous RSS feeds.
-- **Handling**: Normalizes various RSS formats (XML, Atom, RSS 2.0) into a unified internal Python dictionary format.
-- **Concurrency**: (Planned) Using `asyncio` for faster concurrent fetching of many feeds.
+## 🔩 Modular Components
 
-### 2. Intelligent Filtering Layer (`collect_rss_gemini.py`)
-- **Phase A (Pre-Selection)**: Keyword-based scoring (`AI_KEYWORDS`). This stage filters 1000+ candidate articles down to a manageable "Top 30" context window for the LLM.
-- **Phase B (Contextual Selection)**: The LLM (Gemini 3 Flash Preview) acts as a high-level gatekeeper, using a complex prompt to judge relevance against a specific target persona (40-year-old Japanese business-person).
+### 1. Discovery (`rss_client.py`, `config.py`)
+- Fetches **66** heterogeneous RSS/Atom feeds (US / EU / China / Japan — news sites, newsletters, and lab blogs).
+- **Concurrency:** feeds are fetched in parallel via `ThreadPoolExecutor` (implemented).
+- Normalizes XML / Atom / RSS 2.0 into a unified internal dictionary.
 
-### 3. Generation Engine (`ai_client.py`)
-- **Translation & Contextualization**: Not just translating, but explaining *why* a globally relevant technological breakthrough matters locally in Japan.
-- **Structured Output**: Enforces strict JSON schema output from the LLM to ensure the downstream build process is deterministic and error-free.
+### 2. Pre-filtering (`collect_rss_gemini.py`)
+- Time filter (last 24h) + keyword scoring against `AI_KEYWORDS` — including Chinese terms so China sources are not scored 0.
+- Narrows to the top `STAGE1_MAX_ARTICLES` (**50**) candidates before the LLM is invoked.
 
-### 4. Build & Distribution Layer (`build_pages.py` & `distribute_daily.py`)
-- **Static Site Generation**: Uses Jinja2-like patterns to hydrate HTML templates with daily JSON data.
-- **Multi-Channel Push**: Orchestrates API calls to LINE Messaging API and Tweepy (X API) to broadcast the curated insights.
+### 3. Body extraction (`article_extractor.py`)
+- For the highest-scored candidates, fetches the full article body via `trafilatura` (a richer signal than the RSS summary), capped to keep prompt size bounded.
+
+### 4. Generation (`ai_client.py`)
+- Gemini (`gemini-3-flash-preview`) acts as a "Senior AI Trend Analyst": translates to Japanese, classifies into **7 categories** (対話型AI / 画像・動画AI / 中国AI / ビジネス活用 / リスク・規制 / 日本市場 / 研究・技術), scores 1–10, and writes a "So What?" (one-liner / why-important / action-item).
+- A response schema enforces **structured JSON output** so the downstream build is deterministic.
+
+### 5. Editorial curation & dedup (`curate_morning_brief.py`, `dedup.py`)
+- `dedup.py` collapses near-duplicate stories (Jaccard similarity over Japanese titles) so the same event reported by different outlets is bundled.
+- A 3-day rolling window removes already-delivered URLs.
+- Gemini then acts as **editor**: picks a daily theme, writes the morning comment, and selects the final **Top 10**. A source-diversity guardrail caps any single source at 3.
+
+### 6. Build & distribution (`build_pages.py`, `distribute_daily.py`, `line_notifier.py`)
+- `build_pages.py` generates the GitHub Pages assets: per-day JSON, `latest.json`, `archive.json`, columns — plus an **OGP image** (`generators/infographic_maker.py`), **JSON-LD** structured data, **static prerendering** (crawler-visible HTML), **`sitemap.xml`**, and an **RSS `feed.xml`**. Externally-sourced strings are sanitized (`_json_for_script`, `_safe_http_url`) to prevent XSS in the public pages.
+- `distribute_daily.py` posts to X (single or threaded via `X_THREAD_MODE`, with an OGP image card); `line_notifier.py` sends a LINE **Flex Carousel** with per-article buttons.
+
+## 🗄 State
+
+Compute is near-stateless, but state is persisted in two places:
+
+- **Git** — daily JSON/HTML reports are committed back into the repository; `docs/` is the durable "data lake".
+- **SQLite** (`ai_news.db`) — an accumulated article store used by the admin / analytics tooling (`db_utils.py`, `save_to_db.py`). *(Note: the pipeline is not fully stateless — this DB is the long-term store.)*
 
 ## 🔄 Data Pipeline Flow
 
 ```mermaid
 sequenceDiagram
     participant GH as GitHub Actions
-    participant RSS as RSS Feeds
-    participant GM as Google Gemini API
-    participant DB as JSON Data Lake (docs/)
-    participant SNS as LINE / X / Web (Pages)
+    participant RSS as 66 RSS Feeds
+    participant TR as trafilatura
+    participant GM as Google Gemini
+    participant DB as docs/ (JSON data lake)
+    participant SNS as LINE / X / Web
 
-    GH->>RSS: Fetch latest updates (Daily/Sentinel)
-    RSS-->>GH: Raw XML/Atom data
-    GH->>GH: Pre-Filtering (Keyword Match)
-    GH->>GM: Structured Prompt (Top 30 Candidates)
-    GM-->>GH: Curated JSON (Top 10 with "Why" reasons)
-    GH->>DB: Persist Daily Report (.json, .md)
-    GH->>SNS: Trigger Distribution & Rebuild Site
+    Note over GH: Stage 1 — 03:00 JST (collect_candidates.yml)
+    GH->>RSS: Parallel fetch (ThreadPoolExecutor)
+    GH->>GH: Time filter + keyword scoring (top 50)
+    GH->>TR: Extract article bodies
+    GH->>GM: 1st pass — translate / classify / score
+    GH->>DB: candidates_*.json
+
+    Note over GH: Stage 2 — 07:00 JST (daily_rss_gemini.yml)
+    GH->>GH: Merge + 3-day dedup + Jaccard dedup
+    GH->>GM: 2nd pass — editorial Top 10
+    GH->>DB: day JSON + OGP image + sitemap.xml + feed.xml
+    GH->>SNS: Distribute (LINE Carousel, X thread + image, Pages)
 ```
 
 ## 🛡️ Operational Reliability
 
-- **Graceful Error Handling**: The system includes fallbacks for API timeouts or malformed LLM responses.
-- **Stateless Execution**: Running entirely in GitHub Actions means there's no server state to manage. All state (history, reports) is persisted via Git commits into the repository itself.
-- **Scalable Context**: By using a two-stage filtering process, we overcome LLM token limits while still being able to monitor hundreds of feeds simultaneously.
+- **Retry with backoff** — Gemini calls retry up to 2× with exponential backoff.
+- **Graceful fallback** — on failure, pre-translated `title_ja` / `summary_ja` are used, a LINE alert fires, and the job exits non-zero (red CI).
+- **Isolated failures** — OGP / sitemap / feed generation and image upload are wrapped so a failure never blocks delivery.
+- **XSS hardening** — all externally-sourced strings are escaped before entering HTML, JSON-LD, or `href` attributes.
 
 ---
-*Created by the Antigravity Engineering Team.*
+*Maintained alongside the codebase. See the [README](../README.md) for usage and setup.*
