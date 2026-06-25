@@ -5,7 +5,7 @@
 google-genai>=0.3.0
 
 # 環境変数管理
-python-dotenv>=1.0.0
+python-dotenv>=1.2.2
 
 # LINE Messaging API
 line-bot-sdk>=3.0.0
