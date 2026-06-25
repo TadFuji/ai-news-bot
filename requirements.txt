@@ -31,7 +31,7 @@ requests>=2.31.0
 beautifulsoup4>=4.12.0
 
 # 記事本文抽出（RSS要約より厚い判断材料を取得）
-trafilatura>=2.0.0,<3.0.0
+trafilatura>=2.1.0,<3.0.0
 
 # テストフレームワーク
 pytest>=7.0.0
