@@ -2,22 +2,22 @@
 # pip install -r requirements.txt
 
 # RSSフィード解析
-feedparser>=6.0.0
+feedparser>=6.0.12
 
 # Google Gemini API
-google-genai>=0.3.0
+google-genai>=2.10.0
 
 # 日時解析
-python-dateutil>=2.8.0
+python-dateutil>=2.9.0.post0
 
 # 環境変数管理
-python-dotenv>=1.0.0
+python-dotenv>=1.2.2
 
 # LINE Messaging API
-line-bot-sdk>=3.0.0
+line-bot-sdk>=3.23.1
 
 # Marketing Engine (UI)
-streamlit>=1.30.0
+streamlit>=1.58.0
 
 # Reports & Media (Added during migration fix)
 edge-tts
@@ -27,11 +27,11 @@ reportlab
 Pillow
 lxml
 tweepy
-requests>=2.31.0
-beautifulsoup4>=4.12.0
+requests>=2.34.2
+beautifulsoup4>=4.15.0
 
 # 記事本文抽出（RSS要約より厚い判断材料を取得）
-trafilatura>=2.0.0,<3.0.0
+trafilatura>=2.1.0,<3.0.0
 
 # テストフレームワーク
-pytest>=7.0.0
+pytest>=9.1.1
