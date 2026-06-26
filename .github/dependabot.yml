@@ -30,3 +30,8 @@ updates:
       github-actions:
         patterns:
           - "*"
+    ignore:
+      # 日次コミットに使う action の大型(major)更新は見送る（本番コミット部分は
+      # lint/tests では検証されないため）。minor/patch と他actionの更新は受け取る。
+      - dependency-name: "stefanzweifel/git-auto-commit-action"
+        update-types: ["version-update:semver-major"]
