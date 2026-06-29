@@ -1,9 +1,14 @@
 name: "Stage 1: Collect Candidates"
 
 on:
-  schedule:
-    # 18:00 UTC = 03:00 JST
-    - cron: '0 18 * * *'
+  # 自動実行は停止（2026-06-29）。
+  # 理由: Stage 1 が集めた候補は output/ が .gitignore 対象のため別ジョブの
+  # Stage 2 へ引き継がれず、Stage 2 が 07:00 に自前で再収集していた。毎朝の
+  # Gemini 1 回分・実行時間が無駄になっていたため、毎日 03:00 の自動起動を止める。
+  # 配信(Stage 2 / Morning Brief)には影響しない。手動実行は下の workflow_dispatch で可能。
+  # 元に戻す場合は、下の schedule 2 行のコメントを解除する。
+  #   schedule:
+  #     - cron: '0 18 * * *'  # 18:00 UTC = 03:00 JST
   workflow_dispatch:
 
 permissions:
