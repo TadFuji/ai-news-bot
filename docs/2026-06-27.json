@@ -1,0 +1,107 @@
+{
+  "updated": "2026年06月27日",
+  "theme": "実装と経済性のフェーズへ",
+  "morning_comment": "AIの進化は、純粋な性能競争から「実務への実装」と「経済性」の競争へと移りました。",
+  "articles": [
+    {
+      "title": "OpenAI、次世代AIモデル「GPT-5.6」シリーズを発表。性能階層を刷新",
+      "category": "対話型AI",
+      "summary": "最高性能のSol、日常業務向けのTerra、高速・低コストのLunaの3種を発表。複雑なタスクを分担する新モードも導入され、数週間以内に一般公開される予定。",
+      "one_liner": "OpenAI、GPT-5.6発表",
+      "why_important": "性能の階層化により、ビジネスパーソンは用途やコストに応じた最適なAIモデルを選択できるようになります。",
+      "action_item": "業務を「思考の深さ」で分類し、どのモデルが最適か検討を始めてください。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/06/27/5229.html"
+    },
+    {
+      "title": "日本政府、フィジカルAIに10.5兆円を官民投資へ。2040年までの長期計画",
+      "category": "日本市場",
+      "summary": "製造・建設現場で動くAIや半導体分野に大規模投資。法規制緩和とインフラ整備を並行し、産業構造を直接変える社会実装を目指す。",
+      "one_liner": "日本、AIに10.5兆円投資",
+      "why_important": "フィジカルAIの推進は、日本の強みである製造現場のDXを劇的に加速させる可能性があります。",
+      "action_item": "自社の物理的な業務工程がAIとどう繋がるか、現場の課題を洗い出しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2606/27/news009.html"
+    },
+    {
+      "title": "Google SheetsにGeminiが統合。数式エラーの自動修復が可能に",
+      "category": "ビジネス活用",
+      "summary": "スプレッドシート内の数式エラーをAIが診断し、修正案を提示する機能が追加。データの構造分析によるエラー原因の解説も行う。",
+      "one_liner": "スプシの数式ミスをAIが修正",
+      "why_important": "表計算のミス削減と修正時間の短縮は、全デスクワークの品質と速度を底上げします。",
+      "action_item": "複雑な数式でエラーが出た際、Geminiの修正案を試す習慣をつけましょう。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/06/weekly-recap-06-26-2026.html"
+    },
+    {
+      "title": "Anthropicの最新モデル「Claude Mythos 5」が一部米国企業に解禁",
+      "category": "対話型AI",
+      "summary": "安全対策の確認を経て、特定の組織へ公開を許可。OpenAIの最新モデルに対抗する高性能モデルとして、企業のセキュリティやコーディング支援での活用が期待される。",
+      "one_liner": "Claude最新版が限定解禁",
+      "why_important": "トップエンドAIの選択肢が増えることで、企業はより自社の要件に合った高度なモデルを選定できます。",
+      "action_item": "セキュリティ要件の厳しいタスクの代替案として、Claudeの動向を注視しましょう。",
+      "source": "Semafor Technology",
+      "url": "https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies"
+    },
+    {
+      "title": "AIアシスタントへの2,000人によるハッキング実験。強固な安全性が実証",
+      "category": "リスク・規制",
+      "summary": "6,000回の攻撃試行でも秘密情報が漏洩しなかったことが報告された。最新モデルでの防御訓練が効果を上げ、導入時のセキュリティ懸念が払拭されつつある。",
+      "one_liner": "最新AIの強固な安全性が証明",
+      "why_important": "プロンプト攻撃への耐性向上は、企業が社内データ活用の範囲を広げるための心理的障壁を下げます。",
+      "action_item": "セキュリティ懸念で保留していたAI活用案を、再度検討リストに上げてください。",
+      "source": "Simon Willison's Weblog",
+      "url": "https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything"
+    },
+    {
+      "title": "Googleのライブ翻訳機能が爆速化。リアルタイム通訳が実用レベルに",
+      "category": "ビジネス活用",
+      "summary": "動画視聴や会議での翻訳レスポンスが劇的に向上し、細かなニュアンスも再現。言語の壁による情報格差が急速に解消されつつある。",
+      "one_liner": "Google翻訳が爆速・高品質化",
+      "why_important": "言語の壁が消滅することで、海外の一次情報へのアクセス速度がビジネスの大きな武器になります。",
+      "action_item": "海外の専門的な最新動画を、翻訳機能を使って視聴してみてください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/readitnow/2120324.html"
+    },
+    {
+      "title": "AIコスト削減のため、一部スタートアップがClaudeからDeepSeekへ移行",
+      "category": "中国AI",
+      "summary": "運用コスト削減を目的に、中国発のDeepSeekへ全面移行する企業が登場。推論コストが人件費を上回る中、コストパフォーマンスがビジネスの生存戦略となっている。",
+      "one_liner": "コスト減へ、中国AIへ移行",
+      "why_important": "性能だけでなく「推論コスト」が事業の利益率を分ける重要なKPIになりつつあります。",
+      "action_item": "自社で利用しているAIの月間コストを把握し、安価な代替モデルの可能性を探りましょう。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/ai-startup-lindy-ditched-claude-entirely-for-deepseek-saving-millions-as-cost-pressure-mounts-on-anthropic/"
+    },
+    {
+      "title": "OpenAIが自社製AIチップ「Jalapeño」開発。脱Nvidiaを加速",
+      "category": "ビジネス活用",
+      "summary": "供給リスク低減とコスト削減を目指し、Broadcomと協力して独自チップを開発。AI企業が自前のインフラを持つ動きが加速している。",
+      "one_liner": "OpenAIが独自チップ開発",
+      "why_important": "半導体の自前化は、将来的なAIサービスの料金安定化とパフォーマンス向上に直結します。",
+      "action_item": "特定ベンダーへの依存リスクを、自社のITインフラ構成でも意識しましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/"
+    },
+    {
+      "title": "国連で議論される「デジタル主権」。米国企業への依存をオープンソースで回避",
+      "category": "リスク・規制",
+      "summary": "巨大テック企業への過度な依存に対する懸念が表明され、オープンソースAIの活用が提唱された。特定の企業に縛られない戦略が国家・企業で重要視されている。",
+      "one_liner": "国連、AIの脱特定企業を提唱",
+      "why_important": "「デジタル主権」の意識は、グローバルに展開する企業のインフラ選定やリスク管理に影響します。",
+      "action_item": "依存度の高いクラウドサービス以外の、代替手段（OSS等）を定期的に調査しましょう。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/digital-sovereignty-un-global-push-to-replace-us-cloud-giants-with-open-source-tech/"
+    },
+    {
+      "title": "AIモデルが19日間不眠不休でコーディング。複雑なプログラムの再現に挑む",
+      "category": "研究・技術",
+      "summary": "16,000行のプログラム再構築に挑戦し、56%の成功率を記録。単純なコード生成から、自律的なソフトウェア開発エージェントへの進化が示された。",
+      "one_liner": "AIによる自律開発が進化",
+      "why_important": "AIは単なる「補助」から、長期間自走してプロジェクトを遂行する「エージェント」へと変わりつつあります。",
+      "action_item": "数日かかる定型プロジェクトを、AIエージェントで自動化できないか構想してみましょう。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/an-ai-model-programmed-nonstop-for-19-days-on-a-single-mirrorcode-task-that-cost-2600-to-run/"
+    }
+  ]
+}
