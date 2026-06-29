@@ -240,7 +240,7 @@ def send_to_line(message_text: str) -> bool:
 
 def send_news_to_line(articles: list[dict]) -> bool:
     """
-    AI ニュースを LINE に送信するメイン関数（カード形式 + シェアボタン）
+    AI ニュースを LINE に送信するメイン関数（テキスト形式）
 
     Args:
         articles: 処理済み記事リスト
@@ -254,8 +254,5 @@ def send_news_to_line(articles: list[dict]) -> bool:
     if not articles:
         return send_to_line("📰 本日のAIニュースはありませんでした。")
 
-    messages = [
-        create_news_carousel(articles, max_cards=3),
-        create_share_message(top_article=articles[0]),
-    ]
-    return _push_messages(messages)
+    message_text = format_news_for_line(articles)
+    return send_to_line(message_text)
