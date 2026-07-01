@@ -4,6 +4,7 @@
   <url><loc>https://tadfuji.github.io/ai-news-bot/archive.html</loc><priority>0.7</priority></url>
   <url><loc>https://tadfuji.github.io/ai-news-bot/column.html</loc><priority>0.6</priority></url>
   <url><loc>https://tadfuji.github.io/ai-news-bot/global.html</loc><priority>0.6</priority></url>
+  <url><loc>https://tadfuji.github.io/ai-news-bot/?json=2026-07-02.json</loc><priority>0.5</priority></url>
   <url><loc>https://tadfuji.github.io/ai-news-bot/?json=2026-07-01.json</loc><priority>0.5</priority></url>
   <url><loc>https://tadfuji.github.io/ai-news-bot/?json=2026-06-30.json</loc><priority>0.5</priority></url>
   <url><loc>https://tadfuji.github.io/ai-news-bot/?json=2026-06-29.json</loc><priority>0.5</priority></url>
