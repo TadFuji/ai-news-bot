@@ -14,7 +14,7 @@ python-dateutil>=2.9.0.post0
 python-dotenv>=1.2.2
 
 # LINE Messaging API
-line-bot-sdk>=3.23.1
+line-bot-sdk>=3.24.0
 
 # Marketing Engine (UI)
 streamlit>=1.58.0
