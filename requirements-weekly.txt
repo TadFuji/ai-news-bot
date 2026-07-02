@@ -8,4 +8,4 @@ google-genai>=2.10.0
 python-dotenv>=1.2.2
 
 # LINE Messaging API
-line-bot-sdk>=3.23.1
+line-bot-sdk>=3.24.0

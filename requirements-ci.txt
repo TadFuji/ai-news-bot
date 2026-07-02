@@ -15,10 +15,10 @@ python-dateutil>=2.9.0.post0
 python-dotenv>=1.2.2
 
 # LINE Messaging API
-line-bot-sdk>=3.23.1
+line-bot-sdk>=3.24.0
 
 # X (Twitter) API
-tweepy>=4.16.0,<5.0.0
+tweepy>=4.17.0,<5.0.0
 
 # HTTP リクエスト
 requests>=2.34.2
