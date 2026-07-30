@@ -5,7 +5,7 @@
 feedparser>=6.0.12
 
 # Google Gemini API
-google-genai>=2.10.0
+google-genai>=2.14.0
 
 # 日時解析
 python-dateutil>=2.9.0.post0
@@ -14,10 +14,10 @@ python-dateutil>=2.9.0.post0
 python-dotenv>=1.2.2
 
 # LINE Messaging API
-line-bot-sdk>=3.23.1
+line-bot-sdk>=3.25.0
 
 # Marketing Engine (UI)
-streamlit>=1.58.0
+streamlit>=1.60.0
 
 # Reports & Media (Added during migration fix)
 edge-tts
