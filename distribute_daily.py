@@ -69,14 +69,22 @@ def post_to_x_single(articles):
 
     # Aggregate all content
     full_text = "【AI NEWS TOP 10 🚀 デイリーダイジェスト】\n\n"
-    links_text = "【各記事のソースURL 🔗】\n\n"
+    # 記事URLを1本ずつ並べず Web 版へ一本化する（URL入り投稿は本数に関わらず定額のため、
+    # 導線を1つに絞って誘導力を上げる）
+    links_text = (
+        "🔍 ここから先が、本編です。\n\n"
+        "10件それぞれの詳しい解説、元記事へのリンク、そして過去のアーカイブまで、"
+        "すべてウェブ版にまとめてあります。\n"
+        "気になった1件だけでも、その背景まで読むと世界の見え方が変わります。\n\n"
+        "▼ 続きはこちらからアクセスしてください（無料・登録不要）\n"
+        f"{WEB_URL}"
+    )
 
     for i, article in enumerate(target_articles, 1):
         title = article.get('title_ja', 'No Title')
         summary = article.get('summary_ja', '')
         one_liner = article.get('one_liner', '')
         action_item = article.get('action_item', '')
-        url = article.get('url', '')
 
         # Main Post Body
         if one_liner:
@@ -89,10 +97,7 @@ def post_to_x_single(articles):
             full_text += f"👉 {action_item}\n"
         full_text += "\n"
 
-        # Link Collections for Reply
-        links_text += f"{i}. {url}\n"
-
-    full_text += "（詳細はリプライ欄のソースURLをご参照ください 👇）\n\n"
+    full_text += "（詳しくはリプライ欄をご覧ください 👇）\n\n"
     full_text += "#AI #Tech #AINews"
 
     # 文字数チェック
