@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月21日",
+  "theme": "AIの「道具」から「組織」への実運用へ",
+  "morning_comment": "エージェント技術、ついに「活用」から「実運用」の段階へと進化しています。",
+  "articles": [
+    {
+      "title": "中外製薬「社員1人にAIエージェント10体」で成果倍増へ",
+      "category": "ビジネス活用",
+      "summary": "2030年までに研究開発成果を倍増させる戦略を発表。全社員に1人あたり10体のAIエージェントを配布し、定型業務を任せることで人間はコア業務に集中。最大30%の生産性向上を目指す。",
+      "one_liner": "社員1人にAI10体の衝撃",
+      "why_important": "AIを単なるツールではなく、具体的な「労働力」として定義し、全社規模で展開する先進的な実例です。",
+      "action_item": "自分がAIに任せられる「10の定型業務」を書き出してみてください。",
+      "source": "ITmedia AI@",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2607/10/news007.html"
+    },
+    {
+      "title": "Googleが指南、AI検索時代に「不要なSEO対策」と「注力すべき点」",
+      "category": "ビジネス活用",
+      "summary": "AI検索（AI Overviews）の普及に伴い、ハッキング的なSEO対策は不要と断言。自社にしかない独自の体験、有益さ、AIが理解しやすい構造化の3点に注力すべきだと強調。",
+      "one_liner": "AI検索時代の新SEO三原則",
+      "why_important": "検索エンジン最適化から「AIエージェントに正しく理解される情報発信」への転換が、ビジネスの勝敗を分けます。",
+      "action_item": "自社サイトのコンテンツが「AIに構造的に理解されやすいか」を確認してください。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/21/news014.html"
+    },
+    {
+      "title": "NTT・ソフトバンク・サカナAIが国産AI開発でNVIDIAと連携",
+      "category": "日本市場",
+      "summary": "国内主要プレイヤーがNVIDIAの技術セット「NVIDIA Nemotron」を活用して開発を加速。日本の文化背景を反映したデータセットや通信特化型モデルの構築で「ソブリンAI」の確立を狙う。",
+      "one_liner": "日本のソブリンAIが加速",
+      "why_important": "日本独自の法規制や文化に最適化された国産インフラの整備は、国内企業のAI導入コストとリスクを下げます。",
+      "action_item": "国産AIモデルの最新ロードマップをチェックし、導入の選択肢に加えてみてください。",
+      "source": "ITmedia AI@",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/21/news036.html"
+    },
+    {
+      "title": "AIで「明確な成果」は16%のみ、製造業のPoC停滞が浮き彫りに",
+      "category": "ビジネス活用",
+      "summary": "AIへの期待が高い一方で成果を得ているのは16%に留まる。製造業では現場データのデジタル化遅れが壁となっており、AIアプリへの投資よりデータ基盤の全社統合が優先課題。",
+      "one_liner": "製造業AIの壁はデータ基盤",
+      "why_important": "AIブームの影で、成果を出す企業と出せない企業の「データ基盤の差」が決定的に広がりつつあります。",
+      "action_item": "業務で扱う「物理的な情報」が正しくデジタル化されているか、現場を再点検してください。",
+      "source": "ITmedia AI@",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2607/21/news048.html"
+    },
+    {
+      "title": "AIを「道具」ではなく「組織」として運用する個人開発者の手法",
+      "category": "ビジネス活用",
+      "summary": "AIに秘書や監査役といった「役職」を与え、JSON形式の「発注書」で指示を出す手法が注目。AIが勝手に動く事故を防ぎ、個人が多人数組織のように振る舞える。",
+      "one_liner": "AIを役職で動かす新手法",
+      "why_important": "AIに具体的な権限と検収ルールを与えることで、個人の生産性をチーム規模まで拡張できる時代です。",
+      "action_item": "AIへの指示を「お願い」ではなく、明確な「役割付の業務命令書」に変えてみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/ai_shihan/articles/hire-eight-ai-employees"
+    },
+    {
+      "title": "ソニー・ミュージック、AI作曲のUdioを3万曲の著作権侵害で提訴",
+      "category": "リスク・規制",
+      "summary": "ソニーなどがAI音楽生成Udioを提訴。3万曲以上の楽曲を無断学習に使用したとし、1作品あたり最大15万ドルの賠償を要求。一方で和解・提携の動きもあり、対立と共生が混在。",
+      "one_liner": "音楽AI著作権、3万曲の提訴",
+      "why_important": "著作権保護とAI利活用の境界線が司法によって確定されつつあり、企業の知的財産戦略に影響します。",
+      "action_item": "自社でAI生成物を利用する際の「著作権ガイドライン」を今一度確認してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/968375/sony-udio-lawsuit-songs-ai-copyright"
+    },
+    {
+      "title": "トランプ政権のAI担当官が相次ぎ辞任、米国AI政策に不透明感",
+      "category": "リスク・規制",
+      "summary": "AI標準・革新センターの所長が任命3ヶ月で辞任。政府内でのAI安全性や中国製モデルへの規制を巡る議論の紛糾が背景にあり、司令塔不在が米国の規制方針に影響する懸念。",
+      "one_liner": "米国AI政策、司令塔不在の懸念",
+      "why_important": "世界最大のAI市場である米国の規制の揺らぎは、グローバル展開する企業のAIガバナンスに直結します。",
+      "action_item": "米国のAI安全性に関する最新の法案動向を、ニュースアラートに登録して注視してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/20/trumps-latest-ai-czar-has-already-resigned/"
+    },
+    {
+      "title": "映画『第9地区』監督、全編AI生成の13分短編映画を公開",
+      "category": "画像・動画AI",
+      "summary": "ニール・ブロムカンプ監督が、動画生成AI「Seedance 2.0」のみで制作されたSFホラーを公開。テキストプロンプトでフレームを制御し、従来の制作プロセスを大幅に効率化。",
+      "one_liner": "巨匠が描く全編AI映画の衝撃",
+      "why_important": "クリエイティブの最高峰でもAIが「制作の主役」になり得ることを示し、職能の再定義を迫っています。",
+      "action_item": "最新の動画生成AIに触れ、数秒のショートクリップを自ら作成してみてください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/district-9-director-neill-blomkamp-releases-first-short-film-made-entirely-with-ai-video-generation/"
+    },
+    {
+      "title": "AIエージェントの相互接続を容易にする新プロトコル「MCP」が更新",
+      "category": "研究・技術",
+      "summary": "AIモデルと外部ツール間のデータ通信規格「Model Context Protocol」がアップデート。大規模運用を低コスト化し、Slackや社内DBを横断して働くエージェントの普及を後押し。",
+      "one_liner": "AI接続の標準規格が進化",
+      "why_important": "異なるAI間の連携が標準化されることで、社内システムを横断して自律的に動くAIの導入が現実味を帯びます。",
+      "action_item": "社内の異なるツール（SlackやSalesforce等）をAIで自動連携するシナリオを検討してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/20/ais-most-important-protocol-is-getting-a-little-bit-easier-to-use/"
+    },
+    {
+      "title": "中国発AI「Kimi」の需要爆発で提供一時停止、米国の規制論再燃",
+      "category": "中国AI",
+      "summary": "スタートアップMoonshot開発の「Kimi K3」が性能の高さを背景に需要急増。リソース不足で新規停止に追い込まれたが、米国側は高性能な中国AIへのアクセス制限を検討開始。",
+      "one_liner": "中国AI、需要爆発で供給制限",
+      "why_important": "中国発AIが米国トップクラスに到達しており、地政学的な規制リスクと技術的な機会を注視する必要があります。",
+      "action_item": "日本から利用可能な中国発の最新AIモデルを1つ、試験的に試用してみてください。",
+      "source": "Semafor Technology",
+      "url": "https://www.semafor.com/article/07/20/2026/demand-for-chinese-ai-strains-compute"
+    }
+  ]
+}

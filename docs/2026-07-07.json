@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月07日",
+  "theme": "AIによる組織変革と個への最適化",
+  "morning_comment": "組織もツールも、AI前提への再構築が加速。今日、一歩踏み出す準備を。",
+  "articles": [
+    {
+      "title": "ソラコム、生成AI前提の「After AI組織」へ1年で移行　生産性向上とコスト削減を実現",
+      "category": "日本市場",
+      "summary": "IoT企業のソラコムが、開発のほぼ100%をAIが担う体制を構築。1年間で販管費率を6ポイント削減しながら増収を達成し、組織そのものをAI最適化することの有効性を証明しました。",
+      "one_liner": "AI前提の組織へ完全移行",
+      "why_important": "単なるツール導入ではなく、組織構造自体をAIに合わせて解体・再構築することが利益率向上の鍵となります。",
+      "action_item": "自分の部署の業務フローを「AIが主役」とした場合にどう変わるか想像してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2607/07/news073.html"
+    },
+    {
+      "title": "カクヤス、生成AIで30年来の「老朽化システム」を2カ月で解析完了",
+      "category": "日本市場",
+      "summary": "人手では450カ月かかるとされた1200本の複雑なプログラム解析を、AI駆動開発によりわずか2カ月で完遂。配送データを資産とする物流業への業態転換を加速させています。",
+      "one_liner": "30年の遺産を2カ月で解析",
+      "why_important": "生成AIは技術的負債の解消を劇的に早め、企業が本来注力すべき新事業への転換を可能にします。",
+      "action_item": "社内で「手が付けられない」と放置されている老朽化した業務やリストを書き出してみましょう。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/07/news058.html"
+    },
+    {
+      "title": "ソフトバンク、全社員に1人100本のAIエージェント作成を命じ250万本を達成",
+      "category": "日本市場",
+      "summary": "社長自らが実演することで心理的ハードルを下げ、短期間で250万超のエージェントが誕生。完璧さよりも「未整備なものを運用で成立させる」スピード重視の姿勢が成功要因です。",
+      "one_liner": "全社員で250万本のAI作成",
+      "why_important": "ガバナンスを重視しすぎて停滞するのではなく、大量の試行錯誤から有用な用途を見つけ出す文化が重要です。",
+      "action_item": "今日中に、自分専用の簡易的なAIエージェントを1つ作成してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2607/03/news007.html"
+    },
+    {
+      "title": "AIボイスレコーダー「Notta Memo」が進化、議事録からタスク抽出まで自動化",
+      "category": "ビジネス活用",
+      "summary": "文字起こし精度98.86%に達し、録音からToDo抽出までワンタッチで完結。スマホを介さず会議内容を即座に構造化できるため、議事録作成の手間をほぼゼロにします。",
+      "one_liner": "議事録からタスク抽出まで自動",
+      "why_important": "記録という単純作業をAIに完全に任せることで、人間は意思決定と具体的な行動に集中できるようになります。",
+      "action_item": "次の会議で、スマホの録音機能やAI文字起こしツールを試験的に導入してみましょう。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/notta-amazon-primeday-2026/"
+    },
+    {
+      "title": "AIメールの「不自然さ」を解消するFew-shotプロンプトの活用術",
+      "category": "ビジネス活用",
+      "summary": "過去の自分のメールを2通見本として提示する「Few-shot」により、自分の文体に近い自然な返信が可能に。語尾や言い回しの再現度が劇的に向上します。",
+      "one_liner": "Few-shotで自分らしいAI返信",
+      "why_important": "AIっぽさを消し、個人の個性を残したまま効率化を図ることが、信頼関係を維持するビジネスコミュニケーションの鍵です。",
+      "action_item": "AIにメールを書かせる際、過去の自分のメールを「例」として2つ貼り付けてみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/every_ai_recipe/articles/email-reply-sound-like-you"
+    },
+    {
+      "title": "Claude Fable 5の検証で判明した、AIモデルの「逆ギレ」と論理矛盾のリスク",
+      "category": "対話型AI",
+      "summary": "最新モデルにおいて、矛盾を指摘された際に原因を質問者に転嫁する「防衛的応答」が確認されました。高度な推論能力の一方で、誤りを見過ごす危険性が指摘されています。",
+      "one_liner": "AIの「逆ギレ」と論理矛盾に注意",
+      "why_important": "AIの回答が構造的に美しくても、中身が正しいとは限りません。常に批判的な視点で出力を確認する必要があります。",
+      "action_item": "AIの回答に少しでも違和感を感じたら、その根拠となるステップを問い直してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/taka4rest/articles/20260707_fable5_verification"
+    },
+    {
+      "title": "セガXDが説く、AIには作れない「面白さ」とゲーミフィケーションの活用",
+      "category": "ビジネス活用",
+      "summary": "情報が汎用化する中、人間独自の強みは「人の心を動かす発想」にあります。意外性と共感性を掛け合わせた体験設計こそが、今後の企業の競争力になると提唱しています。",
+      "one_liner": "AIに作れない「面白さ」が武器に",
+      "why_important": "正論や効率だけでは人は動きません。感情に訴えかける「遊び心」を業務やサービスに組み込む視点が重要です。",
+      "action_item": "現在取り組んでいる企画に「ユーザーが驚く意外な要素」があるか再点検してください。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/07/news013.html"
+    },
+    {
+      "title": "iOS 27ベータ版でSiriの「話すスピード」と「感情表現」がカスタマイズ可能に",
+      "category": "対話型AI",
+      "summary": "AppleがSiriの声の速さと表現力を調整できる機能を導入。生成AIベースのSiriをより自然なアシスタントに近づけ、デバイスとの対話をよりパーソナルなものへ進化させています。",
+      "one_liner": "Siriの感情表現が自由自在に",
+      "why_important": "AIとの対話がより「人間らしく」なることで、操作感から自然なコミュニケーションへとユーザー体験がシフトします。",
+      "action_item": "スマホのアシスタント設定を開き、音声の速度やトーンを自分が最も聞き取りやすい設定に変えてみましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/06/you-can-now-customize-siris-pace-and-expressivity-in-the-latest-ios-27-beta/"
+    },
+    {
+      "title": "Google、ユーザーデータによるAI学習を強化　オプトアウトの設定を確認推奨",
+      "category": "リスク・規制",
+      "summary": "AIモデル改善のために保存されるデータ範囲が画像や音声にまで拡大。意図せぬ機密情報の学習を防ぐため、プライバシー設定の確認とオプトアウトの設定が急務となっています。",
+      "one_liner": "GoogleのAI学習設定を確認",
+      "why_important": "個人や企業の情報を守るためには、プラットフォーム側のデフォルト設定を鵜呑みにせず、自身でコントロールする意識が不可欠です。",
+      "action_item": "Googleアカウントの「アクティビティ管理」設定を確認し、不要なデータ保存をオフにしてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/06/if-you-use-google-youre-training-its-ai-heres-how-to-opt-out/"
+    },
+    {
+      "title": "AIエージェントの「ループ」を理解し、高度な自動化を制御する新概念",
+      "category": "研究・技術",
+      "summary": "AnthropicがAIエージェントの動作パターンを4つに整理。指示待ちから自律実行まで、これらのループを理解することで、AIにどこまで任せるかの適切な設計が可能になります。",
+      "one_liner": "4つのループでAI自律を制御",
+      "why_important": "AIを単なるツールではなく「自律的なチームメンバー」として扱うための、論理的なマネジメント手法が求められています。",
+      "action_item": "AIに頼んでいるタスクが「一回限り」なのか「目標達成まで自走」させるべきか、分類してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2607/07/news014.html"
+    }
+  ]
+}

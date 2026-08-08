@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月13日",
+  "theme": "実務定着とガバナンスの転換期",
+  "morning_comment": "AIは事務の肩代わりから自律操作へ。利便性と信頼性の両立が急務となっています。",
+  "articles": [
+    {
+      "title": "JR東海、生成AIで総務の「雑用」を標準化",
+      "category": "日本市場",
+      "summary": "JR東海の非IT部門である総務担当者らが、生成AIを活用して業務の標準化と効率化を実現。個人の残業削減という切実な目標を掲げ、AIを伴走させることで文系社員主導の業務改善に成功しました。",
+      "one_liner": "文系社員がAIで雑務を標準化",
+      "why_important": "非IT部門でも具体的な個人目標を掲げることでAI導入の実利が得られることを示しています。",
+      "action_item": "自分の業務の中で「他人に説明しづらい定型作業」をAIに書き出させてみましょう。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/13/news012.html"
+    },
+    {
+      "title": "OpenAI新モデル「GPT-5.6 Sol」が高性能化",
+      "category": "対話型AI",
+      "summary": "OpenAIが最新モデル「GPT-5.6 Sol」をリリース。従来モデルを凌駕する性能と、2.2倍の処理速度向上、27%のコスト削減を記録しており、実務導入における生産性向上が期待されています。",
+      "one_liner": "OpenAI新モデルSol、Claudeを凌駕",
+      "why_important": "主要モデルの性能向上が加速しており、既存のAIツールの乗り換え検討が必要な時期に来ています。",
+      "action_item": "現在のワークフローに新モデルを組み込んだ際のコスト削減効果を試算してください。",
+      "source": "Hacker News AI",
+      "url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6"
+    },
+    {
+      "title": "アップルがOpenAIを提訴、機密情報窃取を主張",
+      "category": "リスク・規制",
+      "summary": "アップルがOpenAIに対し、元従業員を介した組織的な営業秘密の持ち出しがあったとして提訴。未発表製品の設計図など1,000ページ超の機密情報が流出したと主張し、競合関係が鮮明化しました。",
+      "one_liner": "Apple、機密窃取でOpenAIを提訴",
+      "why_important": "提携の裏で激化する技術争奪戦は、企業のAI戦略における知財管理の重要性を再認識させます。",
+      "action_item": "自社のAI利用規約と機密情報の取り扱いルールを再確認しましょう。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/07/13/5284.html"
+    },
+    {
+      "title": "Claude Codeにウェブ操作可能なブラウザ機能",
+      "category": "対話型AI",
+      "summary": "Anthropicの開発者向けツール「Claude Code」にブラウザ機能が統合。AIが自ら外部サイトを閲覧・クリックし、ドキュメント調査や不具合確認を自律的に行えるようになりました。",
+      "one_liner": "Claude、自律的なブラウザ操作が可能に",
+      "why_important": "AIが情報を「読む」だけでなく「操作」する段階に入り、調査業務の自動化が劇的に進みます。",
+      "action_item": "エンジニアチームにClaude Codeのブラウザ機能の検証を依頼してください。",
+      "source": "Anthropic",
+      "url": "https://the-decoder.com/claude-code-now-has-a-built-in-browser-that-lets-the-ai-read-click-and-type-on-external-websites/"
+    },
+    {
+      "title": "AIの使い道の半分は「仕事のための仕事」",
+      "category": "ビジネス活用",
+      "summary": "Anthropicの調査により、AI利用の約半分が報告書作成や資料整理などの周辺業務であることが判明。創造的活動よりも、心理的負担の大きい事務作業の肩代わりとして価値を発揮しています。",
+      "one_liner": "AIの主用途は「やりたくない事務作業」",
+      "why_important": "創造性よりも、誰もが避けたがる事務作業の効率化こそがAI導入の最短ルートです。",
+      "action_item": "部署内で「やりたくない事務作業リスト」を作り、AIで自動化できないか検討しましょう。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/claude-coworks-biggest-use-case-is-the-mundane-office-work-nobody-wants-to-own-anthropic-says/"
+    },
+    {
+      "title": "LinkedInの長文投稿、4割がAI生成と判明",
+      "category": "ビジネス活用",
+      "summary": "主要SNSの調査で、LinkedInの長文投稿の約41%がAI生成であることが判明。質の低いコンテンツの増殖がビジネスSNSの信頼性を損なう懸念が広がっています。",
+      "one_liner": "LinkedIn投稿の4割がAI生成と判明",
+      "why_important": "AIコンテンツの氾濫により、個人の発信における「人間味」や「信頼性」の価値が相対的に高まっています。",
+      "action_item": "AIを活用する際も、自分の言葉や独自の視点を最後に必ず付け加えるよう意識しましょう。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/linkedin-is-the-undisputed-king-of-long-form-ai-slop-according-to-a-study-spanning-five-platforms/"
+    },
+    {
+      "title": "自律的なAI開発手法「ループ・エンジニアリング」",
+      "category": "研究・技術",
+      "summary": "Karpathy氏が提唱する、AIが目標達成まで試行錯誤を繰り返す手法が注目されています。検証や状態保持を組み込み、自律的に改善を繰り返させることで学習効率を向上させます。",
+      "one_liner": "Karpathy氏提唱の自律的開発手法",
+      "why_important": "単発指示から「自律的な改善ループ」へのパラダイムシフトが、AIの性能を限界まで引き出します。",
+      "action_item": "AIへのプロンプトに「自分で検証して改善を繰り返せ」というロジックを組み込んでみてください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/07/12/guide-to-loop-engineering/"
+    },
+    {
+      "title": "アップル、AI特化の「M7 Ultra」チップ開発を加速",
+      "category": "日本市場",
+      "summary": "Apple Intelligenceを支える強力なAIチップ「M7 Ultra」の開発が進行中。最大1.5TBのメモリをサポートし、高度なAI処理を端末内で完結させるオンデバイス戦略を強化します。",
+      "one_liner": "Apple、AI特化のM7チップ開発を加速",
+      "why_important": "オンデバイスAIの進化により、プライバシーを保ちつつ高度な処理を行う環境が整いつつあります。",
+      "action_item": "クラウド経由ではなく、手元の端末で完結させたい重要データの処理範囲を整理しましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra"
+    },
+    {
+      "title": "オープンソースAIに規制の危機、余命6ヶ月か",
+      "category": "リスク・規制",
+      "summary": "米国政府内で、中国の台頭や安保上の懸念からオープンソースAIの公開を制限する議論が加速。半年以内に政府審査を求める規制が導入される可能性があり、開発の将来に不透明感が漂っています。",
+      "one_liner": "OSモデル規制、中国との競争が背景に",
+      "why_important": "オープンソースモデルの公開制限は、スタートアップの技術選定や地政学的リスクに直結します。",
+      "action_item": "特定のモデルに依存せず、代替可能なライブラリや手法を常に把握しておきましょう。",
+      "source": "Interconnects AI",
+      "url": "https://www.interconnects.ai/p/6-months-to-live-for-open-models"
+    },
+    {
+      "title": "Meta、同意なしのAI画像生成機能を急遽廃止",
+      "category": "リスク・規制",
+      "summary": "Instagramで他人の画像を勝手に生成できる「Muse Image」機能が批判を受け廃止に。倫理性やディープフェイク悪用の懸念に対し、プラットフォーマーは厳しい対応を迫られています。",
+      "one_liner": "Meta、同意なきAI画像生成機能を廃止",
+      "why_important": "AIの利便性よりも倫理とプライバシーが優先される潮流は、サービス開発の必須条件です。",
+      "action_item": "自社のAIサービスにおいて、ユーザーの同意プロセスに不備がないか法務と確認しましょう。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/meta-kills-muse-image-feature-that-let-anyone-generate-ai-photos-of-instagram-users-without-consent/"
+    }
+  ]
+}

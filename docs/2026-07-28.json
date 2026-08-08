@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月28日",
+  "theme": "チャットから実行へ、自律エージェントの夜明け",
+  "morning_comment": "AIは「相談相手」から「実務の担い手」へ。自律的な活用の準備を始めましょう。",
+  "articles": [
+    {
+      "title": "AI活用は「対話」から、仕事を代行する「エージェント」へ移行",
+      "category": "対話型AI",
+      "summary": "ChatGPTの「Work」モードやClaudeの「Cowork」に見られるように、AIに操作権限を与えてタスクを完遂させる「エージェント型」へのシフトが進んでいます。",
+      "one_liner": "AIはチャットから「実務代行」の段階へ",
+      "why_important": "人間は「作業者」から「AIの監督官」への役割変更を迫られています。業務の丸投げではなく、適切な指示と監督が不可欠です。",
+      "action_item": "ルーチン作業を数時間任せられるAI設定やプロンプトを検討してみてください。",
+      "source": "Simon Willison's Weblog",
+      "url": "https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/#atom-everything"
+    },
+    {
+      "title": "Microsoft 365 Copilotが「業務の文脈」を理解する仕組みを強化",
+      "category": "ビジネス活用",
+      "summary": "新機能「Work IQ」により、組織特有のルールや過去の経緯を解析。ユーザーが細かく説明しなくても、文脈を汲み取った資料作成や進捗報告が可能になります。",
+      "one_liner": "組織の文脈を汲む究極のAI秘書",
+      "why_important": "AIが「社内の空気」を読んで動く時代になります。背景を説明する手間が減り、本質的な意思決定に集中できます。",
+      "action_item": "Copilotに過去のやり取りを前提とした資料のドラフト作成を依頼してみましょう。",
+      "source": "ITmedia AI Plus",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2607/28/news030.html"
+    },
+    {
+      "title": "老舗ホテルのDX成功例：AI活用で経理をパート1名・週3日体制に",
+      "category": "日本市場",
+      "summary": "香川県のホテル「川六」が、AIとクラウド化により年商30億円規模の経理を劇的に効率化。現在はAIエージェントによる完全自動化も視野に入れています。",
+      "one_liner": "老舗ホテルの経理をパート1名で完結",
+      "why_important": "中小企業でも、徹底したペーパーレスとAI導入により、数万時間単位の業務削減が可能であることを証明しています。",
+      "action_item": "毎日発生している「紙とハンコ」の作業を1つだけデジタル化する計画を立てましょう。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/28/news017.html"
+    },
+    {
+      "title": "オードリー・タン氏が説く、日本AIが世界に勝つための「フィジカルAI」戦略",
+      "category": "日本市場",
+      "summary": "米中の巨大モデル競争に対し、日本は現場の職人技をエッジAIに組み込む「物理世界を動かすAI」にこそ勝機があると提言しました。",
+      "one_liner": "日本の勝機は「現場の職人技」×AI",
+      "why_important": "ソフトウェア単体ではなく、実社会の現場にある「暗黙知」をAI化することが、日本独自の競争力になります。",
+      "action_item": "自社の現場にしかない、まだデータ化されていない「熟練の技」をリストアップしてください。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/28/news032.html"
+    },
+    {
+      "title": "イーソル、乗員の要求に合わせてAIが車載アプリを自動生成する技術を披露",
+      "category": "日本市場",
+      "summary": "ドライバーの自然言語での要求に応じ、AIエージェントがその場で車載アプリをプログラミングし実行する「意思を汲むAI」を公開しました。",
+      "one_liner": "乗員の意思で車載アプリをその場で生成",
+      "why_important": "固定されたインターフェースではなく、ユーザーの意図に即応して機能が生成される「動的な体験」が主流になります。",
+      "action_item": "「こんな機能が今すぐ欲しい」とAIに話しかけて解決するシーンを想像してみましょう。",
+      "source": "ITmedia AI Plus",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2607/28/news056.html"
+    },
+    {
+      "title": "Claudeのチャット共有リンクがGoogle検索に流出",
+      "category": "リスク・規制",
+      "summary": "Anthropicの共有機能で作成されたリンクが検索エンジンにインデックスされ、機密情報が含まれる会話が第三者から閲覧可能になっていたことが判明しました。",
+      "one_liner": "共有リンクから機密情報が検索可能に",
+      "why_important": "利便性とリスクは表裏一体です。機密情報を含むAIとの対話は、共有設定に細心の注意を払う必要があります。",
+      "action_item": "過去に作成したAIのチャット共有リンクが残っていないか、設定を総点検してください。",
+      "source": "BBC Technology",
+      "url": "https://www.bbc.co.uk/news/articles/cly5qgjk5ywo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "「1つのAIへの依存は危険」マイクロソフトCEOが企業に警告",
+      "category": "ビジネス活用",
+      "summary": "サティア・ナデラCEOは、特定のAIモデルへの過度な依存を避け、用途に応じて複数のモデルを使い分ける「制御権」の保持を強調しました。",
+      "one_liner": "特定のAIモデルへの過度な依存に警告",
+      "why_important": "AIエージェントが社内の中枢を担う今、1社のインフラ停止が全業務停止に繋がるリスクを回避すべきです。",
+      "action_item": "メインで使っているAI以外に、代替可能なツール（ClaudeやGemini等）を1つ確保しましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/27/satya-nadella-says-companies-that-trust-one-ai-for-everything-may-not-survive/"
+    },
+    {
+      "title": "マイクロソフト、脆弱性修正に特化した初のセキュリティAIモデルを発表",
+      "category": "リスク・規制",
+      "summary": "「MAI-Cyber-1-Flash」を導入。100以上のAIエージェントが連携して自動でバグをスキャンし、従来の汎用モデルより高度な防御を実現します。",
+      "one_liner": "脆弱性修正に特化した防御用AIが登場",
+      "why_important": "攻撃側もAIを駆使する中、防御の自動化は企業の持続可能性に直結する重要なインフラ投資となります。",
+      "action_item": "自社のITセキュリティ担当と、AIを活用した脆弱性診断の導入可能性について話し合いましょう。",
+      "source": "Ars Technica AI",
+      "url": "https://arstechnica.com/security/2026/07/microsoft-unveils-ai-security-tools-it-says-outperform-competing-platforms/"
+    },
+    {
+      "title": "NVIDIAやMSら30社、AIの脆弱性を守る「オープン安全同盟」を設立",
+      "category": "リスク・規制",
+      "summary": "オープンソースAIの安全性を向上させるための連合を設立。モデルの脆弱性修正ツールや安全なデータ形式の共通化を推進します。",
+      "one_liner": "NVIDIAらがAI脆弱性守る連合設立",
+      "why_important": "業界全体で安全規格が統一されることで、企業が安心してAIを導入できる環境が整い始めています。",
+      "action_item": "自社で利用しているオープンソースAIの安全情報や最新のパッチ状況を一度確認してください。",
+      "source": "ITmedia AI Plus",
+      "url": "https://www.itmedia.co.jp/news/articles/2607/28/news059.html"
+    },
+    {
+      "title": "ロッテ、AIで自分の顔を「ビックリマン風」にするサービスを開始",
+      "category": "日本市場",
+      "summary": "生成AIを活用し、ユーザーの顔をビックリマン風キャラに変換してグッズ化。企業のIPと最新AIを組み合わせたマーケティングの成功例です。",
+      "one_liner": "ビックリマン風AIでIP体験を個人化",
+      "why_important": "AIによる「自分専用」の体験提供は、ファンの愛着を高め、高単価な限定ビジネスを創出する強力な武器になります。",
+      "action_item": "自社のサービスやキャラクターをAIで「個人化」できないか、アイデアを出してみましょう。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/28/news023.html"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "updated": "2026年08月02日",
+  "theme": "実務・実生活に溶け込むAIエージェントの本格普及",
+  "morning_comment": "AIが単なるツールを超え、業務と生活の自律的なパートナーへと進化を始めています。",
+  "articles": [
+    {
+      "title": "OpenAIがアクティブユーザー10億人突破、GPT-5.6シリーズを値下げ",
+      "category": "対話型AI",
+      "summary": "OpenAIの月間アクティブユーザーが10億人を超え、推論効率の向上により最新モデルの大幅な値下げが発表されました。CFOはトークンではなく「問題解決の成果」の重要性を強調しています。",
+      "one_liner": "AI利用10億人突破、大幅値下げ",
+      "why_important": "推論効率の向上による値下げは、大量の文書処理や複雑なワークフローのAI化を経済的に可能にします。",
+      "action_item": "過去にコスト面で見送ったAI自動化プロジェクトの予算を再試算してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/article/2608/02/2000000346/"
+    },
+    {
+      "title": "AIエージェントを安全に本番投入するための12の設計チェックリスト",
+      "category": "ビジネス活用",
+      "summary": "チャットから自律的なエージェント利用への移行に伴い、MCP対応や権限分離、監査ログ保存など、ビジネス実装に必須のセキュリティ要件がガイドライン化されました。",
+      "one_liner": "AIエージェントの安全基準が策定",
+      "why_important": "AIが自律的にツールを動かすフェーズでは、従来のセキュリティ対策を超えた「権限分離」の設計が不可欠です。",
+      "action_item": "自社で利用中のAIツールに「管理者承認なしの外部連携」がないか棚卸ししましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/bambampurin/articles/2026-07-28-tech-daily"
+    },
+    {
+      "title": "Microsoft Copilotを狙う自動増殖型ワームの脅威が判明",
+      "category": "リスク・規制",
+      "summary": "文書内に隠されたプロンプトがCopilotを介して他のファイルへ拡散するワーム型攻撃が実証されました。AIが生成・利用する文書を通じた新たな感染リスクが浮き彫りになっています。",
+      "one_liner": "Copilotを狙う新型ワームが判明",
+      "why_important": "AIが生成・処理するデータ自体が攻撃経路になるため、入力だけでなく出力の検証も重要度が増しています。",
+      "action_item": "外部から提供されたAI生成文書を扱う際、マクロと同様の警戒感を持って扱うルールを共有してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/a-security-researcher-built-a-self-spreading-worm-that-hides-inside-word-docs-and-hijacks-microsoft-copilot/"
+    },
+    {
+      "title": "2026年の最注目職種「FDE（現場配置型エンジニア）」の台頭",
+      "category": "ビジネス活用",
+      "summary": "AIを現場の業務フローに適合させる「Forward Deployed Engineer」が急増しています。現場の課題をプロダクトにフィードバックし、コードで解決する役割が求められています。",
+      "one_liner": "現場密着型エンジニア「FDE」台頭",
+      "why_important": "汎用AIを「使える道具」にするには、現場のドメイン知識をモデルに反映させる専門人材が鍵となります。",
+      "action_item": "部署内の「AIで解決できそうな不便」をリストアップし、エンジニアとの対話材料にしましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/akimitu_666/articles/forward-deployed-engineer"
+    },
+    {
+      "title": "ドイツ裁判所がAI音楽生成Sunoの著作権侵害を認定",
+      "category": "リスク・規制",
+      "summary": "独裁判所はSunoが学習データとして楽曲を無断利用したとし、著作権侵害を認めました。フェアユース等の例外規定も認められず、権利処理の厳格化が進む可能性があります。",
+      "one_liner": "AI音楽生成に著作権侵害の初判断",
+      "why_important": "生成AIの学習データに関する法的リスクが具体化し、商用利用におけるモデル選定の基準が厳格化します。",
+      "action_item": "音楽や画像生成AIを利用する際、規約で「権利処理済み」が明記されているか再確認してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/german-court-rules-ai-music-generator-suno-violated-copyrights-rejects-fair-use-defense/"
+    },
+    {
+      "title": "RAGは不要？Anthropicが選んだ「agentic search」の衝撃",
+      "category": "ビジネス活用",
+      "summary": "Claude Codeが採用した「agentic search」は、AIエージェントが自律的に検索ツールを駆使して情報を探す手法です。情報の更新性と信頼性の問題を解決する新潮流となります。",
+      "one_liner": "AIが自ら情報を探す次世代検索",
+      "why_important": "静的なDBを使わない検索手法は、情報の更新が激しい分野で圧倒的な優位性を持ちます。",
+      "action_item": "Claude等の最新ツールを使い、ドキュメントの「検索」ではなく「能動的な調査」を試行してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/akimitu_666/articles/did-graphs-replace-rag"
+    },
+    {
+      "title": "サム・アルトマンが提唱する「AI育児支援」と新製品戦略",
+      "category": "対話型AI",
+      "summary": "OpenAIは家庭向けの製品責任者を強化し、育児や家事などのパーソナルな領域にAIを浸透させる戦略を鮮明にしています。AIが生活の最も身近なアシスタントへと深化します。",
+      "one_liner": "AIが育児や家庭の運営をサポート",
+      "why_important": "仕事だけでなく生活の細部までAIが入り込むことで、可処分時間の使い方や家族のコミュニケーションが変化します。",
+      "action_item": "家族の予定管理や献立作成など、プライベートなタスクをAIに整理させてみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/08/01/sam-altman-is-still-making-the-case-for-parenting-via-chatgpt/"
+    },
+    {
+      "title": "ByteDanceが「Seedance 2.5」発表、動画と音声を同時に30秒生成",
+      "category": "中国AI",
+      "summary": "TikTok運営のByteDanceが、映像と音声を同時に30秒間生成できるAIモデルをリリースしました。マルチモーダル統合と生成時間の長さで世界をリードし始めています。",
+      "one_liner": "中国勢、動画・音声の統合生成で先行",
+      "why_important": "中国勢の技術力は非常に高く、特に動画と音声のシームレスな統合はクリエイティブ現場を劇的に変える可能性があります。",
+      "action_item": "ByteDanceの最新デモを確認し、現在の動画制作業務にどう転用できるか考えてみてください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/bytedances-seedance-2-5-generates-30-second-video-clips-with-built-audio/"
+    },
+    {
+      "title": "AIが数学の未解決問題を次々突破、新モデル「Astra」の実力",
+      "category": "研究・技術",
+      "summary": "OpenAIの新モデル「Astra」などが、数十年間未解決だった数学の難問を解明。AIが単純な言語生成を超え、高度な論理推論と創造的発見の領域で熟練の研究者級の能力を示しています。",
+      "one_liner": "AIが数学の難問を次々解決",
+      "why_important": "AIが論理的思考の限界を突破することで、研究開発や新素材開発などのR&D領域で破壊的な進歩が期待されます。",
+      "action_item": "複雑な数式や論理矛盾の検証など、人間が苦労していた思考タスクを最新モデルに依頼してみてください。",
+      "source": "Simon Willison's Weblog",
+      "url": "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything"
+    },
+    {
+      "title": "VRAM階級別ローカルLLM実測ベンチマーク（2026年7月版）",
+      "category": "日本市場",
+      "summary": "国内の検証環境で最新LLMの実行速度が測定されました。ハードウェアスペックに応じた最適モデルが提示され、クラウドを利用できない機密業務でのAI活用の指針となります。",
+      "one_liner": "機密業務に効くローカルAI比較",
+      "why_important": "ハード性能の向上により、機密データを外部に出さず手元で高度なAIを動かす選択肢が現実的になっています。",
+      "action_item": "ローカル環境で動作する軽量モデル（Qwen等）を自身のPCで試用し、オフライン性能を試してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/jissoku/articles/local-llm-vram-tier-2026-07"
+    }
+  ]
+}

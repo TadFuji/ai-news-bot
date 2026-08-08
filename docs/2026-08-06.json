@@ -1,0 +1,107 @@
+{
+  "updated": "2026年08月06日",
+  "theme": "実利主義へのシフトと自律型AIの光と影",
+  "morning_comment": "実利への体制移行と、自律型AIがもたらす新たな責任。",
+  "articles": [
+    {
+      "title": "ワークマン、生成AI導入で撮影効率化とアプリ開封率1.5倍を実現",
+      "category": "日本市場",
+      "summary": "ワークマンがGoogle Cloudの画像生成AIを導入し、ECサイトのコンテンツ制作を効率化。撮影ロケの遅延をAI生成画像で補完し、アプリ通知の開封率を向上させた実践的な活用事例です。",
+      "one_liner": "生成AIでEC撮影効率化、開封率1.5倍",
+      "why_important": "現場の課題解決にAIを組み込み、目に見える数値を出す「実利型」活用の好例です。",
+      "action_item": "自部署の定型業務で「画像生成」に置換可能な工程がないか探ってみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/article/2608/06/2000000370/"
+    },
+    {
+      "title": "Meta、自律型コーディングエージェント「Muse Code」公開",
+      "category": "ビジネス活用",
+      "summary": "Metaがターミナルで動作する開発支援AI「Muse Code」を公開。タスクの計画、実行、検証を自律的に行うエージェント機能を備え、大規模開発の効率化を目指します。",
+      "one_liner": "自律型AIがコードの計画から実行まで完結",
+      "why_important": "AIは単なる補助から、タスクを完遂する「エージェント」へと進化しています。",
+      "action_item": "「タスクを丸投げできるなら、まず何を頼むか」を言語化してみてください。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/08/06/5368.html"
+    },
+    {
+      "title": "Google DeepMind体制刷新、ハサビスCEOが退任し会長へ",
+      "category": "ビジネス活用",
+      "summary": "創業者のハサビス氏がCEOを退き会長に就任。後任には実務派が就き、GoogleはGeminiを中心とした製品実装重視の体制へ移行、AGI実現への加速を図ります。",
+      "one_liner": "ハサビス氏退任、Googleは実利重視へ",
+      "why_important": "研究主導から製品実装へのシフトは、AIが社会実装フェーズに入った象徴的な出来事です。",
+      "action_item": "自社のAI導入が「研究」で止まっていないか、製品実装の視点で点検しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/article/2608/06/2000000407/"
+    },
+    {
+      "title": "DeepMind、汎用知能(AGI)から超知能(ASI)へのロードマップ発表",
+      "category": "研究・技術",
+      "summary": "AIが超知能へ至る経路とボトルネックを整理した論文を公開。計算資源だけでなく、物理世界の実験やエネルギー供給が最大の制約になると冷静に分析しています。",
+      "one_liner": "超知能への道、物理の壁が最大の障壁に",
+      "why_important": "AIの進化を阻むのは計算力ではなく「現実世界」の制約であるという視点は戦略上重要です。",
+      "action_item": "エネルギーや物理インフラなど、AIを支える現実側のニュースにも目を向けましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2608/06/news015.html"
+    },
+    {
+      "title": "Metaの広告システムにAI生成の不適切画像が混入、信頼性に影",
+      "category": "リスク・規制",
+      "summary": "Metaの広告基盤で、AI生成による不適切画像を含む広告が配信。監視網を潜り抜けた事例として、企業のリスク管理やプラットフォームの責任が問われています。",
+      "one_liner": "AI生成の不適切広告、管理責任が問われる",
+      "why_important": "ブランド毀損は一瞬です。AI活用の便利さの裏にある倫理的リスク管理が急務となっています。",
+      "action_item": "自社でAI生成コンテンツを利用する際の「禁止事項」をチームで再確認しましょう。",
+      "source": "Hacker News AI",
+      "url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/"
+    },
+    {
+      "title": "AIが自己増殖する「ウイルス」に、サイバー脅威の新段階",
+      "category": "中国AI",
+      "summary": "中国の研究チームが、状況を判断して攻撃手法を変化させ、自己増殖する「AIワーム」のリスクを実証。セキュリティ対策も動的なAI対応が求められる時代に突入しました。",
+      "one_liner": "中国チームが実証、自己増殖するAIウイルス",
+      "why_important": "攻撃側もAI化する新時代。セキュリティ対策を静的なものから動的なものへ変える必要があります。",
+      "action_item": "社内の担当者に、AI特有の脆弱性対策の必要性を共有してみてください。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/ai-agents-could-act-like-computer-viruses-and-worms/"
+    },
+    {
+      "title": "BBC、SNSで拡散する中国の災害偽動画をAI解析",
+      "category": "中国AI",
+      "summary": "中国での災害時、生成AIによる巧妙な偽動画が拡散し社会混乱を招いている状況をBBCが報道。情報の真偽判断が困難になる中、個人のAIリテラシーが問われています。",
+      "one_liner": "AI偽動画が社会混乱、問われるリテラシー",
+      "why_important": "映像の真実性が失われる時代、情報の出所を徹底確認する組織文化が必要です。",
+      "action_item": "衝撃的な動画を見た際、複数の信頼できるメディアで裏取りをする習慣をつけましょう。",
+      "source": "BBC Technology",
+      "url": "https://www.bbc.co.uk/news/videos/ckg9d2egn11o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "Anthropic、独自のAIチップ開発チームを構築中",
+      "category": "ビジネス活用",
+      "summary": "Claude開発元のAnthropicが、外部依存を減らすため自社設計のAIチップ開発を開始。NVIDIA一強の市場で、計算リソースを自前確保する生存戦略が鮮明になっています。",
+      "one_liner": "Anthropicが自社チップ開発、脱NVIDIAへ",
+      "why_important": "演算リソースの確保はAI企業の生命線。垂直統合モデルへの移行が競争力の源泉となります。",
+      "action_item": "クラウドコストの増加を前提に、長期的なAI投資予算の立て方を見直してみましょう。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/08/06/5367.html"
+    },
+    {
+      "title": "Google、AIによるマーケティング分析ツール「Meridian」を公開",
+      "category": "ビジネス活用",
+      "summary": "ベイズ統計を用いたマーケティングミックスモデリング（MMM）ツールを公開。プライバシー規制でCookieが制限される中、AIでROIを最大化する次世代手法を提案します。",
+      "one_liner": "GoogleがAIマーケ分析ツールを無料公開",
+      "why_important": "Cookie規制後の広告効果測定において、統計とAIを駆使した分析が今後の標準になります。",
+      "action_item": "Meridianのドキュメントに目を通し、自社の分析に導入可能か検討しましょう。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/08/05/end-to-end-bayesian-marketing-mix-modeling-with-google-meridian-media-measurement-roi-analysis-and-budget-optimization/"
+    },
+    {
+      "title": "AI時代の資金調達、審査効率化で問われる「経営者の資質」",
+      "category": "ビジネス活用",
+      "summary": "金融機関の審査にAIが導入され効率化が進む一方、大規模融資では「人の判断」がより重要に。AIが普及するほど、経営者の理念や財務リテラシーが鍵を握ります。",
+      "one_liner": "AI審査時代、問われるのは「人の熱意」",
+      "why_important": "定量的評価がAI化されるほど、非言語的な「理念」や「ビジョン」が差別化要因になります。",
+      "action_item": "AIに代替できない自らの「強み」や「想い」を改めて言語化してください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2608/06/news014.html"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月10日",
+  "theme": "対話から完遂へ。実務に溶け込むAIエージェント",
+  "morning_comment": "AIは「調べる道具」から「仕事を任せる相棒」へと進化し、現場での活用が深まっています。",
+  "articles": [
+    {
+      "title": "OpenAIが「ChatGPT Work」発表、自律型エージェントで業務完遂へ",
+      "category": "対話型AI",
+      "summary": "チャットの枠を超え、アプリやファイルを横断してタスクを自律実行するエージェント機能を発表。スプレッドシート作成などを完成まで進めることが可能です。",
+      "one_liner": "AIが指示を自律的に完遂",
+      "why_important": "単なる回答生成から、アプリ操作を伴う実務代行へとフェーズが移行しました。管理職の事務負担を大幅に減らす可能性があります。",
+      "action_item": "数時間かかるルーチン作業をリストアップし、AIに任せられるか検討してください。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/07/10/5279.html"
+    },
+    {
+      "title": "ヒマラヤ、ベテランの接客ノウハウを学習した「AI副店長」を全店導入",
+      "category": "ビジネス活用",
+      "summary": "全国の店舗に、企業理念やベテランの接客スキルといった「暗黙知」を学習させたAIを導入。現場スタッフの判断をリアルタイムで支援します。",
+      "one_liner": "熟練の接客スキルをAI化",
+      "why_important": "属人化しがちな「熟練者の知恵」を組織の資産として平準化できる、実用的なAI活用事例です。",
+      "action_item": "自社のトップパフォーマーが持つ共通の「判断基準」を言語化してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/10/news046.html"
+    },
+    {
+      "title": "調査で判明、AIによるコスト削減目的の導入は「利益不変」が過半数",
+      "category": "リスク・規制",
+      "summary": "500社超の調査で、売上拡大目的の企業は利益増を実感する一方、コスト削減目的の多くは利益が変わらないという結果が出ました。",
+      "one_liner": "「攻め」のAI活用が利益を生む",
+      "why_important": "AIを単なる時短ツールではなく、付加価値や売上を生むための道具として捉え直す必要があります。",
+      "action_item": "AIを使って「新しい売上」を作るためのアイデアを一つ企画してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2607/10/news065.html"
+    },
+    {
+      "title": "OpenAIが新モデル「GPT-5.6」公開、低コストとサイバー防御力を追求",
+      "category": "研究・技術",
+      "summary": "最新モデルファミリーをリリース。トークン効率が54%向上し大幅に低価格化したほか、企業のITインフラを守るサイバーセキュリティ能力が強化されました。",
+      "one_liner": "低コスト・高セキュリティの新型",
+      "why_important": "コスト低下により、これまで予算やセキュリティ懸念で見送っていたAI活用が現実的な選択肢になります。",
+      "action_item": "過去にコストや安全面で断念したAI活用案を、新モデル前提で再考してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/"
+    },
+    {
+      "title": "NEC、AnthropicのClaudeを活用し商品企画を完全自動化する新サービス",
+      "category": "日本市場",
+      "summary": "購買データから商品企画や販促プランをAIが瞬時にレポート化するサービス。専門人材がいなくても、高度なマーケティング戦略の実行を可能にします。",
+      "one_liner": "商品企画をAIが完全自動化",
+      "why_important": "データ分析から立案までのPDCAサイクルが劇的に高速化し、市場の変化に即応できる体制が整います。",
+      "action_item": "自社の企画業務の中で、データ整理に時間を取られている部分を特定しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2607/10/news052.html"
+    },
+    {
+      "title": "OpenAI、Chrome拡張機能を強化しブラウザ上でのAI代行を促進",
+      "category": "対話型AI",
+      "summary": "ウェブページの要約やデータ抽出、ログイン代行までをブラウザ上で実行可能に。ユーザーの作業場所にAIが歩み寄る「統合型」の利便性を追求します。",
+      "one_liner": "ブラウザ操作をAIが代行",
+      "why_important": "別のタブでAIを開く手間が消え、ブラウザ上のあらゆる作業がシームレスに自動化されます。",
+      "action_item": "Chrome拡張機能を最新版に更新し、サイドバーでの操作感を試してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/openai-is-shutting-down-atlas-but-its-ai-browser-ambitions-are-still-growing/"
+    },
+    {
+      "title": "スター精密、Notion AIの全社導入でAI利用量が従来の4倍に増加",
+      "category": "ビジネス活用",
+      "summary": "Notion AIを日常ワークフローに組み込むことで、アクティブ率90%を達成。単体チャット型よりも統合型の方がAIの定着が進むことを示しました。",
+      "one_liner": "文書作成フローにAIを統合",
+      "why_important": "AIを別ツールとして使うのではなく、今ある作業場に溶け込ませることが活用促進の鍵です。",
+      "action_item": "普段使っているNotionやSlackなどのツール内にあるAI機能を一度試用してください。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2607/09/news171.html"
+    },
+    {
+      "title": "Meta、低価格な推論モデル「Muse Spark 1.1」でAIエージェント市場に参戦",
+      "category": "画像・動画AI",
+      "summary": "コーディングや複雑なPC操作など「エージェント型タスク」に特化した安価な新モデルを発表。開発者にとって新しい強力な選択肢となります。",
+      "one_liner": "格安の推論モデルで開発を加速",
+      "why_important": "高性能モデルの低価格化により、企業独自の高度な自動化システムを低コストで構築しやすくなりました。",
+      "action_item": "開発チームやIT担当者に、Metaの新モデルの検証を提案してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2607/10/2000000180/"
+    },
+    {
+      "title": "すかいらーく、AI接客で「デジタル化による寂しさ」をホスピタリティへ",
+      "category": "日本市場",
+      "summary": "配膳ロボット導入で減った「人との接点」を、AIキャラクターとの対話で補完。顧客の声をデータ化し、メニュー改善や店舗運営に活かします。",
+      "one_liner": "効率化と人情をAIで両立",
+      "why_important": "効率化で失われる顧客体験をAIで補完するという、日本的なホスピタリティの新しい形です。",
+      "action_item": "自社のサービスにおいて、デジタル化で「冷たくなった」と感じる部分がないか探しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/10/news022.html"
+    },
+    {
+      "title": "ソフトバンク、1.9万人規模の「全社RAG基盤」で業務数万時間を削減",
+      "category": "ビジネス活用",
+      "summary": "社内情報の安全な活用を可能にする検索拡張生成（RAG）基盤を構築。ガバナンスと利便性を両立し、大規模な業務削減効果を確認しました。",
+      "one_liner": "1.9万人規模の社内知識基盤",
+      "why_important": "社内独自の知識をAIに即座に反映させる仕組みは、大規模組織の競争力を左右するインフラになります。",
+      "action_item": "社内の過去資料やマニュアルが、AIですぐに検索できる状態にあるか確認しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2607/10/news002.html"
+    }
+  ]
+}

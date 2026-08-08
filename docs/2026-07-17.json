@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月17日",
+  "theme": "AIの実務浸透と次世代基盤の胎動",
+  "morning_comment": "実務へのAI統合が進む中、真の活用と安全性が問われています。",
+  "articles": [
+    {
+      "title": "国産マルチモーダルAI「FRONTia」が始動、経産省が主導する日本再起の旗印",
+      "category": "日本市場",
+      "summary": "経済産業省とNEDO、主要企業が参画するNoetraが、1兆パラメータ級の国産AI基盤モデル「FRONTia」の開発を開始。製造業やロボティクスなど、日本の強みであるフィジカル領域でのAI活用を加速させる国家プロジェクトです。",
+      "one_liner": "1兆規模の国産AI開発始動",
+      "why_important": "日本の製造業やロボティクスの知見をAI化する国家戦略であり、将来の産業競争力に直結します。",
+      "action_item": "自社の強みとなる独自のノウハウが、将来AI化可能か検討してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2607/17/news059.html"
+    },
+    {
+      "title": "Microsoft 365 Copilotが苦戦、法人利用率は5%未満にとどまる実態",
+      "category": "ビジネス活用",
+      "summary": "Microsoft 365の法人ユーザーにおける有料版Copilotの契約率が4.5%未満と低迷。月額30ドルのコストに見合う効果を企業が実感できていない現状が明らかになりました。",
+      "one_liner": "Copilot利用、法人でも1%弱",
+      "why_important": "AI機能が「あるだけ」では不十分。コストに見合う具体的な活用シナリオの構築が急務です。",
+      "action_item": "有料AIツールの導入前に、具体的な削減時間と期待効果を試算しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2607/17/news040.html"
+    },
+    {
+      "title": "AppleがOpenAIを提訴、ハードウェアの機密情報窃取を主張",
+      "category": "リスク・規制",
+      "summary": "AppleがOpenAIに対し、未発表プロトタイプなどの機密情報窃取で提訴。提携関係にある両社間の法的紛争は、今後のエコシステムに影を落とす可能性があります。",
+      "one_liner": "アップルがOpenAIを提訴",
+      "why_important": "テック界の巨頭間の紛争は、特定のAIサービスへの依存リスクと代替手段確保の重要性を示唆しています。",
+      "action_item": "特定のAIベンダーに依存しすぎず、代替手段を常に把握しておきましょう。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/uncanny-valley-podcase-apple-sued-openai-new-york-data-center-moratorium-cyclosporiasis-outbreak/"
+    },
+    {
+      "title": "GoogleのAIツール「NotebookLM」が「Gemini Notebook」に改称、コード実行も可能に",
+      "category": "対話型AI",
+      "summary": "Googleは「NotebookLM」を「Gemini Notebook」へ統合。セキュアな環境でのコード実行機能が追加され、アップロードした資料に基づいた高度なデータ分析が可能になりました。",
+      "one_liner": "NotebookLMが進化し改称",
+      "why_important": "リサーチと分析、コード実行がシームレスに統合され、データ駆動の意思決定をAIが加速させます。",
+      "action_item": "散在するプロジェクト資料をGemini Notebookに集約し、分析を試してください。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/07/17/5303.html"
+    },
+    {
+      "title": "Google Meetに「AI議事録」自動設定機能、3人以上の会議で自動開始が可能に",
+      "category": "ビジネス活用",
+      "summary": "Google MeetでAIノート作成を事前に管理者が自動設定できる新機能。3人以上の参加者がいる会議での自動起動が可能になり、議事録作成の標準化が進みます。",
+      "one_liner": "Google会議でAI議事録自動化",
+      "why_important": "議事録作成という「非付加価値業務」をゼロにし、組織全体の生産性を底上げする一歩となります。",
+      "action_item": "管理設定を確認し、定例会議でのAIノート自動化を検討してください。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/07/new-google-meet-take-notes-for-me-settings-for-admins-and-end-users.html"
+    },
+    {
+      "title": "Adobe Fireflyはなぜビジネスで「安全」か？商用利用の疑問に公式回答",
+      "category": "リスク・規制",
+      "summary": "Adobe Fireflyが商用利用に適している理由を解説。権利が明確な画像のみを学習し、アドビによる著作権侵害補償が提供される点がビジネス活用の鍵です。",
+      "one_liner": "商用利用に安全なAI画像生成",
+      "why_important": "法的リスクを最小化しつつ、クリエイティブ業務の高速化とコスト削減を両立させる模範例です。",
+      "action_item": "プレゼン資料の画像選定を、素材検索からFireflyでの生成に切り替えてみましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/special/2123096.html"
+    },
+    {
+      "title": "Google ChromeにGeminiが標準搭載、ブラウザのサイドバーで即座にAI相談",
+      "category": "ビジネス活用",
+      "summary": "ChromeブラウザにGeminiボタンが統合。サイト要約、タブ比較、履歴検索などがサイドバーで可能になり、最新のGemini 3.5 Flashによる高速応答が提供されます。",
+      "one_liner": "ブラウザ右上にAI相談ボタン",
+      "why_important": "ブラウザにAIが常駐することで、情報収集と分析のスタイルが根本から効率化されます。",
+      "action_item": "ChromeのサイドバーからGeminiを呼び出し、複数タブの情報を比較させてください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2125207.html"
+    },
+    {
+      "title": "AIエージェントの54%がセキュリティ事故を経験、権限管理に大きな穴",
+      "category": "リスク・規制",
+      "summary": "調査によると、企業の過半数がAIエージェントによるセキュリティ事故を経験。共有認証情報の利用など、AIへの過剰な権限付与が主な原因となっています。",
+      "one_liner": "AIエージェントの半数が事故経験",
+      "why_important": "AIに「何でもできる権限」を与えるリスクは高い。特権アクセスの分離と管理体制の再構築が必要です。",
+      "action_item": "自社で導入中のAIエージェントに、不必要なアクセス権限がないか確認しましょう。",
+      "source": "VentureBeat AI",
+      "url": "https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials"
+    },
+    {
+      "title": "中国Moonshot AIが「Kimi K3」発表、GPT-5級の性能を持つ3兆パラメータモデル",
+      "category": "中国AI",
+      "summary": "中国Moonshot AIが最新モデル「Kimi K3」を公開。3兆近いパラメータを持ち、欧米の最新鋭モデルに匹敵する性能を記録。オープンソース化も予定されています。",
+      "one_liner": "中国Moonshotが巨大モデル公開",
+      "why_important": "中国勢がグローバルトップ層に肉薄しており、技術普及のスピードが一段と加速する兆しです。",
+      "action_item": "グローバルなAI競争の現状を知り、中国発モデルの性能も選択肢として注視してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/kimis-open-model-k3-nears-gpt-5-6-sol-and-fable-5-while-signaling-the-end-of-super-cheap-chinese-ai/"
+    },
+    {
+      "title": "富士通が次世代CPU「FUJITSU-MONAKA」公開、AIエージェントの自律生成も",
+      "category": "日本市場",
+      "summary": "富士通が2027年投入予定の省電力AIチップを公開。あわせて、複数のAIエージェントが自律的に連携するフレームワークにより、店舗運営などの現場支援を目指します。",
+      "one_liner": "富士通、省電力AIチップ公開",
+      "why_important": "ハードウェアからの垂直統合による「現場で使えるAI」の実現は、日本企業の勝ち筋の一つです。",
+      "action_item": "将来的にクラウドを介さない「ローカルAI」が業務にどう影響するか想定しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2607/17/news044.html"
+    }
+  ]
+}

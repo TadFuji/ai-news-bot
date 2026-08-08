@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月05日",
+  "theme": "AIの自律化と不可欠なリスク管理",
+  "morning_comment": "AIは「使う道具」から「自律する相棒」へ。信頼性の再考が鍵となります。",
+  "articles": [
+    {
+      "title": "Anthropic新時代：Fable 5規制とSonnet 5の衝撃",
+      "category": "対話型AI",
+      "summary": "Anthropicが最上位モデル「Claude Fable 5」の規制と復活、そして自律的な実行能力が高い「Sonnet 5」を同時発表しました。",
+      "one_liner": "AIはチャットから国家インフラへ",
+      "why_important": "AIは単なるツールではなく、国家の安全保障に関わる社会基盤となりつつあります。モデルの性能だけでなく、規制リスクを含めた運用設計が求められます。",
+      "action_item": "特定のAIモデルが使えなくなった際の代替プランを検討してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/yuukikawabata/articles/anthropic-new-era-2026"
+    },
+    {
+      "title": "AIが若手プログラマーの労働市場を破壊",
+      "category": "ビジネス活用",
+      "summary": "米国のデータにより、22-25歳のソフトウェア開発者の雇用が大幅に減少。自律型エージェントAIがジュニアレベルの業務を代替し始めています。",
+      "one_liner": "エージェントAIが若手雇用を代替",
+      "why_important": "定型業務の消失により、若手層のキャリア形成が困難になるリスクがあります。組織としてAI時代の人材育成を再定義する必要があります。",
+      "action_item": "自分がAIに代替される「定型業務」にどれだけ時間を割いているか確認してください。",
+      "source": "Hacker News AI",
+      "url": "https://seldo.com/posts/ai-has-torched-the-market-for-junior-programmers/"
+    },
+    {
+      "title": "LLMを「止まる可能性のあるインフラ」として扱う設計",
+      "category": "リスク・規制",
+      "summary": "Claude Fable 5の規制を受け、AIが政策で止まることを前提とした設計や、人間が承認するフローの重要性が提唱されています。",
+      "one_liner": "止まる前提のAIシステム設計へ",
+      "why_important": "モデルの仕様変更は避けられないため、特定モデルに依存しない冗長な設計が不可欠です。AIガバナンスが企業の継続性を左右します。",
+      "action_item": "現在使用しているAIツールが停止した場合のバックアップ手段を確認してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kimshoshi/articles/claude-fable-return-ai-governance"
+    },
+    {
+      "title": "AIを「外部脳」にするObsidian運用設計",
+      "category": "ビジネス活用",
+      "summary": "ノートアプリObsidianを外部記憶として活用し、過去の指示や好みをAIに蓄積させることで、使うほどに最適化される仕組みが注目されています。",
+      "one_liner": "知識を蓄積しAIを「育つ脳」に",
+      "why_important": "単発の利用からAIとの継続的な資産形成へと意識を変えるべきです。AIをパーソナライズ化することで、業務効率は飛躍的に向上します。",
+      "action_item": "AIに読み込ませるための、自分の仕事の「型」をメモに残し始めてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/nobu666/articles/ai-external-brain-digest"
+    },
+    {
+      "title": "アリババがClaude Codeの使用を禁止、中国AI情勢",
+      "category": "中国AI",
+      "summary": "アリババがAnthropicツールの利用を禁止し、米中AI技術の切り離しが加速。地政学的リスクがAIツールの選択に影響を与えています。",
+      "one_liner": "米中AIデカップリングの深刻化",
+      "why_important": "地政学的リスクにより、利用できるツールが地域ごとに分断される懸念があります。サプライチェーン全体のAIガバナンス再考が急務です。",
+      "action_item": "海外拠点や取引先で使用されているAIツールの利用リスクを再確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/"
+    },
+    {
+      "title": "MidjourneyがハリウッドのAI利用実態の開示を要求",
+      "category": "リスク・規制",
+      "summary": "著作権訴訟の中でMidjourneyがスタジオ側のAI利用実態の開示を要求。クリエイティブ業界の法的妥当性を左右する戦いとなっています。",
+      "one_liner": "AI画像生成の法的妥当性を争う",
+      "why_important": "著作権とAI活用の線引きは、今後のクリエイティブ産業のルールを決定づけます。企業としての姿勢を整理しておく必要があります。",
+      "action_item": "社内で生成AIを利用する際の情報開示基準を一度確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/04/midjourney-wants-hollywood-studios-to-reveal-the-details-of-their-ai-usage/"
+    },
+    {
+      "title": "OpenAI共同創業者が予言する「インターフェースなき未来」",
+      "category": "対話型AI",
+      "summary": "将来、AIが文脈を察知して自律的に動くため、人間がアプリの操作方法を学ぶ必要がなくなるとグレッグ・ブロックマン氏が予測しています。",
+      "one_liner": "UI消滅、指示力がスキルになる",
+      "why_important": "操作習熟よりも「課題設定力」が真の武器になります。特定のツールに依存せず、要件を抽象化して定義する能力を磨くべきです。",
+      "action_item": "「この作業をAIにやらせるならどう指示するか」を常に考える癖をつけてください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openai-cofounder-envisions-almost-no-interface-future-where-nobody-learns-software-anymore/"
+    },
+    {
+      "title": "Claude Codeを用いたモデルの自動ルーティング運用",
+      "category": "ビジネス活用",
+      "summary": "タスクの難易度に応じて高コストモデルと低コストモデルを自動で使い分ける手法が登場。品質を維持しつつコストを大幅削減可能です。",
+      "one_liner": "モデルの自動振分でコスト半減",
+      "why_important": "全作業に高性能モデルを使うのは非効率。タスク難易度に応じたモデル選定が、大規模導入時の収益性を左右します。",
+      "action_item": "簡単な要約や翻訳など、低コストモデルで十分な業務を切り分けてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/oppo2357/articles/0d2babf96a207a"
+    },
+    {
+      "title": "AI APIの突然の制限に備える「防御的設計」の重要性",
+      "category": "ビジネス活用",
+      "summary": "プロバイダーの都合によるレート制限や提供終了に備え、複数のAPIを切り替え可能にするなどの冗長化設計が提唱されています。",
+      "one_liner": "AI仕様変更に備える防御設計",
+      "why_important": "APIの制限は日常茶飯事と捉え、リスクヘッジを行うべきです。システムの安定運用こそがビジネスの信頼を生みます。",
+      "action_item": "外部APIへの過度な依存がないか、システムの接続ポイントを点検してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/mediiiiium/articles/llm-provider-resilience-design"
+    },
+    {
+      "title": "LLMへの指示は「説明」より「型の例示」が劇的に効く",
+      "category": "研究・技術",
+      "summary": "AIへの制約を言葉で説明するよりも、具体的な出力例（型）を1つ示す方が、指示を遵守する確率が大幅に向上することが判明しました。",
+      "one_liner": "説明より「例示」でAIを動かす",
+      "why_important": "言葉で長々と説明するよりも、1つの正解例を示す方が精度は劇的に上がります。即座に実行できる強力なテクニックです。",
+      "action_item": "次にAIへ指示を出すとき、理想の回答サンプルを1つ添えてみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/monteranakamu/articles/llm-exemplar-vs-instruction"
+    }
+  ]
+}

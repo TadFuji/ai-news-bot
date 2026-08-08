@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月03日",
+  "theme": "実務でのAI実行力と運用の質",
+  "morning_comment": "実務でのAI活用は、実験から実装へ。信頼の構築とリスク管理が成功の鍵となります。",
+  "articles": [
+    {
+      "title": "AIがフリーランス業務の16%を完遂、プロ品質に到達し過去最高を記録",
+      "category": "ビジネス活用",
+      "summary": "最新モデル「Fable 5」が、3Dモデリングや動画制作などの実務テストで16.1%の自動化率を達成。わずか8ヶ月で性能が4倍以上に向上し、AIが経済的価値のあるタスクを完結させる能力が急速に高まっています。",
+      "one_liner": "AIがプロ品質の仕事を完遂し過去最高",
+      "why_important": "AIが単なる「助手」ではなく、完結した成果物を出す「実行主体」になりつつあります。",
+      "action_item": "外注している定型タスクがAIで代替可能か試算してみましょう。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/anthropic-fable-5-freelance-work-performance-record/"
+    },
+    {
+      "title": "Adobeが提唱する「エージェント型サイト」、訪問者に合わせWebを即時生成",
+      "category": "ビジネス活用",
+      "summary": "Adobeは、ユーザーの意図に合わせてWebサイトの構成をリアルタイムに生成する実験を開始。キャンプ好きのユーザーには、商品を自動でアウトドア仕様に書き換えるなど、1対1の究極の顧客体験を提供します。",
+      "one_liner": "Webサイトが訪問者に合わせ即時生成",
+      "why_important": "顧客の意図をAIが推論し、接点を動的に変える「動的サイト」が今後の標準になります。",
+      "action_item": "自社のWebサイトを特定のターゲット向けに書き換える案を練りましょう。",
+      "source": "Latent Space",
+      "url": "https://www.latent.space/p/the-website-of-the-future"
+    },
+    {
+      "title": "マイクロソフトがAIエンジニア6000人を直接派遣、顧客のROIを保証へ",
+      "category": "ビジネス活用",
+      "summary": "マイクロソフトは25億ドルを投じ、6000人のAIエンジニアを企業に派遣する専門組織を設立。実験ではなく、実利益（ROI）を出すことに焦点を当て、基幹プロセスへのAI実装を強制的に加速させます。",
+      "one_liner": "MSが技術者6000人を派遣し成果保証",
+      "why_important": "AI導入が「ツール配布」から、利益に直結する「基幹プロセスの再構築」へ移ります。",
+      "action_item": "AI導入で何％のコスト削減ができるか、具体的な目標値を設定しましょう。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/microsoft-launches-2-5-billion-frontier-company-to-embed-6000-ai-engineers-inside-enterprise-clients/"
+    },
+    {
+      "title": "AI時代の開発は「コードを書く」から「ループを管理する」へ転換",
+      "category": "研究・技術",
+      "summary": "開発者の役割が、コード記述からAIエージェントの試行錯誤を制御する「ループエンジニアリング」へ移行。AIに何をさせ、どう評価するかという高次の管理能力が重視されるようになります。",
+      "one_liner": "開発はコード作成からループ管理へ",
+      "why_important": "コードを書く技術以上に、AIの試行錯誤を制御する管理能力がエンジニアの鍵です。",
+      "action_item": "AIへの指示とフィードバックのサイクルをどう組むか、図解してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2607/03/news016.html"
+    },
+    {
+      "title": "AIの過剰なコード実装を抑制する技術「ponytail」が登場",
+      "category": "ビジネス活用",
+      "summary": "AIが必要以上に複雑なコードを書くのを防ぎ、効率的な実装を促すOSS「ponytail」が注目。AIに「怠惰だが優秀なエンジニア」の振る舞いをさせ、コードの肥大化とコスト増を抑えます。",
+      "one_liner": "AIの過剰コードを抑える新技術が登場",
+      "why_important": "AIの出力を無批判に受け入れず、効率性と保守性を維持する工夫が求められます。",
+      "action_item": "AIが生成したコードに無駄がないか、人間がレビューする習慣をつけましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/jodycraft/articles/13b51c5189ac84"
+    },
+    {
+      "title": "AIツールがSSDを異常消耗させる不具合、21日で37TB書き込みの衝撃",
+      "category": "リスク・規制",
+      "summary": "OpenAI Codex CLIの設定ミスにより、わずか21日間で37TBのログがSSDに書き込まれ、物理的故障を招く事例が判明。詳細ログ設定という初歩的なミスがハードウェア資産を損なうリスクを露呈しました。",
+      "one_liner": "AIツールの設定ミスでSSDが物理故障",
+      "why_important": "AIツールの設定不備が物理的な損害を招くという、実務上の新たな運用リスクです。",
+      "action_item": "利用中のAIツールのログ設定やPC負荷を一度チェックしてみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2607/03/news041.html"
+    },
+    {
+      "title": "産業PC世界最大手が日本にAI拠点、製造業の「フィジカルAI」加速へ",
+      "category": "日本市場",
+      "summary": "アドバンテックが福岡県に大型投資を行い、エッジAI事業を強化。NVIDIAと連携し、ロボット等の物理挙動をAIで制御する「フィジカルAI」のプラットフォームを日本国内で展開します。",
+      "one_liner": "製造現場のフィジカルAI拠点が国内へ",
+      "why_important": "物理的なモノの動きをAIで制御する技術が、日本の製造現場で本格始動します。",
+      "action_item": "自社の物理的な作業プロセスで自動化できる部分を洗い出しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2607/03/news065.html"
+    },
+    {
+      "title": "みずほFGが中小企業向けAI銀行開始、与信の「空白地帯」を埋める",
+      "category": "日本市場",
+      "summary": "みずほがUPSIDERと提携し、AI与信を活用した中小・スタートアップ向け銀行サービスを開始。従来の銀行が敬遠した層に対し、AIによる即日口座開設や低価格融資を提供します。",
+      "one_liner": "中小企業の成長をAI与信が加速させる",
+      "why_important": "資金調達の選択肢が広がる中、AIによる透明性の高い与信が中小企業の成長を支えます。",
+      "action_item": "AI与信など、自社が利用できる最新の金融サービスを調べてみましょう。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/03/news020.html"
+    },
+    {
+      "title": "巧妙化するAI生成フィッシングメール、AWSがAIによる防御策を強化",
+      "category": "リスク・規制",
+      "summary": "生成AIで作られた自然なフィッシングメールが急増。これに対しAmazon Bedrockは、受信メールの背後にある「悪意ある意図」をAIで検知する仕組みを導入し、防御を強化しています。",
+      "one_liner": "AI対AI。巧妙な詐欺をAIで検知",
+      "why_important": "攻撃側もAIを使う今、防御側もAIを前提としたセキュリティ体制が不可欠です。",
+      "action_item": "疑わしいメールがないか、セキュリティ設定の自動検知を確認しましょう。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-amazon-bedrock-catches-ai-generated-phishing/"
+    },
+    {
+      "title": "AnthropicがSamsungと独自AIチップを開発、脱NVIDIAを加速",
+      "category": "研究・技術",
+      "summary": "OpenAIに続き、Anthropicが独自AIチップの開発を検討中。運用コストの削減とGPU供給不足への対策を狙い、AI業界の覇権争いは半導体レイヤーの垂直統合へ向かっています。",
+      "one_liner": "独自AIチップ開発で垂直統合が進む",
+      "why_important": "性能向上とコスト低減のため、ハードウェアの選定がAI戦略の重要項目になります。",
+      "action_item": "将来的なAIの運用コストを抑えるため、マルチチップ環境を想定しましょう。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/anthropic-reportedly-explores-custom-chip-manufacturing-with-samsung-while-insisting-nvidia-still-matters/"
+    }
+  ]
+}

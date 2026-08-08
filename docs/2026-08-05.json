@@ -1,0 +1,107 @@
+{
+  "updated": "2026年08月05日",
+  "theme": "AIが「道具」から「実行主体」へ変わる時",
+  "morning_comment": "導入から運用、そして共生へ。AI活用は新たなフェーズに突入しました。",
+  "articles": [
+    {
+      "title": "資料からクイズや表計算を自動生成、強化版Gemini Notebookが全ユーザーへ展開",
+      "category": "対話型AI",
+      "summary": "Googleの調査ツール「Gemini Notebook」の強化版が展開。AIが自らコードを書いて資料を基にグラフやクイズアプリを生成可能になり、実務レベルのデータ分析を加速させます。",
+      "one_liner": "AIが解析から資料作成まで完結",
+      "why_important": "データの読み込みから可視化、アウトプット作成までの工程が劇的に短縮され、意思決定の質が高まります。",
+      "action_item": "手元のPDFやExcelを読み込ませ、分析と要約をAIに依頼してみましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2130486.html"
+    },
+    {
+      "title": "三菱重工業、決算説明会にAIナレーター「ジュリア」を起用",
+      "category": "日本市場",
+      "summary": "三菱重工業が決算説明会でAIナレーターを活用。CFOは利便性を強調し、多岐にわたる社内情報の集約とステークホルダーとの効率的なコミュニケーションを狙います。",
+      "one_liner": "大手企業の公式発信にAIが起用",
+      "why_important": "信頼性が求められるIRの場でのAI起用は、技術への社会的な受容が成熟した証拠と言えます。",
+      "action_item": "音声読み上げツールを、社内プレゼンのリハーサルや練習に使ってみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2608/05/news042.html"
+    },
+    {
+      "title": "米国政府がClaude等の最先端AIに輸出制限、セキュリティ懸念で一時利用停止も",
+      "category": "リスク・規制",
+      "summary": "米政府はAnthropicの高度なモデルに対し、中国への技術流出を警戒した輸出規制を施行。日本国内でも特定の高性能モデルが利用できなくなる地政学的リスクが浮上しました。",
+      "one_liner": "先端AI利用に地政学的リスク",
+      "why_important": "特定の海外モデルに依存しすぎると、国際情勢次第で業務インフラが止まるリスクを考慮すべきです。",
+      "action_item": "現在利用中のAIツールがどの国の提供か、代替手段があるかを整理しておきましょう。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2608/05/news018.html"
+    },
+    {
+      "title": "大塚商会とJAPAN AIが提携、中小企業のAI「定着」を伴走支援",
+      "category": "ビジネス活用",
+      "summary": "JAPAN AIと大塚商会が提携。導入だけでなく、業務プロセスの見直しや運用ルールの整備まで伴走し、AI人材不足の企業でも「使い続けられる体制」の構築を目指します。",
+      "one_liner": "AI導入から「業務定着」の支援へ",
+      "why_important": "ツール導入そのものよりも、現場での運用ルール作りや定着支援の需要が本格化しています。",
+      "action_item": "自社のAI導入において「何が現場の定着を妨げているか」を1つ書き出してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2608/05/news035.html"
+    },
+    {
+      "title": "Googleパスワードマネージャーに脆弱性、パスキーを突破する攻撃が報告",
+      "category": "リスク・規制",
+      "summary": "パスキーをバイパスして暗号化データを窃取する脆弱性が発見されました。最新の認証方式も万全ではなく、エンドユーザーには端末管理の徹底が求められています。",
+      "one_liner": "パスキー過信は禁物。端末管理の再徹底",
+      "why_important": "利便性の高い認証方式でも、マルウェア感染には無力な場合があり、基礎的なサイバー衛生が重要です。",
+      "action_item": "PCやスマホのOS、およびブラウザを最新バージョンに更新してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2130538.html"
+    },
+    {
+      "title": "Apple、元従業員によるOpenAIへの企業秘密漏洩で追加提訴の可能性",
+      "category": "リスク・規制",
+      "summary": "Appleは元従業員が未発表製品の機密情報をOpenAI側に漏洩したとして訴訟を強化。AI開発競争における人材流動と機密管理の難しさが浮き彫りになっています。",
+      "one_liner": "AI開発競争が招く機密流出のリスク",
+      "why_important": "AI学習データに自社の機密が意図せず混入するリスクと、人材の流動化に伴う情報管理が急務です。",
+      "action_item": "プロジェクト終了時や退職時の情報取扱い規定を、チーム内で再確認しましょう。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/08/05/5363.html"
+    },
+    {
+      "title": "新サービス「ChatGPT Work」の内部解析、高度な自律エージェント機能が判明",
+      "category": "対話型AI",
+      "summary": "「ChatGPT Work」の解析により、AIが自律的にスケジュール管理やブラウザ操作を行う構造が判明。単なる対話から、指示を実行に移す「デジタル秘書」へ進化しています。",
+      "one_liner": "ブラウザ操作もこなす「AI秘書」",
+      "why_important": "AIが自らツールを操作する「エージェント型」への進化により、定型業務の自動化範囲が広がります。",
+      "action_item": "「AIが代わりにブラウザを操作してくれたら助かる作業」をリストアップしてください。",
+      "source": "Latent Space",
+      "url": "https://www.latent.space/p/unpacking-chatgpt-work"
+    },
+    {
+      "title": "AI移行で仕事を失う労働者、自分のスキルをAIに教え代替されるリスク",
+      "category": "リスク・規制",
+      "summary": "フィリピンで自らの執筆スタイルをAIに学習させた後に解雇される事例が発生。AIを教育する役割そのものが、自分の仕事を奪うリスクとなる教訓を示しています。",
+      "one_liner": "自分のノウハウが自分を代替する皮肉",
+      "why_important": "スキルをAIに移植する際は、単なる代替ではなく、人間がより高度な業務へ移行する設計が不可欠です。",
+      "action_item": "AIに任せるべき定型作業と、人間にしかできない創造的な作業を明確に区別しましょう。",
+      "source": "BBC Technology",
+      "url": "https://www.bbc.co.uk/news/articles/cgr7nxve05go?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "NVIDIA日本法人、AI時代の就職に本当に必要なのは「英会話力」と強調",
+      "category": "日本市場",
+      "summary": "NVIDIA社員が、AI時代こそ「英会話能力」が重要だと説きました。翻訳技術があっても、世界中の同僚と直接対話し、躍動感を持って働くための基礎能力が重視されます。",
+      "one_liner": "AI時代こそ、直接対話する英語力が鍵",
+      "why_important": "翻訳ツールを使いこなす能力に加え、信頼関係を築くためのダイレクトな意思疎通力が希少価値となります。",
+      "action_item": "AI翻訳を補助的に使いつつ、要点だけでも自分の言葉で伝える習慣をつけましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2130584.html"
+    },
+    {
+      "title": "2026年ピューリッツァー賞、AI利用を公表した受賞者が過去最多に",
+      "category": "ビジネス活用",
+      "summary": "ピューリッツァー賞で、多くの受賞者がデータ抽出等にLLMを活用していたことが判明。AIを使いこなしつつ透明性を保つ「AIとの共生」がプロの標準となりつつあります。",
+      "one_liner": "AI活用と透明性がプロの新標準に",
+      "why_important": "高度な知的作業においてAIを「補助輪」として使うことは、もはや隠すべきことではなくなりました。",
+      "action_item": "AIを使って作成した成果物に、どの工程でAIを使用したか注釈を添えてみましょう。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/this-years-pulitzer-prizes-saw-a-record-number-of-winners-disclose-ai-use/"
+    }
+  ]
+}

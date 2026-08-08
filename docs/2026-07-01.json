@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月01日",
+  "theme": "AIエージェントが実務のOSへ",
+  "morning_comment": "自律的に動くAIが、空想から日常の実務へと浸透し始めています。",
+  "articles": [
+    {
+      "title": "アスクル、商談準備を2週間から3時間に短縮",
+      "category": "ビジネス活用",
+      "summary": "アスクルはAI駆動開発（AI-DLC）により、商談準備などの付随業務を劇的に効率化しました。人間が戦略判断に集中できる体制へのシフトを象徴する事例です。",
+      "one_liner": "商談準備を2週間から3時間に短縮",
+      "why_important": "AIにより大企業病を打破し、人間が高度な判断業務に専念できる環境を構築した先進事例です。",
+      "action_item": "自社の2週間かかる定型業務を1つ書き出し、AI化の可能性を検討してください。",
+      "source": "ITmedia AI Plus",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/01/news053.html"
+    },
+    {
+      "title": "Claude Sonnet 5公開、性能向上と実質値上げ",
+      "category": "対話型AI",
+      "summary": "Anthropicが最新モデルをリリース。知能は向上しましたが、日本語のトークン化効率の変化により、実質的なコスト増となる点に注意が必要です。",
+      "one_liner": "知能向上と実質値上げの両面性",
+      "why_important": "高性能化は歓迎すべきですが、コスト管理の観点からトークン消費量を再評価する必要があります。",
+      "action_item": "既存のプロンプトを最新モデルで実行し、出力精度と消費コストを比較してください。",
+      "source": "Simon Willison's Weblog",
+      "url": "https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything"
+    },
+    {
+      "title": "24時間働くAI「Gemini Spark」発表",
+      "category": "対話型AI",
+      "summary": "GoogleがPCを閉じた後も自律的に作業を継続するエージェントを発表。人間は「作業者」から「プロジェクトの監督者」への役割シフトが求められます。",
+      "one_liner": "PCを閉じてもAIが自律稼働",
+      "why_important": "AIに指示を丸投げし、結果を確認する管理能力がビジネスパーソンの必須スキルになります。",
+      "action_item": "明日AIに完全に任せたい「調査・連絡タスク」を1つ具体的に想定してください。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/01/news013.html"
+    },
+    {
+      "title": "日の丸AI企業「Noetra」が本格始動",
+      "category": "日本市場",
+      "summary": "国内大手が共同出資し、日本の現場データに特化した国産マルチモーダルAIを開発。海外勢への依存を減らし、AI主権の確立を目指します。",
+      "one_liner": "国産マルチモーダル基盤、本格始動",
+      "why_important": "機密性の高い日本語データや現場の物理データを安全に活用できるインフラが国内に整います。",
+      "action_item": "自社が持つ「外部に出せない現場データ」の価値を再評価してみてください。",
+      "source": "ITmedia AI Plus",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/01/news042.html"
+    },
+    {
+      "title": "AIのトークン費用が「人件費」と同じ指標に",
+      "category": "ビジネス活用",
+      "summary": "成長企業の間で、AIのトークンコストを人件費と同様の経営資源として管理する動きが加速。AI投資に対する厳格なROI管理が求められています。",
+      "one_liner": "AIコストを「第2の人件費」に",
+      "why_important": "単なるツール利用の段階を超え、AIへの投資がどれだけ事業価値を生んでいるかを問う時代です。",
+      "action_item": "チームで利用しているAIツールの月額費用と、削減された時間を概算してください。",
+      "source": "ITmedia AI Plus",
+      "url": "https://www.itmedia.co.jp/news/articles/2606/30/news027.html"
+    },
+    {
+      "title": "Google DriveのAI要約がモバイル対応",
+      "category": "ビジネス活用",
+      "summary": "Drive内の複数ファイルをAIが横断的に解析・要約する機能がモバイルアプリに提供。外出先での迅速な意思決定を支援します。",
+      "one_liner": "外出先でもAIが資料を横断要約",
+      "why_important": "移動中の隙間時間を、情報収集ではなく意思決定に充てられるようになり、生産性が向上します。",
+      "action_item": "モバイル版Google Driveで、複数のプロジェクト資料をAIに要約させてみてください。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/06/ai-overviews-in-drive-now-available-on-mobile.html"
+    },
+    {
+      "title": "研究特化型AI「Claude Science」発表",
+      "category": "研究・技術",
+      "summary": "科学研究や創薬に特化したAIが登場。専門スキルの搭載と検証エージェントにより、高度な専門職のパートナーとしての地位を確立します。",
+      "one_liner": "科学研究特化のAIパートナー誕生",
+      "why_important": "AIが汎用アシスタントから、各業界の専門知識を持つ高度な専門職へと分化が進んでいます。",
+      "action_item": "自身の専門分野におけるAIの回答の正確性を、一度厳密に検証してみてください。",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/"
+    },
+    {
+      "title": "中国、米国主導のAI革命に対抗し急速進化",
+      "category": "中国AI",
+      "summary": "中国が製造現場とAIを融合させた「フィジカルAI」領域で独自の進化。EVやロボティクスを背景に独自のイノベーションを加速させています。",
+      "one_liner": "中国が物理AI領域で独自進化",
+      "why_important": "実社会への実装速度において中国は世界をリードしており、その動向は日本の製造業にも影響します。",
+      "action_item": "最新の中国系AI（DeepSeekやQwen等）の性能を一度試用してみてください。",
+      "source": "SCMP Technology",
+      "url": "https://www.scmp.com/tech/article/3358925/great-ai-reckoning-how-china-flipping-script-us-new-industrial-revolution?utm_source=rss_feed"
+    },
+    {
+      "title": "OSSのAIエージェントOpenClawがスマホ対応",
+      "category": "対話型AI",
+      "summary": "オープンソースの自律型エージェントがモバイルで利用可能に。特定のプラットフォームに依存しない、自分専用のAIをどこへでも持ち運べます。",
+      "one_liner": "OSSエージェントがスマホ対応",
+      "why_important": "AIの民主化が進み、企業や個人が独自の用途にカスタマイズしたAIを自由に運用できる時代です。",
+      "action_item": "オープンソースAIの最新動向をチェックし、自社で構築可能か検討してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/06/30/openclaw-is-finally-available-on-android-and-ios/"
+    },
+    {
+      "title": "日産、AIで車の開発プロセスを根本から刷新",
+      "category": "日本市場",
+      "summary": "日産自動車は、AI技術を統合した次世代車両「AIDV」に向けた新たな開発基盤を構築しました。ハードウェアの制約を離れ、クラウド上で車両挙動をシミュレートすることで、ソフトウェア開発のスピードと品質を飛躍的に向上させます。また、AIエージェントが運転手の疲労を検知して休憩を提案するなど、パーソナライズされた顧客体験も提供。日本の製造業がAIで世界トップの競争力を取り戻すための象徴的な取り組みです。",
+      "one_liner": "日産がAIで車の開発を2倍速へ",
+      "why_important": "伝統的な製造業であっても、AIを核に据えることで開発サイクルを劇的に変えられることが証明されました。",
+      "action_item": "「実機や現物がないと進められない」と思っている業務をデジタル化できないか検討してください。",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2607/01/news029.html"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月25日",
+  "theme": "AIが「道具」から「自律的なパートナー」へ",
+  "morning_comment": "性能向上と低コスト化が、AIの真の民主化を加速させています。",
+  "articles": [
+    {
+      "title": "最上位級の知能を半額で、「Claude Opus 5」が提供開始",
+      "category": "対話型AI",
+      "summary": "Anthropicが最新モデル「Claude Opus 5」を発表しました。最高峰の性能を維持しつつ価格を半分に抑え、コーディングやPC操作能力も向上。国内ビジネスパーソンにとっても高度なAIを低コストで業務に組み込める転換点となります。",
+      "one_liner": "高性能AIが半額で利用可能に",
+      "why_important": "知能のコスト低下により、これまで費用対効果で見送っていた高度な業務自動化が可能になります。",
+      "action_item": "現行のAIプランとClaude Opus 5のコスト・性能を比較検討してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2127832.html"
+    },
+    {
+      "title": "事務作業を自動化するAIエージェント開発、Prentisが1億ドル調達へ",
+      "category": "ビジネス活用",
+      "summary": "Prentisは、PCを操作して保険請求や事務作業を代行するAIエージェントを開発中。既存モデルを凌駕するPC操作精度を誇り、人間が書類を探し回るような定型業務をAIが肩代わりする時代の到来を予感させます。",
+      "one_liner": "事務作業を代行するAIエージェント",
+      "why_important": "画面操作まで自動化されることで、人間はより創造的な意思決定に集中できるようになります。",
+      "action_item": "毎日30分以上かけている単純なPC作業をリストアップしてみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-marc-pincus-in-talks-to-raise-100m/"
+    },
+    {
+      "title": "中国の巨大モデル「Kimi K3」発表、グローバルサウスへの浸透を狙う",
+      "category": "中国AI",
+      "summary": "Moonshot AIが2.8兆パラメータの「Kimi K3」を発表。中国政府はこれを公共財とし、発展途上国への技術提供を推進。米国勢が独占していたAI市場において、性能面でも匹敵する中国製モデルの存在感が増しています。",
+      "one_liner": "中国発、2.8兆パラメータの巨大AI",
+      "why_important": "中国の技術力がグローバル市場の選択肢を広げ、AI開発競争がさらに多極化・加速します。",
+      "action_item": "中国製AIの性能動向を、代替手段の一つとしてキャッチアップしてください。",
+      "source": "SCMP Technology",
+      "url": "https://www.scmp.com/opinion/china-opinion/article/3361318/chinas-ai-vision-gives-global-south-seat-table?utm_source=rss_feed"
+    },
+    {
+      "title": "Google Workspace更新、Geminiのベータ移行と会議管理を強化",
+      "category": "ビジネス活用",
+      "summary": "Google WorkspaceのGeminiがベータへ昇格。Google Meetのホーム画面刷新や、会議ノート、録画データの自動整理機能が追加され、日本の会議文化における議事録管理の効率化に直結する改善が図られました。",
+      "one_liner": "Geminiが公式の実用段階へ",
+      "why_important": "日常的な仕事道具にAIが深く統合され、情報の検索や整理がシームレスになります。",
+      "action_item": "Google Meetの新機能である会議ノート自動作成を試用してください。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/07/weekly-recap-07-24-2026.html"
+    },
+    {
+      "title": "米AI規制法案に対し、NVIDIAやMSが「公開性」を訴える共同書簡",
+      "category": "リスク・規制",
+      "summary": "米国のAIキルスイッチ法案に対し、NVIDIAやMetaらが共同書簡を提出。モデルの重みを公開（オープンウェイト）し、透明性を高めることこそが安全に繋がると主張。規制と革新のバランスを巡る議論が白熱しています。",
+      "one_liner": "AIの安全性を巡る大手企業の対立",
+      "why_important": "規制の行方が、将来的に企業が採用できるツールの選択肢やセキュリティ基準を左右します。",
+      "action_item": "社内のAI利用規定が、最新の法的議論と乖離していないか確認を。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2127831.html"
+    },
+    {
+      "title": "Meta AIが進化、カレンダー連携や独自リサーチ機能を追加",
+      "category": "対話型AI",
+      "summary": "MetaはAIチャットに、カレンダーへのアクセスや詳細なリサーチ代行機能を実装。SNSプラットフォームを通じて提供されるため、日常のスケジュール調整や情報整理がよりパーソナルかつ効率的になります。",
+      "one_liner": "Meta AIが秘書のように予定管理",
+      "why_important": "使い慣れたSNSが秘書化し、個人の調整業務や調査負担が劇的に軽減されます。",
+      "action_item": "Meta AIで自身のスケジュール管理がどう効率化できるか機能を点検してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/970570/meta-ai-chatbot-productivity-update"
+    },
+    {
+      "title": "AI検索が加速させる「Google Zero」、サイト流入減への警鐘",
+      "category": "リスク・規制",
+      "summary": "AIが検索結果を要約することでユーザーが元サイトを訪問しなくなる「Google Zero」現象が深刻化。SEOに依存する集客戦略は、AI時代に合わせた抜本的な見直しを迫られています。",
+      "one_liner": "AI検索によるサイト流入減少の危機",
+      "why_important": "自社サイトへの流入経路をSEO以外にも分散させる戦略の重要性が高まっています。",
+      "action_item": "主要な検索ワードで、AIがどのような回答を表示するか確認してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/podcast/970735/google-zero-reddit-ai-publishers-vergecast"
+    },
+    {
+      "title": "AIに「人格」を、開発AIのCognitionがPokeを買収",
+      "category": "ビジネス活用",
+      "summary": "AIエンジニア「Devin」のCognitionが、人格を持つAI「Poke」を買収。AIを単なるツールではなく、ユーモアや個性を備えた「同僚（コラボレーター）」へと進化させ、人間とAIの協調のあり方を再定義します。",
+      "one_liner": "AIに人格を、同僚としてのAIへ",
+      "why_important": "AIをチームの一員として扱う文化が、組織の生産性とコラボレーションの質を左右します。",
+      "action_item": "AIへの指示を、同僚や後輩への依頼のように丁寧に行ってみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/24/why-cognition-bought-poke-ai-personality-is-becoming-a-competitive-advantage/"
+    },
+    {
+      "title": "AI生成の「いじめ動画」を悪用した新手のSNS詐欺が急増",
+      "category": "リスク・規制",
+      "summary": "AIで生成したいじめ動画で同情を誘う詐欺が報告されています。ディープフェイクが人の感情を揺さぶる犯罪に悪用されており、企業ブランドの悪用や家族が騙されるリスクへの警戒が必要です。",
+      "one_liner": "AI生成動画による巧妙なSNS詐欺",
+      "why_important": "情報の真偽を見極めるリテラシーが、企業のブランド保護と個人の安全の両面で不可欠です。",
+      "action_item": "不自然に感情を揺さぶるSNS動画に警戒するよう周囲に注意喚起してください。",
+      "source": "Semafor Technology",
+      "url": "https://www.semafor.com/article/07/24/2026/ai-fuels-a-social-media-marketing-scam"
+    },
+    {
+      "title": "Midjourney V8.2公開、個人の好みをより深く理解",
+      "category": "画像・動画AI",
+      "summary": "MidjourneyがV8.2へ刷新。画質向上に加え、ユーザーの好みを高度に学習する機能を強化。クリエイティブ制作の精度が上がり、資料作成や広告素材の質を短時間で高めることが可能になります。",
+      "one_liner": "個人の好みを学習する画像生成AI",
+      "why_important": "クリエイティブの外注コストを抑え、自社で高品質なビジュアルを生成・活用できます。",
+      "action_item": "次回の資料作成時に、Midjourneyでイメージ画像を生成してみてください。",
+      "source": "Midjourney Updates",
+      "url": "https://updates.midjourney.com/version-8-2/"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月09日",
+  "theme": "AIは効率から共感と実働のフェーズへ",
+  "morning_comment": "AIが感情を解し、物理世界へ。道具を超えた「相棒」としての真価が問われています。",
+  "articles": [
+    {
+      "title": "OpenAI、人間のように自然な会話ができる「GPT-Live」を発表",
+      "category": "対話型AI",
+      "summary": "OpenAIが「全二重方式」を採用したリアルタイム音声モデルを公開。相手の相づちや割り込みに対応し、GPT-5.5が裏側で高度な思考を支えることで、自然さと知性を両立させています。",
+      "one_liner": "AIが「遮れる」自然な会話へ",
+      "why_important": "音声UIが直感的になることで、PC操作や接客のパラダイムが変わり、より高度な対人スキルがAIに求められるようになります。",
+      "action_item": "アプリ版の音声機能を使い、AIを「遮る」ような自然な会話を試してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2607/09/2000000174/"
+    },
+    {
+      "title": "LayerX、全社員のAI利用額を実名で可視化する「Bet AI」戦略",
+      "category": "ビジネス活用",
+      "summary": "LayerXが全社員のAI利用コストを実名で公開。コスト削減ではなく「AIへの投資感覚」を養うことを目的とし、AIを第二の人件費と捉える先進的な組織文化を構築しています。",
+      "one_liner": "AI利用料を「投資」として実名公開",
+      "why_important": "AIを単なるツールではなく人件費と同列の投資対象として扱う経営感覚が、今後の組織競争力を左右します。",
+      "action_item": "今月のAIツール利用時間を算出し、自分の時給と対比して「投資対効果」を考えてみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/09/news022.html"
+    },
+    {
+      "title": "xAIが「Grok 4.5」を公開、圧倒的な低コストで他社LLMを猛追",
+      "category": "対話型AI",
+      "summary": "イーロン・マスク氏率いるxAIが新モデルを発表。GPT-5.5級の性能を持ちながら、100万トークン2ドルという驚異的な安さを実現し、企業のLLM採用コストを破壊しようとしています。",
+      "one_liner": "超低価格LLMが変える開発コスト",
+      "why_important": "性能の差が縮まる中、圧倒的なコスト効率は企業がAIを大規模実装する際の強力な決定打となります。",
+      "action_item": "既存のAIワークフローを他モデルに置き換えた際のコスト削減幅を簡易シミュレーションしてみてください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/grok-4-5-is-so-cheap-compared-to-fable-5-and-gpt-5-5-that-benchmark-gaps-may-not-matter-much/"
+    },
+    {
+      "title": "「AI任せのスライド」が現場の熱量を奪う、リーダーに求められる物語性",
+      "category": "ビジネス活用",
+      "summary": "AIで作成した整いすぎた資料が、言葉の軽さを生み、部下の納得感を下げるリスクが指摘されています。リーダーシップには、AIを超えた独自の「物語」が不可欠です。",
+      "one_liner": "AI資料に足りない「物語」の重要性",
+      "why_important": "正解を出すのがAIの役割だからこそ、人間による「なぜこれをするか」という熱量が希少価値になります。",
+      "action_item": "AIで作った資料の冒頭に、自分自身の体験談や個人的な想いを1文だけ加えてみてください。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/09/news048.html"
+    },
+    {
+      "title": "LLMへの「丸投げ」を防ぐ、手戻りを減らす3段階プロンプト術",
+      "category": "ビジネス活用",
+      "summary": "AIへの曖昧な依頼による手戻りを防ぐため、「目的」「制約」「分解」の3段階で情報を与える手法が提唱されています。段階的な確認を挟むことで、業務効率が劇的に向上します。",
+      "one_liner": "丸投げを防ぐ3段階プロンプト術",
+      "why_important": "手戻りを防ぐ具体的な指示術の習得は、個人のみならずチーム全体の生産性を底上げする必須スキルです。",
+      "action_item": "今日AIに依頼する際、プロンプトに「目的・制約・手順」が含まれているか送信前に確認しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/every_ai_recipe/articles/ai-task-handoff-3-memos"
+    },
+    {
+      "title": "シリコンバレー投資家が予測する「宇宙AIデータセンター」の未来",
+      "category": "ビジネス活用",
+      "summary": "SpaceXとxAIの連携により、電力・冷却問題を解決するための宇宙データセンター構想が浮上。地球上の資源制約を突破するAIインフラの壮大な未来図が描かれています。",
+      "one_liner": "宇宙空間がAIインフラの終着駅に？",
+      "why_important": "AIの成長を阻む「電力と土地」の制約をどう突破するかを知ることは、長期的なテック投資の潮流を掴む鍵です。",
+      "action_item": "AIニュースを「性能」だけでなく「電力」や「冷却」といったインフラ視点でも読むようにしましょう。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/09/news010.html"
+    },
+    {
+      "title": "Meta、AIスマートグラスの物理改ざん防止を強化、撮影中LEDの隠蔽不可に",
+      "category": "リスク・規制",
+      "summary": "スマートグラスによる隠し撮りを防ぐため、LEDをテープなどで覆うとカメラを自動停止する機能をMetaが導入。AIウェアラブルの普及に向け、プライバシー保護の技術的制限を強化しています。",
+      "one_liner": "物理改ざんを防ぐ撮影保護技術",
+      "why_important": "ウェアラブルAIが社会に受け入れられるためには、メーカー側の厳格な技術的信頼の構築が不可欠です。",
+      "action_item": "身の回りにあるカメラ付きデバイスのプライバシー設定や利用ガイドラインを再確認してください。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/07/09/5274.html"
+    },
+    {
+      "title": "ITエンジニアの半数が「AIで転職意識」、リスキリングが不可欠な時代に",
+      "category": "日本市場",
+      "summary": "調査によると、エンジニアの約5割がAI進化を機に転職を検討。AIによる自動化が進む中で、自身の市場価値を維持するためのスキルセット再構築が急務となっています。",
+      "one_liner": "エンジニアの半数がAIで転職を意識",
+      "why_important": "AIに代替される作業とAIを使いこなす能力の差が、今後のキャリア格差に直結することを強く認識すべきです。",
+      "action_item": "自分の現在の業務のうち、AIで自動化可能なタスクを3つリストアップし、残った自分の価値を定義しましょう。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/09/news035.html"
+    },
+    {
+      "title": "NVIDIAが「水使用量100%削減」の新冷却システム、AIの環境負荷解決へ",
+      "category": "リスク・規制",
+      "summary": "データセンターの莫大な水消費を抑えるため、NVIDIAが外部の水を必要としない閉ループ冷却システムを提案。AI業界の持続可能性を高めるための環境対策を打ち出しました。",
+      "one_liner": "NVIDIAが挑む「水消費ゼロ」冷却",
+      "why_important": "環境負荷への対応は、企業がAIを選択する際の主要な評価軸になりつつあり、無視できない経営課題です。",
+      "action_item": "自社のITインフラやクラウド利用が、環境方針（ESG）とどう整合しているかを確認してみてください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/nvidia-touts-100-reduction-in-water-use-with-new-data-center-design-jpn/"
+    },
+    {
+      "title": "「フィジカルAI」が身近に、1台のPCでロボット制御とLLMを統合",
+      "category": "研究・技術",
+      "summary": "汎用PC1台で産業ロボットの精密制御とLLMによる音声指示を同時に処理する技術が登場。物理的な作業とAIの判断を低コストで統合できる未来が現実味を帯びています。",
+      "one_liner": "PC1台でAIとロボットを統合制御",
+      "why_important": "物理世界を動かす「フィジカルAI」が手軽になることで、製造、介護、サービス業の自動化が新たな段階へ進みます。",
+      "action_item": "物理的な手作業（整理整頓や搬送など）をAIで自動化する際、どのような指示を出すべきか想像してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2607/09/news066.html"
+    }
+  ]
+}

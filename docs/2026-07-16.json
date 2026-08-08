@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月16日",
+  "theme": "AI導入は「成果」と「安全」のフェーズへ",
+  "morning_comment": "導入から運用へ、AI活用は実務重視の成熟期に入りました。安全性と共に成果を。",
+  "articles": [
+    {
+      "title": "Claude、NotebookLM、Genspark……238社が選んだ「現場が支持する」AIサービス",
+      "category": "日本市場",
+      "summary": "国内企業への調査により、AI選定基準が技術の新しさから「実務での成果」へシフトしていることが判明。特にClaudeシリーズへの期待が高く、用途に応じた使い分けが定着しています。",
+      "one_liner": "実務重視で選ばれるAIツール群",
+      "why_important": "流行ではなく「何ができるか」という具体的な成果でAIを選ぶ段階に入っています。",
+      "action_item": "自部署の業務において、どのAIツールが最も成果を出すか比較検討してください。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2607/16/news023.html"
+    },
+    {
+      "title": "NECがAnthropicと戦略的提携。Claudeを社内標準AIに採用し「AIネイティブ」へ",
+      "category": "日本市場",
+      "summary": "NECはClaudeを社内利用の標準機軸として導入し、業務プロセスをAI前提に変える「AIネイティブカンパニー」を目指します。セキュリティとデータ主権を両立させる方針です。",
+      "one_liner": "NECがClaudeを社内標準に採用",
+      "why_important": "国内大手企業がAIを基軸とした組織変革とセキュリティ確保を本格化させています。",
+      "action_item": "AIを「補助」ではなく「前提」とした業務フローを自身のタスクで考案してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/16/news025.html"
+    },
+    {
+      "title": "OpenAI初のハードウェア「Codex Micro」発売。AIエージェント操作専用キーパッド",
+      "category": "ビジネス活用",
+      "summary": "AIコーディングやエージェント操作に特化した物理デバイスが登場。LEDでタスク状況を把握し、ダイヤルで推論レベルを調整するなど、AIとの対話を手元で完結させます。",
+      "one_liner": "OpenAI初のAI操作専用キーパッド",
+      "why_important": "AI操作がソフトウェアの枠を超え、物理的なインターフェースへと進化し始めています。",
+      "action_item": "AIとの対話頻度を上げるために、自身のデスク環境の整備を検討してください。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/07/16/5299.html"
+    },
+    {
+      "title": "検索結果や拡張機能に潜む「偽AIサービス」の罠。非公式ツールの見分け方",
+      "category": "リスク・規制",
+      "summary": "有名サービスを装った偽サイトや過剰な権限を求めるブラウザ拡張機能のリスクが急増。公式ドメインの確認や最小限の権限設定など、具体的な防衛策が求められています。",
+      "one_liner": "巧妙化する偽AIツールに要注意",
+      "why_important": "利便性の裏で、個人や組織のデータが流出するリスクが非常に身近に潜んでいます。",
+      "action_item": "現在利用しているブラウザ拡張機能の権限設定を今一度見直してください。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/16/news014.html"
+    },
+    {
+      "title": "IT系求人の73％でAIスキルが必須に。スキルの証明方法が重要課題",
+      "category": "ビジネス活用",
+      "summary": "雇用市場では単なる知識ではなく、実際のプロジェクトでAIを活用した具体的な成果が重視されています。スキルの習熟度をいかに証明するかが今後の生存戦略となります。",
+      "one_liner": "IT求人の7割でAIスキルが必須に",
+      "why_important": "AIを使いこなせることが、ビジネスパーソンにとって必須の前提条件となりつつあります。",
+      "action_item": "AIを使った具体的な成果を職務経歴書に追記できるよう、日々の実績を記録しましょう。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/73-of-tech-job-listings-require-ai-skills-show-off-yours/"
+    },
+    {
+      "title": "Apple Intelligenceが中国で認可。百度とアリババのAIモデルを採用へ",
+      "category": "中国AI",
+      "summary": "Appleは中国国内の規制に対応するため、BaiduやAlibabaのAIモデルを統合してサービスを展開します。地域によってAIの基盤が異なる「分断」が鮮明になっています。",
+      "one_liner": "Appleが中国で現地AIを統合へ",
+      "why_important": "規制や地政学的要因により、同じ製品でも地域でAIの「脳」が異なる時代が到来しています。",
+      "action_item": "グローバル展開するサービスのAI基盤が、地域ごとに異なる可能性を意識しましょう。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/07/16/5298.html"
+    },
+    {
+      "title": "AMDのNPUでLLMが動く。ローカルAI実行ツール「Lemonade Server」が登場",
+      "category": "研究・技術",
+      "summary": "クラウドを介さずPC内部でLLMを高速実行できるツールが登場。機密性の高いデータを外部に送ることなく、最新のAIモデルを常時稼働させることが可能になります。",
+      "one_liner": "PC内部で完結する高速なローカルAI",
+      "why_important": "機密情報を守りつつAIを使い倒すための、オフライン環境の重要性が増しています。",
+      "action_item": "外部に送信できない機密データの処理に、ローカルAIの活用を検討してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/feature/2125083.html"
+    },
+    {
+      "title": "OpenAIがAIを使ってAIを攻撃。人間のレッドチームを超える脆弱性発見率",
+      "category": "リスク・規制",
+      "summary": "OpenAIが開発した「GPT-Red」モデルが、人間のテストを大幅に上回る精度でAIの弱点を発見。AI自身がサイバー攻撃の手法を見つけ出す、新しいセキュリティの形が示されました。",
+      "one_liner": "AIがAIの脆弱性を暴く時代",
+      "why_important": "防御側においても、AIによる自動化されたセキュリティ対策が不可欠な時代に入っています。",
+      "action_item": "自社のシステムや運用の安全性をAIでテストする手法に関心を持ってください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openai-is-now-using-ai-to-attack-its-own-ai-and-its-working-better-than-humans-ever-did/"
+    },
+    {
+      "title": "AIエージェントの理想と現実。多くの実態は「チャットボットの拡張」に留まる",
+      "category": "ビジネス活用",
+      "summary": "自律的にタスクを遂行する「真のエージェント」への移行には、コスト管理や運用の壁が存在します。理想と現実の乖離を理解し、現在の技術限界を見極める必要があります。",
+      "one_liner": "真のAIエージェントへの遠い道のり",
+      "why_important": "過度な期待をせず、現時点でのツールの機能と限界を正しく見極める眼養いが必要です。",
+      "action_item": "現在導入しているツールが「単なる自動返信」か「自律行動」かを確認してください。",
+      "source": "VentureBeat AI",
+      "url": "https://venturebeat.com/ai/agentic-orchestration-enterprise-ai-organizations-have-a-deployment-problem-not-a-platform-problem-and-most-are-calling-chatbots-agents"
+    },
+    {
+      "title": "Thinking Machinesが初のモデル「Inkling」を公開。動画と音声を解する1兆パラAI",
+      "category": "対話型AI",
+      "summary": "巨大オープンソースモデル「Inkling」が登場。動画や音声を直接理解するマルチモーダル能力に特化しており、メディア解析や高度なマルチメディア業務を劇的に変える可能性があります。",
+      "one_liner": "動画・音声を直接理解する巨大AI",
+      "why_important": "テキスト以外の非構造化データの解析が、より高度かつ迅速に可能になります。",
+      "action_item": "動画資料の要約や特定シーンの抽出などをAIに任せるワークフローを試行してください。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/thinking-machines-lab-releases-its-first-model-inkling/"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月04日",
+  "theme": "AIの実装から日常の規律へ",
+  "morning_comment": "ツールとしての活用から、社会のルールへと統合が進む過渡期を迎えました。",
+  "articles": [
+    {
+      "title": "国産フィジカルAIの基盤構築へ、新会社「Noetra」が本格始動",
+      "category": "日本市場",
+      "summary": "ソフトバンクやホンダなど国内大手企業が連合し、物理世界で動作するAIの基盤モデルを構築する新会社「Noetra」が事業を開始。経産省も巨額支援を行い、日本が強みを持つ現場の機密データを活用した純国産AIを目指す。",
+      "one_liner": "国産フィジカルAIの逆襲が始まる",
+      "why_important": "日本が強みを持つ製造・物流現場のデータを活かしたAI開発が本格化し、産業競争力に直結します。",
+      "action_item": "自社の現場に「AIで自動化できそうな物理作業」があるか探してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2607/04/news016.html"
+    },
+    {
+      "title": "Google WorkspaceにGemini新機能、スライド作成やMeet画質向上など",
+      "category": "ビジネス活用",
+      "summary": "Googleは、Drive内の既存資料に基づいたプレゼンスライドの自動生成機能などを発表。Meetでの画質改善や教育向け機能も追加され、ビジネスと教育の両面で実用性が向上した。",
+      "one_liner": "スライド作成がAIで自動完結へ",
+      "why_important": "既存資料を読み込ませるだけでプレゼンが生成され、準備時間が大幅に短縮されます。",
+      "action_item": "次回資料作成時、Googleスライドの生成機能を試しに使ってみてください。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/07/weekly-recap-07-03-2026.html"
+    },
+    {
+      "title": "AI回答の質を安定させる秘訣は「指示」より「前提条件」にあり",
+      "category": "ビジネス活用",
+      "summary": "LLMの出力品質を安定させる手法が公開。役割指定よりも「読み手」「数値制約」「出力の型」の3点を明確にすることで、手直し不要な高品質な回答を得られるようになる。",
+      "one_liner": "AIへの指示は前提条件の固定が鍵",
+      "why_important": "曖昧な自然言語をAIが自己評価可能な「数値」や「構造」に変換するスキルが、業務効率を左右します。",
+      "action_item": "プロンプトに「誰に向けた文章か」を明文化して入力してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/every_ai_recipe/articles/chatgpt-prompt-3-tips-better-answer"
+    },
+    {
+      "title": "Microsoft、Copilotを大幅刷新。自律型「AutoPilot」も導入へ",
+      "category": "ビジネス活用",
+      "summary": "MicrosoftはCopilotアプリを統合し、タスクをバックグラウンドで自動実行する新機能「AutoPilot」エージェントを導入する。ビジネスの成果に最適化されたワークフローへの組み込みを強化。",
+      "one_liner": "Copilotが自律型エージェントに",
+      "why_important": "AIが指示を待つだけでなく、裏側でタスクを代行する「自律化」が標準のワークフローになります。",
+      "action_item": "定期的なメール要約やスケジュール調整をAIに任せる準備をしましょう。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/microsoft-follows-anthropic-and-openai-into-the-ai-super-app-race-with-overhauled-copilot-and-autopilot-agents/"
+    },
+    {
+      "title": "AIによる労働時間削減は「週1時間」程度、ROI最大化の壁が判明",
+      "category": "ビジネス活用",
+      "summary": "2万5000人の調査により、AI導入による実質的な労働時間削減は週約1時間にとどまることが判明。成果を出すには、削減された時間を戦略的に再配置する設計が必要とされる。",
+      "one_liner": "AI時短は週1時間。活用法が課題",
+      "why_important": "単なる導入では時間は浮きません。浮いた時間の活用法を組織として設計する必要があります。",
+      "action_item": "AIで浮いた時間を「どの戦略業務に充てるか」を事前に1つ決めてください。",
+      "source": "Hacker News AI",
+      "url": "https://okaneland.com/study/ai-productivity-roi-at-work/"
+    },
+    {
+      "title": "ByteDanceが発見したAIエージェントの「スケーリング法則」",
+      "category": "中国AI",
+      "summary": "中国のByteDanceが、AIエージェントが実環境で学習する速度が3ヶ月で2倍になる法則を発見。自律的な学習能力の飛躍的向上により、複雑なタスクの進化が加速する可能性がある。",
+      "one_liner": "AIエージェントの成長が加速する",
+      "why_important": "中国勢が自律学習の法則を発見。複雑なタスクをこなすAIの進化が、さらに早まることを示唆しています。",
+      "action_item": "中国発AI技術のニュースを週に一度はチェックする習慣をつけましょう。",
+      "source": "SCMP Technology",
+      "url": "https://www.scmp.com/tech/big-tech/article/3359373/chinas-bytedance-discovers-new-scaling-law-could-sustain-ai-boom?utm_source=rss_feed"
+    },
+    {
+      "title": "ビジネスで必須となるAI用語集2026年版が公開",
+      "category": "ビジネス活用",
+      "summary": "最新のAIトレンドを理解するための用語集が更新。AGIの定義や「AIエージェント」、APIエンドポイントなど、非エンジニアのビジネスパーソンが共通言語を持つためのガイドとなっている。",
+      "one_liner": "AI用語集でチームの共通言語を",
+      "why_important": "エージェントやAPIなど、会議で頻出する用語の定義を揃えることがDXの第一歩です。",
+      "action_item": "会議中に分からないAI用語が出たら、その場ですぐ定義を確認しましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/03/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/"
+    },
+    {
+      "title": "子供の写真をAIが悪用するリスク、英当局が保護者に警告",
+      "category": "リスク・規制",
+      "summary": "英当局はSNS上の子供の画像がAIで不適切に加工・悪用されるリスクを警告。ディープフェイク技術の向上により、日常的な写真からのコンテンツ生成懸念が高まっている。",
+      "one_liner": "子供の画像公開にAI悪用のリスク",
+      "why_important": "日常的な写真がディープフェイクの素材にされる危険性があり、個人の防衛意識が求められます。",
+      "action_item": "SNSの公開設定や家族写真の共有範囲を今日のうちに見直しましょう。",
+      "source": "BBC Technology",
+      "url": "https://www.bbc.co.uk/news/articles/cd7wj7d0jzzo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "アリババ、セキュリティ懸念からClaude Codeの利用を禁止",
+      "category": "中国AI",
+      "summary": "アリババはAnthropicの「Claude Code」の利用を禁止。米国製AIツールによる追跡への懸念や、自社モデルの競争力維持が背景にあり、米中間の技術分断が鮮明になっている。",
+      "one_liner": "米中対立でAIツール利用に制限",
+      "why_important": "セキュリティや機密保持の観点から、国境を越えたAI利用の壁が高まっている現状を理解すべきです。",
+      "action_item": "社内で利用しているAIツールの「データの所在」を一度確認してみてください。",
+      "source": "SCMP Technology",
+      "url": "https://www.scmp.com/tech/big-tech/article/3359375/alibaba-bans-staff-using-claude-code-over-anthropic-spyware-concerns?utm_source=rss_feed"
+    },
+    {
+      "title": "AIを禁止するのではなく「利用契約」を生徒と結ぶ教育現場の挑戦",
+      "category": "リスク・規制",
+      "summary": "教育現場でAIを禁止せず、生徒と「AI利用に関する契約」を結ぶ取り組みが紹介された。責任範囲を明確にすることで、AIを思考の補助ツールとして正しく活用させる教育を目指す。",
+      "one_liner": "禁止より「利用契約」でAIと共生",
+      "why_important": "ルールを押し付けるのではなく、責任範囲を合意することが組織での前向きな活用を促します。",
+      "action_item": "チーム内で「AIをどこまで使って良いか」の簡易的な合意を作ってみましょう。",
+      "source": "Hacker News AI",
+      "url": "https://www.science.org/content/article/instead-banning-ai-i-made-classroom-contract-my-students"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月31日",
+  "theme": "実用化の加速とAI・人間関係の再定義",
+  "morning_comment": "AIは業務の主役へ。利便性とリスクの双方を見据えた活用が問われています。",
+  "articles": [
+    {
+      "title": "日立がSI全工程をAI化する新プラットフォーム発表、仕様策定を最大240倍高速化",
+      "category": "日本市場",
+      "summary": "日立製作所は、要件定義から運用までをAIエージェントが支援するプラットフォームを発表。画面仕様確定作業で240倍、設計・テスト工程で200倍の効率化を実証しました。",
+      "one_liner": "SI工程をAIで240倍高速化",
+      "why_important": "システム開発の劇的な短縮は、ビジネスの市場投入スピードを根本から変える可能性があります。",
+      "action_item": "自社の開発プロジェクトにおけるAIエージェント導入の余地を検討してください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/31/news049.html"
+    },
+    {
+      "title": "OpenAIがGPT-5.6最新モデルを最大80%値下げ、低価格路線へ舵切り",
+      "category": "中国AI",
+      "summary": "OpenAIは中国系AI企業との価格競争に対抗し、最新モデルGPT-5.6を大幅値下げ。普及版Lunaは100万トークンあたり0.2ドルと、極めて安価な設定となりました。",
+      "one_liner": "GPT最新モデルが最大80%値下げ",
+      "why_important": "中国勢との競争による価格破壊は、企業のAI導入コストを大幅に下げ、新サービス開発を促進します。",
+      "action_item": "API利用コストの大幅な低下を前提に、既存サービスの利益率改善プランを立ててください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openai-goes-full-china-pricing-mode-with-an-80-percent-cut-to-its-most-affordable-gpt-5-6-model/"
+    },
+    {
+      "title": "日本の職場での生成AI依存が拡大、5割が「上司よりAIを参考にする」と回答",
+      "category": "ビジネス活用",
+      "summary": "国内調査でAI利用者の半数が人間よりもAIの提案を重視している実態が判明。特にアイデア出しでの依存度が高く、AIなしでは業務に支障が出る層が増加しています。",
+      "one_liner": "5割が上司よりAIを参考にすると回答",
+      "why_important": "意思決定の主軸がAIへ移る中、管理職はAIを前提とした評価やリスク管理への更新が求められます。",
+      "action_item": "チームメンバーが業務のどの部分でAIに依存しているか、ヒアリングを実施してください。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2607/31/news055.html"
+    },
+    {
+      "title": "AppleがiCloud PlusにAI専用プランを追加検討か、ティム・クックCEOが示唆",
+      "category": "ビジネス活用",
+      "summary": "Apple Intelligenceの提供に向け、高度なAI機能を多用するユーザー向けの有料プランが検討されています。画像生成などの負荷の高い機能に制限が設けられる見込みです。",
+      "one_liner": "iCloudにAI専用プラン追加か",
+      "why_important": "モバイル環境でのAI利用が一般的になる中、個人や企業のITコスト構造に影響を与える可能性があります。",
+      "action_item": "業務用iPhoneでのAI利用範囲と、将来的なサブスクリプション費用を予算に織り込んでください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/973552/apple-ceo-tim-cook-icloud-plus-ai"
+    },
+    {
+      "title": "ChatGPTの会話履歴を一括保存する非公式ツール登場、知識資産の持ち出しに警鐘",
+      "category": "リスク・規制",
+      "summary": "法人アカウントの制限を回避して履歴を保存するツールが注目されています。個人の知識資産として持ち出せる利便性の一方で、機密情報流出のリスクが懸念されます。",
+      "one_liner": "ChatGPT履歴保存ツールに流出懸念",
+      "why_important": "シャドーAIに加え、履歴の持ち出しという新たなガバナンスの盲点を把握しておく必要があります。",
+      "action_item": "社内の情報持ち出し規定にAIの会話履歴が含まれているか、法務担当と確認してください。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2607/31/news040.html"
+    },
+    {
+      "title": "Google、AIの活用でChromeのバグ修正速度を劇的に向上、1ヶ月で1000件以上解消",
+      "category": "リスク・規制",
+      "summary": "内部AIツールにより、1ヶ月で過去2年分を上回る1,072件の脆弱性を修正。LLMによる自動修正がサイバーセキュリティを「防御側優位」へと変えつつあります。",
+      "one_liner": "AIでChromeのバグ修正が加速",
+      "why_important": "セキュリティ対策の高速化は、企業のITインフラ維持コストとリスクを同時に引き下げます。",
+      "action_item": "ブラウザを最新版に更新し、自動アップデートが社内で徹底されているか確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/30/google-says-it-fixed-more-chrome-bugs-in-june-than-over-the-past-two-years-thanks-to-ai/"
+    },
+    {
+      "title": "日本語のAIトークン代は「3倍高い」は誤解、技術的検証で明らかに",
+      "category": "研究・技術",
+      "summary": "日本語は英語の3倍のコストがかかるという定説が検証により否定されました。実際には1.1倍から1.5倍程度に収まるケースが多く、導入の障壁が下がっています。",
+      "one_liner": "日本語トークン代の割高説は誤解",
+      "why_important": "コストへの懸念が払拭されることで、日本企業における大規模なAI導入の意思決定が容易になります。",
+      "action_item": "日本語テキストの実際のトークン消費量を計測し、コスト試算を適正化してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/shakeailab/articles/bpe-japanese-token-cost"
+    },
+    {
+      "title": "LinkedInに「AIスロップ（ゴミ投稿）」報告ボタンが登場、SNSの質向上へ",
+      "category": "ビジネス活用",
+      "summary": "LinkedInは、AI生成の低品質な投稿をユーザーが報告できる機能を導入。ビジネスSNSの信頼性を保つため、安易なAI生成投稿への対策を強化しています。",
+      "one_liner": "AIゴミ投稿の通報機能が導入",
+      "why_important": "AI生成そのものよりも、生成されたコンテンツの「質」が厳しく問われるフェーズに入りました。",
+      "action_item": "自身のSNS投稿が「AI任せ」になっていないか、独自の視点が含まれているか確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/30/linkedin-adds-a-button-to-report-ai-generated-slop/"
+    },
+    {
+      "title": "Google DeepMind、人型ロボットを全身制御する新AI「Gemini Robotics 2」発表",
+      "category": "画像・動画AI",
+      "summary": "足先から指先までの全身協調動作を可能にする新モデルを発表。複雑な物理作業の実用化が近づき、労働力不足を補う自動化戦略に影響を与える可能性があります。",
+      "one_liner": "人型ロボットの全身制御AIが登場",
+      "why_important": "AIの進化がデジタル領域から物理的な労働領域へと本格的に進出し始めています。",
+      "action_item": "自社の現場業務のうち、数年以内にロボットで自動化できそうな工程をリストアップしてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/973276/google-deepmind-gemini-robotics-2-whole-body"
+    },
+    {
+      "title": "ノーベル賞級の成果を出したGoogleの「AlphaFold」チームが事実上の解体",
+      "category": "研究・技術",
+      "summary": "AlphaFold開発チームが解体され、Geminiプロジェクト等へ移籍。Googleが科学研究から収益直結の汎用AI開発へリソースを集中させる戦略転換が鮮明になりました。",
+      "one_liner": "科学から商業へ。開発チームが解体",
+      "why_important": "最先端AIのトレンドが、純粋な発見からビジネスでの勝利を重視する方向へ完全に移行しました。",
+      "action_item": "AI活用の目的を「実験的な試み」から「収益への貢献」へと再定義してください。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/07/31/5353.html"
+    }
+  ]
+}

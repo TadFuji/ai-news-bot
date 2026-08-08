@@ -1,0 +1,107 @@
+{
+  "updated": "2026年08月04日",
+  "theme": "AIの実装は『ツール』から『組織・基盤』へ",
+  "morning_comment": "AIは効率化の道具を越え、組織やインフラを再定義するフェーズへ入りました。",
+  "articles": [
+    {
+      "title": "AI活用を「個人の効率化」で終わらせるな、セールスフォースの組織改革術",
+      "category": "ビジネス活用",
+      "summary": "セールスフォース・ジャパンは300以上のAIエージェントを稼働させ、独自の「4R」フレームワークで組織変革を断行。個人の効率化を超えたAI前提の組織モデルを構築しています。",
+      "one_liner": "AIエージェントで組織を再設計",
+      "why_important": "単なる効率化ではなく、AI前提の組織構造（AX）への変革が企業の競争力を左右します。",
+      "action_item": "自部署の業務で「AIに任せられる役割」を1つ定義してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2608/04/news027.html"
+    },
+    {
+      "title": "AIが企業の「将来性」を審査、中小企業の資金調達が加速",
+      "category": "ビジネス活用",
+      "summary": "金融機関の融資審査に生成AIが導入され、非構造化データを分析。2026年の新法施行を背景に、無形資産を評価するデータ駆動型融資が中小企業やスタートアップで広がっています。",
+      "one_liner": "AI審査で中小の資金調達が加速",
+      "why_important": "財務データ以外の情報が評価対象となり、企業の将来性が正当に評価される時代になります。",
+      "action_item": "自社のデジタル上の評判や発信内容を客観的に棚卸ししてみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2608/04/news005.html"
+    },
+    {
+      "title": "AI支援の高度なマルウェアが公共Wi-Fiを標的に、Microsoftが警告",
+      "category": "リスク・規制",
+      "summary": "ロシア系脅威アクターがAI支援で作成されたとみられる高度なツールを使用し、ホテル等の公共Wi-Fiで資格情報を窃取する攻撃を展開。極めて高い隠蔽性を持っています。",
+      "one_liner": "AI悪用マルウェアが公共Wi-Fiを標的",
+      "why_important": "AIにより攻撃の隠蔽性が高まっており、身近な場所でのリスクが激増しています。",
+      "action_item": "外出先での公共Wi-Fi利用を控え、テザリング等の安全な回線を徹底してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2130140.html"
+    },
+    {
+      "title": "Google MeetのAI要約機能、提示されたスライドのスクショを自動添付へ",
+      "category": "ビジネス活用",
+      "summary": "Google Meetの自動メモ作成機能が強化され、提示資料のスクリーンショットを要約に含めることが可能に。視覚情報の補完により、振り返りや共有の精度が向上します。",
+      "one_liner": "議事録にスライド画像が自動添付",
+      "why_important": "視覚情報の自動補完により、会議の欠席者への情報共有の質が大幅に向上します。",
+      "action_item": "次回のWeb会議で自動要約機能を有効にして使い勝手を試してください。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/08/visual-screenshots-now-included-in-Google-Meet-meeting-notes.html"
+    },
+    {
+      "title": "法人向けAI PCの基準が変化、メモリ64GBと高スペックNPUが必要な理由",
+      "category": "ビジネス活用",
+      "summary": "Copilot+ PCの普及に伴い、AIを業務で使いこなすにはNPU性能に加え、ブラウザの多用やマルチタスクに耐えうる大容量メモリ（64GB）が新たな標準となりつつあります。",
+      "one_liner": "AI時代のPCはメモリ64GBが新基準",
+      "why_important": "AIを秘書として常駐させるには、PCの物理的な基礎体力が業務効率を決定します。",
+      "action_item": "次回PCを新調する際は、NPU性能とメモリ容量を最優先で確認してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/special/2128280.html"
+    },
+    {
+      "title": "欧州でAI Actが施行、ディープフェイクやAI対話の開示が義務化",
+      "category": "リスク・規制",
+      "summary": "EUの包括的なAI法に基づき、チャットボットとの対話やAI生成コンテンツであることを明示する透明性ルールが施行。世界的な基準となる可能性が高い規制です。",
+      "one_liner": "EUでAI生成物の表示が義務化",
+      "why_important": "グローバル基準となる規制への対応は、日本企業の海外展開においても必須要件です。",
+      "action_item": "自社で利用・提供するツールが「AI製」であることを明示しているか確認を。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/974571/eu-ai-act-transparency-labels-rules-deepfakes"
+    },
+    {
+      "title": "AppleがSiriを大幅刷新、AIアシスタントの利便性が向上",
+      "category": "対話型AI",
+      "summary": "AppleのAI刷新により、Siriが文脈を理解する高度なAI秘書へと進化。アプリを跨いだ操作やパーソナライズされた提案が可能になり、音声操作の利便性が向上します。",
+      "one_liner": "Siri刷新で日常の音声操作が加速",
+      "why_important": "文脈を理解するアシスタントの普及により、業務のインターフェースが激変します。",
+      "action_item": "Siriの設定を見直し、音声でのリマインダー登録などを試してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/08/03/apple-finally-fixed-siri-so-why-does-it-feel-anticlimactic/"
+    },
+    {
+      "title": "F1がAIエージェントを導入、データ処理時間を数週間から数分へ短縮",
+      "category": "ビジネス活用",
+      "summary": "F1はAWSのAIエージェントを活用し、ファンデータの統合・分析を自動化。従来最大8週間かかっていた作業を40分に短縮し、意思決定のスピードを劇的に高めました。",
+      "one_liner": "F1のデータ処理を数週間から数分に",
+      "why_important": "自律型AIエージェントの導入により、データ処理の爆速化と意思決定の即時性が実現します。",
+      "action_item": "数日かかる定型的なデータ集計作業が自動化できないか検討してみてください。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/from-weeks-to-minutes-how-formula-1-uses-agentic-ai-on-aws-to-accelerate-data-operations/"
+    },
+    {
+      "title": "Amazonの時価総額が3兆ドル突破、AIブームがクラウド需要を牽引",
+      "category": "ビジネス活用",
+      "summary": "生成AIブームに伴うAWSの爆発的な需要増により、Amazonの時価総額が過去最高の3兆ドルを突破。AI導入がクラウド収益の主要な柱として定着しています。",
+      "one_liner": "AI需要でAmazon時価総額3兆ドル",
+      "why_important": "生成AIがクラウド需要を牽引し、AIが主要な収益基盤として定着した証左です。",
+      "action_item": "自社のクラウド利用コストに占めるAI関連の比率をチェックしてみてください。",
+      "source": "Semafor Technology",
+      "url": "https://www.semafor.com/article/08/03/2026/amazon-hits-3-trillion-valuation-on-cloud-earnings"
+    },
+    {
+      "title": "AI企業の債務が1.65兆ドルに到達、巨額投資の「隠れたリスク」",
+      "category": "ビジネス活用",
+      "summary": "AI普及を支えるテック巨人の巨額投資が債務として膨らみ、総額1.65兆ドルに達するとの分析。将来的な収益化への懸念から市場の警戒感が高まりつつあります。",
+      "one_liner": "AI投資に伴う1.6兆ドルの債務リスク",
+      "why_important": "巨額投資が収益に結びつくかという警戒感は、今後の市場を左右する重要指標です。",
+      "action_item": "テック企業のAI投資に対する収益化の進捗をニュースで注視してください。",
+      "source": "Hacker News AI",
+      "url": "https://fortune.com/2026/07/31/ai-debt-hypescalers-capex-capital-spending-hidden-borrowing-bond-issuance/"
+    }
+  ]
+}

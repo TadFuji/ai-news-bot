@@ -1,0 +1,97 @@
+{
+  "updated": "2026年07月30日",
+  "theme": "AIのエージェント化と産業浸透",
+  "morning_comment": "AIが単なる道具から、生活を支えるパートナーへと進化を加速しています。",
+  "articles": [
+    {
+      "title": "マイクロソフト、Copilotを「スーパーアプリ」化へ",
+      "category": "ビジネス活用",
+      "summary": "サティア・ナデラCEOは、Copilotのチャット、コーディング、自動実行エージェント機能を統合した「スーパーアプリ」を年内に提供することを公表しました。個人向けと法人向けの両方に対応し、日常業務が単一のインターフェースで完結するようになります。",
+      "one_liner": "Copilotが万能アプリへ統合",
+      "why_important": "複数のAIツールを使い分ける手間が消え、あらゆるビジネスワークフローの起点がCopilotに集約されます。",
+      "action_item": "現在バラバラに使っているAIツールの整理を始めてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/972927/microsoft-copilot-super-app-confirmed"
+    },
+    {
+      "title": "日本HP、楽天の「ハイブリッドAI」をPCに標準搭載",
+      "category": "日本市場",
+      "summary": "日本HPと楽天が提携し、ネット接続なしでも動作する「Rakuten AI for Desktop」を法人向けPCにプリインストールして販売。端末内でAI処理を行うことで、オフライン環境での利便性とデータセキュリティを両立しています。",
+      "one_liner": "日本HP、国産AIを標準搭載",
+      "why_important": "オフライン環境でも機密性を保ちつつ、セキュアにAIを利用できるハードウェア環境が整い始めました。",
+      "action_item": "業務PCの買い替え時に「オンデバイスAI」の性能を検討項目に入れてください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2129023.html"
+    },
+    {
+      "title": "Microsoft WordにAIを媒介する自己増殖型ワームの危険性",
+      "category": "リスク・規制",
+      "summary": "Copilot for Wordを悪用し、プロンプトインジェクションを通じて自己増殖する「AIワーム」が発見されました。文書内の隠し指示をAIが読み取り、ユーザーの意図に反して別の文書に感染を広げるリスクがあります。",
+      "one_liner": "WordにAI経由のワームの罠",
+      "why_important": "AIの自動化機能がサイバー攻撃の経路になる新しいセキュリティ脅威に対し、従来の対策の更新が急務です。",
+      "action_item": "出所不明なWord文書をAIアシスタントに読み込ませる際は十分注意してください。",
+      "source": "Simon Willison's Weblog",
+      "url": "https://simonwillison.net/2026/Jul/29/ai-worming-through-word/#atom-everything"
+    },
+    {
+      "title": "政府とソフトバンクが描く「次の稼ぎ頭」はAI・半導体",
+      "category": "日本市場",
+      "summary": "日本政府の成長戦略でAIと半導体が最重点分野に。ソフトバンクはOpenAI等への投資を通じAIインフラと物理的AIの融合を推進。国内メーカーもデータセンター需要を背景に記録的な増収を記録し、産業構造の転換が鮮明です。",
+      "one_liner": "政府とSBが描くAI新戦略",
+      "why_important": "日本の産業界全体がAIインフラ中心に再編される大きな潮流の中にいることを認識すべきです。",
+      "action_item": "自社の業界がAIインフラ投資からどのような恩恵を受けるか分析してください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/30/news045.html"
+    },
+    {
+      "title": "Metaが「24時間働くパーソナルAI」を数ヶ月内に発表へ",
+      "category": "対話型AI",
+      "summary": "マーク・ザッカーバーグCEOは、健康や財務、人間関係を24時間体制でサポートする「パーソナルAIエージェント」の構想を発表。WhatsAppやInstagramと連携し、一般消費者の生活のあらゆる場面に介在することを目指しています。",
+      "one_liner": "Meta、24時間AIを全生活へ",
+      "why_important": "SNSと連携したAIが、ビジネスだけでなく個人の意思決定やライフスタイルも支える時代が目前です。",
+      "action_item": "AIに任せたい「生活の定型的な悩みや雑務」をリストアップしてみましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/972294/meta-q2-2026-earnings-mark-zuckerberg-personal-ai-agents"
+    },
+    {
+      "title": "Metaが法人向けAI市場へ本格参入、開発ツール提供拡大",
+      "category": "ビジネス活用",
+      "summary": "Metaは大企業向けにAPI提供やコンピューティングリソースの販売を検討中。社内で開発した生産性向上ツールやコーディング支援ツールを外部提供し、企業のAIインフラ基盤としての地位を狙う方針を明らかにしました。",
+      "one_liner": "Metaが法人向け開発支援へ",
+      "why_important": "広告主体のMetaが企業のAI基盤を支える強力なパートナーとして台頭し、選択肢が広がります。",
+      "action_item": "Metaの最新LlamaモデルとAPIの法人向け活用可能性を調査してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/29/zuckerberg-says-metas-enterprise-ai-opportunity-extends-beyond-agents/"
+    },
+    {
+      "title": "OpenAIサム・アルトマン氏、AI規制の法制化を支持",
+      "category": "リスク・規制",
+      "summary": "アルトマンCEOは、強力な「フロンティアモデル」に対する安全枠組みの構築を米政府と協議中。技術革新と規制のバランスをめぐり、今後のAI開発のグローバルなルール作りが本格化する見通しです。",
+      "one_liner": "アルトマン、AI規制支持を表明",
+      "why_important": "開発者だけでなく、企業ユーザーの利用範囲にも影響する国際的な規制動向に注視が必要です。",
+      "action_item": "業界団体や政府が発表する最新のAI利用ガイドラインを再確認してください。",
+      "source": "Semafor Technology",
+      "url": "https://www.semafor.com/article/07/29/2026/altman-says-he-supports-ai-regulation"
+    },
+    {
+      "title": "AIの普及で「労働時間」による評価が終焉へ",
+      "category": "中国AI",
+      "summary": "AI活用により、数ヶ月かかっていた業務を数時間で解決可能に。これに伴い、アジア圏で主流だった「労働時間ベース」の契約が限界を迎え、成果物の価値で評価する「成果主義」へのシフトが必然的に加速しています。",
+      "one_liner": "AIで「労働時間評価」が消滅",
+      "why_important": "長時間労働を美徳とする文化がAIによって崩壊し、個人の「出力の質」がより厳しく問われるようになります。",
+      "action_item": "今日から「作業時間」ではなく「提供した価値」で仕事を振り返る癖をつけてください。",
+      "source": "SCMP Technology",
+      "url": "https://www.scmp.com/opinion/asia-opinion/article/3361805/era-defined-ai-can-work-still-be-measured-clock?utm_source=rss_feed"
+    },
+    {
+      "title": "AnthropicのAI「Mythos」、既存暗号の弱点を発見",
+      "category": "研究・技術",
+      "summary": "セキュリティ特化型AI「Mythos」が、これまで安全とされた暗号アルゴリズムの数学的弱点を特定。AIがサイバー攻撃の武器として強力になる可能性を示しており、新しい暗号標準への移行が急務となる可能性があります。",
+      "one_liner": "AIが既存暗号の弱点を発見",
+      "why_important": "AIによる高度な解析が、現在のサイバーセキュリティの前提を根本から覆すリスクが生じています。",
+      "action_item": "自社で利用している暗号化通信のプロトコルが最新か、IT担当に確認してください。",
+      "source": "Ars Technica AI",
+      "url": "https://arstechnica.com/security/2026/07/mythos-uncovers-crypto-weaknesses-that-went-unknown-for-years/"
+    }
+  ]
+}

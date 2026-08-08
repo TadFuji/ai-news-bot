@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月14日",
+  "theme": "AIの社会実装とデータ主権の岐路",
+  "morning_comment": "国産AIの始動とデータ保護。技術は「使う」から「守る」視点へ。",
+  "articles": [
+    {
+      "title": "純国産の「政府AI」が本格稼働へ、NTT・富士通・PFNのモデルを採用",
+      "category": "日本市場",
+      "summary": "デジタル庁は、政府職員向けAIプラットフォーム「源内」に国産3モデルを採用。データ主権の確保と為替リスク回避を目的に、約18万人の全府省庁職員へ展開されます。",
+      "one_liner": "政府専用の純国産AIが本格始動",
+      "why_important": "日本のデータ主権を確保する大きな一歩。行政のDXが加速し、官民連携の新たな基準となります。",
+      "action_item": "自社の機密データが現在どの国のクラウドで管理されているか再確認しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/14/news034.html"
+    },
+    {
+      "title": "OpenAIの新モデル「GPT-5.6」シリーズ、AWS Bedrockで提供開始",
+      "category": "対話型AI",
+      "summary": "最新モデル「GPT-5.6」の3タイプ（Sol、Terra、Luna）がAWSで利用可能に。コーディングからリアルタイム処理まで、用途に応じた最適な使い分けが可能になります。",
+      "one_liner": "OpenAI最新モデルがAWSで提供開始",
+      "why_important": "インフラ側での選択肢が増え、コストと精度の最適化が容易に。業務に合わせたモデル選定が鍵です。",
+      "action_item": "既存のAIタスクを「コスト優先」か「精度優先」かで分類し、モデルの切り替えを検討してください。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/openai-gpt-5-6-sol-terra-and-luna-are-now-generally-available-on-amazon-bedrock/"
+    },
+    {
+      "title": "Siri AI、iOS 27パブリックベータでついに一般ユーザーへ公開",
+      "category": "ビジネス活用",
+      "summary": "Appleが刷新した「Siri AI」を公開。OS全体に統合された検索・操作機能を備え、写真検索や飲食店予約などをスマホ内部情報を踏まえてAIが実行します。",
+      "one_liner": "Siriが高度なAI秘書として刷新",
+      "why_important": "OS統合によりAIが日常の全操作を支援。スマホが「命令する道具」から「対話する相棒」へと激変します。",
+      "action_item": "Beta版の情報を確認し、自社アプリやサービスがAIによる音声操作に最適化できるか検討しましょう。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/siri-ai-is-now-apple-everything-tool/"
+    },
+    {
+      "title": "ノーベル賞受賞者ら200名が声明、AIによる「産業革命超え」の変革に警鐘",
+      "category": "リスク・規制",
+      "summary": "著名な研究者らがAIによる急速な経済変革に声明を発表。雇用喪失リスクと生活向上という両面を指摘し、社会全体に利益をもたらす制度構築を強く求めています。",
+      "one_liner": "AIは産業革命を超える変革と警告",
+      "why_important": "歴史的規模の経済変動が予測されており、既存スキルの陳腐化に備えた個人の学び直しが急務です。",
+      "action_item": "10年後もAIに代替されにくい、自身の人間ならではのコアスキルを3つ書き出してください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2607/14/2000000188/"
+    },
+    {
+      "title": "マイクロソフトCEO、外部AIモデル利用による「機密データの流出」に警鐘",
+      "category": "リスク・規制",
+      "summary": "ナデラCEOは、AIへのプロンプトや修正フィードバックが他社の学習データとして吸い取られるリスクを指摘。自社専用の学習環境を構築する重要性を強調しました。",
+      "one_liner": "外部AI利用による機密流出に注意",
+      "why_important": "プロンプト自体が競合を利するリスクを直視すべき。利便性とデータ保護の両立が企業価値を左右します。",
+      "action_item": "社内のプロンプト入力ガイドラインを、秘密情報の取り扱い観点で見直してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/13/satya-nadella-has-issued-a-shocking-warning-to-companies-using-ai/"
+    },
+    {
+      "title": "xAIのコーディング支援ツール、ソースコードの「無断収集」疑惑で波紋",
+      "category": "リスク・規制",
+      "summary": "「Grok Build」がローカルリポジトリを無断でクラウド送信していたことが判明。開発ツールのプライバシー設計の脆弱性が露呈し、コミュニティで批判が殺到しています。",
+      "one_liner": "xAIツールの無断データ収集に批判",
+      "why_important": "開発ツールの不備が大規模な機密漏洩に直結。導入ツールの通信挙動や権限の確認は不可欠です。",
+      "action_item": "現在利用中のAI開発ツールで、クラウドへのデータ同期設定がどうなっているか確認しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/ishizakahiroshi/articles/20260714-grok-build-repo-upload-timeline"
+    },
+    {
+      "title": "OpenAIが公式プロンプトガイド公開、指示は「手順ではなく結果」から",
+      "category": "ビジネス活用",
+      "summary": "公式ガイドは、細かな手順（How）よりも「最終的に得たい結果（Goal）」を優先して書くことを推奨。AIの柔軟性を損なわない指示方法が精度の最大化に繋がります。",
+      "one_liner": "プロンプトは「手順より結果」が肝",
+      "why_important": "AIへの指示方法を改めるだけで業務効率が向上。目標設定能力がAI時代の必須スキルになります。",
+      "action_item": "今日の最初のプロンプトを「最終的に達成したい具体的な目標」から書き始めてみてください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openais-new-prompting-guide-tells-users-to-stop-overthinking-and-start-with-the-result/"
+    },
+    {
+      "title": "サムスン、AI学習を拒否すると健康データを「削除」する方針を示唆",
+      "category": "リスク・規制",
+      "summary": "Samsung Healthが、AI学習への同意を拒むユーザーのデータ同期を停止し、削除する通知を開始。プライバシー提供を事実上強制する姿勢に議論が起きています。",
+      "one_liner": "AI学習拒否で健康データ削除の波紋",
+      "why_important": "利便性とプライバシーの究極の選択を迫られる時代。企業のデータ利用姿勢を注視する必要があります。",
+      "action_item": "利用中の主要サービスの利用規約変更メールを、データ利用の項目に絞ってチェックしましょう。",
+      "source": "Hacker News AI",
+      "url": "https://neow.in/cWsyMTV3"
+    },
+    {
+      "title": "WindowsのCopilot、PCの設定診断・解決が会話で可能に",
+      "category": "ビジネス活用",
+      "summary": "新機能「PC Insights」により、設定のトラブルをAIとの対話で解決可能に。画面の明るさやバッテリー設定などを、AIがPCの状態を分析して最適化します。",
+      "one_liner": "Windows設定をAIが対話で解決",
+      "why_important": "IT部門の負担軽減と自己解決率の向上に寄与。PC操作の習得コストが大幅に下がります。",
+      "action_item": "PCの設定で困った際、検索エンジンで探す前にCopilotに質問する習慣をつけましょう。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/article/microsoft-copilot-analyze-windows/"
+    },
+    {
+      "title": "次世代動画生成AI「Seedance 2.0」、秒単位での高度な演出が可能に",
+      "category": "画像・動画AI",
+      "summary": "タイムライン形式の指示に対応した「Seedance 2.0」が登場。秒ごとに動きやアングルを指定でき、一貫性を保った短編動画の生成が劇的に容易になります。",
+      "one_liner": "秒単位の演出が可能な動画生成AI",
+      "why_important": "高度な映像制作が個人の手元で完結。広告やプレゼンのビジュアル表現が劇的に進化します。",
+      "action_item": "動画生成AIを用いて、自社のサービスを説明する15秒のコンセプト動画を試作してみてください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/column/nishikawa/2124620.html"
+    }
+  ]
+}

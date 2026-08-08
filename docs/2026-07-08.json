@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月08日",
+  "theme": "AIエージェントが変える仕事の形",
+  "morning_comment": "エージェントが実用段階へ。今日から\"指示\"より\"任せる\"意識を。",
+  "articles": [
+    {
+      "title": "AIがExcel作業を丸ごと自動化？企業の定型業務を効率化へ",
+      "category": "ビジネス活用",
+      "summary": "AIエージェント「Cowork」に、ExcelやCSV解析機能が追加。Webデータ取得から集計、システム登録用フォーマットへの整形まで、人間が行っていた最後の一工程を完結させます。",
+      "one_liner": "AIがExcel作業を完結",
+      "why_important": "人間に残っていた最後の手作業がAIに置き換わり、事務のあり方が根本から変わります。",
+      "action_item": "定型化されたExcel作業をリストアップし、自動化の可能性を検討しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2607/08/news053.html"
+    },
+    {
+      "title": "トヨタ系企業がAIで「人材採用のブレ」解消、800件の応募を効率化",
+      "category": "日本市場",
+      "summary": "トヨタテクニカルディベロップメントがAIによる採用支援を導入。職種ごとの評価項目に重み付けを設定し、人事と現場間の基準のズレを解消して判断を標準化しました。",
+      "one_liner": "AIで採用基準のブレを解消",
+      "why_important": "属人化しがちな評価業務をAIで標準化することで、組織全体の意思決定の質を底上げできます。",
+      "action_item": "自部署の採用・評価基準が明文化されているか、今のうちに再確認してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2607/08/news050.html"
+    },
+    {
+      "title": "Anthropicの「Claude Cowork」がWebとモバイルでも利用可能に",
+      "category": "対話型AI",
+      "summary": "自律型AIエージェントがモバイル対応。ファイル、メール、カレンダーを横断してタスクを遂行し、判断が必要な場合はスマホに通知が届く仕組みで、実用性が向上しました。",
+      "one_liner": "どこでもAIエージェント",
+      "why_important": "PCだけでなくモバイルでもエージェントが動くことで、場所を問わず自律的な業務遂行が可能になります。",
+      "action_item": "Claudeのモバイルアプリを使い、外出先でのタスク処理を1つ試してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2607/08/2000000168/"
+    },
+    {
+      "title": "MetaがInstagram写真をAI生成の素材に利用可能に　拒否設定が必要",
+      "category": "リスク・規制",
+      "summary": "Metaが新型AIモデル導入に伴い、Instagramの公開写真をAI生成の素材として自動利用。これを防ぐには手動でのオプトアウト設定が必要になります。",
+      "one_liner": "投稿写真がAI学習の素材に",
+      "why_important": "プライバシー設定がAI開発に直結する時代。企業のSNS運用でも権利保護の再点検が必要です。",
+      "action_item": "Instagramの「シェアと再利用」設定を開き、オプトアウトが必要か確認してください。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/meta-now-lets-anyone-use-your-instagram-photos-in-ai-images-unless-you-opt-out/"
+    },
+    {
+      "title": "ChatGPTやAI資料作成をマウス1台で。AIマウス「Tess Gift」発売",
+      "category": "ビジネス活用",
+      "summary": "音声入力や専用ボタンでChatGPTや資料作成支援AIを即座に呼び出せる法人向けマウスが登場。導入ハードルを下げ、現場の作業効率化を直感的に支援します。",
+      "one_liner": "マウス1台でAIを即起動",
+      "why_important": "ツールへのアクセス障壁を下げるハードウェアの登場は、現場でのAI浸透をさらに加速させます。",
+      "action_item": "頻繁に使うAIツールをデスクトップのショートカットやブックマークの1番目に配置しましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2123222.html"
+    },
+    {
+      "title": "LLMのハルシネーションを防ぐ、3段階セルフチェックの運用術",
+      "category": "研究・技術",
+      "summary": "AIの誤情報を防ぐため、出典、自信度、要確認箇所をAI自身に問い直す手法が提案。再質問により統計や固有名詞の誤りに気づきやすくなり、実務精度が高まります。",
+      "one_liner": "AIの嘘を見抜く3段チェック",
+      "why_important": "AIの出力を鵜呑みにせず、システマチックに疑うフローを持つことが、業務での信頼性を担保します。",
+      "action_item": "AIに回答を求めた後、「今の回答に自信はありますか？」と追加で問いかけてみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/every_ai_recipe/articles/ai-hallucination-check-3-questions"
+    },
+    {
+      "title": "AIが破壊するIT業界の“人月商売”　「SIerの死」後に生き残る者の正体",
+      "category": "日本市場",
+      "summary": "AIエージェントの台頭により、労働時間で稼ぐビジネスが危機に。UIの価値が低下する一方、複雑なビジネスロジックを握る企業が生き残ると分析されています。",
+      "one_liner": "IT業界の人月商売が終焉へ",
+      "why_important": "AIが開発を担う時代、労働時間ではなく「価値」や「ロジック」を売るビジネスモデルへの転換が急務です。",
+      "action_item": "自社のサービスが「時間」を売っているのか「成果」を売っているのか見直してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/08/news043.html"
+    },
+    {
+      "title": "ガバメントAI「源内」は自治体で使えるか？クラウド依存による落とし穴",
+      "category": "日本市場",
+      "summary": "デジタル庁のAI基盤について、特定クラウドへの依存が指摘されています。データ主権や将来的な仕様変更への対応リスクが、自治体の導入障壁になる可能性があります。",
+      "one_liner": "ガバメントAIの自律性リスク",
+      "why_important": "クラウド依存は利便性の裏でリスクを伴います。公共性の高いデータの扱いには慎重な判断が必要です。",
+      "action_item": "業務で扱う重要データが「どこに保存され、どこを通過するか」を改めて意識しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/08/news016.html"
+    },
+    {
+      "title": "エンジニアの採用枠をAI予算に？人事評価に「使いこなし度」が導入へ",
+      "category": "ビジネス活用",
+      "summary": "AIを「育てる」働き方が普及し、AIの活用度を人材マネジメントの指標とする動きが加速。個人の生産性評価の基準が労働時間からAI指揮能力へシフトしています。",
+      "one_liner": "AI使いこなしが人事評価に",
+      "why_important": "単なる労働力ではなく「AIをどう指揮し、育てるか」が個人の市場価値を決める重要な指標になります。",
+      "action_item": "AIへのプロンプト履歴を保存し、自分の指示能力を客観的に見直してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/08/news012.html"
+    },
+    {
+      "title": "ソフトバンクの「1人100エージェント」構想を支える基盤の正体",
+      "category": "日本市場",
+      "summary": "全社員が大量のAIを活用する環境に向け、独自のAIゲートウェイ「Cloud Proxy」を構築。ガバナンスと利便性を両立し、大規模なAI活用の入り口を整備しています。",
+      "one_liner": "全社員100エージェント構想",
+      "why_important": "セキュリティを担保した上で全社員がAIを自由に使える「基盤」の整備が、企業の競争力を左右します。",
+      "action_item": "社内のAI利用ルールが「制限」ばかりになっていないか、今の課題を整理してみましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2607/07/news009.html"
+    }
+  ]
+}

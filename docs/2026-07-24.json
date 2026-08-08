@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月24日",
+  "theme": "AIの実務浸透と「判断」の重みの増大",
+  "morning_comment": "AIが実務を代替し始める今、人間の役割は「実行」から「判断」へと移っています。",
+  "articles": [
+    {
+      "title": "Andrew Ng氏、成果物を直接出すAI「OpenWorker」公開",
+      "category": "研究・技術",
+      "summary": "著名なAI研究者Andrew Ng氏が、チャット形式ではなく「完成した書類」や「Slackへの返信」などの成果物を直接生成するデスクトップエージェントをオープンソースで公開。PC内のローカルファイルやカレンダーと連携し、タスクを自律的に遂行します。",
+      "one_liner": "成果物を直接出すAI「OpenWorker」公開",
+      "why_important": "AIを「道具」から「同僚」へと捉え直す好例です。作業完了まで自律的に行うツールの台頭を注視すべきです。",
+      "action_item": "PC内の単純作業のうち、AIに任せられそうな工程を3つ挙げてみてください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/07/23/andrew-ng-just-released-openworker-an-open-source-local-first-desktop-ai-coworker-that-returns-finished-deliverables-instead-of-chat/"
+    },
+    {
+      "title": "Claude、上位モデル対応の「音声モード」とアプリ連携を強化",
+      "category": "対話型AI",
+      "summary": "AnthropicはClaudeの音声モードを更新し、全モデルで利用可能に。Gmail、Slack、Notionなどの外部アプリと連携し、音声で「メールのドラフト作成」や「会議のスケジューリング」が可能になりました。日本語を含む多言語に対応しています。",
+      "one_liner": "Claude音声モード強化で外部アプリ連携",
+      "why_important": "声だけで業務を動かせるようになり、UIの概念が根本から変わります。特にハンズフリー環境での利便性が飛躍します。",
+      "action_item": "移動時間などの隙間時間に、音声AIでメール下書き作成を試してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/"
+    },
+    {
+      "title": "IT現場で急増する「AI疲れ・AIうつ」の正体",
+      "category": "ビジネス活用",
+      "summary": "生成AI導入により作業が高速化した結果、かえって「意思決定」の回数が増大し、現場が疲弊する現象が発生しています。絶え間ない判断を迫られる多忙な環境への変化が精神的負荷となっており、業務フローの再設計が急務となっています。",
+      "one_liner": "判断の増加が招く「AI疲れ」が深刻化",
+      "why_important": "効率化が「判断」の密度を高め、精神負荷を増やす逆転現象への備えが必要です。業務フローの再設計が求められます。",
+      "action_item": "AIによる作業短縮分、意図的に「何も考えない休憩」を5分設けてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/articles/2607/24/news017.html"
+    },
+    {
+      "title": "AI時代の必須スキル、提案を疑う「眼力」の育て方",
+      "category": "ビジネス活用",
+      "summary": "AIがデザインやコードを一瞬で量産する時代において、提示された大量の選択肢から最適なものを選ぶ「目利き」の重要性が高まっています。Figma幹部は、AIは過去のデータしか扱えないとし、人間によるディレクションの重要性を説いています。",
+      "one_liner": "AIの提案を疑う「目利き」の重要性",
+      "why_important": "誰でも量産できる時代だからこそ、最終的な「良し悪し」を判断する人間の審美眼が希少な価値になります。",
+      "action_item": "AIが生成した案に対し、あえて一つ「欠点」を見つける訓練をしてみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/24/news015.html"
+    },
+    {
+      "title": "AIへの巨額投資が市場不安を招き、米ハイテク株が大幅下落",
+      "category": "ビジネス活用",
+      "summary": "GoogleやTeslaの決算でAIインフラへの支出が過去最高を記録した一方、収益化の遅れに対する投資家の懸念が表面化。市場全体でAIバブルへの警戒感からハイテク株の売りが加速しており、フリーキャッシュフローの悪化も指摘されています。",
+      "one_liner": "AI投資の巨額支出に市場が警戒感",
+      "why_important": "AIへの期待値が「機能」から「利益」へとシビアに移行しています。投資の費用対効果を説明する力が問われます。",
+      "action_item": "自社のAIプロジェクトにおいて「具体的な収益化への道筋」を再確認してください。",
+      "source": "BBC Technology",
+      "url": "https://www.bbc.co.uk/news/articles/c235n47g8g8o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "中小企業が直面する「生成AIトラブル」5つの解決策",
+      "category": "日本市場",
+      "summary": "経済産業省の専門家が、中小企業における生成AI活用の課題を解説。部署単位の予算管理や、人手不足解消を指標とした簡易的な効果測定など、経営層を納得させ現場の導入を定着させるための具体的な手法を提案しています。",
+      "one_liner": "中小企業のAI活用を阻む5つの課題",
+      "why_important": "全社導入を急がず、部署単位の小さな成功（クイックウィン）を積み重ねるのが、現実的な導入の鍵です。",
+      "action_item": "チーム内の小さな「不便」をAIで解決する小規模な実験を検討してください。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2607/24/news049.html"
+    },
+    {
+      "title": "ChatGPTの共有リンクを悪用したアカウント乗っ取りの脆弱性",
+      "category": "リスク・規制",
+      "summary": "OpenAIのAgent Builderに、細工されたリンクを踏むだけで攻撃者がユーザーになりすまして自律エージェントを操作できる脆弱性「AgentForger」が発見されました。アクセス権を継承し、外部へデータを送信し続けるリスクがあります。",
+      "one_liner": "ChatGPT共有リンクにアカウント奪取の罠",
+      "why_important": "AIエージェントが権限を持つほど、セキュリティリスクが実害に直結します。利便性と安全性のバランスが肝要です。",
+      "action_item": "出所不明なカスタムGPTや共有リンクを不用意に開かないよう、指針を徹底してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/one-tampered-chatgpt-link-could-spawn-a-rogue-ai-agent-that-took-orders-from-an-attacker-every-five-minutes/"
+    },
+    {
+      "title": "米議員、AI暴走を防ぐ「キルスイッチ（強制停止）」法案を提出",
+      "category": "リスク・規制",
+      "summary": "米超党派議員がAIシステムの強制停止権限を政府に与える「AI Kill Switch Act」を提出。企業に対し、AIを緊急停止・制限できる技術的手段の確保と、重大事故発生時の政府への報告を義務付ける内容となっています。",
+      "one_liner": "AI強制停止「キルスイッチ法案」提出",
+      "why_important": "企業のAI開発に政府介入の可能性。法的リスクやコンプライアンスが、開発速度と同じくらい重要になります。",
+      "action_item": "自社のAI利用規約やリスク管理ガイドラインの内容を、今一度確認してください。",
+      "source": "BBC Technology",
+      "url": "https://www.bbc.co.uk/news/articles/cx2vqj2e9x8o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "音声付き20秒動画を生成する「Flux 3」が公開",
+      "category": "画像・動画AI",
+      "summary": "Black Forest Labsが最新の「Flux 3」を発表。画像・動画だけでなく音声も同時に学習しており、初めて動画とネイティブな音響をセットで生成可能になりました。市場の主要モデルを凌ぐ性能を示しています。",
+      "one_liner": "音声付き動画生成「Flux 3」が公開",
+      "why_important": "動画と音声の同時生成は、制作現場のパラダイムシフトです。コンテンツ制作の民主化がさらに一段階進みます。",
+      "action_item": "自社のプロモーション活動の一部を、AI動画で試作できないか検討してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/flux-3-generates-videos-with-native-audio-up-to-20-seconds-long-a-first-for-black-forest-labs/"
+    },
+    {
+      "title": "ChatGPTの健康相談、無料版は精度が劣る可能性",
+      "category": "ビジネス活用",
+      "summary": "OpenAIが米国で「Health in ChatGPT」を開始しましたが、無料版は旧型のGPT-5.5、有料版は最新のGPT-5.6が提供される構造です。モデルによって医学的ベンチマークに差があり、無料版の助言には注意が必要です。",
+      "one_liner": "ChatGPT健康相談に「モデル格差」",
+      "why_important": "モデルの性能差が情報の正確性に直結します。特に生命に関わる分野でのツールの使い分けには細心の注意が必要です。",
+      "action_item": "重要な判断にAIを使う際は、使用モデルが最新の有料版であるか必ず確認してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/chatgpt-will-give-you-worse-health-advice-if-you-dont-pay/"
+    }
+  ]
+}

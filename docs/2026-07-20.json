@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月20日",
+  "theme": "極限の進化とAI共生社会の模索",
+  "morning_comment": "性能競争が加速する中、問われるのは「使いこなす人間の視点」です。",
+  "articles": [
+    {
+      "title": "中国の超高性能LLM「Kimi K3」発表、GPT-4級を無料で開放か",
+      "category": "中国AI",
+      "summary": "中国Moonshot AIが2.8兆パラメータの「Kimi K3」発表。コーディング性能で最高峰を狙い、低コストなAPI提供と重みの公開を予定。",
+      "one_liner": "GPT-4級AI、中国から無料開放へ",
+      "why_important": "圧倒的なコスト安により、これまで費用対効果で見送っていた高性能AIの活用ハードルが劇的に下がります。",
+      "action_item": "無料公開されたら、まずは複雑なコード生成や翻訳でその実力を試してみてください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/moonshot_ai_kimi_k3/"
+    },
+    {
+      "title": "AIエージェントへの「指示ハック」対策、実装の重要性が浮上",
+      "category": "リスク・規制",
+      "summary": "外部データに含まれる悪意あるプロンプトでAIが暴走するリスクが指摘。企業導入には権限分離や人間による承認プロセスの組み込みが必須。",
+      "one_liner": "AIエージェントの乗っ取りリスクに注視",
+      "why_important": "自律的なAIほど被害が大きくなるため、導入前に「人間による最終承認」のガードレール設計が不可欠です。",
+      "action_item": "外部データを取り扱う社内AIツールの権限設定が適切か、IT部門に確認してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/hach/articles/chat-agent-prompt-injection-defense"
+    },
+    {
+      "title": "DBを「見てから書く」AI、SQRLがデータ分析を自動化",
+      "category": "研究・技術",
+      "summary": "Feyn AIの「SQRL」は、SQL生成前にDBの中身を調査し精度を向上。専門知識なしで自然言語による正確なデータ抽出が可能に。",
+      "one_liner": "DBを「下見」するAIが分析精度を改善",
+      "why_important": "SQLの知識がなくても現場主導で精度の高いデータ抽出が可能になり、意思決定のスピードが飛躍的に向上します。",
+      "action_item": "データ分析をAIに依頼する際、まずテーブル構造や型情報を詳しく読み込ませるよう意識してください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/07/19/feyn-ai-releases-sqrl-a-text-to-sql-model-family-that-inspects-the-database-before-writing-a-query/"
+    },
+    {
+      "title": "アリババが2.4兆パラメータの「Qwen 3.8」発表、世界2位の性能主張",
+      "category": "中国AI",
+      "summary": "アリババが「Qwen3.8-Max-Preview」を公開。2.4兆パラメータの巨大モデルで、コーディングやオフィス業務の自動化に特化。",
+      "one_liner": "アリババ、2.4兆パラメータの巨大AI発表",
+      "why_important": "中国勢の急速な進化は選択肢を広げます。特にマルチモーダル性能が業務自動化の幅を大きく広げる可能性があります。",
+      "action_item": "Qwenシリーズの最新ベンチマークを確認し、特定の業務における適性を再検討してください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/07/19/alibaba-previews-qwen3-8-max-a-2-4-trillion-parameter-multimodal-model-days-after-moonshots-kimi-k3-open-weight-launch/"
+    },
+    {
+      "title": "「AIの進化で自分の工夫は無駄になるか？」最強モデル消滅前の考察",
+      "category": "ビジネス活用",
+      "summary": "モデルの進化でプロンプト等の微細な技術は陳腐化するが、課題の構造化やドメイン知識といった本質的な工夫の価値は不変であると考察。",
+      "one_liner": "磨くべきは、モデルを超越する構造化力",
+      "why_important": "特定のモデルに依存しない「課題を定義する力」こそが、AI時代を生き抜くビジネスパーソンの本質的な武器となります。",
+      "action_item": "AIに指示を出す前に、解決したい課題を一度紙に書き出して構造化する癖をつけましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kitepon/articles/knowhow-outlasts-model"
+    },
+    {
+      "title": "AI用メモリ不足が深刻化、国家間の「経済安保」問題へ発展",
+      "category": "ビジネス活用",
+      "summary": "AIブームでメモリチップが世界的に不足。価格高騰や納期遅延が懸念され、各国のIT投資や製品価格に影響を及ぼす可能性。",
+      "one_liner": "AI用メモリの枯渇が企業のIT投資を直撃",
+      "why_important": "ハードウェアの調達難は、中長期的なAI導入コストやプロジェクトのスケジュール遅延に直結します。",
+      "action_item": "下半期のサーバー導入や高性能PCの更新計画がある場合、早めに在庫状況を精査してください。",
+      "source": "Semafor Technology",
+      "url": "https://www.semafor.com/article/07/19/2026/ai-memory-shortage-puts-pressure-on-governments-to-act"
+    },
+    {
+      "title": "AppleがOpenAIを提訴、AIハードウェア開発巡る営業秘密侵害で",
+      "category": "リスク・規制",
+      "summary": "Appleの元従業員がOpenAIのAI専用デバイス開発に関与したとして提訴。AI市場の勢力図やOpenAIの戦略に影響する可能性。",
+      "one_liner": "AppleがOpenAIを提訴、覇権争い激化",
+      "why_important": "大手プラットフォーム間の係争は、将来的なAIサービスの連携や開発スピードにブレーキをかけるリスクがあります。",
+      "action_item": "特定のAIベンダー一社に依存しすぎない、マルチプラットフォームな導入戦略を意識しましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/19/can-an-apple-lawsuit-derail-openais-hardware-plans/"
+    },
+    {
+      "title": "GitHub履歴から週報を自動生成するツール「shuho」が登場",
+      "category": "ビジネス活用",
+      "summary": "エンジニアの活動履歴をAIが解析し、ビジネス向けの週報を自動生成。報告作業の精神的・時間的負担を大幅に削減する実用的事例。",
+      "one_liner": "GitHub履歴からAIが週報を自動生成",
+      "why_important": "非生産的な「報告のための作業」を撲滅する好例。同様の自動化は全職種の定型業務で応用可能です。",
+      "action_item": "自分の仕事の中で、ログから自動生成できそうな報告業務がないかリストアップしてみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/alforgelabs/articles/dcc396feffa52d"
+    },
+    {
+      "title": "英国で男子生徒の20%が「AIガールフレンド」と恋愛中、教育への影響懸念",
+      "category": "リスク・規制",
+      "summary": "理想を投影できるAIとの深い関係が若年層で拡大。コミュニケーション能力やジェンダー観への悪影響が教育現場で課題に。",
+      "one_liner": "AIとの恋愛が拡大、倫理と教育が課題に",
+      "why_important": "感情をシミュレートするAIが社会に溶け込む中、人間関係や倫理観の変容について組織や家庭での理解が求められます。",
+      "action_item": "AIの「人間らしさ」がユーザーの心理に与える影響について、チーム内で一度話題にしてみましょう。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/schoolboys_ai_girlfriends/"
+    },
+    {
+      "title": "次世代Siri、長時間の会話には「休憩」を促す配慮機能を搭載か",
+      "category": "日本市場",
+      "summary": "Apple Intelligence搭載の新型Siriに、デジタルウェルビーイングに配慮した「休憩提案」機能が発見。信頼されるパートナーへ進化。",
+      "one_liner": "Siriが休憩を提案。AI共生の新段階へ",
+      "why_important": "AIが単なる道具から生活に寄り添う存在へと進化しています。ユーザーの健康を尊重する設計は今後の標準になります。",
+      "action_item": "AI作業による集中が続いた際は、意識的にデジタルオフの時間を作るよう心がけてください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/siri-ai-prompts-breaks-when-you-talk-too-long/"
+    }
+  ]
+}

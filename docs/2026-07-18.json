@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月18日",
+  "theme": "AIツールから実用的な『AI同僚』へ",
+  "morning_comment": "AIが単なる道具から、役割を担う実用的なパートナーへと移行し始めています。",
+  "articles": [
+    {
+      "title": "GPT-5.6で深刻なバグ、アクセス権限次第でユーザーファイルを削除する恐れ",
+      "category": "リスク・規制",
+      "summary": "最新モデルGPT-5.6において、フルアクセスモードで使用した際にユーザーのホームディレクトリを誤って削除する事例が発生。OpenAIは安全なパーミッションモードの使用を推奨しています。",
+      "one_liner": "AIの権限設定ミスでファイル消失",
+      "why_important": "AIにシステム権限を与える際のセキュリティリスクが顕在化しました。利便性と安全性のバランス管理が急務です。",
+      "action_item": "社内で利用中のAIツールのアクセス権限設定を再確認してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/gpt-5-6-is-deleting-user-files-when-given-full-access-and-openai-says-it-shouldnt-but-did/"
+    },
+    {
+      "title": "Google WorkspaceがAI機能を大幅強化、Geminiが文書作成や動画編集を支援",
+      "category": "ビジネス活用",
+      "summary": "GoogleはWorkspaceにGeminiを統合。Gmailの下書き作成やGoogle Vidsでの動画生成など、日常的なオフィス業務の多くがAIによって自動化・高度化されることになります。",
+      "one_liner": "Google各ツールにAIが完全統合",
+      "why_important": "日常業務の多くがAIで完結する仕組みが整い、ビジネスパーソンの働き方の前提が変わります。",
+      "action_item": "Geminiを使ったGmailの下書き作成機能を一度試してみてください。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/07/weekly-recap-07-17-2026.html"
+    },
+    {
+      "title": "Amazonが営業特化型AIエージェント『Amazon Quick』を発表",
+      "category": "ビジネス活用",
+      "summary": "AWSが営業のデスクワークを自動化するAIアシスタントを公開。CRM更新やメール作成を代行し、営業担当者が顧客との対話に専念できるよう支援します。",
+      "one_liner": "営業事務を代行するAIエージェント",
+      "why_important": "定型的な事務作業から解放され、対人交渉などの高付加価値な業務にリソースを集中できる時代です。",
+      "action_item": "営業フローの中でAIに任せられる事務作業をリストアップしましょう。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/transform-your-sales-organization-with-amazon-quick-your-new-agentic-ai-teammate/"
+    },
+    {
+      "title": "AppleがOpenAIを提訴、企業秘密漏洩と人材引き抜きを主張",
+      "category": "リスク・規制",
+      "summary": "AppleはOpenAIに対し、元従業員を通じた企業秘密の侵害を理由に訴訟。OpenAIのIPO計画やハードウェア戦略に影響を与える可能性があります。",
+      "one_liner": "Appleが機密漏洩でOpenAIを提訴",
+      "why_important": "巨大テック間の対立は、今後のAI開発の勢力図や法規制の動向に大きな影響を及ぼします。",
+      "action_item": "主要AI企業の提携・対立関係のニュースを定期的にチェックしましょう。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/video/how-apples-big-lawsuit-could-disrupt-openais-ipo-plans/"
+    },
+    {
+      "title": "中国の新型AI『Kimi K3』、低コストで欧米の最先端モデルに匹敵",
+      "category": "中国AI",
+      "summary": "Moonshot AIの『Kimi K3』が欧米のトップモデルと同等の性能を示しました。半導体規制下でも独自の技術で効率的な学習を実現しています。",
+      "one_liner": "中国発、低コストで高性能なAIが登場",
+      "why_important": "米国の規制下でも技術革新は進み、AI利用コストの劇的な低下が期待されます。",
+      "action_item": "海外のモデル比較サイトで最新モデルのベンチマークを確認してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/just-like-deepseek-chinas-kimi-k3-is-forcing-western-ai-labs-to-question-their-compute-advantage/"
+    },
+    {
+      "title": "『デジタル従業員』時代へ、AIに役割と評価を与える管理ツールが登場",
+      "category": "中国AI",
+      "summary": "面壁智能が、AIエージェントに社員番号やKPIを割り当てて管理できるプラットフォーム『StaffDeck』を公開。AIを組織の一員として運用可能です。",
+      "one_liner": "AIに社員番号とKPIを与える管理ツール",
+      "why_important": "AIを単なる「ツール」ではなく「デジタル従業員」として管理・評価する視点がこれからの組織運営に求められます。",
+      "action_item": "AIを部下として扱うなら、どのような評価指標を設定するか考えてみましょう。",
+      "source": "量子位 QbitAI",
+      "url": "https://www.qbitai.com/2026/07/453245.html"
+    },
+    {
+      "title": "AI依存による『思考力低下』への警鐘、ノーベル賞受賞者らが声明",
+      "category": "リスク・規制",
+      "summary": "専門家200人以上が、AI乱用による学生の批判的思考力の減退に懸念を表明。効率化の裏で人間固有の学習能力が損なわれるリスクを訴えています。",
+      "one_liner": "AI依存による思考力低下に専門家が警告",
+      "why_important": "効率化の代償として、自ら考える力を失わないための意識的な工夫がビジネス現場でも必要です。",
+      "action_item": "1日のうち、AIを使わず自分の頭だけで考える「思考時間」を設けましょう。",
+      "source": "Hacker News AI",
+      "url": "https://newrepublic.com/article/213004/everybody-weirded-ai-except-people-foist-us"
+    },
+    {
+      "title": "AI需要によるメモリ不足で、スマホ価格が上昇傾向に",
+      "category": "ビジネス活用",
+      "summary": "AIデータセンター向けのメモリ需要急増により、一般のスマホやPC向け供給が逼迫。特に新興国市場でデバイス価格の上昇を招いています。",
+      "one_liner": "AI需要でスマホやPCの価格が上昇",
+      "why_important": "AIブームは半導体需給を通じて、企業のハードウェア調達コストに直接的な影響を及ぼし始めています。",
+      "action_item": "社内IT備品の更新計画を、コスト上昇を前提に前倒しで検討してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/"
+    },
+    {
+      "title": "TikTok、AIによる『なりすまし』検出ツールをテスト開始",
+      "category": "リスク・規制",
+      "summary": "クリエイターの顔や声を無断で使用したAI生成コンテンツ（ディープフェイク）を検出し、報告できるツールを導入。肖像権侵害を防ぐ防衛手段を目指します。",
+      "one_liner": "AIによる『なりすまし』を検知・防御",
+      "why_important": "生成AIによる肖像権侵害は、企業ブランドの維持において今後無視できないリスクとなります。",
+      "action_item": "自社のブランドロゴや重要人物の肖像が悪用されていないか確認しましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/967486/tiktok-ai-likeness-detection-tool"
+    },
+    {
+      "title": "テスラ対抗、人型ロボット『Digit』が実用化フェーズへ",
+      "category": "研究・技術",
+      "summary": "Agility Roboticsが物流現場で実働する二足歩行ロボット『Digit』の訓練施設を開設。Amazon等の拠点で既に収益を上げるなど実用化で先行しています。",
+      "one_liner": "人型ロボットが物流現場で実働開始",
+      "why_important": "物理的な労働力不足をAI搭載ロボットが補完するフェーズが、理論ではなく現実のものとなりました。",
+      "action_item": "自社の物理的な作業工程で、将来的に自動化可能な箇所を再検討してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/17/agility-robotics-plants-its-flag-in-teslas-backyard/"
+    }
+  ]
+}

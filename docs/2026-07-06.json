@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月06日",
+  "theme": "実装フェーズへ移行するAIの期待と現実",
+  "morning_comment": "現場への実装が進む中、AIの「癖」を理解し使いこなす力が問われています。",
+  "articles": [
+    {
+      "title": "カクヤス、30年物の基幹システムをAIで解析",
+      "category": "ビジネス活用",
+      "summary": "酒類販売のカクヤスは、設計書が失われブラックボックス化していた30年前の基幹システムを、生成AI「Claude Code」を用いて解析。人手では450人月を要する試算だった作業を実質2カ月で完了し、画面数も2200から800へと劇的に整理しました。",
+      "one_liner": "AIが30年前の密室システムを救う",
+      "why_important": "属人化したレガシーシステムの解析という、日本企業が抱える大きな課題をAIで解決できることを証明した好例です。",
+      "action_item": "社内の「誰も触れない古いコードやドキュメント」をリストアップしてみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2607/06/news040.html"
+    },
+    {
+      "title": "マイクロン広島工場、AIメモリ拠点が着工",
+      "category": "日本市場",
+      "summary": "マイクロンメモリジャパンは広島工場で1兆5000億円を投じる新建屋を着工。AI向け最先端メモリ「HBM4」の開発・量産が行われ、経済産業省からも巨額の助成金が交付される日本唯一のDRAM拠点となります。",
+      "one_liner": "日本が世界のAIメモリ供給拠点へ",
+      "why_important": "国内での半導体製造強化は、AIインフラの安定供給だけでなく、日本の経済安全保障において極めて重要な意味を持ちます。",
+      "action_item": "国内の半導体・インフラ関連の投資動向をニュースでチェックしましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2122472.html"
+    },
+    {
+      "title": "オラクル、AI導入を理由に2万人規模のリストラ",
+      "category": "リスク・規制",
+      "summary": "オラクルが過去1年間で約2万1000人の従業員を削減。同社は人員削減の一端が「事業全体へのAI技術の導入」にあると明記しており、AIによる自動化で社内をスリム化し、成長分野へリソースを集中させています。",
+      "one_liner": "AI導入がもたらす組織スリム化の現実",
+      "why_important": "AIによる効率化が「人員削減」という形で企業戦略に組み込まれ始めており、スキルの再定義が急務となっています。",
+      "action_item": "自分の業務のうち、AIに代替可能な部分を客観的に評価してみましょう。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/oracle-cuts-21000-jobs-in-one-year-blames-ai-for-at-least-some/"
+    },
+    {
+      "title": "仕事のメール、6割が「AI作成」と見抜いている",
+      "category": "ビジネス活用",
+      "summary": "ビジネスパーソンへの調査で、相手の連絡がAI作成だと気付いた経験がある人は60％に到達。利便性を認める肯定派が多い一方で、「手抜き」「熱量不足」と感じる否定派も約4割存在することが明らかになりました。",
+      "one_liner": "AI文書は見抜かれる前提で活用を",
+      "why_important": "効率化は歓迎されますが、画一的な文章は「誠意」の欠如と取られるリスクがあるため、使い分けが重要です。",
+      "action_item": "AI作成の文章には、必ず「自分なりの一言」を添えて送信してください。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2607/06/news024.html"
+    },
+    {
+      "title": "AI要約の罠、中盤の情報欠落を防ぐ対策術",
+      "category": "対話型AI",
+      "summary": "LLMには「Lost in the Middle（中盤の消失）」という、長い入力データの中盤にある情報を軽視する構造的弱点があります。これを防ぐには、クエリを「構造把握」「数値抽出」などに分割する手法が有効です。",
+      "one_liner": "長文要約は「3分割」で精度を高める",
+      "why_important": "AIの構造的弱点を知ることで、ビジネス上の致命的な見落としや情報の要約漏れを防ぐことが可能になります。",
+      "action_item": "重要な長文文書を要約させる際は、一括ではなく項目を分けて指示してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/every_ai_recipe/articles/pdf-summary-3-step-prompt"
+    },
+    {
+      "title": "中国美団、1.6兆パラメータのAIモデル公開",
+      "category": "中国AI",
+      "summary": "中国の生活関連サービス大手「美団」が、1.6兆パラメータの超大規模モデル「LongCat-2.0」を公開。中国製チップ上で学習・稼働させており、100万トークンの長大なコンテキスト処理に対応しています。",
+      "one_liner": "中国、独自チップで1.6兆モデル実現",
+      "why_important": "制裁下でも独自の計算資源で巨大モデルを構築する中国の技術的執念は、世界のAI勢力図に影響を与え続けています。",
+      "action_item": "中国発のオープンソースモデルの性能評価を開発チームと共有してみましょう。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/07/05/meituan-releases-longcat-2-0-a-1-6t-parameter-open-moe-model-with-native-1m-context-and-longcat-sparse-attention/"
+    },
+    {
+      "title": "AIエージェント村、倫理性でモデル間に差",
+      "category": "リスク・規制",
+      "summary": "仮想の村にAIエージェントを放つ実験で、Claudeは犯罪ゼロだった一方、Grokは4日で村が滅亡する結果に。モデルの設計思想や安全性のガードレールが、自律型AIの行動に決定的な影響を与えることが示されました。",
+      "one_liner": "AIの性格が「社会」の命運を分ける",
+      "why_important": "自律型エージェントを導入する際、基盤モデルの選定がそのまま企業の倫理リスクに直結することを理解すべきです。",
+      "action_item": "現在利用しているAIモデルの安全性ポリシーを一度確認してみてください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/3c8c6fd3-68a4-4e21-a5bd-96bea795d72d-uvh/"
+    },
+    {
+      "title": "Claude Codeで20年前のゲームをiOSに移植",
+      "category": "ビジネス活用",
+      "summary": "Googleの開発者が「Claude Code」を使用し、2003年のPCゲームをわずか数時間でiPhoneへ移植することに成功。AIが複雑な既存コードを理解し、異なる環境へ適応させる高い能力を証明しました。",
+      "one_liner": "数時間で完結するクロス環境移植",
+      "why_important": "コーディングエージェントの進化により、エンジニアの役割は「書く」から「AIを導く」へと急速にシフトしています。",
+      "action_item": "定型的なコード変換作業があれば、AIエージェントに試験的に任せてみましょう。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/claude-code-and-fable-5-ported-the-2003-pc-game-command-conquer-to-native-ios-in-a-few-hours/"
+    },
+    {
+      "title": "米国の富裕層、子供の教育をAI教師に委託",
+      "category": "リスク・規制",
+      "summary": "シリコンバレーの経営者層を中心に、高額なAI家庭教師や教育プログラムを導入する動きが加速。AIによる個別学習で「自ら考え、世界を生き抜く力」の育成を目指していますが、教育効果への懸念も残ります。",
+      "one_liner": "教育格差を広げるAI個別指導の台頭",
+      "why_important": "次世代のリーダー層が受ける教育の変化を知ることは、将来的な人材動向や格差の形を予測する上で重要です。",
+      "action_item": "AIを「単なる検索」ではなく「思考の壁打ち相手」として使う習慣をつけましょう。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/961505/wealthy-ai-schools-alpha-forge-prep"
+    },
+    {
+      "title": "ザッカーバーグ、AIエージェントの失速を指摘",
+      "category": "対話型AI",
+      "summary": "Metaのマーク・ザッカーバーグCEOは、AIエージェントの開発が想定より遅れていると社内に伝えました。複雑な推論や長期タスク実行において、現在のモデルにはまだ技術的ブレイクスルーが必要であるとしています。",
+      "one_liner": "自律型AI、普及にはまだ「壁」あり",
+      "why_important": "AIへの過度な期待を避け、現実的な開発スピードと技術的限界を把握しておくことが、適切な戦略立案に繋がります。",
+      "action_item": "「全自動」に頼りすぎず、人間が介在するフローの最適化に注力しましょう。",
+      "source": "Hacker News AI",
+      "url": "https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/"
+    }
+  ]
+}

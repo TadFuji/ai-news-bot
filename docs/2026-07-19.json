@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月19日",
+  "theme": "AI自律化と人間の最終決断",
+  "morning_comment": "AIの自律化が進む中、人間の「判断」こそが価値の源泉です。",
+  "articles": [
+    {
+      "title": "AIエージェントへのビジネス丸投げ実験が成功、自律運用の鍵は「停止条件」",
+      "category": "ビジネス活用",
+      "summary": "Claude Fable 5等を用いたビジネス自律運用実験で成功。成功の鍵は、金銭支出や対外公開時に人間が介入する「停止条件」をMarkdownで定義した設計にありました。",
+      "one_liner": "AIビジネス自律運用の鍵は停止条件",
+      "why_important": "AIに権限を与える際、リスク管理のための「停止スイッチ」を設計する重要性が増しています。",
+      "action_item": "任せたい業務で、どのような場合に「停止」させるべきか定義してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/suuungwoo/articles/ai-autonomous-business-experiment"
+    },
+    {
+      "title": "最強AI「Fable 5」でも陥る無限レビューの罠、人間による停止判断が不可欠",
+      "category": "ビジネス活用",
+      "summary": "超高性能モデルによるコードレビューで、修正が繰り返され実装が進まない「収束不能」事態が発生。完璧を求めるAIをどこで止めるか、人間の決断力が問われています。",
+      "one_liner": "AIの完璧主義を止めるのは人間の決断",
+      "why_important": "高性能AIほど改善を続けますが、ビジネス成果のために「完了」を決めるのは人間の役割です。",
+      "action_item": "AIとのやり取りで「いつまでに終わらせるか」の締め切りを設定してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/hrmtz/articles/ai-review-never-converges"
+    },
+    {
+      "title": "中国の最新モデル「Kimi K3」が登場、2.8兆パラメータで米国勢に匹敵",
+      "category": "中国AI",
+      "summary": "Moonshot AIが発表したKimi K3は、2.8兆パラメータを誇る巨大モデル。ClaudeやGPTのトップモデルに匹敵する性能を持ち、世界の勢力図を塗り替える可能性があります。",
+      "one_liner": "中国Kimi K3が米トップ勢に匹敵",
+      "why_important": "中国勢の台頭によりAIの多極化が進み、特定のプラットフォームに依存しない戦略が求められます。",
+      "action_item": "特定のAIツールが使えなくなった場合の代替手段を検討しておきましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/okamototk/articles/d96bec3ccd7195"
+    },
+    {
+      "title": "国連事務総長、AI「キラーロボット」の法的禁止を世界へ呼びかけ",
+      "category": "リスク・規制",
+      "summary": "国連のアントニオ・グテーレス事務総長が、人間の介入なしに攻撃判断を下す自律型兵器の禁止を要請。AIの倫理的・軍事的利用に対する国際規制の議論が活発化しています。",
+      "one_liner": "国連がAI兵器の法的禁止を勧告",
+      "why_important": "倫理的・軍事的な国際規制は、将来的なAIの利用規約や企業のコンプライアンスに直結します。",
+      "action_item": "自社のAI利用ガイドラインに倫理的な観点が含まれているか確認してください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/un-secretary-general-calls-for-global-ban-on-ai-killer-robots/"
+    },
+    {
+      "title": "NVIDIAがDeepStream 9.1をリリース、映像解析AIの自律化を加速",
+      "category": "画像・動画AI",
+      "summary": "NVIDIAがビデオ分析ツールキットの最新版を発表。3Dトラッキングや自動キャリブレーション機能を搭載し、AIが自律的に映像解析パイプラインを調整可能になります。",
+      "one_liner": "NVIDIAが映像解析AIの自律化を加速",
+      "why_important": "現場の監視業務がエージェント化されることで、物理空間のDXコストが劇的に低下します。",
+      "action_item": "店舗や工場など、映像データを活用して自動化できる領域がないか探してみましょう。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/07/18/nvidia-released-deepstream-9-1-bringing-agentic-ai-to-vision-ai-with-13-skills-and-multi-view-3d-tracking/"
+    },
+    {
+      "title": "将棋界に学ぶAI共存時代の生存戦略、価値は「性能」から「共感」へ",
+      "category": "ビジネス活用",
+      "summary": "AIが人間を超えた将棋界で、プロ棋士が人気を保つ理由を分析。AIが正解を出す時代、人間の価値は「勝負の緊張感」や「物語」への共感、責任の所在に移行しています。",
+      "one_liner": "AI時代こそ「共感」と「物語」が価値に",
+      "why_important": "正解はAIが出せますが、責任を負い、共感を得ることは人間にしかできない付加価値になります。",
+      "action_item": "今日の仕事で、AIにはできない「相手への気遣い」を一つ意識して行ってみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/pdfractal/articles/d02e90c07e1aff"
+    },
+    {
+      "title": "インフラ構築の三位一体改革、LLMとIaCの組み合わせで自動化が加速",
+      "category": "ビジネス活用",
+      "summary": "LLMとTerraform等を組み合わせ、インフラの生成・把握・設計書出力を自動化。ただしAIの「無邪気な破壊的変更」を防ぐ実務的なガードレールの実装が不可欠です。",
+      "one_liner": "LLMとIaCでインフラ構築を自動化",
+      "why_important": "開発効率が上がる一方、AIの誤操作によるインフラ破壊を防ぐガードレールが不可欠です。",
+      "action_item": "自動化ツールを使う際は、必ず「ドライラン」を行う手順を徹底しましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/pinddy/articles/925ca1c1959240"
+    },
+    {
+      "title": "LLMのAPIコスト暴走を「使う前」に止める、請求トラブルを防ぐ設計術",
+      "category": "ビジネス活用",
+      "summary": "AIアプリ開発での無限ループ等によるコスト暴走対策。リクエスト前にトークン数を計測し予算超過を未然に防ぐ「事前ガードレール」の重要性が説かれています。",
+      "one_liner": "AIのAPIコスト暴走を未然に防ぐ",
+      "why_important": "AI導入の持続可能性を保つため、技術面だけでなく「予算のガードレール」の設計が急務です。",
+      "action_item": "現在利用しているAIサービスの利用料金アラート設定を再確認してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/akira_papa/articles/bf2c8a2884587d"
+    },
+    {
+      "title": "ループの次は「グラフ」、AIエージェント設計の新潮流と判定精度の課題",
+      "category": "ビジネス活用",
+      "summary": "AIエージェントの設計が単純なループから、複雑な分岐を持つ「グラフ構造」へ進化。構造が複雑化するほど、各工程でのAIの判断を検証する技術が鍵となります。",
+      "one_liner": "AIエージェントはグラフ構造へ進化",
+      "why_important": "単純な反復から複雑な分岐へ。AIの判断精度を検証する「判定エンジニアリング」が重要です。",
+      "action_item": "複雑な業務をAIに任せる前に、業務フローを図で可視化してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/jodycraft/articles/dfe38e73e1ef8a"
+    },
+    {
+      "title": "AIによるデバッグの副作用、根本原因を深く隠蔽する5つのパターン",
+      "category": "リスク・規制",
+      "summary": "AIにバグ修正を丸投げすると、表面上のエラーは消えるが根本原因が深層に隠される危険があります。AIの修正を鵜呑みにせず、人間が検証するプロセスの重要性を再認識。",
+      "one_liner": "AIデバッグが招く根本原因の隠蔽",
+      "why_important": "目先のエラー解消を優先するAIの特性を理解し、根本解決を目指す「検証力」が必要です。",
+      "action_item": "AIが修正したコードに対し、「なぜこれで直るのか」を一言説明させてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kenimo49/articles/ai-debug-100-cases-5-deepening-patterns"
+    }
+  ]
+}

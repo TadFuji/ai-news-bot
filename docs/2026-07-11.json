@@ -1,0 +1,107 @@
+{
+  "updated": "2026年07月11日",
+  "theme": "実社会を自律的に動かすAIの本格普及",
+  "morning_comment": "推論と実行が融合し、AIは\"真の相棒\"へ。今朝は実務を変える10選です。",
+  "articles": [
+    {
+      "title": "Google WorkspaceのAI強化：Vidsが日本語対応",
+      "category": "日本市場",
+      "summary": "Googleはプレゼン資料を動画化する「Google Vids」の日本語対応を開始。AIによるスクリプト作成やナレーション生成が日本語で行えるようになり、Google SheetsのGeminiによる自動データ入力も多言語展開が始まった。",
+      "one_liner": "AI動画制作が日本語標準へ",
+      "why_important": "プレゼン資料を動画化する文化が定着し、社内コミュニケーションの質が劇的に変わります。",
+      "action_item": "次回のスライド作成時に、AIによる構成案作成を試してみましょう。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/07/weekly-recap-07-10-2026.html"
+    },
+    {
+      "title": "GPT-5.6 Sol、タスクに応じた5段階の推論レベルを導入",
+      "category": "対話型AI",
+      "summary": "OpenAIの新モデルに「Light」から「xhigh」まで選択可能な5つの推論レベルが実装。難易度に合わせてコストと精度のバランスを最適化でき、複数のサブエージェントを並列稼働させる高度な運用も可能になった。",
+      "one_liner": "難易度で推論を選べる新時代",
+      "why_important": "タスクごとにコストと精度の最適解をAIが提示するようになり、ROIの管理がより重要になります。",
+      "action_item": "現在AIに依頼しているタスクを「単純」か「複雑」かで分類してみてください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openai-staffer-maps-out-which-of-gpt-5-6-sols-five-reasoning-levels-fits-which-task-complexity/"
+    },
+    {
+      "title": "AIエージェント「Claude Cowork」による事務作業自動化",
+      "category": "ビジネス活用",
+      "summary": "Anthropicの「Claude Cowork」は、WebブラウザやPCアプリを直接操作して定型業務を代行する。チャット指示だけでファイル操作や情報収集を完遂でき、事務職や管理職の業務負担を大幅に削減する。",
+      "one_liner": "ブラウザを動かすAI事務員誕生",
+      "why_important": "AIが画面を操作する段階に入り、RPAの概念そのものがAIエージェントに置換されようとしています。",
+      "action_item": "毎日Web上で行っているルーチン作業を、手順書として書き出してみましょう。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/readitnow/2124398.html"
+    },
+    {
+      "title": "AIとの夜間分業：6日間でアプリを開発した日本の事例",
+      "category": "ビジネス活用",
+      "summary": "Claude Codeを活用し、夜間にAIが自律開発を進め、朝に人間が監査するワークフローでOSSアプリを短期間で公開。AIが自己進化する機能を持ちつつ、人間がガードレールを設けることで速度を最大化している。",
+      "one_liner": "人が眠る間にAIが開発を完遂",
+      "why_important": "人間が監督し、AIが実行する「24時間稼働」のワークフローが、開発スピードの決定的な差となります。",
+      "action_item": "明朝までにAIに完了させておきたいタスクを1つ、寝る前に指示してみましょう。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/moriwo_dev_ai/articles/ama-teras-self-evolving-agent"
+    },
+    {
+      "title": "GPT-5.6 Sol、下位モデルを自律的に学習させることに成功",
+      "category": "研究・技術",
+      "summary": "OpenAIの新モデルが下位モデル「Luna」の事後学習を自律的に完遂。AIが自らGPU選定や検証を行う「再帰的自己改善」の能力を示しており、進化速度が人間の介在を最小限にして加速する。",
+      "one_liner": "AIが自律的にAIを強化する",
+      "why_important": "AIの進化速度が非連続的に加速する可能性があり、最新情報のキャッチアップ頻度を上げる必要があります。",
+      "action_item": "AI関連のニュースレターや情報をチェックする時間を毎朝15分確保してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openais-gpt-5-6-sol-autonomously-post-trained-the-smaller-luna-model-with-a-fairly-underspecified-prompt/"
+    },
+    {
+      "title": "中国Tencent、AIエージェント企業Manusの買収を検討",
+      "category": "中国AI",
+      "summary": "中国テック大手TencentがAIエージェントのスタートアップManusの買収交渉中。WeChat等へAIエージェントを統合し、対話型UIを超えた「代理実行」サービスの構築を目指し、グローバルな覇権争いが激化している。",
+      "one_liner": "中国テック巨人が動かすAI市場",
+      "why_important": "対話型から「代理実行」へのシフトは世界共通の潮流であり、プラットフォームの勢力図が塗り替わる予兆です。",
+      "action_item": "中国発のAIエージェント「Manus」の機能を調査し、ビジネスへの影響を考察してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/tencent-moves-to-buy-majority-stake-in-manus-after-beijing-forced-meta-to-unwind-its-2-billion-deal/"
+    },
+    {
+      "title": "AppleがOpenAIを提訴：ハードウェア機密の窃盗を主張",
+      "category": "リスク・規制",
+      "summary": "AppleはOpenAIに対し、元従業員を介したハードウェア関連の営業秘密窃盗で訴訟を提起。未発表の製品仕様を持ち出すよう指示があったとされ、外部メッセージアプリでのやり取りが証拠として挙げられている。",
+      "one_liner": "業界を揺るがす機密窃盗疑惑",
+      "why_important": "AI競争の激化が法的リスクに直結しており、ツール選定時にはベンダーの透明性を確認する必要があります。",
+      "action_item": "社内で利用している外部AIツールの利用規約やセキュリティ要件を再点検してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/"
+    },
+    {
+      "title": "デザインと開発をAIで同期：Figmaを活用した自動化",
+      "category": "ビジネス活用",
+      "summary": "Decagon社がFigmaのAI機能を使用し、デザインシステムをコードへ自動反映させる手法を公開。エージェントが意図を解釈して整合性を維持し、デザイナーとエンジニア間の煩雑な通信を排除している。",
+      "one_liner": "デザインとコードの壁が消滅",
+      "why_important": "デザイナーとエンジニアの摩擦が解消され、アイデアを即座に形にできる組織能力が求められます。",
+      "action_item": "デザインシステムをコードと同期させるプロトタイプ機能を、開発チームと共有しましょう。",
+      "source": "Figma Blog",
+      "url": "https://www.figma.com/blog/how-decagon-uses-ai-for-design-system-saturation/"
+    },
+    {
+      "title": "GPT-5.6 Sol、数学の未解決問題を証明",
+      "category": "研究・技術",
+      "summary": "OpenAIの最上位モデルが、数学界で長年未解決だった「サイクル二重被覆予想」の証明を提示。極めて厳密な論理構成が可能になったことで、将来的に財務や法務などの専門領域への導入が期待される。",
+      "one_liner": "AIが数学の未解決問題を突破",
+      "why_important": "AIの推論が数学的厳密さを備えたことで、金融や科学などの「誤りが許されない分野」への導入が加速します。",
+      "action_item": "高い論理性を要する専門的な分析業務にAIを試験導入し、その精度を検証してください。",
+      "source": "Hacker News AI",
+      "url": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf"
+    },
+    {
+      "title": "Grok 4.5がAIエディタ「Cursor」に統合",
+      "category": "ビジネス活用",
+      "summary": "xAIの最新モデル「Grok 4.5」がコードエディタ「Cursor」と連携。Grokの大規模な推論能力とリアルタイム検索能力がコーディング中で活用可能になり、ソフトウェア開発のさらなる高速化が期待される。",
+      "one_liner": "開発の要がGrokと強力連携",
+      "why_important": "リアルタイム情報に強いモデルが開発環境に統合され、より文脈に沿った高度なコード生成が可能になります。",
+      "action_item": "Cursorの設定からGrok 4.5を選択し、既存コードのリファクタリングを試してください。",
+      "source": "Semafor Technology",
+      "url": "https://www.semafor.com/article/07/10/2026/musk-acts-fast-but-can-it-last"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "updated": "2026年06月30日",
+  "theme": "AIによる労働の再定義と実務代行の加速",
+  "morning_comment": "AIは『ツール』から『担い手』へ。人件費をAIに投じる時代が幕を開けました。",
+  "articles": [
+    {
+      "title": "「SaaSは死んだのか」AI企業が狙うのはIT予算ではなく人件費",
+      "category": "ビジネス活用",
+      "summary": "従来のSaaSがIT予算を奪い合っていたのに対し、AI企業は労働そのものを代替するBPaaSを掲げ、桁違いの人件費・採用費枠を狙っています。企業の投資判断がソフトウェア導入から「業務代行」へと根本的にシフトしつつあります。",
+      "one_liner": "AI投資はIT予算から人件費枠へ",
+      "why_important": "AIを単なる効率化ツールではなく、労働力そのものとして評価する予算構造の変化を理解する必要があります。",
+      "action_item": "外注費や人件費をAIで代替できる定型業務がないか、社内で精査してください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2606/30/news025.html"
+    },
+    {
+      "title": "バラバラな連絡ツールをAIエージェントで集約・自動返信する方法",
+      "category": "対話型AI",
+      "summary": "ChatGPT Workspace Agentsを活用し、SlackやTeams、Gmail等の複数ツールから重要メッセージを特定。Slackへの集約と返信案の自動作成を可能にします。確認漏れを防ぎ、高付加価値業務への集中を支援します。",
+      "one_liner": "AIが全通知を一括整理・返信案作成",
+      "why_important": "複数ツールの往復による認知負荷を劇的に削減し、意思決定のスピードを向上させることができます。",
+      "action_item": "現在利用している連絡ツールを書き出し、通知確認に費やしている時間を把握しましょう。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2606/30/news060.html"
+    },
+    {
+      "title": "freeeが「AI戦略」を強化、自社専用AIエージェントを10分で作成",
+      "category": "ビジネス活用",
+      "summary": "クラウド会計のfreeeが、自然言語の指示だけでレポート作成や経費チェックを行うAIエージェント作成機能を提供開始。専門知識不要で、自社独自の複雑な商習慣に合わせた実務の自律実行を目指します。",
+      "one_liner": "10分で自律的なAIエージェント作成",
+      "why_important": "プラットフォーム主導のAI化により、バックオフィス業務の自動化がエンジニア不在でも可能になります。",
+      "action_item": "自社の会計や経費精算フローにおいて、最も時間を要しているステップを特定してください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/business/articles/2606/30/news064.html"
+    },
+    {
+      "title": "AI需要でメモリ価格が高騰、法人PCの調達は「待つほど損」に",
+      "category": "ビジネス活用",
+      "summary": "AI向けサーバー需要によりメモリ（DRAM）供給が逼迫し、クライアントPC用メモリも価格上昇。Win10終了に伴うPC刷新を控える企業にとって、先送りは大幅なコスト増のリスクを招く可能性が高い状況です。",
+      "one_liner": "AI需要でメモリ高騰。PC調達は急ぎ",
+      "why_important": "AIブームが物理的なハードウェア調達コストに直撃しており、予算計画の早期見直しが不可欠です。",
+      "action_item": "自社のPCリプレース計画を確認し、2026年以降の価格高騰リスクを調達担当と共有してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/special/2119611.html"
+    },
+    {
+      "title": "Google、Geminiアプリでの「データリージョン」サポートを開始",
+      "category": "リスク・規制",
+      "summary": "Google Workspace管理者がGeminiでのデータ保存・処理場所を欧米などのリージョン単位で制御可能に。企業のセキュリティポリシーに準拠した形での高度なAI活用が、より容易になります。",
+      "one_liner": "Geminiのデータ保存先が制御可能に",
+      "why_important": "データ保管場所の制限がネックでAI導入を見送っていた企業にとって、強力な追い風となります。",
+      "action_item": "自社のクラウド利用におけるデータ保管場所の規定を、改めて情報システム部門に確認してください。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/06/gemini-app-data-regions-support.html"
+    },
+    {
+      "title": "旅行の情報収集で「生成AI」がSNS超え、タイパ重視の利用が広がる",
+      "category": "対話型AI",
+      "summary": "国内旅行の調査で生成AI利用率がSNSを上回り、タイパ重視層を中心に「AIで比較・提案、公式サイトで最終確認」というスタイルが定着。情報収集の主役が検索エンジンやSNSからAIへと移行しつつあります。",
+      "one_liner": "旅行の下調べはSNSより生成AIが主流に",
+      "why_important": "消費者の購買プロセスがAI起点に変わることで、既存の広告やSNSマーケティングの再定義が求められます。",
+      "action_item": "次の出張や旅行の計画を一度生成AIに立てさせ、既存の検索サイトとの効率の差を体験してください。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2606/30/news072.html"
+    },
+    {
+      "title": "音楽のTidal、100%AI生成曲の収益化を禁止へ",
+      "category": "リスク・規制",
+      "summary": "TidalはAI生成曲へのロイヤリティ支払いを停止する新方針を発表。人間アーティストの権利保護を優先し、AI生成物には識別アイコンを表示。AI時代のクリエイティブと収益分配のあり方に一石を投じています。",
+      "one_liner": "100％AI生成曲の収益化が禁止へ",
+      "why_important": "AI生成物の価値と権利の線引きは、全ビジネス領域における知財戦略の重要な先行事例となります。",
+      "action_item": "生成AIを利用して作成した社内資料やコンテンツの権利帰属に関する社内規程をチェックしてください。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/06/30/5236.html"
+    },
+    {
+      "title": "PCログからAIがマニュアルを自動作成、属人化と引き継ぎ不足を解消",
+      "category": "ビジネス活用",
+      "summary": "PCの操作ログからClaudeが業務手順書を自動生成する仕組みが登場。ヒアリングなしで現場の実態に即した精度の高い資料を作成でき、ブラックボックス化していた業務の再現性を担保した継承が可能になります。",
+      "one_liner": "PC操作ログから手順書を自動生成",
+      "why_important": "暗黙知の可視化コストが大幅に下がるため、組織内のナレッジ共有と属人化解消が加速します。",
+      "action_item": "マニュアル化が遅れている「自分だけが把握している業務」を1つ選び、言語化を試みてください。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2606/30/news050.html"
+    },
+    {
+      "title": "社長の思考を学習した「AI社長」が登場、社員の相談にいつでも対応",
+      "category": "ビジネス活用",
+      "summary": "経営層の価値観や判断基準を学習した「AI社長」が、社員の企画相談に対応。経営方針に沿った論点整理を支援し、相談機会の不足という組織課題を解決します。最終判断前の思考の壁打ち相手として機能します。",
+      "one_liner": "経営層の思考を学習したAI社長が登場",
+      "why_important": "組織の意思決定の質を維持しながら、経営層とのコミュニケーションのボトルネックを解消できます。",
+      "action_item": "自身の判断基準や大事にしている価値観を、AIに学習させるためのメモとして3つ書き出してください。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/articles/2606/30/news046.html"
+    },
+    {
+      "title": "ルネサス、AIインフラとフィジカルAIで2035年の売上高3倍を目指す",
+      "category": "日本市場",
+      "summary": "データセンター向けAIインフラと、家電や車などの「フィジカルAI」を成長の柱に。AIエージェントがデバイスの主要ユーザーになる時代を見据え、エッジ領域でのハードウェアUX強化へ投資を加速させます。",
+      "one_liner": "フィジカルAIで2035年の成長狙う",
+      "why_important": "AIがクラウドからあらゆる「モノ」の中に浸透し、デバイスの操作概念が根本から変わる兆しです。",
+      "action_item": "身の回りのオフィス機器がAIを搭載した際、どのような自動化が望ましいか想像してみてください。",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2606/30/news081.html"
+    }
+  ]
+}
