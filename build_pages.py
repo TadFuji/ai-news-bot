@@ -17,6 +17,9 @@ from config import NEWS_BOT_OUTPUT_DIR as output_dir_path
 
 # 公開ポータルのベースURL
 WEB_BASE = "https://tadfuji.github.io/ai-news-bot/"
+# SNS シェア用のカード画像。毎日コミットされるため JPEG に縮小して履歴の肥大を抑える
+OGP_FILENAME = "ogp_latest.jpg"
+OGP_SIZE = (1200, 675)
 
 
 def parse_markdown_news(content: str) -> dict:
@@ -102,16 +105,23 @@ def _json_for_script(obj) -> str:
 
 
 def generate_ogp_image(docs_dir: Path):
-    """latest.json の theme/morning_comment から OGP 画像(1200x630)を生成する。"""
-    data = _read_latest(docs_dir)
-    if not data:
+    """X 投稿用に生成済みの画像を縮小して SNS シェア用カード画像にする。
+
+    画像生成は distribute_daily.py 側で1日1回だけ行う（同じ絵を2度生成すると
+    生成 API の費用が倍になるため）。まだ生成されていなければ前回の画像を残す。
+    """
+    from PIL import Image
+
+    from generators.infographic_maker import CARD_FILENAME
+
+    src = Path(output_dir_path) / CARD_FILENAME
+    if not src.exists():
+        print(f"ℹ️ {CARD_FILENAME} が無いため {OGP_FILENAME} は据え置き")
         return
-    from generators.infographic_maker import create_infographic
-    arts = data.get("articles", [])
-    title = data.get("theme") or "AI ニュース TOP10"
-    summary = data.get("morning_comment") or (arts[0].get("one_liner", "") if arts else "")
-    create_infographic(title, summary, output_path=str(docs_dir / "ogp_latest.png"))
-    print("✅ ogp_latest.png 生成")
+    Image.open(src).convert("RGB").resize(OGP_SIZE, Image.LANCZOS).save(
+        docs_dir / OGP_FILENAME, format="JPEG", quality=85, optimize=True
+    )
+    print(f"✅ {OGP_FILENAME} 更新（X 投稿画像を縮小して流用）")
 
 
 def inject_ogp_and_prerender(docs_dir: Path):
@@ -157,12 +167,12 @@ def inject_ogp_and_prerender(docs_dir: Path):
         '<meta property="og:site_name" content="AI ニュース TOP10">\n'
         f'<meta property="og:title" content="{attr(theme)} | AI ニュース TOP10">\n'
         f'<meta property="og:description" content="{attr(comment)} 本日のトップ: {attr(top_oneliner)}">\n'
-        f'<meta property="og:image" content="{WEB_BASE}ogp_latest.png">\n'
+        f'<meta property="og:image" content="{WEB_BASE}{OGP_FILENAME}">\n'
         f'<meta property="og:url" content="{WEB_BASE}">\n'
         '<meta name="twitter:card" content="summary_large_image">\n'
         f'<meta name="twitter:title" content="{attr(theme)} | AI ニュース TOP10">\n'
         f'<meta name="twitter:description" content="{attr(comment)}">\n'
-        f'<meta name="twitter:image" content="{WEB_BASE}ogp_latest.png">\n'
+        f'<meta name="twitter:image" content="{WEB_BASE}{OGP_FILENAME}">\n'
         f'<meta name="description" content="{attr(comment)} 世界のAIニュースを毎朝日本語で厳選してお届け。">\n'
         f'<script type="application/ld+json">{_json_for_script(jsonld)}</script>\n'
     )

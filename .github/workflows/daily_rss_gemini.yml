@@ -31,13 +31,12 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements-ci.txt
 
-    - name: Install Japanese fonts (for OGP image card)
-      run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
-
     - name: "Run Stage 2: Curate + Distribute"
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+        # X 投稿用インフォグラフィックの生成（gpt-image-2）。未設定なら画像なしで配信継続
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
         X_CONSUMER_KEY: ${{ secrets.X_CONSUMER_KEY }}
@@ -45,7 +44,6 @@ jobs:
         X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
         X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
         X_THREAD_MODE: ${{ vars.X_THREAD_MODE }}
-        NOTO_JP_FONT: /usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc
       run: |
         python curate_morning_brief.py
 

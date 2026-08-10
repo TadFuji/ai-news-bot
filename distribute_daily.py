@@ -41,7 +41,7 @@ def get_latest_report():
     return latest_file
 
 
-def post_to_x_single(articles):
+def post_to_x_single(articles, theme=""):
     """
     Post Top 10 articles as a single long-form post on X.
     """
@@ -105,7 +105,7 @@ def post_to_x_single(articles):
         print(f"   ⚠️ 本文が{len(full_text)}文字（上限{_X_MAX_CHARS}）— 末尾を切り詰め")
         full_text = full_text[:_X_MAX_CHARS - 50] + "\n\n（続きはリプライ欄で）\n#AI #Tech #AINews"
 
-    media_id = _upload_card_media(target_articles)
+    media_id = _upload_card_media(target_articles, theme=theme)
     try:
         # 1. Post main long-form tweet（画像カード付き）
         print("🚀 Sending main long-form tweet...")
@@ -132,20 +132,22 @@ def _truncate(text, limit):
 
 
 def _upload_card_media(articles, theme=""):
-    """先頭記事から OGP 画像カードを生成し X(v1.1) へアップロードして media_id を返す。
+    """トップ10記事からインフォグラフィック画像を生成し X(v1.1) へアップロードして media_id を返す。
 
     画像生成・アップロードに失敗しても None を返し、テキストのみで投稿を継続する
-    （配信を止めない）。休眠していた generators/infographic_maker.py を活用。
+    （配信を止めない）。
     """
     if not articles:
         return None
     try:
-        from generators.infographic_maker import create_infographic
-        top = articles[0]
-        card_title = theme or top.get("title_ja", "AI News")
-        card_summary = top.get("one_liner") or top.get("summary_ja", "")
-        path = os.path.join(NEWS_BOT_OUTPUT_DIR, "x_card.png")
-        create_infographic(card_title, card_summary, output_path=path)
+        from generators.infographic_maker import CARD_FILENAME, create_infographic
+        path = create_infographic(
+            articles[:10],
+            theme=theme,
+            output_path=os.path.join(NEWS_BOT_OUTPUT_DIR, CARD_FILENAME),
+        )
+        if not path:
+            return None
 
         auth = tweepy.OAuth1UserHandler(
             os.environ.get("X_CONSUMER_KEY"),
@@ -300,7 +302,7 @@ def main():
                 morning_comment=data.get("morning_comment", ""),
             )
         else:
-            post_to_x_single(articles)
+            post_to_x_single(articles, theme=data.get("theme", ""))
     except Exception as e:
         print(f"❌ Error sending to X: {e}")
 
