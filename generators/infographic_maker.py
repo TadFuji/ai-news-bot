@@ -134,7 +134,8 @@ if __name__ == "__main__":
     import json
 
     latest = max(glob.glob("docs/2*.json"))
-    data = json.load(open(latest, encoding="utf-8"))
+    with open(latest, encoding="utf-8") as f:
+        data = json.load(f)
     print(f"📄 {latest} を使用")
     create_infographic(
         data.get("articles", []),
