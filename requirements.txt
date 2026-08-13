@@ -2,10 +2,10 @@
 # pip install -r requirements.txt
 
 # RSSフィード解析
-feedparser>=6.0.12
+feedparser>=6.0.14
 
 # Google Gemini API
-google-genai>=2.10.0
+google-genai>=2.17.0
 
 # 日時解析
 python-dateutil>=2.9.0.post0
@@ -14,10 +14,10 @@ python-dateutil>=2.9.0.post0
 python-dotenv>=1.2.2
 
 # LINE Messaging API
-line-bot-sdk>=3.23.1
+line-bot-sdk>=3.25.0
 
 # Marketing Engine (UI)
-streamlit>=1.58.0
+streamlit>=1.61.1
 
 # Reports & Media (Added during migration fix)
 edge-tts
@@ -31,7 +31,7 @@ requests>=2.34.2
 beautifulsoup4>=4.15.0
 
 # 記事本文抽出（RSS要約より厚い判断材料を取得）
-trafilatura>=2.1.0,<3.0.0
+trafilatura>=2.2.0,<3.0.0
 
 # テストフレームワーク
 pytest>=9.1.1
