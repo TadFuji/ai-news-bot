@@ -10,7 +10,7 @@
     <a href="https://github.com/TadFuji/ai-news-bot/actions/workflows/collect_candidates.yml"><img src="https://github.com/TadFuji/ai-news-bot/actions/workflows/collect_candidates.yml/badge.svg" alt="Candidate Collection"></a>
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
     <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Python-3.10+-3776AB.svg?logo=python&logoColor=white" alt="Python 3.10+"></a>
-    <a href="https://deepmind.google/technologies/gemini/"><img src="https://img.shields.io/badge/AI-Gemini%203%20Flash-4285F4.svg?logo=google&logoColor=white" alt="Gemini 3 Flash"></a>
+    <a href="https://deepmind.google/technologies/gemini/"><img src="https://img.shields.io/badge/AI-Gemini%203.7%20Flash-4285F4.svg?logo=google&logoColor=white" alt="Gemini 3.7 Flash"></a>
   </p>
   <p align="center">
     <a href="https://tadfuji.github.io/ai-news-bot/">📰 公開ポータル</a> ·
@@ -242,7 +242,7 @@ streamlit run app.py
 
 ## 🧠 AI キュレーションの仕組み
 
-Gemini 3 Flash Preview を使った**2段階キュレーション**設計です。
+Gemini 3.7 Flash を使った**2段階キュレーション**設計です。
 
 ### 1次分析 — アナリストモード (`ai_client.py`)
 

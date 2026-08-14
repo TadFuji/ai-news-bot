@@ -10,7 +10,7 @@
     <a href="https://github.com/TadFuji/ai-news-bot/actions/workflows/collect_candidates.yml"><img src="https://github.com/TadFuji/ai-news-bot/actions/workflows/collect_candidates.yml/badge.svg" alt="Candidate Collection"></a>
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
     <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Python-3.10+-3776AB.svg?logo=python&logoColor=white" alt="Python 3.10+"></a>
-    <a href="https://deepmind.google/technologies/gemini/"><img src="https://img.shields.io/badge/AI-Gemini%203%20Flash-4285F4.svg?logo=google&logoColor=white" alt="Gemini 3 Flash"></a>
+    <a href="https://deepmind.google/technologies/gemini/"><img src="https://img.shields.io/badge/AI-Gemini%203.7%20Flash-4285F4.svg?logo=google&logoColor=white" alt="Gemini 3.7 Flash"></a>
   </p>
   <p align="center">
     <a href="https://tadfuji.github.io/ai-news-bot/">📰 Live Portal</a> ·
@@ -224,7 +224,7 @@ streamlit run app.py
 
 ## 🧠 How the AI Curation Works
 
-The system uses a carefully designed **dual-pass architecture** with Gemini 3 Flash Preview:
+The system uses a carefully designed **dual-pass architecture** with Gemini 3.7 Flash:
 
 ### 1st Pass — Analyst Mode (`ai_client.py`)
 

@@ -161,7 +161,7 @@ def generate_column(items):
         )
         return response.text
     except Exception as e:
-        print(f"Gemini 3 Flash Preview エラー: {e}")
+        print(f"Gemini 3.7 Flash エラー: {e}")
         return None
 
 
