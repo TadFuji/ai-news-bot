@@ -23,7 +23,7 @@ This document describes the technical design and data flow of the AI News Bot �
 - For the highest-scored candidates, fetches the full article body via `trafilatura` (a richer signal than the RSS summary), capped to keep prompt size bounded.
 
 ### 4. Generation (`ai_client.py`)
-- Gemini (`gemini-3-flash-preview`) acts as a "Senior AI Trend Analyst": translates to Japanese, classifies into **7 categories** (対話型AI / 画像・動画AI / 中国AI / ビジネス活用 / リスク・規制 / 日本市場 / 研究・技術), scores 1–10, and writes a "So What?" (one-liner / why-important / action-item).
+- Gemini (`gemini-3.7-flash`) acts as a "Senior AI Trend Analyst": translates to Japanese, classifies into **7 categories** (対話型AI / 画像・動画AI / 中国AI / ビジネス活用 / リスク・規制 / 日本市場 / 研究・技術), scores 1–10, and writes a "So What?" (one-liner / why-important / action-item).
 - A response schema enforces **structured JSON output** so the downstream build is deterministic.
 
 ### 5. Editorial curation & dedup (`curate_morning_brief.py`, `dedup.py`)

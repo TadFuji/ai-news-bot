@@ -28,7 +28,7 @@ What actually happened.
 
 - **OS**: [e.g., Windows 11, macOS 14, Ubuntu 22.04]
 - **Python**: [e.g., 3.11.4]
-- **Gemini Model**: [e.g., gemini-3-flash-preview]
+- **Gemini Model**: [e.g., gemini-3.7-flash]
 
 ## Logs / Screenshots
 
