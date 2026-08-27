@@ -41,8 +41,8 @@
 |---------|-----------|---------|------|
 | **収集** | 03:00 | 66の RSSフィードをクロール、キーワードスコアリング | 約100件の候補記事 |
 | **1次分析** | 03:00 | Gemini で翻訳・分類・スコアリング・So What分析 | 上位50件 スコアリング済み |
-| **2次キュレーション** | 07:00 | Gemini 編集キュレーション（テーマ・コメント・重複排除） | **朝刊 Top 10** |
-| **配信** | 07:00 | マルチチャネル同時配信 | Web / LINE / X |
+| **2次キュレーション** | 06:47 | Gemini 編集キュレーション（テーマ・コメント・重複排除） | **朝刊 Top 10** |
+| **配信** | 06:47 | マルチチャネル同時配信 | Web / LINE / X |
 | **週刊コラム** | 日曜 09:00 | AIが執筆するエッセイ形式のコラム | コラム + LINE配信 |
 
 ### 配信チャネル
@@ -79,7 +79,7 @@ graph TD
         GEMINI1["ai_client.py<br/>Gemini 1次分析: 翻訳 + 分類"]
     end
 
-    subgraph "Stage 2 — 07:00 JST"
+    subgraph "Stage 2 — 06:47 JST"
         FRESH["追加RSS収集<br/>(速報キャッチ)"]
         DEDUP["3日間の重複排除<br/>(URL ベース)"]
         GEMINI2["curate_morning_brief.py<br/>Gemini 2次キュレーション"]
@@ -130,7 +130,7 @@ graph TD
 ai-news-bot/
 ├── .github/workflows/          # GitHub Actions（日次・週次・リント）
 │   ├── collect_candidates.yml  #   Stage 1 (03:00 JST): RSS収集 + 1次分析
-│   ├── daily_rss_gemini.yml    #   Stage 2 (07:00 JST): 朝刊キュレーション + 配信
+│   ├── daily_rss_gemini.yml    #   Stage 2 (06:47 JST): 朝刊キュレーション + 配信
 │   ├── weekly_column.yml       #   日曜コラム生成
 │   ├── tests.yml               #   pytest 実行（push/PR）
 │   └── lint.yml                #   ruff によるコード品質チェック
@@ -236,7 +236,7 @@ streamlit run app.py
 1. このリポジトリを Fork
 2. **Settings → Secrets → Actions** で `GOOGLE_API_KEY` を設定
 3. （任意）LINE / X のクレデンシャルを追加
-4. 毎日 03:00 と 07:00 JST に自動実行されます
+4. 毎日 03:00 と 06:47 JST に自動実行されます
 
 ---
 

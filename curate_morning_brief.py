@@ -409,7 +409,7 @@ def main():
     candidates_stage1 = load_candidates()
     stage1_count = len(candidates_stage1)
 
-    # 2. 新鮮なRSS収集（03:00〜07:00 JST のギャップを埋める）
+    # 2. 新鮮なRSS収集（03:00〜06:47 JST のギャップを埋める）
     print("\n📡 最新RSS収集中（03:00以降の新着をキャッチ）...")
     try:
         import collect_rss_gemini
@@ -427,7 +427,7 @@ def main():
 
     new_count = len(candidates) - stage1_count
     print(f"   Stage 1 からの候補: {stage1_count} 件")
-    print(f"   07:00 追加収集分: {max(0, new_count)} 件")
+    print(f"   06:47 追加収集分: {max(0, new_count)} 件")
     print(f"   合計候補: {len(candidates)} 件")
 
     # 3.5. 過去3日間の配信済みURLを除外

@@ -39,8 +39,8 @@ AI News Bot is a **serverless, multi-stage news curation pipeline** that transfo
 |-------|-----------|---------|--------|
 | **Discovery** | 03:00 | Crawl 66 RSS feeds, keyword scoring | ~100 raw candidates |
 | **1st Pass** | 03:00 | Gemini analysis: translate, score, classify | Top 50 scored articles |
-| **2nd Pass** | 07:00 | Editorial curation: theme, commentary, dedup | Final Top 10 brief |
-| **Delivery** | 07:00 | Multi-channel distribution | Web, LINE, X (Twitter) |
+| **2nd Pass** | 06:47 | Editorial curation: theme, commentary, dedup | Final Top 10 brief |
+| **Delivery** | 06:47 | Multi-channel distribution | Web, LINE, X (Twitter) |
 | **Weekly** | Sun 09:00 | AI-written essay-style column | Column + LINE push |
 
 ### Delivery Channels
@@ -65,7 +65,7 @@ graph TD
         GEMINI1["ai_client.py<br/>Gemini 1st Pass: Translate + Classify"]
     end
 
-    subgraph "Stage 2 — 07:00 JST"
+    subgraph "Stage 2 — 06:47 JST"
         FRESH["Fresh RSS Collection<br/>(catch late-breaking news)"]
         DEDUP["3-Day Deduplication<br/>(URL-based)"]
         GEMINI2["curate_morning_brief.py<br/>Gemini 2nd Pass: Editorial Curation"]
@@ -114,7 +114,7 @@ graph TD
 ai-news-bot/
 ├── .github/workflows/          # GitHub Actions (daily, weekly, lint)
 │   ├── collect_candidates.yml  #   Stage 1 (03:00 JST): RSS collection + 1st pass
-│   ├── daily_rss_gemini.yml    #   Stage 2 (07:00 JST): Morning brief + delivery
+│   ├── daily_rss_gemini.yml    #   Stage 2 (06:47 JST): Morning brief + delivery
 │   ├── weekly_column.yml       #   Sunday column generation
 │   ├── tests.yml               #   pytest on push/PR
 │   └── lint.yml                #   ruff code quality checks
@@ -218,7 +218,7 @@ streamlit run app.py
 1. Fork this repository
 2. Set `GOOGLE_API_KEY` in **Settings → Secrets → Actions**
 3. (Optional) Add LINE / X credentials for multi-channel delivery
-4. The pipeline runs automatically at 03:00 and 07:00 JST daily
+4. The pipeline runs automatically at 03:00 and 06:47 JST daily
 
 ---
 

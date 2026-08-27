@@ -60,7 +60,7 @@ sequenceDiagram
     GH->>GM: 1st pass — translate / classify / score
     GH->>DB: candidates_*.json
 
-    Note over GH: Stage 2 — 07:00 JST (daily_rss_gemini.yml)
+    Note over GH: Stage 2 — 06:47 JST (daily_rss_gemini.yml)
     GH->>GH: Merge + 3-day dedup + Jaccard dedup
     GH->>GM: 2nd pass — editorial Top 10
     GH->>DB: day JSON + OGP image + sitemap.xml + feed.xml
