@@ -5,6 +5,11 @@ on:
     # 21:47 UTC = 06:47 JST（毎時00分は GitHub 側が混雑し、遅延・空振りが起きるため回避）
     - cron: '47 21 * * *'
   workflow_dispatch:
+    inputs:
+      force_redeliver:
+        description: '今日の分をやり直す（配信済みでも再実行する）'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -44,6 +49,8 @@ jobs:
         X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
         X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
         X_THREAD_MODE: ${{ vars.X_THREAD_MODE }}
+        # 同日二重配信の防止。手動実行で「今日の分をやり直す」を選んだときだけ 1
+        FORCE_REDELIVER: ${{ inputs.force_redeliver && '1' || '0' }}
       run: |
         python curate_morning_brief.py
 

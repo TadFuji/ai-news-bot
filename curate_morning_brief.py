@@ -21,6 +21,8 @@ from dedup import dedup_articles
 
 load_dotenv()
 
+DOCS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "docs")
+
 
 def load_candidates():
     """本日の候補JSONをすべて読み込み、記事を統合・重複排除する"""
@@ -63,14 +65,21 @@ def load_candidates():
     return unique
 
 
-def get_delivered_urls(days=3):
-    """過去N日間の morning_brief_*.json から配信済みURLを取得"""
+def already_delivered_today(docs_dir=None, now=None):
+    """本日分の朝刊が既に公開済みかを返す（同日二重配信の防止に使う）"""
+    today = (now or datetime.datetime.now(JST)).strftime("%Y-%m-%d")
+    return os.path.exists(os.path.join(docs_dir or DOCS_DIR, f"{today}.json"))
+
+
+def get_delivered_urls(days=3, docs_dir=None, now=None):
+    """過去N日間の公開済み朝刊（docs/YYYY-MM-DD.json）から配信済みURLを取得"""
     delivered = set()
-    today = datetime.datetime.now(JST)
+    today = now or datetime.datetime.now(JST)
+    docs_dir = docs_dir or DOCS_DIR
 
     for i in range(1, days + 1):
-        past_date = (today - datetime.timedelta(days=i)).strftime("%Y%m%d")
-        filepath = os.path.join(NEWS_BOT_OUTPUT_DIR, f"morning_brief_{past_date}.json")
+        past_date = (today - datetime.timedelta(days=i)).strftime("%Y-%m-%d")
+        filepath = os.path.join(docs_dir, f"{past_date}.json")
 
         if os.path.exists(filepath):
             try:
@@ -403,6 +412,12 @@ def main():
     print("=" * 50)
     print("☀️ Morning Brief — Stage 2 キュレーション開始")
     print("=" * 50)
+
+    # 0. 同日二重配信の防止（定時起動の遅延と手動実行が重なるケース）
+    if already_delivered_today() and os.environ.get("FORCE_REDELIVER") != "1":
+        print("\n⏭️ 本日分は配信済みのため終了します（二重配信の防止）。")
+        print("   やり直す場合は手動実行で「今日の分をやり直す」を選んでください。")
+        return
 
     # 1. Stage 1 候補を読み込み
     print("\n📡 Stage 1 候補を読み込み中...")
