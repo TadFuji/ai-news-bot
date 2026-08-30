@@ -22,6 +22,8 @@ concurrency:
 jobs:
   morning-brief:
     runs-on: ubuntu-latest
+    # 既定は 6 時間。どこかで応答待ちのまま固まっても、その日のうちに終わらせる
+    timeout-minutes: 60
 
     steps:
     - name: Checkout repository
@@ -40,8 +42,9 @@ jobs:
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
-        # X 投稿用インフォグラフィックの生成（gpt-image-2）。未設定なら画像なしで配信継続
-        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        # X 投稿用インフォグラフィックの生成（gemini-3-pro-image）。
+        # 文章生成用の GOOGLE_API_KEY とは別の鍵。未設定なら画像なしで配信継続
+        GEMINI_IMAGE_API_KEY: ${{ secrets.GEMINI_IMAGE_API_KEY }}
         LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
         X_CONSUMER_KEY: ${{ secrets.X_CONSUMER_KEY }}
