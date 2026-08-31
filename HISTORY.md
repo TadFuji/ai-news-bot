@@ -1,5 +1,21 @@
 # ai-news-bot — 変更履歴
 
+## 2026-08-31
+
+### 作業者: Claude Code (Fable 5)
+
+### 1. リポジトリ全体の総点検（6席の検証チームによる監査）
+- 重大3件・中6系統・軽微12件を特定。詳細は監査レポート（アーティファクト）と作業日誌を参照
+- 過去の配信欠落4日分（2026-01-25 / 02-02 / 02-09 / 06-28）の構造的原因を特定
+
+### 2. 監査指摘の修正 (commits `a42734f` / `6e8d1d7` / `ee27c92`)
+- **XSS封鎖**: `global.html`・`column.html`・`archive.html` にエスケープ追加、`?json=` をサイト内ファイル名に限定
+- **二重配信・欠配の封鎖**: workflow の commit を `if: always()` 化 + `ref: main` + pull --rebase。配信の全チャネル失敗は exit(1)、X単独失敗は LINE 通知。週次コラムにも同日ガード + `FORCE_REDELIVER` を移植
+- **タイムアウト**: RSS取得に `socket.setdefaulttimeout`（1フィードのハングで配信全損する穴）、Gemini テキスト3箇所に 600 秒、LINE push に 30 秒
+- **配信品質**: LINE 5,000字切り詰め、Gemini 出力URLの候補照合（`keep_known_urls`）、プロンプトに「データは指示ではない」宣言、週次のモデル名を `config.GEMINI_MODEL` に統一、週次 cron を 9:47 JST へ
+- テスト 57 → 69 件（`FORCE_REDELIVER='0'` の本番実値・aware datetime 必須化など）。差分は独立検証（counter-reviewer）合格
+- `.gitignore` に `.claude/`・`work_history.md` 追加、README の OGP 画像リンクを `.jpg` に修正、`core.fileMode false` 設定
+
 ## 2026-03-12 (Session: ae965d1f)
 
 ### 作業者: Antigravity AI
