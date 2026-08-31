@@ -40,6 +40,10 @@ output/
 # Manual backups (directory rule R1 — never commit; may contain secrets)
 .backups/
 
+# Local AI-assistant working files (delegation logs, local settings, work notes)
+.claude/
+work_history.md
+
 # Logs
 *.log
 

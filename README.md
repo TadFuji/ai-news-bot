@@ -29,7 +29,7 @@
 > 「情報の海で溺れない、賢明な判断を下すための羅針盤」
 
 <p align="center">
-  <img src="https://tadfuji.github.io/ai-news-bot/ogp_latest.png" alt="毎朝自動生成される朝刊カード" width="640">
+  <img src="https://tadfuji.github.io/ai-news-bot/ogp_latest.jpg" alt="毎朝自動生成される朝刊カード" width="640">
   <br><sub>▲ 毎朝自動生成される朝刊カード（OGP画像・実データ）</sub>
 </p>
 

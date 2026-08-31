@@ -29,7 +29,7 @@ AI News Bot is a **serverless, multi-stage news curation pipeline** that transfo
 **Key Value Proposition:** No servers to maintain, no databases to manage, no costs beyond API usage — the entire pipeline runs on GitHub Actions and deploys to GitHub Pages.
 
 <p align="center">
-  <img src="https://tadfuji.github.io/ai-news-bot/ogp_latest.png" alt="Auto-generated daily brief card" width="640">
+  <img src="https://tadfuji.github.io/ai-news-bot/ogp_latest.jpg" alt="Auto-generated daily brief card" width="640">
   <br><sub>▲ The daily brief card, auto-generated every morning (real data, OGP image)</sub>
 </p>
 
