@@ -170,6 +170,15 @@
     </div>
 
     <script>
+        // HTMLエスケープ（生成データ由来の文字列を innerHTML に出す前に通す）
+        function esc(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
         async function loadArchive() {
             try {
                 const response = await fetch('archive.json');
@@ -183,9 +192,9 @@
                 }
 
                 container.innerHTML = data.archives.map(archive => `
-                    <a href="index.html?json=${archive.path}" class="archive-card">
-                        <div class="archive-date">📅 ${archive.date}</div>
-                        <div class="archive-count">${archive.count} 件のニュース</div>
+                    <a href="index.html?json=${encodeURIComponent(archive.path)}" class="archive-card">
+                        <div class="archive-date">📅 ${esc(archive.date)}</div>
+                        <div class="archive-count">${esc(archive.count)} 件のニュース</div>
                     </a>
                 `).join('');
             } catch (e) {

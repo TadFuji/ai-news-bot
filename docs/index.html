@@ -430,8 +430,11 @@
         async function loadNews() {
             try {
                 // URLパラメータからjsonファイル名を取得
+                // このサイト内の日次 JSON のみ許可（外部URLの読み込み＝偽ニュース表示を防ぐ）
                 const params = new URLSearchParams(window.location.search);
-                const jsonFile = params.get('json') || 'latest.json';
+                const requested = params.get('json') || '';
+                const jsonFile = /^(\d{4}-\d{2}-\d{2}|latest)\.json$/.test(requested)
+                    ? requested : 'latest.json';
 
                 const response = await fetch(jsonFile);
                 const data = await response.json();

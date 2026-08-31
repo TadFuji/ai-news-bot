@@ -145,6 +145,16 @@
     </div>
     
     <script>
+        // HTMLエスケープ（LLM生成の本文を innerHTML に出す前に必ず通す。
+        // .column-body は white-space: pre-wrap のため改行はそのまま保たれる）
+        function esc(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
         async function loadColumns() {
             try {
                 // Fetch index
@@ -174,9 +184,9 @@
                 // Render Main Column
                 document.getElementById('column-container').innerHTML = `
                     <article class="column-card">
-                        <span class="column-date">${contentData.date}</span>
-                        <h2 class="column-title">${contentData.title}</h2>
-                        <div class="column-body">${contentData.body}</div>
+                        <span class="column-date">${esc(contentData.date)}</span>
+                        <h2 class="column-title">${esc(contentData.title)}</h2>
+                        <div class="column-body">${esc(contentData.body)}</div>
                     </article>
                 `;
 
@@ -184,8 +194,8 @@
                 const list = document.getElementById('archive-list');
                 list.innerHTML = columns.map(c => `
                     <li>
-                        <a href="column.html?date=${c.path.match(/\d{8}/)[0]}">
-                            ${c.date} - ${c.title}
+                        <a href="column.html?date=${esc((c.path.match(/\d{8}/) || [''])[0])}">
+                            ${esc(c.date)} - ${esc(c.title)}
                         </a>
                     </li>
                 `).join('');

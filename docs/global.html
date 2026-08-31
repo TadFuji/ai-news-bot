@@ -186,10 +186,28 @@
             'global': '🌐 グローバル'
         };
 
+        // HTMLエスケープ（外部RSS/LLM由来の文字列を innerHTML に出す前に必ず通す）
+        function esc(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        // URLスキームの検証（javascript: 等を弾く。href に出す前に必ず通す）
+        function safeUrl(u) {
+            u = String(u == null ? '' : u).trim();
+            return /^https?:\/\//i.test(u) ? u : '#';
+        }
+
         async function loadNews() {
             try {
+                // ?json= はこのサイト内の global_*.json のみ許可（外部URLの読み込みを防ぐ）
                 const params = new URLSearchParams(window.location.search);
-                const jsonFile = params.get('json') || 'global_latest.json';
+                const requested = params.get('json') || '';
+                const jsonFile = /^global_(\d{4}-\d{2}-\d{2}|latest)\.json$/.test(requested)
+                    ? requested : 'global_latest.json';
                 const response = await fetch(jsonFile);
                 const data = await response.json();
 
@@ -203,24 +221,24 @@
                 container.innerHTML = data.articles.map((article, i) => {
                     const catKey = article.category || 'business';
                     const catLabel = CATEGORY_LABELS[catKey] || catKey;
-                    const catClass = `cat-${catKey}`;
+                    const catClass = `cat-${esc(catKey)}`;
                     const regionLabel = REGION_LABELS[article.region] || article.region || '';
-                    const oneLiner = article.one_liner ? `<div class="one-liner">💡 ${article.one_liner}</div>` : '';
+                    const oneLiner = article.one_liner ? `<div class="one-liner">💡 ${esc(article.one_liner)}</div>` : '';
                     return `
                     <article class="news-card">
                         <div style="display: flex; flex-direction: column;">
                             <div style="display: flex; align-items: center; margin-bottom: 8px; flex-wrap: wrap;">
                                 <span class="news-rank">${i + 1}</span>
-                                <span class="news-category ${catClass}">${catLabel}</span>
-                                <span class="region-badge">${regionLabel}</span>
+                                <span class="news-category ${catClass}">${esc(catLabel)}</span>
+                                <span class="region-badge">${esc(regionLabel)}</span>
                             </div>
-                            <h2 class="news-title">${article.title}</h2>
+                            <h2 class="news-title">${esc(article.title)}</h2>
                         </div>
-                        <p class="news-summary" style="margin-top: 0.75rem;">${article.summary}</p>
+                        <p class="news-summary" style="margin-top: 0.75rem;">${esc(article.summary)}</p>
                         ${oneLiner}
                         <div class="news-meta">
-                            <span class="news-source">📰 ${article.source}</span>
-                            <span class="news-link"><a href="${article.url}" target="_blank">→ 元記事を読む</a></span>
+                            <span class="news-source">📰 ${esc(article.source)}</span>
+                            <span class="news-link"><a href="${esc(safeUrl(article.url))}" target="_blank" rel="noopener">→ 元記事を読む</a></span>
                         </div>
                     </article>
                 `}).join('');
