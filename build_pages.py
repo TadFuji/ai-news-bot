@@ -20,6 +20,9 @@ WEB_BASE = "https://tadfuji.github.io/ai-news-bot/"
 # SNS シェア用のカード画像。毎日コミットされるため JPEG に縮小して履歴の肥大を抑える
 OGP_FILENAME = "ogp_latest.jpg"
 OGP_SIZE = (1200, 675)
+# リンクプレビュー用は日替わりにしない。X は一度読んだカードを使い回すうえ、
+# 投稿はページ更新より先に走るため、日替わり画像を指すと必ず前日以前の絵が出る。
+OGP_CARD_FILENAME = "ogp_card.jpg"
 
 
 def parse_markdown_news(content: str) -> dict:
@@ -167,12 +170,12 @@ def inject_ogp_and_prerender(docs_dir: Path):
         '<meta property="og:site_name" content="AI ニュース TOP10">\n'
         f'<meta property="og:title" content="{attr(theme)} | AI ニュース TOP10">\n'
         f'<meta property="og:description" content="{attr(comment)} 本日のトップ: {attr(top_oneliner)}">\n'
-        f'<meta property="og:image" content="{WEB_BASE}{OGP_FILENAME}">\n'
+        f'<meta property="og:image" content="{WEB_BASE}{OGP_CARD_FILENAME}">\n'
         f'<meta property="og:url" content="{WEB_BASE}">\n'
         '<meta name="twitter:card" content="summary_large_image">\n'
         f'<meta name="twitter:title" content="{attr(theme)} | AI ニュース TOP10">\n'
         f'<meta name="twitter:description" content="{attr(comment)}">\n'
-        f'<meta name="twitter:image" content="{WEB_BASE}{OGP_FILENAME}">\n'
+        f'<meta name="twitter:image" content="{WEB_BASE}{OGP_CARD_FILENAME}">\n'
         f'<meta name="description" content="{attr(comment)} 世界のAIニュースを毎朝日本語で厳選してお届け。">\n'
         f'<script type="application/ld+json">{_json_for_script(jsonld)}</script>\n'
     )

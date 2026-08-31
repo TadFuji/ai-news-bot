@@ -2,6 +2,7 @@
 
 import io
 import os
+from pathlib import Path
 
 from PIL import Image
 
@@ -90,10 +91,20 @@ def test_ogp_filename_matches_the_meta_tags(tmp_path):
     build_pages.inject_ogp_and_prerender(docs)
     page = (docs / "index.html").read_text(encoding="utf-8")
 
-    assert f'og:image" content="{build_pages.WEB_BASE}{build_pages.OGP_FILENAME}"' in page
+    assert f'og:image" content="{build_pages.WEB_BASE}{build_pages.OGP_CARD_FILENAME}"' in page
     # X はカード表示に twitter:image を優先するので、こちらのずれも見る
-    assert f'twitter:image" content="{build_pages.WEB_BASE}{build_pages.OGP_FILENAME}"' in page
+    assert f'twitter:image" content="{build_pages.WEB_BASE}{build_pages.OGP_CARD_FILENAME}"' in page
     assert "ogp_latest.png" not in page
+    # 日替わり画像へ戻すと、X の使い回しで常に前日以前のカードが出る
+    assert build_pages.OGP_FILENAME not in page
+
+
+def test_ogp_card_image_is_published():
+    """メタタグが指す固定カードが docs/ に実在すること（無いとプレビューが空になる）。"""
+    import build_pages
+
+    card = Path(__file__).resolve().parents[1] / "docs" / build_pages.OGP_CARD_FILENAME
+    assert card.exists(), f"{card} が無い"
 
 
 def test_ogp_image_kept_when_card_missing(tmp_path, monkeypatch):
