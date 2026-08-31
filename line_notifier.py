@@ -225,7 +225,8 @@ def _push_messages(messages) -> bool:
         with ApiClient(configuration) as api_client:
             messaging_api = MessagingApi(api_client)
             push_request = PushMessageRequest(to=user_id, messages=messages)
-            messaging_api.push_message(push_request)
+            # SDK 既定はタイムアウト無し。応答保留で朝の自動処理ごと止まるのを防ぐ
+            messaging_api.push_message(push_request, _request_timeout=30)
         print("✅ LINE 送信成功！")
         return True
     except Exception as e:
@@ -233,8 +234,18 @@ def _push_messages(messages) -> bool:
         return False
 
 
+# LINE Messaging API のテキストメッセージ上限（超過すると送信自体が 400 で失敗する）
+_LINE_TEXT_LIMIT = 5000
+
+
 def send_to_line(message_text: str) -> bool:
-    """テキスト通知（障害アラート等）を1通送信する。"""
+    """テキスト通知（ニュース本文・障害アラート等）を1通送信する。
+
+    上限超過は API エラーで配信全損になるため、超える場合は末尾を切り詰める。
+    """
+    if len(message_text) > _LINE_TEXT_LIMIT:
+        print(f"  ⚠️ LINE 本文が {len(message_text)} 字（上限 {_LINE_TEXT_LIMIT}）— 末尾を切り詰め")
+        message_text = message_text[:_LINE_TEXT_LIMIT - 1] + "…"
     return _push_messages([TextMessage(text=message_text)])
 
 

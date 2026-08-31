@@ -92,6 +92,14 @@ class TestMainGuardWiring:
 
         cm.main()
 
+    def test_stops_when_force_redeliver_is_zero(self, monkeypatch, tmp_path):
+        """本番の非強制実行は空文字列ではなく '0' を渡す（workflow の実値）。
+        判定を truthy 評価に変異させると '0' でガードが外れ、ここが落ちる。"""
+        self._publish_today(monkeypatch, tmp_path)
+        monkeypatch.setenv("FORCE_REDELIVER", "0")
+
+        cm.main()
+
     def test_proceeds_when_force_redeliver_is_set(self, monkeypatch, tmp_path):
         """やり直し指定があれば配信済みでも進む。判定を反転させるとここが落ちる。"""
         self._publish_today(monkeypatch, tmp_path)

@@ -28,6 +28,11 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      with:
+        # Re-run や待機明けの手動実行は起動時点の古いコミットに固定される。
+        # 常に main の先頭を取ることで、直前の実行が残した配信記録
+        # (docs/YYYY-MM-DD.json) を二重配信ガードが確実に見られるようにする
+        ref: main
 
     - name: Set up Python
       uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
@@ -57,7 +62,15 @@ jobs:
       run: |
         python curate_morning_brief.py
 
+    # 配信は前ステップで完了済みのため、以降は失敗時も必ず実行する（if: always()）。
+    # ここをスキップすると配信記録 (docs/YYYY-MM-DD.json) が残らず、
+    # 再実行時に二重配信ガードが素通りして同じ朝刊が2回届く
+    - name: Sync with origin/main before commit
+      if: always()
+      run: git pull --rebase --autostash origin main
+
     - name: Commit and Push changes
+      if: always()
       uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
       with:
         commit_message: "Morning Brief delivered [skip ci]"

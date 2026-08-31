@@ -52,7 +52,7 @@ def post_to_x_single(articles, theme=""):
 
     if not all([consumer_key, consumer_secret, access_token, access_token_secret]):
         print("⚠️ X API Credentials missing. Skipping X post.")
-        return
+        return False
 
     client = tweepy.Client(
         consumer_key=consumer_key, consumer_secret=consumer_secret,
@@ -60,7 +60,7 @@ def post_to_x_single(articles, theme=""):
     )
 
     if not articles:
-        return
+        return False
 
     # Process up to 10 articles
     target_articles = articles[:10]
@@ -121,9 +121,11 @@ def post_to_x_single(articles, theme=""):
         time.sleep(2)  # Small buffer
         client.create_tweet(text=links_text, in_reply_to_tweet_id=main_tweet_id)
         print("✅ Links Reply complete.")
+        return True
 
     except Exception as e:
         print(f"❌ Failed to post to X: {e}")
+        return False
 
 
 def _truncate(text, limit):
@@ -209,10 +211,10 @@ def post_to_x_thread(articles, theme="", morning_comment=""):
 
     if not all([consumer_key, consumer_secret, access_token, access_token_secret]):
         print("⚠️ X API Credentials missing. Skipping X post.")
-        return
+        return False
 
     if not articles:
-        return
+        return False
 
     client = tweepy.Client(
         consumer_key=consumer_key, consumer_secret=consumer_secret,
@@ -266,17 +268,25 @@ def post_to_x_thread(articles, theme="", morning_comment=""):
             client.create_tweet(text=tail, in_reply_to_tweet_id=parent_id)
 
         print("✅ Thread complete.")
+        return True
     except Exception as e:
         print(f"❌ Failed to post thread to X: {e}")
+        return False
 
 
 def main():
+    """配信を実行し、チャネル別の成否 {"line": bool, "x": bool} を返す。
+
+    呼び出し元（curate_morning_brief.main）はこの戻り値で「全チャネル失敗」を
+    検知して run を失敗にする（欠配が緑のまま固定されるのを防ぐ）。
+    """
     print("🚀 Starting Daily Distribution...")
+    result = {"line": False, "x": False}
 
     report_path = get_latest_report()
     if not report_path:
         print("❌ No report found to distribute.")
-        return
+        return result
 
     print(f"📄 Loading report: {report_path}")
     with open(report_path, 'r', encoding='utf-8') as f:
@@ -285,26 +295,28 @@ def main():
     articles = data.get("articles", [])
     if not articles:
         print("⚠️ No articles in report.")
-        return
+        return result
 
     # 1. LINE Distribution
     try:
-        send_news_to_line(articles)
+        result["line"] = bool(send_news_to_line(articles))
     except Exception as e:
         print(f"❌ Error sending to LINE: {e}")
 
     # 2. X Distribution（X_THREAD_MODE=1 でスレッド形式、未設定は従来の単一投稿）
     try:
         if os.environ.get("X_THREAD_MODE") == "1":
-            post_to_x_thread(
+            result["x"] = bool(post_to_x_thread(
                 articles,
                 theme=data.get("theme", ""),
                 morning_comment=data.get("morning_comment", ""),
-            )
+            ))
         else:
-            post_to_x_single(articles, theme=data.get("theme", ""))
+            result["x"] = bool(post_to_x_single(articles, theme=data.get("theme", "")))
     except Exception as e:
         print(f"❌ Error sending to X: {e}")
+
+    return result
 
 
 if __name__ == "__main__":

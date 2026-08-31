@@ -1,3 +1,4 @@
+import socket
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import timezone
@@ -71,6 +72,13 @@ def collect_from_rss_feeds() -> list[dict]:
     """
     articles = []
     start = time.time()
+
+    # feedparser.parse は内部の urllib にタイムアウトを渡さないため、ソケットの
+    # グローバル既定で足切りする。これが無いと無応答フィード1本で全体が永久待ちになり、
+    # ジョブの 60 分タイムアウトでその日の配信が全損する。
+    # （下の future.result(timeout=...) は as_completed が完了済み future しか
+    # 返さないため足切りとしては機能しない — こちらが唯一の実効タイムアウト）
+    socket.setdefaulttimeout(_FEED_TIMEOUT_SEC)
 
     print(f"📡 {len(RSS_FEEDS)} フィードを並列取得中（最大{_MAX_WORKERS}スレッド）...")
 

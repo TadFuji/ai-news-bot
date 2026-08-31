@@ -174,6 +174,10 @@ class TestFetchSingleFeed:
             assert len(result) == 1
             assert result[0]["title"] == "Test Article"
             assert result[0]["source"] == "TestFeed"
+            # published の解析が壊れると filter_by_time で全記事が落ち、
+            # 「配信されない日が成功扱い」になるため、aware datetime を必須とする
+            assert isinstance(result[0]["published"], datetime.datetime)
+            assert result[0]["published"].tzinfo is not None
 
     def test_handles_parse_error(self):
         from rss_client import _fetch_single_feed
@@ -228,8 +232,7 @@ class TestKeywordPattern:
         from collect_rss_gemini import _KEYWORD_PATTERN
         test_cases = ["ChatGPT", "LLM", "機械学習", "OpenAI", "生成AI"]
         for keyword in test_cases:
-            _KEYWORD_PATTERN.findall(keyword)
-            # キーワードリスト全体を知らないので、マッチ/非マッチは個別検証しない
+            assert _KEYWORD_PATTERN.search(keyword), f"代表キーワードにマッチしない: {keyword}"
 
     def test_pattern_case_insensitive(self):
         from collect_rss_gemini import _KEYWORD_PATTERN
