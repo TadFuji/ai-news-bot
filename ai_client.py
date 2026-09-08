@@ -152,7 +152,7 @@ URL: {article['url']}
         items=article_schema,
     )
 
-    print("🧠 Gemini 3.7 Flash で処理中...")
+    print("🧠 Gemini 3.8 Flash で処理中...")
     start = time.time()
 
     max_retries = 2
