@@ -88,6 +88,24 @@ Stage 1（collect_candidates.yml）は自動実行停止中（手動のみ）。
 - 直接の削除（`rm` 等）。削除はグローバル `CLAUDE.md`「データ保護と承認」に従い Finder のごみ箱へ送る（`gomibako` スキルが使える）。
 - `.backups/` のコミット（秘密情報を含み得るため gitignore 済み）。
 
+## Gemini の使用量記録（2026-09-10 追加）
+
+毎日課金が発生するのに使った量が分からない状態だったので、`usage_meter.py` を足した。
+
+- 実行のたびに `usage/usage-YYYY-MM.jsonl` へ 1 行追記する（1 行 = 1 実行）。同じ内容の
+  1 行サマリが実行ログにも `USAGE:` で始まる行として出る。
+- 月ごとの合計を見る: `python3 usage_meter.py usage/`
+- 費用は**概算**。単価は 2026-09-10 に https://ai.google.dev/gemini-api/docs/pricing を見て
+  `usage_meter.py` の `PRICES` へ書き写したもので、正式な請求額は Google Cloud の請求画面が正典。
+  単価表に無いモデルはトークン数だけ記録し、金額には入れない（推測で金額を出さない）。
+  **3.8/3.7/3.6 Flash の単価は 2026-12-31 で倍になる**ので、年明けの数字は跳ねる（切替は実装済み）。
+- 止めるとき: 環境変数 `USAGE_METER=0`。書き出し先の変更は `USAGE_LOG_DIR`、円換算は
+  `USAGE_JPY_PER_USD`（既定 157）。
+- 計測は**本番を止めない**。内部の例外はすべて握り潰し、理由を JSONL の `meter_errors` に残すだけ。
+- 書き出しは `curate_morning_brief.py` / `generate_weekly_column.py` の `finally` で行う。
+  品質低下時の `sys.exit(1)` でも記録が残るようにするため。`usage/` は workflow の
+  `git-auto-commit-action` がそのままコミットする（`file_pattern` 指定が無いため）。
+
 ## 補足
 
 - 本番への影響が出る操作（workflow 変更、`docs/` の公開データ変更、配信ロジック変更）は、3ファイル以下でも事前に計画と影響範囲を提示し、承認を得てから着手する。

@@ -5,6 +5,7 @@ import datetime
 from google import genai
 from google.genai import types
 from config import GEMINI_MODEL, STAGE1_MAX_ARTICLES
+from usage_meter import meter  # Gemini の使用量記録（2026-09-10 追加）
 
 # SDK の既定はタイムアウト無しで、応答が返らないと朝の自動処理ごと止まる
 # （generators/infographic_maker.py と同じ対策・同じ値）
@@ -173,6 +174,7 @@ URL: {article['url']}
                     response_schema=response_schema,
                 ),
             )
+            meter.record(GEMINI_MODEL, response, label="stage1-translate-score")
             # 安全フィルタ等で candidates が空だと response.text は None を返す。
             # そのまま .strip() すると AttributeError になり、ブロック理由がログから消える
             if not response.text:

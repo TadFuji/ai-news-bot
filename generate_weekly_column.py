@@ -18,6 +18,7 @@ from dotenv import load_dotenv
 from line_notifier import send_to_line
 from config import JST, GEMINI_MODEL
 from ai_client import GENAI_TIMEOUT_MS
+from usage_meter import meter  # Gemini の使用量記録（2026-09-10 追加）
 
 load_dotenv()
 
@@ -182,6 +183,7 @@ def generate_column(items):
             model=GEMINI_MODEL,
             contents=prompt
         )
+        meter.record(GEMINI_MODEL, response, label="weekly-column")
         # 安全フィルタ等で candidates が空だと response.text は None を返す。
         # 理由を残さないと「空振りが緑のまま固定」される
         if not response.text:
@@ -265,4 +267,9 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    finally:
+        # 使用量は LINE 送信失敗の sys.exit(1) でも残す（2026-09-10 追加）
+        print(meter.summary_line())
+        meter.flush(log_dir=os.path.join(os.path.dirname(os.path.abspath(__file__)), "usage"))

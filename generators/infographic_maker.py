@@ -11,6 +11,7 @@ import time
 from datetime import datetime
 
 from config import JST
+from usage_meter import meter  # Gemini の使用量記録（2026-09-10 追加）
 
 MODEL = os.environ.get("GEMINI_IMAGE_MODEL", "gemini-3-pro-image")
 # 文章生成用の GOOGLE_API_KEY とは別にする（画像の費用を分けて追えるようにするため。
@@ -138,6 +139,7 @@ def _generate_image(prompt):
             for cand in resp.candidates or []:
                 for part in (cand.content.parts if cand.content else None) or []:
                     if getattr(part, "inline_data", None) and part.inline_data.data:
+                        meter.record_image(MODEL, label="ogp-card")
                         return part.inline_data.data
             # 安全フィルタで止められた場合もここに来る。理由を残さないと
             # 「毎日3回試して毎日失敗」の原因がログから分からない

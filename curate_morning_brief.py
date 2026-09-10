@@ -18,6 +18,7 @@ from google.genai import types
 from dotenv import load_dotenv
 from config import NEWS_BOT_OUTPUT_DIR, JST, GEMINI_MODEL, STAGE1_MAX_ARTICLES
 from ai_client import GENAI_TIMEOUT_MS
+from usage_meter import meter  # Gemini の使用量記録（2026-09-10 追加）
 from dedup import dedup_articles
 
 load_dotenv()
@@ -304,6 +305,7 @@ URL: {url}
                     response_schema=response_schema,
                 ),
             )
+            meter.record(GEMINI_MODEL, response, label="stage2-curate")
             # 安全フィルタ等で candidates が空だと response.text は None を返す。
             # そのまま .strip() すると AttributeError になり、ブロック理由がログから消える
             if not response.text:
@@ -592,4 +594,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    finally:
+        # 使用量は正常終了でも品質低下の sys.exit(1) でも必ず残す（2026-09-10 追加）。
+        # usage/ は workflow の git-auto-commit-action がそのままコミットする。
+        print(meter.summary_line())
+        meter.flush(log_dir=os.path.join(os.path.dirname(os.path.abspath(__file__)), "usage"))
