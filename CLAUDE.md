@@ -85,7 +85,7 @@ Stage 1（collect_candidates.yml）は自動実行停止中（手動のみ）。
 
 - バックアップ未確認のままの上書き・削除・force push。
 - `git add .` / `git add -A`（クラウド同期下で重複ファイルが混入した実績あり）。対象を**個別指定**する。
-- 直接の削除（`rm` 等）。削除はグローバル `CLAUDE.md` §4 に従い Finder のごみ箱へ送る（`gomibako` スキルが使える）。
+- 直接の削除（`rm` 等）。削除はグローバル `CLAUDE.md`「データ保護と承認」に従い Finder のごみ箱へ送る（`gomibako` スキルが使える）。
 - `.backups/` のコミット（秘密情報を含み得るため gitignore 済み）。
 
 ## 補足
