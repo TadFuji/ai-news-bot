@@ -1,4 +1,3 @@
-import logging
 import os
 from datetime import timedelta, timezone
 
@@ -308,32 +307,3 @@ def _load_external_feeds():
 _external = _load_external_feeds()
 if _external is not None:
     RSS_FEEDS = _external
-
-
-# ===========================
-# Logging ヘルパー（L6: ログレベル導入）
-# ===========================
-
-def get_logger(name: str) -> logging.Logger:
-    """プロジェクト共通のロガーを取得する
-
-    Usage:
-        from config import get_logger
-        logger = get_logger(__name__)
-        logger.info("Processing started")
-        logger.warning("Feed returned 0 articles")
-    """
-    logger = logging.getLogger(name)
-    if not logger.handlers:
-        handler = logging.StreamHandler()
-        formatter = logging.Formatter(
-            "%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-            datefmt="%H:%M:%S",
-        )
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
-        # デフォルトは INFO、環境変数で変更可能
-        level = os.environ.get("LOG_LEVEL", "INFO").upper()
-        logger.setLevel(getattr(logging, level, logging.INFO))
-    return logger
-
