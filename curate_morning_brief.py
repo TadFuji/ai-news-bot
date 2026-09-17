@@ -17,7 +17,7 @@ from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 from config import NEWS_BOT_OUTPUT_DIR, JST, GEMINI_MODEL, STAGE1_MAX_ARTICLES
-from ai_client import GENAI_TIMEOUT_MS
+from ai_client import GENAI_TIMEOUT_MS, writing_rules
 from usage_meter import meter  # Gemini の使用量記録（2026-09-10 追加）
 from dedup import dedup_articles
 
@@ -222,6 +222,7 @@ URL: {url}
 読者が最初に読む「編集長コメント」を40文字以内で作成してください。
 トーンは、信頼感のある落ち着いた口調で。例:「エージェント技術、ついに"使える段階"へ」
 
+{writing_rules('日本語で書くすべての値（theme、morning_comment、title_ja、summary_ja、one_liner、why_important、action_item）')}
 ## 出力ルール（厳守）
 - 出力テキストに**特定の年齢層（「40代」「30代」等）を絶対に記載しないでください**。読者層を限定する表現は不要です。
 - 「ビジネスパーソン」「エンジニア」「管理職」など役割ベースの表現は許可します。

@@ -2,10 +2,37 @@ import os
 import json
 import time
 import datetime
+from pathlib import Path
 from google import genai
 from google.genai import types
 from config import GEMINI_MODEL, STAGE1_MAX_ARTICLES
 from usage_meter import meter  # Gemini の使用量記録（2026-09-10 追加）
+
+# 藤川さんの文章ルール（2026-09-17 追加）。正本は x-morning-brief の
+# skills/writing-rules.md で、ここにあるのは写し。手で編集しない。
+WRITING_RULES_PATH = Path(__file__).resolve().parent / "skills" / "writing-rules.md"
+
+
+def writing_rules(scope: str) -> str:
+    """Return the writing rules as a prompt section, or "" if the file is gone.
+
+    A missing file must not stop delivery, so it only logs a warning. `scope`
+    names the values the rules apply to, since each prompt writes different
+    fields.
+    """
+    try:
+        text = WRITING_RULES_PATH.read_text(encoding="utf-8")
+    except OSError as e:
+        print(f"⚠️ 文章ルールを読めません（{type(e).__name__}）: {WRITING_RULES_PATH}。ルールなしで生成します")
+        return ""
+    return (
+        "## 文章ルール\n"
+        f"{scope}に、次のルールを適用してください。"
+        "見出しや箇条書きを書かない出力では、それに関する項目は無視してください。"
+        "件数・字数・形式の指定とルールが矛盾したら、指定を優先してください。\n"
+        + text.strip()
+        + "\n"
+    )
 
 # SDK の既定はタイムアウト無しで、応答が返らないと朝の自動処理ごと止まる
 # （generators/infographic_maker.py と同じ対策・同じ値）
@@ -91,6 +118,7 @@ URL: {article['url']}
 候補が10件以上ある場合は厳選し、10件未満の場合は候補の全件を採用してください。
 **重要: 配列には必ず10件（候補が10件未満なら全件）を含めてください。5件や7件では不十分です。**
 
+{writing_rules('日本語で書くすべての値（summary_ja、one_liner、why_important、action_item、reason）')}
 ## 出力ルール（厳守）
 - 出力テキスト（summary_ja, reason, why_important 等）に**特定の年齢層（「40代」「30代」等）を絶対に記載しないでください**。読者層を限定する表現は不要です。
 - 「ビジネスパーソン」「エンジニア」「管理職」など役割ベースの表現は許可します。
@@ -114,7 +142,7 @@ URL: {article['url']}
             "title_ja": types.Schema(type=types.Type.STRING, description="日本語タイトル"),
             "summary_ja": types.Schema(
                 type=types.Type.STRING,
-                description="詳細な日本語要約。ビジネスパーソンに具体的にどう影響するかを含め、情報を網羅して記述",
+                description="日本語要約。何が起きたかを最初に書き、ビジネスパーソンへの具体的な影響を含める。重要度の低い細部は省く",
             ),
             "one_liner": types.Schema(
                 type=types.Type.STRING,
