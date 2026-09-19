@@ -46,6 +46,20 @@ def score_articles(articles):
     return scored
 
 
+def select_with_jev(articles, n=10):
+    """Jev の上位 n 件（配信済みを除く）。使えない場合は None。"""
+    from curate_morning_brief import get_delivered_urls
+    import jev_selector
+
+    delivered = get_delivered_urls(days=3)
+    fresh = [a for a in articles if a.get("url") and a["url"] not in delivered]
+    try:
+        return jev_selector.select_articles(fresh, n=n)
+    except Exception as e:  # never let the new selector stop the morning delivery
+        print(f"   ⚠️ Jev 選定で予期しないエラー（従来方式に戻します）: {type(e).__name__}: {e}")
+        return None
+
+
 def main():
     start = time.time()
     print("=== Hybrid News Collection Start ===")
@@ -62,12 +76,18 @@ def main():
         print("No recent articles found.")
         return
 
-    print("3. Prioritizing AI-related articles...")
-    scored_articles = score_articles(articles)
-
-    # Take top 30 relevant/newest for Gemini
-    input_articles = scored_articles[:30]
-    print(f"-> Selected {len(input_articles)} articles for Gemini analysis (Priority: AI Relevance).")
+    # 3. Jev が「日本の一般読者が興味深いと思うか」で全件を採点し、上位10件を決める。
+    #    Jev が使えないとき（鍵なし・通信失敗）は従来のキーワード方式に戻す。
+    print("3. Selecting articles with Jev (reader interest)...")
+    input_articles = select_with_jev(articles)
+    if input_articles:
+        print(f"-> Jev selected {len(input_articles)} articles; Gemini writes the Japanese text.")
+    else:
+        print("3. Prioritizing AI-related articles (keyword fallback)...")
+        scored_articles = score_articles(articles)
+        # Take top 30 relevant/newest for Gemini
+        input_articles = scored_articles[:30]
+        print(f"-> Selected {len(input_articles)} articles for Gemini analysis (Priority: AI Relevance).")
 
     # 3.5. 上位記事の本文を取得して判断材料を厚くする（失敗時は RSS 要約で代替）
     print("3.5. Fetching full article text for top items...")

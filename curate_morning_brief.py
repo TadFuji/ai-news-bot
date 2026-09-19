@@ -502,6 +502,12 @@ def main():
     print("\n🧠 2次キュレーション実行中...")
     brief = curate_with_gemini(candidates)
 
+    # 4.2. Jev が選んだ日は、Gemini の並べ替えではなく Jev の順位で並べる
+    jev_rank = {a.get("url"): a["jev_rank"] for a in candidates if a.get("jev_rank")}
+    if brief and jev_rank:
+        brief["articles"].sort(key=lambda a: jev_rank.get(a.get("url"), len(jev_rank) + 1))
+        print(f"   📊 Jev の順位で並べ替え（Jev 選定 {len(jev_rank)} 件）")
+
     if not brief:
         print("❌ キュレーション失敗。終了します。")
         return
