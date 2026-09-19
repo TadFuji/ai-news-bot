@@ -4,6 +4,7 @@ Standard library only. The API key is read from OPENROUTER_API_KEY and is
 never printed or written anywhere; error messages never include the upstream body.
 """
 
+import http.client
 import json
 import os
 import time
@@ -18,6 +19,10 @@ TIMEOUT_SEC = 30
 
 class JevError(Exception):
     """Raised with a message that never contains the key or the upstream body."""
+
+    def __init__(self, message: str, status: int | None = None):
+        super().__init__(message)
+        self.status = status  # HTTP status when the server answered with an error
 
 
 def load_key() -> str:
@@ -43,8 +48,8 @@ def decide(state: dict, questions: dict, key: str) -> dict:
             data = json.loads(res.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
         # Do not reflect the upstream body: it may echo request content.
-        raise JevError(f"HTTP {e.code}") from None
-    except (urllib.error.URLError, TimeoutError, OSError) as e:
+        raise JevError(f"HTTP {e.code}", status=e.code) from None
+    except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException) as e:
         raise JevError(f"connection failed ({type(e).__name__})") from None
     except ValueError:
         raise JevError("response was not JSON") from None

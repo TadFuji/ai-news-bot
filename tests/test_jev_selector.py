@@ -131,3 +131,76 @@ class TestCollectFallback:
                             lambda days=3: {"https://example.com/1"})
         collect_rss_gemini.select_with_jev([_article(1), _article(2)])
         assert seen["urls"] == ["https://example.com/2"]
+
+
+class TestScoreAllSafety:
+    def test_fatal_status_stops_scoring(self, key):
+        arts = [_article(i) for i in range(1, 40)]
+        calls = []
+
+        def decide(state, questions, k):
+            calls.append(1)
+            raise jev_client.JevError("HTTP 401", status=401)
+        assert jev_selector.select_articles(arts, decide=decide) is None
+        assert len(calls) < len(arts) * 2  # no retry passes after a key error
+
+    def test_deadline_skips_remaining_calls(self, key):
+        arts = [_article(i) for i in range(1, 6)]
+        table = {a["title"]: _answers(2.0) for a in arts}
+        res = jev_selector.score_all(arts, "k", _fake_decide(table), deadline_sec=-1)
+        assert res == {}
+
+    def test_malformed_answers_count_as_failures(self, key):
+        arts = [_article(i) for i in range(1, 6)]
+        table = {a["title"]: {"interest": {"score": 2.0}} for a in arts}  # no category/promo
+        assert jev_selector.select_articles(arts, decide=_fake_decide(table)) is None
+
+
+class TestJevClient:
+    def _raise(self, exc):
+        def urlopen(*a, **k):
+            raise exc
+        return urlopen
+
+    def test_http_error_hides_body_and_key(self, monkeypatch):
+        import io
+        import urllib.error
+        err = urllib.error.HTTPError("https://x", 402, "Payment Required", {},
+                                     io.BytesIO(b"secret-body echo test-key"))
+        monkeypatch.setattr(jev_client.urllib.request, "urlopen", self._raise(err))
+        with pytest.raises(jev_client.JevError) as e:
+            jev_client.decide({"headline": "h"}, {}, "test-key")
+        assert str(e.value) == "HTTP 402" and e.value.status == 402
+
+    def test_incomplete_read_becomes_jev_error(self, monkeypatch):
+        import http.client
+        monkeypatch.setattr(jev_client.urllib.request, "urlopen",
+                            self._raise(http.client.IncompleteRead(b"partial")))
+        with pytest.raises(jev_client.JevError) as e:
+            jev_client.decide({"headline": "h"}, {}, "k")
+        assert "IncompleteRead" in str(e.value) and e.value.status is None
+
+
+class TestPipelineGlue:
+    def test_dropped_stage1_picks_are_restored_in_jev_order(self):
+        import collect_rss_gemini
+        picks = [dict(_article(i), jev_rank=i, full_text="body") for i in (1, 2, 3)]
+        processed = [dict(picks[2], title_ja="三"), dict(picks[0], title_ja="一")]
+        for a in processed:
+            a.pop("full_text")
+        out = collect_rss_gemini.keep_all_jev_picks(processed, picks)
+        assert [a["jev_rank"] for a in out] == [1, 2, 3]
+        assert "full_text" not in out[1] and isinstance(out[1]["published"], str)
+
+    def test_brief_is_reordered_by_jev_rank(self):
+        from curate_morning_brief import order_by_jev_rank
+        cands = [{"url": f"u{i}", "jev_rank": i} for i in (1, 2, 3)]
+        brief = {"articles": [{"url": "u3"}, {"url": "x"}, {"url": "u1"}, {"url": "u2"}]}
+        order_by_jev_rank(brief, cands)
+        assert [a["url"] for a in brief["articles"]] == ["u1", "u2", "u3", "x"]
+
+    def test_keyword_day_keeps_gemini_order(self):
+        from curate_morning_brief import order_by_jev_rank
+        brief = {"articles": [{"url": "b"}, {"url": "a"}]}
+        order_by_jev_rank(brief, [{"url": "a"}, {"url": "b"}])
+        assert [a["url"] for a in brief["articles"]] == ["b", "a"]

@@ -1,7 +1,7 @@
 """Pick the day's articles with Jev: "would ordinary Japanese readers find this interesting?".
 
-The question set is variant "i7" from the 2026-09-19 experiment (ai-news-bot-2/experiments):
-agreement with reader-persona ratings rose from 0.52 (keyword + value question) to 0.92.
+The question set was tuned on 2026-09-19 against reader-persona ratings of about 250 articles
+(agreement rose from 0.52 for a keyword + "value" question to 0.92); see HISTORY.md.
 Jev scores every candidate; code excludes non-AI and advertisements, bundles reports of the
 same event, and returns the top N in Jev order. Gemini only writes the Japanese text afterwards.
 
@@ -16,6 +16,9 @@ import time
 import jev_client
 
 MAX_WORKERS = 8
+DEADLINE_SEC = 8 * 60  # stop starting new calls after this; the workflow limit is 60 min
+EARLY_GIVE_UP = 0.5  # after the first pass, below this success ratio do not retry
+FATAL_STATUS = {400, 401, 402, 403}  # bad request, key or billing problems: retrying cannot help
 MIN_SCORED_RATIO = 0.8  # below this, the ranking is too incomplete to trust
 NOT_AI_CUTOFF = 0.5
 PROMO_CUTOFF = 0.7
@@ -103,17 +106,32 @@ def rank_of(answers: dict) -> float:
     return answers["interest"]["score"] * (1 - not_ai) * (1 - penalty)
 
 
-def score_all(articles: list[dict], key: str, decide=jev_client.decide) -> dict:
-    """Score every article (two retry passes for failures). Returns {url: result}."""
+def score_all(articles: list[dict], key: str, decide=jev_client.decide,
+              deadline_sec: float = DEADLINE_SEC) -> dict:
+    """Score every article (up to two retry passes). Returns {url: result}.
+
+    Stops early on key/billing errors, when the first pass mostly failed, or at the
+    deadline, so a hanging API cannot push the morning run past the workflow limit.
+    """
     results = {}
+    deadline = time.monotonic() + deadline_sec
+    fatal = []
 
     def one(a):
+        if fatal or time.monotonic() > deadline:
+            return a["url"], jev_client.JevError("skipped")
         try:
-            return a["url"], decide(state_of(a), QUESTIONS, key)
+            res = decide(state_of(a), QUESTIONS, key)
+            rank_of(res["answers"])  # malformed answers count as failures
+            return a["url"], res
         except jev_client.JevError as e:
+            if e.status in FATAL_STATUS:
+                fatal.append(e.status)
             return a["url"], e
+        except (KeyError, TypeError, AttributeError):
+            return a["url"], jev_client.JevError("malformed answers")
 
-    for _ in range(3):
+    for n in range(3):
         todo = [a for a in articles if a["url"] not in results]
         if not todo:
             break
@@ -121,6 +139,14 @@ def score_all(articles: list[dict], key: str, decide=jev_client.decide) -> dict:
             for url, res in ex.map(one, todo):
                 if not isinstance(res, Exception):
                     results[url] = res
+        if fatal:
+            print(f"   ⚠️ Jev が HTTP {fatal[0]} を返したため採点を中止します（鍵・残高を確認）")
+            break
+        if time.monotonic() > deadline:
+            print(f"   ⚠️ Jev の採点が {deadline_sec / 60:.0f} 分を超えたため打ち切ります")
+            break
+        if n == 0 and len(results) < EARLY_GIVE_UP * len(articles):
+            break
     return results
 
 
@@ -154,10 +180,7 @@ def select_articles(articles: list[dict], n: int = 10, decide=jev_client.decide)
         r = results.get(a["url"])
         if r is None:
             continue
-        try:
-            score = rank_of(r["answers"])
-        except (KeyError, TypeError):
-            continue
+        score = rank_of(r["answers"])
         if score >= 0:
             ranked.append(dict(a, jev_score=round(score, 4)))
     ranked.sort(key=lambda a: a["jev_score"], reverse=True)

@@ -60,6 +60,22 @@ def select_with_jev(articles, n=10):
         return None
 
 
+def keep_all_jev_picks(processed, picks):
+    """Gemini 1次が落とした Jev 選定記事を未翻訳のまま戻す（2次で日本語化される）。"""
+    have = {a.get("url") for a in processed}
+    missing = []
+    for a in picks:
+        if a.get("url") in have:
+            continue
+        ac = {k: v for k, v in a.items() if k != "full_text"}
+        if isinstance(ac.get("published"), datetime.datetime):
+            ac["published"] = ac["published"].isoformat()
+        missing.append(ac)
+    if missing:
+        print(f"   📌 Gemini 1次が {len(missing)} 件を落としたため、Jev 選定の記事で補います")
+    return sorted(processed + missing, key=lambda a: a.get("jev_rank", len(picks) + 1))
+
+
 def main():
     start = time.time()
     print("=== Hybrid News Collection Start ===")
@@ -80,7 +96,8 @@ def main():
     #    Jev が使えないとき（鍵なし・通信失敗）は従来のキーワード方式に戻す。
     print("3. Selecting articles with Jev (reader interest)...")
     input_articles = select_with_jev(articles)
-    if input_articles:
+    jev_mode = bool(input_articles)
+    if jev_mode:
         print(f"-> Jev selected {len(input_articles)} articles; Gemini writes the Japanese text.")
     else:
         print("3. Prioritizing AI-related articles (keyword fallback)...")
@@ -95,6 +112,8 @@ def main():
 
     print("4. Processing with Gemini (AI Trend Analyst Mode)...")
     processed = process_with_gemini(input_articles)
+    if jev_mode:
+        processed = keep_all_jev_picks(processed, input_articles)
 
     # Save as JSON
     timestamp = datetime.datetime.now(JST).strftime("%Y%m%d_%H%M")
