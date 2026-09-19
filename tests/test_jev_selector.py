@@ -81,6 +81,20 @@ class TestSelectArticles:
         picked = jev_selector.select_articles(arts, n=10, decide=_fake_decide(table))
         assert [a["url"] for a in picked] == ["https://example.com/1", "https://example.com/3"]
 
+    def test_duplicate_urls_are_scored_and_counted_once(self, key):
+        arts = [_article(i) for i in range(1, 4)]
+        arts += [dict(arts[0]), dict(arts[1])]  # same URLs from other feeds
+        table = {a["title"]: _answers(2.0) for a in arts}
+        table[arts[2]["title"]] = _answers(3.0, not_ai=0.9)
+        calls = []
+
+        def decide(state, questions, k):
+            calls.append(state["headline"])
+            return _fake_decide(table)(state, questions, k)
+        picked = jev_selector.select_articles(arts, decide=decide)
+        assert len(calls) == 3
+        assert [a["url"] for a in picked] == ["https://example.com/1", "https://example.com/2"]
+
     def test_too_many_failures_fall_back(self, key):
         arts = [_article(i) for i in range(1, 11)]
         table = {a["title"]: jev_client.JevError("HTTP 500") for a in arts}

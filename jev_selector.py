@@ -104,7 +104,7 @@ def rank_of(answers: dict) -> float:
 
 
 def score_all(articles: list[dict], key: str, decide=jev_client.decide) -> dict:
-    """Score every article (one retry pass for failures). Returns {url: result}."""
+    """Score every article (two retry passes for failures). Returns {url: result}."""
     results = {}
 
     def one(a):
@@ -113,7 +113,7 @@ def score_all(articles: list[dict], key: str, decide=jev_client.decide) -> dict:
         except jev_client.JevError as e:
             return a["url"], e
 
-    for _ in range(2):
+    for _ in range(3):
         todo = [a for a in articles if a["url"] not in results]
         if not todo:
             break
@@ -130,7 +130,12 @@ def select_articles(articles: list[dict], n: int = 10, decide=jev_client.decide)
     if not key:
         print("   ⚠️ OPENROUTER_API_KEY が未設定のため、Jev での選定を省略します")
         return None
-    articles = [a for a in articles if a.get("url")]
+    # The same URL often arrives from several feeds; score and count each URL once.
+    unique = {}
+    for a in articles:
+        if a.get("url") and a["url"] not in unique:
+            unique[a["url"]] = a
+    articles = list(unique.values())
     if not articles:
         return None
 
@@ -138,7 +143,8 @@ def select_articles(articles: list[dict], n: int = 10, decide=jev_client.decide)
     results = score_all(articles, key, decide)
     ratio = len(results) / len(articles)
     cost = sum(jev_client.cost_of(r.get("usage") or {}) for r in results.values())
-    print(f"   Jev 採点: {len(results)}/{len(articles)} 件（{time.time() - start:.1f}秒, ${cost:.4f}）")
+    print(f"   Jev 採点: {len(results)}/{len(articles)} 件（{time.time() - start:.1f}秒, ${cost:.4f}、"
+          f"失敗 {len(articles) - len(results)} 件は対象外）")
     if ratio < MIN_SCORED_RATIO:
         print(f"   ⚠️ Jev の採点成功率 {ratio:.0%} が {MIN_SCORED_RATIO:.0%} 未満のため、従来方式に戻します")
         return None
