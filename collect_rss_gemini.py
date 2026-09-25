@@ -46,7 +46,12 @@ def score_articles(articles):
     return scored
 
 
-def select_with_jev(articles, n=10):
+# 配信は10件だが、同じ出来事の記事は日本語化した後の束ねで減るため、余裕を持って渡す
+# （2026-09-20/21/25 に 10 件のうち 1〜2 件が束ねられ、配信が 9・8 件になった）。
+JEV_POOL = 15
+
+
+def select_with_jev(articles, n=JEV_POOL):
     """Jev の上位 n 件（配信済みを除く）。使えない場合は None。"""
     from curate_morning_brief import get_delivered_urls
     import jev_selector
@@ -92,7 +97,7 @@ def main():
         print("No recent articles found.")
         return
 
-    # 3. Jev が「日本の一般読者が興味深いと思うか」で全件を採点し、上位10件を決める。
+    # 3. Jev が「日本の一般読者が興味深いと思うか」で全件を採点し、上位 JEV_POOL 件を決める。
     #    Jev が使えないとき（鍵なし・通信失敗）は従来のキーワード方式に戻す。
     print("3. Selecting articles with Jev (reader interest)...")
     input_articles = select_with_jev(articles)
@@ -111,7 +116,11 @@ def main():
     enrich_with_full_text(input_articles, top_n=15)
 
     print("4. Processing with Gemini (AI Trend Analyst Mode)...")
-    processed = process_with_gemini(input_articles)
+    if jev_mode:
+        # Jev の日は選んだ全件を日本語化する（未翻訳のまま 2次へ渡すと束ねが効かない）
+        processed = process_with_gemini(input_articles, max_articles=len(input_articles))
+    else:
+        processed = process_with_gemini(input_articles)
     if jev_mode:
         processed = keep_all_jev_picks(processed, input_articles)
 

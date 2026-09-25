@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 from config import NEWS_BOT_OUTPUT_DIR, JST, GEMINI_MODEL, STAGE1_MAX_ARTICLES
 from ai_client import GENAI_TIMEOUT_MS, writing_rules
 from usage_meter import meter  # Gemini の使用量記録（2026-09-10 追加）
-from dedup import dedup_articles
+from dedup import dedup_articles, same_event
 
 load_dotenv()
 
@@ -114,11 +114,17 @@ def keep_known_urls(articles, candidate_urls):
     return kept
 
 
+def pick_order(article):
+    """補充・差し替えの優先順: 翻訳済み → Jev の読者関心順位（Jev の日）→ 1次スコアの高い順。"""
+    return (not article.get("title_ja"), article.get("jev_rank") or 10**6,
+            -(article.get("importance_score", 0) or 0))
+
+
 def rebalance_by_source(selected, pool, max_per_source=3, target=10):
     """同一ソース偏重を是正する。
 
     Gemini 出力後・保存前に実行する純Python処理。同一 source が
-    max_per_source を超えたら、その超過分を次点（importance_score 降順）の
+    max_per_source を超えたら、その超過分を次点（pick_order 順）の
     別ソース記事と差し替える。プロンプト依存を減らし多様性を確実化する。
     """
     by_source = {}
@@ -134,13 +140,13 @@ def rebalance_by_source(selected, pool, max_per_source=3, target=10):
     removed = len(overflow)
     kept_urls = {a.get("url", "") for a in kept}
     replacements = sorted(
-        [a for a in pool if a.get("url", "") not in kept_urls],
-        key=lambda x: x.get("importance_score", 0),
-        reverse=True,
+        [a for a in pool if a.get("url", "") not in kept_urls], key=pick_order
     )
     for a in replacements:
         if len(kept) >= target:
             break
+        if any(same_event(a, b) for b in kept):
+            continue
         s = a.get("source", "")
         if by_source.get(s, 0) < max_per_source:
             by_source[s] = by_source.get(s, 0) + 1
@@ -169,6 +175,12 @@ def curate_with_gemini(candidates):
         http_options=types.HttpOptions(timeout=GENAI_TIMEOUT_MS),
     )
 
+    # Jev が選んだ日は、候補に読者関心順位が付いている（小さいほど読者の関心が高い）
+    jev_rule = ""
+    if any(a.get("jev_rank") for a in candidates):
+        jev_rule = ("- 「読者関心順位」が付いている場合は、その順位を最優先し、"
+                    "同じ出来事の重複を除いたうえで上位から選ぶ\n")
+
     # 候補記事をテキスト化
     articles_text = ""
     for i, a in enumerate(candidates[:STAGE1_MAX_ARTICLES], 1):
@@ -178,12 +190,13 @@ def curate_with_gemini(candidates):
         score = a.get("importance_score", 0)
         source = a.get("source", "Unknown")
         url = a.get("url", "")
+        jev_line = f"読者関心順位: {a['jev_rank']}\n" if a.get("jev_rank") else ""
 
         articles_text += f"""
 ---
 候補{i}:
 タイトル: {title}
-1次スコア: {score}/10
+{jev_line}1次スコア: {score}/10
 カテゴリ: {category}
 ソース: {source}
 要約: {summary[:500]}
@@ -206,7 +219,8 @@ URL: {url}
 ## Step 2: 記事選定（必ず10件）
 以下の基準で **必ず10件** を選んでください。候補が10件以上ある場合は厳選し、10件未満の場合は候補の全件を採用してください。
 **重要: articlesの配列には必ず10件（候補が10件未満なら全件）を含めてください。5件や7件では不十分です。**
-- テーマとの関連性（ストーリーの一貫性）
+- 同じ出来事（同じ発表・事件・事故）を報じた記事は、メディアや言語が違っても1件だけ選ぶ。残す1件は最も詳しい記事にする
+{jev_rule}- テーマとの関連性（ストーリーの一貫性）
 - 読者の「明日の行動」を変える力
 - ソースの多様性（同じメディアに偏らない。同一ソースは最大3件まで）
 - 速報性（既に広く知られた情報は下位に）
@@ -334,11 +348,16 @@ URL: {url}
                 remaining = [
                     a for a in candidates if a.get("url", "") not in curated_urls
                 ]
-                remaining.sort(
-                    key=lambda x: x.get("importance_score", 0), reverse=True
-                )
+                remaining.sort(key=pick_order)
                 needed = 10 - len(curated_articles)
-                supplement = remaining[:needed]
+                supplement = []
+                for a in remaining:
+                    if len(supplement) >= needed:
+                        break
+                    # Gemini が同じ出来事として外した記事を戻さない
+                    if any(same_event(a, b) for b in curated_articles + supplement):
+                        continue
+                    supplement.append(a)
                 if supplement:
                     print(f"   📌 Gemini選定が{len(curated_articles)}件 → "
                           f"候補から{len(supplement)}件を補完して10件に調整")
@@ -368,10 +387,8 @@ URL: {url}
     # 全リトライ失敗時のフォールバック
     elapsed = time.time() - start
     print(f"❌ Gemini 2次キュレーション失敗（全{max_retries + 1}回, {elapsed:.1f}秒）: {last_error}")
-    # フォールバック: 1次スコア上位10件を使用（翻訳済みフィールドを優先）
-    fallback_articles = sorted(
-        candidates, key=lambda x: x.get("importance_score", 0), reverse=True
-    )[:10]
+    # フォールバック: pick_order の上位10件を使用（翻訳済み→Jev 順位→1次スコア）
+    fallback_articles = sorted(candidates, key=pick_order)[:10]
     for a in fallback_articles:
         if a.get("title_ja"):
             a["title"] = a["title_ja"]
@@ -505,7 +522,10 @@ def main():
 
     # 3.7. 意味的ダブり排除（同じ出来事を別メディアが報じた記事を束ねる）
     print("\n🔗 意味的ダブり排除中...")
-    candidates = dedup_articles(candidates)
+    candidates = dedup_articles(
+        candidates,
+        rank_key="jev_rank" if any(a.get("jev_rank") for a in candidates) else None,
+    )
 
     # 4. Gemini 2次キュレーション
     print("\n🧠 2次キュレーション実行中...")

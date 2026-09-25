@@ -109,6 +109,109 @@ class TestSelectArticles:
         assert len(picked) == 9 and "https://example.com/1" not in {a["url"] for a in picked}
 
 
+class TestShortfallFix:
+    """2026-09-20/21/25: 同じ出来事の記事が束ねられて配信が 9・8 件になった対策。"""
+
+    def test_jev_pool_leaves_room_for_bundling(self, monkeypatch):
+        import collect_rss_gemini
+        seen = {}
+
+        def capture(articles, n=10):
+            seen["n"] = n
+            return articles
+        monkeypatch.setattr(jev_selector, "select_articles", capture)
+        monkeypatch.setattr("curate_morning_brief.get_delivered_urls", lambda days=3: set())
+        collect_rss_gemini.select_with_jev([_article(1)])
+        assert seen["n"] == collect_rss_gemini.JEV_POOL > 10
+
+    def _run_curate(self, monkeypatch, candidates, returned_urls):
+        import json
+        import curate_morning_brief as cmb
+        seen = {}
+
+        class FakeModels:
+            def generate_content(self, model, contents, config):
+                seen["prompt"] = contents
+                by_url = {c["url"]: c for c in candidates}
+                arts = [{"url": u, "title_ja": by_url[u].get("title_ja", u), "source": u}
+                        for u in returned_urls]
+
+                class R:
+                    text = json.dumps({"theme": "t", "morning_comment": "c", "articles": arts})
+                    usage_metadata = None
+                return R()
+
+        class FakeClient:
+            def __init__(self, **k):
+                self.models = FakeModels()
+        monkeypatch.setenv("GOOGLE_API_KEY", "dummy")
+        monkeypatch.setattr(cmb.genai, "Client", FakeClient)
+        result = cmb.curate_with_gemini(candidates)
+        return seen["prompt"], result
+
+    def test_prompt_asks_for_one_article_per_event_and_jev_order(self, monkeypatch):
+        cands = [{"url": f"u{i}", "source": f"s{i}", "jev_rank": i, "importance_score": 5}
+                 for i in range(1, 16)]
+        prompt, _ = self._run_curate(monkeypatch, cands, [f"u{i}" for i in range(1, 11)])
+        assert "同じ出来事" in prompt and "1件だけ" in prompt
+        assert "読者関心順位: 1\n" in prompt and "その順位を最優先" in prompt
+
+    def test_keyword_day_prompt_has_no_jev_rank(self, monkeypatch):
+        cands = [{"url": f"u{i}", "source": f"s{i}", "importance_score": 5} for i in range(1, 11)]
+        prompt, _ = self._run_curate(monkeypatch, cands, [f"u{i}" for i in range(1, 11)])
+        assert "読者関心順位" not in prompt and "同じ出来事" in prompt
+
+    @staticmethod
+    def _jp(i, title=None, **kw):
+        return dict({"url": f"u{i}", "source": f"s{i}", "jev_rank": i, "importance_score": 5,
+                     "title_ja": title or f"話題{i}の発表{i * 7919}について"}, **kw)
+
+    def test_supplement_follows_jev_rank_not_stage1_score(self, monkeypatch):
+        cands = [self._jp(i, importance_score=20 - i if i < 9 else i) for i in range(1, 16)]
+        _, result = self._run_curate(monkeypatch, cands, [f"u{i}" for i in range(1, 9)])
+        assert [a["url"] for a in result["articles"]][8:] == ["u9", "u10"]
+
+    def test_supplement_prefers_translated_and_skips_same_event(self, monkeypatch):
+        event = "OpenAIのエージェントが豪州政府サイトに不正侵入、首相が抗議"
+        cands = [self._jp(i) for i in range(1, 9)]
+        cands[0]["title_ja"] = event
+        cands += [self._jp(9, event + "と報道"),            # same event as u1
+                  {"url": "u10", "source": "s10", "jev_rank": 10, "title": "Untranslated"},
+                  self._jp(11), self._jp(12)]
+        _, result = self._run_curate(monkeypatch, cands, [f"u{i}" for i in range(1, 9)])
+        assert [a["url"] for a in result["articles"]][8:] == ["u11", "u12"]
+
+    def test_stage2_dedup_keeps_higher_jev_rank(self):
+        from dedup import dedup_articles
+        a = {"title_ja": "OpenAIのエージェントが豪州政府サイトに不正侵入", "jev_rank": 1,
+             "importance_score": 3}
+        b = {"title_ja": "OpenAIのエージェントが豪州政府サイトに不正侵入か", "jev_rank": 8,
+             "importance_score": 9}
+        assert dedup_articles([a, b], rank_key="jev_rank") == [a]
+        assert dedup_articles([a, b]) == [b]  # keyword days: unchanged (stage-1 score)
+
+    def test_stage1_translates_every_jev_pick(self, monkeypatch):
+        import collect_rss_gemini
+        picks = [dict(_article(i), jev_rank=i) for i in range(1, 16)]
+        seen = {}
+
+        def fake_process(articles, max_articles=10):
+            seen["max"] = max_articles
+            return []
+        monkeypatch.setattr(collect_rss_gemini, "collect_from_rss_feeds", lambda: picks)
+        monkeypatch.setattr(collect_rss_gemini, "filter_by_time", lambda a: a)
+        monkeypatch.setattr(collect_rss_gemini, "select_with_jev", lambda a: picks)
+        monkeypatch.setattr(collect_rss_gemini, "enrich_with_full_text", lambda *a, **k: None)
+        monkeypatch.setattr(collect_rss_gemini, "process_with_gemini", fake_process)
+        monkeypatch.setattr(collect_rss_gemini, "NEWS_BOT_OUTPUT_DIR", str(self._tmp))
+        collect_rss_gemini.main()
+        assert seen["max"] == 15
+
+    @pytest.fixture(autouse=True)
+    def _tmpdir(self, tmp_path):
+        self._tmp = tmp_path
+
+
 class TestCollectFallback:
     def test_unexpected_error_falls_back(self, monkeypatch):
         import collect_rss_gemini

@@ -44,8 +44,10 @@ Stage 2（毎朝 21:47 UTC = 6:47 JST, daily_rss_gemini.yml）
     ├─ ガード: already_delivered_today()  … docs/{今日}.json の存在が唯一の根拠
     ├─ collect_rss_gemini.main() を内部呼び出し（66フィード並列取得 → 24hフィルタ
     │    → 配信済み除外 → jev_selector: Jev が全件を「日本の一般読者が興味深いか」で採点し
-    │      上位10件を決定（OPENROUTER_API_KEY なし・成功率80%未満・例外時はキーワード上位30件へ退避）
-    │    → 本文取得(article_extractor) → Gemini 1次: 翻訳+採点）
+    │      上位15件（JEV_POOL）を決定（OPENROUTER_API_KEY なし・成功率80%未満・例外時はキーワード上位30件へ退避）
+    │    → 本文取得(article_extractor) → Gemini 1次: 翻訳+採点（Jev の日は15件すべて翻訳））
+    │    ※ 15件渡すのは、同じ出来事の束ねで減っても10件を保つため（9/20・21・25 に 9・8 件の配信があった）
+    │    ※ 2次は「読者関心順位」を最優先・同じ出来事は1件だけ。束ねの代表と補完も jev_rank 優先
     │    ※ Jev 選定の日は、2次キュレーション後も Jev の順位（jev_rank）で並べる
     ├─ 過去3日の配信済みURL除外 → dedup.py（見出し類似度で同一出来事を束ねる）
     ├─ Gemini 2次キュレーション（10件保証・ソース偏重是正・URL候補照合 keep_known_urls）
