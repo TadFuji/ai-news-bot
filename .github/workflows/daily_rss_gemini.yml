@@ -2,8 +2,8 @@ name: "Stage 2: Morning Brief Delivery"
 
 on:
   schedule:
-    # 21:47 UTC = 06:47 JST（毎時00分は GitHub 側が混雑し、遅延・空振りが起きるため回避）
-    - cron: '47 21 * * *'
+    # 22:07 UTC = 07:07 JST（毎時00分は GitHub 側が混雑し、遅延・空振りが起きるため回避）
+    - cron: '7 22 * * *'
   workflow_dispatch:
     inputs:
       force_redeliver:

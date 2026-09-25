@@ -39,7 +39,7 @@ cd docs && python3 -m http.server 8765
 2段パイプライン。すべての実行主体は GitHub Actions（ランナーは UTC、日付キーはすべて `config.JST` 基準）。
 
 ```
-Stage 2（毎朝 21:47 UTC = 6:47 JST, daily_rss_gemini.yml）
+Stage 2（毎朝 22:07 UTC = 7:07 JST, daily_rss_gemini.yml）
   curate_morning_brief.main()
     ├─ ガード: already_delivered_today()  … docs/{今日}.json の存在が唯一の根拠
     ├─ collect_rss_gemini.main() を内部呼び出し（66フィード並列取得 → 24hフィルタ
