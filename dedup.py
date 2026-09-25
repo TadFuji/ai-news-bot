@@ -112,18 +112,15 @@ def _published_key(article: dict) -> datetime.datetime:
     return datetime.datetime.min.replace(tzinfo=datetime.timezone.utc)
 
 
-def _representative(members: list[tuple[int, dict]],
-                    rank_key: str | None = None) -> tuple[int, dict]:
+def _representative(members: list[tuple[int, dict]]) -> tuple[int, dict]:
     """クラスタ代表を選ぶ: importance_score 降順 → published 新しい順 → 出現順。
 
-    rank_key（例: "jev_rank"）を渡すと、その値が小さい記事を最優先する（値なしは最弱）。
     既存コード（collect_rss_gemini.py / ai_client.py）の「published 欠損は
     datetime.min で最弱扱い」という規約に合わせる。
     """
     return max(
         members,
         key=lambda m: (
-            -(m[1].get(rank_key) or 10**6) if rank_key else 0,
             m[1].get("importance_score", 0) or 0,
             _published_key(m[1]),
             -m[0],   # 同点なら元の出現が早い方（idx 小）を優先
@@ -131,26 +128,12 @@ def _representative(members: list[tuple[int, dict]],
     )
 
 
-def same_event(a: dict, b: dict, threshold: float = _JACCARD_MAIN) -> bool:
-    """2件の記事の見出しが同じ出来事かを dedup_articles と同じ基準で判定する。"""
-    items = []
-    for i, article in enumerate((a, b)):
-        norm = _normalize(_title_of(article))
-        tokens = _tokens(norm)
-        if len(tokens) < _MIN_TOKENS:
-            return False
-        items.append((i, article, norm, tokens, _numbers(norm)))
-    return _is_similar(items[0], items[1], threshold)
-
-
-def dedup_articles(articles: list[dict], threshold: float = _JACCARD_MAIN,
-                   rank_key: str | None = None) -> list[dict]:
+def dedup_articles(articles: list[dict], threshold: float = _JACCARD_MAIN) -> list[dict]:
     """意味的に同じ出来事の記事を束ね、各グループ代表のみ残す（greedy）。
 
     Args:
         articles: 記事 dict のリスト（title_ja / importance_score / published 等を含む）
         threshold: トークン Jaccard の主判定閾値（大きいほど束ねにくい）
-        rank_key: 代表選びで最優先する順位のキー（例: "jev_rank"。小さいほど優先）
 
     Returns:
         重複を束ねた記事リスト（元の出現順を維持）
@@ -188,7 +171,7 @@ def dedup_articles(articles: list[dict], threshold: float = _JACCARD_MAIN,
     kept: list[tuple[int, dict]] = list(passthrough)
     for cluster in clusters:
         members = [(item[0], item[1]) for item in cluster]
-        kept.append(_representative(members, rank_key))
+        kept.append(_representative(members))
     kept.sort(key=lambda m: m[0])
     result = [article for _, article in kept]
 

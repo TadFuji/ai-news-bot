@@ -1,5 +1,15 @@
 # ai-news-bot — 変更履歴
 
+## 2026-09-26
+
+### 作業者: Claude Code (Opus 5.5)
+
+### 1. 記事選定を Jev 導入前（2026-09-18 まで）の方式に戻す
+- 理由: 藤川さんの判断。Jev 導入後は一般向けの話題が中心になり、記事の質が落ちたと感じられたため
+- 内容: 28724d5・9e40e97・32fdc57・6c91db5 を取り消し。コード・workflow は 28724d5 直前と同一（HISTORY.md のみ履歴として残す）
+- GitHub Secrets の `OPENROUTER_API_KEY` は workflow から参照されなくなるだけで、残っている
+- Jev に戻すときは、このコミットを `git revert` する
+
 ## 2026-09-25
 
 ### 作業者: Claude Code (Opus 5.5)

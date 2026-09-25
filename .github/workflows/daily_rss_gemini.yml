@@ -47,8 +47,6 @@ jobs:
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
-        # 記事選定用の Jev（OpenRouter 経由、約 $0.04/日）。未設定・通信失敗なら従来のキーワード方式で配信継続
-        OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         # X 投稿用インフォグラフィックの生成（gemini-3-pro-image）。
         # 文章生成用の GOOGLE_API_KEY とは別の鍵。未設定なら画像なしで配信継続
         GEMINI_IMAGE_API_KEY: ${{ secrets.GEMINI_IMAGE_API_KEY }}
