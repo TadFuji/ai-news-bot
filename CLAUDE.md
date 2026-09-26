@@ -40,7 +40,7 @@ cd docs && python3 -m http.server 8765
 
 ```
 Stage 2（毎朝 7:07 JST, daily_rss_gemini.yml。実際の起動は VPS の cron → workflow_dispatch。
-        workflow の schedule 22:07 UTC は予備で、GitHub の遅延で数時間後に動き、配信済みガードで空振りする）
+        workflow の schedule 22:37 UTC = 7:37 JST は予備で、GitHub の遅延で数時間後に動き、配信済みガードで空振りする）
   curate_morning_brief.main()
     ├─ ガード: already_delivered_today()  … docs/{今日}.json の存在が唯一の根拠
     ├─ collect_rss_gemini.main() を内部呼び出し（66フィード並列取得 → 24hフィルタ

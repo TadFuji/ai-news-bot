@@ -2,8 +2,9 @@ name: "Stage 2: Morning Brief Delivery"
 
 on:
   schedule:
-    # 22:07 UTC = 07:07 JST（毎時00分は GitHub 側が混雑し、遅延・空振りが起きるため回避）
-    - cron: '7 22 * * *'
+    # 22:37 UTC = 07:37 JST。予備: 本来の起動は VPS の cron（07:07 JST）が workflow_dispatch で行う。
+    # VPS が失敗した日だけこちらが配信する（配信済みならガードで空振り）。毎時00分は混雑するため回避
+    - cron: '37 22 * * *'
   workflow_dispatch:
     inputs:
       force_redeliver:
