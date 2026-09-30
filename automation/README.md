@@ -1,7 +1,9 @@
 # 日次push入口と復旧（2026-10-01）
 
 対象repo: `TadFuji/ai-news-bot` / branch: `main` / workflow: `daily_rss_gemini.yml`。
-VPSの既存cronは切替確認まで維持。GitHub予備scheduleも維持。
+VPSの該当2つの起動cronは2026-10-01朝の実配信後にコメント化済み。GitHub予備scheduleは維持。
+
+親側でクラウド定時2タスクの作成とenabledを確認し、独立レビュー/no-opを通過した後に切替。次の主起動は **2026-10-02 HN06:00 / AI07:07 JST**（以後毎日）。クラウドは同日request・成果物・実行中runを照会してから一意pathを追加し、同じrunを監視する。曖昧な再送やforceは禁止。生成/配信前失敗が確実なときだけ同じrunの失敗jobを1回再実行し、毎回結果を報告する。
 
 ## 起動契約
 
@@ -46,6 +48,39 @@ AI: 当日docsの存在を従来どおり保護。非強制実行は7時前・22
 
 VPS既存crontabは `/root/trigger-cutover-backups/20261001/crontab.before`。SHA256: `82c142a6bdd0d5a51f65d0726431fc6e80184e1c3be809edf0e00554e23e6ac9`。`.env` や認証値をコピーしていない。起動スクリプトは変更しないためハッシュだけ記録: HN `a0ebd9a0c8a708ad7d48b8237bd88ba4cd0e9ca38668303448419b1005ecdf17`、AI `4186cf03f631c91ad9d4d86450b7add36bfdec2a25a3d229c1f1a259a28ec58d`。
 
-切替後の復旧は、クラウド定時2タスクを一時停止し、**他cronに後日の変更がないことを確認した場合だけ** `ssh openclaw 'crontab /root/trigger-cutover-backups/20261001/crontab.before'`。他cronに変更があれば該当2行だけ戻す。復旧行は `0 6 * * * /root/hn-trigger/run.sh` と `7 7 * * * /root/ai-news-trigger/run.sh`。この段階ではまだ無効化していない。
+切替後の復旧は、クラウド定時2タスクを一時停止し、**他cronに後日の変更がないことを確認した場合だけ** `ssh openclaw 'crontab /root/trigger-cutover-backups/20261001/crontab.before'`。他cronに変更があれば該当2行だけ戻す。復旧行は `0 6 * * * /root/hn-trigger/run.sh` と `7 7 * * * /root/ai-news-trigger/run.sh`。2026-10-01にこの2行だけ無効化した。他の11行はbyte単位で維持。
 
 コード復旧は当該実装commitを `git revert <implementation-commit>` してpush（force/resetはしない）。後日作られたrequest・docs・開始記録・記事を巻き戻さない。VPS停止中に入口をrevertすると定時起動が失われるため、先にVPSの該当行を復旧する。
+
+
+## 切替実証
+
+- 直前backup: `/root/trigger-cutover-backups/20261001/crontab.before-cutover`（0600）。SHA256 `82c142a6bdd0d5a51f65d0726431fc6e80184e1c3be809edf0e00554e23e6ac9`。
+- 切替後crontab SHA256 `3c11e5292aa77902adf7f802c92bcdfb141e00f4c664909a48e08795868dbe33`。
+- 変更は次の2行の先頭prefixのみ。
+
+```cron
+# cloud-daily-trigger disabled 2026-10-01 | 7 7 * * * /root/ai-news-trigger/run.sh
+# cloud-daily-trigger disabled 2026-10-01 | 0 6 * * * /root/hn-trigger/run.sh
+```
+
+他者が後日変更したcronを守る復旧は、クラウド2タスクを停止した上で、次の2行だけ元へ戻す（秘密値は表示しない）。
+
+```sh
+ssh openclaw 'python3 -' <<'PYRESTORE'
+import subprocess
+prefix = b'# cloud-daily-trigger disabled 2026-10-01 | '
+targets = {b'0 6 * * * /root/hn-trigger/run.sh', b'7 7 * * * /root/ai-news-trigger/run.sh'}
+before = subprocess.check_output(['crontab', '-l'])
+lines = before.splitlines(keepends=True)
+assert all(sum(line.rstrip(b'\r\n') == prefix + target for line in lines) == 1 for target in targets)
+assert not any(line.rstrip(b'\r\n') in targets for line in lines)
+after = b''.join(line[len(prefix):] if line.rstrip(b'\r\n') in {prefix + target for target in targets} else line for line in lines)
+assert subprocess.check_output(['crontab', '-l']) == before
+subprocess.run(['crontab', '-'], input=after, check=True)
+assert subprocess.check_output(['crontab', '-l']) == after
+print('Restored only the two daily trigger lines.')
+PYRESTORE
+```
+
+子CLI/親connectorのno-opは両repo成功、生成/SNS/結果commitステップ全skipped。AIは既存設定でTests/LintとPages再デプロイがpushに反応するため、CI/デプロイ消費はある。記事/SNSの新規配信はなく、実装前との差分でHN output/usage/healthとAI docs/usageが不変。次の本番日次における実生成/実SNSはこの検証では実行していない。

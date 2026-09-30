@@ -39,7 +39,7 @@ cd docs && python3 -m http.server 8765
 2段パイプライン。すべての実行主体は GitHub Actions（ランナーは UTC、日付キーはすべて `config.JST` 基準）。
 
 ```
-Stage 2（毎朝 7:07 JST, daily_rss_gemini.yml。実際の起動は VPS の cron → workflow_dispatch。
+Stage 2（毎朝 7:07 JST, daily_rss_gemini.yml。実際の起動はクラウド定時タスク → 専用JSON追加のpush（2026-10-02開始）。
         workflow の schedule 22:37 UTC = 7:37 JST は予備で、GitHub の遅延で数時間後に動き、配信済みガードで空振りする）
   curate_morning_brief.main()
     ├─ ガード: already_delivered_today()  … docs/{今日}.json の存在（配信開始記録だけ残る日は人の判断を待つ）
@@ -122,7 +122,7 @@ Stage 1（collect_candidates.yml）は自動実行停止中（手動のみ）。
 
 - 記事選定は「キーワードで絞った候補を Gemini が採点して 10 件選ぶ」方式。2026-09-19〜25 は Jev（OpenRouter 経由、「日本の一般読者が興味を持つか」で採点）で選んでいたが、一般向けの話題（法案・人事・一般向けサービス）が増え、藤川さんが質の低下と判断したため `dd046d8` で取り消した。経緯は `HISTORY.md` の 2026-09-19・09-25・09-26
 - 選定の基準や読者層の想定を変える案は、先に「業界ニュース中心か一般向けか」を藤川さんと合わせてから出す
-- 実行時刻は 7:07 JST（藤川さんの指定）。**実際に起動しているのは契約済み VPS の cron**（2026-08-30 導入。GitHub の schedule は平均44分遅れ・起動しない日もあったため）で、`workflow_dispatch` を API で呼ぶ。workflow の `schedule` は予備にすぎない。2026-09-26 に schedule だけ変えて「時刻を変えた」と誤報したことがある
+- 実行時刻は 7:07 JST（藤川さんの指定）。**2026-10-02からクラウド定時タスクが専用JSONをmainへ追加して起動する**。2026-10-01までの本命だったVPS cron（2026-08-30導入）は該当行のみコメント化済み。workflow の `schedule` は予備にすぎない。2026-09-26 に schedule だけ変えて「時刻を変えた」と誤報したことがある
 - 時刻を変えるときは、①VPS の crontab（`/root/ai-news-trigger/run.sh` の行。変更前に crontab を保存）、②workflow の cron（予備）、③README・README_EN・`docs/ARCHITECTURE.md`・この文書・`curate_morning_brief.py` のログ表示、をそろえる。VPS には別サービスの cron 行も載っているので、その行には触れない
 - 朝刊が届かない日の確認先は VPS の `/root/ai-news-trigger/cron.log`（接続先は作業日誌 2026-08-30「朝刊配信をGitHub Actionsの遅延から救う」）
 
@@ -133,9 +133,9 @@ Stage 1（collect_candidates.yml）は自動実行停止中（手動のみ）。
 - 全体監査の記録（2026-08-31 実施・修正反映済み）は作業日誌と `HISTORY.md` を参照。
 
 
-## Contents push 入口（2026-10-01 実装・VPS切替前）
+## Contents push 入口（2026-10-01 実装・切替済み）
 
-HN 06:00 / AIニュース07:07 JST の起動係をクラウド定時タスクへ移すため、mainへの専用JSON新規追加を日次workflowの入口にした。現時点のVPS cronは維持。予備scheduleも残す。
+HN 06:00 / AIニュース07:07 JST の起動係をクラウド定時タスクへ移すため、mainへの専用JSON新規追加を日次workflowの入口にした。VPSのHN/AI起動2行だけ可逆的にコメント化済み。他cronと予備scheduleは維持。次回は2026-10-02 HN06:00 / AI07:07 JSTをクラウドが担当。
 
 - 契約・完了確認・復旧は `automation/README.md`。通常コードpushでは配信しない。
 - push / schedule / 非強制dispatchは同じconcurrencyとガードを通る。当日docsがあれば空振り。開始記録だけ残る日は赤で停止し、全件rerunや自動forceをしない。
