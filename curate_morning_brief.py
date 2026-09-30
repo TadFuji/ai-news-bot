@@ -456,6 +456,13 @@ def main():
         print("   やり直す場合は手動実行で「今日の分をやり直す」を選んでください。")
         return
 
+    # A durable pre-send record survives a runner crash or final commit failure.
+    # An ambiguous previous attempt must never be retried automatically.
+    from automation.delivery_guard import started_today, persist_before_send
+    if (os.environ.get("DELIVERY_GUARD") == "1" and started_today()
+            and os.environ.get("FORCE_REDELIVER") != "1"):
+        raise RuntimeError("Previous delivery may have sent; review its run before retrying")
+
     # 1. Stage 1 候補を読み込み
     print("\n📡 Stage 1 候補を読み込み中...")
     candidates_stage1 = load_candidates()
@@ -516,6 +523,10 @@ def main():
     # 5. 保存
     print("\n💾 Morning Brief を保存中...")
     save_morning_brief(brief)
+
+    # Persist BEFORE entering the exception handler: if git push fails, abort
+    # without calling distribute_daily or any SNS notification fallback.
+    persist_before_send()
 
     # 6. 配信（失敗してもサイト更新は継続）
     print("\n📤 配信開始...")

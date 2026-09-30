@@ -5,6 +5,11 @@ on:
     # 22:37 UTC = 07:37 JST。予備: 本来の起動は VPS の cron（07:07 JST）が workflow_dispatch で行う。
     # VPS が失敗した日だけこちらが配信する（配信済みならガードで空振り）。毎時00分は混雑するため回避
     - cron: '37 22 * * *'
+  push:
+    branches: [main]
+    paths:
+      - "automation/requests/*.json"
+      - "automation/tests/*.json"
   workflow_dispatch:
     inputs:
       force_redeliver:
@@ -22,6 +27,7 @@ concurrency:
 
 jobs:
   morning-brief:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     # 既定は 6 時間。どこかで応答待ちのまま固まっても、その日のうちに終わらせる
     timeout-minutes: 60
@@ -34,17 +40,27 @@ jobs:
         # 常に main の先頭を取ることで、直前の実行が残した配信記録
         # (docs/YYYY-MM-DD.json) を二重配信ガードが確実に見られるようにする
         ref: main
+        fetch-depth: 2
+
+    - name: Validate request and guard today's delivery
+      id: guard
+      env:
+        DAILY_PROJECT: ai
+      run: python3 automation/daily_gate.py
 
     - name: Set up Python
+      if: steps.guard.outputs.run == 'true'
       uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
       with:
         python-version: '3.11'
         cache: 'pip'
 
     - name: Install dependencies
+      if: steps.guard.outputs.run == 'true'
       run: pip install -r requirements-ci.txt
 
     - name: "Run Stage 2: Curate + Distribute"
+      if: steps.guard.outputs.run == 'true'
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
@@ -59,19 +75,21 @@ jobs:
         X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
         X_THREAD_MODE: ${{ vars.X_THREAD_MODE }}
         # 同日二重配信の防止。手動実行で「今日の分をやり直す」を選んだときだけ 1
-        FORCE_REDELIVER: ${{ inputs.force_redeliver && '1' || '0' }}
+        FORCE_REDELIVER: ${{ github.event_name == 'workflow_dispatch' && inputs.force_redeliver && '1' || '0' }}
+        DELIVERY_GUARD: '1'
+        REQUEST_DATE: ${{ steps.guard.outputs.date }}
       run: |
         python curate_morning_brief.py
 
-    # 配信は前ステップで完了済みのため、以降は失敗時も必ず実行する（if: always()）。
+    # 配信は前ステップで完了済みのため、以降は失敗時も必ず実行する（if: always() && steps.guard.outputs.run == 'true'）。
     # ここをスキップすると配信記録 (docs/YYYY-MM-DD.json) が残らず、
     # 再実行時に二重配信ガードが素通りして同じ朝刊が2回届く
     - name: Sync with origin/main before commit
-      if: always()
+      if: always() && steps.guard.outputs.run == 'true'
       run: git pull --rebase --autostash origin main
 
     - name: Commit and Push changes
-      if: always()
+      if: always() && steps.guard.outputs.run == 'true'
       uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
       with:
         commit_message: "Morning Brief delivered [skip ci]"

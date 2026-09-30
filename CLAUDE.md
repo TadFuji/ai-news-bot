@@ -42,7 +42,7 @@ cd docs && python3 -m http.server 8765
 Stage 2（毎朝 7:07 JST, daily_rss_gemini.yml。実際の起動は VPS の cron → workflow_dispatch。
         workflow の schedule 22:37 UTC = 7:37 JST は予備で、GitHub の遅延で数時間後に動き、配信済みガードで空振りする）
   curate_morning_brief.main()
-    ├─ ガード: already_delivered_today()  … docs/{今日}.json の存在が唯一の根拠
+    ├─ ガード: already_delivered_today()  … docs/{今日}.json の存在（配信開始記録だけ残る日は人の判断を待つ）
     ├─ collect_rss_gemini.main() を内部呼び出し（66フィード並列取得 → 24hフィルタ
     │    → キーワードスコア → 本文取得(article_extractor) → Gemini 1次: 翻訳+採点）
     ├─ 過去3日の配信済みURL除外 → dedup.py（見出し類似度で同一出来事を束ねる）
@@ -52,6 +52,7 @@ Stage 2（毎朝 7:07 JST, daily_rss_gemini.yml。実際の起動は VPS の cro
     │    X: 長文投稿 or スレッド(X_THREAD_MODE) + gemini-3-pro-image のカード画像
     └─ build_pages.build_pages() → docs/{今日}.json, latest.json, archive.json,
          OGP画像, index.html プリレンダ, sitemap, feed.xml
+  → SNS直前に automation/delivery-state/{今日}.json を main に push。push失敗は送信前に停止
   → workflow 末尾の commit ステップ（if: always()）が docs/ を main へ push
 
 週次（日曜 0:47 UTC = 9:47 JST, weekly_column.yml）
@@ -130,3 +131,13 @@ Stage 1（collect_candidates.yml）は自動実行停止中（手動のみ）。
 - 本番への影響が出る操作（workflow 変更、`docs/` の公開データ変更、配信ロジック変更）は、3ファイル以下でも事前に計画と影響範囲を提示し、承認を得てから着手する。
 - コミットメッセージは英語・Conventional Commits 風（`feat:` / `fix:` / `test:` / `ci:` / `chore:`）。自動コミットは `[skip ci]` 付き。
 - 全体監査の記録（2026-08-31 実施・修正反映済み）は作業日誌と `HISTORY.md` を参照。
+
+
+## Contents push 入口（2026-10-01 実装・VPS切替前）
+
+HN 06:00 / AIニュース07:07 JST の起動係をクラウド定時タスクへ移すため、mainへの専用JSON新規追加を日次workflowの入口にした。現時点のVPS cronは維持。予備scheduleも残す。
+
+- 契約・完了確認・復旧は `automation/README.md`。通常コードpushでは配信しない。
+- push / schedule / 非強制dispatchは同じconcurrencyとガードを通る。当日docsがあれば空振り。開始記録だけ残る日は赤で停止し、全件rerunや自動forceをしない。
+- 明示的な手動 `force_redeliver` は従来どおり利用可。ただし配信済みLINE/Xまで送り直し得るため、開始記録に記載されたrunのSNS結果を先に確認する。
+- no-opは依存導入・生成・SNS送信・結果コミットを全て省く。正常系は既存の `curate_morning_brief` → 配信 → Pages → always保存を維持する。
