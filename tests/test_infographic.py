@@ -18,10 +18,22 @@ def test_prompt_carries_all_ten_ranks():
     prompt = build_prompt(articles, theme="本日のテーマ", date_str="2026年08月10日")
 
     for i in range(1, 11):
-        assert f"{i}位\n見出し: 見出し{i}" in prompt
+        assert f"{i}位\n見出し「見出し{i}」" in prompt
         assert f"要約{i}" in prompt
     assert "本日のテーマ" in prompt
     assert "2026年08月10日" in prompt
+
+
+def test_prompt_keeps_labels_and_category_out_of_the_drawn_text():
+    """「見出し: …（分野）」の形で渡すと、画像に「見出し:」や分野名まで描き写される
+    （2026-10-07、Pro・2.1 の両方で確認）。描かせる文字は鍵括弧の中だけにする。"""
+    prompt = build_prompt(
+        [{"one_liner": "見出しA", "summary_ja": "要約A", "category": "リスク・規制"}]
+    )
+
+    assert "見出し「見出しA」" in prompt
+    assert "見出し: " not in prompt
+    assert "リスク・規制" not in prompt
 
 
 def test_prompt_states_the_actual_article_count():
