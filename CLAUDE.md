@@ -49,7 +49,7 @@ Stage 2（毎朝 7:07 JST, daily_rss_gemini.yml。実際の起動はクラウド
     ├─ Gemini 2次キュレーション（10件保証・ソース偏重是正・URL候補照合 keep_known_urls）
     ├─ distribute_daily.main() → {"line": bool, "x": bool} を返す
     │    LINE: テキストTop3（5,000字切り詰め）
-    │    X: 長文投稿 or スレッド(X_THREAD_MODE) + gemini-3-pro-image のカード画像
+    │    X: 長文投稿 or スレッド(X_THREAD_MODE) + gemini-nano-banana-2.1 のカード画像
     └─ build_pages.build_pages() → docs/{今日}.json, latest.json, archive.json,
          OGP画像, index.html プリレンダ, sitemap, feed.xml
   → SNS直前に automation/delivery-state/{今日}.json を main に push。push失敗は送信前に停止

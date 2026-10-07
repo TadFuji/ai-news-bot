@@ -71,6 +71,7 @@ PRICES: dict[str, tuple[float, float]] = {
 
 # 1 枚あたりの USD。解像度で変わるものは 1K/2K の値を既定にする。
 IMAGE_PRICES: dict[str, float] = {
+    "gemini-nano-banana-2.1": 0.0504,     # 2K（3 系統とも 2K で生成）。1K=0.0336 / 4K=0.0756
     "gemini-3-pro-image": 0.134,          # 1K/2K。4K は 0.24
     "gemini-3.1-flash-image": 0.067,      # 1K。0.5K=0.045 / 2K=0.101 / 4K=0.151
     "gemini-3.1-flash-lite-image": 0.0336,

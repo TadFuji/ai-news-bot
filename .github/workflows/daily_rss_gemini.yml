@@ -64,7 +64,7 @@ jobs:
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
-        # X 投稿用インフォグラフィックの生成（gemini-3-pro-image）。
+        # X 投稿用インフォグラフィックの生成（gemini-nano-banana-2.1）。
         # 文章生成用の GOOGLE_API_KEY とは別の鍵。未設定なら画像なしで配信継続
         GEMINI_IMAGE_API_KEY: ${{ secrets.GEMINI_IMAGE_API_KEY }}
         LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}

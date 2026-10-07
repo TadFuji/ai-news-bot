@@ -1,4 +1,4 @@
-"""X 投稿用のインフォグラフィック画像を Gemini gemini-3-pro-image で生成する。
+"""X 投稿用のインフォグラフィック画像を Gemini gemini-nano-banana-2.1 で生成する。
 
 トップ10記事の中身をそのまま画像生成モデルへ渡し、1枚で全体像がつかめる
 日本語のインフォグラフィックを描かせる（x-morning-brief のバナー生成と同じ手法・同じ画風）。
@@ -13,7 +13,7 @@ from datetime import datetime
 from config import JST
 from usage_meter import meter  # Gemini の使用量記録（2026-09-10 追加）
 
-MODEL = os.environ.get("GEMINI_IMAGE_MODEL", "gemini-3-pro-image")
+MODEL = os.environ.get("GEMINI_IMAGE_MODEL", "gemini-nano-banana-2.1")
 # 文章生成用の GOOGLE_API_KEY とは別にする（画像の費用を分けて追えるようにするため。
 # また、この鍵だけ外せば文章生成を止めずに画像生成だけ止められる）
 API_KEY_ENV = "GEMINI_IMAGE_API_KEY"
@@ -111,7 +111,7 @@ def _no_image_reason(resp):
 
 
 def _generate_image(prompt):
-    """gemini-3-pro-image を呼んで PNG バイト列を返す（失敗時 None）。"""
+    """gemini-nano-banana-2.1 を呼んで PNG バイト列を返す（失敗時 None）。"""
     from google import genai
     from google.genai import types
 
