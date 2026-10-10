@@ -1,5 +1,18 @@
 # ai-news-bot — 変更履歴
 
+## 2026-10-10
+
+### 朝刊のnative crashを送信前の収集プロセスへ隔離（再発低減）
+- 07:07主起動のStage 2が `double free or corruption (out)` / exit 134で停止。予備の07:37 cronは10:53にrun登録、10:56に復旧。失敗・成功のcommit、runner image、Python、導入依存バージョンは同一だった。具体的なnativeライブラリ・破壊箇所は未特定（従来ログがバッファされ、スタックなし）。
+- 収集だけを独立Pythonへ分離し、最大2回・各600秒まで。native abort、非ゼロ終了、timeoutを親が検出する。SNS/朝刊全体は再試行しない。全失敗でも既存候補があれば従来の選定を続行し、候補0件なら成功扱いせずexit 1。
+- 各試行の前後にJST日付と配信記録を確認。専用request path、同日ガード、concurrency、送信直前の永続記録、always保存は維持。収集子へLINE/X用環境変数を渡さず、dotenvによる復活も無効化。timeout時は子のprocess groupを停止・回収。候補JSONは一時ファイルからatomic replaceし、失敗時に既存候補を壊さない。使用量は収集子と朝刊親がそれぞれ記録する（native abort/強制終了までの未flush分は記録できない）。
+- `-u -X faulthandler` で実行位置を即時記録。core dumpは秘密を含み得るため無効化し、保存・アップロードしない。新規ログは試行番号、終了状態、経過時間のみ。
+- 制約: 同じ障害が両試行で起きる場合、親のキュレーション/配信側でnative crashが起きる場合、GitHub側のschedule遅延は残る。「二度と起きない」保証ではない。収集の再試行によりGemini生成費用が追加される可能性がある。収集は合計約20分の予算とし、Gemini自身の600秒timeoutと内部retryを待ち切る前に子を停止する場合がある（無期限に待たず失敗を明示するtradeoff）。
+- 検証: 外部通信なしのmock/子processテストでSIGABRT、timeout、非ゼロ終了、上限回数、日付跨ぎ、既配信記録、候補なし、送信前記録失敗を検証。本番生成・SNS再配信は検証しない。
+- 復旧: この変更のcommitだけをrevertし、後日のrequest・docs・delivery-stateを巻き戻さない。
+
+根拠: [失敗run](https://github.com/TadFuji/ai-news-bot/actions/runs/37997461984)、[復旧run](https://github.com/TadFuji/ai-news-bot/actions/runs/38014886536)、[GitHub schedule遅延の仕様](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)。
+
 ## 2026-09-26
 
 ### 作業者: Claude Code (Opus 5.5)
@@ -99,3 +112,4 @@
 10. メール配信チャネル追加（Resend / SendGrid）
 11. RSS 死活監視
 12. ユニットテスト追加
+

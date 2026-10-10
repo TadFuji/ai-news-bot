@@ -3,6 +3,7 @@ import re
 import json
 import time
 import datetime
+import tempfile
 from rss_client import collect_from_rss_feeds
 from ai_client import process_with_gemini
 from article_extractor import enrich_with_full_text
@@ -16,6 +17,24 @@ _KEYWORD_PATTERN = re.compile(
     "|".join(re.escape(kw) for kw in AI_KEYWORDS),
     re.IGNORECASE,
 )
+
+
+def save_candidates_atomic(filepath, output_data):
+    """Never truncate a valid same-minute candidate file during a retry."""
+    temp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8",
+                                         dir=os.path.dirname(filepath),
+                                         prefix=".candidates-", suffix=".tmp",
+                                         delete=False) as temp:
+            temp_path = temp.name
+            json.dump(output_data, temp, indent=2, ensure_ascii=False)
+            temp.flush()
+            os.fsync(temp.fileno())
+        os.replace(temp_path, filepath)
+    finally:
+        if temp_path and os.path.exists(temp_path):
+            os.unlink(temp_path)
 
 
 def filter_by_time(articles, hours=24):
@@ -84,8 +103,7 @@ def main():
     os.makedirs(NEWS_BOT_OUTPUT_DIR, exist_ok=True)
 
     output_data = {"articles": processed}
-    with open(filepath, 'w', encoding='utf-8') as f:
-        json.dump(output_data, f, indent=2, ensure_ascii=False)
+    save_candidates_atomic(filepath, output_data)
 
     print(f"✅ Saved Top 10 to: {filepath}")
 
@@ -118,4 +136,12 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    finally:
+        # Collection now has its own process: preserve its Gemini usage instead
+        # of relying on the curator's in-memory meter. Native aborts cannot flush.
+        from usage_meter import meter
+        print(meter.summary_line(), flush=True)
+        meter.flush(log_dir=os.path.join(os.path.dirname(os.path.abspath(__file__)), "usage"))
+

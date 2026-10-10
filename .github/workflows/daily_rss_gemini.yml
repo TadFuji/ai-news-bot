@@ -79,7 +79,10 @@ jobs:
         DELIVERY_GUARD: '1'
         REQUEST_DATE: ${{ steps.guard.outputs.date }}
       run: |
-        python curate_morning_brief.py
+        # Preserve the last Python stage and traceback on native failures.
+        # Core dumps may contain credentials; never save or upload them.
+        ulimit -c 0
+        python -u -X faulthandler curate_morning_brief.py
 
     # 配信は前ステップで完了済みのため、以降は失敗時も必ず実行する（if: always() && steps.guard.outputs.run == 'true'）。
     # ここをスキップすると配信記録 (docs/YYYY-MM-DD.json) が残らず、
@@ -94,3 +97,4 @@ jobs:
       with:
         commit_message: "Morning Brief delivered [skip ci]"
         branch: main
+

@@ -43,7 +43,8 @@ Stage 2（毎朝 7:07 JST, daily_rss_gemini.yml。実際の起動はクラウド
         workflow の schedule 22:37 UTC = 7:37 JST は予備で、GitHub の遅延で数時間後に動き、配信済みガードで空振りする）
   curate_morning_brief.main()
     ├─ ガード: already_delivered_today()  … docs/{今日}.json の存在（配信開始記録だけ残る日は人の判断を待つ）
-    ├─ collect_rss_gemini.main() を内部呼び出し（66フィード並列取得 → 24hフィルタ
+    ├─ automation.collection_runner が収集子プロセスを起動（最大2回・各600秒、SNSは再試行しない）
+    │    collect_rss_gemini.py（66フィード並列取得 → 24hフィルタ
     │    → キーワードスコア → 本文取得(article_extractor) → Gemini 1次: 翻訳+採点）
     ├─ 過去3日の配信済みURL除外 → dedup.py（見出し類似度で同一出来事を束ねる）
     ├─ Gemini 2次キュレーション（10件保証・ソース偏重是正・URL候補照合 keep_known_urls）
@@ -105,6 +106,7 @@ Stage 1（collect_candidates.yml）は自動実行停止中（手動のみ）。
   `USAGE_JPY_PER_USD`（既定 157）。
 - 計測は**本番を止めない**。内部の例外はすべて握り潰し、理由を JSONL の `meter_errors` に残すだけ。
 - 書き出しは `curate_morning_brief.py` / `generate_weekly_column.py` の `finally` で行う。
+  2026-10-10以降、分離された `collect_rss_gemini.py` も自身の `finally` で記録する。
   品質低下時の `sys.exit(1)` でも記録が残るようにするため。`usage/` は workflow の
   `git-auto-commit-action` がそのままコミットする（`file_pattern` 指定が無いため）。
 
@@ -141,3 +143,4 @@ HN 06:00 / AIニュース07:07 JST の起動係をクラウド定時タスクへ
 - push / schedule / 非強制dispatchは同じconcurrencyとガードを通る。当日docsがあれば空振り。開始記録だけ残る日は赤で停止し、全件rerunや自動forceをしない。
 - 明示的な手動 `force_redeliver` は従来どおり利用可。ただし配信済みLINE/Xまで送り直し得るため、開始記録に記載されたrunのSNS結果を先に確認する。
 - no-opは依存導入・生成・SNS送信・結果コミットを全て省く。正常系は既存の `curate_morning_brief` → 配信 → Pages → always保存を維持する。
+
