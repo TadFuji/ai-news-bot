@@ -1,5 +1,7 @@
 # 日次push入口と復旧（2026-10-01）
 
+他のLLM・保守担当への引継ぎ: [RECOVERY_HANDOFF.md](RECOVERY_HANDOFF.md)（適用済みSHA、調査証拠、テスト、安全契約、制約、ロールバック）。
+
 ## 2026-10-10: 収集異常からの回復
 
 主run内の収集は独立Pythonで最大2試行、各600秒。native abort・非ゼロ終了・timeoutは収集だけをやり直し、朝刊全体/SNSはやり直さない。各試行の前後にJST日付と当日のdocs/開始記録を確認する。候補が残っていれば既存の選定へ進み、候補0件はexit 1。候補JSONはatomic replace。timeoutは子孫を含むprocess groupを停止する。追加生成費用が発生する可能性があり、収集予算（計約20分）によりGemini内部のtimeout/retryより先に停止する場合がある。

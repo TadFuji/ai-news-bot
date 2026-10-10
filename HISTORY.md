@@ -2,6 +2,8 @@
 
 ## 2026-10-10
 
+- PR #17をユーザー承認後にmainへ適用（merge: `c165546b00b71bbb9821e7b8d2e5807fde2401f0`）。他のLLM・保守担当が読める引継ぎを [automation/RECOVERY_HANDOFF.md](automation/RECOVERY_HANDOFF.md) に集約。今回の文書追補は実装コード・本日の配信データを変更しない。
+
 ### 朝刊のnative crashを送信前の収集プロセスへ隔離（再発低減）
 - 07:07主起動のStage 2が `double free or corruption (out)` / exit 134で停止。予備の07:37 cronは10:53にrun登録、10:56に復旧。失敗・成功のcommit、runner image、Python、導入依存バージョンは同一だった。具体的なnativeライブラリ・破壊箇所は未特定（従来ログがバッファされ、スタックなし）。
 - 収集だけを独立Pythonへ分離し、最大2回・各600秒まで。native abort、非ゼロ終了、timeoutを親が検出する。SNS/朝刊全体は再試行しない。全失敗でも既存候補があれば従来の選定を続行し、候補0件なら成功扱いせずexit 1。

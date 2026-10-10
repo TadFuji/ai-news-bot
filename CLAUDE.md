@@ -5,7 +5,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 このファイルは `ai-news-bot` ディレクトリ **のみ** で適用される追加ルールです。
 グローバル `CLAUDE.md`（`~/.claude/CLAUDE.md`）を置き換えず、その上に上乗せします。
 グローバル規範と矛盾する場合は、より安全側（バックアップ・承認を要求する側）を採用します。
-最終更新: 2026-09-26。
+最終更新: 2026-10-10。
+
+2026-10-10の朝刊遅延と適用済み再発低減策を引き継ぐときは、[automation/RECOVERY_HANDOFF.md](automation/RECOVERY_HANDOFF.md) を最初に読む。原因の確証/不明点、適用SHA、テスト、安全契約、制約、ロールバックを集約している。
 
 ---
 
