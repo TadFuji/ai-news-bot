@@ -20,6 +20,7 @@ from config import NEWS_BOT_OUTPUT_DIR, JST, GEMINI_MODEL, STAGE1_MAX_ARTICLES
 from ai_client import GENAI_TIMEOUT_MS, writing_rules
 from usage_meter import meter  # Gemini の使用量記録（2026-09-10 追加）
 from dedup import dedup_articles
+from automation.collection_runner import collect_in_subprocess
 
 load_dotenv()
 
@@ -470,11 +471,9 @@ def main():
 
     # 2. 新鮮なRSS収集（03:00〜07:07 JST のギャップを埋める）
     print("\n📡 最新RSS収集中（03:00以降の新着をキャッチ）...")
-    try:
-        import collect_rss_gemini
-        collect_rss_gemini.main()
-    except Exception as e:
-        print(f"  ⚠️ 追加RSS収集失敗（Stage 1 候補で続行）: {e}")
+    # Native failures in RSS/HTML libraries must not kill the delivery parent.
+    # Only this pre-send collector can retry; guard violations propagate.
+    collect_in_subprocess()
 
     # 3. Stage 1 + 新規を統合して再読み込み
     print("\n📡 全候補を統合中...")
@@ -482,7 +481,7 @@ def main():
 
     if not candidates:
         print("❌ 候補が見つかりません。終了します。")
-        return
+        sys.exit(1)
 
     new_count = len(candidates) - stage1_count
     print(f"   Stage 1 からの候補: {stage1_count} 件")
@@ -613,3 +612,4 @@ if __name__ == "__main__":
         # usage/ は workflow の git-auto-commit-action がそのままコミットする。
         print(meter.summary_line())
         meter.flush(log_dir=os.path.join(os.path.dirname(os.path.abspath(__file__)), "usage"))
+

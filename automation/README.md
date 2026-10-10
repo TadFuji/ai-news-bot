@@ -1,5 +1,11 @@
 # 日次push入口と復旧（2026-10-01）
 
+## 2026-10-10: 収集異常からの回復
+
+主run内の収集は独立Pythonで最大2試行、各600秒。native abort・非ゼロ終了・timeoutは収集だけをやり直し、朝刊全体/SNSはやり直さない。各試行の前後にJST日付と当日のdocs/開始記録を確認する。候補が残っていれば既存の選定へ進み、候補0件はexit 1。候補JSONはatomic replace。timeoutは子孫を含むprocess groupを停止する。追加生成費用が発生する可能性があり、収集予算（計約20分）によりGemini内部のtimeout/retryより先に停止する場合がある。
+
+`-u -X faulthandler` により次の失敗時は最後の処理とPythonスタックを確認できる。core dumpは秘密を含み得るため保存しない。収集子の使用量は自身がflushし、強制終了までの未flush分は欠ける可能性がある。GitHubの予備scheduleには依然として遅延/欠落があり、時刻保証ではない。根因の判明度・復旧方法は `HISTORY.md` の2026-10-10項を参照。
+
 対象repo: `TadFuji/ai-news-bot` / branch: `main` / workflow: `daily_rss_gemini.yml`。
 VPSの該当2つの起動cronは2026-10-01朝の実配信後にコメント化済み。GitHub予備scheduleは維持。
 
@@ -84,3 +90,4 @@ PYRESTORE
 ```
 
 子CLI/親connectorのno-opは両repo成功、生成/SNS/結果commitステップ全skipped。AIは既存設定でTests/LintとPages再デプロイがpushに反応するため、CI/デプロイ消費はある。記事/SNSの新規配信はなく、実装前との差分でHN output/usage/healthとAI docs/usageが不変。次の本番日次における実生成/実SNSはこの検証では実行していない。
+
