@@ -2,6 +2,8 @@
 
 This document describes the technical design and data flow of the AI News Bot — a serverless pipeline that turns the daily flood of global AI news into a curated Japanese morning brief, running entirely on GitHub Actions.
 
+Current operations (2026-10-07): OpenAI dot starts and monitors the daily run at 07:07 JST by adding the dedicated request JSON to main; GitHub Actions performs processing. The 07:37 JST schedule is a fallback and standalone Stage 1 is manual only. Read the [operations guide](../automation/README.md) and [handoff](../handoff.md) before making changes; follow [AGENTS.md](../AGENTS.md) to keep those records current.
+
 ## 🏗 Design Principles
 
 - **Separation of Concerns** — each stage (discovery, extraction, scoring, generation, distribution) is an independently testable module.
@@ -53,7 +55,7 @@ sequenceDiagram
     participant DB as docs/ (JSON data lake)
     participant SNS as LINE / X / Web
 
-    Note over GH: Stage 1 — 03:00 JST (collect_candidates.yml)
+    Note over GH: Standalone Stage 1 — manual only (collect_candidates.yml)
     GH->>RSS: Parallel fetch (ThreadPoolExecutor)
     GH->>GH: Time filter + keyword scoring (top 50)
     GH->>TR: Extract article bodies
@@ -63,8 +65,10 @@ sequenceDiagram
     Note over GH: Stage 2 — 07:07 JST (daily_rss_gemini.yml)
     GH->>GH: Merge + 3-day dedup + Jaccard dedup
     GH->>GM: 2nd pass — editorial Top 10
-    GH->>DB: day JSON + OGP image + sitemap.xml + feed.xml
-    GH->>SNS: Distribute (LINE Carousel, X thread + image, Pages)
+    GH->>GH: Push pre-send record to main (delivery-state)
+    GH->>SNS: Distribute (LINE / X)
+    GH->>DB: Generate day JSON + OGP image + sitemap.xml + feed.xml
+    GH->>GH: Always save to main; Pages publishes the saved data
 ```
 
 ## 🛡️ Operational Reliability

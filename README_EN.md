@@ -1,5 +1,7 @@
 > 🇯🇵 [日本語版 README はこちら](README.md)
 
+Before operating or changing this repository, read [handoff.md](handoff.md) and the [daily trigger, monitoring, and recovery guide](automation/README.md). OpenAI dot starts the daily workflow at 07:07 JST; GitHub Actions performs the processing. Follow [AGENTS.md](AGENTS.md) and update the handoff after every change.
+
 <p align="center">
   <h1 align="center">🤖 AI News Bot</h1>
   <p align="center">
@@ -37,11 +39,11 @@ AI News Bot is a **serverless, multi-stage news curation pipeline** that transfo
 
 | Stage | Time (JST) | Process | Output |
 |-------|-----------|---------|--------|
-| **Discovery** | 03:00 | Crawl 66 RSS feeds, keyword scoring | ~100 raw candidates |
-| **1st Pass** | 03:00 | Gemini analysis: translate, score, classify | Top 50 scored articles |
+| **Discovery** | Within 07:07 Stage 2 | Crawl 66 RSS feeds and score candidates (standalone 03:00 Stage 1 is manual only) | Raw candidates |
+| **1st Pass** | Within 07:07 Stage 2 | Gemini analysis: translate, score, classify | Scored candidates |
 | **2nd Pass** | 07:07 | Editorial curation: theme, commentary, dedup | Final Top 10 brief |
 | **Delivery** | 07:07 | Multi-channel distribution | Web, LINE, X (Twitter) |
-| **Weekly** | Sun 09:00 | AI-written essay-style column | Column + LINE push |
+| **Weekly** | Sun 09:47 schedule (may be delayed) | AI-written essay-style column | Column + LINE push |
 
 ### Delivery Channels
 
@@ -59,7 +61,7 @@ graph TD
         RSS["66 RSS Feeds<br/>(ArXiv, HN, TechCrunch, NHK, China media, Workspace, etc.)"]
     end
 
-    subgraph "Stage 1 — 03:00 JST"
+    subgraph "Stage 1 — standalone run is manual only"
         COLLECT["collect_rss_gemini.py<br/>RSS Collection + Time Filter"]
         SCORE["Keyword Scoring<br/>(AI_KEYWORDS from config.py)"]
         GEMINI1["ai_client.py<br/>Gemini 1st Pass: Translate + Classify"]
@@ -218,7 +220,7 @@ streamlit run app.py
 1. Fork this repository
 2. Set `GOOGLE_API_KEY` in **Settings → Secrets → Actions**
 3. (Optional) Add LINE / X credentials for multi-channel delivery
-4. The pipeline runs automatically at 03:00 and 07:07 JST daily
+4. In this deployment, dot's scheduled task adds the daily request JSON to main at 07:07 JST. The fallback schedule is 07:37 JST; standalone Stage 1 is manual only. Forking does not create dot's scheduled task. Read the [trigger contract](automation/README.md).
 
 ---
 

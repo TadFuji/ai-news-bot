@@ -1,5 +1,7 @@
 > 🇺🇸 [English README](README_EN.md)
 
+運用・改修の前に [handoff.md](handoff.md) と [日次起動・監視・復旧](automation/README.md) を読む。主起動はOpenAI dotの07:07 JST定時タスク、実処理はGitHub Actions。変更担当者は [AGENTS.md](AGENTS.md) に従い毎回引き継ぎを更新する。
+
 <p align="center">
   <h1 align="center">🤖 AI News Bot</h1>
   <p align="center">
@@ -39,11 +41,11 @@
 
 | ステージ | 時刻 (JST) | 処理内容 | 出力 |
 |---------|-----------|---------|------|
-| **収集** | 03:00 | 66の RSSフィードをクロール、キーワードスコアリング | 約100件の候補記事 |
-| **1次分析** | 03:00 | Gemini で翻訳・分類・スコアリング・So What分析 | 上位50件 スコアリング済み |
+| **収集** | 07:07のStage 2内 | 66の RSSフィードをクロール、キーワードスコアリング（独立Stage 1の03:00自動起動は停止、手動のみ） | 候補記事 |
+| **1次分析** | 07:07のStage 2内 | Gemini で翻訳・分類・スコアリング・So What分析 | スコアリング済み候補 |
 | **2次キュレーション** | 07:07 | Gemini 編集キュレーション（テーマ・コメント・重複排除） | **朝刊 Top 10** |
 | **配信** | 07:07 | マルチチャネル同時配信 | Web / LINE / X |
-| **週刊コラム** | 日曜 09:00 | AIが執筆するエッセイ形式のコラム | コラム + LINE配信 |
+| **週刊コラム** | 日曜 09:47（schedule、遅延あり） | AIが執筆するエッセイ形式のコラム | コラム + LINE配信 |
 
 ### 配信チャネル
 
@@ -73,7 +75,7 @@ graph TD
         RSS["66 RSS Feeds<br/>(ArXiv, HN, TechCrunch, NHK, 中国メディア, Workspace 等)"]
     end
 
-    subgraph "Stage 1 — 03:00 JST"
+    subgraph "Stage 1 — 独立起動は手動のみ"
         COLLECT["collect_rss_gemini.py<br/>RSS収集 + 時間フィルタ"]
         SCORE["キーワードスコアリング<br/>(config.py の AI_KEYWORDS)"]
         GEMINI1["ai_client.py<br/>Gemini 1次分析: 翻訳 + 分類"]
@@ -236,7 +238,7 @@ streamlit run app.py
 1. このリポジトリを Fork
 2. **Settings → Secrets → Actions** で `GOOGLE_API_KEY` を設定
 3. （任意）LINE / X のクレデンシャルを追加
-4. 毎日 03:00 と 07:07 JST に自動実行されます
+4. この運用ではdotの定時タスクが毎日07:07 JSTに専用JSONをmainへ追加し、Stage 2を起動します。予備scheduleは07:37 JST、独立Stage 1は手動のみ。Forkだけではdotの主起動タスクは作成されません。[起動契約](automation/README.md)を確認してください。
 
 ---
 

@@ -1,9 +1,21 @@
-# 日次push入口と復旧（2026-10-01）
+# 日次push入口・監視・復旧（現行運用: 2026-10-07）
 
 対象repo: `TadFuji/ai-news-bot` / branch: `main` / workflow: `daily_rss_gemini.yml`。
-VPSの該当2つの起動cronは2026-10-01朝の実配信後にコメント化済み。GitHub予備scheduleは維持。
+**主起動と同runの監視は OpenAI dot（どっちゃん）の定時タスクが担当する。AIニュースは毎日07:07 JST。** これはユーザー確認済みの運用であり、収集・生成・LINE/X配信・Pages保存はGitHub Actionsが担当する。GitHub予備scheduleは07:37 JSTを維持。VPSのHN/AI起動cron2行を2026-10-01にコメント化した切替記録は下記に保全するが、現在のVPS稼働は今回再確認していない。
 
-親側でクラウド定時2タスクの作成とenabledを確認し、独立レビュー/no-opを通過した後に切替。次の主起動は **2026-10-02 HN06:00 / AI07:07 JST**（以後毎日）。クラウドは同日request・成果物・実行中runを照会してから一意pathを追加し、同じrunを監視する。曖昧な再送やforceは禁止。生成/配信前失敗が確実なときだけ同じrunの失敗jobを1回再実行し、毎回結果を報告する。
+dotは同日request・公開JSON・配信開始記録・実行中runを照会してから一意pathを追加し、そのcommitと同じrunを監視する。応答不明なら同じpath・commit・runを読む。曖昧な再送やforceは禁止。送信境界前の失敗が確実な場合だけ、下記の復旧条件を満たす同じrunの失敗jobを1回再実行し、結果を報告する。開始記録がある日は先にrun/attemptとSNSログを調べる。
+
+## 10/7の確認と記録の読み方
+
+ユーザー相談の親スレッドが接続済みGitHubの読取で、以下の一致とsuccessを確認した。この文書編集担当が本番を再実行したものではない。
+
+- request commit: [98dee82272106e4d4eb0543b77cf95cbef48ab0f](https://github.com/TadFuji/ai-news-bot/commit/98dee82272106e4d4eb0543b77cf95cbef48ab0f)
+- 実行: [37538737603](https://github.com/TadFuji/ai-news-bot/actions/runs/37538737603)、event=`push`、`head_sha` が上記commitと一致、conclusion=`success`。
+- commit title: `Daily request 2026-10-07 by dot`。GitHub actorは `TadFuji`。OpenAI dotへの帰属はユーザー確認済みの運用情報によるもので、actor名だけからは推定しない。
+
+request作成・run成功・当日公開JSON・LINE/X実着信は別々の確認。開始記録も送信成功の証明ではない。今回の文書整備では実着信を再確認していない。Cloud Runは [移行準備](../../cloud-run-migration/handoff.md) の段階で、本番移管済みではない。
+
+作業者は [AGENTS.md](../AGENTS.md) に従い毎回 [handoff.md](../handoff.md) を更新する。起動の正本はこの文書、入口判定は [daily_gate.py](daily_gate.py)、送信前記録は [delivery_guard.py](delivery_guard.py)、呼出し順は [curate_morning_brief.py](../curate_morning_brief.py)、配線は [daily_rss_gemini.yml](../.github/workflows/daily_rss_gemini.yml)。
 
 ## 起動契約
 
@@ -11,6 +23,7 @@ Contents API の create_file で **新規ファイル1件だけ** mainへ追加�
 
 - 日次path: `automation/requests/YYYY-MM-DD.json`
 - 日次content: `{"version":1,"date":"YYYY-MM-DD","mode":"daily"}`
+- 日次commit title: `Daily request YYYY-MM-DD by dot`（運用上の表記。実装の受理判定はpath・JSON・push差分による）。
 - no-op path: `automation/tests/YYYY-MM-DD-<test_id>.json`
 - no-op content: `{"version":1,"date":"YYYY-MM-DD","mode":"noop","test_id":"<test_id>"}`
 - 日付は **Asia/Tokyo の当日**。古い日付の遅延起動は拒否。`test_id` は英小文字/数字で始まり、英小文字/数字/ハイフンのみ、1〜40文字。
@@ -30,7 +43,7 @@ no-opはcheckoutと入口検証だけ。依存導入・API生成・SNS配信・�
 
 ## 同日ガードと失敗時の判断
 
-HN: push / schedule / dispatch すべて、当日の通常名または時刻付きTop30記事があれば空振り。6時前・22時以降も通常生成しない。手動dispatchも再生成の抜け道にはならない。
+HN専用の成果物・時間窓・再生成判断は [HN側の運用README](../../Hacker-News/automation/README.md#同日ガードと失敗時の判断) を正本とする。
 
 AI: 当日docsの存在を従来どおり保護。非強制実行は7時前・22時以降に開始しない。SNS直前に `automation/delivery-state/YYYY-MM-DD.json`（date/state/run_id/run_attemptのみ）を **mainへpushしてから** SNSを呼ぶ。git操作の失敗・応答不明なら送信に進まない。開始記録だけ残る日は自動入口を赤で止める。
 
@@ -38,13 +51,15 @@ AI: 当日docsの存在を従来どおり保護。非強制実行は7時前・22
 - docsなし・開始記録あり: 記録のrun_idとrun_attemptを調べる。送信成功/開始後の中断/成否不明は人の判断を待つ。
 - docsなし・開始記録なし: Stage2が送信境界へ到達していないことをsteps/logsでも確認してから、非強制のdispatchで当日を回復できる。dispatchも同じガードを通る。
 - 開始記録のpush失敗: 送信前停止をログで確認。最終always保存によりローカルの開始記録が後からpushされる場合もあるので、main上の状態を改めて確認する。
-- AIの手動 `force_redeliver=true` は従来どおり明示操作として残す。配信済みチャネルまで再配信するため、送信境界後のrunを自動force/rerunしない。新しい秘密や権限は不要。
+- AIの手動 `force_redeliver=true` は従来どおり明示操作として残す。当日docs・開始記録・時間窓のガードを迂回し、既存の開始記録を上書きして配信済みチャネルまで再配信し得る。チャネル限定再送ではない。送信境界後のrunを自動force/rerunせず、request・docs・開始記録を削除して回復しない。新しい秘密や権限は不要。
 
 開始記録は再送を安全側へ止めるための記録で、LINE/X APIとの原子的なトランザクションではない。チャネル別の成否不明を完全解消する仕組みではない。
 
 ## バックアップと復旧
 
-実装前main: `2e7c1a08c7fe124b2c7533b22959708b30053e57`。変更前workflow/編集対象はHNの `test-output/trigger-cutover-backup-20261001/`、AIの `.backups/20261001-push-trigger/` に退避済み（非コミット）。既存のHN `handoff.md` は触らない。
+以下は2026-10-01の切替時に記録した復旧案。現在のVPS/他cron/定時タスクの状態を確認せず実行しない。本日の文書整備でSSH・cron変更・復旧は行っていない。
+
+実装前main: `2e7c1a08c7fe124b2c7533b22959708b30053e57`。変更前workflow/編集対象はHNの `test-output/trigger-cutover-backup-20261001/`、AIの `.backups/20261001-push-trigger/` に退避済み（非コミット）。10/1の切替作業では既存のHN `handoff.md` を変更しなかった。
 
 VPS既存crontabは `/root/trigger-cutover-backups/20261001/crontab.before`。SHA256: `82c142a6bdd0d5a51f65d0726431fc6e80184e1c3be809edf0e00554e23e6ac9`。`.env` や認証値をコピーしていない。起動スクリプトは変更しないためハッシュだけ記録: HN `a0ebd9a0c8a708ad7d48b8237bd88ba4cd0e9ca38668303448419b1005ecdf17`、AI `4186cf03f631c91ad9d4d86450b7add36bfdec2a25a3d229c1f1a259a28ec58d`。
 

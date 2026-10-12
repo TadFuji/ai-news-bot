@@ -5,7 +5,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 このファイルは `ai-news-bot` ディレクトリ **のみ** で適用される追加ルールです。
 グローバル `CLAUDE.md`（`~/.claude/CLAUDE.md`）を置き換えず、その上に上乗せします。
 グローバル規範と矛盾する場合は、より安全側（バックアップ・承認を要求する側）を採用します。
-最終更新: 2026-09-26。
+最終更新: 2026-10-07。
+
+着手前に [AGENTS.md](AGENTS.md) と [handoff.md](handoff.md) を読む。現在の起動・監視・復旧の正本は [automation/README.md](automation/README.md)。変更した担当者が毎回、`AGENTS.md` の更新ルールに従って既存文書とhandoffを更新する。ユーザーによる他AIへの伝言を前提にしない。
 
 ---
 
@@ -39,7 +41,7 @@ cd docs && python3 -m http.server 8765
 2段パイプライン。すべての実行主体は GitHub Actions（ランナーは UTC、日付キーはすべて `config.JST` 基準）。
 
 ```
-Stage 2（毎朝 7:07 JST, daily_rss_gemini.yml。実際の起動はクラウド定時タスク → 専用JSON追加のpush（2026-10-02開始）。
+Stage 2（毎朝 7:07 JST, daily_rss_gemini.yml。主起動・run監視はOpenAI dot定時タスク → 専用JSON追加のpush（2026-10-02開始）。
         workflow の schedule 22:37 UTC = 7:37 JST は予備で、GitHub の遅延で数時間後に動き、配信済みガードで空振りする）
   curate_morning_brief.main()
     ├─ ガード: already_delivered_today()  … docs/{今日}.json の存在（配信開始記録だけ残る日は人の判断を待つ）
@@ -63,7 +65,7 @@ Stage 1（collect_candidates.yml）は自動実行停止中（手動のみ）。
 **壊すと事故になる不変条件:**
 
 - `docs/YYYY-MM-DD.json` は「公開サイトのデータ」と「同日二重配信ガードの記録」を兼ねる。永続化は workflow の commit ステップだけが担うため、**commit ステップの `if: always()` と checkout の `ref: main` を外すと、失敗→再実行で二重配信が再発する**（過去に実際に起きた事故。`tests/test_daily_guard.py` が配線ごと守っている）。
-- `output/` は gitignore 対象で **CI のチェックアウトでは常に空**。「前回の実行の output/ が残っている」前提のコードは書けない。永続層は docs/ のみ。
+- `output/` は gitignore 対象で **CI のチェックアウトでは常に空**。「前回の実行の output/ が残っている」前提のコードは書けない。公開データと従来の同日ガードは `docs/`、送信前の永続記録は `automation/delivery-state/`。後者のmainへのpush成功前にはSNSを送らない。`usage/` も別途保存される。
 - 配信失敗の可視化: 全チャネル失敗と Gemini 全滅（フォールバック配信）は `sys.exit(1)` で run を赤にする。X 単独失敗は LINE 通知。この「赤くする」動作を握りつぶさない。
 - `FORCE_REDELIVER` は workflow から `'1'` / `'0'` の**文字列**で渡る。判定は `!= "1"` であり、truthy 判定に書き換えると `'0'` でガードが無効化される。
 - Gemini のモデル名は `config.GEMINI_MODEL`、タイムアウトは `ai_client.GENAI_TIMEOUT_MS` を全ファイルで共有（直書き禁止。画像モデルのみ `generators/infographic_maker.py` の `GEMINI_IMAGE_MODEL`）。
@@ -122,9 +124,9 @@ Stage 1（collect_candidates.yml）は自動実行停止中（手動のみ）。
 
 - 記事選定は「キーワードで絞った候補を Gemini が採点して 10 件選ぶ」方式。2026-09-19〜25 は Jev（OpenRouter 経由、「日本の一般読者が興味を持つか」で採点）で選んでいたが、一般向けの話題（法案・人事・一般向けサービス）が増え、藤川さんが質の低下と判断したため `dd046d8` で取り消した。経緯は `HISTORY.md` の 2026-09-19・09-25・09-26
 - 選定の基準や読者層の想定を変える案は、先に「業界ニュース中心か一般向けか」を藤川さんと合わせてから出す
-- 実行時刻は 7:07 JST（藤川さんの指定）。**2026-10-02からクラウド定時タスクが専用JSONをmainへ追加して起動する**。2026-10-01までの本命だったVPS cron（2026-08-30導入）は該当行のみコメント化済み。workflow の `schedule` は予備にすぎない。2026-09-26 に schedule だけ変えて「時刻を変えた」と誤報したことがある
-- 時刻を変えるときは、①VPS の crontab（`/root/ai-news-trigger/run.sh` の行。変更前に crontab を保存）、②workflow の cron（予備）、③README・README_EN・`docs/ARCHITECTURE.md`・この文書・`curate_morning_brief.py` のログ表示、をそろえる。VPS には別サービスの cron 行も載っているので、その行には触れない
-- 朝刊が届かない日の確認先は VPS の `/root/ai-news-trigger/cron.log`（接続先は作業日誌 2026-08-30「朝刊配信をGitHub Actionsの遅延から救う」）
+- 実行時刻は 7:07 JST（藤川さんの指定）。**主起動と同runの監視はOpenAI dotの定時タスク。2026-10-02から専用JSONをmainへ追加して起動する**。旧VPS cronの該当行を10/1にコメント化した記録は運用READMEに残すが、現在のVPS稼働は未確認。workflow の `schedule` は07:37 JSTの予備。2026-09-26 に schedule だけ変えて「時刻を変えた」と誤報したことがある。
+- 時刻変更は①dotの主起動タスク、②workflowの予備cron、③時刻を記載する既存文書・ログ表示を確認し、承認された変更範囲だけそろえる。無効化したVPS cronを時刻変更の手順として再有効化しない。現在の契約は `automation/README.md`、再開事項は `handoff.md` に反映する。
+- 欠配時は当日のrequest・request commitと同じhead_shaのrun・当日docs・delivery-stateを先に確認し、記録のrun/attemptとStage2のLINE/X結果を調べる。詳細は `automation/README.md`。旧 `/root/ai-news-trigger/cron.log` はVPS起動時代の記録先で、現在の主起動の確認先にはしない。
 
 ## 補足
 
@@ -135,7 +137,7 @@ Stage 1（collect_candidates.yml）は自動実行停止中（手動のみ）。
 
 ## Contents push 入口（2026-10-01 実装・切替済み）
 
-HN 06:00 / AIニュース07:07 JST の起動係をクラウド定時タスクへ移すため、mainへの専用JSON新規追加を日次workflowの入口にした。VPSのHN/AI起動2行だけ可逆的にコメント化済み。他cronと予備scheduleは維持。次回は2026-10-02 HN06:00 / AI07:07 JSTをクラウドが担当。
+mainへの専用JSON新規追加が日次workflowの入口。AIニュース07:07 JSTの主起動・同run監視はOpenAI dotが担当し、現在の確認は `automation/README.md` に記録する。VPS起動2行の無効化・他cron維持は10/1の切替履歴で、VPS現行状態の再確認とは区別する。
 
 - 契約・完了確認・復旧は `automation/README.md`。通常コードpushでは配信しない。
 - push / schedule / 非強制dispatchは同じconcurrencyとガードを通る。当日docsがあれば空振り。開始記録だけ残る日は赤で停止し、全件rerunや自動forceをしない。
