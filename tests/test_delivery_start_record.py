@@ -69,10 +69,9 @@ def test_pipeline_stops_when_start_record_cannot_be_persisted(monkeypatch, tmp_p
     monkeypatch.setattr(cm, "DOCS_DIR", str(tmp_path))
     monkeypatch.setattr(dg, "started_today", lambda: False)
     monkeypatch.setattr(cm, "load_candidates", lambda: [{"url": "https://example.com/a"}])
-    import collect_rss_gemini
     import distribute_daily
     import build_pages
-    monkeypatch.setattr(collect_rss_gemini, "main", Mock())
+    monkeypatch.setattr(cm, "collect_in_subprocess", Mock(return_value=True))
     monkeypatch.setattr(cm, "get_delivered_urls", lambda **kw: set())
     monkeypatch.setattr(cm, "dedup_articles", lambda x: x)
     monkeypatch.setattr(cm, "curate_with_gemini", lambda x: {"articles": x})
@@ -132,3 +131,4 @@ def test_start_record_reaches_local_bare_remote(monkeypatch, tmp_path):
     monkeypatch.setenv("GITHUB_RUN_ATTEMPT", "2")
     dg.persist_before_send(work)
     assert git("status", "--porcelain") == ""
+

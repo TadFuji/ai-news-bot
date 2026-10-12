@@ -5,9 +5,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 このファイルは `ai-news-bot` ディレクトリ **のみ** で適用される追加ルールです。
 グローバル `CLAUDE.md`（`~/.claude/CLAUDE.md`）を置き換えず、その上に上乗せします。
 グローバル規範と矛盾する場合は、より安全側（バックアップ・承認を要求する側）を採用します。
-最終更新: 2026-10-07。
+最終更新: 2026-10-12。
 
 着手前に [AGENTS.md](AGENTS.md) と [handoff.md](handoff.md) を読む。現在の起動・監視・復旧の正本は [automation/README.md](automation/README.md)。変更した担当者が毎回、`AGENTS.md` の更新ルールに従って既存文書とhandoffを更新する。ユーザーによる他AIへの伝言を前提にしない。
+
+2026-10-10の朝刊遅延と適用済み再発低減策を引き継ぐときは、[automation/RECOVERY_HANDOFF.md](automation/RECOVERY_HANDOFF.md) を最初に読む。原因の確証/不明点、適用SHA、テスト、安全契約、制約、ロールバックを集約している。
 
 ---
 
@@ -45,7 +47,8 @@ Stage 2（毎朝 7:07 JST, daily_rss_gemini.yml。主起動・run監視はOpenAI
         workflow の schedule 22:37 UTC = 7:37 JST は予備で、GitHub の遅延で数時間後に動き、配信済みガードで空振りする）
   curate_morning_brief.main()
     ├─ ガード: already_delivered_today()  … docs/{今日}.json の存在（配信開始記録だけ残る日は人の判断を待つ）
-    ├─ collect_rss_gemini.main() を内部呼び出し（66フィード並列取得 → 24hフィルタ
+    ├─ automation.collection_runner が収集子プロセスを起動（最大2回・各600秒、SNSは再試行しない）
+    │    collect_rss_gemini.py（66フィード並列取得 → 24hフィルタ
     │    → キーワードスコア → 本文取得(article_extractor) → Gemini 1次: 翻訳+採点）
     ├─ 過去3日の配信済みURL除外 → dedup.py（見出し類似度で同一出来事を束ねる）
     ├─ Gemini 2次キュレーション（10件保証・ソース偏重是正・URL候補照合 keep_known_urls）
@@ -107,6 +110,7 @@ Stage 1（collect_candidates.yml）は自動実行停止中（手動のみ）。
   `USAGE_JPY_PER_USD`（既定 157）。
 - 計測は**本番を止めない**。内部の例外はすべて握り潰し、理由を JSONL の `meter_errors` に残すだけ。
 - 書き出しは `curate_morning_brief.py` / `generate_weekly_column.py` の `finally` で行う。
+  2026-10-10以降、分離された `collect_rss_gemini.py` も自身の `finally` で記録する。
   品質低下時の `sys.exit(1)` でも記録が残るようにするため。`usage/` は workflow の
   `git-auto-commit-action` がそのままコミットする（`file_pattern` 指定が無いため）。
 
@@ -143,3 +147,4 @@ mainへの専用JSON新規追加が日次workflowの入口。AIニュース07:07
 - push / schedule / 非強制dispatchは同じconcurrencyとガードを通る。当日docsがあれば空振り。開始記録だけ残る日は赤で停止し、全件rerunや自動forceをしない。
 - 明示的な手動 `force_redeliver` は従来どおり利用可。ただし配信済みLINE/Xまで送り直し得るため、開始記録に記載されたrunのSNS結果を先に確認する。
 - no-opは依存導入・生成・SNS送信・結果コミットを全て省く。正常系は既存の `curate_morning_brief` → 配信 → Pages → always保存を維持する。
+
