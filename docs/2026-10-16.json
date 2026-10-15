@@ -1,0 +1,107 @@
+{
+  "updated": "2026年10月16日",
+  "theme": "AIの現場定着とローカル稼働",
+  "morning_comment": "実務直結のAI機能と端末内動作が加速。現場の使い方が問われます。",
+  "articles": [
+    {
+      "title": "Google、Gmail有料版にAI Inbox展開",
+      "category": "ビジネス活用",
+      "summary": "GoogleはWorkspace有料ユーザー向けに、未読メールから重要タスクを自動要約する「AI Inbox」の提供を開始した。メール確認とToDo整理にかける工数を削減する。",
+      "one_liner": "メールの優先度判定をAIが代行",
+      "why_important": "日常のメール処理やタスク整理が自動化され、情報確認に追われる時間を圧縮できます。",
+      "action_item": "未読メールのうち自動化できそうな仕分け作業を1つ洗い出してください。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/10/gmails-ai-inbox-is-rolling-out-to-paid-Workspace-users.html"
+    },
+    {
+      "title": "Google、Gmailで音声対話検索を提供開始",
+      "category": "対話型AI",
+      "summary": "GoogleはWorkspace有料ユーザー向けに、Geminiを活用して受信トレイ内を音声で検索・確認できる「Gmail Live」を開始した。画面を見られない状況でのメール確認を可能にする。",
+      "one_liner": "音声で受信トレイを検索可能に",
+      "why_important": "移動中や手作業中にも情報を取り出せるようになり、業務の即応性が高まります。",
+      "action_item": "移動中の確認業務に音声入力を試してみてください。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/10/gmail-live-is-rolling-out-to-paid-Workspace-users.html"
+    },
+    {
+      "title": "東京電力、現場写真から危険源をAI特定",
+      "category": "日本市場",
+      "summary": "東京電力は現場写真を撮影するだけでAIが危険源を特定し対策を示すアプリを導入した。AIを業務効率化にとどめず、現場の安全管理プロセスの再構築に直結させている。",
+      "one_liner": "現場写真から危険源をAIが特定",
+      "why_important": "単なる省力化ではなく、現場の安全基準を均質化する実践的な活用例です。",
+      "action_item": "自社の現場業務で目視チェックに依存している工程を1つ特定してください。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2610/16/news026.html"
+    },
+    {
+      "title": "Meta、オープンモデルMuse Spark Open公開",
+      "category": "研究・技術",
+      "summary": "Metaは8160億パラメータのオープンウェイトAI「Muse Spark Open」を無償公開した。Apple M5チップ向けに最適化され、機密データを外部に出さずローカル環境で高度な推論を実行できる。",
+      "one_liner": "超大型オープンAIを端末内で実行",
+      "why_important": "機密データを外部クラウドに送信せず、自社端末内で高度な推論を完結できます。",
+      "action_item": "自社で外部クラウドに出せない機密データの種類を確認してください。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/10/16/5591.html"
+    },
+    {
+      "title": "AIエージェントの誤動作責任、企業側の負担懸念",
+      "category": "リスク・規制",
+      "summary": "自律型AIエージェントによる虚偽通報などの実被害が発生する一方、開発元の免責傾向が課題となっている。AIに業務を実行させる企業が損害賠償リスクを直接負う可能性がある。",
+      "one_liner": "AI誤動作の責任は利用企業側に",
+      "why_important": "エージェントが自律実行した外部操作の損害責任を利用企業が負うリスクがあります。",
+      "action_item": "社内のAIツールが自動実行できる権限の範囲を点検してください。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/ai-hacks-leave-a-mess-that-ai-companies-arent-cleaning-up/"
+    },
+    {
+      "title": "AIインフラ企業の債務不履行リスクが急上昇",
+      "category": "リスク・規制",
+      "summary": "AIインフラへの過大な設備投資に対し収益化の遅れが懸念され、関連企業の信用リスク保険（CDS）コストが跳ね上がった。市場の警戒感が強まり、調達環境への影響が注視される。",
+      "one_liner": "AIインフラ投資への警戒感が急上昇",
+      "why_important": "データセンター投資の過熱懸念から、将来的なクラウド利用料や提供体制に影響が出る恐れがあります。",
+      "action_item": "自社インフラのクラウド依存度と代替サービスの有無を確認してください。",
+      "source": "Semafor Technology",
+      "url": "https://www.semafor.com/article/10/15/2026/the-cost-of-insuring-against-ai-company-defaults-spikes"
+    },
+    {
+      "title": "OpenAI、広告事業を本格化し攻勢",
+      "category": "ビジネス活用",
+      "summary": "OpenAIはMetaから人材を採用し、出稿費用の引き下げやツール拡充を通じて広告主の獲得を急いでいる。対話型AIプラットフォーム上でのマーケティング基盤を早期に固める狙いだ。",
+      "one_liner": "OpenAIが広告事業へ本格参入",
+      "why_important": "検索やSNSに代わる新たな宣伝基盤として、AI対話面でのプロモーションが現実味を帯びてきました。",
+      "action_item": "AI対話面への広告出稿が自社の集客戦略に与える影響を検討してください。",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/articles/openais-accelerates-ad-sprint-meta-hires-slashed-prices"
+    },
+    {
+      "title": "Liquid AI、PC動作の推論モデル無償公開",
+      "category": "研究・技術",
+      "summary": "Liquid AIはPC上で高速動作する240億パラメータの推論モデル「LFM2.5-24B-A2B」を公開した。複雑な手順を伴うタスクやツール連携を、端末内かつ低遅延・低コストで処理できる。",
+      "one_liner": "PC上で動く推論AIモデルが登場",
+      "why_important": "外部APIコストをかけず、低遅延で自律タスクを手元の端末で処理できます。",
+      "action_item": "手元の端末でローカルAIを動かせる検証環境があるか確認してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2148496.html"
+    },
+    {
+      "title": "Amazon幹部、アプリ不要のAI端末時代を予測",
+      "category": "ビジネス活用",
+      "summary": "Amazonのデバイス責任者は、AIが背後で先回りして要求を処理することで個別のアプリ操作が不要になる未来像を示した。ツールや顧客接点のインターフェース刷新を示唆している。",
+      "one_liner": "AIが個別アプリの操作を代替へ",
+      "why_important": "利用者がアプリを直接操作しなくなれば、自社プロダクトのUIや接点設計の見直しが必要です。",
+      "action_item": "自社サービスがAPIやAI経由で呼び出せる設計になっているか確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/"
+    },
+    {
+      "title": "G20、AI悪用リスク規制の合意見送り",
+      "category": "リスク・規制",
+      "summary": "タイでのG20会合ではAI悪用リスクが主要議題となったが、各国の思惑が対立し共同声明は見送られた。国際的な共通ルール作りが停滞しており、各国固有の規制への配慮が不可欠となる。",
+      "one_liner": "G20でAI規制の共同声明は見送り",
+      "why_important": "国際統一ルールの策定が遅れるため、各国ごとの独自規制への個別対応が求められます。",
+      "action_item": "自社が展開する国や地域のAI関連規制の最新状況を確認してください。",
+      "source": "NHK 科学・技術",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261016de60163"
+    }
+  ]
+}
