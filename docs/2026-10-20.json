@@ -1,0 +1,107 @@
+{
+  "updated": "2026年10月20日",
+  "theme": "自律型AIの実装と統制リスク",
+  "morning_comment": "自律AIの現場導入が進む一方、情報漏洩や攻撃への防壁強化が急務です。",
+  "articles": [
+    {
+      "title": "チャット継続による見積情報流出リスク",
+      "category": "ビジネス活用",
+      "summary": "同一チャット画面で別顧客の案件を続けると、直前の値引き情報などが無断流用されるリスクが判明しました。取引先ごとのチャット新規立ち上げが必須です。",
+      "one_liner": "会話継続で見積情報が混入",
+      "why_important": "顧客ごとのプロンプト分離を怠ると、守秘義務違反や価格情報の漏洩につながります。",
+      "action_item": "顧客や案件が変わるごとにチャットを新規作成する運用ルールを徹底してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/every_ai_recipe/articles/chat-reuse-discount-leak"
+    },
+    {
+      "title": "AIエージェント悪用で100社超に不正侵入",
+      "category": "リスク・規制",
+      "summary": "100字未満の短文指示を受けたAIエージェントが脆弱性を自律攻撃し、日本を含む100社超が被害を受けました。攻撃コストは1件約50ドルまで低下しています。",
+      "one_liner": "低コスト自律AIが100社侵入",
+      "why_important": "攻撃の自動化と低コスト化により、あらゆる規模の企業や管理画面が無差別に狙われます。",
+      "action_item": "公開サーバーの管理者パスワード見直しと多要素認証の有効化を確認してください。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/10/20/5607.html"
+    },
+    {
+      "title": "GoogleスプレッドシートがGeminiでの自然言語分析に対応",
+      "category": "ビジネス活用",
+      "summary": "スプレッドシート上でBigQueryの大規模データをGeminiとの自然言語対話により直接集計可能になりました。SQL記述なしでインサイトを即座に抽出できます。",
+      "one_liner": "自然言語でビッグデータ分析",
+      "why_important": "データ分析スキルの有無に関わらず、非エンジニアが現場で直接データドリブンな意思決定を行えます。",
+      "action_item": "定例報告で使っている集計シートで、自然言語によるデータ抽出を試行してください。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/10/analyze-bigquery-data-using-natural-language-with-Gemini-in-Google-Sheets.html"
+    },
+    {
+      "title": "米MS、AIエージェントの暴走を防ぐ監視機能を投入",
+      "category": "リスク・規制",
+      "summary": "マイクロソフトは社内AIエージェントを内部脅威と位置づけ、挙動を常時監視する「Guardian Agents」を発表しました。自律AIに依存しない独立監視体制の構築が狙いです。",
+      "one_liner": "AI暴走を防ぐ独立監視機能",
+      "why_important": "自律エージェントに社内権限を委譲する際、人間に代わるガバナンス機構が不可欠になります。",
+      "action_item": "自社で導入・検討中のAIツールに与えている閲覧・実行権限を棚卸ししてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/"
+    },
+    {
+      "title": "手書きメモから議事録とタスクを自動生成するCopilot活用",
+      "category": "ビジネス活用",
+      "summary": "OneNoteの手書きメモをCopilotが解析し、ワンクリックで実用的な議事録やタスク一覧へ整形する手法が実証されました。会議後の清書・転記工数を大幅に削れます。",
+      "one_liner": "手書きメモを一瞬で議事録化",
+      "why_important": "会議記録の即時共有とタスク化により、組織のアクション開始スピードが向上します。",
+      "action_item": "今日の会議メモを手書きまたは簡易入力し、Copilotでの議事録化を試してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/special/2112054.html"
+    },
+    {
+      "title": "高性能AIによるゼロデイ攻撃加速と企業の防御戦略",
+      "category": "リスク・規制",
+      "summary": "高度AIモデルが未知の脆弱性検出から攻撃実行までを自律化し、攻撃までの猶予が消滅しています。従来のパッチ依存型から、侵入を前提とした被害局限化への移行が急務です。",
+      "one_liner": "AIがゼロデイ攻撃を自律化",
+      "why_important": "パッチ適用までの時間的猶予がなくなり、事後復旧とアクセス制限の強化が企業の生存を分けます。",
+      "action_item": "重要システムへのアクセス権限を最小化し、不要な外部接続ポートを閉鎖してください。",
+      "source": "ITmedia AI+\t",
+      "url": "https://kn.itmedia.co.jp/kn/article/2610/20/2000002396/"
+    },
+    {
+      "title": "物流倉庫の工程間ギャップを埋める特化型AI",
+      "category": "日本市場",
+      "summary": "IFS Softeonは、入出荷の各工程にAIを配置して現場全体を最適化する「Fulfillment Flow」を発表しました。基幹システムを改修せず、独立導入できる設計が特徴です。",
+      "one_liner": "既存システム不要の倉庫特化AI",
+      "why_important": "レガシーシステムを刷新できない現場でも、局所的なAIエージェント配置で全体の生産性を底上げできます。",
+      "action_item": "ボトルネックとなっている現場業務の引き継ぎ工程を1箇所特定してください。",
+      "source": "ITmedia AI+\t",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2610/20/news044.html"
+    },
+    {
+      "title": "Geminiで作成したアプリをGoogleサイトへ即時公開可能に",
+      "category": "対話型AI",
+      "summary": "Geminiアプリ内で生成した対話型ツールを、1クリックでGoogleサイトの下書きへ書き出せるようになりました。非エンジニアでもチーム専用ツールを即日で社内展開できます。",
+      "one_liner": "ノーコードで社内AIツール公開",
+      "why_important": "現場発の業務自動化ツールが即日共有可能になり、チームのDXサイクルが加速します。",
+      "action_item": "チーム内で頻出する問い合わせに答える簡易チャットをGeminiで試作してください。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/10/publish-interactive-apps-from-gemini-app-to-Google-Sites.html"
+    },
+    {
+      "title": "スマホだけでクラウド上のClaudeを使ったアプリ開発が完結",
+      "category": "対話型AI",
+      "summary": "「Claude Code on the web」を活用し、PCを使わずスマホからの指示のみでGitHub上のコード改修とビルドを完結させる運用が実証されました。移動中の緊急バグ修正などが可能になります。",
+      "one_liner": "スマホから指示してアプリ改修",
+      "why_important": "開発環境のクラウド化とAIエージェント化により、場所を問わない開発運用体制が現実化します。",
+      "action_item": "GitHub連携可能なWebベースのAI開発環境を社内開発チームで情報共有してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/feature/2149014.html"
+    },
+    {
+      "title": "中国発Kling AI 4.0登場、30秒動画生成と音声同期に対応",
+      "category": "中国AI",
+      "summary": "動画生成AI「Kling AI 4.0」が公開され、最大30秒の動画生成や多言語リップシンク、ステレオ音声に対応しました。軽量モデルも提供され制作コストが下がっています。",
+      "one_liner": "30秒生成と音声同期対応動画AI",
+      "why_important": "中国発マルチモーダルAIの進化により、プロモーション動画制作の外注費と制作リードタイムが削減されます。",
+      "action_item": "Kling AIまたは類似の生成ツールで社内告知用の短尺動画を1本テスト作成してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/kling-ai-drops-version-4-0-with-stereo-audio-multilingual-lip-sync-and-a-lighter-flash-variant/"
+    }
+  ]
+}
