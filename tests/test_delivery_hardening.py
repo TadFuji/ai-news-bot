@@ -161,3 +161,34 @@ class TestXPostReturnsStatus:
 
         self._clear_creds(monkeypatch)
         assert dd.post_to_x_thread([{"title_ja": "t"}]) is False
+
+
+class TestXPostClosing:
+    """長文投稿の末尾に、いいね・フォローのお願いの結びが入る（送信はしない）。"""
+
+    def test_single_post_contains_closing(self, monkeypatch):
+        import distribute_daily as dd
+
+        for key in ("X_CONSUMER_KEY", "X_CONSUMER_SECRET",
+                    "X_ACCESS_TOKEN", "X_ACCESS_TOKEN_SECRET"):
+            monkeypatch.setenv(key, "dummy")
+        sent = []
+
+        class FakeClient:
+            def __init__(self, **kwargs):
+                pass
+
+            def create_tweet(self, **kwargs):
+                sent.append(kwargs)
+                return type("R", (), {"data": {"id": str(len(sent))}})()
+
+        monkeypatch.setattr(dd.tweepy, "Client", FakeClient)
+        monkeypatch.setattr(dd, "_upload_card_media", lambda *a, **k: None)
+        monkeypatch.setattr(dd.time, "sleep", lambda s: None)
+
+        assert dd.post_to_x_single([{"title_ja": "t", "summary_ja": "s"}]) is True
+        main_text = sent[0]["text"]
+        assert dd.X_CLOSING in main_text
+        assert main_text.index(dd.X_CLOSING) < main_text.index("（詳しくはリプライ欄")
+        assert main_text.endswith("#AI #Tech #AINews")
+        assert dd.X_CLOSING not in sent[1]["text"]

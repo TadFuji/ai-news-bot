@@ -17,6 +17,12 @@ _X_MAX_CHARS = 25000
 # 公開ポータルURL
 WEB_URL = "https://tadfuji.github.io/ai-news-bot/"
 
+# X の長文投稿の結び（2026-10-21 藤川さんの依頼）。いいねとフォローを売り込まずに頼む
+X_CLOSING = (
+    "今日の10件がお役に立てば、いいねをいただけると励みになります。"
+    "毎朝お届けしていますので、よろしければフォローしていただけると嬉しいです。"
+)
+
 # カテゴリ → ハッシュタグ（カテゴリ連動の動的ハッシュタグ生成に使用）
 CATEGORY_HASHTAGS = {
     "対話型AI": ["#生成AI", "#ChatGPT"],
@@ -97,6 +103,7 @@ def post_to_x_single(articles, theme=""):
             full_text += f"👉 {action_item}\n"
         full_text += "\n"
 
+    full_text += f"{X_CLOSING}\n\n"
     full_text += "（詳しくはリプライ欄をご覧ください 👇）\n\n"
     full_text += "#AI #Tech #AINews"
 
