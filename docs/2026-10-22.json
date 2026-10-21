@@ -1,0 +1,107 @@
+{
+  "updated": "2026年10月22日",
+  "theme": "現場と消費を動かす自律型AI",
+  "morning_comment": "AIは助言役から、決済や現場作業を自律代行する実行役へ移行しています。",
+  "articles": [
+    {
+      "title": "Anthropic、業務代行AI「Claude Duet」発表",
+      "category": "対話型AI",
+      "summary": "AnthropicはPC作業や連絡などの日常業務を自律代行する「Claude Duet」プレビュー版を公開した。",
+      "one_liner": "業務を丸ごと代行する自律AI",
+      "why_important": "画面操作や外部連絡を直接代行するエージェントが、定型デスクワークの標準になります。",
+      "action_item": "今週自分が費やしたルーティン連絡やPC作業をリスト化してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent"
+    },
+    {
+      "title": "OpenAIとGoogleのAIがPHPの致命的脆弱性を検出",
+      "category": "リスク・規制",
+      "summary": "OpenAIとGoogleの最新モデルが、世界中のWebサイトに影響するPHPの重大な脆弱性を発見した。",
+      "one_liner": "AIがWeb基盤の重大欠陥を発見",
+      "why_important": "攻撃者によるAI悪用が進む前に、自社インフラのセキュリティパッチ適用が急務です。",
+      "action_item": "自社サイトやサービスのPHPバージョンとパッチ適用状況を確認してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openais-gpt-5-6-sol-and-gemini-4-argon-discovered-the-critical-php-vulnerability-affecting-millions-of-websites/"
+    },
+    {
+      "title": "米ウォルマート、AIエージェントによる自動購入を解禁",
+      "category": "ビジネス活用",
+      "summary": "予算上限や承認設定のもと、顧客に代わってAIが自動で買い物決済まで完了する機能を導入した。",
+      "one_liner": "ECの買い物がAI自動決済へ",
+      "why_important": "顧客が直接画面を見ずにAIが商品を選ぶため、販売チャネル戦略の抜本的な見直しが必要です。",
+      "action_item": "自社商品がAIの推薦や代理購入で選ばれる導線があるか検討してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/"
+    },
+    {
+      "title": "MetaのAI「Muse」利用者が1000万人を突破",
+      "category": "ビジネス活用",
+      "summary": "利用者の25%が日常的に利用し、買い物での平均決済額は200ドルを超えるなど決済基盤化が進む。",
+      "one_liner": "AI経由の消費が日常決済へ定着",
+      "why_important": "対話インターフェースが購買の主導権を握り、SNS上のコマース構造を一変させています。",
+      "action_item": "チャット画面完結の購買行動を体験し、自社ビジネスへの影響を整理してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/"
+    },
+    {
+      "title": "三菱電機、ヒューマノイドと工作機械が協調するAIシステム開発",
+      "category": "日本市場",
+      "summary": "言語指示からタスクを自律生成し、ロボットと工作機械が段取りや清掃、検査を分担処理する。",
+      "one_liner": "言語指示で動く工場の協調ロボ",
+      "why_important": "工場現場の段取りや検査が自動化され、製造業の人手不足解消が具体化します。",
+      "action_item": "現場の非稼働時間（段取り・清掃・点検）がどれほどあるか算出してください。",
+      "source": "ITmedia AI+\t",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2610/21/news073.html"
+    },
+    {
+      "title": "中古GPUで1基から即日使える専用プライベートAI基盤",
+      "category": "ビジネス活用",
+      "summary": "エクストリームーDら3社は、低コストで社外秘データを安全に扱えるオンプレミス型AI基盤を開始した。",
+      "one_liner": "低コストで安全な専用AI基盤",
+      "why_important": "クラウドに機密データを出せない企業でも、現実的なコストで自社専用AIを持てます。",
+      "action_item": "クラウド送信が制限されている社内機密データの有無と規模を棚卸ししてください。",
+      "source": "ITmedia AI+\t",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2610/22/news039.html"
+    },
+    {
+      "title": "OpenAI、中継ゲートウェイ経由のモデル利用基準を厳格化",
+      "category": "リスク・規制",
+      "summary": "API直接提供を行う中継サービスに対して事前審査と承認を義務付け、安全基準の統一を図る。",
+      "one_liner": "OpenAI中継APIの審査が厳格化",
+      "why_important": "サードパーティ中継基盤に依存したシステムは、規約改定に伴う利用停止リスクへの対策が必要です。",
+      "action_item": "自社サービスが利用しているOpenAIのAPI接続経路と利用規約適合性を再確認してください。",
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/index/broad-access-through-consistent-standards"
+    },
+    {
+      "title": "AWS、端末側小型モデルとクラウドを併用する新基盤を公開",
+      "category": "ビジネス活用",
+      "summary": "通常処理を端末側モデルで完結させ、高度推論のみクラウドに送ることでAPI運用コストを抑える。",
+      "one_liner": "端末AI併用でクラウド費用削減",
+      "why_important": "全処理を巨大クラウドモデルに依存する構成から脱却し、コストと遅延を大幅に削減できます。",
+      "action_item": "自社AI機能のうち、小型モデルで代替可能な単純処理を切り出してください。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/adaptive-agentic-intelligence-framework-using-strands-agents/"
+    },
+    {
+      "title": "国交省、造船再生へ官民1兆円投資と現場AI導入を推進",
+      "category": "日本市場",
+      "summary": "溶接などの熟練技能者不足に対応するため、現場向けフィジカルAI導入と建造量倍増を支援する。",
+      "one_liner": "造船1兆円投資で現場AI導入",
+      "why_important": "フィジカルAIの導入が重工業の技能伝承と生産性改善の国家的課題として動き出しました。",
+      "action_item": "自社業務で熟練技術者に依存している属人的作業を1つ特定してください。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2610/22/news009.html"
+    },
+    {
+      "title": "Recursive、PC上で高速動作するコーディングAIを無償公開",
+      "category": "研究・技術",
+      "summary": "ローカル環境で自己改善しつつ高速動作する「Flint」により、機密コードを保護したまま開発支援を行う。",
+      "one_liner": "PC上で動く無料のコード支援AI",
+      "why_important": "クラウドにコードを送信せず完全ローカルで開発支援を受けられるため、情報漏洩を防げます。",
+      "action_item": "オープンソースのローカルLLMを1台の開発PCに試験導入してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/"
+    }
+  ]
+}
