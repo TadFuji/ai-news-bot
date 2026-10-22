@@ -1,107 +1,107 @@
 {
-  "updated": "2026年10月22日",
-  "theme": "現場と消費を動かす自律型AI",
-  "morning_comment": "AIは助言役から、決済や現場作業を自律代行する実行役へ移行しています。",
+  "updated": "2026年10月23日",
+  "theme": "AIエージェント実装と統制の攻防",
+  "morning_comment": "代理操作の実用化が進む一方、認証や課金を巡る攻防が激化しています。",
   "articles": [
     {
-      "title": "Anthropic、業務代行AI「Claude Duet」発表",
-      "category": "対話型AI",
-      "summary": "AnthropicはPC作業や連絡などの日常業務を自律代行する「Claude Duet」プレビュー版を公開した。",
-      "one_liner": "業務を丸ごと代行する自律AI",
-      "why_important": "画面操作や外部連絡を直接代行するエージェントが、定型デスクワークの標準になります。",
-      "action_item": "今週自分が費やしたルーティン連絡やPC作業をリスト化してください。",
-      "source": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent"
+      "title": "イヤフォン型AIレコーダー「Plaud One」発表、スマホ不要で資料化まで直結",
+      "category": "ビジネス活用",
+      "summary": "PLAUDがeSIM内蔵イヤフォン型レコーダーを発表しました。スマートフォンを介さず対面会議を録音し、文字起こしからPowerPoint資料作成まで自動完結します。",
+      "one_liner": "スマホ不要で商談から資料化まで即完結",
+      "why_important": "会議後の議事録や報告資料作成の工数を省き、商談当日の提案スピードを大幅に引き上げます。",
+      "action_item": "商談後のメモ作成にかかっている作業時間を計測してみてください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2150455.html"
     },
     {
-      "title": "OpenAIとGoogleのAIがPHPの致命的脆弱性を検出",
+      "title": "中国系ハッカー集団がAIツール悪用、日本企業へのサイバー攻撃を活発化",
+      "category": "中国AI",
+      "summary": "マイクロソフトは、中国系サイバー攻撃集団がAIツールを用いて標的型メールや攻撃コードを自動生成し、日本企業を標的とした攻撃を仕掛けていると警告しました。",
+      "one_liner": "AI悪用の標的型攻撃が日本企業で激化",
+      "why_important": "巧妙化するなりすましメールを人手で見分けることが困難になり、技術的な防御体制の強化が急務です。",
+      "action_item": "社内で不審メール受信時の通報手順を再確認してください。",
+      "source": "NHK 科学・技術",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261023de63956"
+    },
+    {
+      "title": "1Password、パスワード開示不要でAIが代理ログインできる新機能を発表",
       "category": "リスク・規制",
-      "summary": "OpenAIとGoogleの最新モデルが、世界中のWebサイトに影響するPHPの重大な脆弱性を発見した。",
-      "one_liner": "AIがWeb基盤の重大欠陥を発見",
-      "why_important": "攻撃者によるAI悪用が進む前に、自社インフラのセキュリティパッチ適用が急務です。",
-      "action_item": "自社サイトやサービスのPHPバージョンとパッチ適用状況を確認してください。",
+      "summary": "1Passwordは、AIエージェントに生パスワードを渡さず、ユーザーの承認に基づいて安全に業務代行ログインを行わせる新機能を導入しました。",
+      "one_liner": "パスワード非開示でAI代理操作を実現",
+      "why_important": "外部AIツールへの認証情報受け渡しに伴う漏洩リスクを根本から遮断し、安全な業務自動化を可能にします。",
+      "action_item": "AI拡張機能に直接保存している社内アカウント権限の有無を点検してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/"
+    },
+    {
+      "title": "セールスフォース、外部AIエージェントによる自社データ利用に新課金へ",
+      "category": "ビジネス活用",
+      "summary": "セールスフォースは、Claudeなど外部AIエージェントが自社データへアクセスして自動操作を行う際に課金する方針を固めました。",
+      "one_liner": "外部AI利用に伴うSaaS追加課金が始動",
+      "why_important": "自社導入した外部AIで基幹SaaSを操作する際のコスト負担が増加するため、システム連携の費用対効果を再検討する必要があります。",
+      "action_item": "外部AI連携を行っている社内SaaSのAPI利用規約とコスト体系を確認してください。",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/articles/salesforce-customers-brace-new-fees-use-claude-apps"
+    },
+    {
+      "title": "米大手銀行、顧客認証情報を使ったAIエージェントのアクセスを遮断",
+      "category": "リスク・規制",
+      "summary": "JPモルガンやモルガン・スタンレーは、顧客のID・パスワードを用いて口座を自動操作するAIエージェントの接続制限を開始しました。",
+      "one_liner": "米銀がAIによる口座代理操作を一斉遮断",
+      "why_important": "利用者が便利さからAIに認証情報を託す運用は、基幹サービス側から不正アクセスと判定され遮断される危険を孕んでいます。",
+      "action_item": "業務で利用中の自動化ツールが外部サービスの規約に抵触していないか確認してください。",
       "source": "The Decoder",
-      "url": "https://the-decoder.com/openais-gpt-5-6-sol-and-gemini-4-argon-discovered-the-critical-php-vulnerability-affecting-millions-of-websites/"
+      "url": "https://the-decoder.com/major-us-banks-are-locking-out-ai-agents-that-log-in-with-customer-credentials/"
     },
     {
-      "title": "米ウォルマート、AIエージェントによる自動購入を解禁",
-      "category": "ビジネス活用",
-      "summary": "予算上限や承認設定のもと、顧客に代わってAIが自動で買い物決済まで完了する機能を導入した。",
-      "one_liner": "ECの買い物がAI自動決済へ",
-      "why_important": "顧客が直接画面を見ずにAIが商品を選ぶため、販売チャネル戦略の抜本的な見直しが必要です。",
-      "action_item": "自社商品がAIの推薦や代理購入で選ばれる導線があるか検討してください。",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/"
+      "title": "Canva、デザイン配置を崩さない独自AI画像モデル「Craft」を全公開",
+      "category": "画像・動画AI",
+      "summary": "Canvaは生成前に構図を設計する2段階アプローチを採用した内製モデルを導入し、崩れやすかった文字や図形の配置精度を大幅に高めました。",
+      "one_liner": "崩れない構図生成でバナー制作を時短",
+      "why_important": "生成後の修正工数が激減するため、マーケティング素材や営業資料の内製化スピードが一気に上がります。",
+      "action_item": "次回作成するプレゼン資料の表紙をCanvaのAI機能で試作してみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model"
     },
     {
-      "title": "MetaのAI「Muse」利用者が1000万人を突破",
-      "category": "ビジネス活用",
-      "summary": "利用者の25%が日常的に利用し、買い物での平均決済額は200ドルを超えるなど決済基盤化が進む。",
-      "one_liner": "AI経由の消費が日常決済へ定着",
-      "why_important": "対話インターフェースが購買の主導権を握り、SNS上のコマース構造を一変させています。",
-      "action_item": "チャット画面完結の購買行動を体験し、自社ビジネスへの影響を整理してください。",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/"
-    },
-    {
-      "title": "三菱電機、ヒューマノイドと工作機械が協調するAIシステム開発",
-      "category": "日本市場",
-      "summary": "言語指示からタスクを自律生成し、ロボットと工作機械が段取りや清掃、検査を分担処理する。",
-      "one_liner": "言語指示で動く工場の協調ロボ",
-      "why_important": "工場現場の段取りや検査が自動化され、製造業の人手不足解消が具体化します。",
-      "action_item": "現場の非稼働時間（段取り・清掃・点検）がどれほどあるか算出してください。",
-      "source": "ITmedia AI+\t",
-      "url": "https://monoist.itmedia.co.jp/mn/articles/2610/21/news073.html"
-    },
-    {
-      "title": "中古GPUで1基から即日使える専用プライベートAI基盤",
-      "category": "ビジネス活用",
-      "summary": "エクストリームーDら3社は、低コストで社外秘データを安全に扱えるオンプレミス型AI基盤を開始した。",
-      "one_liner": "低コストで安全な専用AI基盤",
-      "why_important": "クラウドに機密データを出せない企業でも、現実的なコストで自社専用AIを持てます。",
-      "action_item": "クラウド送信が制限されている社内機密データの有無と規模を棚卸ししてください。",
-      "source": "ITmedia AI+\t",
-      "url": "https://monoist.itmedia.co.jp/mn/articles/2610/22/news039.html"
-    },
-    {
-      "title": "OpenAI、中継ゲートウェイ経由のモデル利用基準を厳格化",
+      "title": "Meta、機密流出の脆弱性に対処しAIツール「Muse」の公開共有を再開",
       "category": "リスク・規制",
-      "summary": "API直接提供を行う中継サービスに対して事前審査と承認を義務付け、安全基準の統一を図る。",
-      "one_liner": "OpenAI中継APIの審査が厳格化",
-      "why_important": "サードパーティ中継基盤に依存したシステムは、規約改定に伴う利用停止リスクへの対策が必要です。",
-      "action_item": "自社サービスが利用しているOpenAIのAPI接続経路と利用規約適合性を再確認してください。",
-      "source": "OpenAI Blog",
-      "url": "https://openai.com/index/broad-access-through-consistent-standards"
+      "summary": "MetaはAI成果物の共有リンクから機密データが閲覧可能となっていた問題を解消し、安全な新URL形式へ切り替えて共有機能を復旧させました。",
+      "one_liner": "AI生成物の共有ミスによる機密流出を防ぐ",
+      "why_important": "クラウドAIの共有リンクひとつで社外秘情報が公に露出するリスクを社内全体で警戒する必要があります。",
+      "action_item": "利用中のAIツールで生成物の共有設定が限定公開になっているか確認してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/1017066/meta-muse-sharing-back-on-artifiacts"
     },
     {
-      "title": "AWS、端末側小型モデルとクラウドを併用する新基盤を公開",
-      "category": "ビジネス活用",
-      "summary": "通常処理を端末側モデルで完結させ、高度推論のみクラウドに送ることでAPI運用コストを抑える。",
-      "one_liner": "端末AI併用でクラウド費用削減",
-      "why_important": "全処理を巨大クラウドモデルに依存する構成から脱却し、コストと遅延を大幅に削減できます。",
-      "action_item": "自社AI機能のうち、小型モデルで代替可能な単純処理を切り出してください。",
-      "source": "AWS Machine Learning",
-      "url": "https://aws.amazon.com/blogs/machine-learning/adaptive-agentic-intelligence-framework-using-strands-agents/"
-    },
-    {
-      "title": "国交省、造船再生へ官民1兆円投資と現場AI導入を推進",
+      "title": "LOVOT開発元が提唱、作業代替を超えた「関係形成型AI」の産業的勝機",
       "category": "日本市場",
-      "summary": "溶接などの熟練技能者不足に対応するため、現場向けフィジカルAI導入と建造量倍増を支援する。",
-      "one_liner": "造船1兆円投資で現場AI導入",
-      "why_important": "フィジカルAIの導入が重工業の技能伝承と生産性改善の国家的課題として動き出しました。",
-      "action_item": "自社業務で熟練技術者に依存している属人的作業を1つ特定してください。",
+      "summary": "GROOVE Xの林要社長は、効率化追求のタスク型に対し、人と信頼関係を築く関係形成型ロボットに日本企業の競争力があると提示しました。",
+      "one_liner": "効率化を超えた関係形成型AIの可能性",
+      "why_important": "業務の機械化だけでなく、社員のメンタルケアや顧客関係の深化を担うAI活用の新機軸が生まれています。",
+      "action_item": "職場で単なる作業効率化ではなく対話やケアが求められる場面を整理してください。",
       "source": "ITmedia ビジネスオンライン",
-      "url": "https://www.itmedia.co.jp/business/articles/2610/22/news009.html"
+      "url": "https://www.itmedia.co.jp/business/articles/2610/23/news012.html"
     },
     {
-      "title": "Recursive、PC上で高速動作するコーディングAIを無償公開",
-      "category": "研究・技術",
-      "summary": "ローカル環境で自己改善しつつ高速動作する「Flint」により、機密コードを保護したまま開発支援を行う。",
-      "one_liner": "PC上で動く無料のコード支援AI",
-      "why_important": "クラウドにコードを送信せず完全ローカルで開発支援を受けられるため、情報漏洩を防げます。",
-      "action_item": "オープンソースのローカルLLMを1台の開発PCに試験導入してみてください。",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/"
+      "title": "OpenAI、判定・分類処理に特化した低コスト「Decisions API」を発表",
+      "category": "対話型AI",
+      "summary": "OpenAIはデータ分類や条件判断を高速・安価に実行する新APIを公開し、バックオフィス業務のルールベース判断の自動化を支援します。",
+      "one_liner": "ルール判定業務を安価に自動化する新API",
+      "why_important": "重たい生成AIを使わずに判定処理だけを自動化できるため、定型ワークフローのシステム化費用を大幅に圧縮できます。",
+      "action_item": "社内の申請承認やデータ仕分けなど、条件判定で完了する業務を洗い出してください。",
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/index/decisions-api"
+    },
+    {
+      "title": "ローカルAIとクラウド連携で動画切り抜きシステムを3日で構築",
+      "category": "ビジネス活用",
+      "summary": "ローカルLLMとクラウドAIを組み合わせ、配信動画から見どころを抽出し字幕付きショート動画を自動生成する基盤が短期間で実装されました。",
+      "one_liner": "AI連携で動画切り抜き業務を3日で自動化",
+      "why_important": "複数のAIサービスを柔軟につなぐことで、専門知識が乏しくても高度な動画コンテンツ制作ラインを内製できます。",
+      "action_item": "社内で行っている動画や音声の切り抜き作業の工数を見積もってみてください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/column/haishin_shugyousou/2150334.html"
     }
   ]
 }
