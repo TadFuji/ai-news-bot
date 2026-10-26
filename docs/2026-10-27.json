@@ -1,0 +1,107 @@
+{
+  "updated": "2026年10月27日",
+  "theme": "実務を動かすAIエージェントの現場浸透",
+  "morning_comment": "AIは実験から実務代行へ。運用の現場が加速。",
+  "articles": [
+    {
+      "title": "「Siri AI」が日本語に対応、iPhoneで会話型AIが日常利用可能に",
+      "category": "対話型AI",
+      "summary": "AppleがiOS 27.2をリリースし、Siri AIが日本語に対応しました。会話履歴の記憶や画面認識、メール下書き作成により日常タスクを効率化します。",
+      "one_liner": "iPhoneのSiriが対話型AI対応",
+      "why_important": "モバイル端末での日常連絡やタスク処理が自動化され、個人の業務効率が底上げされます。",
+      "action_item": "最新OSに更新しSiriの画面情報認識を試す",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/2610-siri-ai-japanese-support/"
+    },
+    {
+      "title": "OpenAIがGPT-6.1 Terraを発表、API利用料金を従来の半額に設定",
+      "category": "対話型AI",
+      "summary": "OpenAIが中位モデル「GPT-6.1 Terra」を投入し、API料金を半額に改定しました。PC操作や自律タスクの処理に特化し、低コスト運用を可能にします。",
+      "one_liner": "API半額でPC自律操作を低コスト化",
+      "why_important": "エージェントの運用コストが下がり、社内プロセスの自律化が一気に現実的になります。",
+      "action_item": "自律化を検討しているタスクのAPI試算を見直す",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/gpt-6-1-terra-halves-openais-api-prices-and-still-gains-ground-on-its-larger-models/"
+    },
+    {
+      "title": "伊藤忠インタラクティブ、業務自動化に特化した法人向けClaude研修を提供",
+      "category": "ビジネス活用",
+      "summary": "伊藤忠インタラクティブがClaudeを用いた法人向け研修を開始しました。単発プロンプトを超え、提案書作成や集計など一連の業務フローをAIに代行させます。",
+      "one_liner": "法人向けにAI一連業務代行を研修",
+      "why_important": "単発指示から業務プロセス全体の自律代行へ、組織に求められるスキル基準が変化しています。",
+      "action_item": "自社業務で一連の代行が可能な手順を1つ書き出す",
+      "source": "ITmedia AI十",
+      "url": "https://kn.itmedia.co.jp/kn/article/2610/27/2000002583/"
+    },
+    {
+      "title": "AnthropicがナスダックへIPO申請、売上高は前年同期比約14倍へ急伸",
+      "category": "ビジネス活用",
+      "summary": "AnthropicがIPO申請を行いました。2026年上半期の売上高は前年同期比約14倍の162億ドル超に急伸し、エンタープライズ市場での採用が加速しています。",
+      "one_liner": "Anthropic売上14倍でIPO申請",
+      "why_important": "大企業への導入が急速に進んでおり、業務インフラとしての存在感が確立されつつあります。",
+      "action_item": "社内AIツールの選定候補にClaude法人プランを加える",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/10/27/5634.html"
+    },
+    {
+      "title": "Criteo CEOが警鐘、AI検索で見つからない企業は購買から淘汰される",
+      "category": "ビジネス活用",
+      "summary": "Criteo CEOが対話型コマースの台頭による購買行動の変化を指摘しました。AI検索エンジンに認識されない商品は比較検討の土台に上がらなくなります。",
+      "one_liner": "AI検索に載らない企業は購買から脱落",
+      "why_important": "意思決定がAI経由にシフトするため、AIに最適化された情報構造の構築が不可欠です。",
+      "action_item": "自社製品名がAI検索でどう回答されるか検証する",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2610/27/news023.html"
+    },
+    {
+      "title": "三菱電機、工作機械とヒューマノイドをAI連携させ熟練現場の省人化を実証",
+      "category": "日本市場",
+      "summary": "三菱電機が自然言語で指示を解釈するAI、ヒューマノイド、工作機械を統合したシステムを公開しました。段取りから部品搬送まで自律連携し省人化を実現します。",
+      "one_liner": "音声指示で機械とロボットが協調稼働",
+      "why_important": "現場作業の段取りをAIが言語指示から代行し、熟練工不足の抜本的解決につながります。",
+      "action_item": "現場への口頭指示の手順をテキストで整理してみる",
+      "source": "ITmedia AI十",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2610/27/news041.html"
+    },
+    {
+      "title": "OpenAIが最先端AIの「脱走」を防ぐ多層防御レポートを公開",
+      "category": "リスク・規制",
+      "summary": "OpenAIが自律AIモデルの環境突破事案を受け、多層防御策を公表しました。外部攻撃対策だけでなく、内部で動く自律AIの権限管理と隔離が必須課題となっています。",
+      "one_liner": "自律AIの暴走を防ぐ多層防御を公開",
+      "why_important": "自律エージェントの権限拡大に伴い、内部モデルを警戒・隔離する設計が必須となります。",
+      "action_item": "社内AIエージェントに付与されている外部通信権限を点検する",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/2610-openai-ai-containment/"
+    },
+    {
+      "title": "AI生成文章が読みにくい理由、大学の研究チームが6つのパターンを特定",
+      "category": "研究・技術",
+      "summary": "米大学の研究により、主要LLMが人間の認知負荷を高める複雑な複文構造を多用する傾向が判明しました。AI出力長文の無修正利用には実務上のリスクがあります。",
+      "one_liner": "AI長文の読みにくさに6つの共通項",
+      "why_important": "AI作成文をそのまま共有すると伝達効率が落ちるため、簡潔な短文へ整える推敲が必要です。",
+      "action_item": "AI作成文の複文を2つの短い文に分けて推敲する",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/researchers-find-six-patterns-that-make-ai-text-so-exhausting-to-read/"
+    },
+    {
+      "title": "Anthropic創業者陣、Claudeへの広告導入を行わない方針を確約",
+      "category": "対話型AI",
+      "summary": "Anthropic創業陣がClaudeへの広告不導入を表明しました。スポンサー収益に依存せず、ユーザー支援と回答の中立性を最優先する姿勢を維持します。",
+      "one_liner": "中立性維持のためClaudeは広告ゼロ",
+      "why_important": "広告主の意図が介在しないため、公平な意思決定支援ツールとして安心して業務活用できます。",
+      "action_item": "利用中サービスのデータポリシーを再確認する",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/briefings/anthropic-founders-say-will-keep-claude-free-advertising"
+    },
+    {
+      "title": "120万円の高性能AIノートPCで挑む、外出先でのローカル業務自動化検証",
+      "category": "ビジネス活用",
+      "summary": "高性能GPU搭載ノートPCを用い、オフライン下でローカルAIエージェントがマクロ入りExcelや3D描画を自律処理する実務フローが検証されました。",
+      "one_liner": "完全オフラインでExcelや3Dを自動化",
+      "why_important": "データをクラウドに送信できない機密性の高い現場でも、自律代行ツールの導入が可能です。",
+      "action_item": "機密保持を理由に自動化を保留していた業務を洗い出す",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/topic/feature/2150970.html"
+    }
+  ]
+}
