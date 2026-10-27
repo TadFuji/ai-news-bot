@@ -1,0 +1,107 @@
+{
+  "updated": "2026年10月28日",
+  "theme": "エッジAIとデータ統制の新局面",
+  "morning_comment": "現場稼働の進展と統制リスクが同時に顕在化しています。",
+  "articles": [
+    {
+      "title": "米大手銀、AIエージェントへの認証情報共有に警告",
+      "category": "リスク・規制",
+      "summary": "バンク・オブ・アメリカは、自律型AIに銀行口座の認証情報を渡さないよう顧客へ警告しました。AI代理決済などの過失責任は規約上利用者に帰属します。",
+      "one_liner": "AIへの銀行パスワード共有に米銀が警告",
+      "why_important": "エージェント委任時の法的責任は現状ユーザー側にあります。業務自動化ツールへの権限付与ルールを整備しないと事故時の免責が効きません。",
+      "action_item": "社内AIにAPIキーやPWを直書きしていないか確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/"
+    },
+    {
+      "title": "アリババ製AI「Qwen」の中国サーバー通信試行が発覚",
+      "category": "中国AI",
+      "summary": "アリババのLLM「Qwen」が特定条件下で中国サーバーへ通信する挙動が判明しました。オープンモデル導入企業における意図せぬ越境移転リスクを示しています。",
+      "one_liner": "オープンAIモデルの越境通信リスクが浮上",
+      "why_important": "オープンソースモデルでも外部通信プロトコルが潜むリスクが実証されました。社内機密データを扱う環境の隔離設定が必須となります。",
+      "action_item": "社内LLM実行環境のアウトバウンド通信ログを遮断・監査してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/alibabas-latest-qwen-models-routed-some-requests-through-company-servers-researchers-find/"
+    },
+    {
+      "title": "アップル、M6搭載MacBook Pro発表。ローカルAI処理が最大13倍高速化",
+      "category": "ビジネス活用",
+      "summary": "アップルはM6チップを搭載した14インチMacBook Proを発表しました。デュアル16コアNeural Engineを搭載し、M1比でLLMプロンプト処理が最大13倍に向上、日本語対応ベータ版のSiri AIとmacOS横断タスク処理を快適に実行できます。",
+      "one_liner": "ローカルAI処理が最大13倍に高速化",
+      "why_important": "クラウドを介さずセキュアに社内文書を高速処理する端末選定の基準が刷新されます。",
+      "action_item": "業務PCのリプレイス計画においてオンデバイスAIの要件を整理してください。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/10/28/5641.html"
+    },
+    {
+      "title": "オラクル、クラウド基盤にGoogle製AI半導体「TPU」を採用",
+      "category": "ビジネス活用",
+      "summary": "米オラクルはOCIにおいてGoogle独自開発のAIアクセラレータ「TPU」を提供開始すると発表しました。高価なNVIDIA製GPU依存を脱却し、フロンティアAIモデルの推論コスト引き下げを狙います。",
+      "one_liner": "推論コスト削減へ脱GPUが加速",
+      "why_important": "自社AIサービスの運用インフラ選定で大幅なコスト削減オプションが加わります。",
+      "action_item": "自社で利用中のクラウドAIモデル推論コストの内訳を確認してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2151701.html"
+    },
+    {
+      "title": "Google DeepMind、物理世界と対話できる「Genie 4」発表",
+      "category": "画像・動画AI",
+      "summary": "Google DeepMindは、テキストや操作に応じてリアルタイムに仮想世界を生成するワールドモデル「Genie 4」を発表しました。映像に加え物理シミュレーションや会話音声も同時に生成でき、Geminiと連携して計画・修正を行います。",
+      "one_liner": "リアルタイムで仮想世界を自動生成",
+      "why_important": "ゲーム開発や製品シミュレーション、研修動画の作成コストが劇的に下がる可能性があります。",
+      "action_item": "自社のシミュレーションや研修教材作成に適用可能かアイデアをメモしてください。",
+      "source": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/news/article/2610/28/2000002648/"
+    },
+    {
+      "title": "スマホの削除済みAIチャット履歴を復元するツールが登場",
+      "category": "リスク・規制",
+      "summary": "端末内のローカルデータベースから削除されたAIチャットログを復元する調査ツールが開発されました。チャット履歴を削除しても端末内に平文で残存している場合があり、機密情報入力の危険性を再確認させる契機となっています。",
+      "one_liner": "削除したAI履歴も復元されるリスク",
+      "why_important": "社外秘データや個人情報をAIに入力した場合、履歴削除だけでは証拠隠蔽や防護ができないと認識する必要があります。",
+      "action_item": "スマホ版AIアプリの入力履歴に機密情報が含まれていないか再確認してください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/innovation/orisa-tool-recovers-deleted-local-ai-chats-android-phones/"
+    },
+    {
+      "title": "ネット不要で動く防災AIアシスタント「Survival LLM」が無償公開",
+      "category": "ビジネス活用",
+      "summary": "完全オフラインのPC環境で動作する防災AIアシスタント「Survival LLM」が公開されました。災害マニュアルや医療情報、Wikipedia約93万件を内包し、通信が遮断された緊急時でも確証付きで応急処置や安全情報を提示します。",
+      "one_liner": "ネット遮断時も動く防災特化型AI",
+      "why_important": "企業のBCP対策や在宅時の緊急時対応ツールとしてオフラインAIの導入価値を評価できます。",
+      "action_item": "オフライン環境下で動作する社内用AI環境の必要性をBCP担当部署と共有してください。",
+      "source": "Hacker News AI",
+      "url": "https://www.brangus.io/survival-llm"
+    },
+    {
+      "title": "OpenAIとAnthropic、法人向け市場でシェア争奪戦が激化",
+      "category": "ビジネス活用",
+      "summary": "AnthropicがIPO申請で高い利益率を示す一方、OpenAIは安価で柔軟なモデル展開によりエンタープライズ顧客の切り崩しを本格化させています。法人市場では単なるモデル性能だけでなく、コスト効率と安全設計のバランスが評価軸となっています。",
+      "one_liner": "法人AI市場でモデル価格競争が激化",
+      "why_important": "自社導入する法人向けLLMのベンダー選定や契約見直しで有利な条件を引き出せる可能性があります。",
+      "action_item": "現在契約している生成AIベンダーの年間コストと代替選択肢をリストアップしてください。",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/articles/cheaper-models-win-openai-enterprise"
+    },
+    {
+      "title": "Anthropic、IPO後も安全性重視の独立委員会が取締役会を統制",
+      "category": "リスク・規制",
+      "summary": "Anthropicは新規株式公開（IPO）後も一般株主の議決権を制限し、AIの安全性を最優先する独立信託（LTBT）が取締役の過半数を任免できる統治構造を維持します。短期的な株主利益よりも人類の安全確保を優先する設計です。",
+      "one_liner": "利益より安全優先のAI統治構造",
+      "why_important": "信頼性重視のエンタープライズ向けAI製品としてClaudeを長期採用する際のガバナンス判断材料となります。",
+      "action_item": "取引先AIベンダーの安全性ポリシーや企業理念が自社方針に合致しているか確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/10/27/whos-really-in-charge-at-anthropic-after-the-ipo/"
+    },
+    {
+      "title": "Liquid AI、省メモリで高速動作する小型マルチモーダル「LFM3」公開",
+      "category": "研究・技術",
+      "summary": "Liquid AIは、わずか1GBのメモリで動作可能な2Bクラスのマルチモーダル基底モデル「LFM3」ファミリーを公開しました。スマホや小型PCなどのエッジ端末上でテキスト、画像、音声を統合処理できます。",
+      "one_liner": "1GBメモリで動く超軽量マルチAI",
+      "why_important": "高価なサーバーを用意せずとも、社内端末や現場デバイス上で直接動くAIエージェントの構築が可能になります。",
+      "action_item": "エッジ端末で自動化できる社内の現場作業や入力業務を1つ抽出してください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/10/27/liquid-ai-lfm3-open-weight-2b-multimodal-models/"
+    }
+  ]
+}
