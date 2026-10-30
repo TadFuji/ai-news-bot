@@ -1,107 +1,107 @@
 {
-  "updated": "2026年10月30日",
-  "theme": "業務定着とシャドーAI統制の急務",
-  "morning_comment": "実務浸透の裏で問われる自律と統制の境界線。",
+  "updated": "2026年10月31日",
+  "theme": "実務浸透とコスト・リスク管理",
+  "morning_comment": "実務直結機能と統制基盤が同時に整い始めています。",
   "articles": [
     {
-      "title": "Google、Geminiチャット上で文書やPDFの直接編集に対応",
-      "category": "対話型AI",
-      "summary": "GoogleがGeminiのチャット画面上でDocsやSheets、PDF、コードの直接編集やプレビューを可能にしました。外部アプリを開かずに文書修正を完結できます。",
-      "one_liner": "画面遷移なしで文書編集が完結",
-      "why_important": "ツール間の往復作業が消滅し、資料作成や修正の所要時間が劇的に短縮されます。",
-      "action_item": "今日の資料作成でGemini上での直接修正を試してください。",
+      "title": "Google スライド、Geminiによるプレゼン全体の一括編集に対応",
+      "category": "ビジネス活用",
+      "summary": "GoogleスライドでGeminiによる全スライドのデザイン刷新や統合、別ファイルを参考にした更新が可能になり、資料作成工数を大幅に削減します。",
+      "one_liner": "スライド資料の全自動一括刷新",
+      "why_important": "資料作成の定型作業が解消され、ストーリー設計や意思決定など本質的な業務に集中できるようになります。",
+      "action_item": "次回作成する社内向け資料で、GoogleスライドのAI編集パネルを試験利用してみてください。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/10/edit-entire-presentations-with-gemini-in-Google-Slides.html"
+    },
+    {
+      "title": "Google スプレッドシート、Gemini生成セルの参照元Web表示に対応",
+      "category": "ビジネス活用",
+      "summary": "「Fill with Gemini」機能で生成されたセル値に参照元Webリンクが表示されるようになり、リサーチデータの裏付け確認が容易になりました。",
+      "one_liner": "表計算AIの参照元を明示化",
+      "why_important": "AIが収集・入力したデータの根拠確認が瞬時に完了し、誤情報による業務判断ミスを防げます。",
+      "action_item": "スプレッドシートで競合調査などの情報収集を行い、セル内の参照元リンクを確認してください。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/10/weekly-recap-10-30-2026.html"
+    },
+    {
+      "title": "Cursorマーケットプレイスに悪意ある拡張機能が混入、情報窃取の危険",
+      "category": "リスク・規制",
+      "summary": "AIエディタCursorの公式市場に最大5000人規模で遠隔操作や情報窃取を行う不正拡張機能が約11時間公開され、開発ツールのサプライチェーンリスクが露呈しました。",
+      "one_liner": "AIエディタ拡張に遠隔窃取の罠",
+      "why_important": "AI開発ツールの導入が進む一方、非公式プラグインを経由した社内機密やコードの流出リスクが現実化しています。",
+      "action_item": "開発チームが導入しているエディタ拡張機能の発行元と権限を棚卸ししてください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/malicious-claude-code-extension-in-cursors-marketplace-attempted-remote-access-and-data-theft/"
+    },
+    {
+      "title": "GoogleのAI検索機能、外部サイトへの流入を激減させるとReddit CEOが警告",
+      "category": "ビジネス活用",
+      "summary": "Google検索の「AIモード」による回答完結で自社流入が週100万件以上減少したとRedditが指摘。従来のSEOを前提とした集客モデルの見直しが急務です。",
+      "one_liner": "AI検索でWeb流入激減が深刻化",
+      "why_important": "検索結果画面内で完結するゼロクリック検索が拡大し、従来のオウンドメディア集客の費用対効果が崩れる恐れがあります。",
+      "action_item": "自社サイトへの検索流入推移を確認し、AI検索によるアクセス減少の影響を調べてください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/googles-ai-mode-doesnt-drive-traffic-for-anybody-reddit-ceo-huffman-warns-the-entire-web/"
+    },
+    {
+      "title": "OpenAIやGoogleなど主要各社、AIデータ収集拒否の統一基準に合意",
+      "category": "リスク・規制",
+      "summary": "IETF提案に基づき、robots.txtでAI学習目的のデータクローリングを一括拒否できる統一規格が策定され、サイト管理者のブロック運用負担が軽減されます。",
+      "one_liner": "AI学習収集の統一拒否規格が誕生",
+      "why_important": "ベンダーごとに個別対応していた自社データや著作物のスクレイピング拒否が、単一の記述で確実に制御できるようになります。",
+      "action_item": "自社ウェブサイトのrobots.txtの記述方針とスクレイピング対策を確認してください。",
       "source": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs"
+      "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out"
     },
     {
-      "title": "福地組、AI文書処理で見積書処理時間を約9割短縮",
-      "category": "日本市場",
-      "summary": "建設会社の福地組がAI文書処理サービスを導入し、半日要していた見積書転記作業を約30分に短縮しました。書式が異なる書類も事前設定なしで表形式データに変換します。",
-      "one_liner": "非定型見積書の転記を9割削減",
-      "why_important": "事前設定不要のAI処理により、現場の属人的な入力作業を即座に効率化できる好例です。",
-      "action_item": "手作業で転記している定型帳票を1つリストアップしてください。",
-      "source": "ITmedia AI+",
-      "url": "https://kn.itmedia.co.jp/kn/article/2610/30/2000002725/"
-    },
-    {
-      "title": "OpenAI、Proプランの利用上限を2倍に引き上げ",
-      "category": "対話型AI",
-      "summary": "OpenAIが有料プランであるPro 100およびPro 500の利用上限枠を2倍に拡大しました。競合Anthropicとのシェア争いが激化する中、利用制限による作業中断リスクを低減させます。",
-      "one_liner": "Proプランの利用枠が2倍に拡大",
-      "why_important": "制限到達による業務中断リスクが半減し、実質的なコスト対効果が向上します。",
-      "action_item": "チームの利用頻度を確認し、Proプランへの移行余地を検討してください。",
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/openai-doubles-usage-limits-on-pro-plans-as-competition-with-anthropic-heats-up/"
-    },
-    {
-      "title": "Anthropic調査、専門家がAIの無作為な意見に誘導されるリスクが判明",
-      "category": "リスク・規制",
-      "summary": "Anthropicの実験により、ランダムに選ばれたAIの意見に対して専門家が最大86%従い、自らの意思で判断したと誤認することが判明しました。",
-      "one_liner": "専門家がAIの意見を盲信し誤認",
-      "why_important": "専門知識があってもAIの提示に無意識に誘導され、重大な判断を誤る危険性があります。",
-      "action_item": "AIの提案を採用する前に、反証の理由を一度言語化してください。",
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/experts-adopt-ai-agents-random-opinions-and-think-theyre-their-own-anthropic-study-finds/"
-    },
-    {
-      "title": "ペンタゴン機密システムに下請け従業員の個人AIエージェントが接続",
-      "category": "リスク・規制",
-      "summary": "下請け従業員が個人用Claudeエージェントを米国防総省ネットワークに接続し、2カ月間稼働させていた事態が発覚しました。個人導入のAIが情報漏洩の侵入経路になる脅威を示しています。",
-      "one_liner": "野良AIが機密網に侵入、漏洩危機",
-      "why_important": "個人が効率化目的で無許可導入するAIが、組織全体の重大なセキュリティ侵害につながります。",
-      "action_item": "業務で無許可利用している個人AIツールがないか棚卸ししてください。",
-      "source": "Wired AI",
-      "url": "https://www.wired.com/story/a-defense-contractor-gave-their-personal-ai-agent-access-to-a-secure-pentagon-system/"
-    },
-    {
-      "title": "Google時価総額が5000億ドル急落、AI検索による広告収入減が影響",
+      "title": "米大手ITのAI設備投資が年間110兆円規模へ、市場は採算性を注視",
       "category": "ビジネス活用",
-      "summary": "Alphabetの四半期決算でAI検索概要の導入が検索連動型広告の売上を圧迫し、時価総額が急落しました。AI投資と既存事業の収益モデル維持の難しさが浮き彫りになっています。",
-      "one_liner": "AI検索の浸透で広告収益激減",
-      "why_important": "AIによる回答完結が従来のウェブ導線を破壊し、検索集客モデルの転換を迫っています。",
-      "action_item": "自社サイトへの検索流入推移を直近データで確認してください。",
-      "source": "BBC Technology",
-      "url": "https://www.bbc.co.uk/news/articles/cm9qzdqpxy48o?at_medium=RSS&at_campaign=rss"
+      "summary": "大手クラウド4社のAI設備投資が巨額化する一方、フリーキャッシュフロー悪化への懸念から、投資に見合う早期の収益化実証が求められています。",
+      "one_liner": "年間110兆円投資と採算性への疑問",
+      "why_important": "プラットフォーマーの設備投資負担が増大することで、今後のAIサービス利用料の値上げやプラン改変につながる可能性があります。",
+      "action_item": "自社が契約している主要AIツールの年間利用コストと費用対効果を試算してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/"
     },
     {
-      "title": "AI悪用の標的型詐欺が激化、社内なりすまし対策の重要性が向上",
-      "category": "リスク・規制",
-      "summary": "公開情報とAIを組み合わせ、経営陣や取引先を装って従業員をだますなりすまし攻撃が激化しています。正規認証を奪われた前提での社内監視と従業員訓練が求められています。",
-      "one_liner": "AIなりすまし詐欺が社内を狙う",
-      "why_important": "精巧な偽装攻撃に対し、メールやチャットの文面だけでは真偽を見抜けない段階に入りました。",
-      "action_item": "送金や権限付与の依頼に対する別ルートでの口頭確認ルールを徹底してください。",
-      "source": "ITmedia ビジネスオンライン",
-      "url": "https://www.itmedia.co.jp/business/articles/2610/30/news024.html"
-    },
-    {
-      "title": "Figma、キャンバス上で動作する独自デザインAIモデルを開発",
-      "category": "画像・動画AI",
-      "summary": "Figmaがデザイン編集に特化した高速AIモデルを発表しました。レイアウト変更や余白調整など日常的な反復作業を直接キャンバス上でAIエージェントに指示して実行できます。",
-      "one_liner": "デザイン反復作業をAIが代行",
-      "why_important": "微調整やレイアウト作業を自動化し、クリエイターが設計構想に注力できるようになります。",
-      "action_item": "デザイン業務で繰り返し発生している微調整作業を整理してください。",
+      "title": "Figma、AI生成ワークフローを共有・標準化する「Weave」を発表",
+      "category": "ビジネス活用",
+      "summary": "AI生成ツールと編集機能をノードで繋ぎ、再現可能な制作ワークフローとしてチーム共有できる「Figma Weave」が登場し、クリエイティブ制作を自動化します。",
+      "one_liner": "デザインAI工程をノードで標準化",
+      "why_important": "個人のプロンプト依存だったデザイン生成を組織内の再現可能なパイプラインに落とし込み、量産スピードを高められます。",
+      "action_item": "自社の画像・バナー制作で属人化している作業工程を1つ書き出してみてください。",
       "source": "Figma Blog",
-      "url": "https://www.figma.com/blog/training-a-figma-fluent-editing-model/"
+      "url": "https://www.figma.com/blog/the-tldr-on-figma-weave/"
     },
     {
-      "title": "Reddit、AI検索による流入減を受けログイン必須化へ舵切り",
-      "category": "ビジネス活用",
-      "summary": "RedditはAI要約による検索流入の大幅減を受け、ログイン前提の仕様へ移行します。AIによる無断スクレイピングを防ぎ、自前のデータライセンス契約と広告を強化します。",
-      "one_liner": "AI検索に対抗し会員制へ転換",
-      "why_important": "データの囲い込みが加速し、外部データの収集や無償活用への制限が強まります。",
-      "action_item": "自社コンテンツの二次利用規約やアクセス制限の現状を確認してください。",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/"
-    },
-    {
-      "title": "会議AIメモ「Granola」、音声文字起こし入力を追加",
+      "title": "OpenAI、AIモデルの挙動指針「Model Spec」を改訂",
       "category": "対話型AI",
-      "summary": "会議要約AIツール「Granola」が音声ディクテーション機能を追加し、メモ作成と音声入力を一元化しました。会議記録だけでなく、会議後のタスク整理も音声主導で完結できます。",
-      "one_liner": "音声入力でメモ作成を一元化",
-      "why_important": "キーボード入力の手間を省き、会議後のタスク化と情報共有の速度を向上させます。",
-      "action_item": "今日の会議後、音声入力を使って要約メモを素早く作成してみてください。",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/10/29/granola-crunches-up-a-dictation-feature-to-compete-with-wispr/"
+      "summary": "OpenAIが行動規範を更新し、ユーザー意図への忠実さや自己前提の明示を強化することで、文脈理解の向上と回答精度の安定化を図ります。",
+      "one_liner": "モデル行動指針刷新で回答安定へ",
+      "why_important": "指示の曖昧さによる誤認が減り、業務システムに組み込むLLMプロンプトの安定稼働が期待できます。",
+      "action_item": "定常利用しているプロンプトで、AIが意図を正しく解釈しているか出力を検証してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openai-sets-new-behavioral-guidelines-for-ai-models-that-have-already-proven-hard-to-control/"
+    },
+    {
+      "title": "マイクロソフト、コーディングAIのトークン消費を最大3割削減するツール公開",
+      "category": "研究・技術",
+      "summary": "過去の実行履歴を学習してトークン消費を18.4%〜30.9%抑制するオープンソース「TokenEconomizer」を公開。構造を変えずにエージェント実行コストを削ります。",
+      "one_liner": "エージェント費用を最大3割削減",
+      "why_important": "自律型エージェント運用で膨らみがちなAPI呼び出しコストを、既存アーキテクチャのまま圧縮できます。",
+      "action_item": "GitHubでTokenEconomizerのリポジトリを確認し、自社エージェントへの適用可否を検討してください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/"
+    },
+    {
+      "title": "OpenAIサム・アルトマン氏、端末分散よりデータセンター集中活用を提唱",
+      "category": "ビジネス活用",
+      "summary": "世界的なメモリ不足に対し、PC端末での分散保有ではなくクラウド集中利用を主張。データセンター主導の資源集中が一般PC価格上昇に影響を与えています。",
+      "one_liner": "メモリの集中と端末価格の上昇",
+      "why_important": "ハードウェア調達コストの上昇が見込まれる中、社内IT資産のオンプレミス更新かクラウド移行かの判断基準になります。",
+      "action_item": "直近で予定しているPCやサーバーの更新費用見積もりにメモリ高騰の影響がないか確認してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023820/sam-altman-ram-shortage-cloud-servers"
     }
   ]
 }
