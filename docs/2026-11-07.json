@@ -1,0 +1,107 @@
+{
+  "updated": "2026年11月07日",
+  "theme": "自律型AIの普及とセキュリティの急変",
+  "morning_comment": "エージェントの実装と防御が同時に問われる朝。",
+  "articles": [
+    {
+      "title": "Perplexityが業務向け自律型AIエージェント「Teammates」を発表",
+      "category": "ビジネス活用",
+      "summary": "Perplexityが継続的な複雑業務を自律実行するAIエージェント機能を公開しました。リサーチからレポート作成までの一連のデスクワークを任せられます。",
+      "one_liner": "調査業務を自律実行するAI登場",
+      "why_important": "定型的な調査から要約までの作業を丸ごと任せられる段階に入りました。人間は最終判断と指示出しに集中する働き方へシフトします。",
+      "action_item": "毎日30分以上かけている情報収集業務を書き出す。",
+      "source": "Hacker News AI",
+      "url": "https://www.perplexity.ai/en-GB/hub/blog/teammates-are-agents-for-complex-ongoing-work"
+    },
+    {
+      "title": "Google WorkspaceにGemini機能が追加、フォーム集計や動画作成を効率化",
+      "category": "ビジネス活用",
+      "summary": "Google Formsの回答をGeminiが自動分析して改善提案を出す機能や、Google Vidsの動画生成強化が実装されました。",
+      "one_liner": "フォーム集計と動画作成をAI自動化",
+      "why_important": "日常的に使うツールに分析と生成が直接組み込まれ、追加の学習コストなしで作業時間を圧縮できます。",
+      "action_item": "直近の社内アンケート結果をGeminiに読み込ませて要約させる。",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/11/weekly-recap-11-06-2026.html"
+    },
+    {
+      "title": "中国の無料AI「DeepSeek」「GLM」のハッキング能力がOpenAI最上位に肉薄",
+      "category": "中国AI",
+      "summary": "仮想ネットワークへの侵入テストで中国の無料モデルが高い攻撃能力を示しました。高度な攻撃ツールが安価に出回るリスクが高まっています。",
+      "one_liner": "中国の無料AIがサイバー攻撃で猛威",
+      "why_important": "安価なオープンモデルの悪用によりサイバー攻撃の敷居が大幅に下がりました。一般企業も標的になる前提での防御見直しが必要です。",
+      "action_item": "自社で利用している全サービスの多要素認証設定を再確認する。",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/free-chinese-ai-models-are-getting-scary-good-at-hacking/"
+    },
+    {
+      "title": "Chainalysis、AIエージェントを悪用した不正アクセスで全顧客の認証情報を流出",
+      "category": "リスク・規制",
+      "summary": "暗号資産分析企業ChainalysisがAIエージェントを活用した侵入を受け、全顧客の認証トークン等を盗まれました。",
+      "one_liner": "AI悪用攻撃で全顧客認証情報が流出",
+      "why_important": "AIが自律的に脆弱性を突く攻撃が現実の被害を生みました。従来の静的な監視体制では防ぎ切れない脅威が顕在化しています。",
+      "action_item": "社内APIキーとアクセストークンの有効期限と権限範囲を棚卸しする。",
+      "source": "Ars Technica AI",
+      "url": "https://arstechnica.com/security/2026/11/chainalysis-says-hackers-stole-credentials-and-tokens-for-all-of-its-customers/"
+    },
+    {
+      "title": "MetaがMuse AIに「Spaces」導入、目的に応じた専用画面を即時生成",
+      "category": "対話型AI",
+      "summary": "指示に応じてAIアシスタントが専用のミニアプリ画面を構築する新機能が発表されました。コード不要で業務ダッシュボードを即時生成できます。",
+      "one_liner": "AIが専用業務画面を即時コードレス生成",
+      "why_important": "固定されたソフトウェアのUIに人が合わせる時代から、作業内容に合わせて画面を生成する時代へ移行します。",
+      "action_item": "頻繁に参照する指標を1画面に並べる構成案をメモ帳にまとめる。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces"
+    },
+    {
+      "title": "OpenAIが110億ドルを資金調達、企業価値は1.25兆ドル規模へ",
+      "category": "ビジネス活用",
+      "summary": "OpenAIが新ラウンドの第1段階で110億ドルを確保し、評価額1.25兆ドルに到達しました。次世代フロンティアモデルの開発が加速します。",
+      "one_liner": "企業価値1.25兆ドルへ巨額調達",
+      "why_important": "巨額資金の投下により基盤モデルの性能更新ピッチが一段と上がります。特定モデルに依存しすぎない業務設計が求められます。",
+      "action_item": "現在利用中のモデルにトラブルが起きた際の代替モデルを1つ決めておく。",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/briefings/openai-secured-11-billion-targets-9-billion-fundraising"
+    },
+    {
+      "title": "Anthropicが新規株式公開（IPO）のロードショーを開始へ",
+      "category": "ビジネス活用",
+      "summary": "Claudeを運営するAnthropicが上場に向けた投資家説明会を来週開始します。調達力強化により法人向けサービスの拡充が期待されます。",
+      "one_liner": "Claude運営元が上場準備を本格化",
+      "why_important": "エンタープライズ領域で支持を集めるAnthropicの財務基盤が固まり、法人利用時の信頼性が一段と高まります。",
+      "action_item": "Claudeの法人プランのセキュリティ規約と自社ポリシーを照合する。",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/briefings/anthropic-proceed-ipo-roadshow-next-week"
+    },
+    {
+      "title": "AIがAI研究を加速、Anthropicの能力向上速度が前年比2倍に到達",
+      "category": "研究・技術",
+      "summary": "Anthropicの内部調査により、AI自身による研究自動化で性能向上ペースが前年比2倍になったことが判明しました。",
+      "one_liner": "AIがAIを開発し進化速度が2倍に",
+      "why_important": "技術の陳腐化サイクルが想定を超えて加速しています。数カ月前のベストプラクティスが通用しなくなる前提で運用を見直す必要があります。",
+      "action_item": "日常的に使っている定型プロンプトを最新のモデルで動作検証する。",
+      "source": "Hacker News AI",
+      "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai"
+    },
+    {
+      "title": "Figma CEOが指摘「コードが民主化された今、デザインこそが新しいコードである」",
+      "category": "ビジネス活用",
+      "summary": "AIによるコード生成が普及した結果、人間が担うべき差別化の本質は課題解決の設計やデザインに移ったと提言されました。",
+      "one_liner": "コード普及でデザインの価値が再評価",
+      "why_important": "生成AIで誰もが実装できる環境では、何を作るかという要件定義と構造設計の質が成果を分けます。",
+      "action_item": "作成中の資料や施策について「誰のどんな課題を解くか」を1文で言語化する。",
+      "source": "Figma Blog",
+      "url": "https://www.figma.com/blog/in-conversation-dylan-field-and-david-friedberg/"
+    },
+    {
+      "title": "米中間選挙でAIデータセンターへの規制逆風が激化、電力網への懸念拡大",
+      "category": "リスク・規制",
+      "summary": "データセンター新設に対する住民の反対や規制要求が米中間選挙で争点化しています。インフラ制約によるコスト増加が懸念されます。",
+      "one_liner": "米中間選挙でAIインフラに逆風拡大",
+      "why_important": "電力や立地の制約が、将来的なAIサービスの利用コストや利用枠の制限として跳ね返ってくる可能性があります。",
+      "action_item": "社内のAI利用量と発生コストの推移をダッシュボードで確認する。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy"
+    }
+  ]
+}
