@@ -1,0 +1,107 @@
+{
+  "updated": "2026年11月10日",
+  "theme": "エージェント実務導入と基盤の再編",
+  "morning_comment": "実務に溶け込む自律AIと、問われる統治体制。",
+  "articles": [
+    {
+      "title": "AIエージェント標準「MCP」の仕様改訂で企業導入が加速",
+      "category": "ビジネス活用",
+      "summary": "AIと社内ツールを接続するオープン規格「Model Context Protocol」が改訂され、通信のステートレス化が実現しました。水平拡張や負荷分散が容易になり、企業インフラへのエージェント導入に伴う運用負荷とセキュリティ懸念を低減します。",
+      "one_liner": "MCP改訂でエージェント連携が容易に",
+      "why_important": "社内システムとAIの接続負荷が下がり、本格的なエージェント運用への移行が早まります。",
+      "action_item": "自社システムでMCP連携可能なツールを洗い出してください。",
+      "source": "ITmedia AI+\t",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/10/news003.html"
+    },
+    {
+      "title": "Anthropicが最上位モデル「Claude Fable 5.2」「Mythos 5.2」を発表",
+      "category": "対話型AI",
+      "summary": "Anthropicが高難度な技術課題向けの新旗艦モデルを発表しました。コーディングと推論能力を大幅に向上させつつ出力速度を最大30%改善し、自律型エージェントの長時間稼働を後押しします。",
+      "one_liner": "Claude新モデルが推論速度30%向上",
+      "why_important": "複雑な推論を高速処理できるため、自律型エージェントの実用性が飛躍します。",
+      "action_item": "開発チームで現行モデルとの推論速度と精度の差を検証してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/claude-fable-5-2-and-mythos-5-2-cement-anthropics-ai-lead-just-before-its-ipo/"
+    },
+    {
+      "title": "Nvidia CEOの中国スパイ疑惑報道で株価急落とガバナンス危機",
+      "category": "リスク・規制",
+      "summary": "Nvidiaのジェンスン・ファンCEOが中国スパイ容疑者との不倫関係を認め、取締役会が独立調査を開始しました。AI半導体供給を独占する同社の経営混乱は、世界的なAIインフラ投資計画に影響を及ぼしています。",
+      "one_liner": "Nvidia経営危機でAI半導体供給に影",
+      "why_important": "単一企業に依存するインフラ調達リスクが顕在化し、代替手段の検討が急務になります。",
+      "action_item": "GPU調達先についてマルチクラウド化の余地を確認してください。",
+      "source": "BBC Technology",
+      "url": "https://www.bbc.co.uk/news/articles/c6zxjx01vyleo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "OpenAIがChatGPT EnterpriseをAWS Marketplaceで提供開始",
+      "category": "ビジネス活用",
+      "summary": "OpenAIが企業向けプランをAWS Marketplace経由で調達可能にしました。既存のAWS請求書に合算できるため、企業の購買審査や調達手続きが迅速化されます。",
+      "one_liner": "ChatGPT企業版がAWS決済に対応",
+      "why_important": "既存のクラウド契約枠で購入できるため、調達部門の審査期間を大幅に短縮できます。",
+      "action_item": "自社のAWS利用枠内でPoC費用を計上できるか財務担当に確認してください。",
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace"
+    },
+    {
+      "title": "Metaがエージェント定型業務に特化した軽量AI「Muse Ember」を投入",
+      "category": "対話型AI",
+      "summary": "Metaがツール呼び出しやデータ抽出などの日常業務に特化した最小モデルを公開しました。100万トークンあたり0.10ドルの低価格により、大量のルーチン作業を低予算でエージェント化できます。",
+      "one_liner": "100万トークン0.1ドルの軽量AI",
+      "why_important": "定型業務の自動化コストが劇的に下がり、小規模な業務単位でもROIが成立します。",
+      "action_item": "日常のデータ転記など軽量モデルに切り替え可能な作業を特定してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/meta-launches-muse-ember-a-small-ai-model-built-for-the-repetitive-work-agents-actually-do/"
+    },
+    {
+      "title": "Amazon BedrockがRAGを高度化、単一検索とマルチステップ自律検索に対応",
+      "category": "ビジネス活用",
+      "summary": "Amazon BedrockのKnowledge Baseが、単一検索と複数回検索を繰り返す自律型検索に対応しました。複雑な社内規程の照会や横断調査において、質問の難易度に応じた回答生成が可能です。",
+      "one_liner": "AWSがRAGの自律ステップ検索に対応",
+      "why_important": "複数回の情報探索を自律実行することで、複雑な規程照会や社内調査の精度が向上します。",
+      "action_item": "社内ナレッジ検索で漏れが起きている複雑な質問事例をリスト化してください。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/single-shot-and-agentic-retrieval-with-amazon-bedrock-managed-knowledge-base/"
+    },
+    {
+      "title": "法律事務所におけるAgentic AI活用とワークフロー自動化の現在地",
+      "category": "ビジネス活用",
+      "summary": "米国の大手法律事務所がチャットボットから業務プロセスを自律処理するAIエージェントの導入へ移行しています。専門職の抵抗感を減らしROIを測定する知見が蓄積されつつあります。",
+      "one_liner": "米法律事務所が業務自動化を本格展開",
+      "why_important": "専門職でもチャットからプロセス自動化へ移行しており、業務設計そのものの見直しが求められます。",
+      "action_item": "自社の専門業務におけるレビューやリサーチの自動化範囲を検討してください。",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/articles/agentic-ai-raises-bar-law-firms"
+    },
+    {
+      "title": "高市首相が仏AI会合で安全保障上の脅威への国際協調を訴え",
+      "category": "日本市場",
+      "summary": "高市首相はフランス政府主催の会合に出席し、AI悪用によるサイバー攻撃など安全保障上の脅威に対する国際連携を求めました。利便性推進とリスク管理の世界水準での調和を目指す姿勢を示しています。",
+      "one_liner": "日本政府がAI安全保障の国際協調を主導",
+      "why_important": "サイバーセキュリティとAI規制の国際整合が進み、企業のAIリスク管理基準に影響します。",
+      "action_item": "自社のAI利用方針が政府の安全基準やガイドラインに合致しているか確認してください。",
+      "source": "NHK 科学・技術",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261110de73220"
+    },
+    {
+      "title": "ByteDanceが100回連続編集でも画質を保つ「Seedream 5.5」を発表",
+      "category": "中国AI",
+      "summary": "ByteDanceは100回以上の連続画像編集を行っても画質や色が破綻しない新モデルを公開しました。透過背景の直接生成にも対応し、広告素材やEC画像などの制作工程を効率化します。",
+      "one_liner": "100回編集でも画質維持の中国画像AI",
+      "why_important": "連続編集による劣化がなくなり、広告バナーや商品画像の制作内製化が容易になります。",
+      "action_item": "制作現場のバナー差分作成フローで画像モデルの導入を試作してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/bytedances-seedream-5-5-promises-pixel-stable-image-editing-across-100-rounds-without-color-drift/"
+    },
+    {
+      "title": "AI推論基盤Fireworksへの不正アクセスで顧客データ流出の危機",
+      "category": "リスク・規制",
+      "summary": "オープンソースモデルの推論を担う米Fireworksがシステム侵害を受け、大手顧客を含む一部データが流出しました。API基盤の乗り換えを検討する企業が出始めており、AIサプライチェーンのリスクが浮き彫りになっています。",
+      "one_liner": "AI推論基盤の侵害で顧客データ流出",
+      "why_important": "外部APIへの機密データ送信リスクが顕在化し、外部ベンダーの監査徹底が必要です。",
+      "action_item": "外部AI APIに送信しているデータの機密レベルを今一度棚卸ししてください。",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/articles/new-fireworks-hack-threatens-1-billion-business"
+    }
+  ]
+}

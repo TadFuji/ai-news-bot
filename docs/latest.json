@@ -1,107 +1,107 @@
 {
-  "updated": "2026年11月09日",
-  "theme": "実用化の加速とインフラ・法的摩擦",
-  "morning_comment": "実用化が進む一方、コストや規制の摩擦が表面化しています。",
+  "updated": "2026年11月10日",
+  "theme": "エージェント実務導入と基盤の再編",
+  "morning_comment": "実務に溶け込む自律AIと、問われる統治体制。",
   "articles": [
     {
-      "title": "コクヨ、Notion AIとエージェント連携で散乱資料を集約",
+      "title": "AIエージェント標準「MCP」の仕様改訂で企業導入が加速",
       "category": "ビジネス活用",
-      "summary": "コクヨはNotionとAIエージェントを連携させ、散乱した開発資料の集約と文書レビューの自動化を実現しました。情報の検索や転記作業を削減し、AIが社内ナレッジを自律的に参照・更新する基盤を構築しています。",
-      "one_liner": "社内資料散乱をAI連携で解消",
-      "why_important": "散在する社内文書の集約とレビュー自動化は、ナレッジワーカーの生産性を直結して引き上げます。",
-      "action_item": "自チームで最も検索に時間がかかっている文書の保管場所を特定してください。",
+      "summary": "AIと社内ツールを接続するオープン規格「Model Context Protocol」が改訂され、通信のステートレス化が実現しました。水平拡張や負荷分散が容易になり、企業インフラへのエージェント導入に伴う運用負荷とセキュリティ懸念を低減します。",
+      "one_liner": "MCP改訂でエージェント連携が容易に",
+      "why_important": "社内システムとAIの接続負荷が下がり、本格的なエージェント運用への移行が早まります。",
+      "action_item": "自社システムでMCP連携可能なツールを洗い出してください。",
       "source": "ITmedia AI+\t",
-      "url": "https://kn.itmedia.co.jp/kn/article/2611/09/2000002973/"
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/10/news003.html"
     },
     {
-      "title": "ファミリーマート、GoogleのAIで新作スイーツを商品化",
-      "category": "ビジネス活用",
-      "summary": "ファミリーマートがGoogleのGemini Notebookを活用し、過去実績とトレンドデータを分析して新作スイーツを製品化しました。プロンプトに制約条件と分析手順を詳細に定義することで実用的な商品企画を実現しています。",
-      "one_liner": "販売データとAIで新商品を開発",
-      "why_important": "感覚頼みの商品開発から、過去データとAI分析を組み合わせた迅速な仮説検証モデルへの転換を示しています。",
-      "action_item": "企画書作成時に過去の実績数値をAIに読み込ませて改善案を出させてみてください。",
-      "source": "ITmedia ビジネスオンライン",
-      "url": "https://www.itmedia.co.jp/business/articles/2611/09/news013.html"
-    },
-    {
-      "title": "Apple、Siriのエージェント化でアプリ自律操作に対応へ",
+      "title": "Anthropicが最上位モデル「Claude Fable 5.2」「Mythos 5.2」を発表",
       "category": "対話型AI",
-      "summary": "AppleがSiriに自律型エージェント機能を組み込み、標準アプリや外部アプリを通じた予約・注文などの一連のタスクを自動実行する開発を加速させています。対話型からタスク代行型への転換を目指します。",
-      "one_liner": "Siriがアプリを自律操作へ",
-      "why_important": "スマホ操作がUIタップからAIへの目的指示へ移行し、アプリやサービスの顧客接点が根本から変わります。",
-      "action_item": "音声アシスタントに任せたい日常の反復スマホ操作を1つ書き出してください。",
-      "source": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic"
+      "summary": "Anthropicが高難度な技術課題向けの新旗艦モデルを発表しました。コーディングと推論能力を大幅に向上させつつ出力速度を最大30%改善し、自律型エージェントの長時間稼働を後押しします。",
+      "one_liner": "Claude新モデルが推論速度30%向上",
+      "why_important": "複雑な推論を高速処理できるため、自律型エージェントの実用性が飛躍します。",
+      "action_item": "開発チームで現行モデルとの推論速度と精度の差を検証してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/claude-fable-5-2-and-mythos-5-2-cement-anthropics-ai-lead-just-before-its-ipo/"
     },
     {
-      "title": "米エヌビディア取締役会、ファンCEO巡る安保疑惑を調査",
+      "title": "Nvidia CEOの中国スパイ疑惑報道で株価急落とガバナンス危機",
       "category": "リスク・規制",
-      "summary": "エヌビディア取締役会は、ジェンスン・ファンCEOと中国スパイ疑惑のある女性役員との関係を巡り独立調査を開始しました。対中輸出規制下の半導体供給網に対する安全保障上の懸念が強まっています。",
-      "one_liner": "エヌビディア首脳に安保調査",
-      "why_important": "AI半導体の供給網を握るトップ企業の地政学リスクは、世界的なハードウェア調達計画に波及します。",
-      "action_item": "自社のAIインフラが特定ベンダーに過度に依存していないか確認してください。",
-      "source": "Semafor Technology",
-      "url": "https://www.semafor.com/article/11/08/2026/nvidia-ceo-jensen-huang-admits-to-affair-with-suspected-chinese-spy"
+      "summary": "Nvidiaのジェンスン・ファンCEOが中国スパイ容疑者との不倫関係を認め、取締役会が独立調査を開始しました。AI半導体供給を独占する同社の経営混乱は、世界的なAIインフラ投資計画に影響を及ぼしています。",
+      "one_liner": "Nvidia経営危機でAI半導体供給に影",
+      "why_important": "単一企業に依存するインフラ調達リスクが顕在化し、代替手段の検討が急務になります。",
+      "action_item": "GPU調達先についてマルチクラウド化の余地を確認してください。",
+      "source": "BBC Technology",
+      "url": "https://www.bbc.co.uk/news/articles/c6zxjx01vyleo?at_medium=RSS&at_campaign=rss"
     },
     {
-      "title": "楽曲生成AI「Suno」、著名アーティスト権利者から相次ぎ提訴",
-      "category": "リスク・規制",
-      "summary": "楽曲生成AIのSunoが、エルヴィス・プレスリーやエミネムの権利者から声や作風の無断模倣を理由に提訴されました。生成AIによる著名人のスタイル流用に対する法的責任の追及が厳格化しています。",
-      "one_liner": "楽曲AIに著名人権利者が提訴",
-      "why_important": "商用クリエイティブにおける生成AI利用では、著作権だけでなく肖像や作風の権利リスク精査が急務です。",
-      "action_item": "社外向けコンテンツで生成AIを使用する際の権利確認フローを点検してください。",
-      "source": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1029533/elvis-eminem-suno-ai-music-clone-lawsuit"
-    },
-    {
-      "title": "画面から類似アプリを自動再構築する「Craft Anything」公開",
-      "category": "研究・技術",
-      "summary": "既存Webやアプリの外観・挙動をAIが解析し、コードを見ずに類似プロジェクトを自動生成するOSS「Craft Anything」が公開されました。迅速なUI試作が可能な一方、意匠模倣の懸念も浮上しています。",
-      "one_liner": "外観から類似アプリを自動構築",
-      "why_important": "フロントエンド開発のプロトタイプ作成が劇的に加速する反面、独自UIの模倣リスクへの対策が必要になります。",
-      "action_item": "自社サービスの独自機能やUIの競合模倣に対する差別化要素を再確認してください。",
-      "source": "TechnoEdge",
-      "url": "https://www.techno-edge.net/article/2026/11/09/5686.html"
-    },
-    {
-      "title": "スタンフォード大、AI協調前提の開発教育へ講義を刷新",
+      "title": "OpenAIがChatGPT EnterpriseをAWS Marketplaceで提供開始",
       "category": "ビジネス活用",
-      "summary": "スタンフォード大学がAIエージェントの活用を前提とした開発講義を開始し、コード生成から保守者との対話やレビュー判断を重視するカリキュラムへ移行しました。実装力以上に仕様評価力が問われます。",
-      "one_liner": "大学教育もAI前提の協調開発へ",
-      "why_important": "コーディング作業のコモディティ化に伴い、エンジニアの主戦場はコード品質評価や設計判断へと移っています。",
-      "action_item": "プログラミング作業でAIが出力したコードの検証基準を言語化してください。",
-      "source": "Latent Space",
-      "url": "https://latent.space/p/cs146s/"
+      "summary": "OpenAIが企業向けプランをAWS Marketplace経由で調達可能にしました。既存のAWS請求書に合算できるため、企業の購買審査や調達手続きが迅速化されます。",
+      "one_liner": "ChatGPT企業版がAWS決済に対応",
+      "why_important": "既存のクラウド契約枠で購入できるため、調達部門の審査期間を大幅に短縮できます。",
+      "action_item": "自社のAWS利用枠内でPoC費用を計上できるか財務担当に確認してください。",
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace"
     },
     {
-      "title": "米でデータセンター建設拒否が急増、OpenAIは費用負担提示",
-      "category": "リスク・規制",
-      "summary": "米国各地で電力消費増による電気代高騰を懸念した住民がデータセンター建設計画を拒否し、OpenAIが費用負担を申し出る事態となっています。電力確保と地域共生がAIインフラ拡大の障害となっています。",
-      "one_liner": "電力懸念でDC拒否が急増",
-      "why_important": "計算資源の拡大には電力・地域問題が直結しており、AIサービスの将来的な利用コスト上昇に影響します。",
-      "action_item": "クラウドコストの推移を監視し、AI関連の将来的な料金改定に備えてください。",
-      "source": "The Neuron",
-      "url": "https://www.theneurondaily.com/p/voters-reject-data-centers-openai-offers-concessions"
+      "title": "Metaがエージェント定型業務に特化した軽量AI「Muse Ember」を投入",
+      "category": "対話型AI",
+      "summary": "Metaがツール呼び出しやデータ抽出などの日常業務に特化した最小モデルを公開しました。100万トークンあたり0.10ドルの低価格により、大量のルーチン作業を低予算でエージェント化できます。",
+      "one_liner": "100万トークン0.1ドルの軽量AI",
+      "why_important": "定型業務の自動化コストが劇的に下がり、小規模な業務単位でもROIが成立します。",
+      "action_item": "日常のデータ転記など軽量モデルに切り替え可能な作業を特定してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/meta-launches-muse-ember-a-small-ai-model-built-for-the-repetitive-work-agents-actually-do/"
     },
     {
-      "title": "マスク氏、インフラ費用高騰を理由にAI利用枠を制限",
+      "title": "Amazon BedrockがRAGを高度化、単一検索とマルチステップ自律検索に対応",
       "category": "ビジネス活用",
-      "summary": "イーロン・マスク氏が率いるAIプラットフォームで、インフラコスト急増を理由に無料利用枠の制限が導入されました。巨大テック企業であっても大規模モデルの運用費用管理が喫緊の課題となっています。",
-      "one_liner": "運用コスト急増でAI利用制限",
-      "why_important": "AIの無料提供モデルが転換点を迎えており、費用対効果を踏まえた運用設計がビジネスに不可欠です。",
-      "action_item": "自社で無償枠に頼っているAIツールを有償版移行時のコストも含めて試算してください。",
-      "source": "Gizmodo Japan",
-      "url": "https://www.gizmodo.jp/article/2611-elon-musk-ai-cost-grok-bot/"
+      "summary": "Amazon BedrockのKnowledge Baseが、単一検索と複数回検索を繰り返す自律型検索に対応しました。複雑な社内規程の照会や横断調査において、質問の難易度に応じた回答生成が可能です。",
+      "one_liner": "AWSがRAGの自律ステップ検索に対応",
+      "why_important": "複数回の情報探索を自律実行することで、複雑な規程照会や社内調査の精度が向上します。",
+      "action_item": "社内ナレッジ検索で漏れが起きている複雑な質問事例をリスト化してください。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/single-shot-and-agentic-retrieval-with-amazon-bedrock-managed-knowledge-base/"
     },
     {
-      "title": "テンセントAI責任者、バイオAIの安全保障リスクに警鐘",
+      "title": "法律事務所におけるAgentic AI活用とワークフロー自動化の現在地",
+      "category": "ビジネス活用",
+      "summary": "米国の大手法律事務所がチャットボットから業務プロセスを自律処理するAIエージェントの導入へ移行しています。専門職の抵抗感を減らしROIを測定する知見が蓄積されつつあります。",
+      "one_liner": "米法律事務所が業務自動化を本格展開",
+      "why_important": "専門職でもチャットからプロセス自動化へ移行しており、業務設計そのものの見直しが求められます。",
+      "action_item": "自社の専門業務におけるレビューやリサーチの自動化範囲を検討してください。",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/articles/agentic-ai-raises-bar-law-firms"
+    },
+    {
+      "title": "高市首相が仏AI会合で安全保障上の脅威への国際協調を訴え",
+      "category": "日本市場",
+      "summary": "高市首相はフランス政府主催の会合に出席し、AI悪用によるサイバー攻撃など安全保障上の脅威に対する国際連携を求めました。利便性推進とリスク管理の世界水準での調和を目指す姿勢を示しています。",
+      "one_liner": "日本政府がAI安全保障の国際協調を主導",
+      "why_important": "サイバーセキュリティとAI規制の国際整合が進み、企業のAIリスク管理基準に影響します。",
+      "action_item": "自社のAI利用方針が政府の安全基準やガイドラインに合致しているか確認してください。",
+      "source": "NHK 科学・技術",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261110de73220"
+    },
+    {
+      "title": "ByteDanceが100回連続編集でも画質を保つ「Seedream 5.5」を発表",
       "category": "中国AI",
-      "summary": "テンセントの首席AI科学者が、AIによる生物学理解の進展が創薬を加速する一方、生物兵器への悪用など重大なリスクを生むと警告しました。バイオセキュリティ分野における国際規制の厳格化が迫られています。",
-      "one_liner": "テンセント幹部がバイオAI警告",
-      "why_important": "科学技術AIの高度化に伴い、国家主導の規制やデュアルユース制限がバイオ・創薬産業にも及びます。",
-      "action_item": "自社の研究開発データや生成モデルのセキュリティ管理方針を見直してください。",
-      "source": "SCMP Technology",
-      "url": "https://www.scmp.com/tech/big-tech/article/3373697/ai-will-soon-master-biology-unleashing-new-safety-risks-tencent-ai-chief-warns"
+      "summary": "ByteDanceは100回以上の連続画像編集を行っても画質や色が破綻しない新モデルを公開しました。透過背景の直接生成にも対応し、広告素材やEC画像などの制作工程を効率化します。",
+      "one_liner": "100回編集でも画質維持の中国画像AI",
+      "why_important": "連続編集による劣化がなくなり、広告バナーや商品画像の制作内製化が容易になります。",
+      "action_item": "制作現場のバナー差分作成フローで画像モデルの導入を試作してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/bytedances-seedream-5-5-promises-pixel-stable-image-editing-across-100-rounds-without-color-drift/"
+    },
+    {
+      "title": "AI推論基盤Fireworksへの不正アクセスで顧客データ流出の危機",
+      "category": "リスク・規制",
+      "summary": "オープンソースモデルの推論を担う米Fireworksがシステム侵害を受け、大手顧客を含む一部データが流出しました。API基盤の乗り換えを検討する企業が出始めており、AIサプライチェーンのリスクが浮き彫りになっています。",
+      "one_liner": "AI推論基盤の侵害で顧客データ流出",
+      "why_important": "外部APIへの機密データ送信リスクが顕在化し、外部ベンダーの監査徹底が必要です。",
+      "action_item": "外部AI APIに送信しているデータの機密レベルを今一度棚卸ししてください。",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/articles/new-fireworks-hack-threatens-1-billion-business"
     }
   ]
 }
