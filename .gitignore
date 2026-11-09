@@ -57,3 +57,6 @@ model_alert_*.md
 
 # Existing models cache
 existing_models.json
+
+# Feed health temp files (rss_client.write_feed_health)
+health/.feeds-*.tmp

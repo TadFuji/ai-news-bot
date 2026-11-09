@@ -27,6 +27,9 @@ STATUS_OK = "ok"          # read, with at least one entry
 STATUS_EMPTY = "empty"    # read correctly, but the feed had no entries
 STATUS_FAILED = "failed"  # could not be read (HTTP error, network, not a feed)
 
+# feedparser warnings that do not stop a feed from being read.
+_HARMLESS_BOZO = {"NonXMLContentType", "CharacterEncodingOverride"}
+
 
 def _classify_feed(feed) -> tuple[str, str]:
     """Return (status, reason) for a feedparser result.
@@ -44,13 +47,19 @@ def _classify_feed(feed) -> tuple[str, str]:
         return STATUS_FAILED, f"HTTP {status}"
     if entries:
         return STATUS_OK, ""
-    if feed.get("bozo"):
-        exc = feed.get("bozo_exception")
-        return STATUS_FAILED, type(exc).__name__ if exc is not None else "unreadable"
-    if not feed.get("version"):
-        # Parsed without error but not recognised as RSS/Atom (e.g. an HTML page).
-        return STATUS_FAILED, "not a feed"
-    return STATUS_EMPTY, ""
+    exc = feed.get("bozo_exception") if feed.get("bozo") else None
+    if feed.get("version"):
+        # A recognised RSS/Atom document with no items. Mild warnings about the
+        # Content-Type or charset still mean it was read correctly.
+        if exc is None or type(exc).__name__ in _HARMLESS_BOZO:
+            return STATUS_EMPTY, ""
+        return STATUS_FAILED, type(exc).__name__
+    if isinstance(exc, OSError):
+        # Network failures (URLError is an OSError): connection, DNS, timeout.
+        return STATUS_FAILED, type(exc).__name__
+    # Not recognised as RSS/Atom, e.g. an HTML page or a redirect to one.
+    ctype = (feed.get("headers") or {}).get("content-type", "")
+    return STATUS_FAILED, f"not a feed ({ctype})" if ctype else "not a feed"
 
 
 def _fetch_feed_with_status(feed_info: dict) -> tuple[list[dict], str, str]:
@@ -114,21 +123,35 @@ def write_feed_health(results: list[dict], health_dir: Path = HEALTH_DIR,
                       now: dt.datetime | None = None) -> Path | None:
     """Save today's per-feed results as health/feeds-YYYY-MM-DD.json (JST).
 
-    A later run on the same day replaces the file, so it always shows the
-    latest collection. Failure to write must never stop the collection.
+    Each feed gets ``failed_streak``: the number of consecutive days, ending
+    today, on which it failed (0 if it was read today). A day without a record
+    breaks the streak. A later run on the same day replaces the file, so it
+    always shows the latest collection. Failure to write must never stop the
+    collection.
     """
-    now = now or dt.datetime.now(JST)
-    counts = {s: sum(1 for r in results if r["status"] == s)
-              for s in (STATUS_OK, STATUS_EMPTY, STATUS_FAILED)}
-    data = {
-        "date": now.date().isoformat(),
-        "checked_at": now.isoformat(timespec="seconds"),
-        "total": len(results),
-        **counts,
-        "feeds": sorted(results, key=lambda r: (r["status"] != STATUS_FAILED, r["name"])),
-    }
     try:
+        now = now or dt.datetime.now(JST)
         health_dir = Path(health_dir)
+        yesterday = (now.date() - dt.timedelta(days=1)).isoformat()
+        prev_streak = {}
+        try:
+            prev = json.loads((health_dir / f"feeds-{yesterday}.json").read_text(encoding="utf-8"))
+            prev_streak = {f["name"]: int(f.get("failed_streak", 0)) for f in prev.get("feeds", [])}
+        except (OSError, ValueError, TypeError, KeyError, AttributeError):
+            pass  # No usable record for yesterday: streaks start again.
+        feeds = []
+        for r in results:
+            streak = prev_streak.get(r["name"], 0) + 1 if r["status"] == STATUS_FAILED else 0
+            feeds.append({**r, "failed_streak": streak})
+        counts = {s: sum(1 for r in results if r["status"] == s)
+                  for s in (STATUS_OK, STATUS_EMPTY, STATUS_FAILED)}
+        data = {
+            "date": now.date().isoformat(),
+            "checked_at": now.isoformat(timespec="seconds"),
+            "total": len(results),
+            **counts,
+            "feeds": sorted(feeds, key=lambda r: (-r["failed_streak"], r["status"], r["name"])),
+        }
         health_dir.mkdir(parents=True, exist_ok=True)
         path = health_dir / f"feeds-{data['date']}.json"
         fd, tmp = tempfile.mkstemp(dir=health_dir, prefix=".feeds-", suffix=".tmp")
@@ -146,9 +169,13 @@ def write_feed_health(results: list[dict], health_dir: Path = HEALTH_DIR,
         return None
 
 
-def collect_from_rss_feeds(health_dir: Path = HEALTH_DIR) -> list[dict]:
+def collect_from_rss_feeds(health_dir: Path | None = None) -> list[dict]:
     """
     複数のRSSフィードからニュース記事を並列収集する
+
+    The per-feed record is saved to ``health_dir``; when it is not given, only
+    on GitHub Actions (a local run must not leave files that later conflict
+    with the committed ones).
 
     Returns:
         記事情報のリスト（タイトル、URL、公開日時、ソース名）
@@ -205,8 +232,11 @@ def collect_from_rss_feeds(health_dir: Path = HEALTH_DIR) -> list[dict]:
         for r in sorted(empty, key=lambda r: r["name"]):
             print(f"   - {r['name']}")
 
-    path = write_feed_health(results, health_dir)
-    if path:
-        print(f"📝 フィードの読み取り結果: {path.name}")
+    if health_dir is None and os.environ.get("GITHUB_ACTIONS") == "true":
+        health_dir = HEALTH_DIR
+    if health_dir is not None:
+        path = write_feed_health(results, health_dir)
+        if path:
+            print(f"📝 フィードの読み取り結果: {path.name}")
 
     return articles

@@ -43,7 +43,7 @@ def test_http_error_is_failed():
 def test_html_page_instead_of_feed_is_failed():
     status, reason = _classify_feed(_parsed("<html><body>moved</body></html>", 200))
     assert status == STATUS_FAILED
-    assert reason
+    assert reason.startswith("not a feed")
 
 
 def test_network_error_is_failed():
@@ -107,4 +107,119 @@ def test_collect_records_every_feed(tmp_path):
     assert by_name["ok"]["status"] == STATUS_OK
     assert by_name["empty"]["status"] == STATUS_EMPTY
     assert by_name["gone"] == {"name": "gone", "status": STATUS_FAILED,
-                               "count": 0, "reason": "HTTP 410"}
+                               "count": 0, "reason": "HTTP 410", "failed_streak": 1}
+
+
+# --- Added after the independent review (2026-11-10) ---
+
+def _with_bozo(text, exc, ctype=None, status=200):
+    d = _parsed(text, status)
+    d["bozo"] = 1
+    d["bozo_exception"] = exc
+    if ctype:
+        d["headers"] = {"content-type": ctype}
+    return d
+
+
+def test_valid_empty_feed_with_mild_warnings_is_empty():
+    # A correct RSS with no items served as text/html or with a charset
+    # mismatch is still a readable feed, not a failure.
+    for name in ("NonXMLContentType", "CharacterEncodingOverride"):
+        exc = type(name, (Exception,), {})("warning")
+        assert _classify_feed(_with_bozo(RSS_NONE, exc, "text/html")) == (STATUS_EMPTY, "")
+
+
+def test_valid_feed_with_serious_parse_error_is_failed():
+    exc = type("SAXParseException", (Exception,), {})("broken")
+    assert _classify_feed(_with_bozo(RSS_NONE, exc)) == (STATUS_FAILED, "SAXParseException")
+
+
+def test_html_page_reason_names_content_type():
+    exc = type("SAXParseException", (Exception,), {})("not xml")
+    d = _with_bozo("<html><body>hi</body></html>", exc, "text/html; charset=utf-8", 301)
+    assert _classify_feed(d) == (STATUS_FAILED, "not a feed (text/html; charset=utf-8)")
+
+
+def test_redirect_status_is_not_a_failure():
+    # ArXiv answers 302 and is sometimes empty; Mistral answers 301 with items.
+    assert _classify_feed(_parsed(RSS_NONE, 302)) == (STATUS_EMPTY, "")
+    assert _classify_feed(_parsed(RSS_ONE, 301)) == (STATUS_OK, "")
+
+
+def test_connection_error_is_failed():
+    import urllib.error
+    d = feedparser.FeedParserDict(entries=[], bozo=1,
+                                  bozo_exception=urllib.error.URLError("refused"))
+    assert _classify_feed(d) == (STATUS_FAILED, "URLError")
+
+
+def test_read_timeout_is_failed():
+    with patch("rss_client.feedparser.parse", side_effect=TimeoutError("read")):
+        _, status, reason = _fetch_feed_with_status(FEED)
+    assert (status, reason) == (STATUS_FAILED, "TimeoutError")
+
+
+def test_error_status_with_entries_is_failed_but_keeps_articles():
+    with patch("rss_client.feedparser.parse", return_value=_parsed(RSS_ONE, 503)):
+        articles, status, reason = _fetch_feed_with_status(FEED)
+    assert (len(articles), status, reason) == (1, STATUS_FAILED, "HTTP 503")
+
+
+def _day(d):
+    return dt.datetime(2026, 11, d, 7, 12, tzinfo=ZoneInfo("Asia/Tokyo"))
+
+
+def _streaks(path):
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return {f["name"]: f["failed_streak"] for f in data["feeds"]}
+
+
+def test_failed_streak_counts_consecutive_days(tmp_path):
+    fail = {"name": "X", "status": STATUS_FAILED, "count": 0, "reason": "HTTP 404"}
+    ok = {"name": "Y", "status": STATUS_OK, "count": 2, "reason": ""}
+    write_feed_health([fail, ok], tmp_path, _day(10))
+    write_feed_health([fail, {**ok, "status": STATUS_FAILED}], tmp_path, _day(11))
+    path = write_feed_health([fail, ok], tmp_path, _day(12))
+    assert _streaks(path) == {"X": 3, "Y": 0}
+    # A day without a record breaks the streak.
+    path = write_feed_health([fail, ok], tmp_path, _day(14))
+    assert _streaks(path)["X"] == 1
+
+
+def test_same_day_rerun_does_not_double_count(tmp_path):
+    fail = {"name": "X", "status": STATUS_FAILED, "count": 0, "reason": "HTTP 404"}
+    write_feed_health([fail], tmp_path, _day(10))
+    write_feed_health([fail], tmp_path, _day(11))
+    path = write_feed_health([fail], tmp_path, _day(11))
+    assert _streaks(path) == {"X": 2}
+
+
+def test_broken_previous_record_restarts_streak(tmp_path):
+    (tmp_path / "feeds-2026-11-09.json").write_text("{not json", encoding="utf-8")
+    fail = {"name": "X", "status": STATUS_FAILED, "count": 0, "reason": "HTTP 404"}
+    assert _streaks(write_feed_health([fail], tmp_path, _day(10))) == {"X": 1}
+
+
+def test_collect_returns_articles_when_saving_fails(tmp_path):
+    blocker = tmp_path / "health"
+    blocker.write_text("not a directory")
+    feeds = [{"name": "ok", "url": "https://example.com/ok", "region": "テスト"}]
+    with patch.object(rss_client, "RSS_FEEDS", feeds), \
+            patch("rss_client.feedparser.parse", return_value=_parsed(RSS_ONE, 200)):
+        articles = collect_from_rss_feeds(health_dir=blocker)
+    assert len(articles) == 1
+
+
+def test_collect_writes_nothing_locally_by_default(tmp_path, monkeypatch):
+    monkeypatch.delenv("GITHUB_ACTIONS", raising=False)
+    monkeypatch.setattr(rss_client, "HEALTH_DIR", tmp_path / "health")
+    feeds = [{"name": "ok", "url": "https://example.com/ok", "region": "テスト"}]
+    with patch.object(rss_client, "RSS_FEEDS", feeds), \
+            patch("rss_client.feedparser.parse", return_value=_parsed(RSS_ONE, 200)):
+        collect_from_rss_feeds()
+    assert not (tmp_path / "health").exists()
+    monkeypatch.setenv("GITHUB_ACTIONS", "true")
+    with patch.object(rss_client, "RSS_FEEDS", feeds), \
+            patch("rss_client.feedparser.parse", return_value=_parsed(RSS_ONE, 200)):
+        collect_from_rss_feeds()
+    assert (tmp_path / "health").exists()

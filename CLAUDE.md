@@ -68,7 +68,7 @@ Stage 1（collect_candidates.yml）は自動実行停止中（手動のみ）。
 **壊すと事故になる不変条件:**
 
 - `docs/YYYY-MM-DD.json` は「公開サイトのデータ」と「同日二重配信ガードの記録」を兼ねる。永続化は workflow の commit ステップだけが担うため、**commit ステップの `if: always()` と checkout の `ref: main` を外すと、失敗→再実行で二重配信が再発する**（過去に実際に起きた事故。`tests/test_daily_guard.py` が配線ごと守っている）。
-- `output/` は gitignore 対象で **CI のチェックアウトでは常に空**。「前回の実行の output/ が残っている」前提のコードは書けない。公開データと従来の同日ガードは `docs/`、送信前の永続記録は `automation/delivery-state/`。後者のmainへのpush成功前にはSNSを送らない。`usage/` も別途保存される。
+- `output/` は gitignore 対象で **CI のチェックアウトでは常に空**。「前回の実行の output/ が残っている」前提のコードは書けない。公開データと従来の同日ガードは `docs/`、送信前の永続記録は `automation/delivery-state/`。後者のmainへのpush成功前にはSNSを送らない。`usage/` も別途保存される。`health/feeds-YYYY-MM-DD.json`（各フィードの ok / empty / failed と連続失敗日数 `failed_streak`。GitHub Actions 上でだけ `rss_client.py` が書く）も同じ自動コミットで保存され、8:10 の点検（`../news-clock/cloud-check-prompt.md`）が読む。前日の記録から日数を数えるので、`health/` を消さない。
 - 配信失敗の可視化: 全チャネル失敗と Gemini 全滅（フォールバック配信）は `sys.exit(1)` で run を赤にする。X 単独失敗は LINE 通知。この「赤くする」動作を握りつぶさない。
 - `FORCE_REDELIVER` は workflow から `'1'` / `'0'` の**文字列**で渡る。判定は `!= "1"` であり、truthy 判定に書き換えると `'0'` でガードが無効化される。
 - Gemini のモデル名は `config.GEMINI_MODEL`、タイムアウトは `ai_client.GENAI_TIMEOUT_MS` を全ファイルで共有（直書き禁止。画像モデルのみ `generators/infographic_maker.py` の `GEMINI_IMAGE_MODEL`）。
