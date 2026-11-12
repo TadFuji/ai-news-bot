@@ -1,0 +1,472 @@
+{
+  "date": "2026-11-13",
+  "checked_at": "2026-11-13T07:11:21+09:00",
+  "total": 66,
+  "ok": 49,
+  "empty": 3,
+  "failed": 14,
+  "feeds": [
+    {
+      "name": "AI Shift Blog",
+      "status": "failed",
+      "count": 0,
+      "reason": "HTTP 404",
+      "failed_streak": 3
+    },
+    {
+      "name": "Anthropic News",
+      "status": "failed",
+      "count": 0,
+      "reason": "HTTP 404",
+      "failed_streak": 3
+    },
+    {
+      "name": "Decrypt AI",
+      "status": "failed",
+      "count": 0,
+      "reason": "not a feed (text/html; charset=utf-8)",
+      "failed_streak": 3
+    },
+    {
+      "name": "ERNIE Blog (Baidu)",
+      "status": "failed",
+      "count": 0,
+      "reason": "HTTP 404",
+      "failed_streak": 3
+    },
+    {
+      "name": "Forbes AI",
+      "status": "failed",
+      "count": 0,
+      "reason": "HTTP 404",
+      "failed_streak": 3
+    },
+    {
+      "name": "Import AI",
+      "status": "failed",
+      "count": 0,
+      "reason": "HTTP 403",
+      "failed_streak": 3
+    },
+    {
+      "name": "Ledge.ai",
+      "status": "failed",
+      "count": 0,
+      "reason": "not a feed (text/html;charset=utf-8)",
+      "failed_streak": 3
+    },
+    {
+      "name": "Meta AI Blog",
+      "status": "failed",
+      "count": 0,
+      "reason": "HTTP 404",
+      "failed_streak": 3
+    },
+    {
+      "name": "Microsoft AI Blog",
+      "status": "failed",
+      "count": 0,
+      "reason": "HTTP 410",
+      "failed_streak": 3
+    },
+    {
+      "name": "Midjourney Updates",
+      "status": "failed",
+      "count": 0,
+      "reason": "URLError",
+      "failed_streak": 3
+    },
+    {
+      "name": "Reuters Technology",
+      "status": "failed",
+      "count": 0,
+      "reason": "not a feed (text/html)",
+      "failed_streak": 3
+    },
+    {
+      "name": "Stability AI Blog",
+      "status": "failed",
+      "count": 0,
+      "reason": "HTTP 404",
+      "failed_streak": 3
+    },
+    {
+      "name": "The Next Web AI",
+      "status": "failed",
+      "count": 0,
+      "reason": "HTTP 404",
+      "failed_streak": 3
+    },
+    {
+      "name": "VentureBeat AI",
+      "status": "failed",
+      "count": 0,
+      "reason": "HTTP 429",
+      "failed_streak": 3
+    },
+    {
+      "name": "ArXiv AI",
+      "status": "empty",
+      "count": 0,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "ArXiv ML",
+      "status": "empty",
+      "count": 0,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Microsoft 365 Copilot Blog",
+      "status": "empty",
+      "count": 0,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "AWS Machine Learning",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Ars Technica AI",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "BBC Technology",
+      "status": "ok",
+      "count": 21,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "DeepMind Blog",
+      "status": "ok",
+      "count": 100,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Figma Blog",
+      "status": "ok",
+      "count": 776,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Gizmodo Japan",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Google AI Blog",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Google Workspace Blog",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Google Workspace Updates",
+      "status": "ok",
+      "count": 25,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Hacker News AI",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Hugging Face Blog",
+      "status": "ok",
+      "count": 906,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "ITmedia AI+",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "ITmedia ビジネスオンライン",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Interconnects AI",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "KDnuggets",
+      "status": "ok",
+      "count": 10,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "KrASIA (36Kr English)",
+      "status": "ok",
+      "count": 10,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Latent Space",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "MIT Technology Review",
+      "status": "ok",
+      "count": 10,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "MarkTechPost",
+      "status": "ok",
+      "count": 10,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Microsoft 365 Blog",
+      "status": "ok",
+      "count": 10,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Mistral AI News",
+      "status": "ok",
+      "count": 94,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "NHK 科学・技術",
+      "status": "ok",
+      "count": 137,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "NVIDIA Blog",
+      "status": "ok",
+      "count": 18,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Nikkei Asia",
+      "status": "ok",
+      "count": 50,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "One Useful Thing",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "OpenAI Blog",
+      "status": "ok",
+      "count": 1384,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "PC Watch",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Pandaily",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Platformer",
+      "status": "ok",
+      "count": 15,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Product Hunt AI",
+      "status": "ok",
+      "count": 50,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Qwen Blog (Alibaba)",
+      "status": "ok",
+      "count": 44,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "SCMP Technology",
+      "status": "ok",
+      "count": 50,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Semafor Technology",
+      "status": "ok",
+      "count": 277,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Simon Willison's Weblog",
+      "status": "ok",
+      "count": 30,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Synced Review",
+      "status": "ok",
+      "count": 10,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "TLDR AI",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "TechCrunch AI",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "TechNode",
+      "status": "ok",
+      "count": 2000,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "TechnoEdge",
+      "status": "ok",
+      "count": 50,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "The Decoder",
+      "status": "ok",
+      "count": 10,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "The Information",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "The Neuron",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "The Rundown AI",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "The Verge AI",
+      "status": "ok",
+      "count": 10,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Together AI Blog",
+      "status": "ok",
+      "count": 100,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Wired AI",
+      "status": "ok",
+      "count": 10,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "ZDNet AI",
+      "status": "ok",
+      "count": 25,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "Zenn LLM",
+      "status": "ok",
+      "count": 20,
+      "reason": "",
+      "failed_streak": 0
+    },
+    {
+      "name": "量子位 QbitAI",
+      "status": "ok",
+      "count": 10,
+      "reason": "",
+      "failed_streak": 0
+    }
+  ]
+}

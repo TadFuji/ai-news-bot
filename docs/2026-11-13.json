@@ -1,0 +1,107 @@
+{
+  "updated": "2026年11月13日",
+  "theme": "実務同席と自律化が進む現場AI",
+  "morning_comment": "AIは単なる相談相手から、同席し自律稼働する実務パートナーへ。",
+  "articles": [
+    {
+      "title": "Anthropic、会議同席AI「Claude Meetings」を発表",
+      "category": "ビジネス活用",
+      "summary": "Google Meetに参加して議事録や決定事項をリアルタイム作成する機能のベータ提供を開始した。会議メモ作成工数をゼロにし、議論そのものへの集中を可能にする。",
+      "one_liner": "会議同席AIが議事録を即時自動作成",
+      "why_important": "会議メモ作成に奪われていた時間をなくし、本来の意思決定に注力できる環境が整います。",
+      "action_item": "社内で頻繁に発生している定例会議の議事録作成フローを洗い出してみてください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/claude-meetings-lets-anthropics-ai-join-your-video-calls/"
+    },
+    {
+      "title": "Google、複合質問に強い「Gemini 4 Hydrogen」を公開",
+      "category": "対話型AI",
+      "summary": "複雑な要求を分解して画像や比較表付きで回答する新モデルを検索およびアプリに適用した。競合分析や市場調査など多角的なリサーチ業務の所要時間を大幅に削減する。",
+      "one_liner": "複雑な質問を分解し図表付きで回答",
+      "why_important": "リサーチ業務における情報整理と可視化の手間を減らし、分析の初動を速められます。",
+      "action_item": "複数条件が絡む調査タスクをGeminiで表形式出力させてみてください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen"
+    },
+    {
+      "title": "NVIDIA、日本の金融・個人情報特化の合成データを無償公開",
+      "category": "日本市場",
+      "summary": "国内金融の商習慣に合わせたペルソナと個人情報マスキング向けの日本語合成データセットを公開した。実データを使えない厳格な環境でも安全に特化型AIを検証・開発できる。",
+      "one_liner": "実データ不要で安全に業務特化AI構築",
+      "why_important": "機密保持の制約で社内AI開発が進まなかった部署でも、実用検証を始められる契機になります。",
+      "action_item": "自社のAI検証でデータ提供がボトルネックになっている業務を特定してください。",
+      "source": "ITmedia AI+",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2611/13/news055.html"
+    },
+    {
+      "title": "NVIDIAのジェンスン・フアンCEOが電撃辞任",
+      "category": "リスク・規制",
+      "summary": "創業者の退任発表により、半導体供給網や主要クラウド各社のAI投資計画に先行き不透明感が広がっている。インフラ調達コストやGPU供給スケジュールに影響を及ぼす可能性がある。",
+      "one_liner": "AI半導体トップ交代で業界に激震",
+      "why_important": "GPU調達遅延やクラウド利用料の価格改定リスクに備え、計算資源計画の柔軟性確保が求められます。",
+      "action_item": "自社が依存しているAI基盤とクラウドベンダーの冗長性を確認してください。",
+      "source": "NHK 科学・技術",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261112de75078"
+    },
+    {
+      "title": "kintone向けAI生成コードの安全性を検証する無料診断が開始",
+      "category": "日本市場",
+      "summary": "非エンジニアが生成AIで作ったkintone用JavaScriptの脆弱性やAPIキー流出を検査するサービスが登場した。現場主導の内製化に伴う情報漏洩や誤動作事故を未然に防止できる。",
+      "one_liner": "AI作成コードの脆弱性を無料診断",
+      "why_important": "現場がAIで自作した非公式ツールのセキュリティ事故を防ぐガバナンス体制が必要です。",
+      "action_item": "社内でノーコードツール向けにAI生成コードを適用している箇所がないか確認してください。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/article/2611/13/2000003159/"
+    },
+    {
+      "title": "CopilotKit、自社環境で動くAI同僚「OpenBot 1.0」を公開",
+      "category": "ビジネス活用",
+      "summary": "自社サーバー上でブラウザやファイル操作を任せられるオープンソースAIエージェントが提供された。企業ポリシー違反を自動遮断する権限管理を備え、安全な自律作業を実現する。",
+      "one_liner": "安全な自社ホスト型AI同僚が登場",
+      "why_important": "クラウドへデータを出せない基幹業務でも、エージェントによる業務代行を導入可能になります。",
+      "action_item": "外部送信不可のデータを扱う定型業務で、自律Botに任せたいタスクを1つ選定してください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/11/12/copilotkit-openbot-1-0-open-source-ai-coworker/"
+    },
+    {
+      "title": "OpenAI、次期サイバーセキュリティ特化AIの性能を公表",
+      "category": "リスク・規制",
+      "summary": "脆弱性実証ベンチマークで高スコアを記録した特化型AIの検証結果を公表した。未知の脆弱性対策が自動化される一方、高度な攻撃手法が容易に悪用される危険性も浮き彫りとなった。",
+      "one_liner": "脆弱性検出AIが攻撃手法も民主化",
+      "why_important": "攻撃側のAI活用スピードが加速するため、自社のパッチ適用と監視サイクルの短縮が不可欠です。",
+      "action_item": "自社システムのセキュリティパッチ適用頻度が週次以上になっているか見直してください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/2611-openai-next-gen-cyber-ai-exploitgym/"
+    },
+    {
+      "title": "26万円台のミニPCで実用的なローカルAIエージェントが稼働",
+      "category": "ビジネス活用",
+      "summary": "Ryzen AI Max+と48GBメモリ搭載PCにより、静音かつ実用速度で動くローカルAI環境が実証された。月額クラウド費用をかけず、機密データを外部に出さない手元AI運用が現実的になった。",
+      "one_liner": "クラウド不要の格安ローカルAI環境",
+      "why_important": "初期投資のみで機密データを完全遮断したAI作業環境を個人・拠点単位で整備できます。",
+      "action_item": "月額サブスク費用と端末購入費用の損益分岐点を試算してみてください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/column/hothot/2155899.html"
+    },
+    {
+      "title": "Amplitude、AIエージェント活用で新機能リリースを1〜2日に短縮",
+      "category": "ビジネス活用",
+      "summary": "課題発見から実装・効果検証までをAIエージェントで横断連携し、開発サイクルを劇的に圧縮した。部分的なコード作成にとどまらず、開発プロセス全体をAIで短縮する実例を示している。",
+      "one_liner": "開発サイクルを1〜2日へ大幅短縮",
+      "why_important": "AIを単体ツールではなくプロセス横断で接続することが、企業の実行速度を分ける鍵になります。",
+      "action_item": "企画から検証までのリードタイムで最も滞留している工程を特定してください。",
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/index/amplitude"
+    },
+    {
+      "title": "AWS、BedrockのAI推論コストを抑える設定項目を解説",
+      "category": "ビジネス活用",
+      "summary": "プロンプトキャッシュ保持や最大トークン数などの設定見直しによる推論コスト最適化策を公開した。プロンプト自体を変えずにリクエスト設定を調整するだけで運用費を抑制できる。",
+      "one_liner": "設定見直しだけでLLM運用費を圧縮",
+      "why_important": "社内利用の拡大に伴い急増するAPIコストを、品質を落とさずに最小化できます。",
+      "action_item": "社内で稼働中のLLMリクエストのトークン上限とキャッシュ設定を確認してください。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/four-amazon-bedrock-inference-choices-that-affect-cost/"
+    }
+  ]
+}
