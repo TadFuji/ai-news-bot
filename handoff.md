@@ -1,6 +1,13 @@
 # handoff.md — AIニュースの引き継ぎ
 
-最終確認: 2026-10-12。作業開始・終了時の更新ルールは [AGENTS.md](AGENTS.md)。2026-10-10の朝刊遅延と適用済み再発低減策（collection_runner など）は [automation/RECOVERY_HANDOFF.md](automation/RECOVERY_HANDOFF.md) を先に読む。現在の主起動は **OpenAI dot（どっちゃん）の定時タスク、07:07 JST**、実処理はGitHub Actions。起動・監視・再送判断の正本と10/7の成功確認は [automation/README.md](automation/README.md)。構成は [README.md](README.md)、過去の変更は [HISTORY.md](HISTORY.md)。
+最終確認: 2026-11-13。作業開始・終了時の更新ルールは [AGENTS.md](AGENTS.md)。2026-10-10の朝刊遅延と適用済み再発低減策（collection_runner など）は [automation/RECOVERY_HANDOFF.md](automation/RECOVERY_HANDOFF.md) を先に読む。現在の主起動は **OpenAI dot（どっちゃん）の定時タスク、07:07 JST**、実処理はGitHub Actions。起動・監視・再送判断の正本と10/7の成功確認は [automation/README.md](automation/README.md)。構成は [README.md](README.md)、過去の変更は [HISTORY.md](HISTORY.md)。
+
+## 既定モデルを gemini-4-hydrogen へ変更（2026-11-13）
+
+- **変更点**: 藤川さんの指示により、`config.py` の `GEMINI_MODEL` を `"gemini-3.8-flash"` から `"gemini-4-hydrogen"` へ変更。あわせて `ai_client.py`（実行ログ表示）、`collect_rss_gemini.py`（Markdown フッター）、`usage_meter.py`（`PRICES` に `"gemini-4-hydrogen": (1.50, 7.50)` を追加、`PRICES_CHECKED = "2026-11-13"`）、`CLAUDE.md`、`README.md`、`README_EN.md`、`docs/ARCHITECTURE.md`、`.github/ISSUE_TEMPLATE/bug_report.md` を更新。
+- **検証結果**: `pytest tests/`（128 passed）、`unittest discover -s tests`（7 passed）、`ruff check`、`git diff --check` がすべて exit 0。
+- **未完了・次の手順**: 明朝（2026-11-14）07:07 JST の GitHub Actions 本番実行で `gemini-4-hydrogen` によるキュレーション・配信結果と `usage/` 記録を確認する。
+- **元に戻す方法**: 該当コミットを `git revert` して `origin/main` へ push する。
 
 ## フィードの読み取り結果の記録（2026-11-10）
 
