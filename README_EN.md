@@ -12,7 +12,7 @@ Before operating or changing this repository, read [handoff.md](handoff.md) and 
     <a href="https://github.com/TadFuji/ai-news-bot/actions/workflows/collect_candidates.yml"><img src="https://github.com/TadFuji/ai-news-bot/actions/workflows/collect_candidates.yml/badge.svg" alt="Candidate Collection"></a>
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
     <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Python-3.10+-3776AB.svg?logo=python&logoColor=white" alt="Python 3.10+"></a>
-    <a href="https://deepmind.google/technologies/gemini/"><img src="https://img.shields.io/badge/AI-Gemini%203.8%20Flash-4285F4.svg?logo=google&logoColor=white" alt="Gemini 3.8 Flash"></a>
+    <a href="https://deepmind.google/technologies/gemini/"><img src="https://img.shields.io/badge/AI-gemini--4--hydrogen-4285F4.svg?logo=google&logoColor=white" alt="gemini-4-hydrogen"></a>
   </p>
   <p align="center">
     <a href="https://tadfuji.github.io/ai-news-bot/">📰 Live Portal</a> ·
@@ -226,7 +226,7 @@ streamlit run app.py
 
 ## 🧠 How the AI Curation Works
 
-The system uses a carefully designed **dual-pass architecture** with Gemini 3.8 Flash:
+The system uses a carefully designed **dual-pass architecture** with gemini-4-hydrogen:
 
 ### 1st Pass — Analyst Mode (`ai_client.py`)
 
@@ -292,5 +292,5 @@ This project is licensed under the MIT License — see [LICENSE](LICENSE) for de
 ---
 
 <p align="center">
-  Built with ❤️ by <a href="https://github.com/TadFuji">Tad Fuji</a> · Powered by <a href="https://deepmind.google/technologies/gemini/">Gemini 3.8 Flash</a>
+  Built with ❤️ by <a href="https://github.com/TadFuji">Tad Fuji</a> · Powered by <a href="https://deepmind.google/technologies/gemini/">gemini-4-hydrogen</a>
 </p>

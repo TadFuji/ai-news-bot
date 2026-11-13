@@ -50,7 +50,7 @@ import os
 import threading
 from pathlib import Path
 
-PRICES_CHECKED = "2026-09-10"
+PRICES_CHECKED = "2026-11-13"
 PRICES_SOURCE = "https://ai.google.dev/gemini-api/docs/pricing"
 
 # 1M トークンあたりの USD。(input, output)
@@ -60,6 +60,7 @@ _FLASH_3X_DISCOUNTED = (0.75, 3.75)
 _FLASH_3X_STANDARD = (1.50, 7.50)
 
 PRICES: dict[str, tuple[float, float]] = {
+    "gemini-4-hydrogen": (1.50, 7.50),
     "gemini-3.5-flash": (1.50, 9.00),
     "gemini-3.5-flash-lite": (0.30, 2.50),
     "gemini-3.1-flash-lite": (0.25, 1.50),

@@ -12,7 +12,7 @@
     <a href="https://github.com/TadFuji/ai-news-bot/actions/workflows/collect_candidates.yml"><img src="https://github.com/TadFuji/ai-news-bot/actions/workflows/collect_candidates.yml/badge.svg" alt="Candidate Collection"></a>
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
     <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Python-3.10+-3776AB.svg?logo=python&logoColor=white" alt="Python 3.10+"></a>
-    <a href="https://deepmind.google/technologies/gemini/"><img src="https://img.shields.io/badge/AI-Gemini%203.8%20Flash-4285F4.svg?logo=google&logoColor=white" alt="Gemini 3.8 Flash"></a>
+    <a href="https://deepmind.google/technologies/gemini/"><img src="https://img.shields.io/badge/AI-gemini--4--hydrogen-4285F4.svg?logo=google&logoColor=white" alt="gemini-4-hydrogen"></a>
   </p>
   <p align="center">
     <a href="https://tadfuji.github.io/ai-news-bot/">📰 公開ポータル</a> ·
@@ -244,7 +244,7 @@ streamlit run app.py
 
 ## 🧠 AI キュレーションの仕組み
 
-Gemini 3.8 Flash を使った**2段階キュレーション**設計です。
+gemini-4-hydrogen を使った**2段階キュレーション**設計です。
 
 ### 1次分析 — アナリストモード (`ai_client.py`)
 
@@ -311,5 +311,5 @@ MIT License — 詳細は [LICENSE](LICENSE) を参照してください。
 ---
 
 <p align="center">
-  Built with ❤️ by <a href="https://github.com/TadFuji">Tad Fuji</a> · Powered by <a href="https://deepmind.google/technologies/gemini/">Gemini 3.8 Flash</a>
+  Built with ❤️ by <a href="https://github.com/TadFuji">Tad Fuji</a> · Powered by <a href="https://deepmind.google/technologies/gemini/">gemini-4-hydrogen</a>
 </p>

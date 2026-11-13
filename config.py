@@ -5,7 +5,7 @@ from datetime import timedelta, timezone
 JST = timezone(timedelta(hours=9))
 
 # Gemini モデル名（全ファイルで共有 — モデル切替時はここを変更）
-GEMINI_MODEL = "gemini-3.8-flash"
+GEMINI_MODEL = "gemini-4-hydrogen"
 
 # 1次分析・2次キュレーションに渡す上位記事数（ソース増加に対応・config 集約）
 STAGE1_MAX_ARTICLES = 50
