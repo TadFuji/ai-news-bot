@@ -33,11 +33,6 @@ RSS_FEEDS = [
         "region": "米国"
     },
     {
-        "name": "VentureBeat AI",
-        "url": "https://venturebeat.com/category/ai/feed/",
-        "region": "米国"
-    },
-    {
         "name": "MIT Technology Review",
         "url": "https://www.technologyreview.com/feed/",
         "region": "米国"
@@ -63,9 +58,10 @@ RSS_FEEDS = [
         "url": "https://openai.com/blog/rss.xml",
         "region": "米国"
     },
+    # 公式 RSS 不在のためコミュニティ保守ミラーを使用
     {
         "name": "Anthropic News",
-        "url": "https://www.anthropic.com/news/rss.xml",
+        "url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml",
         "region": "米国"
     },
     {
@@ -78,9 +74,10 @@ RSS_FEEDS = [
         "url": "https://deepmind.google/blog/rss.xml",
         "region": "英国"
     },
+    # 旧 AI ブログが 410 終了、移転先トピックフィードは更新停止のため公式メインブログへ切替
     {
-        "name": "Microsoft AI Blog",
-        "url": "https://blogs.microsoft.com/ai/feed/",
+        "name": "Microsoft Blog",
+        "url": "https://blogs.microsoft.com/feed/",
         "region": "米国"
     },
     {
@@ -88,9 +85,10 @@ RSS_FEEDS = [
         "url": "https://feeds.feedburner.com/nvidiablog",
         "region": "米国"
     },
+    # ai.meta.com に公式 RSS が無いため Meta 公式技術ブログへ切替
     {
-        "name": "Meta AI Blog",
-        "url": "https://ai.meta.com/blog/feed/",
+        "name": "Meta Engineering",
+        "url": "https://engineering.fb.com/feed/",
         "region": "米国"
     },
     {
@@ -105,7 +103,7 @@ RSS_FEEDS = [
     },
     {
         "name": "Stability AI Blog",
-        "url": "https://stability.ai/blog?format=rss",
+        "url": "https://stability.ai/news-updates?format=rss",
         "region": "米国"
     },
     # --- 専門メディア・研究 ---
@@ -131,12 +129,7 @@ RSS_FEEDS = [
     },
     {
         "name": "Decrypt AI",
-        "url": "https://decrypt.co/ai/feed",
-        "region": "米国"
-    },
-    {
-        "name": "Forbes AI",
-        "url": "https://www.forbes.com/ai/feed/",
+        "url": "https://decrypt.co/feed?category=ai",
         "region": "米国"
     },
     {
@@ -161,16 +154,6 @@ RSS_FEEDS = [
         "region": "日本"
     },
     {
-        "name": "Ledge.ai",
-        "url": "https://ledge.ai/feed/",
-        "region": "日本"
-    },
-    {
-        "name": "AI Shift Blog",
-        "url": "https://www.ai-shift.co.jp/techblog/feed",
-        "region": "日本"
-    },
-    {
         "name": "Zenn LLM",
         "url": "https://zenn.dev/topics/llm/feed",
         "region": "日本"
@@ -191,16 +174,6 @@ RSS_FEEDS = [
         "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
         "region": "英国"
     },
-    {
-        "name": "Reuters Technology",
-        "url": "https://www.reutersagency.com/feed/?taxonomy=best-topics&post_type=best&best-topics=tech",
-        "region": "英国"
-    },
-    {
-        "name": "The Next Web AI",
-        "url": "https://thenextweb.com/category/artificial-intelligence/feed",
-        "region": "欧州"
-    },
     # ============================================================
     # 2026-06 追加: 厳選30ソース（稼働確認済み）
     # ============================================================
@@ -208,7 +181,8 @@ RSS_FEEDS = [
     {"name": "The Rundown AI", "url": "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml", "region": "米国"},
     {"name": "TLDR AI", "url": "https://tldr.tech/api/rss/ai", "region": "米国"},
     {"name": "The Neuron", "url": "https://rss.beehiiv.com/feeds/N4eCstxvgX.xml", "region": "米国"},
-    {"name": "Import AI", "url": "https://importai.substack.com/feed", "region": "米国"},
+    # Substack が GitHub Actions IP を 403 拒否するため著者の公式 WordPress サイトへ切替
+    {"name": "Import AI", "url": "https://jack-clark.net/feed/", "region": "米国"},
     {"name": "One Useful Thing", "url": "https://www.oneusefulthing.org/feed", "region": "米国"},
     {"name": "Latent Space", "url": "https://www.latent.space/feed", "region": "米国"},
     {"name": "Simon Willison's Weblog", "url": "https://simonwillison.net/atom/everything/", "region": "米国"},
@@ -227,9 +201,6 @@ RSS_FEEDS = [
     {"name": "Synced Review", "url": "https://syncedreview.com/feed/", "region": "中国"},
     {"name": "量子位 QbitAI", "url": "https://www.qbitai.com/feed", "region": "中国"},
     {"name": "Qwen Blog (Alibaba)", "url": "https://qwenlm.github.io/blog/index.xml", "region": "中国"},
-    {"name": "ERNIE Blog (Baidu)", "url": "https://ernie.baidu.com/blog/index.xml", "region": "中国"},
-    # --- 画像・動画生成 ---
-    {"name": "Midjourney Updates", "url": "https://updates.midjourney.com/rss/", "region": "米国"},
     # --- Google Workspace / 生産性AI ---
     {"name": "Google Workspace Updates", "url": "http://feeds.feedburner.com/GoogleAppsUpdates", "region": "米国"},
     {"name": "Google Workspace Blog", "url": "https://blog.google/products/workspace/rss/", "region": "米国"},

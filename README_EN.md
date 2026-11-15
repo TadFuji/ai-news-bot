@@ -39,7 +39,7 @@ AI News Bot is a **serverless, multi-stage news curation pipeline** that transfo
 
 | Stage | Time (JST) | Process | Output |
 |-------|-----------|---------|--------|
-| **Discovery** | Within 07:07 Stage 2 | Crawl 66 RSS feeds and score candidates (standalone 03:00 Stage 1 is manual only) | Raw candidates |
+| **Discovery** | Within 07:07 Stage 2 | Crawl 58 RSS feeds and score candidates (standalone 03:00 Stage 1 is manual only) | Raw candidates |
 | **1st Pass** | Within 07:07 Stage 2 | Gemini analysis: translate, score, classify | Scored candidates |
 | **2nd Pass** | 07:07 | Editorial curation: theme, commentary, dedup | Final Top 10 brief |
 | **Delivery** | 07:07 | Multi-channel distribution | Web, LINE, X (Twitter) |
@@ -58,7 +58,7 @@ AI News Bot is a **serverless, multi-stage news curation pipeline** that transfo
 ```mermaid
 graph TD
     subgraph "Data Sources"
-        RSS["66 RSS Feeds<br/>(ArXiv, HN, TechCrunch, NHK, China media, Workspace, etc.)"]
+        RSS["58 RSS Feeds<br/>(ArXiv, HN, TechCrunch, NHK, China media, Workspace, etc.)"]
     end
 
     subgraph "Stage 1 — standalone run is manual only"
@@ -121,7 +121,7 @@ ai-news-bot/
 │   ├── tests.yml               #   pytest on push/PR
 │   └── lint.yml                #   ruff code quality checks
 │
-├── config.py                   # RSS sources (66), AI keywords, settings
+├── config.py                   # RSS sources (58), AI keywords, settings
 ├── rss_client.py               # RSS feed parser (feedparser wrapper)
 ├── article_extractor.py        # Article body extraction (trafilatura)
 ├── dedup.py                    # Semantic deduplication (Jaccard similarity)
@@ -257,7 +257,7 @@ Edit `config.py` to add new feeds:
 ```python
 RSS_FEEDS = [
     {"name": "Example", "url": "https://example.com/rss", "region": "US"},
-    # ... 66 feeds currently configured (US/EU/China/Japan)
+    # ... 58 feeds currently configured (US/EU/China/Japan)
 ]
 ```
 

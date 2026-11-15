@@ -223,3 +223,33 @@ def test_collect_writes_nothing_locally_by_default(tmp_path, monkeypatch):
             patch("rss_client.feedparser.parse", return_value=_parsed(RSS_ONE, 200)):
         collect_from_rss_feeds()
     assert (tmp_path / "health").exists()
+
+
+def test_rss_feeds_configuration_integrity():
+    """config.RSS_FEEDS のエントリ定義と整合性を検証する。"""
+    import config
+
+    feeds = config.RSS_FEEDS
+    assert len(feeds) == 58
+    assert len(feeds) > 0
+
+    seen_names = set()
+    seen_urls = set()
+
+    for feed in feeds:
+        assert isinstance(feed, dict)
+        name = feed.get("name")
+        url = feed.get("url")
+        region = feed.get("region")
+
+        assert isinstance(name, str) and name.strip() != "", f"Empty name: {feed}"
+        assert isinstance(url, str) and url.strip() != "", f"Empty url: {feed}"
+        assert isinstance(region, str) and region.strip() != "", f"Empty region: {feed}"
+
+        assert url.startswith(("http://", "https://")), f"Invalid url scheme: {url}"
+
+        assert name not in seen_names, f"Duplicate feed name: {name}"
+        assert url not in seen_urls, f"Duplicate feed url: {url}"
+
+        seen_names.add(name)
+        seen_urls.add(url)

@@ -41,7 +41,7 @@
 
 | ステージ | 時刻 (JST) | 処理内容 | 出力 |
 |---------|-----------|---------|------|
-| **収集** | 07:07のStage 2内 | 66の RSSフィードをクロール、キーワードスコアリング（独立Stage 1の03:00自動起動は停止、手動のみ） | 候補記事 |
+| **収集** | 07:07のStage 2内 | 58の RSSフィードをクロール、キーワードスコアリング（独立Stage 1の03:00自動起動は停止、手動のみ） | 候補記事 |
 | **1次分析** | 07:07のStage 2内 | Gemini で翻訳・分類・スコアリング・So What分析 | スコアリング済み候補 |
 | **2次キュレーション** | 07:07 | Gemini 編集キュレーション（テーマ・コメント・重複排除） | **朝刊 Top 10** |
 | **配信** | 07:07 | マルチチャネル同時配信 | Web / LINE / X |
@@ -72,7 +72,7 @@ GitHub Actions を中核とした、モダンなサーバーレス・アーキ�
 ```mermaid
 graph TD
     subgraph "データソース"
-        RSS["66 RSS Feeds<br/>(ArXiv, HN, TechCrunch, NHK, 中国メディア, Workspace 等)"]
+        RSS["58 RSS Feeds<br/>(ArXiv, HN, TechCrunch, NHK, 中国メディア, Workspace 等)"]
     end
 
     subgraph "Stage 1 — 独立起動は手動のみ"
@@ -137,7 +137,7 @@ ai-news-bot/
 │   ├── tests.yml               #   pytest 実行（push/PR）
 │   └── lint.yml                #   ruff によるコード品質チェック
 │
-├── config.py                   # RSSソース (66件), AIキーワード, 設定
+├── config.py                   # RSSソース (58件), AIキーワード, 設定
 ├── rss_client.py               # RSS フィードパーサー
 ├── article_extractor.py        # 記事本文の抽出（trafilatura）
 ├── dedup.py                    # 意味的重複排除（Jaccard 類似度）
@@ -275,7 +275,7 @@ AIが**編集長**として、スコアリング済み候補から最終 Top 10 
 ```python
 RSS_FEEDS = [
     {"name": "Example", "url": "https://example.com/rss", "region": "米国"},
-    # 現在 66 フィードを設定済み（米欧中日 / ニュース・ブログ・ラボ公式）
+    # 現在 58 フィードを設定済み（米欧中日 / ニュース・ブログ・ラボ公式）
 ]
 ```
 

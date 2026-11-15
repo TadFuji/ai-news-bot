@@ -48,7 +48,7 @@ Stage 2（毎朝 7:07 JST, daily_rss_gemini.yml。主起動・run監視はOpenAI
   curate_morning_brief.main()
     ├─ ガード: already_delivered_today()  … docs/{今日}.json の存在（配信開始記録だけ残る日は人の判断を待つ）
     ├─ automation.collection_runner が収集子プロセスを起動（最大2回・各600秒、SNSは再試行しない）
-    │    collect_rss_gemini.py（66フィード並列取得 → 24hフィルタ
+    │    collect_rss_gemini.py（58フィード並列取得 → 24hフィルタ
     │    → キーワードスコア → 本文取得(article_extractor) → Gemini 1次: 翻訳+採点）
     ├─ 過去3日の配信済みURL除外 → dedup.py（見出し類似度で同一出来事を束ねる）
     ├─ Gemini 2次キュレーション（10件保証・ソース偏重是正・URL候補照合 keep_known_urls）

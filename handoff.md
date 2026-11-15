@@ -1,6 +1,29 @@
 # handoff.md — AIニュースの引き継ぎ
 
-最終確認: 2026-11-13。作業開始・終了時の更新ルールは [AGENTS.md](AGENTS.md)。2026-10-10の朝刊遅延と適用済み再発低減策（collection_runner など）は [automation/RECOVERY_HANDOFF.md](automation/RECOVERY_HANDOFF.md) を先に読む。現在の主起動は **OpenAI dot（どっちゃん）の定時タスク、07:07 JST**、実処理はGitHub Actions。起動・監視・再送判断の正本と10/7の成功確認は [automation/README.md](automation/README.md)。構成は [README.md](README.md)、過去の変更は [HISTORY.md](HISTORY.md)。
+最終確認: 2026-11-15。作業開始・終了時の更新ルールは [AGENTS.md](AGENTS.md)。2026-10-10の朝刊遅延と適用済み再発低減策（collection_runner など）は [automation/RECOVERY_HANDOFF.md](automation/RECOVERY_HANDOFF.md) を先に読む。現在の主起動は **OpenAI dot（どっちゃん）の定時タスク、07:07 JST**、実処理はGitHub Actions。起動・監視・再送判断の正本と10/7の成功確認は [automation/README.md](automation/README.md)。構成は [README.md](README.md)、過去の変更は [HISTORY.md](HISTORY.md)。
+
+## 読めない RSS フィードの修正・整理（2026-11-15）
+
+- **確認日時**: 2026-11-15 09:00 JST
+- **変更点**:
+  - `config.py` の `RSS_FEEDS` を 66 件から 58 件へ更新（読めないフィード 14 件の修正・整理）。
+    - URL 更新（4件）:
+      - `Anthropic News`: 公式 RSS 不在のためコミュニティ保守ミラー（`https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml`）を使用
+      - `Stability AI Blog`: URL を `https://stability.ai/news-updates?format=rss` へ更新
+      - `Decrypt AI`: URL を `https://decrypt.co/feed?category=ai` へ更新
+      - `Import AI`: Substack が GitHub Actions IP を 403 拒否するため著者の公式 WordPress サイト（`https://jack-clark.net/feed/`）へ切替
+    - 公式代替へ切替（2件）:
+      - `Microsoft AI Blog` → `name`: `Microsoft Blog`, `url`: `https://blogs.microsoft.com/feed/`（旧 AI ブログが 410 終了、移転先 Source AI トピックフィードは 10/21 で更新停止のため公式メインブログへ切替）
+      - `Meta AI Blog` → `name`: `Meta Engineering`, `url`: `https://engineering.fb.com/feed/`（`ai.meta.com` に公式 RSS 無しのため Meta 公式技術ブログへ切替）
+    - 削除（8件）: 公式 RSS 廃止・非公開化・ボット遮断・非AI記事占有のため除外（`VentureBeat AI`, `Forbes AI`, `Ledge.ai`, `AI Shift Blog`, `Reuters Technology`, `The Next Web AI`〔AI カテゴリ別 RSS 廃止に加え、全体フィード切替は非 AI 記事による上位 30 件枠占有が確認されたため〕, `ERNIE Blog (Baidu)`, `Midjourney Updates`）
+  - ドキュメント内のフィード件数（66 → 58）を更新: `CLAUDE.md`, `README.md`, `README_EN.md`, `docs/ARCHITECTURE.md`
+  - テスト追加: `tests/test_feed_health.py` に `config.RSS_FEEDS` の整合性テスト（非空・URL形式・重複なし・件数整合）を追加
+- **根拠ファイル**: `health/feeds-2026-11-11.json` 〜 `health/feeds-2026-11-15.json`、`config.py`
+- **検証結果**:
+  - 実機 RSS 取得検証: 変更・切替した 6 フィードすべて `status == "ok"` かつ `len(articles) > 0` を確認（Anthropic News: 288件, Microsoft Blog: 10件, Meta Engineering: 9件, Stability AI Blog: 20件, Decrypt AI: 40件, Import AI: 10件）。全 58 フィード中 56 件が `ok`、2 件が一時的なエントリなし（`empty`）でエラー/遮断なしを確認
+  - 自動テスト: `pytest tests/`（129 passed）、`unittest discover -s tests`（7 passed）、`ruff check`、`git diff --check` がすべて exit 0
+- **未完了・次の手順**: 2026-11-16 朝の GitHub Actions で `health/feeds-2026-11-16.json` の全 58 件、特に GitHub Actions 上の `Import AI` / `Anthropic News` を含む読み取り結果を確認すること
+- **元に戻す方法**: 該当コミットを `git revert` して `origin/main` へ push
 
 ## 既定モデルを gemini-4-hydrogen へ変更（2026-11-13）
 

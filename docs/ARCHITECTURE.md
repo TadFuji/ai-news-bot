@@ -13,7 +13,7 @@ Current operations (2026-10-07): OpenAI dot starts and monitors the daily run at
 ## 🔩 Modular Components
 
 ### 1. Discovery (`rss_client.py`, `config.py`)
-- Fetches **66** heterogeneous RSS/Atom feeds (US / EU / China / Japan — news sites, newsletters, and lab blogs).
+- Fetches **58** heterogeneous RSS/Atom feeds (US / EU / China / Japan — news sites, newsletters, and lab blogs).
 - **Concurrency:** feeds are fetched in parallel via `ThreadPoolExecutor` (implemented).
 - Normalizes XML / Atom / RSS 2.0 into a unified internal dictionary.
 
@@ -49,7 +49,7 @@ Compute is near-stateless, but state is persisted in two places:
 ```mermaid
 sequenceDiagram
     participant GH as GitHub Actions
-    participant RSS as 66 RSS Feeds
+    participant RSS as 58 RSS Feeds
     participant TR as trafilatura
     participant GM as Google Gemini
     participant DB as docs/ (JSON data lake)
