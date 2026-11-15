@@ -1,0 +1,107 @@
+{
+  "updated": "2026年11月16日",
+  "theme": "問われるAIの統治と実利",
+  "morning_comment": "供給網やセキュリティの激震から、AIの実利と統治を問い直す朝です。",
+  "articles": [
+    {
+      "title": "Notion AIのチャット記録が外部委託先から漏洩か",
+      "category": "リスク・規制",
+      "summary": "Notion AIの推論委託先であるFireworks AIへの不正侵入により、一部利用者のチャット記録が漏洩した可能性が判明しました。NotionのBusinessプラン利用者にも通知が届いており、機密情報や顧客データを入力していた企業は早急な影響範囲の確認が必要です。",
+      "one_liner": "委託先経由でAIチャット漏洩",
+      "why_important": "自社が利用するSaaSのAI機能でも、背後のAPI委託先から情報が漏れるリスクを常に想定すべきです。",
+      "action_item": "自社でNotion AI等に機密情報を入力していないか確認し、通知の有無を点検してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/pollenjp/articles/2026-11-14-notion-ai-fireworks-incident"
+    },
+    {
+      "title": "NvidiaフアンCEOが電撃辞任、後継不在でAI投資に減速懸念",
+      "category": "リスク・規制",
+      "summary": "対中関連疑惑を含むスキャンダルを受け、Nvidiaのジェンスン・フアンCEOが辞任し、コレット・クレスCFOが暫定CEOに就任しました。後継計画がない中でのトップ交代と財務重視への転換により、GPU供給やAI関連投資が減速する懸念が高まっています。",
+      "one_liner": "Nvidiaトップ交代で投資減速か",
+      "why_important": "AIインフラを独占する企業の経営混乱は、クラウド利用料やGPU調達コストの上昇に直結します。",
+      "action_item": "自社のAI開発計画におけるGPU依存度や、クラウド利用コストの上振れリスクを確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/"
+    },
+    {
+      "title": "米議会、Nvidia問題を受け対中AIチップ輸出規制を強化へ",
+      "category": "リスク・規制",
+      "summary": "Nvidia前CEOの癒着疑惑を受け、米議会でAI半導体の対中輸出規制強化と公聴会での証言要求が超党派で進んでいます。リモートアクセス制限法案の議論再燃により、越境クラウド利用や半導体調達のコンプライアンス要件が一層厳格化します。",
+      "one_liner": "対中AIチップ規制が一段と強化",
+      "why_important": "越境でのクラウドAI利用や拠点間データ連携において、米国の輸出管理規制への抵触リスクが増しています。",
+      "action_item": "海外拠点やパートナー企業と共有するAI基盤のリージョンと契約条件を見直してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china"
+    },
+    {
+      "title": "中国Envision、AI向け800V直流給電で米国勢に先行",
+      "category": "中国AI",
+      "summary": "中国の再生可能エネルギー企業Envision Energyが、内モンゴル自治区のデータセンターでAIチップ向け800ボルト直流給電システムの運用を始めました。送電からチップまでの電力ロスを抑える設計により、AI競争の主戦場が半導体から電力効率へ広がっています。",
+      "one_liner": "中国勢がAI電力インフラで先行",
+      "why_important": "半導体性能だけでなく電力供給効率がAIの計算コストを左右するため、今後はデータセンターの電力調達力が競争力になります。",
+      "action_item": "自社が利用するクラウドやデータセンターの電力効率・料金改定動向をチェックしてください。",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/articles/chinese-energy-company-outpacing-u-s-ai-power-technology"
+    },
+    {
+      "title": "高市首相、ASEAN会合でAI・量子分野の共同研究を提案へ",
+      "category": "日本市場",
+      "summary": "高市首相はASEAN関連首脳会合で、AIや量子技術の共同研究構想を提案する方針を固めました。日本政府がアジア地域での先端技術連携を主導することで、国内企業によるアジア向けAI実証や技術標準化への支援策拡大が期待されます。",
+      "one_liner": "日本主導でASEANとAI共同研究",
+      "why_important": "政府主導の枠組みに乗ることで、東南アジア市場向けのAI実証実験や補助金活用の道が開けます。",
+      "action_item": "アジア展開を検討中のAI関連事業について、経済産業省などの公的支援枠組みを調べてみてください。",
+      "source": "NHK 科学・技術",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261115de76245"
+    },
+    {
+      "title": "米オークランド市、AI導入に伴う職員の雇用保護や免責で合意",
+      "category": "ビジネス活用",
+      "summary": "米オークランド市と労働組合は、AIによる業務代替時の再訓練や配置転換を義務付ける労働協約で暫定合意しました。AIの誤出力に対する職員の免責や人事評価への利用禁止も焦点となり、労使間の実務ルールが具体化しています。",
+      "one_liner": "AI導入の労使ルールが具体化",
+      "why_important": "AI導入を現場に定着させるには、生産性向上だけでなく誤出力時の責任所在と評価基準の明文化が欠かせません。",
+      "action_item": "自社のAI利用ガイドラインに、AIの誤りに対する責任範囲が明記されているか確認してください。",
+      "source": "The Neuron",
+      "url": "https://www.theneurondaily.com/p/oakland-workers-bargained-for-ai-protections"
+    },
+    {
+      "title": "長文を書かない「判断特化AI」3社を日本語300問で比較",
+      "category": "対話型AI",
+      "summary": "文章生成ではなく選択肢と確信度のみを返す「判断特化AI」（Gemini Decision 1、GPT-6 Luna、Jev）について、日本語300問の精度比較が行われました。曖昧な長文を排した確実な自動判定により、承認フローや分類業務への実務応用が現実味を帯びています。",
+      "one_liner": "業務判定に向く判断特化AIが登場",
+      "why_important": "システム連携や自動承認には、自然な文章力よりも安定した分類精度と確信度の出力が実務上有効です。",
+      "action_item": "自社業務の中で「文章生成は不要だが判断や分類だけ自動化したい作業」を1つ書き出してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/hfujihira/articles/hf-871f48278637"
+    },
+    {
+      "title": "小規模ECへのAIエージェント導入、受注データ検証し見送り判断",
+      "category": "ビジネス活用",
+      "summary": "週1〜2件規模のECサイトにおける発送処理へのAIエージェント導入相談に対し、過去180日の受注データを分析した結果、導入が見送られました。開発余力があっても実業務量から投資対効果を見極め、自動化すべきでない領域を切り分ける実務判断を示しています。",
+      "one_liner": "業務量からAI導入を見送る決断",
+      "why_important": "「作れるから導入する」のではなく、処理件数と保守コストを天秤にかけて導入しない判断も重要な成果です。",
+      "action_item": "検討中のAI自動化案件について、月間の処理回数と削減できる労働時間を数値で試算してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/pythona/articles/low-traffic-ec-agent-roi"
+    },
+    {
+      "title": "Claude Fable 5.2がコードで物理描画、GPT-6 Astraを上回る",
+      "category": "画像・動画AI",
+      "summary": "AnthropicのClaude Fable 5.2が、画像生成モデルを使わずPythonコードで筆致や絵具の物理特性をシミュレーションして描画する手法を実証しました。物理環境ベンチマークでGPT-6 Astraを上回っており、LLMが物理法則やツールを精密に操る能力の進化が際立っています。",
+      "one_liner": "AIがコードで物理空間を精密描画",
+      "why_important": "言語モデルが画像生成に頼らずコード経由で物理法則を扱えるようになり、設計やシミュレーション業務への応用が広がります。",
+      "action_item": "設計やシミュレーションなど、数式や物理計算を伴う業務での最新LLMの精度を情報収集してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/anthropics-claude-fable-5-2-doesnt-generate-images-it-paints-them/"
+    },
+    {
+      "title": "韓国の税理士試験首席、隠しカメラとAI使った不正を告白",
+      "category": "リスク・規制",
+      "summary": "韓国の国家資格である税理士試験でトップ合格した受験者が、隠しカメラとAIを悪用した不正行為を認めました。厳格な国家試験でも小型デバイスとAIを組み合わせたカンニングが成立しており、企業の採用テストや資格試験での不正検知対策が急務となっています。",
+      "one_liner": "国家試験を突破したAI不正の脅威",
+      "why_important": "オンラインやオフラインを問わず、採用試験や社内昇格テストにおける従来の不正防止策が通用しなくなっています。",
+      "action_item": "自社の採用試験や資格評価で、AI悪用を想定した試験形式や監視体制になっているか確認してください。",
+      "source": "BBC Technology",
+      "url": "https://www.bbc.co.uk/news/articles/ckvg2ezvpe08o?at_medium=RSS&at_campaign=rss"
+    }
+  ]
+}
