@@ -50,8 +50,9 @@ import os
 import threading
 from pathlib import Path
 
-PRICES_CHECKED = "2026-11-13"
+PRICES_CHECKED = "2026-11-16"
 PRICES_SOURCE = "https://ai.google.dev/gemini-api/docs/pricing"
+FLEX_DISCOUNT = 0.5  # Flex 推論（service_tier="flex"）は標準 API 単価の 50%
 
 # 1M トークンあたりの USD。(input, output)
 # 3.8 / 3.7 / 3.6 Flash は 2026-12-31 までの割引価格。翌日から倍になる。
@@ -108,7 +109,13 @@ class UsageMeter:
 
     # ---- 記録 -------------------------------------------------------------
 
-    def record(self, model: str, response, label: str = "") -> None:
+    def record(
+        self,
+        model: str,
+        response,
+        label: str = "",
+        service_tier: str | None = None,
+    ) -> None:
         """generate_content の応答からトークン数を拾う。失敗しても黙って続ける。"""
         if not self.enabled:
             return
@@ -123,10 +130,12 @@ class UsageMeter:
             thoughts = _int(getattr(u, "thoughts_token_count", 0))
             tool_use = _int(getattr(u, "tool_use_prompt_token_count", 0))
             total = _int(getattr(u, "total_token_count", 0))
+            tier = (service_tier or "").strip().lower() or None
             entry = {
                 "kind": "text",
                 "model": model,
                 "label": label,
+                "service_tier": tier,
                 "prompt_tokens": prompt,
                 "cached_tokens": cached,
                 # 思考トークンは出力として課金されるので出力側に足す
@@ -198,7 +207,8 @@ class UsageMeter:
                 if price is None:
                     unpriced.add(m)
                     continue
-                cost = (c["prompt_tokens"] / 1e6) * price[0] + (c["output_tokens"] / 1e6) * price[1]
+                mult = FLEX_DISCOUNT if c.get("service_tier") == "flex" else 1.0
+                cost = ((c["prompt_tokens"] / 1e6) * price[0] + (c["output_tokens"] / 1e6) * price[1]) * mult
                 slot["usd"] += cost
                 usd += cost
         except Exception as exc:
@@ -229,6 +239,13 @@ class UsageMeter:
             ]
             if t["images"]:
                 parts.append(f"画像{t['images']}枚")
+            with self._lock:
+                flex_calls = sum(
+                    1 for c in self.calls
+                    if c.get("kind") == "text" and c.get("service_tier") == "flex"
+                )
+            if flex_calls:
+                parts.append(f"Flex {flex_calls}回")
             parts.append(f"約 ${t['usd']:.4f}（{t['jpy']}円）")
             if t["unpriced_models"]:
                 parts.append(f"単価未登録: {','.join(t['unpriced_models'])}")

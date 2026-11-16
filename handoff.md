@@ -1,6 +1,16 @@
 # handoff.md — AIニュースの引き継ぎ
 
-最終確認: 2026-11-15。作業開始・終了時の更新ルールは [AGENTS.md](AGENTS.md)。2026-10-10の朝刊遅延と適用済み再発低減策（collection_runner など）は [automation/RECOVERY_HANDOFF.md](automation/RECOVERY_HANDOFF.md) を先に読む。現在の主起動は **OpenAI dot（どっちゃん）の定時タスク、07:07 JST**、実処理はGitHub Actions。起動・監視・再送判断の正本と10/7の成功確認は [automation/README.md](automation/README.md)。構成は [README.md](README.md)、過去の変更は [HISTORY.md](HISTORY.md)。
+最終確認: 2026-11-16。作業開始・終了時の更新ルールは [AGENTS.md](AGENTS.md)。2026-10-10の朝刊遅延と適用済み再発低減策（collection_runner など）は [automation/RECOVERY_HANDOFF.md](automation/RECOVERY_HANDOFF.md) を先に読む。現在の主起動は **OpenAI dot（どっちゃん）の定時タスク、07:07 JST**、実処理はGitHub Actions。変更担当者は [AGENTS.md](AGENTS.md) に従い毎回引き継ぎを更新する。構成は [README.md](README.md)、過去の変更は [HISTORY.md](HISTORY.md)。
+
+## Flex 推論（50%割引・Standard 自動退避付き）と思考レベル MEDIUM の導入（2026-11-16）
+
+- **変更点**:
+  - `config.py`: `GEMINI_THINKING_LEVEL`（既定 `"MEDIUM"`）、`GEMINI_SERVICE_TIER`（既定 `"flex"`）、`GEMINI_FLEX_TIMEOUT_MS`（既定 `180000`）を追加。
+  - `ai_client.py`, `curate_morning_brief.py`, `generate_weekly_column.py`: 共通ヘルパー（`should_use_flex_attempt`, `build_gemini_text_config`, `is_fatal_key_error`）により、初回試行は Flex 推論＋`thinking_level="MEDIUM"` で呼び出し、遅延・503 等で失敗した場合は即座に通常モード（Standard）へフォールバックする（API キーエラー時は従来通り即中止）。週刊コラムも Flex 失敗時の Standard リトライを1回追加。
+  - `usage_meter.py`: `service_tier="flex"` 呼び出しを 50% 割引（`FLEX_DISCOUNT=0.5`）で計算するよう更新（`PRICES_CHECKED = "2026-11-16"`）。
+  - `tests/test_flex_inference.py`, `CLAUDE.md`: オフラインテスト 5 件を追加し、仕様を反映。
+- **検証結果**: `pytest tests/ -q`、`python -m unittest discover -s tests`、`ruff check . --select E9,F63,F7,F82`、`git diff --check` がすべて exit 0。
+- **元に戻す方法**: 該当コミットを `git revert <commit>` して `origin/main` へ push（環境変数 `GEMINI_SERVICE_TIER=standard` でも無効化可）。
 
 ## 読めない RSS フィードの修正・整理（2026-11-15）
 

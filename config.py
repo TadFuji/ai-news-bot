@@ -6,6 +6,9 @@ JST = timezone(timedelta(hours=9))
 
 # Gemini モデル名（全ファイルで共有 — モデル切替時はここを変更）
 GEMINI_MODEL = "gemini-4-hydrogen"
+GEMINI_THINKING_LEVEL = os.environ.get("GEMINI_THINKING_LEVEL", "MEDIUM").strip()
+GEMINI_SERVICE_TIER = os.environ.get("GEMINI_SERVICE_TIER", "flex").strip().lower()
+GEMINI_FLEX_TIMEOUT_MS = int(os.environ.get("GEMINI_FLEX_TIMEOUT_MS", "180000"))
 
 # 1次分析・2次キュレーションに渡す上位記事数（ソース増加に対応・config 集約）
 STAGE1_MAX_ARTICLES = 50

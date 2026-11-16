@@ -71,7 +71,7 @@ Stage 1（collect_candidates.yml）は自動実行停止中（手動のみ）。
 - `output/` は gitignore 対象で **CI のチェックアウトでは常に空**。「前回の実行の output/ が残っている」前提のコードは書けない。公開データと従来の同日ガードは `docs/`、送信前の永続記録は `automation/delivery-state/`。後者のmainへのpush成功前にはSNSを送らない。`usage/` も別途保存される。`health/feeds-YYYY-MM-DD.json`（各フィードの ok / empty / failed と連続失敗日数 `failed_streak`。GitHub Actions 上でだけ `rss_client.py` が書く）も同じ自動コミットで保存され、8:10 の点検（`../news-clock/cloud-check-prompt.md`）が読む。前日の記録から日数を数えるので、`health/` を消さない。
 - 配信失敗の可視化: 全チャネル失敗と Gemini 全滅（フォールバック配信）は `sys.exit(1)` で run を赤にする。X 単独失敗は LINE 通知。この「赤くする」動作を握りつぶさない。
 - `FORCE_REDELIVER` は workflow から `'1'` / `'0'` の**文字列**で渡る。判定は `!= "1"` であり、truthy 判定に書き換えると `'0'` でガードが無効化される。
-- Gemini のモデル名は `config.GEMINI_MODEL`、タイムアウトは `ai_client.GENAI_TIMEOUT_MS` を全ファイルで共有（直書き禁止。画像モデルのみ `generators/infographic_maker.py` の `GEMINI_IMAGE_MODEL`）。
+- Gemini のモデル名は `config.GEMINI_MODEL`、思考レベル・Flex 推論設定は `config.GEMINI_THINKING_LEVEL`（既定 `"MEDIUM"`）・`config.GEMINI_SERVICE_TIER`（既定 `"flex"`、失敗時は Standard へ自動退避）・`config.GEMINI_FLEX_TIMEOUT_MS`（180秒）、Standard タイムアウトは `ai_client.GENAI_TIMEOUT_MS`（600秒）を全ファイルで共有（直書き禁止。画像モデルのみ `generators/infographic_maker.py` の `GEMINI_IMAGE_MODEL`）。
 - `docs/` の HTML はクライアント側で JSON を fetch して innerHTML 描画する。**外部由来の値は必ず各ページの `esc()` / `safeUrl()` を通し、`?json=` はサイト内ファイル名のホワイトリストを維持する**（RSS・LLM 出力は信頼しない）。サーバ側プリレンダは `build_pages.py` の `html.escape` / `_safe_http_url` / `_json_for_script`。
 - SNS のリンクプレビュー（`og:image` / `twitter:image`）は日付の入らない固定画像 `docs/ogp_card.jpg` を指す。日替わりの `ogp_latest.jpg`（README の見本用に生成は継続）へ戻さないこと — X はカードを URL 単位で使い回し、かつ X 投稿は `build_pages` とコミットより先に走るため、日替わり画像では必ず前日以前の絵が出る（2026-09-01 に修正。`tests/test_infographic.py` が逆戻りとファイル欠落の両方を見ている）。
 - 実行順は `distribute_daily`（配信）→ `build_pages`（ページ生成）→ workflow のコミット。この順番のため、外部クローラーが投稿直後に見るページは常に前日の内容になる。
@@ -105,7 +105,7 @@ Stage 1（collect_candidates.yml）は自動実行停止中（手動のみ）。
 - 費用は**概算**。単価は 2026-09-10 に https://ai.google.dev/gemini-api/docs/pricing を見て
   `usage_meter.py` の `PRICES` へ書き写したもので、正式な請求額は Google Cloud の請求画面が正典。
   単価表に無いモデルはトークン数だけ記録し、金額には入れない（推測で金額を出さない）。
-  2026-11-13 からの既定モデル gemini-4-hydrogen は入力 $1.50・出力 $7.50/100万トークン（旧 3.8/3.7/3.6 Flash の単価は 2026-12-31 で倍になる切替を実装済み）。
+  2026-11-13 からの既定モデル gemini-4-hydrogen は標準入力 $1.50・出力 $7.50/100万トークン（2026-11-16 より `GEMINI_SERVICE_TIER="flex"` で半額の $0.75 / $3.75、旧 3.8/3.7/3.6 Flash の単価は 2026-12-31 で倍になる切替を実装済み）。
 - 止めるとき: 環境変数 `USAGE_METER=0`。書き出し先の変更は `USAGE_LOG_DIR`、円換算は
   `USAGE_JPY_PER_USD`（既定 157）。
 - 計測は**本番を止めない**。内部の例外はすべて握り潰し、理由を JSONL の `meter_errors` に残すだけ。

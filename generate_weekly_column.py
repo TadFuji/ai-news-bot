@@ -11,13 +11,19 @@ import os
 import sys
 import json
 import glob
+import time
 from datetime import datetime, timedelta
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 from line_notifier import send_to_line
 from config import JST, GEMINI_MODEL
-from ai_client import GENAI_TIMEOUT_MS, writing_rules
+from ai_client import (
+    GENAI_TIMEOUT_MS,
+    build_gemini_text_config,
+    should_use_flex_attempt,
+    writing_rules,
+)
 from usage_meter import meter  # Gemini の使用量記録（2026-09-10 追加）
 
 load_dotenv()
@@ -172,24 +178,39 @@ def generate_column(items):
 字数の目標も置きません。書くべき中身が尽きたところで終えてください（LINE で送るため 4,000 字は超えないこと）。
 """
     
-    try:
-        response = client.models.generate_content(
-            model=GEMINI_MODEL,
-            contents=prompt
-        )
-        meter.record(GEMINI_MODEL, response, label="weekly-column")
-        # 安全フィルタ等で candidates が空だと response.text は None を返す。
-        # 理由を残さないと「空振りが緑のまま固定」される
-        if not response.text:
-            block = getattr(
-                getattr(response, "prompt_feedback", None), "block_reason", None
+    attempts = [True, False] if should_use_flex_attempt(0) else [False]
+    for idx, use_flex in enumerate(attempts):
+        if idx > 0:
+            print("   🔄 Flex 推論から通常モード（Standard）へ切り替えて再試行します...")
+            time.sleep(2)
+        try:
+            response = client.models.generate_content(
+                model=GEMINI_MODEL,
+                contents=prompt,
+                config=build_gemini_text_config(use_flex=use_flex),
             )
-            print(f"Gemini 空応答（block_reason={block}）")
-            return None
-        return response.text
-    except Exception as e:
-        print(f"Gemini エラー: {e}")
-        return None
+            meter.record(
+                GEMINI_MODEL,
+                response,
+                label="weekly-column",
+                service_tier="flex" if use_flex else None,
+            )
+            # 安全フィルタ等で candidates が空だと response.text は None を返す。
+            # 理由を残さないと「空振りが緑のまま固定」される
+            if not response.text:
+                block = getattr(
+                    getattr(response, "prompt_feedback", None), "block_reason", None
+                )
+                print(f"Gemini 空応答（block_reason={block}）")
+                if use_flex and idx < len(attempts) - 1:
+                    continue
+                return None
+            return response.text
+        except Exception as e:
+            print(f"Gemini エラー ({'flex' if use_flex else 'standard'}): {e}")
+            if not use_flex or idx == len(attempts) - 1:
+                return None
+    return None
 
 
 def main():

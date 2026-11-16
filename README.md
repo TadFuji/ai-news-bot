@@ -244,7 +244,7 @@ streamlit run app.py
 
 ## 🧠 AI キュレーションの仕組み
 
-gemini-4-hydrogen を使った**2段階キュレーション**設計です。
+gemini-4-hydrogen（Flex 推論・思考レベル MEDIUM、混雑・遅延時は通常モードへ自動退避）を使った**2段階キュレーション**設計です。
 
 ### 1次分析 — アナリストモード (`ai_client.py`)
 

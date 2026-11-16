@@ -17,7 +17,13 @@ from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 from config import NEWS_BOT_OUTPUT_DIR, JST, GEMINI_MODEL, STAGE1_MAX_ARTICLES
-from ai_client import GENAI_TIMEOUT_MS, writing_rules
+from ai_client import (
+    GENAI_TIMEOUT_MS,
+    build_gemini_text_config,
+    is_fatal_key_error,
+    should_use_flex_attempt,
+    writing_rules,
+)
 from usage_meter import meter  # Gemini の使用量記録（2026-09-10 追加）
 from dedup import dedup_articles
 from automation.collection_runner import collect_in_subprocess
@@ -293,6 +299,7 @@ URL: {url}
     last_error = None
 
     for attempt in range(max_retries + 1):
+        use_flex = should_use_flex_attempt(attempt)
         try:
             if attempt > 0:
                 wait_sec = 2 ** attempt
@@ -302,12 +309,18 @@ URL: {url}
             response = client.models.generate_content(
                 model=GEMINI_MODEL,
                 contents=prompt,
-                config=types.GenerateContentConfig(
+                config=build_gemini_text_config(
+                    use_flex=use_flex,
                     response_mime_type="application/json",
                     response_schema=response_schema,
                 ),
             )
-            meter.record(GEMINI_MODEL, response, label="stage2-curate")
+            meter.record(
+                GEMINI_MODEL,
+                response,
+                label="stage2-curate",
+                service_tier="flex" if use_flex else None,
+            )
             # 安全フィルタ等で candidates が空だと response.text は None を返す。
             # そのまま .strip() すると AttributeError になり、ブロック理由がログから消える
             if not response.text:
@@ -361,8 +374,8 @@ URL: {url}
         except Exception as e:
             last_error = e
             print(f"   ⚠️ Attempt {attempt + 1} failed: {e}")
-            # INVALID_ARGUMENT (API key issue) はリトライしても無駄
-            if "INVALID_ARGUMENT" in str(e) or "API Key" in str(e):
+            # APIキーエラーはリトライしても無駄（Flex 初回失敗時は Standard リトライを許可）
+            if is_fatal_key_error(e, use_flex=use_flex):
                 print("   🛑 APIキーエラーのためリトライ中止")
                 break
 

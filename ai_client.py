@@ -5,6 +5,7 @@ import datetime
 from pathlib import Path
 from google import genai
 from google.genai import types
+import config
 from config import GEMINI_MODEL, STAGE1_MAX_ARTICLES
 from usage_meter import meter  # Gemini の使用量記録（2026-09-10 追加）
 
@@ -37,6 +38,41 @@ def writing_rules(scope: str) -> str:
 # SDK の既定はタイムアウト無しで、応答が返らないと朝の自動処理ごと止まる
 # （generators/infographic_maker.py と同じ対策・同じ値）
 GENAI_TIMEOUT_MS = 600_000
+
+
+def should_use_flex_attempt(attempt: int) -> bool:
+    """Use Flex inference on the initial attempt when enabled; fall back to Standard on retries."""
+    return attempt == 0 and (config.GEMINI_SERVICE_TIER or "").strip().lower() == "flex"
+
+
+def build_gemini_text_config(
+    *,
+    use_flex: bool,
+    response_mime_type: str | None = None,
+    response_schema=None,
+) -> types.GenerateContentConfig:
+    """Build GenerateContentConfig with shared thinking_level and optional Flex tier."""
+    cfg_kwargs: dict = {}
+    if response_mime_type is not None:
+        cfg_kwargs["response_mime_type"] = response_mime_type
+    if response_schema is not None:
+        cfg_kwargs["response_schema"] = response_schema
+    thinking_level = (config.GEMINI_THINKING_LEVEL or "").strip()
+    if thinking_level:
+        cfg_kwargs["thinking_config"] = types.ThinkingConfig(thinking_level=thinking_level)
+    if use_flex:
+        cfg_kwargs["service_tier"] = "flex"
+        cfg_kwargs["http_options"] = types.HttpOptions(timeout=config.GEMINI_FLEX_TIMEOUT_MS)
+    return types.GenerateContentConfig(**cfg_kwargs)
+
+
+def is_fatal_key_error(exc: Exception, *, use_flex: bool) -> bool:
+    """Abort retries on API key errors, but let Flex-attempt errors fall back to Standard."""
+    msg = str(exc)
+    low = msg.lower()
+    if "api key" in low or "api_key_invalid" in low:
+        return True
+    return (not use_flex) and ("INVALID_ARGUMENT" in msg)
 
 
 def process_with_gemini(articles: list[dict], max_articles: int = 10) -> list[dict]:
@@ -188,6 +224,7 @@ URL: {article['url']}
     last_error = None
 
     for attempt in range(max_retries + 1):
+        use_flex = should_use_flex_attempt(attempt)
         try:
             if attempt > 0:
                 wait_sec = 2 ** attempt
@@ -197,12 +234,18 @@ URL: {article['url']}
             response = client.models.generate_content(
                 model=GEMINI_MODEL,
                 contents=prompt,
-                config=types.GenerateContentConfig(
+                config=build_gemini_text_config(
+                    use_flex=use_flex,
                     response_mime_type="application/json",
                     response_schema=response_schema,
                 ),
             )
-            meter.record(GEMINI_MODEL, response, label="stage1-translate-score")
+            meter.record(
+                GEMINI_MODEL,
+                response,
+                label="stage1-translate-score",
+                service_tier="flex" if use_flex else None,
+            )
             # 安全フィルタ等で candidates が空だと response.text は None を返す。
             # そのまま .strip() すると AttributeError になり、ブロック理由がログから消える
             if not response.text:
@@ -247,8 +290,8 @@ URL: {article['url']}
         except Exception as e:
             last_error = e
             print(f"   ⚠️ Attempt {attempt + 1} failed: {e}")
-            # INVALID_ARGUMENT (API key issue) はリトライしても無駄
-            if "INVALID_ARGUMENT" in str(e) or "API Key" in str(e):
+            # APIキーエラーはリトライしても無駄（Flex 初回失敗時は Standard リトライを許可）
+            if is_fatal_key_error(e, use_flex=use_flex):
                 print("   🛑 APIキーエラーのためリトライ中止")
                 break
 
