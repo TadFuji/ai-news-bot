@@ -1,0 +1,107 @@
+{
+  "updated": "2026年11月18日",
+  "theme": "AI実務は性能向上とコスト統制の両立へ",
+  "morning_comment": "性能向上と値下げが進む一方、企業にはコスト管理と安全設計の徹底が求められます。",
+  "articles": [
+    {
+      "title": "OpenAIが新モデル「GPT-6.2 Astra」と「Sol」を発表、性能向上とAPI値下げを実現",
+      "category": "対話型AI",
+      "summary": "OpenAIは従来より高性能かつ低価格な新モデル「GPT-6.2 Astra」と「Sol」を公開した。Astraは独立評価機関の知能指数でClaude Fable 5.2に次ぐ2位となり、初めてHigh基準に到達した。業務システムにAIを組み込む際のコスト障壁が下がり、より高度な自動化が現実的になる。",
+      "one_liner": "高性能AIがより安く、実装の壁が下がる",
+      "why_important": "API単価の低下と知能指数の向上により、これまで費用対効果が合わなかった複雑な業務自動化が採算に乗るようになります。",
+      "action_item": "現行の業務自動化ツールや検証案件で、新モデルへの切り替えによるコスト削減幅を試算してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/"
+    },
+    {
+      "title": "AWSが解説する生成AIコスト削減の鉄則、ルール処理はコードに任せ判断のみモデルを使う",
+      "category": "ビジネス活用",
+      "summary": "AWSは生成AIシステムのコストと遅延を大幅に抑える設計指針を示した。入力形式のチェックや固定パターンの振り分けなど、明確なルールで処理できる工程までLLMに投げるとコスト増と出力のばらつきを招くため、従来型のプログラムとAIを明確に使い分けるべきだと解説している。",
+      "one_liner": "ルール処理はコード、判断のみAIに",
+      "why_important": "すべてをLLMに丸投げする設計は運用費を高騰させます。定型処理と推論を切り分ける設計思想が利益に直結します。",
+      "action_item": "自社のAI活用フローを見直し、条件分岐や書式チェックを従来のコード処理へ置き換えられる箇所を特定してください。",
+      "source": "AWS Machine Learning",
+      "url": "https://aws.amazon.com/blogs/machine-learning/cut-generative-ai-costs-code-for-rules-models-for-judgment/"
+    },
+    {
+      "title": "Salesforceが従業員のAI利用額に月額上限を設定、役職別に100〜1000ドル",
+      "category": "ビジネス活用",
+      "summary": "Salesforceは一部従業員による過剰なAI利用を受け、役職に応じて月額100〜1000ドルのAI利用コスト上限を設けた。AI導入が進むにつれ、利便性の裏でトークン消費やライセンス費用が膨らむ課題が顕在化しており、日本企業でも利用ルールの整備が急務となる。",
+      "one_liner": "AI使い放題の終焉、部署別コスト管理へ",
+      "why_important": "全社導入が進むほど、一部社員のヘビーユースによる予算超過リスクが高まります。利用実績の可視化と予算枠の設定が不可欠です。",
+      "action_item": "自部門における生成AIの月間利用コストと、ヘビーユーザーの消費傾向を確認してください。",
+      "source": "The Information",
+      "url": "https://www.theinformation.com/briefings/salesforce-memo-details-caps-employees-ai-spending"
+    },
+    {
+      "title": "Googleが「Gemini Gems」を終了し、共有可能な新機能「Skills」へ移行",
+      "category": "対話型AI",
+      "summary": "GoogleはカスタムAI機能「Gemini Gems」を廃止し、新たに「Skills」へ統合する。Skillsは作成した業務特化型AIを他者と共有しやすい設計になっており、個人の効率化にとどまっていたプロンプトや設定をチーム全体の資産として展開できる。",
+      "one_liner": "個人のAI活用からチーム資産の共有へ",
+      "why_important": "優れたプロンプトや業務設定を個人に閉じ込めず、チーム全体で再利用する仕組みづくりが生産性向上の鍵になります。",
+      "action_item": "業務でよく使う定型プロンプトを1つ選び、チームメンバーがそのまま使える形にドキュメント化してください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/business/gemini-gems-google-skills-transition/"
+    },
+    {
+      "title": "AIへの指示だけでPhotoshopが動く時代へ、便利になるほどAdobeが抱えるジレンマ",
+      "category": "画像・動画AI",
+      "summary": "画像編集ソフトのPhotoshopが自然言語の指示だけで操作できる段階に入り、専門スキルを持たないビジネスパーソンでも高度な画像加工が可能になった。一方で、作業時間の劇的な短縮や自動化は、従来のソフト課金モデルを揺るがすジレンマをAdobeに突きつけている。",
+      "one_liner": "言葉で画像編集、専門スキルが不要に",
+      "why_important": "専門ソフトの操作スキルが不要になり、企画担当者自身が即座に高品質なクリエイティブを作れる体制へ移行しています。",
+      "action_item": "外注や専門部署に依頼していた簡易な画像修正を、自社のAI対応ツールで内製できないか試してください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/column/ubiq/2156953.html"
+    },
+    {
+      "title": "NVIDIAがロボット向け新AI「GR00T 2」を発表、人間の作業動画を見て仕事を習得",
+      "category": "研究・技術",
+      "summary": "NVIDIAは人間が作業する約40万時間の動画などを学習し、動きの先の状況まで予測するロボットAI「GR00T 2」を公開した。未経験の作業でもわずか5回（3分未満）の実演データと約30分の追加学習で成功率95％に達し、現場ロボットの導入ハードルを大きく下げる。",
+      "one_liner": "動画を見て即習得、ロボット導入が加速",
+      "why_important": "少量の実演データだけで作業を覚えられるため、多品種少量の現場でもロボット自動化の投資対効果が見込みやすくなります。",
+      "action_item": "製造や物流など物理作業を含む現場で、人手不足が深刻な工程の作業動画を記録する準備を始めてください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/2611-nvidia-gr00t-2-robot-ai/"
+    },
+    {
+      "title": "Nvidiaの第3四半期決算は売上高1158億ドルで前年比倍増、トップ交代後も成長継続",
+      "category": "ビジネス活用",
+      "summary": "Nvidiaはジェンセン・フアン前CEOの退任後初となる決算で、売上高が前年同期比103％増の1158億ドル（データセンター部門は110％増）に達したと発表した。経営トップの混乱にもかかわらずAIインフラ需要は極めて堅調であり、次世代製品への移行も計画通り進んでいる。",
+      "one_liner": "トップ交代でもAIインフラ需要は倍増",
+      "why_important": "AIバブル懸念が囁かれる中でも計算資源への投資は衰えていません。自社のAI投資計画も中長期目線で維持すべき局面です。",
+      "action_item": "来期に向けた自社のクラウド・GPU計算資源の確保計画に遅延や不足がないか確認してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/tech/1036032/nvidia-q3-2027-jensen-huang"
+    },
+    {
+      "title": "米SECがNvidiaを調査、フアン前CEOの退任と対中チップ流出疑惑めぐり",
+      "category": "リスク・規制",
+      "summary": "米証券取引委員会（SEC）は、Nvidiaの投資家向け開示が不適切でなかったか調査を開始した。ジェンセン・フアン前CEOは対中輸出規制の抜け穴と疑われる企業幹部らとの不倫問題で辞任しており、米議会や財務省からも中国への先端チップ流出を巡る追及が強まっている。",
+      "one_liner": "対中チップ規制と情報開示に厳格な監視",
+      "why_important": "米国の対中半導体規制やコンプライアンス監視が一段と厳格化しており、サプライチェーンや取引先選定の地政学リスクが高まっています。",
+      "action_item": "自社の調達先や利用クラウドの基盤について、輸出規制やガバナンスリスクに関する最新方針を確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/17/sec-reportedly-investigating-nvidia-amid-huang-exit/"
+    },
+    {
+      "title": "AIのデータ保持を巡る誤解を解消、ゼロデータリテンションAPIの2つの標準設計",
+      "category": "リスク・規制",
+      "summary": "AIベンダーが入力データを保存しない「ゼロデータリテンション（ZDR）」は企業全体ではなく特定のAPIエンドポイント単位で適用されるという技術解説が公開された。データ削除の責任分界点となる2つのAPI設計パターンと、導入時に開発者が確認すべき6つのチェック項目が整理されている。",
+      "one_liner": "データ非保存は契約でなくAPI設計次第",
+      "why_important": "法人契約を結んだだけで入力データが学習や保存から除外されると誤解すると、情報漏洩リスクを見落とす恐れがあります。",
+      "action_item": "社内で利用しているAI APIの接続先エンドポイントが、実際にゼロデータリテンション対象になっているか確認してください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/11/17/zero-data-retention-ai-apis-explained/"
+    },
+    {
+      "title": "Instagramに経営者のAIディープフェイク動画が蔓延、OpenAIのアルトマンCEOも標的に",
+      "category": "リスク・規制",
+      "summary": "Instagram上では有名テック企業経営者のAIディープフェイク動画が急増しており、MetaのAI最高責任者自身が製品宣伝のためにザッカーバーグCEOやOpenAIのサム・アルトマンCEOらのAI生成動画を投稿する事態となった。本物と偽物の境界が曖昧になり、詐欺や誤情報のリスクが高まっている。",
+      "one_liner": "経営者の偽動画が蔓延、真偽判定が急務",
+      "why_important": "経営層になりすました精巧な偽動画が一般化し、SNSを通じた投資詐欺や社内へのなりすまし指示のリスクが現実化しています。",
+      "action_item": "役員や取引先からの緊急の動画・音声指示に対し、別ルートで本人確認を行う社内ルールを周知してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/news/1035957/meta-alexandr-wang-sam-altman-instagram-ai-deepfake"
+    }
+  ]
+}
