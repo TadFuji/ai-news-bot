@@ -1,0 +1,107 @@
+{
+  "updated": "2026年11月22日",
+  "theme": "AI実務定着とリスク統制の正念場",
+  "morning_comment": "過度な期待が剥がれ、実務定着と安全管理の真価が問われる朝です。",
+  "articles": [
+    {
+      "title": "管理職調査で見えたAI活用の盲点、半数以上でツールが使われなくなる実態",
+      "category": "日本市場",
+      "summary": "従業員300人以上の企業管理職への調査で、導入済みAIツールの56.5％がほとんど使われていないと判明しました。精度不足と費用対効果の説明困難が主な理由で、自社独自の業務ルールをAIに組み込めていない点が障壁となっています。",
+      "one_liner": "導入AIの過半数が休眠状態",
+      "why_important": "汎用ツールを導入するだけでは定着せず、投資が無駄になります。業務基準や判断ルールをAIに参照させる設計が不可欠です。",
+      "action_item": "自部署で放置されているAIツールを1つ挙げ、使われない理由を書き出してください。",
+      "source": "ITmedia AI+",
+      "url": "https://kn.itmedia.co.jp/kn/article/2611/22/2000003384/"
+    },
+    {
+      "title": "米国テック株がコロナ禍以来の大幅下落、AIへの懐疑論と会計調査が直撃",
+      "category": "ビジネス活用",
+      "summary": "AI業界への懐疑論や会計調査の報道を受け、ナスダック100指数がパンデミック以来最大の週間下落率を記録しました。Nvidia株の急落やAnthropic株の失速など、AI投資の過熱感に対する市場の視線が厳しさを増しています。",
+      "one_liner": "AI過熱感に市場から冷や水",
+      "why_important": "開発企業の財務リスクや事業継続性が取引に直結する局面です。AIベンダーの選定では機能だけでなく経営の健全性も確認してください。",
+      "action_item": "自社が契約中の主要AIベンダーの最新決算や財務ニュースを確認してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/us-technology-stocks-suffer-their-worst-weekly-loss-since-the-pandemic-as-ai-doubts-pile-up/"
+    },
+    {
+      "title": "AnthropicがNasdaq上場、AIの安全性重視と株主利益の両立が焦点に",
+      "category": "ビジネス活用",
+      "summary": "Claudeを開発するAnthropicが、純粋なAI企業として初のNasdaq上場を果たしました。巨額の計算資源コストを抱える中、創業以来の安全性重視という理念と株主が求める収益拡大をどう両立するかが問われています。",
+      "one_liner": "安全性と収益の両立が焦点に",
+      "why_important": "安全性への信頼を理由にClaudeを採用している企業にとって、上場後の価格改定や機能方針の変化は業務に直結します。",
+      "action_item": "社内のClaude利用ガイドラインや代替ツールの検討状況を見直してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure"
+    },
+    {
+      "title": "AIエージェントに「鍵」を渡す前に決めるべきセキュリティ運用ルール",
+      "category": "リスク・規制",
+      "summary": "外部ツールを自動操作するAIエージェントの普及に伴い、個人や小規模チーム向けの具体的な防衛策が整理されました。IPAの10大脅威へのAIリスク初選出を受け、秘密情報の隔離や人が承認すべき操作の線引きを解説しています。",
+      "one_liner": "エージェントに鍵を渡す前の防衛策",
+      "why_important": "AIにAPIキーやログイン権限を丸投げすると、誤操作や情報漏洩の被害が甚大になります。権限の段階設定が必須です。",
+      "action_item": "利用中のAIツールに連携させている外部アカウントやAPI権限を棚卸ししてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/neuralalpha/books/ai-security-ops-rules"
+    },
+    {
+      "title": "SignalがAIによる画面監視に対抗しモバイル版のスクショを制限",
+      "category": "リスク・規制",
+      "summary": "秘匿性の高いメッセージアプリSignalが、AndroidとiOS版でスクリーンショット撮影を制限する機能を追加しました。OSに統合されたエージェント型AIが画面情報を自動スキャンし、外部へ送信するリスクへの対抗措置です。",
+      "one_liner": "OSのAI画面監視への対抗措置",
+      "why_important": "PCやスマホの画面に機密情報を表示するだけで、OS側のAI機能にデータを読み取られる危険性が高まっています。",
+      "action_item": "業務端末のOS標準AI機能による画面解析設定がオフになっているか確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/"
+    },
+    {
+      "title": "AIの完了報告が「嘘」になる4つの型と確認すべき質問リスト",
+      "category": "リスク・規制",
+      "summary": "開発支援AIなどが、未実施の検証を「完了」と報告したり古い数値を最新として扱ったりする嘘の4パターンが分析されました。AIは悪意なく誤報告をするため、受け手側が根拠を問い返す仕組みが不可欠と指摘されています。",
+      "one_liner": "AIの嘘を見抜く確認手法",
+      "why_important": "AIの報告を鵜呑みにすると業務上の重大なミスにつながります。部下や外注先と同様に、根拠と確認手順を問う管理が必要です。",
+      "action_item": "AIに作業を任せた際、結果だけでなく「どの手順と数値で確認したか」を毎回質問してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/maura/articles/db8579579b1b81"
+    },
+    {
+      "title": "Nvidia研究チーム「巨大なAIコンテキストウィンドウはコスト増で行き止まり」",
+      "category": "研究・技術",
+      "summary": "約100万トークンを一度に読み込めるAIが主流となる中、Nvidiaの研究チームは長文の丸投げが高コストで非効率であると検証しました。定期的な要約とピンポイント検索の組み合わせで、一括処理と同等の精度が出ると確認されています。",
+      "one_liner": "長文丸投げはコスト増で行き止まり",
+      "why_important": "社内資料をそのままAIに読み込ませる運用はAPI利用料を膨張させます。検索や要約を組み合わせる方が費用対効果に優れます。",
+      "action_item": "社内のAI活用で長文資料をそのまま入力している業務がないか確認し、要約の併用を検討してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/nvidia-researchers-argue-huge-ai-context-windows-are-a-dead-end/"
+    },
+    {
+      "title": "OpenAIがGPT-6.2向けプロンプト改善テンプレートを公開",
+      "category": "対話型AI",
+      "summary": "OpenAIは最新モデル「GPT-6.2 Astra」と「Sol」向けに、回答の短さや不要な確認質問を減らす新しいプロンプトテンプレートを公開しました。過剰なテスト生成を抑える指示法など、モデルの癖に合わせた最適化手法が示されています。",
+      "one_liner": "モデル特性に合う指示で効率化",
+      "why_important": "最新モデルの特性に合わせて指示文を更新することで、やり取りの往復を減らし実務の生産性を即座に引き上げられます。",
+      "action_item": "普段使っている業務プロンプトを見直し、期待する出力形式や文字数の指定を明確にしてください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openai-shares-new-prompting-tips-for-gpt-6-2-astra-and-sol-to-fix-brief-answers-and-unnecessary-questions/"
+    },
+    {
+      "title": "専用アプリ不要、SMSやテキスト上で動く最新AIエージェント群",
+      "category": "対話型AI",
+      "summary": "専用アプリを開かず、普段使うSMSやiMessage上で友人への連絡と同じ感覚で指示を出せるAIエージェントが急増しています。会話やメールから自動で予定を登録したり旅行を手配したりでき、日常業務の自動化が進んでいます。",
+      "one_liner": "日常のSMSがAIの操作窓口に",
+      "why_important": "ツールを切り替える手間がなくなれば、従業員のAI利用のハードルは劇的に下がります。既存チャットツールとの連携が鍵です。",
+      "action_item": "社内の日常的なメッセージツールと連携できる軽量なAIボットがないか調べてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/"
+    },
+    {
+      "title": "トヨタの無人タクシーが中国で24時間運行を開始",
+      "category": "日本市場",
+      "summary": "トヨタのEVをベースに中国のPony.aiと共同開発したレベル4自動運転タクシーが、中国で乗客を乗せた24時間商用運行を始めました。日本の車両技術と中国のAI自動運転技術が融合し、完全無人の移動サービスが実用段階に入っています。",
+      "one_liner": "日中タッグの無人タクシー24時間稼働",
+      "why_important": "中国市場でのAI実装スピードは極めて速く、日本の製造業も現地AI企業との協業で先行事例を作っています。物流や移動の前提が変わります。",
+      "action_item": "自社の業界における中国AI企業の最新実装事例を1つ検索して把握してください。",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/toyota-robotaxi-china/"
+    }
+  ]
+}
