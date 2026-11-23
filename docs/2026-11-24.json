@@ -1,0 +1,107 @@
+{
+  "updated": "2026年11月24日",
+  "theme": "AI自律化とインフラ再編が同時加速",
+  "morning_comment": "AIが業務を代行する一方、電力や半導体を巡る覇権争いが激化しています。",
+  "articles": [
+    {
+      "title": "OpenAI、ChatGPTの標準モデルを「GPT-6.2 Sol」へ更新",
+      "category": "対話型AI",
+      "summary": "OpenAIはChatGPTの標準モデルを「GPT-6.2 Sol」へ順次切り替えています。画像理解の正答率が47.4%から71.7%へ急上昇し、複雑な指示の遂行率も78.1%に達しました。資料やグラフの読み取り精度が向上し、日常的な調査や業務ドキュメントの分析作業をより確実に自動化できます。",
+      "one_liner": "GPT-6.2の画像理解が大幅向上",
+      "why_important": "図表や複雑な資料を含む定型分析をAIに任せられる水準に達しました。人間のチェック工数を減らし、調査業務の速度を上げられます。",
+      "action_item": "手元のグラフ入りPDFをGPT-6.2に読み込ませ、要旨抽出の精度を試してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openai-updates-chatgpt-to-handle-complex-everyday-questions-web-searches-and-images-more-reliably/"
+    },
+    {
+      "title": "Anthropic、コードのレビューから承認まで自動化する「Claude Ship」発表",
+      "category": "ビジネス活用",
+      "summary": "Anthropicがソフトウェア開発向けのAIエージェント群「Claude Ship」を発表しました。コードの修正案作成に加え、自然言語で定めたポリシーに基づきAIがプルリクエストの承認まで自動で行います。管理職やシニアエンジニアの確認作業という開発のボトルネックを大幅に削減できます。",
+      "one_liner": "AIがコード承認まで完全自動化",
+      "why_important": "AIがコードを書くだけでなく、組織のルールに沿って品質を担保・承認する段階に入りました。開発チームのレビュー体制と責任分界の見直しが必要です。",
+      "action_item": "自社のコードレビュー基準を自然言語のドキュメントに書き出してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/"
+    },
+    {
+      "title": "Google検索のAIモード、Googleドライブやウォレットと連携開始",
+      "category": "ビジネス活用",
+      "summary": "Google検索のAIモードがGoogleドライブやウォレットなどの個人データと連携する「Personal Intelligence」に対応しました。検索時に自身のファイルや予定を踏まえた回答が得られます。業務ファイルの横断検索が容易になる一方、社外秘データの参照範囲を管理する意識も求められます。",
+      "one_liner": "Google検索がDriveと連携",
+      "why_important": "日常使う検索窓が社内データやスケジュールと直結し、情報探しの手間が激減します。同時に、個人の検索環境への機密ファイル混入リスクが高まります。",
+      "action_item": "社内のGoogleドライブにおける共有設定と外部アプリ連携ポリシーを確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/"
+    },
+    {
+      "title": "Nothing、AI文字起こし・要約機能付きイヤホン「Ear Note」を発表",
+      "category": "ビジネス活用",
+      "summary": "Nothingが会話の録音・文字起こし・AI要約が可能な新型イヤホン「Ear Note」を発表しました。充電ケース内蔵のマイクと専用アプリを組み合わせ、対面商談や移動中のメモを手軽にテキスト化できます。議事録作成をハードウェアで省力化する一方、情報漏洩対策の社内ルール整備が急務です。",
+      "one_liner": "録音・要約するAIイヤホン登場",
+      "why_important": "PCを開かずに会議や商談を記録・要約するウェアラブル機器が普及し始めました。無断録音やクラウドへの音声送信を防ぐガバナンスが不可欠です。",
+      "action_item": "対面会議でのAI録音デバイスの使用可否について、チーム内のルールを共有してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/gadgets/1040357/nothing-ear-note-earbuds-ai-recording"
+    },
+    {
+      "title": "Metaの商用利用可能な「SAM 3D Body」活用、動画を3D化し別アングルで撮影する新手法",
+      "category": "日本市場",
+      "summary": "静止画から人体3Dメッシュを推定するMetaの「SAM 3D Body」など商用利用可能なAIを組み合わせ、通常動画を3D化してカメラアングルを後から変える実践手法が公開されました。Mac環境でも実用速度で動作し、高額な撮影機材なしでプロモーション映像を柔軟に再構成できます。",
+      "one_liner": "通常動画を商用可の3D映像へ変換",
+      "why_important": "商用利用可能なオープンモデルを組み合わせることで、映像制作の撮影やり直しコストを大幅に下げられます。マーケティングや商品紹介の内製化に直結します。",
+      "action_item": "自社の既存プロモーション動画で、別アングルからの再活用が効きそうな素材を1本ピックアップしてください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/column/nishikawa/2158334.html"
+    },
+    {
+      "title": "中国Z.ai、28層を2回処理する新構造の750Bモデル「GLM-5.4」を発表",
+      "category": "中国AI",
+      "summary": "中国のAI企業Z.aiが、7500億パラメータ規模の新型モデル「GLM-5.4」を発表しました。28層を2回繰り返し計算する「Loop Transformer」構造を採用して推論能力を高めており、API提供とオープンウェイト公開を予定しています。単純な巨大化以外の効率化手法がオープンモデルの性能を牽引しています。",
+      "one_liner": "中国発、反復計算で高推論の750B",
+      "why_important": "中国勢が計算効率を高める独自アーキテクチャで推論性能を押し上げています。オープンモデルの選択肢が広がり、オンプレミスや低コストAPIの活用余地が増えます。",
+      "action_item": "現在利用中のLLMのAPIコストと、オープンモデルの代替可能性を比較リストにまとめてみてください。",
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/11/23/zai-glm-5-4-loop-transformer/"
+    },
+    {
+      "title": "Anthropicの計算資源需要が拡大、xAIは自社AI開発を縮小し計算力の貸し出しへ転換",
+      "category": "ビジネス活用",
+      "summary": "AnthropicやGoogleが膨大な計算資源を求める中、xAIが自社AI開発を縮小して両社へ計算力を貸し出す戦略へシフトしました。Anthropicは月間約31億ドルを支払っていると報じられています。モデル開発競争からインフラ提供ビジネスへと業界の勝ち筋が分岐し始めています。",
+      "one_liner": "xAIが自社開発縮小、計算力貸出へ",
+      "why_important": "巨大テック間でもAIモデルの自前開発を諦め、インフラ供給へ回る再編が起きています。今後のAIベンダー選定では、モデルの性能だけでなく計算資源の調達力を見極める必要があります。",
+      "action_item": "自社が依存しているAIサービスの提供元が、どのクラウドや計算インフラに依拠しているか確認してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/anthropics-appetite-for-compute-is-pushing-xai-toward-a-rent-over-build-strategy/"
+    },
+    {
+      "title": "Nvidiaのジェンスン・フアンCEOが辞任から2週間足らずで電撃復帰",
+      "category": "リスク・規制",
+      "summary": "不倫および中国への情報漏洩疑惑の渦中にあったジェンスン・フアン氏が、辞任から2週間足らずでNvidiaのCEOに復帰しました。トランプ米大統領が取締役会へ強く働きかけた結果であり、同氏の代替不可能性と米政権の意向がAI企業のガバナンスを左右するリスクが鮮明になっています。",
+      "one_liner": "NvidiaフアンCEOが電撃復帰",
+      "why_important": "AIインフラの要であるNvidiaの経営が米国の政治判断に強く影響される構図が露呈しました。半導体供給や価格動向を政治リスクとセットで注視する必要があります。",
+      "action_item": "自社のIT投資計画において、GPU価格やクラウド利用料の高騰に備えたバッファがあるか点検してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang"
+    },
+    {
+      "title": "米商務省、Nvidia取引先のMegaspeedを貿易ブラックリストに追加",
+      "category": "リスク・規制",
+      "summary": "米商務省は、Nvidia製AIチップの中国への不正輸出疑惑があるシンガポールのデータ企業Megaspeedとその関連会社を貿易ブラックリストに追加しました。米国企業は特別許可なく半導体を販売できなくなります。アジア圏を経由した迂回輸出の監視が厳格化しており、日本企業も取引先の精査が不可欠です。",
+      "one_liner": "Nvidia取引先が米禁輸リスト入り",
+      "why_important": "東南アジアを経由したAI半導体の調達やデータセンター利用にも米国の規制が及んでいます。海外のクラウドや委託先を利用する際、サプライチェーン上の制裁リスクを確認すべきです。",
+      "action_item": "法務・調達部門と連携し、利用中の海外データセンターやAIベンダーの規制対象チェック状況を確認してください。",
+      "source": "Semafor Technology",
+      "url": "https://www.semafor.com/article/11/23/2026/commerce-to-add-megaspeed-to-trade-blacklist"
+    },
+    {
+      "title": "AIデータセンターの電力消費急増、国連気候変動会議（COP31）の交渉決裂の一因に",
+      "category": "リスク・規制",
+      "summary": "トルコで開催されたCOP31は、AIデータセンターによる電力需要の急増が脱炭素目標の達成を難しくしている議論も絡み、合意に至らず閉幕しました。テック大手の排出削減目標も形骸化しつつあり、AI導入による電力コスト増とESG・脱炭素目標の両立が避けられない経営課題になります。",
+      "one_liner": "AI電力急増が気候交渉の壁に",
+      "why_important": "AI活用の拡大が電力コストの上昇や企業の脱炭素目標（Scope 2/3）の達成を直接圧迫し始めています。今後は「AIのROI」に電力効率や環境負荷の視点が求められます。",
+      "action_item": "不要不急のバッチ処理や過剰な高精度モデルの常用を見直し、省エネなAI運用方針を検討してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/science/1040497/ai-data-centers-electricity-un-climate-summit"
+    }
+  ]
+}
