@@ -73,11 +73,16 @@ PRICES: dict[str, tuple[float, float]] = {
 
 # 1 枚あたりの USD。解像度で変わるものは 1K/2K の値を既定にする。
 IMAGE_PRICES: dict[str, float] = {
-    "gemini-nano-banana-2.1": 0.0504,     # 2K（3 系統とも 2K で生成）。1K=0.0336 / 4K=0.0756
+    "gemini-nano-banana-2.1": 0.0504,     # 2K 既定。1K=0.0336 / 4K=0.0756
     "gemini-3-pro-image": 0.134,          # 1K/2K。4K は 0.24
-    "gemini-3.1-flash-image": 0.067,      # 1K。0.5K=0.045 / 2K=0.101 / 4K=0.151
+    "gemini-3.1-flash-image": 0.067,      # 1K 既定。0.5K=0.045 / 2K=0.101 / 4K=0.151
     "gemini-3.1-flash-lite-image": 0.0336,
     "gemini-2.5-flash-image": 0.039,
+}
+
+IMAGE_SIZE_PRICES: dict[str, dict[str, float]] = {
+    "gemini-nano-banana-2.1": {"1K": 0.0336, "2K": 0.0504, "4K": 0.0756},
+    "gemini-3.1-flash-image": {"0.5K": 0.045, "1K": 0.067, "2K": 0.101, "4K": 0.151},
 }
 
 
@@ -149,18 +154,37 @@ class UsageMeter:
         except Exception as exc:  # 計測の失敗で本番を止めない
             self._note(f"record 失敗: {type(exc).__name__}: {exc}")
 
-    def record_image(self, model: str, count: int = 1, label: str = "", usd_each: float | None = None) -> None:
-        """画像生成を枚数で数える。単価を明示したいときは usd_each を渡す。"""
+    def record_image(
+        self,
+        model: str,
+        count: int = 1,
+        label: str = "",
+        usd_each: float | None = None,
+        image_size: str | None = None,
+        response=None,
+    ) -> None:
+        """画像生成を枚数で数える。解像度や単価を指定したいときは image_size / usd_each を渡す。"""
         if not self.enabled:
             return
         try:
+            resolved_each = usd_each
+            if resolved_each is None and image_size:
+                resolved_each = (IMAGE_SIZE_PRICES.get(model) or {}).get(image_size.strip().upper())
+            prompt = thoughts = 0
+            u = getattr(response, "usage_metadata", None) if response is not None else None
+            if u is not None:
+                prompt = _int(getattr(u, "prompt_token_count", 0))
+                thoughts = _int(getattr(u, "thoughts_token_count", 0))
             with self._lock:
                 self.calls.append({
                     "kind": "image",
                     "model": model,
                     "label": label,
                     "images": int(count),
-                    "usd_each": usd_each,
+                    "usd_each": resolved_each,
+                    "image_size": image_size.strip().upper() if image_size else None,
+                    "prompt_tokens": prompt,
+                    "thoughts_tokens": thoughts,
                 })
         except Exception as exc:
             self._note(f"record_image 失敗: {type(exc).__name__}: {exc}")

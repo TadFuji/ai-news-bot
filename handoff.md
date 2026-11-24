@@ -1,6 +1,14 @@
 # handoff.md — AIニュースの引き継ぎ
 
-最終確認: 2026-11-16。作業開始・終了時の更新ルールは [AGENTS.md](AGENTS.md)。2026-10-10の朝刊遅延と適用済み再発低減策（collection_runner など）は [automation/RECOVERY_HANDOFF.md](automation/RECOVERY_HANDOFF.md) を先に読む。現在の主起動は **OpenAI dot（どっちゃん）の定時タスク、07:07 JST**、実処理はGitHub Actions。変更担当者は [AGENTS.md](AGENTS.md) に従い毎回引き継ぎを更新する。構成は [README.md](README.md)、過去の変更は [HISTORY.md](HISTORY.md)。
+最終確認: 2026-11-24。作業開始・終了時の更新ルールは [AGENTS.md](AGENTS.md)。2026-10-10の朝刊遅延と適用済み再発低減策（collection_runner など）は [automation/RECOVERY_HANDOFF.md](automation/RECOVERY_HANDOFF.md) を先に読む。現在の主起動は **OpenAI dot（どっちゃん）の定時タスク、07:07 JST**、実処理はGitHub Actions。変更担当者は [AGENTS.md](AGENTS.md) に従い毎回引き継ぎを更新する。構成は [README.md](README.md)、過去の変更は [HISTORY.md](HISTORY.md)。
+
+## 思考レベル LOW への最適化と usage_meter.py 同期（2026-11-24）
+
+- **変更点**:
+  - `config.py`: `GEMINI_THINKING_LEVEL` 既定値を `"MEDIUM"` → `"LOW"` へ変更（`gemini-4-hydrogen` と `gemini-nano-banana-2.1` 2K インフォグラフィック設定は維持）。
+  - `usage_meter.py`: `Hacker-News` / `reddit-daily` と同一版（解像度別画像単価 `IMAGE_SIZE_PRICES` 対応）に同期。
+  - `tests/test_flex_inference.py`, `CLAUDE.md`, `README.md`: `LOW` 設定に合わせてテスト期待値・仕様記述を更新。
+- **元に戻す方法**: 該当コミットを `git revert <commit>` して `origin/main` へ push（環境変数 `GEMINI_THINKING_LEVEL=MEDIUM` でも即時戻せる）。
 
 ## Flex 推論（50%割引・Standard 自動退避付き）と思考レベル MEDIUM の導入（2026-11-16）
 

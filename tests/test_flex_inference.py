@@ -69,7 +69,7 @@ def _thinking_val(cfg):
 
 
 class FlexInferenceTests(unittest.TestCase):
-    def test_stage1_uses_flex_with_medium_thinking_and_bills_half(self):
+    def test_stage1_uses_flex_with_low_thinking_and_bills_half(self):
         payload = json.dumps([
             {
                 "index": 1,
@@ -94,7 +94,7 @@ class FlexInferenceTests(unittest.TestCase):
         self.assertEqual(len(res), 1)
         cfg = fake_client.models.calls[0]["config"]
         self.assertEqual(_tier_val(cfg), "flex")
-        self.assertEqual(_thinking_val(cfg), "MEDIUM")
+        self.assertEqual(_thinking_val(cfg), "LOW")
         self.assertEqual(getattr(cfg.http_options, "timeout", None), config.GEMINI_FLEX_TIMEOUT_MS)
         self.assertAlmostEqual(meter.totals()["usd"], 4.5, places=6)
 
@@ -190,7 +190,7 @@ class FlexInferenceTests(unittest.TestCase):
             text = generate_weekly_column.generate_column(_sample_articles())
         self.assertEqual(text, "コラム本文")
         self.assertEqual(_tier_val(fake_client_ok.models.calls[0]["config"]), "flex")
-        self.assertEqual(_thinking_val(fake_client_ok.models.calls[0]["config"]), "MEDIUM")
+        self.assertEqual(_thinking_val(fake_client_ok.models.calls[0]["config"]), "LOW")
         self.assertAlmostEqual(meter_flex.totals()["usd"], 4.5, places=6)
 
         fake_client_fb = _FakeClient([
