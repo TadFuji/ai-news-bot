@@ -1,0 +1,107 @@
+{
+  "updated": "2026年11月25日",
+  "theme": "自律型AIの実装と人間の役割",
+  "morning_comment": "自律型AIが日常業務へ浸透。同時に失敗率や安全性の見極めも不可欠です。",
+  "articles": [
+    {
+      "title": "Anthropic、Claude ArtifactsをMac・Windows向け単体アプリとして提供開始",
+      "category": "ビジネス活用",
+      "summary": "AnthropicはClaudeのチャット上で作成したArtifactsをmacOSやWindowsのデスクトップアプリとしてインストールできるベータ機能を提供開始しました。コーディング不要で通知送信などOS機能と連携した独自ツールを無料アカウントでも作成できます。",
+      "one_liner": "Claude作成ツールがPCアプリに",
+      "why_important": "プログラミング知識がなくても、業務に合わせた常駐アプリを即座に作れるようになります。個人の業務効率化のハードルが大きく下がりました。",
+      "action_item": "Claudeで普段使っている定型作業用プロンプトを1つ選び、Artifactsでツール化してみてください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/anthropic-turns-claude-artifacts-into-standalone-desktop-apps-for-macos-and-windows/"
+    },
+    {
+      "title": "OpenAIやfreeeが実践するAIエージェントの「ソフトウェアファクトリー」とは何か",
+      "category": "ビジネス活用",
+      "summary": "AIコーディングエージェントを個別に使う段階から、開発工程全体を工場として自動化するソフトウェアファクトリーへの移行が進んでいます。OpenAIやUberに加え日本のfreeeも取り組みを始め、人間には工程全体の設計や監督が求められます。",
+      "one_liner": "AIが開発工程全体を自動化する時代",
+      "why_important": "開発業務の主戦場がコードを書く作業から、AIを動かす仕組み全体の設計へと移っています。管理職や開発リーダーはワークフローの再設計が必要です。",
+      "action_item": "自チームの業務工程を書き出し、AIに一任できる連続タスクがどこにあるか確認してください。",
+      "source": "ITmedia AI+",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/25/news002.html"
+    },
+    {
+      "title": "Anthropicの「MCP」が月間7億ダウンロード突破、自律型AIの標準規格へ",
+      "category": "研究・技術",
+      "summary": "Anthropicが提唱するAIと外部ツールを繋ぐ標準規格MCPのSDKが月間7億ダウンロードを超えました。バックグラウンド実行やファイルアップロードなどの新機能も追加され、AIエージェントがより自律的に動作する基盤が整いつつあります。",
+      "one_liner": "AIとツールを繋ぐMCPが標準規格へ",
+      "why_important": "AIと社内システムを接続する際、MCP対応を前提にツールを選ぶことで将来の乗り換えコストを抑えられます。業界標準の普及スピードが極めて速いです。",
+      "action_item": "自社で利用中のSaaSや社内ツールがMCP連携に対応しているか検索して調べてみてください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/anthropic-tops-700-million-monthly-mcp-sdk-downloads-and-expands-the-protocol-for-more-autonomous-ai-agents/"
+    },
+    {
+      "title": "最高峰のAIエージェントでも日常業務の3分の1以上で失敗するとの調査結果",
+      "category": "リスク・規制",
+      "summary": "日常タスクを評価する新ベンチマークShellBenchによると、OpenAIやAnthropic、Metaの最先端AIエージェントでも3分の1以上のケースでタスクに失敗し、15.7%で安全性要件を満たせませんでした。雑多な情報からの判断や機密保護に課題が残ります。",
+      "one_liner": "最高峰AIも日常業務の3割超で失敗",
+      "why_important": "自律型AIへの過度な信頼は情報漏洩や業務ミスに直結します。社外秘の扱いや最終判断には必ず人間の確認プロセスを残すべきです。",
+      "action_item": "現在使っているAIの自動処理から、人間が最終承認すべきステップを1つ明確に決めてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/"
+    },
+    {
+      "title": "AI時代に「仕事ができる人」と「できない人」を分ける2つの力",
+      "category": "ビジネス活用",
+      "summary": "AIによって実務のアウトプット品質が均一化する中、ビジネスパーソンに求められるのは資格や語学力以上に、AIの出力を判断する見極める力と前提条件を整理する整える力です。AIを使いこなして次の仕事を任されるための生存戦略が解説されています。",
+      "one_liner": "AI時代は「見極め」と「整え」が鍵",
+      "why_important": "AIの出力精度が上がるほど、前提条件の定義と結果の妥当性検証が人間の価値になります。作業の速さではなく判断の質で評価される時代です。",
+      "action_item": "AIに指示を出す前に、目的と制約条件を3行のメモに整理してからプロンプトを書いてみてください。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2611/25/news006.html"
+    },
+    {
+      "title": "Google AI Plus/Proの年間プランがブラックフライデーで半額に",
+      "category": "日本市場",
+      "summary": "Googleは生成AI有料プランの年額料金を半額にするキャンペーンを実施しています。Gemini 4シリーズやコーディングエージェントGoogle Antigravity、動画生成ツール、大容量クラウドストレージが大幅割引となり、最新AIの導入コストが下がります。",
+      "one_liner": "GoogleのAI有料プランが半額に",
+      "why_important": "最新モデルやコーディングエージェント、大容量ストレージを低コストで試せる好機です。個人や小規模チームでのAI活用環境を一気に整えられます。",
+      "action_item": "Google AIプランの割引対象条件と利用可能な機能一覧を公式サイトで確認してみてください。",
+      "source": "PC Watch",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2158884.html"
+    },
+    {
+      "title": "WalmartとMetaが提携、AIエージェント「Muse」経由での買い物に対応",
+      "category": "ビジネス活用",
+      "summary": "米小売大手WalmartはMetaと提携し、AIエージェントMuseを通じてブラックフライデーの特売品を検索・購入できる機能を提供開始しました。Amazonが外部AIを制限する一方、Walmartは外部エージェントに販売網を開放しています。",
+      "one_liner": "買い物もAIエージェント経由へ移行",
+      "why_important": "消費者が検索画面ではなくAIエージェント経由で商品を選ぶ流れが始まっています。ECや小売の担当者はAIに選ばれる商品データの整備が急務です。",
+      "action_item": "自社商品やサービスのスペック情報が、外部から正確に読み取れるテキスト形式で公開されているか確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/"
+    },
+    {
+      "title": "KDDI幹部が語る「フィジカルAI」の衝撃と日本のロボット産業の強み",
+      "category": "日本市場",
+      "summary": "決まった動作を繰り返す従来のロボットから、状況を認識して自律的に動くフィジカルAIへの転換が加速しています。KDDI幹部は、ロボット大国と呼ばれた日本の強みがAIとの融合によってどう変化し、新たな競争力を生み出すかを指摘しています。",
+      "one_liner": "自律型AIが日本のロボットを刷新",
+      "why_important": "生成AIの波がソフトウェアから製造や物流などの現場作業へ本格的に広がっています。ハードウェアの強みとAIを掛け合わせる視点が日本企業に求められます。",
+      "action_item": "自社の現場業務や物理的な作業のうち、カメラ認識と自律判断で自動化できそうな工程を1つ挙げてみてください。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2611/25/news014.html"
+    },
+    {
+      "title": "英国サイバー機関が警告、AI駆動のサイバー攻撃が脆弱性を突く",
+      "category": "リスク・規制",
+      "summary": "英国のサイバーセキュリティ機関は、AIを用いたハッキングツールが企業の単純なセキュリティ上の欠陥を次々と突き、長年の脆弱性が露呈していると警告しました。基礎的なセキュリティ対策の徹底がこれまで以上に不可欠となっています。",
+      "one_liner": "AIが悪用され基礎的な脆弱性を攻撃",
+      "why_important": "攻撃側がAIで弱点を高速に探すため、放置された古いシステムや単純な設定ミスが即座に狙われます。最新対策の前に基本的な脆弱性管理の徹底が必要です。",
+      "action_item": "使用中の業務端末やクラウドサービスのアップデート保留とパスワード管理状況を確認してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/24/uk-warns-ai-driven-cyberattacks-are-exposing-years-of-weak-security/"
+    },
+    {
+      "title": "音楽配信Tidal、AI生成楽曲約2900万曲を全削除へ",
+      "category": "リスク・規制",
+      "summary": "音楽ストリーミングサービスのTidalは、人の創作的関与がほとんどない完全AI生成楽曲約2900万曲を削除し、今後の配信申請も却下すると発表しました。急増するAI楽曲がカタログの質や収益分配を圧迫しているためで、補助的なAI利用は認められます。",
+      "one_liner": "Tidalが完全AI楽曲を全削除へ",
+      "why_important": "安価なAI生成コンテンツの大量流入に対し、プラットフォーム側が人間の関与を基準に排除へ動き出しました。AIを丸投げではなく制作補助に使う姿勢が重要です。",
+      "action_item": "社外へ発信する記事や企画書で、AI生成のまま無編集で出している部分がないか見直してみてください。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/11/25/5806.html"
+    }
+  ]
+}
