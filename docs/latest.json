@@ -1,107 +1,107 @@
 {
-  "updated": "2026年11月25日",
-  "theme": "自律型AIの実装と人間の役割",
-  "morning_comment": "自律型AIが日常業務へ浸透。同時に失敗率や安全性の見極めも不可欠です。",
+  "updated": "2026年11月26日",
+  "theme": "AIの業務浸透と、守りの設計が問われる段階へ",
+  "morning_comment": "使えるAIが増えるほど、権限とデータの境界線が重要になります。",
   "articles": [
     {
-      "title": "Anthropic、Claude ArtifactsをMac・Windows向け単体アプリとして提供開始",
+      "title": "OpenAI、機密データを自社でも閲覧不可にする新機能「Private Inference」をテスト中",
       "category": "ビジネス活用",
-      "summary": "AnthropicはClaudeのチャット上で作成したArtifactsをmacOSやWindowsのデスクトップアプリとしてインストールできるベータ機能を提供開始しました。コーディング不要で通知送信などOS機能と連携した独自ツールを無料アカウントでも作成できます。",
-      "one_liner": "Claude作成ツールがPCアプリに",
-      "why_important": "プログラミング知識がなくても、業務に合わせた常駐アプリを即座に作れるようになります。個人の業務効率化のハードルが大きく下がりました。",
-      "action_item": "Claudeで普段使っている定型作業用プロンプトを1つ選び、Artifactsでツール化してみてください。",
+      "summary": "OpenAIは、企業が機密データを含むクエリを同社側からも一切アクセスできない状態で実行できる「Private Inference」をテストしています。これまで情報漏洩リスクからChatGPTの業務利用を制限していた企業にとって、導入の大きな障壁が下がります。",
+      "one_liner": "OpenAIも見られない秘匿推論",
+      "why_important": "機密情報の扱いを理由にChatGPTの業務導入を見送っていた企業でも、社内規定の緩和や解禁を検討できる水準に近づいています。",
+      "action_item": "自社のAI利用ガイドラインで「入力不可」としている機密データの範囲を再確認してください。",
       "source": "The Decoder",
-      "url": "https://the-decoder.com/anthropic-turns-claude-artifacts-into-standalone-desktop-apps-for-macos-and-windows/"
+      "url": "https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/"
     },
     {
-      "title": "OpenAIやfreeeが実践するAIエージェントの「ソフトウェアファクトリー」とは何か",
+      "title": "Claudeの「Artifacts」をMac/Windowsの独立アプリとしてインストール可能に",
       "category": "ビジネス活用",
-      "summary": "AIコーディングエージェントを個別に使う段階から、開発工程全体を工場として自動化するソフトウェアファクトリーへの移行が進んでいます。OpenAIやUberに加え日本のfreeeも取り組みを始め、人間には工程全体の設計や監督が求められます。",
-      "one_liner": "AIが開発工程全体を自動化する時代",
-      "why_important": "開発業務の主戦場がコードを書く作業から、AIを動かす仕組み全体の設計へと移っています。管理職や開発リーダーはワークフローの再設計が必要です。",
-      "action_item": "自チームの業務工程を書き出し、AIに一任できる連続タスクがどこにあるか確認してください。",
-      "source": "ITmedia AI+",
-      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/25/news002.html"
+      "summary": "Anthropicは、Claudeで作成したツール（Artifacts）をMacやWindowsのデスクトップアプリとして単体インストールできるベータ機能を提供開始しました。ブラウザやClaude画面を開かずに専用アイコンから起動でき、チーム内での共有も可能です。",
+      "one_liner": "Artifactsが単体アプリ化",
+      "why_important": "AIで作った簡易ツールをブラウザのタブに埋もれさせず、通常の業務ソフトと同じ感覚でチームに配布・定着させられます。",
+      "action_item": "Claudeでよく使うArtifactsを1つ選び、デスクトップアプリ化できるか試してください。",
+      "source": "ZDNet AI",
+      "url": "https://www.zdnet.com/innovation/claude-artifacts-desktop-apps-mac-windows/"
     },
     {
-      "title": "Anthropicの「MCP」が月間7億ダウンロード突破、自律型AIの標準規格へ",
-      "category": "研究・技術",
-      "summary": "Anthropicが提唱するAIと外部ツールを繋ぐ標準規格MCPのSDKが月間7億ダウンロードを超えました。バックグラウンド実行やファイルアップロードなどの新機能も追加され、AIエージェントがより自律的に動作する基盤が整いつつあります。",
-      "one_liner": "AIとツールを繋ぐMCPが標準規格へ",
-      "why_important": "AIと社内システムを接続する際、MCP対応を前提にツールを選ぶことで将来の乗り換えコストを抑えられます。業界標準の普及スピードが極めて速いです。",
-      "action_item": "自社で利用中のSaaSや社内ツールがMCP連携に対応しているか検索して調べてみてください。",
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/anthropic-tops-700-million-monthly-mcp-sdk-downloads-and-expands-the-protocol-for-more-autonomous-ai-agents/"
-    },
-    {
-      "title": "最高峰のAIエージェントでも日常業務の3分の1以上で失敗するとの調査結果",
+      "title": "コーディングエージェントの機密鍵流出は禁止プロンプトで防げない、知能と権限の分離が必須",
       "category": "リスク・規制",
-      "summary": "日常タスクを評価する新ベンチマークShellBenchによると、OpenAIやAnthropic、Metaの最先端AIエージェントでも3分の1以上のケースでタスクに失敗し、15.7%で安全性要件を満たせませんでした。雑多な情報からの判断や機密保護に課題が残ります。",
-      "one_liner": "最高峰AIも日常業務の3割超で失敗",
-      "why_important": "自律型AIへの過度な信頼は情報漏洩や業務ミスに直結します。社外秘の扱いや最終判断には必ず人間の確認プロセスを残すべきです。",
-      "action_item": "現在使っているAIの自動処理から、人間が最終承認すべきステップを1つ明確に決めてください。",
+      "summary": "Claude Codeなどのコーディングエージェントは、外部のREADME等に含まれる悪意ある指示を読むと「.envを読まないで」という禁止ルールを突破して機密情報を流出させる危険があります。プロンプトでの制御ではなく、知能と実行権限を分離する設計が必要です。",
+      "one_liner": "禁止プロンプトでは機密を守れない",
+      "why_important": "自律型AIエージェントを業務に組み込む際、指示文の工夫だけではセキュリティ事故を防げないことを前提に権限設計を行う必要があります。",
+      "action_item": "開発や業務で使うAIエージェントが、どのファイルや環境変数にアクセスできるか権限設定を見直してください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/nalt/articles/agentic-harness-security-architecture"
+    },
+    {
+      "title": "OpenAI、ChatGPTの「Chat」と「Work」を統合し利用制限を一本化",
+      "category": "対話型AI",
+      "summary": "OpenAIはChatGPTの通常チャットと業務向け機能を統合し、利用上限を単一のメーターで管理する仕様の展開を開始しました。一部ヘビーユーザーは高度な推論モデルの上限に早く達する可能性がありますが、Instantモデルは引き続き無制限で利用できます。",
+      "one_liner": "ChatGPTの利用上限が一本化",
+      "why_important": "業務で高度な推論モデルを多用する担当者は、想定より早く利用上限に達し作業が止まるリスクを織り込む必要があります。",
+      "action_item": "簡単な下書きはInstantモデルを使うなど、高度な推論モデルの消費を抑える使い分けを決めてください。",
       "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/"
+      "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/"
     },
     {
-      "title": "AI時代に「仕事ができる人」と「できない人」を分ける2つの力",
-      "category": "ビジネス活用",
-      "summary": "AIによって実務のアウトプット品質が均一化する中、ビジネスパーソンに求められるのは資格や語学力以上に、AIの出力を判断する見極める力と前提条件を整理する整える力です。AIを使いこなして次の仕事を任されるための生存戦略が解説されています。",
-      "one_liner": "AI時代は「見極め」と「整え」が鍵",
-      "why_important": "AIの出力精度が上がるほど、前提条件の定義と結果の妥当性検証が人間の価値になります。作業の速さではなく判断の質で評価される時代です。",
-      "action_item": "AIに指示を出す前に、目的と制約条件を3行のメモに整理してからプロンプトを書いてみてください。",
-      "source": "ITmedia ビジネスオンライン",
-      "url": "https://www.itmedia.co.jp/business/articles/2611/25/news006.html"
-    },
-    {
-      "title": "Google AI Plus/Proの年間プランがブラックフライデーで半額に",
-      "category": "日本市場",
-      "summary": "Googleは生成AI有料プランの年額料金を半額にするキャンペーンを実施しています。Gemini 4シリーズやコーディングエージェントGoogle Antigravity、動画生成ツール、大容量クラウドストレージが大幅割引となり、最新AIの導入コストが下がります。",
-      "one_liner": "GoogleのAI有料プランが半額に",
-      "why_important": "最新モデルやコーディングエージェント、大容量ストレージを低コストで試せる好機です。個人や小規模チームでのAI活用環境を一気に整えられます。",
-      "action_item": "Google AIプランの割引対象条件と利用可能な機能一覧を公式サイトで確認してみてください。",
+      "title": "macOS 27の「写真」アプリがApple Intelligenceで撮影後の画角拡張・視点変更に対応",
+      "category": "画像・動画AI",
+      "summary": "macOS 27の標準「写真」アプリに、AIで写真の周囲を描き足す「拡張」と、被写体の角度を立体的に補正する「リフレーム」機能が追加されました。資料作成時の画像サイズ調整や斜めから撮った写真の正面補正が標準機能だけで完結します。",
+      "one_liner": "Mac標準の写真アプリで画角拡張",
+      "why_important": "外部の生成AIツールを開かなくても、OS標準機能だけで資料用の画像補正やトリミングの手間を削減できます。",
+      "action_item": "プレゼン資料に使う写真を1枚選び、macOS標準の編集機能でどこまで補正できるか確認してください。",
       "source": "PC Watch",
-      "url": "https://pc.watch.impress.co.jp/docs/news/2158884.html"
+      "url": "https://pc.watch.impress.co.jp/docs/column/macinfo/2159075.html"
     },
     {
-      "title": "WalmartとMetaが提携、AIエージェント「Muse」経由での買い物に対応",
-      "category": "ビジネス活用",
-      "summary": "米小売大手WalmartはMetaと提携し、AIエージェントMuseを通じてブラックフライデーの特売品を検索・購入できる機能を提供開始しました。Amazonが外部AIを制限する一方、Walmartは外部エージェントに販売網を開放しています。",
-      "one_liner": "買い物もAIエージェント経由へ移行",
-      "why_important": "消費者が検索画面ではなくAIエージェント経由で商品を選ぶ流れが始まっています。ECや小売の担当者はAIに選ばれる商品データの整備が急務です。",
-      "action_item": "自社商品やサービスのスペック情報が、外部から正確に読み取れるテキスト形式で公開されているか確認してください。",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/"
+      "title": "米国の半導体規制と蒸留対策により、中国AI企業のモデル開発に遅れ",
+      "category": "中国AI",
+      "summary": "米国の先端半導体アクセス制限に加え、OpenAIやAnthropicによるモデル蒸留（出力結果を使った模倣学習）対策が効果を上げ、DeepSeekやAlibabaなど中国AI企業の開発計画が遅延しています。中国勢は国内チップや独自データへの投資を加速させています。",
+      "one_liner": "規制と蒸留対策で中国AIに遅れ",
+      "why_important": "米国勢の出力に頼った安価なモデルの追い上げが鈍化する可能性があり、グローバルなAI調達や競合環境の前提が変わりつつあります。",
+      "action_item": "自社や取引先が利用しているAIモデルの提供元と、地政学リスクへの代替案を整理してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/us-chip-access-curbs-and-anti-distillation-measures-are-reportedly-already-slowing-chinese-ai-labs/"
     },
     {
-      "title": "KDDI幹部が語る「フィジカルAI」の衝撃と日本のロボット産業の強み",
-      "category": "日本市場",
-      "summary": "決まった動作を繰り返す従来のロボットから、状況を認識して自律的に動くフィジカルAIへの転換が加速しています。KDDI幹部は、ロボット大国と呼ばれた日本の強みがAIとの融合によってどう変化し、新たな競争力を生み出すかを指摘しています。",
-      "one_liner": "自律型AIが日本のロボットを刷新",
-      "why_important": "生成AIの波がソフトウェアから製造や物流などの現場作業へ本格的に広がっています。ハードウェアの強みとAIを掛け合わせる視点が日本企業に求められます。",
-      "action_item": "自社の現場業務や物理的な作業のうち、カメラ認識と自律判断で自動化できそうな工程を1つ挙げてみてください。",
-      "source": "ITmedia ビジネスオンライン",
-      "url": "https://www.itmedia.co.jp/business/articles/2611/25/news014.html"
-    },
-    {
-      "title": "英国サイバー機関が警告、AI駆動のサイバー攻撃が脆弱性を突く",
+      "title": "破産手続き中のCharacter.AI、2100万人分の個人チャット履歴売却計画に州司法長官らが異議",
       "category": "リスク・規制",
-      "summary": "英国のサイバーセキュリティ機関は、AIを用いたハッキングツールが企業の単純なセキュリティ上の欠陥を次々と突き、長年の脆弱性が露呈していると警告しました。基礎的なセキュリティ対策の徹底がこれまで以上に不可欠となっています。",
-      "one_liner": "AIが悪用され基礎的な脆弱性を攻撃",
-      "why_important": "攻撃側がAIで弱点を高速に探すため、放置された古いシステムや単純な設定ミスが即座に狙われます。最新対策の前に基本的な脆弱性管理の徹底が必要です。",
-      "action_item": "使用中の業務端末やクラウドサービスのアップデート保留とパスワード管理状況を確認してください。",
+      "summary": "対話型AIサービスCharacter.AIの破産に伴う資産売却計画に、未成年者210万人分を含む2100万人以上のプライベートなチャット履歴が含まれているとして、米国の州司法長官らが差し止めを求めています。AIサービスの運営終了時におけるデータ保護の課題が浮き彫りになりました。",
+      "one_liner": "破産AI企業の履歴売却に待った",
+      "why_important": "外部のAIサービスを選定する際、通常時のセキュリティだけでなく、事業撤退や破産時にデータがどう扱われるかの確認が欠かせません。",
+      "action_item": "現在利用中のAIツールの利用規約で、サービス終了時や事業譲渡時のデータ取り扱い条項を確認してください。",
       "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/11/24/uk-warns-ai-driven-cyberattacks-are-exposing-years-of-weak-security/"
+      "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/"
     },
     {
-      "title": "音楽配信Tidal、AI生成楽曲約2900万曲を全削除へ",
+      "title": "ニューヨーク州、子どもの発達への悪影響からAIチャットボット内蔵玩具を5年間禁止",
       "category": "リスク・規制",
-      "summary": "音楽ストリーミングサービスのTidalは、人の創作的関与がほとんどない完全AI生成楽曲約2900万曲を削除し、今後の配信申請も却下すると発表しました。急増するAI楽曲がカタログの質や収益分配を圧迫しているためで、補助的なAI利用は認められます。",
-      "one_liner": "Tidalが完全AI楽曲を全削除へ",
-      "why_important": "安価なAI生成コンテンツの大量流入に対し、プラットフォーム側が人間の関与を基準に排除へ動き出しました。AIを丸投げではなく制作補助に使う姿勢が重要です。",
-      "action_item": "社外へ発信する記事や企画書で、AI生成のまま無編集で出している部分がないか見直してみてください。",
-      "source": "TechnoEdge",
-      "url": "https://www.techno-edge.net/article/2026/11/25/5806.html"
+      "summary": "ニューヨーク州は、不適切なコンテンツへの露出や情緒発達への悪影響が調査で明らかになったとして、AIチャットボットを搭載した玩具の販売などを5年間禁止しました。子ども向け製品におけるAIの安全性基準が厳格化しています。",
+      "one_liner": "NY州がAI内蔵玩具を5年間禁止",
+      "why_important": "一般消費者向け、特に若年層を対象としたAI製品やサービスでは、利便性よりも安全性と規制対応が事業継続の条件になります。",
+      "action_item": "自社で一般消費者向けのAI施策を検討している場合、未成年者保護の観点が抜けていないか点検してください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/"
+    },
+    {
+      "title": "米FCC、SpaceXによる最大100万基の宇宙AIデータセンター衛星打ち上げ計画を承認",
+      "category": "研究・技術",
+      "summary": "米連邦通信委員会（FCC）は、SpaceXがAIチップを搭載した衛星を最大100万基打ち上げ、宇宙空間にAIデータセンターを構築する「Starmind」計画を承認しました。地上の電力・冷却不足を解消する次世代インフラ競争が本格化しています。",
+      "one_liner": "宇宙AIデータセンター計画を承認",
+      "why_important": "AIの計算需要が地上の電力・冷却インフラの限界を押し広げており、今後のクラウドコストやインフラ投資の前提が変わる可能性があります。",
+      "action_item": "自社のクラウド・AI関連コストの推移を把握し、中長期的な予算計画の前提を見直してください。",
+      "source": "The Verge AI",
+      "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers"
+    },
+    {
+      "title": "AnthropicのCEO、AIへの統治委譲論を「馬鹿げている」と否定しつつ自己改善には制限を示唆",
+      "category": "対話型AI",
+      "summary": "Anthropicのダリオ・アモデイCEOは、AIに社会の統治を委ねるべきだという見方を否定し、民主的な監視の必要性を強調しました。一方で、同社内ではコードの80%以上をClaudeが執筆しており、人間の監督なしにAIが自己改善を続ける領域には制限が必要と述べています。",
+      "one_liner": "AIの自己改善には人間の監視が必要",
+      "why_important": "最先端AI企業でも開発の主力がAIに移る一方、最終的な意思決定と監視の責任は人間が持つべきだという基準が明確になっています。",
+      "action_item": "AIが生成したコードや業務成果物を、人間がどの段階でレビュー・承認するかのルールを明確にしてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/"
     }
   ]
 }
