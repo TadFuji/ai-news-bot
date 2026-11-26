@@ -1,0 +1,107 @@
+{
+  "updated": "2026年11月27日",
+  "theme": "AI活用の裏で進む制御とコストの現実",
+  "morning_comment": "AIの進化に伴い、管理や規制など現実的な課題が浮き彫りになっています。",
+  "articles": [
+    {
+      "title": "AI時代に生き残るのはシニア社員か新卒か、Anthropicの調査で判明した「管理業務のわな」",
+      "category": "ビジネス活用",
+      "summary": "AIの普及により若手エントリー層の採用が激減する一方、AIの出力を確認・修正する「メタワーク」が増大し、ベテランの判断力や暗黙知の価値が高まっています。Anthropicの社内データ調査では、AI活用が進むほど人間の管理負担が増す実態が明らかになりました。",
+      "one_liner": "AI普及で人間の管理負担が増大",
+      "why_important": "AI導入は業務を自動化するだけでなく、出力の品質管理という新たな業務を生みます。経験豊富な社員の判断力がより重要になるため、人材配置や育成計画の見直しが求められます。",
+      "action_item": "自部署でAIの出力を確認・修正するのにかかっている時間を計測してみてください。",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2611/27/news022.html"
+    },
+    {
+      "title": "OpenAI、GPT-6.2 Astraの料金バグを修正し利用制限の到達速度が40%上昇",
+      "category": "対話型AI",
+      "summary": "OpenAIはGPT-6.2 AstraとSolの課金バグを修正し、制限到達までの速度がそれぞれ40%、25%速くなりました。お詫びとして全有料プランにリセット回数の追加やFast Modeの無料提供を行うほか、ChatモードとWorkモードの統合テストも進めています。",
+      "one_liner": "GPT-6.2の利用制限が実質厳格化",
+      "why_important": "主要モデルの利用制限が実質的に厳しくなることで、業務でのAI利用コストやワークフローに影響が出ます。上限に達した場合の代替手段やコスト管理を意識する必要があります。",
+      "action_item": "社内で利用しているOpenAIのプランと、月間の利用上限への到達状況を確認してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/gpt-6-2-astra-users-now-hit-limits-40-faster-after-openai-patched-a-pricing-error/"
+    },
+    {
+      "title": "LLM判定器は日本の「名字＋様」を減点するのか？4モデルでの実測と補正法",
+      "category": "日本市場",
+      "summary": "架空の日本語サポート会話50件を4つの主要LLMに品質監査させた結果、海外基準をそのまま適用すると「名字＋様」などの日本特有の商習慣を誤って減点するケースが多発しました。ただし、4行の補正ルールを追加することで誤減点はほぼ解消されました。",
+      "one_liner": "LLMの品質監査は日本の商習慣に注意",
+      "why_important": "海外製LLMをそのまま顧客対応の評価などに使うと、日本の商習慣が正しく評価されないリスクがあります。わずかなプロンプトの工夫で精度が改善するため、自社基準の明文化が有効です。",
+      "action_item": "LLMに業務評価をさせる際のプロンプトに、自社の敬称やマナー基準を数行追記してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/quent/articles/2329d74464eff5"
+    },
+    {
+      "title": "OpenAIとAnthropicのデータ遮断を受け、中国AI企業がGoogleとMetaに接近",
+      "category": "中国AI",
+      "summary": "OpenAIとAnthropicが学習データの利用を遮断したことで、中国のAI企業であるZ.AIやMoonshot AIが次世代フラッグシップモデルの開発遅延を余儀なくされ、GoogleやMetaから新たな学習データの調達先を探っています。",
+      "one_liner": "中国AIがデータ遮断で開発遅延",
+      "why_important": "米中間のAI開発競争において、データ調達の制限が開発スピードに直結し始めています。中国勢の動向はグローバルなAIモデルの勢力図や価格競争に影響を与えるため注視が必要です。",
+      "action_item": "自社で利用しているAIサービスやAPIの提供元が、どの国の企業かリストアップしてみてください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/after-openai-and-anthropic-shut-the-door-on-their-data-a-chinese-ai-developer-is-turning-to-google-and-meta-instead/"
+    },
+    {
+      "title": "Nvidia、米国の対中輸出規制を受け東南アジアへのAIチップ出荷を一時停止",
+      "category": "リスク・規制",
+      "summary": "Nvidiaがデルやスーパーマイクロなどの製造パートナーに対し、マレーシアやシンガポールなど東南アジア4カ国へのサーバー出荷を一時停止するよう指示しました。中国企業が現地のデータセンター経由でNvidiaチップを遠隔利用する抜け穴を塞ぐ米国の規制強化が背景にあります。",
+      "one_liner": "Nvidiaが東南アジア向け出荷を停止",
+      "why_important": "米国の輸出規制が東南アジアのサーバー供給網にも波及しており、アジア圏でのクラウドやGPUリソースの調達コスト・納期に影響が出る可能性があります。",
+      "action_item": "利用中のクラウドサービスが東南アジアリージョンに依存していないか確認してみてください。",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/"
+    },
+    {
+      "title": "日本語の個人情報を自動検出・匿名化するPythonライブラリ「privacy-masker」が公開",
+      "category": "日本市場",
+      "summary": "日本語文書から氏名・住所・電話番号などの個人情報を検出し、トークンや自然な偽名に置き換えるOSS「privacy-masker」が公開されました。MITライセンスで提供されており、LLMに社内文書を渡す前のセキュリティ保護に活用できます。",
+      "one_liner": "日本語の個人情報を自動で匿名化",
+      "why_important": "社内文書をLLMに読み込ませる際の最大の障壁である個人情報漏洩リスクを、OSSで手軽に低減できます。情報システム部門や開発チームにとって実用的な選択肢です。",
+      "action_item": "社内の情報システム担当者に「privacy-masker」の活用可否を相談してみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/na225/articles/af7720ac083f00"
+    },
+    {
+      "title": "スキャンPDFを変換・翻訳するOSS「PDF Craft」がGitHubで6,800スター超え",
+      "category": "ビジネス活用",
+      "summary": "英語の技術書や論文などのスキャンPDFを、段組みや数式を崩さずに実用レベルで変換・翻訳するPythonライブラリ「PDF Craft」が注目を集めています。通常のOCRの弱点を克服しており、RAG用のデータ前処理にも活用可能です。",
+      "one_liner": "スキャンPDFを崩さず翻訳・変換",
+      "why_important": "紙の資料やスキャンPDFの正確なデータ化は、社内ナレッジのRAG構築における長年の課題でした。こうしたOSSの普及により、過去の資産をAIで活用するハードルが下がります。",
+      "action_item": "社内に眠っているスキャンPDF資料のうち、AIに読み込ませたいものを1つ選んでみてください。",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/ooshaun/articles/54529f9807a182"
+    },
+    {
+      "title": "AIで人気YouTuberの声を複製し約26万ドルを詐取、詐欺師に約4年の実刑判決",
+      "category": "リスク・規制",
+      "summary": "米フロリダ州で、AIを使って人気YouTuberの声を複製し暗号資産約26万ドルをだまし取った男に47か月の実刑判決が下りました。交渉時にAI音声を送付して本人確認を装う手口が使われており、著名人の声を悪用した詐欺が深刻化しています。",
+      "one_liner": "AI音声複製による詐欺に実刑判決",
+      "why_important": "音声だけで本人確認を行う取引や社内承認は、もはや安全ではありません。ビジネス上の重要なやり取りでは、複数の認証手段を組み合わせる防衛策が不可欠です。",
+      "action_item": "社内の電話や音声メッセージによる承認・依頼ルールにリスクがないか見直してください。",
+      "source": "TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/11/27/5830.html"
+    },
+    {
+      "title": "元OpenAI研究者が語るAIの数学的ブレークスルーと「暗号解読」の衝撃",
+      "category": "リスク・規制",
+      "summary": "複雑性理論の専門家であるスコット・アーロンソン氏は、AIがリーマン予想や計算量理論の下界証明などの高度な数学的成果を出し始めた事実に警鐘を鳴らしています。さらに、複数のAIラボが暗号システムを破る「爆弾」をテストしている可能性に言及しました。",
+      "one_liner": "AIの数学的進化が暗号解読に迫る",
+      "why_important": "AIが高度な数学的推論能力を獲得することで、現在のセキュリティの根幹である暗号技術が脅かされる可能性があります。中長期的なセキュリティ投資の前提が変わる兆しです。",
+      "action_item": "自社のセキュリティ担当者と、耐量子計算機暗号など次世代暗号への移行計画について話してみてください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/former-openai-researcher-says-the-riemann-proof-matters-less-than-the-fact-that-an-ai-system-can-produce-it/"
+    },
+    {
+      "title": "米FCC、SpaceXによる軌道上AIデータセンター用衛星100万基の配備を承認",
+      "category": "研究・技術",
+      "summary": "米連邦通信委員会（FCC）は、SpaceXがAIデータ処理用の軌道上データセンター「Starmind」衛星を最大100万基配備することを承認しました。2027年の初打ち上げ、2040年の全面稼働を目指しており、GoogleやBlue Originも同様の計画を進めています。",
+      "one_liner": "宇宙空間でのAIデータ処理が認可",
+      "why_important": "地上の電力や冷却水不足がAI開発のボトルネックとなる中、宇宙空間へのデータセンター展開が現実味を帯びています。インフラ投資の新たなフロンティアとして注目されます。",
+      "action_item": "自社のESGレポートやインフラ戦略において、AIの電力消費問題への言及があるか確認してください。",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/fcc-clears-spacex-to-deploy-up-to-1-million-starmind-satellites-for-orbital-ai-data-centers-by-2040/"
+    }
+  ]
+}
