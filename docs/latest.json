@@ -1,107 +1,107 @@
 {
-  "updated": "2026年11月27日",
-  "theme": "AI活用の裏で進む制御とコストの現実",
-  "morning_comment": "AIの進化に伴い、管理や規制など現実的な課題が浮き彫りになっています。",
+  "updated": "2026年11月28日",
+  "theme": "AIの「実務実装」と「統治」が同時に加速",
+  "morning_comment": "エージェントの実戦投入と、法・権限の整備が急務に。",
   "articles": [
     {
-      "title": "AI時代に生き残るのはシニア社員か新卒か、Anthropicの調査で判明した「管理業務のわな」",
+      "title": "日本政府、AI法改正で安全対策と報告を義務化へ　罰則新設も検討",
+      "category": "リスク・規制",
+      "summary": "政府は2025年成立のAI法改正で、大手AI事業者に安全対策と報告を義務付け、罰則新設を検討している。サイバー攻撃等への回答拒否が求められ、2027年通常国会提出を目指す。",
+      "one_liner": "国内AI規制、罰則付き義務化へ",
+      "why_important": "国内でのAI提供・利用における法的コンプライアンス基準が厳格化します。自社が利用するAIサービスの対応状況を確認しておく必要があります。",
+      "action_item": "社内で利用中の主要AIツールの規約や安全性ポリシーを確認する",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/2611-japan-ai-regulation-penalties/"
+    },
+    {
+      "title": "SAP、AIシフトに伴い少なくとも1万人規模の人員削減を計画",
       "category": "ビジネス活用",
-      "summary": "AIの普及により若手エントリー層の採用が激減する一方、AIの出力を確認・修正する「メタワーク」が増大し、ベテランの判断力や暗黙知の価値が高まっています。Anthropicの社内データ調査では、AI活用が進むほど人間の管理負担が増す実態が明らかになりました。",
-      "one_liner": "AI普及で人間の管理負担が増大",
-      "why_important": "AI導入は業務を自動化するだけでなく、出力の品質管理という新たな業務を生みます。経験豊富な社員の判断力がより重要になるため、人材配置や育成計画の見直しが求められます。",
-      "action_item": "自部署でAIの出力を確認・修正するのにかかっている時間を計測してみてください。",
+      "summary": "独ソフトウェア大手SAPが、AI事業への構造転換の一環として少なくとも1万人の人員削減を準備している。AIによる業務代替と組織再編が加速している。",
+      "one_liner": "SAP、AI転換で1万人削減へ",
+      "why_important": "AI導入が単なる効率化にとどまらず、大規模な組織再編と雇用構造の変化を伴うフェーズに入っています。",
+      "action_item": "自部署の業務のうち、AIで代替可能な定型作業を3つ書き出す",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/sap-plans-to-cut-at-least-10000-jobs-as-it-pivots-to-ai/"
+    },
+    {
+      "title": "ローソン、生成AIの「常識外れな発想」でスイーツなど3商品を開発・発売",
+      "category": "日本市場",
+      "summary": "ローソンは過去の販売データをあえて読み込ませず、生成AIの自由な発想で「レモンタルトとピクルス」など3商品を発売した。AIをアイデア出しに活用した事例である。",
+      "one_liner": "AIの奇抜な発想で新商品を開発",
+      "why_important": "AIを「過去の最適化」だけでなく「既存の枠を壊す企画パートナー」として使うことで、新たな商品価値を生み出せます。",
+      "action_item": "企画会議の壁打ち相手として、あえて制約を外したプロンプトを試す",
       "source": "ITmedia ビジネスオンライン",
-      "url": "https://www.itmedia.co.jp/business/articles/2611/27/news022.html"
+      "url": "https://www.itmedia.co.jp/business/articles/2611/28/news003.html"
     },
     {
-      "title": "OpenAI、GPT-6.2 Astraの料金バグを修正し利用制限の到達速度が40%上昇",
-      "category": "対話型AI",
-      "summary": "OpenAIはGPT-6.2 AstraとSolの課金バグを修正し、制限到達までの速度がそれぞれ40%、25%速くなりました。お詫びとして全有料プランにリセット回数の追加やFast Modeの無料提供を行うほか、ChatモードとWorkモードの統合テストも進めています。",
-      "one_liner": "GPT-6.2の利用制限が実質厳格化",
-      "why_important": "主要モデルの利用制限が実質的に厳しくなることで、業務でのAI利用コストやワークフローに影響が出ます。上限に達した場合の代替手段やコスト管理を意識する必要があります。",
-      "action_item": "社内で利用しているOpenAIのプランと、月間の利用上限への到達状況を確認してください。",
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/gpt-6-2-astra-users-now-hit-limits-40-faster-after-openai-patched-a-pricing-error/"
-    },
-    {
-      "title": "LLM判定器は日本の「名字＋様」を減点するのか？4モデルでの実測と補正法",
-      "category": "日本市場",
-      "summary": "架空の日本語サポート会話50件を4つの主要LLMに品質監査させた結果、海外基準をそのまま適用すると「名字＋様」などの日本特有の商習慣を誤って減点するケースが多発しました。ただし、4行の補正ルールを追加することで誤減点はほぼ解消されました。",
-      "one_liner": "LLMの品質監査は日本の商習慣に注意",
-      "why_important": "海外製LLMをそのまま顧客対応の評価などに使うと、日本の商習慣が正しく評価されないリスクがあります。わずかなプロンプトの工夫で精度が改善するため、自社基準の明文化が有効です。",
-      "action_item": "LLMに業務評価をさせる際のプロンプトに、自社の敬称やマナー基準を数行追記してみてください。",
-      "source": "Zenn LLM",
-      "url": "https://zenn.dev/quent/articles/2329d74464eff5"
-    },
-    {
-      "title": "OpenAIとAnthropicのデータ遮断を受け、中国AI企業がGoogleとMetaに接近",
-      "category": "中国AI",
-      "summary": "OpenAIとAnthropicが学習データの利用を遮断したことで、中国のAI企業であるZ.AIやMoonshot AIが次世代フラッグシップモデルの開発遅延を余儀なくされ、GoogleやMetaから新たな学習データの調達先を探っています。",
-      "one_liner": "中国AIがデータ遮断で開発遅延",
-      "why_important": "米中間のAI開発競争において、データ調達の制限が開発スピードに直結し始めています。中国勢の動向はグローバルなAIモデルの勢力図や価格競争に影響を与えるため注視が必要です。",
-      "action_item": "自社で利用しているAIサービスやAPIの提供元が、どの国の企業かリストアップしてみてください。",
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/after-openai-and-anthropic-shut-the-door-on-their-data-a-chinese-ai-developer-is-turning-to-google-and-meta-instead/"
-    },
-    {
-      "title": "Nvidia、米国の対中輸出規制を受け東南アジアへのAIチップ出荷を一時停止",
-      "category": "リスク・規制",
-      "summary": "Nvidiaがデルやスーパーマイクロなどの製造パートナーに対し、マレーシアやシンガポールなど東南アジア4カ国へのサーバー出荷を一時停止するよう指示しました。中国企業が現地のデータセンター経由でNvidiaチップを遠隔利用する抜け穴を塞ぐ米国の規制強化が背景にあります。",
-      "one_liner": "Nvidiaが東南アジア向け出荷を停止",
-      "why_important": "米国の輸出規制が東南アジアのサーバー供給網にも波及しており、アジア圏でのクラウドやGPUリソースの調達コスト・納期に影響が出る可能性があります。",
-      "action_item": "利用中のクラウドサービスが東南アジアリージョンに依存していないか確認してみてください。",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/"
-    },
-    {
-      "title": "日本語の個人情報を自動検出・匿名化するPythonライブラリ「privacy-masker」が公開",
-      "category": "日本市場",
-      "summary": "日本語文書から氏名・住所・電話番号などの個人情報を検出し、トークンや自然な偽名に置き換えるOSS「privacy-masker」が公開されました。MITライセンスで提供されており、LLMに社内文書を渡す前のセキュリティ保護に活用できます。",
-      "one_liner": "日本語の個人情報を自動で匿名化",
-      "why_important": "社内文書をLLMに読み込ませる際の最大の障壁である個人情報漏洩リスクを、OSSで手軽に低減できます。情報システム部門や開発チームにとって実用的な選択肢です。",
-      "action_item": "社内の情報システム担当者に「privacy-masker」の活用可否を相談してみてください。",
-      "source": "Zenn LLM",
-      "url": "https://zenn.dev/na225/articles/af7720ac083f00"
-    },
-    {
-      "title": "スキャンPDFを変換・翻訳するOSS「PDF Craft」がGitHubで6,800スター超え",
+      "title": "Google Workspace、AIエージェント連携用のMCPサーバーと管理機能を一般公開",
       "category": "ビジネス活用",
-      "summary": "英語の技術書や論文などのスキャンPDFを、段組みや数式を崩さずに実用レベルで変換・翻訳するPythonライブラリ「PDF Craft」が注目を集めています。通常のOCRの弱点を克服しており、RAG用のデータ前処理にも活用可能です。",
-      "one_liner": "スキャンPDFを崩さず翻訳・変換",
-      "why_important": "紙の資料やスキャンPDFの正確なデータ化は、社内ナレッジのRAG構築における長年の課題でした。こうしたOSSの普及により、過去の資産をAIで活用するハードルが下がります。",
-      "action_item": "社内に眠っているスキャンPDF資料のうち、AIに読み込ませたいものを1つ選んでみてください。",
+      "summary": "GoogleはWorkspaceで、AIエージェントが安全にデータへアクセスするMCPサーバーと公式CLIを一般公開し、企業向け管理ポリシーを拡充した。",
+      "one_liner": "GoogleがAI連携基盤を一般公開",
+      "why_important": "社内データとAIエージェントを安全に連携させる標準環境が整い、実務への導入ハードルが大きく下がります。",
+      "action_item": "情報システム部門とGoogle WorkspaceのAI連携ポリシーを確認する",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/11/weekly-recap-11-27-2026.html"
+    },
+    {
+      "title": "OpenAI、AIエージェントの推測を減らす企業データ基盤「Athena」を開発中",
+      "category": "対話型AI",
+      "summary": "OpenAIがビジネスデータの定義を一貫管理し、AIエージェントの回答精度を高める新基盤「Athena」を開発している。業務ルールの自律的な学習を目指す。",
+      "one_liner": "OpenAI、企業データ基盤を開発",
+      "why_important": "AIエージェントの業務適用における最大の課題である「データの曖昧さ」が解消され、実務での信頼性が向上します。",
+      "action_item": "社内の専門用語や業務ルールの定義をドキュメント化する",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openai-is-building-athena-data-platform-to-cut-down-on-ai-agent-guesswork/"
+    },
+    {
+      "title": "AIエージェントの事故を防ぐ権限設計：読み取り専用から始め、不可逆な操作を分離",
+      "category": "ビジネス活用",
+      "summary": "AIエージェントの事故は過剰な権限付与で起きる。外部送信や支払いなど不可逆な操作だけを人間の承認制とし、最初は読み取り専用から始める設計手法が解説された。",
+      "one_liner": "AIの権限は「読み取り専用」から",
+      "why_important": "AIエージェントに業務を任せる際、取り返しのつかないミスを防ぐための実践的なガバナンス設計が不可欠です。",
+      "action_item": "導入予定のAIツールについて、外部送信や削除の権限を制限できるか確認する",
       "source": "Zenn LLM",
-      "url": "https://zenn.dev/ooshaun/articles/54529f9807a182"
+      "url": "https://zenn.dev/aletheia_jp/articles/c4cd7b90c63e30"
     },
     {
-      "title": "AIで人気YouTuberの声を複製し約26万ドルを詐取、詐欺師に約4年の実刑判決",
+      "title": "AIエージェントの「完了報告」を鵜呑みにしない、実行ログ検収の5つの視点",
+      "category": "ビジネス活用",
+      "summary": "AIエージェントの完了報告は要約に過ぎず、成果物やログの確認が必要だ。成果物URLや変更前後の数値など、完了基準を先に決める検収方法が紹介された。",
+      "one_liner": "AIの完了報告はログで検収する",
+      "why_important": "AIの出力をそのまま業務に使うリスクを減らすため、人間側が「どこを確認すべきか」の検収基準を持つ必要があります。",
+      "action_item": "AIに作業を依頼する際、最終確認すべき数値や成果物の形式を先に指定する",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/temanashi_kobo/articles/1c34de658b4f3c"
+    },
+    {
+      "title": "OpenAI、営業秘密の窃盗とサプライヤーへの圧力でAppleを反訴",
       "category": "リスク・規制",
-      "summary": "米フロリダ州で、AIを使って人気YouTuberの声を複製し暗号資産約26万ドルをだまし取った男に47か月の実刑判決が下りました。交渉時にAI音声を送付して本人確認を装う手口が使われており、著名人の声を悪用した詐欺が深刻化しています。",
-      "one_liner": "AI音声複製による詐欺に実刑判決",
-      "why_important": "音声だけで本人確認を行う取引や社内承認は、もはや安全ではありません。ビジネス上の重要なやり取りでは、複数の認証手段を組み合わせる防衛策が不可欠です。",
-      "action_item": "社内の電話や音声メッセージによる承認・依頼ルールにリスクがないか見直してください。",
-      "source": "TechnoEdge",
-      "url": "https://www.techno-edge.net/article/2026/11/27/5830.html"
+      "summary": "OpenAIがAppleに対し、営業秘密の侵害と不公正な取引慣行を理由に反訴した。独自デバイス開発を進めるOpenAIとAppleの対立が激化している。",
+      "one_liner": "OpenAIとAppleが法廷で対立",
+      "why_important": "AIハードウェア市場の主導権争いが法廷闘争に発展しており、今後のデバイス連携やエコシステムの勢力図に影響します。",
+      "action_item": "自社のモバイル・デバイス戦略が特定のAIプラットフォームに依存しすぎていないか見直す",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openai-countersues-apple-over-trade-secret-theft-and-alleged-coercion-of-shared-suppliers/"
     },
     {
-      "title": "元OpenAI研究者が語るAIの数学的ブレークスルーと「暗号解読」の衝撃",
-      "category": "リスク・規制",
-      "summary": "複雑性理論の専門家であるスコット・アーロンソン氏は、AIがリーマン予想や計算量理論の下界証明などの高度な数学的成果を出し始めた事実に警鐘を鳴らしています。さらに、複数のAIラボが暗号システムを破る「爆弾」をテストしている可能性に言及しました。",
-      "one_liner": "AIの数学的進化が暗号解読に迫る",
-      "why_important": "AIが高度な数学的推論能力を獲得することで、現在のセキュリティの根幹である暗号技術が脅かされる可能性があります。中長期的なセキュリティ投資の前提が変わる兆しです。",
-      "action_item": "自社のセキュリティ担当者と、耐量子計算機暗号など次世代暗号への移行計画について話してみてください。",
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/former-openai-researcher-says-the-riemann-proof-matters-less-than-the-fact-that-an-ai-system-can-produce-it/"
+      "title": "静的サイト251ページのAI検索対応：llms.txtやfacts.jsonの実装記録",
+      "category": "ビジネス活用",
+      "summary": "AI検索に自社情報を正確に引用させるため、一次情報をまとめたfacts.jsonやllms.txtを整備した実装事例。静的環境でもAI向けの情報整理が有効と示された。",
+      "one_liner": "AI検索向けの情報整理を実装",
+      "why_important": "従来のSEOに加え、AI検索に自社情報を正しく認識・引用させる「AI最適化」の重要性が高まっています。",
+      "action_item": "自社の公式サイトやサービスページがAI検索でどう要約されているか検索してみる",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kurodaschool/articles/e478038976268c"
     },
     {
-      "title": "米FCC、SpaceXによる軌道上AIデータセンター用衛星100万基の配備を承認",
-      "category": "研究・技術",
-      "summary": "米連邦通信委員会（FCC）は、SpaceXがAIデータ処理用の軌道上データセンター「Starmind」衛星を最大100万基配備することを承認しました。2027年の初打ち上げ、2040年の全面稼働を目指しており、GoogleやBlue Originも同様の計画を進めています。",
-      "one_liner": "宇宙空間でのAIデータ処理が認可",
-      "why_important": "地上の電力や冷却水不足がAI開発のボトルネックとなる中、宇宙空間へのデータセンター展開が現実味を帯びています。インフラ投資の新たなフロンティアとして注目されます。",
-      "action_item": "自社のESGレポートやインフラ戦略において、AIの電力消費問題への言及があるか確認してください。",
+      "title": "輸出禁止のNvidia Blackwellチップ、上海のデータセンターで稼働と報道",
+      "category": "中国AI",
+      "summary": "米国から中国への輸出が禁止されているNvidiaの最新チップ「Blackwell」が、上海のデータセンターに設置されていることが判明。規制の抜け穴が浮き彫りになった。",
+      "one_liner": "禁止チップが上海で稼働、規制に穴",
+      "why_important": "米中間のAI半導体規制の実効性が問われており、今後のサプライチェーンや地政学リスクのさらなる厳格化が予想されます。",
+      "action_item": "利用しているクラウドやAI基盤の調達先・データ保管地域を再確認する",
       "source": "The Decoder",
-      "url": "https://the-decoder.com/fcc-clears-spacex-to-deploy-up-to-1-million-starmind-satellites-for-orbital-ai-data-centers-by-2040/"
+      "url": "https://the-decoder.com/banned-nvidia-blackwell-chips-turn-up-in-a-shanghai-data-center-linked-to-alice-huang-bloomberg-reports/"
     }
   ]
 }

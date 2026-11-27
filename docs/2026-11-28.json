@@ -1,0 +1,107 @@
+{
+  "updated": "2026年11月28日",
+  "theme": "AIの「実務実装」と「統治」が同時に加速",
+  "morning_comment": "エージェントの実戦投入と、法・権限の整備が急務に。",
+  "articles": [
+    {
+      "title": "日本政府、AI法改正で安全対策と報告を義務化へ　罰則新設も検討",
+      "category": "リスク・規制",
+      "summary": "政府は2025年成立のAI法改正で、大手AI事業者に安全対策と報告を義務付け、罰則新設を検討している。サイバー攻撃等への回答拒否が求められ、2027年通常国会提出を目指す。",
+      "one_liner": "国内AI規制、罰則付き義務化へ",
+      "why_important": "国内でのAI提供・利用における法的コンプライアンス基準が厳格化します。自社が利用するAIサービスの対応状況を確認しておく必要があります。",
+      "action_item": "社内で利用中の主要AIツールの規約や安全性ポリシーを確認する",
+      "source": "Gizmodo Japan",
+      "url": "https://www.gizmodo.jp/article/2611-japan-ai-regulation-penalties/"
+    },
+    {
+      "title": "SAP、AIシフトに伴い少なくとも1万人規模の人員削減を計画",
+      "category": "ビジネス活用",
+      "summary": "独ソフトウェア大手SAPが、AI事業への構造転換の一環として少なくとも1万人の人員削減を準備している。AIによる業務代替と組織再編が加速している。",
+      "one_liner": "SAP、AI転換で1万人削減へ",
+      "why_important": "AI導入が単なる効率化にとどまらず、大規模な組織再編と雇用構造の変化を伴うフェーズに入っています。",
+      "action_item": "自部署の業務のうち、AIで代替可能な定型作業を3つ書き出す",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/sap-plans-to-cut-at-least-10000-jobs-as-it-pivots-to-ai/"
+    },
+    {
+      "title": "ローソン、生成AIの「常識外れな発想」でスイーツなど3商品を開発・発売",
+      "category": "日本市場",
+      "summary": "ローソンは過去の販売データをあえて読み込ませず、生成AIの自由な発想で「レモンタルトとピクルス」など3商品を発売した。AIをアイデア出しに活用した事例である。",
+      "one_liner": "AIの奇抜な発想で新商品を開発",
+      "why_important": "AIを「過去の最適化」だけでなく「既存の枠を壊す企画パートナー」として使うことで、新たな商品価値を生み出せます。",
+      "action_item": "企画会議の壁打ち相手として、あえて制約を外したプロンプトを試す",
+      "source": "ITmedia ビジネスオンライン",
+      "url": "https://www.itmedia.co.jp/business/articles/2611/28/news003.html"
+    },
+    {
+      "title": "Google Workspace、AIエージェント連携用のMCPサーバーと管理機能を一般公開",
+      "category": "ビジネス活用",
+      "summary": "GoogleはWorkspaceで、AIエージェントが安全にデータへアクセスするMCPサーバーと公式CLIを一般公開し、企業向け管理ポリシーを拡充した。",
+      "one_liner": "GoogleがAI連携基盤を一般公開",
+      "why_important": "社内データとAIエージェントを安全に連携させる標準環境が整い、実務への導入ハードルが大きく下がります。",
+      "action_item": "情報システム部門とGoogle WorkspaceのAI連携ポリシーを確認する",
+      "source": "Google Workspace Updates",
+      "url": "http://workspaceupdates.googleblog.com/2026/11/weekly-recap-11-27-2026.html"
+    },
+    {
+      "title": "OpenAI、AIエージェントの推測を減らす企業データ基盤「Athena」を開発中",
+      "category": "対話型AI",
+      "summary": "OpenAIがビジネスデータの定義を一貫管理し、AIエージェントの回答精度を高める新基盤「Athena」を開発している。業務ルールの自律的な学習を目指す。",
+      "one_liner": "OpenAI、企業データ基盤を開発",
+      "why_important": "AIエージェントの業務適用における最大の課題である「データの曖昧さ」が解消され、実務での信頼性が向上します。",
+      "action_item": "社内の専門用語や業務ルールの定義をドキュメント化する",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openai-is-building-athena-data-platform-to-cut-down-on-ai-agent-guesswork/"
+    },
+    {
+      "title": "AIエージェントの事故を防ぐ権限設計：読み取り専用から始め、不可逆な操作を分離",
+      "category": "ビジネス活用",
+      "summary": "AIエージェントの事故は過剰な権限付与で起きる。外部送信や支払いなど不可逆な操作だけを人間の承認制とし、最初は読み取り専用から始める設計手法が解説された。",
+      "one_liner": "AIの権限は「読み取り専用」から",
+      "why_important": "AIエージェントに業務を任せる際、取り返しのつかないミスを防ぐための実践的なガバナンス設計が不可欠です。",
+      "action_item": "導入予定のAIツールについて、外部送信や削除の権限を制限できるか確認する",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/aletheia_jp/articles/c4cd7b90c63e30"
+    },
+    {
+      "title": "AIエージェントの「完了報告」を鵜呑みにしない、実行ログ検収の5つの視点",
+      "category": "ビジネス活用",
+      "summary": "AIエージェントの完了報告は要約に過ぎず、成果物やログの確認が必要だ。成果物URLや変更前後の数値など、完了基準を先に決める検収方法が紹介された。",
+      "one_liner": "AIの完了報告はログで検収する",
+      "why_important": "AIの出力をそのまま業務に使うリスクを減らすため、人間側が「どこを確認すべきか」の検収基準を持つ必要があります。",
+      "action_item": "AIに作業を依頼する際、最終確認すべき数値や成果物の形式を先に指定する",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/temanashi_kobo/articles/1c34de658b4f3c"
+    },
+    {
+      "title": "OpenAI、営業秘密の窃盗とサプライヤーへの圧力でAppleを反訴",
+      "category": "リスク・規制",
+      "summary": "OpenAIがAppleに対し、営業秘密の侵害と不公正な取引慣行を理由に反訴した。独自デバイス開発を進めるOpenAIとAppleの対立が激化している。",
+      "one_liner": "OpenAIとAppleが法廷で対立",
+      "why_important": "AIハードウェア市場の主導権争いが法廷闘争に発展しており、今後のデバイス連携やエコシステムの勢力図に影響します。",
+      "action_item": "自社のモバイル・デバイス戦略が特定のAIプラットフォームに依存しすぎていないか見直す",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openai-countersues-apple-over-trade-secret-theft-and-alleged-coercion-of-shared-suppliers/"
+    },
+    {
+      "title": "静的サイト251ページのAI検索対応：llms.txtやfacts.jsonの実装記録",
+      "category": "ビジネス活用",
+      "summary": "AI検索に自社情報を正確に引用させるため、一次情報をまとめたfacts.jsonやllms.txtを整備した実装事例。静的環境でもAI向けの情報整理が有効と示された。",
+      "one_liner": "AI検索向けの情報整理を実装",
+      "why_important": "従来のSEOに加え、AI検索に自社情報を正しく認識・引用させる「AI最適化」の重要性が高まっています。",
+      "action_item": "自社の公式サイトやサービスページがAI検索でどう要約されているか検索してみる",
+      "source": "Zenn LLM",
+      "url": "https://zenn.dev/kurodaschool/articles/e478038976268c"
+    },
+    {
+      "title": "輸出禁止のNvidia Blackwellチップ、上海のデータセンターで稼働と報道",
+      "category": "中国AI",
+      "summary": "米国から中国への輸出が禁止されているNvidiaの最新チップ「Blackwell」が、上海のデータセンターに設置されていることが判明。規制の抜け穴が浮き彫りになった。",
+      "one_liner": "禁止チップが上海で稼働、規制に穴",
+      "why_important": "米中間のAI半導体規制の実効性が問われており、今後のサプライチェーンや地政学リスクのさらなる厳格化が予想されます。",
+      "action_item": "利用しているクラウドやAI基盤の調達先・データ保管地域を再確認する",
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/banned-nvidia-blackwell-chips-turn-up-in-a-shanghai-data-center-linked-to-alice-huang-bloomberg-reports/"
+    }
+  ]
+}
