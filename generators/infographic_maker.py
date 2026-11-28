@@ -132,6 +132,7 @@ def _generate_image(prompt):
         image_config=types.ImageConfig(
             aspect_ratio=GEN_ASPECT, image_size=GEN_IMAGE_SIZE
         ),
+        thinking_config=types.ThinkingConfig(thinking_level="minimal"),
     )
 
     for attempt in range(1, MAX_ATTEMPTS + 1):

@@ -21,6 +21,7 @@ from config import JST, GEMINI_MODEL
 from ai_client import (
     GENAI_TIMEOUT_MS,
     build_gemini_text_config,
+    is_fatal_key_error,
     should_use_flex_attempt,
     writing_rules,
 )
@@ -178,10 +179,15 @@ def generate_column(items):
 字数の目標も置きません。書くべき中身が尽きたところで終えてください（LINE で送るため 4,000 字は超えないこと）。
 """
     
-    attempts = [True, False] if should_use_flex_attempt(0) else [False]
+    attempts = [True, True, False, False] if should_use_flex_attempt(0) else [False]
     for idx, use_flex in enumerate(attempts):
         if idx > 0:
-            print("   🔄 Flex 推論から通常モード（Standard）へ切り替えて再試行します...")
+            if use_flex:
+                print("   🔄 Flex 推論を再試行します...")
+            elif attempts[idx - 1]:
+                print("   🔄 Flex 推論から通常モード（Standard）へ切り替えて再試行します...")
+            else:
+                print("   🔄 通常モード（Standard）を再試行します...")
             time.sleep(2)
         try:
             response = client.models.generate_content(
@@ -202,13 +208,13 @@ def generate_column(items):
                     getattr(response, "prompt_feedback", None), "block_reason", None
                 )
                 print(f"Gemini 空応答（block_reason={block}）")
-                if use_flex and idx < len(attempts) - 1:
+                if idx < len(attempts) - 1:
                     continue
                 return None
             return response.text
         except Exception as e:
             print(f"Gemini エラー ({'flex' if use_flex else 'standard'}): {e}")
-            if not use_flex or idx == len(attempts) - 1:
+            if is_fatal_key_error(e, use_flex=use_flex) or idx == len(attempts) - 1:
                 return None
     return None
 

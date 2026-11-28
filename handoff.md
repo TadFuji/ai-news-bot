@@ -1,6 +1,15 @@
 # handoff.md — AIニュースの引き継ぎ
 
-最終確認: 2026-11-24。作業開始・終了時の更新ルールは [AGENTS.md](AGENTS.md)。2026-10-10の朝刊遅延と適用済み再発低減策（collection_runner など）は [automation/RECOVERY_HANDOFF.md](automation/RECOVERY_HANDOFF.md) を先に読む。現在の主起動は **OpenAI dot（どっちゃん）の定時タスク、07:07 JST**、実処理はGitHub Actions。変更担当者は [AGENTS.md](AGENTS.md) に従い毎回引き継ぎを更新する。構成は [README.md](README.md)、過去の変更は [HISTORY.md](HISTORY.md)。
+最終確認: 2026-11-27。作業開始・終了時の更新ルールは [AGENTS.md](AGENTS.md)。2026-10-10の朝刊遅延と適用済み再発低減策（collection_runner など）は [automation/RECOVERY_HANDOFF.md](automation/RECOVERY_HANDOFF.md) を先に読む。現在の主起動は **時刻係（`news-clock`）、07:07 JST**、実処理はGitHub Actions。変更担当者は [AGENTS.md](AGENTS.md) に従い毎回引き継ぎを更新する。構成は [README.md](README.md)、過去の変更は [HISTORY.md](HISTORY.md)。
+
+## Flex 再試行強化・画像 thinking minimal・CI 無駄実行削減（2026-11-27）
+
+- **変更点**:
+  - `ai_client.py`, `curate_morning_brief.py`, `generate_weekly_column.py`: 一時的な `503` 1回で即 Standard（2倍単価）へ落ちないよう、Flex を最大 2 回試行してから Standard フォールバック（計4試行、週刊コラムも Flex 2回 + Standard 2回）へ強化。
+  - `generators/infographic_maker.py`: `thinking_config=types.ThinkingConfig(thinking_level="minimal")` を追加（10件の見出し品質維持のため `2K` は維持）。
+  - `.github/workflows/lint.yml`, `.github/workflows/tests.yml`: 毎朝の `automation/requests/*.json` や `docs/` / `usage/` / `health/` のみの push で `Linting` と `Tests` が重複発火しないよう `paths-ignore` を追加（`pull_request` は全対象のまま）。
+  - `tests/test_flex_inference.py`: 2回 Flex 試行＋Standard フォールバックおよび `infographic_maker` `thinking_level="minimal"` のテストを更新・追加。
+- **元に戻す方法**: 該当コミットを `git revert <commit>` して `origin/main` へ push。
 
 ## 思考レベル LOW への最適化と usage_meter.py 同期（2026-11-24）
 

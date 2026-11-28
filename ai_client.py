@@ -41,8 +41,8 @@ GENAI_TIMEOUT_MS = 600_000
 
 
 def should_use_flex_attempt(attempt: int) -> bool:
-    """Use Flex inference on the initial attempt when enabled; fall back to Standard on retries."""
-    return attempt == 0 and (config.GEMINI_SERVICE_TIER or "").strip().lower() == "flex"
+    """Use Flex inference on the first two attempts when enabled; fall back to Standard afterward."""
+    return attempt < 2 and (config.GEMINI_SERVICE_TIER or "").strip().lower() == "flex"
 
 
 def build_gemini_text_config(
@@ -220,7 +220,7 @@ URL: {article['url']}
     print("🧠 gemini-4-hydrogen で処理中...")
     start = time.time()
 
-    max_retries = 2
+    max_retries = 3
     last_error = None
 
     for attempt in range(max_retries + 1):

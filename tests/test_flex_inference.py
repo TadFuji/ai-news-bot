@@ -11,6 +11,7 @@ import config
 import curate_morning_brief
 import generate_weekly_column
 import usage_meter
+from generators import infographic_maker
 
 
 def _fake_usage(prompt=1_000_000, candidates=1_000_000):
@@ -98,7 +99,7 @@ class FlexInferenceTests(unittest.TestCase):
         self.assertEqual(getattr(cfg.http_options, "timeout", None), config.GEMINI_FLEX_TIMEOUT_MS)
         self.assertAlmostEqual(meter.totals()["usd"], 4.5, places=6)
 
-    def test_stage1_falls_back_to_standard_on_flex_error(self):
+    def test_stage1_retries_flex_once_then_falls_back_to_standard(self):
         payload = json.dumps([
             {
                 "index": 1,
@@ -112,7 +113,28 @@ class FlexInferenceTests(unittest.TestCase):
                 "reason": "理由",
             }
         ])
+        # Single 503 -> 2nd attempt still uses Flex (50% price)
+        fake_flex_retry = _FakeClient([
+            RuntimeError("503 Service Unavailable"),
+            SimpleNamespace(text=payload, usage_metadata=_fake_usage()),
+        ])
+        meter_flex = usage_meter.UsageMeter()
+        meter_flex.enabled = True
+        with patch.dict(os.environ, {"GOOGLE_API_KEY": "dummy-key"}), \
+             patch.object(ai_client.genai, "Client", return_value=fake_flex_retry), \
+             patch.object(ai_client, "meter", meter_flex), \
+             patch.object(ai_client.time, "sleep"):
+            res_flex = ai_client.process_with_gemini(_sample_articles(), max_articles=10)
+
+        self.assertEqual(res_flex[0]["title_ja"], "復旧")
+        self.assertEqual(len(fake_flex_retry.models.calls), 2)
+        self.assertEqual(_tier_val(fake_flex_retry.models.calls[0]["config"]), "flex")
+        self.assertEqual(_tier_val(fake_flex_retry.models.calls[1]["config"]), "flex")
+        self.assertAlmostEqual(meter_flex.totals()["usd"], 4.5, places=6)
+
+        # Two consecutive Flex failures -> 3rd attempt falls back to Standard
         fake_client = _FakeClient([
+            RuntimeError("503 Service Unavailable"),
             RuntimeError("503 Service Unavailable"),
             SimpleNamespace(text=payload, usage_metadata=_fake_usage()),
         ])
@@ -125,10 +147,11 @@ class FlexInferenceTests(unittest.TestCase):
             res = ai_client.process_with_gemini(_sample_articles(), max_articles=10)
 
         self.assertEqual(res[0]["title_ja"], "復旧")
-        self.assertEqual(len(fake_client.models.calls), 2)
+        self.assertEqual(len(fake_client.models.calls), 3)
         self.assertEqual(_tier_val(fake_client.models.calls[0]["config"]), "flex")
-        self.assertIsNone(_tier_val(fake_client.models.calls[1]["config"]))
-        self.assertIsNone(getattr(fake_client.models.calls[1]["config"], "http_options", None))
+        self.assertEqual(_tier_val(fake_client.models.calls[1]["config"]), "flex")
+        self.assertIsNone(_tier_val(fake_client.models.calls[2]["config"]))
+        self.assertIsNone(getattr(fake_client.models.calls[2]["config"], "http_options", None))
         self.assertAlmostEqual(meter.totals()["usd"], 9.0, places=6)
 
     def test_stage1_aborts_immediately_on_invalid_api_key(self):
@@ -163,6 +186,7 @@ class FlexInferenceTests(unittest.TestCase):
             ],
         })
         fake_client = _FakeClient([
+            RuntimeError("503 Flex busy"),
             RuntimeError("INVALID_ARGUMENT on flex tier"),
             SimpleNamespace(text=payload, usage_metadata=_fake_usage()),
         ])
@@ -175,9 +199,10 @@ class FlexInferenceTests(unittest.TestCase):
             res = curate_morning_brief.curate_with_gemini(_sample_articles())
 
         self.assertEqual(res["theme"], "テストテーマ")
-        self.assertEqual(len(fake_client.models.calls), 2)
+        self.assertEqual(len(fake_client.models.calls), 3)
         self.assertEqual(_tier_val(fake_client.models.calls[0]["config"]), "flex")
-        self.assertIsNone(_tier_val(fake_client.models.calls[1]["config"]))
+        self.assertEqual(_tier_val(fake_client.models.calls[1]["config"]), "flex")
+        self.assertIsNone(_tier_val(fake_client.models.calls[2]["config"]))
         self.assertAlmostEqual(meter.totals()["usd"], 9.0, places=6)
 
     def test_weekly_column_flex_and_standard_fallback(self):
@@ -195,6 +220,8 @@ class FlexInferenceTests(unittest.TestCase):
 
         fake_client_fb = _FakeClient([
             RuntimeError("503 Flex busy"),
+            RuntimeError("503 Flex busy again"),
+            RuntimeError("503 Standard blip"),
             SimpleNamespace(text="復旧コラム", usage_metadata=_fake_usage()),
         ])
         meter_fb = usage_meter.UsageMeter()
@@ -205,9 +232,25 @@ class FlexInferenceTests(unittest.TestCase):
              patch.object(generate_weekly_column.time, "sleep"):
             text_fb = generate_weekly_column.generate_column(_sample_articles())
         self.assertEqual(text_fb, "復旧コラム")
+        self.assertEqual(len(fake_client_fb.models.calls), 4)
         self.assertEqual(_tier_val(fake_client_fb.models.calls[0]["config"]), "flex")
-        self.assertIsNone(_tier_val(fake_client_fb.models.calls[1]["config"]))
+        self.assertEqual(_tier_val(fake_client_fb.models.calls[1]["config"]), "flex")
+        self.assertIsNone(_tier_val(fake_client_fb.models.calls[2]["config"]))
+        self.assertIsNone(_tier_val(fake_client_fb.models.calls[3]["config"]))
         self.assertAlmostEqual(meter_fb.totals()["usd"], 9.0, places=6)
+
+    def test_infographic_maker_uses_minimal_thinking_and_2k(self):
+        img_part = SimpleNamespace(inline_data=SimpleNamespace(data=b"pngbytes"))
+        resp = SimpleNamespace(candidates=[SimpleNamespace(content=SimpleNamespace(parts=[img_part]))])
+        fake_client = _FakeClient([resp])
+        with patch.dict(os.environ, {"GEMINI_IMAGE_API_KEY": "dummy-img-key"}), \
+             patch("google.genai.Client", return_value=fake_client), \
+             patch.object(infographic_maker, "meter", usage_meter.UsageMeter()):
+            out = infographic_maker._generate_image("prompt")
+        self.assertEqual(out, b"pngbytes")
+        cfg = fake_client.models.calls[0]["config"]
+        self.assertEqual(_thinking_val(cfg), "MINIMAL")
+        self.assertEqual(cfg.image_config.image_size, "2K")
 
 
 if __name__ == "__main__":

@@ -295,7 +295,7 @@ URL: {url}
 
     print("🧠 Gemini 2次キュレーション実行中...")
     start = time.time()
-    max_retries = 2
+    max_retries = 3
     last_error = None
 
     for attempt in range(max_retries + 1):

@@ -3,6 +3,13 @@ name: Tests
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'automation/requests/**'
+      - 'automation/tests/**'
+      - 'automation/delivery-state/**'
+      - 'docs/**'
+      - 'usage/**'
+      - 'health/**'
   pull_request:
     branches: [ main ]
 
